@@ -1,0 +1,44 @@
+/* 
+  Localize.strings
+  Mazadaat
+
+  Created by macbook on 12/13/20.
+  Copyright © 2020 macbook. All rights reserved.
+*/
+"الرئيسية"="Home";
+"عنوان الاعلان"="Ad Title";
+"تفاصيل الاعلان"="Ad Details";
+"في انتظار دفع العميل"="Waiting Customer Payment";
+"تهانينا, أنت الفائز"="Congratulations,you are the winner";
+"تم الغاء العميل"="CustomerCanceled";
+"ملغي من قبل المورد"="SupplierRejected";
+"في انتظار موافقة المورد"="WaitingSupplierApproval";
+"ر.س"="SAR";
+"خرائط جوجل"="Google Map";
+"خرائط أبل"="Apple Maps";
+"بانتظار البدأ"="Waiting Start";
+"وقت البدأ"="Start Time";
+"جاري المزايدة"="Biding Time";
+"المزاد منتهي منذ"="Auction ended since";
+"تم الانتهاء"="Finished";
+"المزاد انتهى بدون مزايدة"=" Auction without Bid";
+"مزايدة"="Bid";
+"لايوجد"="Empty";
+"حسابك غير مفعل ,قم بتفعيل حسابك يتم ارسال رسالة بها رمز التفعيل على رقم موبايلك, ويمكنك ايضاً طلب رمز جديد هل تريد ؟التفعيل الان"="Your account is not activated, activate your account. A message with the activation code is sent to your mobile number, and you can also request a new code. Do you want to activate now?";
+"قم بالتفعيل"="Enable";
+"عرض"="View";
+
+"معلومات"="Information";
+
+"هذا المزاد لم يبدأ بعد يمكنك الانتظار حتى يبدأ المزاد لتستطيع المزايدة!"="This auction has not started yet. You can wait until the auction starts to be able to bid";
+
+"اغلاق"="Close";
+"موافق"="OK";
+"المستندات"="Documents";
+"باقات التأمين"="Pakges";
+"تم ارسال كود التحقق"="Code has been sent";
+"الاسئلة الشائعة"="Common Questions ";
+
+"تم ارسال كود التحقق الى بريدك الالكتروني"="Code has been sent to your email";
+
+"لقد قمت بطلب الاسترداد مسيقاً"="You had been request recovery";
