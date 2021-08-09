@@ -103,7 +103,7 @@ class AcuationDetVC: UIViewController, MyDataSendingDelegateProtocolAuction,MyDa
             readNoti(notiId: notiId ?? 0)
         }
         
-        getUser()
+      
         getAuctionData(id: auctionId ?? 0)
         getAuctinRealTime()
         
@@ -119,7 +119,7 @@ class AcuationDetVC: UIViewController, MyDataSendingDelegateProtocolAuction,MyDa
         
         
         if AppData.isLogin == true {
-
+            getUser()
             getAuctionData()
 
         }
