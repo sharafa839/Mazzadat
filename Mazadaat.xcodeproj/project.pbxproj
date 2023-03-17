@@ -138,6 +138,10 @@
 		FAF04BCD255E685100249556 /* CatDetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF04BCC255E685100249556 /* CatDetVC.swift */; };
 		FAF04BCF255E68CB00249556 /* CatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF04BCE255E68CB00249556 /* CatCell.swift */; };
 		FAF2F2552595E46400089D81 /* RestPasswordVerfiyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F2542595E46400089D81 /* RestPasswordVerfiyVC.swift */; };
+		FFD1BFB029C4CBA60008C814 /* MazzadTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD1BFAB29C4CBA60008C814 /* MazzadTableViewCell.xib */; };
+		FFD1BFB129C4CBA60008C814 /* MazzadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD1BFAC29C4CBA60008C814 /* MazzadTableViewCell.swift */; };
+		FFD1BFB229C4CBA60008C814 /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD1BFAE29C4CBA60008C814 /* NotificationTableViewCell.xib */; };
+		FFD1BFB329C4CBA60008C814 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD1BFAF29C4CBA60008C814 /* NotificationTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -283,6 +287,10 @@
 		FAF04BCC255E685100249556 /* CatDetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetVC.swift; sourceTree = "<group>"; };
 		FAF04BCE255E68CB00249556 /* CatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCell.swift; sourceTree = "<group>"; };
 		FAF2F2542595E46400089D81 /* RestPasswordVerfiyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestPasswordVerfiyVC.swift; sourceTree = "<group>"; };
+		FFD1BFAB29C4CBA60008C814 /* MazzadTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MazzadTableViewCell.xib; sourceTree = "<group>"; };
+		FFD1BFAC29C4CBA60008C814 /* MazzadTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MazzadTableViewCell.swift; sourceTree = "<group>"; };
+		FFD1BFAE29C4CBA60008C814 /* NotificationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationTableViewCell.xib; sourceTree = "<group>"; };
+		FFD1BFAF29C4CBA60008C814 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -497,7 +505,10 @@
 				FABD93A62532DC4300BFB943 /* Helpers */,
 				FABD93A52532DC3100BFB943 /* SotryBoard */,
 				FABD938F2532DBF600BFB943 /* AppDelegate.swift */,
+				FFD1BFB429C4CBC30008C814 /* Registger-Login */,
 				FAE9A81E2665E2DE00D40FD2 /* AnswerQVC.swift */,
+				FFD1BFAA29C4CBA60008C814 /* MazzadTableViewCell */,
+				FFD1BFAD29C4CBA60008C814 /* NotificationTableViewCell */,
 				FA4F79A225770E84008FC9A1 /* AppDelegate+FCM.swift */,
 				FABD93912532DBF600BFB943 /* SceneDelegate.swift */,
 				FABD93932532DBF600BFB943 /* ViewController.swift */,
@@ -576,6 +587,31 @@
 			path = Jozoor;
 			sourceTree = "<group>";
 		};
+		FFD1BFAA29C4CBA60008C814 /* MazzadTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FFD1BFAB29C4CBA60008C814 /* MazzadTableViewCell.xib */,
+				FFD1BFAC29C4CBA60008C814 /* MazzadTableViewCell.swift */,
+			);
+			path = MazzadTableViewCell;
+			sourceTree = "<group>";
+		};
+		FFD1BFAD29C4CBA60008C814 /* NotificationTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FFD1BFAE29C4CBA60008C814 /* NotificationTableViewCell.xib */,
+				FFD1BFAF29C4CBA60008C814 /* NotificationTableViewCell.swift */,
+			);
+			path = NotificationTableViewCell;
+			sourceTree = "<group>";
+		};
+		FFD1BFB429C4CBC30008C814 /* Registger-Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Registger-Login";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -648,6 +684,7 @@
 				FA49CE122546A056004CDD6E /* Roboto-Bold.ttf in Resources */,
 				FABA8C862585A7D700E1D2AB /* Localizable.strings in Resources */,
 				FA49CE162546A065004CDD6E /* Roboto-LightItalic.ttf in Resources */,
+				FFD1BFB029C4CBA60008C814 /* MazzadTableViewCell.xib in Resources */,
 				FA49CE1B2546A06F004CDD6E /* Roboto-ThinItalic.ttf in Resources */,
 				FA05F5B32576FD81001527A9 /* animation_500_ki6kc9et.gif in Resources */,
 				FA2B63E02570C7830015DF42 /* logoApp.gif in Resources */,
@@ -668,6 +705,7 @@
 				FABD93D62536DDEA00BFB943 /* homeCell.xib in Resources */,
 				FABD93C32532DD4100BFB943 /* ArbFONTS-Jozoor-Font.ttf in Resources */,
 				FADE022E25DD30F200FB1675 /* animation_500_kl9c26qc.gif in Resources */,
+				FFD1BFB229C4CBA60008C814 /* NotificationTableViewCell.xib in Resources */,
 				FABA8C72258583D100E1D2AB /* Auth.storyboard in Resources */,
 				FABD939C2532DBF900BFB943 /* LaunchScreen.storyboard in Resources */,
 				FABD93D12532DD7B00BFB943 /* Color.xcassets in Resources */,
@@ -750,6 +788,7 @@
 				FA84F794257B4A7700B29952 /* AuctionSpesifcationVC.swift in Sources */,
 				FA45C054254EA32E0042235A /* menuCell.swift in Sources */,
 				FAB2AD352588E31A00C4D519 /* MySubscribeVC.swift in Sources */,
+				FFD1BFB129C4CBA60008C814 /* MazzadTableViewCell.swift in Sources */,
 				FABD93A82532DC5600BFB943 /* DesignableView.swift in Sources */,
 				FADD2F57254CC7EB007BCA30 /* AlertVC.swift in Sources */,
 				FA4F79A825771776008FC9A1 /* BadgedBarButtonItem.swift in Sources */,
@@ -761,6 +800,7 @@
 				FA360AD325755ABD00B95CCE /* AddTicketVC.swift in Sources */,
 				FA7C7C88255114AF00BD1035 /* PakgesCell.swift in Sources */,
 				FA49CE212546E1F0004CDD6E /* Constants.swift in Sources */,
+				FFD1BFB329C4CBA60008C814 /* NotificationTableViewCell.swift in Sources */,
 				FA3FA3EA258F8BE20061DE0D /* QestionVC.swift in Sources */,
 				FA5F1F61253AFB1A007FEF72 /* ActivityIndicatorManager.swift in Sources */,
 				FAAAF471253EB25F00E17DAB /* MyProfileVC.swift in Sources */,
