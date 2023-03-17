@@ -142,6 +142,16 @@
 		FFD1BFB129C4CBA60008C814 /* MazzadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD1BFAC29C4CBA60008C814 /* MazzadTableViewCell.swift */; };
 		FFD1BFB229C4CBA60008C814 /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD1BFAE29C4CBA60008C814 /* NotificationTableViewCell.xib */; };
 		FFD1BFB329C4CBA60008C814 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD1BFAF29C4CBA60008C814 /* NotificationTableViewCell.swift */; };
+		FFD1BFB729C4CDA20008C814 /* Register-LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD1BFB529C4CDA20008C814 /* Register-LoginViewController.xib */; };
+		FFD1BFB829C4CDA20008C814 /* Register-LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD1BFB629C4CDA20008C814 /* Register-LoginViewController.swift */; };
+		FFD1BFBC29C4D21C0008C814 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD1BFBA29C4D21C0008C814 /* RegisterViewController.swift */; };
+		FFD1BFBD29C4D21C0008C814 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD1BFBB29C4D21C0008C814 /* RegisterViewController.xib */; };
+		FFD1BFC229C4D9810008C814 /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD1BFC029C4D9810008C814 /* OTPViewController.swift */; };
+		FFD1BFC329C4D9810008C814 /* OTPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD1BFC129C4D9810008C814 /* OTPViewController.xib */; };
+		FFD1BFC729C4E66E0008C814 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD1BFC529C4E66E0008C814 /* ResetPasswordViewController.swift */; };
+		FFD1BFC829C4E66E0008C814 /* ResetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD1BFC629C4E66E0008C814 /* ResetPasswordViewController.xib */; };
+		FFD1BFCC29C4E7FF0008C814 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD1BFCA29C4E7FF0008C814 /* ForgetPasswordViewController.swift */; };
+		FFD1BFCD29C4E7FF0008C814 /* ForgetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD1BFCB29C4E7FF0008C814 /* ForgetPasswordViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -291,6 +301,16 @@
 		FFD1BFAC29C4CBA60008C814 /* MazzadTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MazzadTableViewCell.swift; sourceTree = "<group>"; };
 		FFD1BFAE29C4CBA60008C814 /* NotificationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationTableViewCell.xib; sourceTree = "<group>"; };
 		FFD1BFAF29C4CBA60008C814 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
+		FFD1BFB529C4CDA20008C814 /* Register-LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Register-LoginViewController.xib"; sourceTree = "<group>"; };
+		FFD1BFB629C4CDA20008C814 /* Register-LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Register-LoginViewController.swift"; sourceTree = "<group>"; };
+		FFD1BFBA29C4D21C0008C814 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		FFD1BFBB29C4D21C0008C814 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		FFD1BFC029C4D9810008C814 /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
+		FFD1BFC129C4D9810008C814 /* OTPViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTPViewController.xib; sourceTree = "<group>"; };
+		FFD1BFC529C4E66E0008C814 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		FFD1BFC629C4E66E0008C814 /* ResetPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResetPasswordViewController.xib; sourceTree = "<group>"; };
+		FFD1BFCA29C4E7FF0008C814 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
+		FFD1BFCB29C4E7FF0008C814 /* ForgetPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgetPasswordViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -505,7 +525,7 @@
 				FABD93A62532DC4300BFB943 /* Helpers */,
 				FABD93A52532DC3100BFB943 /* SotryBoard */,
 				FABD938F2532DBF600BFB943 /* AppDelegate.swift */,
-				FFD1BFB429C4CBC30008C814 /* Registger-Login */,
+				FFD1BFB929C4D1FB0008C814 /* Authentication */,
 				FAE9A81E2665E2DE00D40FD2 /* AnswerQVC.swift */,
 				FFD1BFAA29C4CBA60008C814 /* MazzadTableViewCell */,
 				FFD1BFAD29C4CBA60008C814 /* NotificationTableViewCell */,
@@ -608,8 +628,58 @@
 		FFD1BFB429C4CBC30008C814 /* Registger-Login */ = {
 			isa = PBXGroup;
 			children = (
+				FFD1BFB629C4CDA20008C814 /* Register-LoginViewController.swift */,
+				FFD1BFB529C4CDA20008C814 /* Register-LoginViewController.xib */,
 			);
 			path = "Registger-Login";
+			sourceTree = "<group>";
+		};
+		FFD1BFB929C4D1FB0008C814 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				FFD1BFC929C4E7E90008C814 /* ForgetPassword */,
+				FFD1BFC429C4E6590008C814 /* ResetPassword */,
+				FFD1BFBF29C4D9680008C814 /* OTPViewController */,
+				FFD1BFB429C4CBC30008C814 /* Registger-Login */,
+				FFD1BFBE29C4D2240008C814 /* RegisterViewController */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		FFD1BFBE29C4D2240008C814 /* RegisterViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FFD1BFBA29C4D21C0008C814 /* RegisterViewController.swift */,
+				FFD1BFBB29C4D21C0008C814 /* RegisterViewController.xib */,
+			);
+			path = RegisterViewController;
+			sourceTree = "<group>";
+		};
+		FFD1BFBF29C4D9680008C814 /* OTPViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FFD1BFC029C4D9810008C814 /* OTPViewController.swift */,
+				FFD1BFC129C4D9810008C814 /* OTPViewController.xib */,
+			);
+			path = OTPViewController;
+			sourceTree = "<group>";
+		};
+		FFD1BFC429C4E6590008C814 /* ResetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				FFD1BFC529C4E66E0008C814 /* ResetPasswordViewController.swift */,
+				FFD1BFC629C4E66E0008C814 /* ResetPasswordViewController.xib */,
+			);
+			path = ResetPassword;
+			sourceTree = "<group>";
+		};
+		FFD1BFC929C4E7E90008C814 /* ForgetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				FFD1BFCA29C4E7FF0008C814 /* ForgetPasswordViewController.swift */,
+				FFD1BFCB29C4E7FF0008C814 /* ForgetPasswordViewController.xib */,
+			);
+			path = ForgetPassword;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -678,6 +748,7 @@
 				FA49CE132546A058004CDD6E /* Roboto-BoldItalic.ttf in Resources */,
 				FA4E023E25743D4500D14B03 /* fave.gif in Resources */,
 				FA762B77259E0AD30035E0EB /* Header.xib in Resources */,
+				FFD1BFBD29C4D21C0008C814 /* RegisterViewController.xib in Resources */,
 				FA49CE142546A05B004CDD6E /* Roboto-Italic.ttf in Resources */,
 				FAA348EE266E0D0300243DAF /* 371903340_LOCATION_MARKER_400.gif in Resources */,
 				FADE023125DD359D00FB1675 /* animation_500_kl9crrb3.gif in Resources */,
@@ -700,6 +771,7 @@
 				FAE9A7FE2665037E00D40FD2 /* subAnsweCell.xib in Resources */,
 				FA9DD4492664AA7F00DFE590 /* QuestionSubSectionCell.xib in Resources */,
 				FA9DD44C2664ABFD00DFE590 /* headView.xib in Resources */,
+				FFD1BFB729C4CDA20008C814 /* Register-LoginViewController.xib in Resources */,
 				FABD93C22532DD3F00BFB943 /* ArbFONTS-Jozoor-Font.otf in Resources */,
 				FA49CE192546A06B004CDD6E /* Roboto-Regular.ttf in Resources */,
 				FABD93D62536DDEA00BFB943 /* homeCell.xib in Resources */,
@@ -710,8 +782,11 @@
 				FABD939C2532DBF900BFB943 /* LaunchScreen.storyboard in Resources */,
 				FABD93D12532DD7B00BFB943 /* Color.xcassets in Resources */,
 				FA5935B925DE586F00C6026D /* GoogleService-Info.plist in Resources */,
+				FFD1BFCD29C4E7FF0008C814 /* ForgetPasswordViewController.xib in Resources */,
 				FABD93992532DBF900BFB943 /* Assets.xcassets in Resources */,
 				FA5099FB25804DFE00B9FB50 /* animation_500_kignrnoe.gif in Resources */,
+				FFD1BFC329C4D9810008C814 /* OTPViewController.xib in Resources */,
+				FFD1BFC829C4E66E0008C814 /* ResetPasswordViewController.xib in Resources */,
 				FABD93972532DBF600BFB943 /* Main.storyboard in Resources */,
 				FADE022B25DD2FFE00FB1675 /* animation_500_kl9bwexy.gif in Resources */,
 				FA3C8AC7257D86330051334F /* animation_500_ki6jfbzh.gif in Resources */,
@@ -813,6 +888,9 @@
 				FA4F79A625771309008FC9A1 /* NotVC.swift in Sources */,
 				FAF04BCF255E68CB00249556 /* CatCell.swift in Sources */,
 				FADD2F59254D72C1007BCA30 /* PopViewVC.swift in Sources */,
+				FFD1BFBC29C4D21C0008C814 /* RegisterViewController.swift in Sources */,
+				FFD1BFC229C4D9810008C814 /* OTPViewController.swift in Sources */,
+				FFD1BFB829C4CDA20008C814 /* Register-LoginViewController.swift in Sources */,
 				FA5099FD258053AF00B9FB50 /* PrivcyPolicyVC.swift in Sources */,
 				FA5F1F67253AFB1A007FEF72 /* MyReservationOB.swift in Sources */,
 				FA57ED9C2556242700D0C554 /* MirroringLabel.swift in Sources */,
@@ -832,6 +910,7 @@
 				FAAAF46F253E7C7000E17DAB /* AuctionsTableViewCell.swift in Sources */,
 				FA5F1F63253AFB1A007FEF72 /* LError.swift in Sources */,
 				FA5F1F7A253B7836007FEF72 /* CatCollectionViewCell.swift in Sources */,
+				FFD1BFC729C4E66E0008C814 /* ResetPasswordViewController.swift in Sources */,
 				FA57ED9E2556242700D0C554 /* L012Localizer.swift in Sources */,
 				FAAAF46B253E69E100E17DAB /* RouteManager.swift in Sources */,
 				FA6FD3A32580E8F1001F5BF1 /* RestPAsswordVC.swift in Sources */,
@@ -859,6 +938,7 @@
 				FA99F3B5255FB8C800CD0DE5 /* EditProfileVC.swift in Sources */,
 				FA998D0E25969C2400BBD16D /* SplashVC.swift in Sources */,
 				FA492D2525BEF20B00CDF8EC /* NetworkActivityIndicatorManager.swift in Sources */,
+				FFD1BFCC29C4E7FF0008C814 /* ForgetPasswordViewController.swift in Sources */,
 				FA5F1F6D253AFBA9007FEF72 /* LoginVC.swift in Sources */,
 				FAF04BCD255E685100249556 /* CatDetVC.swift in Sources */,
 				FA57ED9B2556242700D0C554 /* MirroringViewController.swift in Sources */,

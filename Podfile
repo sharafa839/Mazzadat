@@ -40,6 +40,7 @@ pod 'Spring'
   pod 'Firebase/Auth'
   pod 'Firebase/Messaging'
   pod 'FirebaseFirestoreSwift'
+  pod 'OTPFieldView'
 
 
 
