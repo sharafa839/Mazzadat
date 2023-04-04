@@ -16,16 +16,18 @@ import FirebaseMessaging
 import UserNotifications
 import SwiftyStoreKit
 
+let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    private(set) lazy var coordinator = AppCoordinator()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
-        application.beginBackgroundTask(withName: "showNotification", expirationHandler: nil)
+       // application.beginBackgroundTask(withName: "showNotification", expirationHandler: nil)
 
         IQKeyboardManager.shared.enable = true
         
@@ -43,9 +45,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             changeLanguage(lang: "en")
         L102Localizer.DoTheMagic()
         }else{
-            changeLanguage(lang: "ar")
+            changeLanguage(lang: "en")
             L102Localizer.DoTheMagic()
         }
+        coordinator.setRoot(UINavigationController(rootViewController: OnBoardingViewController()))
         //Add navigation bar colour
         UINavigationBar.appearance().barTintColor = #colorLiteral(red: 0.9670651555, green: 0.7025722861, blue: 0, alpha: 1)
 
@@ -69,6 +72,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    func configureIQKeyboardManager(){
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.overrideKeyboardAppearance = true
+        IQKeyboardManager.shared.keyboardAppearance = .default
+        IQKeyboardManager.shared.toolbarTintColor = .Bronze_500
+        IQKeyboardManager.shared.toolbarDoneBarButtonItemText = "done"
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+        IQKeyboardManager.shared.enable = true
+    }
     
     func setupIAP() {
 
@@ -148,17 +160,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: UISceneSession Lifecycle
 
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
-    }
-
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
-    }
+//    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
+//        // Called when a new scene session is being created.
+//        // Use this method to select a configuration to create the new scene with.
+//        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+//    }
+//
+//    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
+//        // Called when the user discards a scene session.
+//        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
+//        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    //}
 
 
 }

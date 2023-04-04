@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PagingCollectionViewCell" customModule="Shgardi_Captain" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="125" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="125" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AQk-WO-iLU">
+                        <rect key="frame" x="52.5" y="15" width="20" height="20"/>
+                        <color key="backgroundColor" name="Crusta"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="3Hp-b2-AD5"/>
+                            <constraint firstAttribute="width" constant="20" id="mFD-mS-yBv"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="AQk-WO-iLU" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="1xn-3B-bJS"/>
+                <constraint firstItem="AQk-WO-iLU" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="OfT-ct-omP"/>
+            </constraints>
+            <size key="customSize" width="125" height="50"/>
+            <connections>
+                <outlet property="currentView" destination="AQk-WO-iLU" id="v2w-bX-f7w"/>
+                <outlet property="widthConstraints" destination="mFD-mS-yBv" id="aoY-ZI-Sr0"/>
+            </connections>
+            <point key="canvasLocation" x="186.23188405797103" y="71.651785714285708"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Crusta">
+            <color red="0.99599999189376831" green="0.46700000762939453" blue="0.18400000035762787" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

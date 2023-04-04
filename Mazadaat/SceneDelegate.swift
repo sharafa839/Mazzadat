@@ -23,20 +23,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         
         if AppData.firstLogin{
-            let mainstoryboard:UIStoryboard = UIStoryboard(name: "Auth", bundle: nil)
-            let newViewcontroller:UIViewController = mainstoryboard.instantiateViewController(withIdentifier: "WellcomeSplashVC")
-            window.rootViewController = newViewcontroller
+            let onBoarding = OnBoardingViewController()
+            window.rootViewController = UINavigationController(rootViewController: onBoarding)
             window.makeKeyAndVisible()
         }else{
-            let mainstoryboard:UIStoryboard = UIStoryboard(name: "Auth", bundle: nil)
-            let newViewcontroller:UIViewController = mainstoryboard.instantiateViewController(withIdentifier: "SplashVC")
-            window.rootViewController = newViewcontroller
+            let onBoarding = OnBoardingViewController()
+            window.rootViewController = UINavigationController(rootViewController: onBoarding)
             window.makeKeyAndVisible()
         }
-        
-   
-     
-
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {

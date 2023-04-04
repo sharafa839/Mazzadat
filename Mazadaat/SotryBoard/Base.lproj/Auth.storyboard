@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -109,7 +109,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="7aG-mN-xOv">
-                                        <rect key="frame" x="301.5" y="280" width="102.5" height="27.5"/>
+                                        <rect key="frame" x="306.5" y="280.5" width="97.5" height="26"/>
                                         <color key="pageIndicatorTintColor" name="Gold"/>
                                         <color key="currentPageIndicatorTintColor" red="0.94499540329999998" green="0.94515722989999995" blue="0.94498521089999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </pageControl>
@@ -394,7 +394,7 @@
                                                                             <fragment content=" ">
                                                                                 <attributes>
                                                                                     <color key="NSColor" red="0.055277305895189262" green="0.54292878207439255" blue="0.86437331989247312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                    <font key="NSFont" size="13" name="Roboto-Medium"/>
+                                                                                    <font key="NSFont" metaFont="system"/>
                                                                                 </attributes>
                                                                             </fragment>
                                                                             <fragment content="سياسة">
@@ -406,7 +406,7 @@
                                                                             <fragment content=" ">
                                                                                 <attributes>
                                                                                     <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                                                    <font key="NSFont" size="13" name="Roboto-Medium"/>
+                                                                                    <font key="NSFont" metaFont="system"/>
                                                                                 </attributes>
                                                                             </fragment>
                                                                             <fragment content="الخصوصية">
@@ -418,7 +418,7 @@
                                                                             <fragment content=" ">
                                                                                 <attributes>
                                                                                     <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                                                    <font key="NSFont" size="13" name="Roboto-Medium"/>
+                                                                                    <font key="NSFont" metaFont="system"/>
                                                                                 </attributes>
                                                                             </fragment>
                                                                             <fragment content="والقوانين">
@@ -600,7 +600,7 @@
                                 <rect key="frame" x="78" y="114" width="258" height="197.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تأكيد البريد الالكتروني" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57A-WI-ueZ">
-                                <rect key="frame" x="95" y="331.5" width="224" height="34"/>
+                                <rect key="frame" x="96" y="331.5" width="222" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="y9L-Gf-87C"/>
                                 </constraints>
@@ -1809,6 +1809,12 @@
         </scene>
     </scenes>
     <designables>
+        <designable name="1Xh-aE-R6N">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
+        <designable name="25M-rW-eAe">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
         <designable name="2uY-7H-3jg">
             <size key="intrinsicContentSize" width="174" height="37"/>
         </designable>
@@ -1821,6 +1827,9 @@
         <designable name="Gei-ML-3jz">
             <size key="intrinsicContentSize" width="137" height="37"/>
         </designable>
+        <designable name="KJ0-8c-pix">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
         <designable name="Lx0-N1-Nfy">
             <size key="intrinsicContentSize" width="113" height="37"/>
         </designable>
@@ -1829,6 +1838,12 @@
         </designable>
         <designable name="Yp1-KQ-lnN">
             <size key="intrinsicContentSize" width="174" height="37"/>
+        </designable>
+        <designable name="fwS-MY-g7n">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
+        <designable name="izw-wK-yTR">
+            <size key="intrinsicContentSize" width="30" height="34"/>
         </designable>
         <designable name="r4U-dm-4fy">
             <size key="intrinsicContentSize" width="37" height="37"/>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Archivo-Bold.ttf">
+            <string>Archivo-Bold</string>
+        </array>
+        <array key="Archivo-Regular.ttf">
+            <string>Archivo-Regular</string>
+        </array>
+        <array key="Archivo-SemiBold.ttf">
+            <string>Archivo-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OTPViewController" customModule="Golden_Bell" customModuleProvider="target">
+            <connections>
+                <outlet property="didntRecieveCodeLabel" destination="Bd0-kj-vgB" id="R8V-ea-1EG"/>
+                <outlet property="incorrecetCodeLabel" destination="qd9-7y-v7R" id="SYj-X8-9Uq"/>
+                <outlet property="otpTextFieldView" destination="DJB-ZE-uIg" id="JoI-0F-b4q"/>
+                <outlet property="resendVerificationCodeButton" destination="fGx-0L-PrR" id="adz-ij-Juj"/>
+                <outlet property="timeInSecondsLabel" destination="xe4-7F-yBx" id="13j-VX-guR"/>
+                <outlet property="verifyButton" destination="iEe-wd-BuG" id="qMe-Ue-vct"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DJB-ZE-uIg" customClass="OTPFieldView" customModule="OTPFieldView">
+                    <rect key="frame" x="24" y="184" width="366" height="60"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="3Lg-ai-BJK"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="nFP-7u-Iba">
+                    <rect key="frame" x="70" y="252" width="274" height="185"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qd9-7y-v7R">
+                            <rect key="frame" x="0.0" y="0.0" width="274" height="32"/>
+                            <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="14"/>
+                            <color key="textColor" name="Red-500"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bd0-kj-vgB">
+                            <rect key="frame" x="0.0" y="51" width="274" height="32"/>
+                            <fontDescription key="fontDescription" name="Archivo-Regular" family="Archivo" pointSize="14"/>
+                            <color key="textColor" name="Neutral-v600"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xe4-7F-yBx">
+                            <rect key="frame" x="0.0" y="102" width="274" height="32"/>
+                            <fontDescription key="fontDescription" name="Archivo-Regular" family="Archivo" pointSize="16"/>
+                            <color key="textColor" name="Bronze-500"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGx-0L-PrR">
+                            <rect key="frame" x="0.0" y="153" width="274" height="32"/>
+                            <color key="backgroundColor" name="Bronze-100"/>
+                            <fontDescription key="fontDescription" name="Archivo-SemiBold" family="Archivo" pointSize="18"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Button">
+                                <color key="titleColor" name="Bronze-900"/>
+                            </state>
+                        </button>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0tH-iY-PiJ">
+                    <rect key="frame" x="24" y="44" width="366" height="100"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verify your OTP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mM4-N4-knz">
+                            <rect key="frame" x="0.0" y="0.0" width="366" height="46"/>
+                            <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="22"/>
+                            <color key="textColor" name="TextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZA0-aP-NPx">
+                            <rect key="frame" x="0.0" y="54" width="366" height="46"/>
+                            <string key="text">Password should be at least 8 characters long and include a mix of upper and lowercase letters, numbers, and symbols, and not used before.</string>
+                            <fontDescription key="fontDescription" name="Archivo-Regular" family="Archivo" pointSize="14"/>
+                            <color key="textColor" name="TextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iEe-wd-BuG" customClass="CustomButton" customModule="Golden_Bell" customModuleProvider="target">
+                    <rect key="frame" x="16" y="461" width="382" height="55"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="M9E-kd-8fd"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="iEe-wd-BuG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="5b5-7E-ZdN"/>
+                <constraint firstItem="0tH-iY-PiJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="7pu-2X-Asp"/>
+                <constraint firstItem="0tH-iY-PiJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="24" id="BRq-xF-p7s"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DJB-ZE-uIg" secondAttribute="trailing" constant="24" id="Pze-8c-Bgw"/>
+                <constraint firstItem="nFP-7u-Iba" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="70" id="RBg-6Y-tA6"/>
+                <constraint firstItem="DJB-ZE-uIg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="Vxf-ec-XlM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iEe-wd-BuG" secondAttribute="trailing" constant="16" id="Zic-2D-4bp"/>
+                <constraint firstItem="iEe-wd-BuG" firstAttribute="top" secondItem="nFP-7u-Iba" secondAttribute="bottom" constant="24" id="acY-Ye-Y6V"/>
+                <constraint firstItem="DJB-ZE-uIg" firstAttribute="top" secondItem="0tH-iY-PiJ" secondAttribute="bottom" constant="40" id="gK2-MU-tTU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nFP-7u-Iba" secondAttribute="trailing" constant="70" id="iWb-Yy-mOp"/>
+                <constraint firstItem="nFP-7u-Iba" firstAttribute="top" secondItem="DJB-ZE-uIg" secondAttribute="bottom" constant="8" id="rDq-1w-fAQ"/>
+                <constraint firstAttribute="trailing" secondItem="0tH-iY-PiJ" secondAttribute="trailing" constant="24" id="rj1-ac-ONx"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="102"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Bronze-100">
+            <color red="0.96470588235294119" green="0.8666666666666667" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Bronze-500">
+            <color red="0.88627450980392153" green="0.56470588235294117" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Bronze-900">
+            <color red="0.37254901960784315" green="0.23529411764705882" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Neutral-v600">
+            <color red="0.39215686274509803" green="0.38823529411764707" blue="0.49411764705882355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Red-500">
+            <color red="0.74901960784313726" green="0.14901960784313725" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextColor">
+            <color red="0.078431372549019607" green="0.074509803921568626" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

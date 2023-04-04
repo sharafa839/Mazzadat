@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Archivo-Regular.ttf">
+            <string>Archivo-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnBoardingViewController" customModule="Golden_Bell" customModuleProvider="target">
+            <connections>
+                <outlet property="startButton" destination="86V-0r-jix" id="jKy-tb-faz"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewOfImage" destination="3x9-mG-kGa" id="RRI-aJ-Emy"/>
+                <outlet property="welcomeSubTitleLabel" destination="5Rw-px-7z4" id="Tvg-lV-cN7"/>
+                <outlet property="welcomeTitleLabel" destination="E97-gK-39Q" id="9AA-58-o9G"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ihA-Y7-N5E">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3x9-mG-kGa">
+                    <rect key="frame" x="143" y="84" width="128" height="128"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oVg-z3-O6d">
+                            <rect key="frame" x="29" y="29" width="70" height="70"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="oVg-z3-O6d" firstAttribute="centerX" secondItem="3x9-mG-kGa" secondAttribute="centerX" id="AvR-d3-Rya"/>
+                        <constraint firstItem="oVg-z3-O6d" firstAttribute="width" secondItem="3x9-mG-kGa" secondAttribute="width" multiplier="0.546875" id="B4S-PN-tJu"/>
+                        <constraint firstItem="oVg-z3-O6d" firstAttribute="height" secondItem="3x9-mG-kGa" secondAttribute="height" multiplier="0.546875" id="Uv3-X4-xes"/>
+                        <constraint firstItem="oVg-z3-O6d" firstAttribute="centerY" secondItem="3x9-mG-kGa" secondAttribute="centerY" id="eIm-XV-uwC"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="G3n-bJ-aei">
+                    <rect key="frame" x="48" y="596" width="318" height="114"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Golden Bell Auctions" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E97-gK-39Q">
+                            <rect key="frame" x="0.0" y="0.0" width="318" height="74"/>
+                            <fontDescription key="fontDescription" name="Archivo-Regular" family="Archivo" pointSize="34"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start bidding and winning today!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Rw-px-7z4">
+                            <rect key="frame" x="0.0" y="90" width="318" height="24"/>
+                            <fontDescription key="fontDescription" name="Archivo-Regular" family="Archivo" pointSize="22"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86V-0r-jix" customClass="CustomButton" customModule="Golden_Bell" customModuleProvider="target">
+                    <rect key="frame" x="48" y="754" width="318" height="50"/>
+                    <color key="backgroundColor" name="Bronze-500"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="gnW-ir-dDs"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Archivo-Regular" family="Archivo" pointSize="18"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Button">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="nextActionButton:" destination="-1" eventType="touchUpInside" id="d7Z-qt-R4Q"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="86V-0r-jix" firstAttribute="trailing" secondItem="G3n-bJ-aei" secondAttribute="trailing" id="0TF-Dg-Jfl"/>
+                <constraint firstItem="ihA-Y7-N5E" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="BQn-wP-SBp"/>
+                <constraint firstItem="3x9-mG-kGa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Ckn-i7-DRs"/>
+                <constraint firstItem="3x9-mG-kGa" firstAttribute="height" secondItem="ihA-Y7-N5E" secondAttribute="height" multiplier="0.142857" id="Dl8-BM-Qqo"/>
+                <constraint firstItem="86V-0r-jix" firstAttribute="leading" secondItem="G3n-bJ-aei" secondAttribute="leading" id="E7Z-mk-Zlz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ihA-Y7-N5E" secondAttribute="trailing" id="J4R-eP-dRY"/>
+                <constraint firstItem="ihA-Y7-N5E" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Pnq-3i-qeO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="G3n-bJ-aei" secondAttribute="trailing" constant="48" id="QSC-tT-Yhq"/>
+                <constraint firstAttribute="bottom" secondItem="ihA-Y7-N5E" secondAttribute="bottom" id="Rk9-Fm-uVl"/>
+                <constraint firstItem="86V-0r-jix" firstAttribute="top" secondItem="G3n-bJ-aei" secondAttribute="bottom" constant="44" id="ZcL-Ft-EQZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="86V-0r-jix" secondAttribute="bottom" constant="58" id="c0i-Hn-66c"/>
+                <constraint firstItem="3x9-mG-kGa" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="kLv-5Y-u1v"/>
+                <constraint firstItem="3x9-mG-kGa" firstAttribute="width" secondItem="ihA-Y7-N5E" secondAttribute="width" multiplier="0.57971" constant="-112" id="ooU-Rt-evv"/>
+                <constraint firstItem="G3n-bJ-aei" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="48" id="qYc-1c-NCl"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="101.78571428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Bronze-500">
+            <color red="0.88627450980392153" green="0.56470588235294117" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -352,12 +352,22 @@ PODS:
   - GTMSessionFetcher/Core (1.5.0)
   - IAPurchaseManager (0.2.0)
   - ImageSlideshow/Core (1.9.2)
+  - ImageSlideshow/Kingfisher (1.9.2):
+    - ImageSlideshow/Core
+    - Kingfisher (> 3.0)
   - ImageSlideshow/SDWebImage (1.9.2):
     - ImageSlideshow/Core
     - SDWebImage (>= 3.7)
   - IQKeyboardManagerSwift (6.5.6)
-  - Kingfisher (5.7.1)
+  - Kingfisher (5.13.4):
+    - Kingfisher/Core (= 5.13.4)
+  - Kingfisher/Core (5.13.4)
   - leveldb-library (1.22)
+  - Moya (13.0.1):
+    - Moya/Core (= 13.0.1)
+  - Moya/Core (13.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.1)
   - MSPeekCollectionViewDelegateImplementation (3.1.1)
   - MXSegmentedControl (1.1.0)
   - nanopb (1.30906.0):
@@ -369,6 +379,14 @@ PODS:
   - PromisesObjC (1.2.12)
   - Protobuf (3.14.0)
   - RappleProgressHUD (4.1)
+  - ReachabilitySwift (5.0.0)
+  - Result (4.1.0)
+  - RxCocoa (5.1.3):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.3):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.3)
   - SDWebImage (5.11.1):
     - SDWebImage/Core (= 5.11.1)
   - SDWebImage/Core (5.11.1)
@@ -401,11 +419,13 @@ PODS:
   - SwifterSwift/SwiftStdlib (5.2.0)
   - SwifterSwift/UIKit (5.2.0)
   - SwiftGifOrigin (1.7.0)
+  - SwiftKeychainWrapper (4.0.1)
   - SwiftyJSON (5.0.0)
   - SwiftyStoreKit (0.16.1)
   - Swime (3.0.6)
   - Toast-Swift (5.0.1)
   - TransitionButton (0.5.3)
+  - TwitterProfile (1.0.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.9.0)
@@ -418,24 +438,32 @@ DEPENDENCIES:
   - GooglePlacePicker
   - GooglePlaces
   - IAPurchaseManager
+  - ImageSlideshow/Kingfisher
   - ImageSlideshow/SDWebImage
   - IQKeyboardManagerSwift
-  - Kingfisher (= 5.7.1)
+  - IQKeyboardManagerSwift (~> 6.5.0)
+  - Kingfisher (~> 5.13.4)
+  - Moya
   - MSPeekCollectionViewDelegateImplementation
   - MXSegmentedControl
   - OTPFieldView
   - RappleProgressHUD
+  - ReachabilitySwift
+  - RxCocoa (~> 5.1.1)
+  - RxSwift (~> 5.1.1)
   - SDWebImage
   - SideMenu (~> 5.0.1)
   - Spring
   - SwiftDate (~> 5.0)
   - SwifterSwift
   - SwiftGifOrigin
+  - SwiftKeychainWrapper (~> 4.0.1)
   - SwiftyJSON
   - SwiftyStoreKit
   - Swime
   - Toast-Swift
   - TransitionButton
+  - TwitterProfile
 
 SPEC REPOS:
   trunk:
@@ -467,6 +495,7 @@ SPEC REPOS:
     - IQKeyboardManagerSwift
     - Kingfisher
     - leveldb-library
+    - Moya
     - MSPeekCollectionViewDelegateImplementation
     - MXSegmentedControl
     - nanopb
@@ -474,17 +503,24 @@ SPEC REPOS:
     - PromisesObjC
     - Protobuf
     - RappleProgressHUD
+    - ReachabilitySwift
+    - Result
+    - RxCocoa
+    - RxRelay
+    - RxSwift
     - SDWebImage
     - SideMenu
     - Spring
     - SwiftDate
     - SwifterSwift
     - SwiftGifOrigin
+    - SwiftKeychainWrapper
     - SwiftyJSON
     - SwiftyStoreKit
     - Swime
     - Toast-Swift
     - TransitionButton
+    - TwitterProfile
 
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
@@ -513,8 +549,9 @@ SPEC CHECKSUMS:
   IAPurchaseManager: 2e4678d9dc157627e1f2c4c6e13fd9559f27f3c0
   ImageSlideshow: be305b54eaf2b2cfc7a7141c7c734605d44dc07d
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
-  Kingfisher: 176d377ad339113c99ad4980cbae687f807e20fe
+  Kingfisher: d2279a7abece3c7f25a80cd2b7f363ca5cf3f44c
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
+  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   MSPeekCollectionViewDelegateImplementation: f86fd6a6ce284723343e8697a013f5294c05e745
   MXSegmentedControl: f39e46199a52cbc03b1c845e150215119f2542f5
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
@@ -522,18 +559,25 @@ SPEC CHECKSUMS:
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   Protobuf: 0cde852566359049847168e51bd1c690e0f70056
   RappleProgressHUD: f29bc5dc5f9834c2caa9c2ae21ba11f3ff2b5a85
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  RxCocoa: e2ed092d5432e4296aa818021d27de4090ac0354
+  RxRelay: 5a18c2eb2d68326ebaf0112f80d837ae41b92b97
+  RxSwift: 915abbdfb62214aa89ccd0b194d44fb478019b27
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
   SideMenu: 1dcaabce84538c53325c287f7fe62999379a641c
   Spring: 17901566c8ecf3a1327902b940406c64512f9bb1
   SwiftDate: 6329e58969a2de31cea7f1ee1143b247693196e7
   SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
   SwiftGifOrigin: fbd6cf37afcfcf97a5c3db996ddc0492e5c5c145
+  SwiftKeychainWrapper: 807ba1d63c33a7d0613288512399cd1eda1e470c
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   SwiftyStoreKit: 6b9c08810269f030586dac1fae8e75871a82e84a
   Swime: d7b2c277503b6cea317774aedc2dce05613f8b0b
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
   TransitionButton: 36283346e17c64775a1b3bc3a7a72940a367de1f
+  TwitterProfile: 104d0588d1c510a6c7841e3c24a48adda024159d
 
-PODFILE CHECKSUM: 41fbd3f3b9d56db2e741829f1db3af808f8a7012
+PODFILE CHECKSUM: 061ff0abe0b3170a891b9d57b4aca8c1b8913905
 
 COCOAPODS: 1.11.0

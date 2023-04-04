@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Archivo-Bold.ttf">
+            <string>Archivo-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CategoriesCollectionViewCell" customModule="Golden_Bell" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="141" height="138"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="141" height="138"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FuA-Fj-VK3">
+                        <rect key="frame" x="8" y="8" width="125" height="122"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FPx-rK-JIe">
+                                <rect key="frame" x="8" y="8" width="109" height="69"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oFF-xy-fWe">
+                                        <rect key="frame" x="8" y="8" width="93" height="46"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t7u-C9-WLd">
+                                        <rect key="frame" x="31" y="62" width="40" height="25"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHh-4R-L1f">
+                                                <rect key="frame" x="2" y="2" width="36" height="21"/>
+                                                <color key="backgroundColor" name="Bronze-500"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="eHh-4R-L1f" secondAttribute="bottom" constant="2" id="4da-IC-7z2"/>
+                                            <constraint firstItem="eHh-4R-L1f" firstAttribute="leading" secondItem="t7u-C9-WLd" secondAttribute="leading" constant="2" id="HmV-eM-CdL"/>
+                                            <constraint firstItem="eHh-4R-L1f" firstAttribute="top" secondItem="t7u-C9-WLd" secondAttribute="top" constant="2" id="KRg-lc-N2W"/>
+                                            <constraint firstAttribute="trailing" secondItem="eHh-4R-L1f" secondAttribute="trailing" constant="2" id="cdP-r7-cWN"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" name="Bronze-200"/>
+                                <constraints>
+                                    <constraint firstItem="t7u-C9-WLd" firstAttribute="leading" secondItem="FPx-rK-JIe" secondAttribute="leading" constant="31" id="7CH-c3-YHx"/>
+                                    <constraint firstItem="t7u-C9-WLd" firstAttribute="top" secondItem="oFF-xy-fWe" secondAttribute="bottom" constant="8" id="N3B-f3-M4B"/>
+                                    <constraint firstItem="oFF-xy-fWe" firstAttribute="leading" secondItem="FPx-rK-JIe" secondAttribute="leading" constant="8" id="QU8-dU-BQF"/>
+                                    <constraint firstItem="oFF-xy-fWe" firstAttribute="top" secondItem="FPx-rK-JIe" secondAttribute="top" constant="8" id="cqB-pm-40B"/>
+                                    <constraint firstAttribute="trailing" secondItem="t7u-C9-WLd" secondAttribute="trailing" constant="38" id="qUm-Xg-Lyy"/>
+                                    <constraint firstAttribute="trailing" secondItem="oFF-xy-fWe" secondAttribute="trailing" constant="8" id="xwt-SX-fEh"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xb0-AA-IPi">
+                                <rect key="frame" x="8" y="102" width="109" height="12"/>
+                                <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FPx-rK-JIe" firstAttribute="centerX" secondItem="FuA-Fj-VK3" secondAttribute="centerX" id="0lV-Ut-ywO"/>
+                            <constraint firstItem="FPx-rK-JIe" firstAttribute="top" secondItem="FuA-Fj-VK3" secondAttribute="top" constant="8" id="72J-A4-Fdg"/>
+                            <constraint firstAttribute="trailing" secondItem="FPx-rK-JIe" secondAttribute="trailing" constant="8" id="HW5-aX-KiL"/>
+                            <constraint firstItem="Xb0-AA-IPi" firstAttribute="top" secondItem="FPx-rK-JIe" secondAttribute="bottom" constant="25" id="Lol-4V-qom"/>
+                            <constraint firstItem="FPx-rK-JIe" firstAttribute="leading" secondItem="FuA-Fj-VK3" secondAttribute="leading" constant="8" id="Tq4-Em-jII"/>
+                            <constraint firstItem="Xb0-AA-IPi" firstAttribute="leading" secondItem="FPx-rK-JIe" secondAttribute="leading" id="b0z-ah-yB8"/>
+                            <constraint firstItem="Xb0-AA-IPi" firstAttribute="top" secondItem="t7u-C9-WLd" secondAttribute="bottom" constant="7" id="omK-Hx-aH9"/>
+                            <constraint firstAttribute="bottom" secondItem="Xb0-AA-IPi" secondAttribute="bottom" constant="8" id="ukT-zv-RwJ"/>
+                            <constraint firstItem="Xb0-AA-IPi" firstAttribute="trailing" secondItem="FPx-rK-JIe" secondAttribute="trailing" id="zOH-Hp-nE0"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="FuA-Fj-VK3" secondAttribute="bottom" constant="8" id="g73-Id-9rD"/>
+                <constraint firstItem="FuA-Fj-VK3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="kOR-mF-8i1"/>
+                <constraint firstAttribute="trailing" secondItem="FuA-Fj-VK3" secondAttribute="trailing" constant="8" id="lCq-Lz-fob"/>
+                <constraint firstItem="FuA-Fj-VK3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="pAF-O1-193"/>
+            </constraints>
+            <size key="customSize" width="141" height="138"/>
+            <connections>
+                <outlet property="containerView" destination="FuA-Fj-VK3" id="wDS-v7-TBv"/>
+                <outlet property="innerView" destination="FPx-rK-JIe" id="Fjx-pT-40y"/>
+                <outlet property="itemImageView" destination="oFF-xy-fWe" id="S8k-u8-Mrs"/>
+                <outlet property="itemTitleLabel" destination="Xb0-AA-IPi" id="Imc-2x-hGS"/>
+                <outlet property="itemValueLabel" destination="eHh-4R-L1f" id="li0-gK-hrT"/>
+                <outlet property="labelContinerView" destination="t7u-C9-WLd" id="Kbp-hh-Fvu"/>
+            </connections>
+            <point key="canvasLocation" x="26.811594202898554" y="18.080357142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Bronze-200">
+            <color red="0.94901960784313721" green="0.80000000000000004" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Bronze-500">
+            <color red="0.88627450980392153" green="0.56470588235294117" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

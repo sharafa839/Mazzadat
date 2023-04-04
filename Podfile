@@ -24,7 +24,6 @@ pod 'Spring'
    pod "ImageSlideshow/SDWebImage"
  pod 'OTPFieldView'
   pod 'SideMenu', '~> 5.0.1'
-  pod 'Kingfisher', '5.7.1'
   pod 'GoogleMaps'
   pod 'GooglePlaces'
   pod 'GooglePlacePicker'
@@ -41,8 +40,15 @@ pod 'Spring'
   pod 'Firebase/Messaging'
   pod 'FirebaseFirestoreSwift'
   pod 'OTPFieldView'
-
-
+  pod 'RxSwift', '~> 5.1.1'
+  pod 'RxCocoa', '~> 5.1.1' 
+  pod 'IQKeyboardManagerSwift', '~> 6.5.0'
+  pod 'TwitterProfile'
+  pod 'Moya'
+  pod 'ReachabilitySwift'
+  pod 'Kingfisher', '~> 5.13.4'
+  pod 'SwiftKeychainWrapper', '~> 4.0.1'
+  pod "ImageSlideshow/Kingfisher"
 
   # Pods for Mazadaat
 
