@@ -18,7 +18,7 @@
 #include <CommonCrypto/CommonCrypto.h>
 #import "FirebaseAuth/Sources/Public/FirebaseAuth/FIRFacebookAuthProvider.h"
 #import "FirebaseAuth/Sources/Public/FirebaseAuth/FIROAuthCredential.h"
-#import "FirebaseCore/Sources/Private/FirebaseCoreInternal.h"
+#import "FirebaseCore/Extension/FirebaseCoreInternal.h"
 
 #import "FirebaseAuth/Sources/Auth/FIRAuthGlobalWorkQueue.h"
 #import "FirebaseAuth/Sources/Auth/FIRAuth_Internal.h"
@@ -72,6 +72,12 @@ static NSString *const kCustomUrlSchemePrefix = @"app-";
       @brief The callback URL scheme used for headful-lite sign-in.
    */
   NSString *_callbackScheme;
+
+  /** @var _usingClientIDScheme
+      @brief True if the reverse client ID is registered as a custom URL scheme, and false
+     otherwise.
+   */
+  BOOL _usingClientIDScheme;
 }
 
 + (FIROAuthCredential *)credentialWithProviderID:(NSString *)providerID
@@ -82,6 +88,7 @@ static NSString *const kCustomUrlSchemePrefix = @"app-";
                                                rawNonce:nil
                                             accessToken:accessToken
                                                  secret:nil
+                                               fullName:nil
                                            pendingToken:nil];
 }
 
@@ -92,6 +99,7 @@ static NSString *const kCustomUrlSchemePrefix = @"app-";
                                                rawNonce:nil
                                             accessToken:accessToken
                                                  secret:nil
+                                               fullName:nil
                                            pendingToken:nil];
 }
 
@@ -104,6 +112,7 @@ static NSString *const kCustomUrlSchemePrefix = @"app-";
                                                rawNonce:rawNonce
                                             accessToken:accessToken
                                                  secret:nil
+                                               fullName:nil
                                            pendingToken:nil];
 }
 
@@ -115,6 +124,19 @@ static NSString *const kCustomUrlSchemePrefix = @"app-";
                                                rawNonce:rawNonce
                                             accessToken:nil
                                                  secret:nil
+                                               fullName:nil
+                                           pendingToken:nil];
+}
+
++ (FIROAuthCredential *)appleCredentialWithIDToken:(NSString *)IDToken
+                                          rawNonce:(nullable NSString *)rawNonce
+                                          fullName:(nullable NSPersonNameComponents *)fullName {
+  return [[FIROAuthCredential alloc] initWithProviderID:@"apple.com"
+                                                IDToken:IDToken
+                                               rawNonce:rawNonce
+                                            accessToken:nil
+                                                 secret:nil
+                                               fullName:fullName
                                            pendingToken:nil];
 }
 
@@ -203,20 +225,29 @@ static NSString *const kCustomUrlSchemePrefix = @"app-";
     @return An Instance of @c FIROAuthProvider.
   */
 - (nullable instancetype)initWithProviderID:(NSString *)providerID auth:(FIRAuth *)auth {
-  NSAssert(![providerID isEqual:FIRFacebookAuthProviderID],
-           @"Sign in with Facebook is not supported via generic IDP; the Facebook TOS "
-            "dictate that you must use the Facebook iOS SDK for Facebook login.");
-  NSAssert(![providerID isEqual:@"apple.com"],
-           @"Sign in with Apple is not supported via generic IDP; You must use the Apple iOS SDK"
-            " for Sign in with Apple.");
+  if (!auth.requestConfiguration.emulatorHostAndPort) {
+    NSAssert(![providerID isEqual:FIRFacebookAuthProviderID],
+             @"Sign in with Facebook is not supported via generic IDP; the Facebook TOS "
+              "dictate that you must use the Facebook iOS SDK for Facebook login.");
+    NSAssert(![providerID isEqual:@"apple.com"],
+             @"Sign in with Apple is not supported via generic IDP; You must use the Apple iOS SDK"
+              " for Sign in with Apple.");
+  }
   self = [super init];
   if (self) {
     _auth = auth;
     _providerID = providerID;
     if (_auth.app.options.clientID) {
-      _callbackScheme = [[[_auth.app.options.clientID componentsSeparatedByString:@"."]
-                             reverseObjectEnumerator].allObjects componentsJoinedByString:@"."];
-    } else {
+      NSString *reverseClientIDScheme =
+          [[[_auth.app.options.clientID componentsSeparatedByString:@"."]
+               reverseObjectEnumerator].allObjects componentsJoinedByString:@"."];
+      if ([FIRAuthWebUtils isCallbackSchemeRegisteredForCustomURLScheme:reverseClientIDScheme]) {
+        _callbackScheme = reverseClientIDScheme;
+        _usingClientIDScheme = YES;
+      }
+    }
+
+    if (!_usingClientIDScheme) {
       _callbackScheme = [kCustomUrlSchemePrefix
           stringByAppendingString:[_auth.app.options.googleAppID
                                       stringByReplacingOccurrencesOfString:@":"
@@ -293,6 +324,7 @@ static NSString *const kCustomUrlSchemePrefix = @"app-";
                                      NSString *appID = strongSelf->_auth.app.options.googleAppID;
                                      NSString *apiKey =
                                          strongSelf->_auth.requestConfiguration.APIKey;
+                                     NSString *tenantID = strongSelf->_auth.tenantID;
                                      NSMutableDictionary *urlArguments = [@{
                                        @"apiKey" : apiKey,
                                        @"authType" : kAuthTypeSignInWithRedirect,
@@ -302,10 +334,13 @@ static NSString *const kCustomUrlSchemePrefix = @"app-";
                                        @"eventId" : eventID,
                                        @"providerId" : strongSelf->_providerID,
                                      } mutableCopy];
-                                     if (clientID) {
+                                     if (strongSelf->_usingClientIDScheme) {
                                        urlArguments[@"clientId"] = clientID;
                                      } else {
                                        urlArguments[@"appId"] = appID;
+                                     }
+                                     if (tenantID) {
+                                       urlArguments[@"tid"] = tenantID;
                                      }
                                      if (strongSelf.scopes.count) {
                                        urlArguments[@"scopes"] =

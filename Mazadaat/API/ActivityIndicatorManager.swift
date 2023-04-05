@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import RappleProgressHUD
 
 class ActivityIndicatorManager: NSObject {
     
