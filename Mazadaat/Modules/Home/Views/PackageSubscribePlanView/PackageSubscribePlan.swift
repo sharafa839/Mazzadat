@@ -16,10 +16,6 @@ class PackageSubscribePlan: UIView {
     @IBOutlet weak var remainingPlanLabel: UILabel!
     
     //MARK: - Init
-    init() {
-        setupUI()
-        setupLocalize()
-    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

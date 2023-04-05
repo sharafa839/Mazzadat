@@ -8,6 +8,7 @@
 
 import Foundation
 import Moya
+import Alamofire
 
 class MoyaServiceHelper<T: TargetType> {
     
@@ -38,8 +39,8 @@ class MoyaServiceHelper<T: TargetType> {
         defaultRequest(target: target) { (result: Swift.Result<BaseResponse<R>, Error>) in
             switch result {
                 case .success(let response):
-                    if response.status == .failure {
-                        let error = NetworkError(code: 0, message: response.message ?? L10n.App.somethingWentWrong)
+                    if response.status == .fail {
+                        let error = NetworkError(code: 0, message: response.message?.first ?? "L10n.App.somethingWentWrong")
                         completion(.failure(error))
                     } else {
                         completion(.success(response))
@@ -52,7 +53,7 @@ class MoyaServiceHelper<T: TargetType> {
     
     func defaultRequest<R: Codable>(target: T, completion: @escaping (Result<R, Error>) -> Void) {
         guard NetworkReachabilityManager()?.isReachable ?? false else {
-            let error = NetworkError(code: 0, message: L10n.App.noInternetAccess)
+            let error = NetworkError(code: 0, message: "NoInterNet")
             completion(.failure(error))
             return
         }
@@ -61,17 +62,12 @@ class MoyaServiceHelper<T: TargetType> {
         provider.request(target) { result in
             switch result {
                 case .success(let value):
-                    guard value.statusCode.inRange(closed: 200, 299) else {
-                        self.handleFailure(target, response: value, completion: completion)
-                        break
-                    }
-                    
                     do {
                         let decoder = JSONDecoder()
                         let response = try decoder.decode(R.self, from: value.data)
                         completion(.success(response))
                     } catch(let decodeError) {
-                        let error = NetworkError(code: 0, message: L10n.App.somethingwentwrongtryagainlater)
+                        let error = NetworkError(code: 0, message: "L10n.App.somethingwentwrongtryagainlater")
                         print("🤯 Decoder Failure in \(T.self) for \(R.self) \nError: \(decodeError)")
                         completion(.failure(error))
                     }
@@ -87,20 +83,7 @@ class MoyaServiceHelper<T: TargetType> {
                                            response: Response?,
                                            completion: @escaping (Swift.Result<R, Error>) -> Void) {
         if response?.statusCode == 401 {
-            Service.shared.saveRequest {
-                self.defaultRequest(target: target, completion: completion)
-            }
-            guard !Service.shared.isRefreshingToken else {return}
-            Service.shared.isRefreshingToken = true
-            Service.shared.refreshToken { (isSuccess) in
-                Service.shared.isRefreshingToken = false
-                guard isSuccess else {
-                    Service.shared.savedRequests.removeAll()
-                    self.LogOut()
-                    return
-                }
-                Service.shared.executeAllSavedRequests()
-            }
+
             return
         } else {
             self.extractError(from: response?.data, completion: completion)
@@ -120,27 +103,13 @@ class MoyaServiceHelper<T: TargetType> {
                                           completion: @escaping (Swift.Result<R, Error>) -> Void) {
         let resultJSON = response?.asDictionary ?? [:]
         
-        if let message = resultJSON["message"] as? String, message.isNotEmpty {
-            let error = NetworkError(code: 0, message: message)
+        if let message = resultJSON["message"] as? [String], !message.isEmpty {
+            let error = NetworkError(code: 0, message: message.first!)
             completion(.failure(error))
             return
-        }
-        
-        if let responseDict =  resultJSON["response"] as? [String: Any] {
-            if let errorsDict = responseDict["errors"] as? [String:Any] {
-                var errors = [String]()
-                errorsDict.forEach({errors += $0.value as? [String] ?? []})
-                let error = NetworkError(code: 0, message: errors.joined(separator: "\n"))
-                completion(.failure(error))
-                return
-            }
-        }
-        
-        let error = NetworkError(code: 0, message: L10n.App.somethingwentwrongtryagainlater)
-        completion(.failure(error))
     }
     
-    
+    }
 }
 
 extension Data {
@@ -158,3 +127,17 @@ extension Data {
             .flatMap { $0 as? [String: Any] } ?? [:]
     }
 }
+
+    public struct NetworkError: Error, LocalizedError, Codable {
+        
+        var code: Int = 0
+        var message: String = ""
+        
+        public var localizedDescription: String {
+            message
+        }
+        
+        public var errorDescription: String? {
+            message
+        }
+    }

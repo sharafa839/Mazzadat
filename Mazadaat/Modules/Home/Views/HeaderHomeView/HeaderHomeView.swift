@@ -28,13 +28,8 @@ class HeaderHomeView: UIView {
     var onTapSearch:(()->Void)?
     //MARK: - LifeCycle
     
-    init() {
-        <#statements#>
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+   
+   
     
     
     //MARK: - Methods

@@ -13,7 +13,7 @@ enum ResponseStatus:String,Codable {
     case fail = "fail"
 }
 
-struct BasicResponse<T:Codable>:Codable {
+struct BaseResponse<T:Codable>:Codable {
     let message:[String]?
     let status:ResponseStatus
     let response:T?
