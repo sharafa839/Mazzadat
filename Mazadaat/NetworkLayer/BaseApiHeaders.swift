@@ -13,7 +13,7 @@ protocol BaseApiHeadersProtocol {
 
 extension BaseApiHeadersProtocol {
     var baseURL:URL {
-    return URL(string: "https://app.golden-auctions.com/")!
+    return URL(string: "https://goldnbell.co/")!
     }
     
     var headers:[String:String]? {
@@ -23,10 +23,10 @@ extension BaseApiHeadersProtocol {
     var commonHeader: [String:String] {
         let checkAuthorization = HelperK.checkUserToken()
         let authorization = checkAuthorization ? HelperK.getUserToken() : ""
-        var header:[String:String] = ["":""]
-        header["Accept"] = "application/json"
-        header["X-localization"] = "ar"
-        header["ontent-Type"] = "multipart/form-data"
+        var header:[String:String] =
+        ["Accept":"application/json"
+         ,"X-localization": "ar"
+         ,"content-Type":"multipart/form-data"]
        
         if authorization != "" {
             header["Authorization"] = "\(authorization)"
