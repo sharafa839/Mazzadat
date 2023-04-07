@@ -7,6 +7,7 @@
 
 import Foundation
 import Moya
+import UIKit
 enum AuthApiServices {
     case login(password:String,email:String)
     case register(name:String,phone:String,password:String,email:String)
@@ -15,6 +16,7 @@ enum AuthApiServices {
     case resetPassword(phone:String)
     case update(name:String,phone:String,email:String)
     case me
+    case updateProfileImage(images:[MultiPartItem])
 }
 
 extension AuthApiServices:TargetType,BaseApiHeadersProtocol {
@@ -31,9 +33,11 @@ extension AuthApiServices:TargetType,BaseApiHeadersProtocol {
             return EndPoints.Auth.changePassword.rawValue
         case .resetPassword:
             return EndPoints.Auth.resetPassword.rawValue
-       
-        case .update:
+        case .me :
+            return EndPoints.Auth.me.rawValue
+        case .update,.updateProfileImage:
             return EndPoints.Auth.update.rawValue
+            
         }
     }
     
@@ -60,9 +64,25 @@ extension AuthApiServices:TargetType,BaseApiHeadersProtocol {
             return .requestParameters(parameters: ["name":name,"email":email,"mobile":phone], encoding: JSONEncoding.default)
         case .me:
             return .requestPlain
+        case .updateProfileImage(let images):
+            let imageName = "img-\(CACurrentMediaTime()).png"
+            var multipart: [MultipartFormData] = []
+            
+            
+            let multipartImages = images.map { image in
+                MultipartFormData(provider: .data(image.data), name: image.keyName,
+                                  fileName: image.fileName, mimeType: image.mimeType)
+            }
+            
+            multipart.append(contentsOf: multipartImages)
+            return .uploadMultipart(multipart)
         }
     }
     
 }
 
 
+struct MultiPartItem : Codable {
+    var data: Data
+    var fileName, mimeType, keyName: String
+}

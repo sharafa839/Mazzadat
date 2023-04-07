@@ -10,7 +10,7 @@ import Foundation
 import Moya
 import Alamofire
 
-class MoyaServiceHelper<T: TargetType> {
+class MoyaHelper<T: TargetType> {
     
         // MARK:- Properties
     
@@ -78,6 +78,7 @@ class MoyaServiceHelper<T: TargetType> {
             }
         }
     }
+    
     
     private func handleFailure<R: Codable>(_ target: T,
                                            response: Response?,

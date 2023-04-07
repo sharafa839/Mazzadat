@@ -16,7 +16,7 @@ enum ResponseStatus:String,Codable {
 struct BaseResponse<T:Codable>:Codable {
     let message:[String]?
     let status:ResponseStatus
-    let response:T?
+    let response:Basic<T>?
     let code:Int
     let paging:Int?
 }
@@ -25,3 +25,8 @@ enum NetworkServiceType:String {
     case live = "live"
     case test = "test"
 }
+
+struct Basic<T:Codable>:Codable {
+    let data:T?
+}
+

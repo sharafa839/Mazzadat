@@ -46,6 +46,7 @@ pod 'Spring'
   pod 'SwiftKeychainWrapper', '~> 4.0.1'
   pod "ImageSlideshow/Kingfisher"
   pod 'Moya', '~> 15.0'
+  pod 'NotificationBannerSwift', '~> 3.0.0'
 
   # Pods for Mazadaat
 

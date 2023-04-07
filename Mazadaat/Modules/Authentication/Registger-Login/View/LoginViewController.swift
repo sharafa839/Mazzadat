@@ -51,6 +51,8 @@ class LoginViewController: UIViewController {
         setupLocalize()
         setupUI()
         setupObservables()
+        setupViewModelObserver()
+        setupProperty()
     }
    
     //MARK: - Methods
@@ -80,8 +82,8 @@ class LoginViewController: UIViewController {
     }
     
     private func setupObservables() {
-        loginButton.rx.tap.subscribe { [weak self] in
-            
+        loginButton.rx.tap.subscribe { [weak self] _  in
+            self?.viewModel.loginWithPhoneAndPassword()
         }.disposed(by: viewModel.disposeBag)
         
         ContinueAsGuestButton.rx.tap.subscribe { [weak self] in
@@ -103,6 +105,37 @@ class LoginViewController: UIViewController {
         
     }
     
+    private func setupViewModelObserver() {
+      viewModel.showLoading.subscribe { [weak self] value in
+        guard let isLoading = value.element else {return}
+          isLoading ? ActivityIndicatorManager.shared.showProgressView() : ActivityIndicatorManagerr.shared.hideProgressView()
+      }.disposed(by: viewModel.disposeBag)
+
+      viewModel.onError.subscribe {  error in
+        guard let errorDescription = error.element else {return}
+        HelperK.showError(title: errorDescription, subtitle: "")
+      }.disposed(by: viewModel.disposeBag)
+
+      viewModel.onSuccess.subscribe { [weak self] _ in
+        let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
+        
+        let main = storyBoard.instantiateViewController(withIdentifier: "main")
+        let home = UINavigationController(rootViewController:main )
+        home.modalPresentationStyle = .overFullScreen
+       
+        self?.present(home, animated: true, completion: nil)
+        
+      }.disposed(by: viewModel.disposeBag)
+
+    }
+    
+    private func setupProperty() {
+      
+      phoneNumberTextField.rx.text.orEmpty.bind(to: viewModel.email).disposed(by: viewModel.disposeBag)
+      passwordTextField.rx.text.orEmpty.bind(to: viewModel.password).disposed(by: viewModel.disposeBag)
+      viewModel.isContinueButtonEnabled.bind(to:  loginButton.rx.isEnabled).disposed(by: viewModel.disposeBag)
+     
+    }
     @IBAction func segmentAction(_ sender: CustomSegmentedControl) {
         
         if sender.selectedSegmentIndex == 1 {

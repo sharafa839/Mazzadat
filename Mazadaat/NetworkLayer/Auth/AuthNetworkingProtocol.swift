@@ -7,12 +7,15 @@
 
 import Foundation
 protocol AuthNetworkingProtocol {
-  func login(phone:String,password:String, completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
-  func register(phone:String,password:String,email:String,name:String,government:String,city:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
+  func login(email:String,password:String, completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
+  func register(phone:String,password:String,email:String,name:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
   func logout(completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
   func changePassword(currentPassword:String,newPassword:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
   func resetPassword(phone:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
-  func verifyCodeWithNewPassword(code:String,newPassword:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
+    func update(name:String,phone:String,email:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
+    
+    func updateProfileImage(image:[MultiPartItem],completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
+
 }
 
 extension AuthNetworkingProtocol {
@@ -20,12 +23,12 @@ extension AuthNetworkingProtocol {
     return AuthRepo()
   }
   
-  func login(phone:String,password:String, completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void) {
-    auth.request(target: .login(password: password, phone: phone), completion: completion)
+  func login(email:String,password:String, completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void) {
+      auth.request(target: .login(password: password, email: email), completion: completion)
   }
   
-  func register(phone:String,password:String,email:String,name:String,government:String,city:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void) {
-    auth.request(target: .register(name: name, phone: phone, password: password, email: email, city: city, government: government), completion: completion)
+  func register(phone:String,password:String,email:String,name:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void) {
+    auth.request(target: .register(name: name, phone: phone, password: password, email: email), completion: completion)
   }
   
   func logout(completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void) {
@@ -39,10 +42,14 @@ extension AuthNetworkingProtocol {
   func resetPassword(phone:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void){
     auth.request(target: .resetPassword(phone: phone), completion: completion)
   }
+    
+    func update(name:String,phone:String,email:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void) {
+        auth.request(target: .update(name: name, phone: phone, email: email), completion: completion)
+    }
 
-  func verifyCodeWithNewPassword(code:String,newPassword:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void) {
-    auth.request(target: .verifyCodeWithNewPassword(code: code, newPassword: newPassword), completion: completion)
-  }
+    func updateProfileImage(image:[MultiPartItem],completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void) {
+        auth.request(target: .updateProfileImage(images: image), completion: completion)
+    }
 
 
 }
