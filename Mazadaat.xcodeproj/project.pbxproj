@@ -135,6 +135,9 @@
 		FF4C7F2429D453CC0095396A /* TimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4C7F0F29D453CC0095396A /* TimeHelper.swift */; };
 		FF4C7F2529D453CC0095396A /* UITextField + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4C7F1029D453CC0095396A /* UITextField + extension.swift */; };
 		FF4C7F2729D4608B0095396A /* UIView + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4C7F2629D4608A0095396A /* UIView + extension.swift */; };
+		FF5AF73429DFBE5D0020E716 /* AuthNetworkingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5AF73129DFBE5D0020E716 /* AuthNetworkingProtocol.swift */; };
+		FF5AF73529DFBE5D0020E716 /* AuthApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5AF73229DFBE5D0020E716 /* AuthApi.swift */; };
+		FF5AF73629DFBE5D0020E716 /* AuthRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5AF73329DFBE5D0020E716 /* AuthRepo.swift */; };
 		FF67F2C529D4AF4E00CA2E0B /* PagingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF67F2C329D4AF4E00CA2E0B /* PagingCollectionViewCell.xib */; };
 		FF67F2C629D4AF4E00CA2E0B /* PagingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF67F2C429D4AF4E00CA2E0B /* PagingCollectionViewCell.swift */; };
 		FF67F2CA29D4AFD600CA2E0B /* OnBoardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF67F2C829D4AFD600CA2E0B /* OnBoardingCollectionViewCell.swift */; };
@@ -366,6 +369,9 @@
 		FF4C7F0F29D453CC0095396A /* TimeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeHelper.swift; sourceTree = "<group>"; };
 		FF4C7F1029D453CC0095396A /* UITextField + extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField + extension.swift"; sourceTree = "<group>"; };
 		FF4C7F2629D4608A0095396A /* UIView + extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView + extension.swift"; sourceTree = "<group>"; };
+		FF5AF73129DFBE5D0020E716 /* AuthNetworkingProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthNetworkingProtocol.swift; sourceTree = "<group>"; };
+		FF5AF73229DFBE5D0020E716 /* AuthApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthApi.swift; sourceTree = "<group>"; };
+		FF5AF73329DFBE5D0020E716 /* AuthRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthRepo.swift; sourceTree = "<group>"; };
 		FF67F2C329D4AF4E00CA2E0B /* PagingCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PagingCollectionViewCell.xib; sourceTree = "<group>"; };
 		FF67F2C429D4AF4E00CA2E0B /* PagingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingCollectionViewCell.swift; sourceTree = "<group>"; };
 		FF67F2C829D4AFD600CA2E0B /* OnBoardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -794,6 +800,16 @@
 			path = CustomizeComponents;
 			sourceTree = "<group>";
 		};
+		FF5AF73029DFBE5D0020E716 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				FF5AF73129DFBE5D0020E716 /* AuthNetworkingProtocol.swift */,
+				FF5AF73229DFBE5D0020E716 /* AuthApi.swift */,
+				FF5AF73329DFBE5D0020E716 /* AuthRepo.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		FF67F2C129D4AEDA00CA2E0B /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -857,6 +873,7 @@
 		FF9C2B1F29DCA3A900FA3C77 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				FF5AF73029DFBE5D0020E716 /* Auth */,
 				FF9C2B2029DCA58800FA3C77 /* BasicResponse.swift */,
 				FF7EBFAC29DD180B00261946 /* EndPoints.swift */,
 				FF9C2B2629DCADFB00FA3C77 /* MoyaService.swift */,
@@ -1287,6 +1304,7 @@
 				FFE2C51B29DBB17300F8C16F /* PackageSubscribePlan.swift in Sources */,
 				FA9DD44F2664AC0800DFE590 /* CollapsibleTableViewHeader.swift in Sources */,
 				FABD93902532DBF600BFB943 /* AppDelegate.swift in Sources */,
+				FF5AF73429DFBE5D0020E716 /* AuthNetworkingProtocol.swift in Sources */,
 				FFC29A6729D7C8CF0040C722 /* SegmentContrtolEX.swift in Sources */,
 				FAF04BC9255E062C00249556 /* UserManager.swift in Sources */,
 				FF67F2CA29D4AFD600CA2E0B /* OnBoardingCollectionViewCell.swift in Sources */,
@@ -1331,6 +1349,7 @@
 				FF7EBFAD29DD180B00261946 /* EndPoints.swift in Sources */,
 				FFE2C52B29DBC7F200F8C16F /* HomeViewModel.swift in Sources */,
 				FF9C2B2529DCAA6D00FA3C77 /* User+UserDefaults.swift in Sources */,
+				FF5AF73529DFBE5D0020E716 /* AuthApi.swift in Sources */,
 				FF4C7EF929D37C340095396A /* OnBoardingViewController.swift in Sources */,
 				FA3B7C0625C7FC6100303819 /* LoaderManager.swift in Sources */,
 				FAE525E42595C9460007049A /* RPicker.swift in Sources */,
@@ -1339,6 +1358,7 @@
 				FF67F2C629D4AF4E00CA2E0B /* PagingCollectionViewCell.swift in Sources */,
 				FA57EDA3255629B300D0C554 /* DocumentCell.swift in Sources */,
 				FA05F5B12576F379001527A9 /* MyCartCell.swift in Sources */,
+				FF5AF73629DFBE5D0020E716 /* AuthRepo.swift in Sources */,
 				FA5F1F64253AFB1A007FEF72 /* ISCategoryOperations.swift in Sources */,
 				FA5F1F6A253AFB71007FEF72 /* userOB.swift in Sources */,
 				FF81900729D50D6400033060 /* OnBoardingViewModel.swift in Sources */,
