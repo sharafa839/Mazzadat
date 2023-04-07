@@ -8,54 +8,58 @@
 import Foundation
 import Moya
 enum AuthApiServices {
-    case login(password:String,phone:String)
-    case register(name:String,phone:String,password:String,email:String,city:String,government:String)
+    case login(password:String,email:String)
+    case register(name:String,phone:String,password:String,email:String)
     case logout
     case changePassword(currentPassword:String,newPassword:String)
     case resetPassword(phone:String)
-    case verifyCodeWithNewPassword(code:String,newPassword:String)
+    case update(name:String,phone:String,email:String)
+    case me
 }
 
-extension AuthApiServices:TargetType,BaseHeaders {
+extension AuthApiServices:TargetType,BaseApiHeadersProtocol {
     
     var path: String {
         switch self {
         case .login:
-            return EndPoints.Authentication.login.rawValue
+            return EndPoints.Auth.login.rawValue
         case .register:
-            return EndPoints.Authentication.register.rawValue
+            return EndPoints.Auth.register.rawValue
         case .logout:
-            return EndPoints.Authentication.logout.rawValue
+            return EndPoints.Auth.logOut.rawValue
         case .changePassword:
-            return EndPoints.Authentication.changePassword.rawValue
+            return EndPoints.Auth.changePassword.rawValue
         case .resetPassword:
-            return EndPoints.Authentication.resetPassword.rawValue
-        case .verifyCodeWithNewPassword:
-            return EndPoints.Authentication.verifyCodeWithNewPassword.rawValue
+            return EndPoints.Auth.resetPassword.rawValue
+       
+        case .update:
+            return EndPoints.Auth.update.rawValue
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .logout: return .get
+        case .me: return .get
         default: return .post
         }
     }
     
     var task: Task {
         switch self {
-        case .login(let password, let phone):
-            return .requestParameters(parameters: ["phone":phone,"password":password], encoding: JSONEncoding.default)
-        case .register(let name, let phone, let password, let email, let city, let government):
-            return .requestParameters(parameters: ["phone":phone,"name":name,"password":password,"email":email,"city":city,"government":government], encoding: JSONEncoding.default)
+        case .login(let password, let email):
+            return .requestParameters(parameters: ["email":email,"password":password], encoding: JSONEncoding.default)
+        case .register(let name, let phone, let password, let email):
+        return .requestParameters(parameters: ["email" : email,"password":password,"name":name,"mobile":phone,"app_locale":"ar","device_token": AppData.fcmToken,"device_type":"ios"], encoding: JSONEncoding.default)
         case .logout:
             return .requestPlain
         case .changePassword(let currentPassword, let newPassword):
             return .requestParameters(parameters: ["currentPassword":currentPassword,"newPassword":newPassword], encoding: JSONEncoding.default)
         case .resetPassword(let phone):
             return .requestParameters(parameters: ["phone":phone], encoding: JSONEncoding.default)
-        case .verifyCodeWithNewPassword(let code, let newPassword):
-            return.requestParameters(parameters: ["code":code,"newPassword":newPassword], encoding: JSONEncoding.default)
+        case .update(name: let name, phone: let phone, email: let email):
+            return .requestParameters(parameters: ["name":name,"email":email,"mobile":phone], encoding: JSONEncoding.default)
+        case .me:
+            return .requestPlain
         }
     }
     

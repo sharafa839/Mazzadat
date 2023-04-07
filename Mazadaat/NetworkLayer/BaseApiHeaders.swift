@@ -12,21 +12,21 @@ protocol BaseApiHeadersProtocol {
 }
 
 extension BaseApiHeadersProtocol {
-    var baseUrl:URL {
+    var baseURL:URL {
     return URL(string: "")!
     }
     
-    var header:[String:String]? {
+    var headers:[String:String]? {
        return commonHeader
     }
     
     var commonHeader: [String:String] {
         let authorization = AppData.userToken
-        var headers:[String:String] = ["":""]
+        var header:[String:String] = ["":""]
         if authorization != "" {
-            headers["Authorization"] = "\(authorization)"
+            header["Authorization"] = "\(authorization)"
     }
-        return headers
+        return header
 }
 }
 
