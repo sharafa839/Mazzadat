@@ -9,7 +9,7 @@
 import Foundation
 
 enum ResponseStatus:String,Codable {
-    case success = "Success"
+    case success = "success"
     case fail = "fail"
 }
 

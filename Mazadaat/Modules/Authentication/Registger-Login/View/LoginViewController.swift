@@ -54,7 +54,10 @@ class LoginViewController: UIViewController {
         setupViewModelObserver()
         setupProperty()
     }
-   
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
+    }
     //MARK: - Methods
     
     private func setupUI() {

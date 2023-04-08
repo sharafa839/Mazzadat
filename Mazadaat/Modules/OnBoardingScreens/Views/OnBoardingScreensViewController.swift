@@ -53,6 +53,10 @@ class OnBoardingScreensViewController: UIViewController {
         languageButton.setTitle("عربي", for: .normal)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = true
+    }
+    
     //MARK: - Methods
     private func setupCollectionView() {
         onBoardingCollectionView.delegate = self
@@ -97,6 +101,7 @@ class OnBoardingScreensViewController: UIViewController {
         
     }
     private func navigateToLogin() {
+        HelperK.saveFristTime(token: true)
         let loginViewModel = LoginViewModel()
         let loginViewController = LoginViewController(viewModel: loginViewModel)
         appDelegate.coordinator.setRoot(UINavigationController(rootViewController:loginViewController))

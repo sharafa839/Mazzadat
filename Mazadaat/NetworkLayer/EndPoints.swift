@@ -21,12 +21,14 @@ enum EndPoints {
         case changePassword = "api/auth/change_password"
         case verify = "api/auth/verify"
     }
+    
     enum Notifications: String {
         case all = "api/notifications/"
         case send = "api/notifications/send"
         case read = "api/notifications/read"
         case readAll = "api/notifications/read/all"
     }
+    
     enum Transactions: String {
         case all = "api/transactions/"
         case myBalance = "api/transactions/my_balance"

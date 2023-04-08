@@ -51,7 +51,7 @@ extension AuthApiServices:TargetType,BaseApiHeadersProtocol {
     var task: Task {
         switch self {
         case .login(let password, let email):
-            return .requestParameters(parameters: ["email":email,"password":password], encoding: JSONEncoding.default)
+            return .requestParameters(parameters: ["email":email,"password":password,"device_token": AppData.fcmToken,"device_type":"iOS"], encoding: JSONEncoding.default)
         case .register(let name, let phone, let password, let email):
         return .requestParameters(parameters: ["email" : email,"password":password,"name":name,"mobile":phone,"app_locale":"ar","device_token": AppData.fcmToken,"device_type":"ios"], encoding: JSONEncoding.default)
         case .logout:

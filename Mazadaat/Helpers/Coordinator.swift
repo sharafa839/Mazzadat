@@ -43,7 +43,7 @@ class AppCoordinator {
     }
     
     func launchFirstScreen() {
-        setRoot(SplashViewController())
+        setRoot(SplashViewController(viewModel: SplashViewModel()))
     }
     
   

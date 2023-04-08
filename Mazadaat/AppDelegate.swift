@@ -48,15 +48,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             changeLanguage(lang: "en")
             L102Localizer.DoTheMagic()
         }
-        coordinator.setRoot(UINavigationController(rootViewController: OnBoardingViewController()))
-        //Add navigation bar colour
-        UINavigationBar.appearance().barTintColor = #colorLiteral(red: 0.9670651555, green: 0.7025722861, blue: 0, alpha: 1)
-
+        coordinator.setRoot(SplashViewController(viewModel:SplashViewModel()))
         
         
-        UINavigationBar.appearance().tintColor = .white
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-
 //        if lang == "en" {
 //                     changeLanguage(lang: "en")
 //                     L102Localizer.DoTheMagic()

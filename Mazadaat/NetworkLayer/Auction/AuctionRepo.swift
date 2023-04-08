@@ -7,3 +7,6 @@
 //
 
 import Foundation
+class AuctionRepo:MoyaHelper<AuctionApi>,AuctionNetworkingProtocol {
+    
+}

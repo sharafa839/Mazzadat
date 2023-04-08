@@ -13,7 +13,7 @@ protocol BaseApiHeadersProtocol {
 
 extension BaseApiHeadersProtocol {
     var baseURL:URL {
-    return URL(string: "https://goldnbell.co/")!
+    return URL(string: "http://goldnbell.co/")!
     }
     
     var headers:[String:String]? {
@@ -26,7 +26,7 @@ extension BaseApiHeadersProtocol {
         var header:[String:String] =
         ["Accept":"application/json"
          ,"X-localization": "ar"
-         ,"content-Type":"multipart/form-data"]
+         ]
        
         if authorization != "" {
             header["Authorization"] = "\(authorization)"
