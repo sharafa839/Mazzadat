@@ -12,7 +12,7 @@ protocol HomeNetworkingProtocol {
     func faqs(completion:@escaping(Result<BaseResponse<[FAQModel]>,Error>)->Void)
     func subscribe(image:MultiPartItem,subscription_id:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
     func documents(completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
-    func uploadDocuments(frontImage : MultiPartItem ,backImage: MultiPartItem,id:Int,expiry_date:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
+    func uploadDocuments(frontImage : MultiPartItem ,backImage: MultiPartItem,id:Int,expiry_date:String,completion:@escaping(Result<BaseResponse<UploadDocuments>,Error>)->Void)
     func auctionHolders(completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
     func holderPlaces(holderID:String,running:Bool?,upcoming:Bool?,expired:Bool?,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
     func showHolderPlaces(placeID:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
@@ -29,7 +29,7 @@ extension HomeNetworkingProtocol {
     
     func subscribe(image:MultiPartItem,subscription_id:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void){}
     func documents(completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void){}
-    func uploadDocuments(frontImage : MultiPartItem ,backImage: MultiPartItem,id:Int,expiry_date:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void){}
+    func uploadDocuments(frontImage : MultiPartItem ,backImage: MultiPartItem,id:Int,expiry_date:String,completion:@escaping(Result<BaseResponse<UploadDocuments>,Error>)->Void){}
     func auctionHolders(completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void){}
     func holderPlaces(holderID:String,running:Bool?,upcoming:Bool?,expired:Bool?,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void){}
     func showHolderPlaces(placeID:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void){}

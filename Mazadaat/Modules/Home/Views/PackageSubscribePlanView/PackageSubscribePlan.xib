@@ -18,9 +18,16 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PackageSubscribePlan" customModule="Golden_Bell" customModuleProvider="target">
+            <connections>
+                <outlet property="continerView" destination="QLj-f1-3jd" id="504-eK-xXH"/>
+                <outlet property="remainingPlanLabel" destination="SAb-jq-yqX" id="bTM-od-mgb"/>
+                <outlet property="remainingValueOfPlan" destination="4zj-nG-Rkw" id="wZO-BF-BiA"/>
+                <outlet property="upgradeButton" destination="bDB-Ji-GKj" id="8S3-ke-gh8"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PackageSubscribePlan" customModule="Golden_Bell" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="391" height="90"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -63,7 +70,7 @@
                                 <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
                             </state>
                             <connections>
-                                <action selector="upgradeButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="qOK-Cz-x2H"/>
+                                <action selector="upgradeButtonAction:" destination="-1" eventType="touchUpInside" id="rgN-hs-Aph"/>
                             </connections>
                         </button>
                     </subviews>
@@ -90,12 +97,6 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="QLj-f1-3jd" secondAttribute="bottom" constant="8" id="zLh-ZU-n4f"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <connections>
-                <outlet property="continerView" destination="QLj-f1-3jd" id="Q16-LC-9pm"/>
-                <outlet property="remainingPlanLabel" destination="SAb-jq-yqX" id="1GG-u4-Gvb"/>
-                <outlet property="remainingValueOfPlan" destination="4zj-nG-Rkw" id="hj1-3J-A8H"/>
-                <outlet property="upgradeButton" destination="bDB-Ji-GKj" id="0Zg-qr-cIC"/>
-            </connections>
             <point key="canvasLocation" x="121.0144927536232" y="-186.16071428571428"/>
         </view>
     </objects>

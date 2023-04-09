@@ -31,6 +31,8 @@ extension CoreApi:TargetType,BaseApiHeadersProtocol {
     
     var task: Task {
         switch self {
+        case .advertisement:
+            return .requestParameters(parameters: ["is_advertisement":true,"page":1,"per_page":50], encoding: URLEncoding.default)
         default:return .requestPlain
         }
     }

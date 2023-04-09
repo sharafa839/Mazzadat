@@ -16,10 +16,17 @@ class PackageSubscribePlan: UIView {
     @IBOutlet weak var remainingPlanLabel: UILabel!
     
     //MARK: - Init
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setupUI()
+        setupLocalize()
+    }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)
+        loadSelfFromNib()
     }
+    
     //MARK: - Properties
     var onTapUpgrade:(()->Void)?
     //MARK: - Methods
@@ -34,6 +41,7 @@ class PackageSubscribePlan: UIView {
         upgradeButton.setTitle("Upgrade", for: .normal)
         
     }
+    
     @IBAction func upgradeButtonAction(_ sender: UIButton) {
     onTapUpgrade?()
     }

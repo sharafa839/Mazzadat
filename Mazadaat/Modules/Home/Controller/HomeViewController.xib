@@ -12,6 +12,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Golden_Bell" customModuleProvider="target">
             <connections>
+                <outlet property="auctionHolderCollectionView" destination="pK2-bf-Jqe" id="xxb-fs-2V0"/>
+                <outlet property="categoryCollectionView" destination="0F9-Zi-scR" id="sMc-Ah-19d"/>
+                <outlet property="continerView" destination="yJa-dl-RrN" id="LKw-nx-SzY"/>
+                <outlet property="headerHomeView" destination="qVe-Bi-W3W" id="bLH-0X-NPU"/>
+                <outlet property="imageSlider" destination="YUc-2X-duo" id="AqF-Ne-MP1"/>
+                <outlet property="packageSubscribePlan" destination="qaW-uJ-ov2" id="eIn-Jw-Syn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,45 +29,42 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yJa-dl-RrN">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="297.5"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qVe-Bi-W3W">
-                            <rect key="frame" x="24" y="28" width="366" height="48"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qVe-Bi-W3W" customClass="HeaderHomeView" customModule="Golden_Bell" customModuleProvider="target">
+                            <rect key="frame" x="24" y="52" width="366" height="55"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="48" id="KbZ-0w-AvL"/>
+                                <constraint firstAttribute="height" constant="55" id="KbZ-0w-AvL"/>
                             </constraints>
                         </view>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="y7i-Dk-D5L">
-                            <rect key="frame" x="24" y="100" width="366" height="263"/>
-                            <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qaW-uJ-ov2">
-                                    <rect key="frame" x="0.0" y="0.0" width="366" height="56"/>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="56" id="zNY-Fa-l0K"/>
-                                    </constraints>
-                                </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YUc-2X-duo">
-                                    <rect key="frame" x="0.0" y="66" width="366" height="197"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </view>
-                            </subviews>
-                            <color key="backgroundColor" name="Bronze-900"/>
-                        </stackView>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" name="Bronze-500"/>
                     <constraints>
-                        <constraint firstItem="qVe-Bi-W3W" firstAttribute="top" secondItem="yJa-dl-RrN" secondAttribute="top" constant="28" id="0vE-5i-ipO"/>
-                        <constraint firstItem="y7i-Dk-D5L" firstAttribute="top" secondItem="qVe-Bi-W3W" secondAttribute="bottom" constant="24" id="EO9-xi-U75"/>
+                        <constraint firstItem="qVe-Bi-W3W" firstAttribute="top" secondItem="yJa-dl-RrN" secondAttribute="topMargin" id="6cN-L5-3Go"/>
                         <constraint firstItem="qVe-Bi-W3W" firstAttribute="leading" secondItem="yJa-dl-RrN" secondAttribute="leading" constant="24" id="RYE-YX-bYn"/>
                         <constraint firstAttribute="trailing" secondItem="qVe-Bi-W3W" secondAttribute="trailing" constant="24" id="RdU-TB-8eA"/>
-                        <constraint firstItem="y7i-Dk-D5L" firstAttribute="leading" secondItem="yJa-dl-RrN" secondAttribute="leading" constant="24" id="cpP-lP-LyC"/>
-                        <constraint firstAttribute="trailing" secondItem="y7i-Dk-D5L" secondAttribute="trailing" constant="24" id="jLe-BV-VAO"/>
                     </constraints>
                 </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="y7i-Dk-D5L">
+                    <rect key="frame" x="24" y="123" width="366" height="263"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qaW-uJ-ov2" customClass="PackageSubscribePlan" customModule="Golden_Bell" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="366" height="56"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="56" id="zNY-Fa-l0K"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YUc-2X-duo" customClass="ImageSlideshow" customModule="ImageSlideshow">
+                            <rect key="frame" x="0.0" y="66" width="366" height="197"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </stackView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="0F9-Zi-scR">
-                    <rect key="frame" x="24" y="568" width="366" height="294"/>
+                    <rect key="frame" x="24" y="540" width="366" height="322"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="glD-a7-Svo">
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="glD-a7-Svo">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -69,7 +72,7 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="pK2-bf-Jqe">
-                    <rect key="frame" x="20" y="405" width="366" height="128"/>
+                    <rect key="frame" x="20" y="396" width="366" height="128"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="128" id="TbJ-Zg-y8D"/>
@@ -86,24 +89,27 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="0F9-Zi-scR" secondAttribute="bottom" id="29a-6M-x5c"/>
-                <constraint firstItem="pK2-bf-Jqe" firstAttribute="top" secondItem="yJa-dl-RrN" secondAttribute="bottom" constant="107.67" id="9vb-Q5-IwL"/>
-                <constraint firstItem="YUc-2X-duo" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.22" id="CoS-As-eNf"/>
+                <constraint firstItem="pK2-bf-Jqe" firstAttribute="top" secondItem="y7i-Dk-D5L" secondAttribute="bottom" constant="10" id="9t5-N1-eU4"/>
                 <constraint firstItem="yJa-dl-RrN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="EHa-m3-Fa1"/>
                 <constraint firstItem="0F9-Zi-scR" firstAttribute="leading" secondItem="pK2-bf-Jqe" secondAttribute="leading" constant="4" id="ERi-et-bh2"/>
+                <constraint firstItem="y7i-Dk-D5L" firstAttribute="trailing" secondItem="qVe-Bi-W3W" secondAttribute="trailing" id="JE5-Jg-AlY"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pK2-bf-Jqe" secondAttribute="trailing" constant="28" id="Ogc-XR-ixW"/>
+                <constraint firstItem="YUc-2X-duo" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.219866" id="YJ6-W2-5cz"/>
                 <constraint firstItem="yJa-dl-RrN" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.332" id="ZO8-N2-ngF"/>
                 <constraint firstItem="0F9-Zi-scR" firstAttribute="trailing" secondItem="pK2-bf-Jqe" secondAttribute="trailing" constant="4" id="cBY-bQ-h7W"/>
                 <constraint firstItem="pK2-bf-Jqe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="i3s-Uf-cI7"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yJa-dl-RrN" secondAttribute="trailing" id="kEx-Dx-wTF"/>
-                <constraint firstItem="0F9-Zi-scR" firstAttribute="top" secondItem="pK2-bf-Jqe" secondAttribute="bottom" constant="35" id="mMi-6z-Isj"/>
+                <constraint firstItem="y7i-Dk-D5L" firstAttribute="leading" secondItem="qVe-Bi-W3W" secondAttribute="leading" id="ldl-1I-4uH"/>
+                <constraint firstItem="0F9-Zi-scR" firstAttribute="top" secondItem="pK2-bf-Jqe" secondAttribute="bottom" constant="16" id="mMi-6z-Isj"/>
+                <constraint firstItem="y7i-Dk-D5L" firstAttribute="top" secondItem="qVe-Bi-W3W" secondAttribute="bottom" constant="16" id="tBu-ES-oJo"/>
                 <constraint firstItem="yJa-dl-RrN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="xrC-4b-pHr"/>
             </constraints>
             <point key="canvasLocation" x="139" y="84"/>
         </view>
     </objects>
     <resources>
-        <namedColor name="Bronze-900">
-            <color red="0.37254901960784315" green="0.23529411764705882" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="Bronze-500">
+            <color red="0.88627450980392153" green="0.56470588235294117" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

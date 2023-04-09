@@ -212,6 +212,7 @@ class HelperK: NSObject {
     def.setValue(loginPayLoad.name ?? "", forKey: "name")
     def.setValue(loginPayLoad.email ?? "", forKey: "email")
     def.setValue(loginPayLoad.id ?? "", forKey: "Id")
+      def.setValue(loginPayLoad.avatar ?? "", forKey: "avatar")
       saveToken(token: loginPayLoad.accessToken ?? "")
         def.synchronize()
     }
@@ -221,6 +222,11 @@ class HelperK: NSObject {
           def.setValue(Type, forKey: "type")
           def.synchronize()
       }
+    
+    class func getAvatar() -> String {
+        let def = UserDefaults.standard
+        return (def.object(forKey: "avatar") as? String ?? "0.0")
+    }
     
     class func getMoney() -> String {
         let def = UserDefaults.standard
@@ -453,4 +459,22 @@ extension UIColor {
           
       return randomColor
       }
+}
+public extension UIView {
+    
+    func loadSelfFromNib() {
+        let bundle = Bundle(for: Self.self)
+        let nib = UINib(nibName: "\(Self.self)", bundle: bundle)
+        guard let view = nib.instantiate(withOwner: self, options: nil).first as? UIView else { return }
+        view.frame = bounds
+        view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        addSubview(view)
+    }
+}
+
+public extension UIView {
+    
+    class func loadFromNib() -> Self {
+        Bundle(for: Self.self).loadNibNamed(String(describing: Self.self), owner: nil, options: nil)!.first as! Self
+    }
 }

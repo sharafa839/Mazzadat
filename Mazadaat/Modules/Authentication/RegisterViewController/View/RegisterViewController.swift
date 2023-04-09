@@ -59,6 +59,13 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         setupLocalize()
         setupUI()
+        setupProperty()
+        setupViewModelObserver()
+        setupObservables()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = true
     }
    
     //MARK: - Methods
@@ -93,13 +100,49 @@ class RegisterViewController: UIViewController {
         kindOfAuhenticationSectionSegment.selectedSegmentIndex = 1
     }
     
+    private func setupProperty() {
+      phoneNumberTextField.rx.text.orEmpty.bind(to: viewModel.phone).disposed(by: viewModel.disposeBag)
+      passwordTextField.rx.text.orEmpty.bind(to: viewModel.password).disposed(by: viewModel.disposeBag)
+      emailTextField.rx.text.orEmpty.bind(to: viewModel.email).disposed(by: viewModel.disposeBag)
+      fullNameTextField.rx.text.orEmpty.bind(to: viewModel.name).disposed(by: viewModel.disposeBag)
+      confirmPasswordTextField.rx.text.orEmpty.bind(to: viewModel.confirmPassword).disposed(by: viewModel.disposeBag)
+      viewModel.isContinueButtonEnabled.bind(to:  loginButton.rx.isEnabled).disposed(by: viewModel.disposeBag)
+    }
+    
+    
+    private func setupViewModelObserver() {
+      viewModel.showLoading.subscribe { [weak self] value in
+        guard let isLoading = value.element else {return}
+          isLoading ? ActivityIndicatorManager.shared.showProgressView() : ActivityIndicatorManager.shared.hideProgressView()
+      }.disposed(by: viewModel.disposeBag)
+
+      viewModel.onError.subscribe {  error in
+        guard let errorDescription = error.element else {return}
+        HelperK.showError(title: errorDescription, subtitle: "")
+      }.disposed(by: viewModel.disposeBag)
+
+      viewModel.onSuccess.subscribe { [weak self] _ in
+        let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
+        
+        let main = storyBoard.instantiateViewController(withIdentifier: "main")
+        let home = UINavigationController(rootViewController:main )
+        home.modalPresentationStyle = .overFullScreen
+        self?.present(home, animated: true, completion: nil)
+        
+      }.disposed(by: viewModel.disposeBag)
+
+    }
+    
+
+    
     private func setupObservables() {
-        loginButton.rx.tap.subscribe { [weak self] in
-            
+        loginButton.rx.tap.subscribe { [weak self] _ in
+            self?.viewModel.signUp()
         }.disposed(by: viewModel.disposeBag)
         
-        ContinueAsGuestButton.rx.tap.subscribe { [weak self] in
-            
+        ContinueAsGuestButton.rx.tap.subscribe { [weak self] _ in
+            let homeViewController = HomeViewController(viewModel: HomeViewModel())
+            appDelegate.coordinator.setRoot(homeViewController)
         }.disposed(by: viewModel.disposeBag)
         
         loginWithNafathButton.rx.tap.subscribe { [weak self] in

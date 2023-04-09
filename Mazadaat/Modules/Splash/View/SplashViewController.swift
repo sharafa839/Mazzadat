@@ -41,7 +41,7 @@ class SplashViewController: UIViewController {
         switch route {
         case .home:
            
-            appDelegate.coordinator.setRoot(UINavigationController(rootViewController: HomeViewController()))
+            appDelegate.coordinator.setRoot(UINavigationController(rootViewController: HomeViewController(viewModel: HomeViewModel())))
 
         case .login:
             appDelegate.coordinator.setRoot(UINavigationController(rootViewController: LoginViewController(viewModel: LoginViewModel())))

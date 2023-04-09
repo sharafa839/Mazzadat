@@ -9,55 +9,85 @@ import Foundation
 
 
 
-// MARK: - Payload
-struct SlidersPayload: Codable {
-    var id: Int?
-    var createdAt, updatedAt: String?
-    var image, responsive, media: [Image]?
+// MARK: - Datum
+struct SliderModel: Codable {
+    var id, categoryID: Int?
+    var category: Categorys?
+    var cityID: Int?
+    var city: Citys?
+    var name, description, lat, lng: String?
+    var price, minimumBid, code, startAt: String?
+    var endAt, termsConditions: String?
+    var auctionDetails: [String]?
+    var status, bidsCount: Int?
+    var lastBid: String?
+    var media: [Media]?
+    var isFavourite: Bool?
 
     enum CodingKeys: String, CodingKey {
         case id
-        case createdAt = "created_at"
-        case updatedAt = "updated_at"
-        case image, responsive, media
+        case categoryID = "category_id"
+        case category = "Category"
+        case cityID = "city_id"
+        case city = "City"
+        case name, description, lat, lng, price
+        case minimumBid = "minimum_bid"
+        case code
+        case startAt = "start_at"
+        case endAt = "end_at"
+        case termsConditions = "terms_conditions"
+        case auctionDetails = "AuctionDetails"
+        case status
+        case bidsCount = "bids_count"
+        case lastBid = "LastBid"
+        case media = "Media"
+        case isFavourite = "is_favourite"
     }
 }
 
-// MARK: - Image
-struct Image: Codable {
+// MARK: - Category
+struct Categorys: Codable {
     var id: Int?
-    var modelType: String?
-    var modelID, uuid: String?
-    var collectionName: String?
-    var name, fileName: String?
-    var mimeType: String?
-    var disk, conversionsDisk: String?
-    var size: String?
-    var manipulations: [String]?
-    var customProperties: CustomProperties?
-    var responsiveImages: [String]?
-    var orderColumn, createdAt, updatedAt: String?
-    var url: String?
-    var thumbnail, preview: String?
+    var name: String?
+    var image: String?
+    var auctionCount: Int?
 
     enum CodingKeys: String, CodingKey {
-        case id
-        case modelType = "model_type"
-        case modelID = "model_id"
-        case uuid
-        case collectionName = "collection_name"
-        case name
-        case fileName = "file_name"
-        case mimeType = "mime_type"
-        case disk
-        case conversionsDisk = "conversions_disk"
-        case size, manipulations
-        case customProperties = "custom_properties"
-        case responsiveImages = "responsive_images"
-        case orderColumn = "order_column"
-        case createdAt = "created_at"
-        case updatedAt = "updated_at"
-        case url, thumbnail, preview
+        case id, name, image
+        case auctionCount = "auction_count"
     }
 }
 
+// MARK: - City
+struct Citys: Codable {
+    var id: Int?
+    var name: String?
+}
+
+// MARK: - Media
+struct Media: Codable {
+    var id: Int?
+    var file: String?
+    var mediaType: Int?
+
+    enum CodingKeys: String, CodingKey {
+        case id, file
+        case mediaType = "media_type"
+    }
+}
+
+// MARK: - Paging
+struct Paging: Codable {
+    var total, perPage, currentPage, lastPage: Int?
+    var from, to: Int?
+
+    enum CodingKeys: String, CodingKey {
+        case total
+        case perPage = "per_page"
+        case currentPage = "current_page"
+        case lastPage = "last_page"
+        case from, to
+    }
+}
+
+// MARK: - Encode/decode helpers

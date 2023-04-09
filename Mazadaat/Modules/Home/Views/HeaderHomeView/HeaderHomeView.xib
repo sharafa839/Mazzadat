@@ -18,17 +18,28 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeaderHomeView" customModule="Golden_Bell" customModuleProvider="target">
+            <connections>
+                <outlet property="imageContainerView" destination="SB1-A5-A7o" id="jS4-hi-6bm"/>
+                <outlet property="nameLabel" destination="kjN-HN-hws" id="fRp-uy-51r"/>
+                <outlet property="notificationButton" destination="oye-pr-rDY" id="bqE-oU-ufP"/>
+                <outlet property="notificationView" destination="mxz-6P-04h" id="rvc-Za-Ema"/>
+                <outlet property="profileImageView" destination="Vny-xO-9sr" id="Nl8-vh-tHT"/>
+                <outlet property="searchButton" destination="Kcf-Ra-xDb" id="ngI-xc-CLl"/>
+                <outlet property="searchView" destination="jXg-HQ-m6P" id="tRA-yx-Rlw"/>
+                <outlet property="welcomeLabel" destination="lEP-7u-jj6" id="oMk-XR-eaP"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HeaderHomeView" customModule="Golden_Bell" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="386" height="74"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SB1-A5-A7o">
-                    <rect key="frame" x="16" y="12" width="52" height="50"/>
+                    <rect key="frame" x="16" y="11" width="52" height="52"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vny-xO-9sr">
-                            <rect key="frame" x="2" y="2" width="48" height="46"/>
+                            <rect key="frame" x="2" y="2" width="48" height="48"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="48" id="8La-mu-IZk"/>
                             </constraints>
@@ -37,9 +48,11 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="Vny-xO-9sr" firstAttribute="leading" secondItem="SB1-A5-A7o" secondAttribute="leading" constant="2" id="58u-jK-nYT"/>
+                        <constraint firstAttribute="height" constant="52" id="RSX-5Z-uNq"/>
                         <constraint firstItem="Vny-xO-9sr" firstAttribute="centerY" secondItem="SB1-A5-A7o" secondAttribute="centerY" id="b2C-Bc-7cs"/>
                         <constraint firstAttribute="bottom" secondItem="Vny-xO-9sr" secondAttribute="bottom" constant="2" id="gmO-tb-hf3"/>
                         <constraint firstItem="Vny-xO-9sr" firstAttribute="top" secondItem="SB1-A5-A7o" secondAttribute="top" constant="2" id="n9b-PR-47N"/>
+                        <constraint firstAttribute="width" constant="52" id="oPy-XI-sYN"/>
                         <constraint firstAttribute="trailing" secondItem="Vny-xO-9sr" secondAttribute="trailing" constant="2" id="shm-7n-gYw"/>
                     </constraints>
                 </view>
@@ -71,7 +84,7 @@
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" image="search-line"/>
                                     <connections>
-                                        <action selector="searchButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="CSt-38-dEl"/>
+                                        <action selector="searchButtonAction:" destination="-1" eventType="touchUpInside" id="0qt-95-EtJ"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -93,7 +106,7 @@
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" image="search-line"/>
                                     <connections>
-                                        <action selector="notificationButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="m7x-nH-ZJB"/>
+                                        <action selector="notificationButtonAction:" destination="-1" eventType="touchUpInside" id="0dc-6C-gX6"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -109,27 +122,16 @@
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="5cK-MI-QpV" firstAttribute="leading" secondItem="SB1-A5-A7o" secondAttribute="trailing" constant="8" id="4gP-Lt-NgY"/>
                 <constraint firstAttribute="trailing" secondItem="5di-dS-UAs" secondAttribute="trailing" constant="16" id="KPj-xo-aUR"/>
                 <constraint firstItem="SB1-A5-A7o" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="PMX-0f-eFo"/>
-                <constraint firstItem="SB1-A5-A7o" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="Wib-MN-g0a"/>
+                <constraint firstItem="SB1-A5-A7o" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="PlB-mh-9N7"/>
                 <constraint firstItem="5di-dS-UAs" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="gAx-hX-8fj"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="SB1-A5-A7o" secondAttribute="bottom" constant="12" id="rwn-GG-NOX"/>
                 <constraint firstItem="5cK-MI-QpV" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="vWV-x3-sU7"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <connections>
-                <outlet property="imageContainerView" destination="SB1-A5-A7o" id="aKQ-Tf-dhO"/>
-                <outlet property="nameLabel" destination="kjN-HN-hws" id="3oI-UC-GP9"/>
-                <outlet property="notificationButton" destination="oye-pr-rDY" id="af3-vg-J8K"/>
-                <outlet property="notificationView" destination="mxz-6P-04h" id="88f-Pl-Vg1"/>
-                <outlet property="profileImageView" destination="Vny-xO-9sr" id="kyi-06-OdM"/>
-                <outlet property="searchButton" destination="Kcf-Ra-xDb" id="ecT-5S-KZR"/>
-                <outlet property="searchView" destination="jXg-HQ-m6P" id="XB5-Xu-SwM"/>
-                <outlet property="welcomeLabel" destination="lEP-7u-jj6" id="C9F-ni-2Fi"/>
-            </connections>
             <point key="canvasLocation" x="117.39130434782609" y="-191.51785714285714"/>
         </view>
     </objects>

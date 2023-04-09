@@ -9,7 +9,35 @@
 import Foundation
 import RxRelay
 import RxSwift
+import SwiftUI
 
-class HomeViewModel  {
+class HomeViewModel:HomeNetworkingProtocol,CoreNetworkingProtocol  {
     let disposeBag = DisposeBag()
+    var onError = PublishSubject<String>()
+    var onSuccessGetImageSlider =   PublishSubject<[SliderModel]>()
+    var onLoading = BehaviorRelay<Bool>(value: false)
+    var onSuccessGetCategories =   BehaviorRelay<[Category]>(value: CoreData.shared.categories ?? [])
+    var onSuccessGetAuctionHolders =   BehaviorRelay<[Category]>(value: CoreData.shared.categories ?? [])
+
+    func getAuctionHolders() {
+        auctionHolders { [weak self] result in
+            
+        }
+    }
+    
+    func getSlider() {
+        onLoading.accept(true)
+        advertisement { [weak self] result in
+            self?.onLoading.accept(false)
+            switch result {
+            case .success(let response):
+                guard let value = response.response?.data else {return}
+                self?.onSuccessGetImageSlider.onNext(value)
+            case .failure(let error):
+                self?.onError.onNext(error.localizedDescription)
+            }
+        }
+    }
+    
+    
 }

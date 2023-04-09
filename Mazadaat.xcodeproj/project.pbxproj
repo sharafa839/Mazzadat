@@ -92,6 +92,9 @@
 		FAF04BC9255E062C00249556 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF04BC8255E062C00249556 /* UserManager.swift */; };
 		FAF04BCF255E68CB00249556 /* CatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF04BCE255E68CB00249556 /* CatCell.swift */; };
 		FF1894D129E105950032D951 /* NotificationApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1894D029E105950032D951 /* NotificationApi.swift */; };
+		FF2F701929E274FA0018B339 /* TicketsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F701829E274FA0018B339 /* TicketsApi.swift */; };
+		FF2F701B29E275090018B339 /* TicketNetworkingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F701A29E275090018B339 /* TicketNetworkingProtocol.swift */; };
+		FF2F701D29E275140018B339 /* TicketsRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F701C29E275140018B339 /* TicketsRepo.swift */; };
 		FF4C7EDD29D379B70095396A /* Archivo-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF4C7ECB29D379B70095396A /* Archivo-BlackItalic.ttf */; };
 		FF4C7EDE29D379B70095396A /* Archivo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF4C7ECC29D379B70095396A /* Archivo-Regular.ttf */; };
 		FF4C7EDF29D379B70095396A /* Archivo-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF4C7ECD29D379B70095396A /* Archivo-Black.ttf */; };
@@ -140,7 +143,7 @@
 		FF5AF73529DFBE5D0020E716 /* AuthApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5AF73229DFBE5D0020E716 /* AuthApi.swift */; };
 		FF5AF73629DFBE5D0020E716 /* AuthRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5AF73329DFBE5D0020E716 /* AuthRepo.swift */; };
 		FF5AF74529DFC0230020E716 /* FaqModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5AF73829DFC0230020E716 /* FaqModel.swift */; };
-		FF5AF74629DFC0230020E716 /* WishListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5AF73929DFC0230020E716 /* WishListModel.swift */; };
+		FF5AF74629DFC0230020E716 /* UploadDocuments.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5AF73929DFC0230020E716 /* UploadDocuments.swift */; };
 		FF5AF74729DFC0230020E716 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5AF73A29DFC0230020E716 /* LoginModel.swift */; };
 		FF5AF74829DFC0230020E716 /* SingleProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5AF73B29DFC0230020E716 /* SingleProductModel.swift */; };
 		FF5AF74929DFC0230020E716 /* CategoriesProductsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5AF73C29DFC0230020E716 /* CategoriesProductsModel.swift */; };
@@ -164,8 +167,10 @@
 		FF67F2C629D4AF4E00CA2E0B /* PagingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF67F2C429D4AF4E00CA2E0B /* PagingCollectionViewCell.swift */; };
 		FF67F2CA29D4AFD600CA2E0B /* OnBoardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF67F2C829D4AFD600CA2E0B /* OnBoardingCollectionViewCell.swift */; };
 		FF67F2CB29D4AFD600CA2E0B /* OnBoardingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF67F2C929D4AFD600CA2E0B /* OnBoardingCollectionViewCell.xib */; };
+		FF76275B29E1F224002D531F /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF76275A29E1F224002D531F /* RegisterViewModel.swift */; };
+		FF76276029E24E52002D531F /* AuctionHolderCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF76275E29E24E52002D531F /* AuctionHolderCellCollectionViewCell.swift */; };
+		FF76276129E24E52002D531F /* AuctionHolderCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF76275F29E24E52002D531F /* AuctionHolderCellCollectionViewCell.xib */; };
 		FF7EBFAD29DD180B00261946 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7EBFAC29DD180B00261946 /* EndPoints.swift */; };
-		FF7F628929D8C56100E7D20E /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7F628829D8C56100E7D20E /* RegisterViewModel.swift */; };
 		FF81900729D50D6400033060 /* OnBoardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF81900629D50D6400033060 /* OnBoardingViewModel.swift */; };
 		FF81900A29D50D9000033060 /* OnBoardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF81900929D50D9000033060 /* OnBoardingModel.swift */; };
 		FF81900C29D5221C00033060 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF81900B29D5221C00033060 /* Coordinator.swift */; };
@@ -358,6 +363,10 @@
 		FAF04BCE255E68CB00249556 /* CatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCell.swift; sourceTree = "<group>"; };
 		FAF2F2542595E46400089D81 /* RestPasswordVerfiyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestPasswordVerfiyVC.swift; sourceTree = "<group>"; };
 		FF1894D029E105950032D951 /* NotificationApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationApi.swift; sourceTree = "<group>"; };
+		FF2F701529E253730018B339 /* TableView + Extesnions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TableView + Extesnions.swift"; sourceTree = "<group>"; };
+		FF2F701829E274FA0018B339 /* TicketsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsApi.swift; sourceTree = "<group>"; };
+		FF2F701A29E275090018B339 /* TicketNetworkingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketNetworkingProtocol.swift; sourceTree = "<group>"; };
+		FF2F701C29E275140018B339 /* TicketsRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsRepo.swift; sourceTree = "<group>"; };
 		FF4C7ECB29D379B70095396A /* Archivo-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Archivo-BlackItalic.ttf"; sourceTree = "<group>"; };
 		FF4C7ECC29D379B70095396A /* Archivo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Archivo-Regular.ttf"; sourceTree = "<group>"; };
 		FF4C7ECD29D379B70095396A /* Archivo-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Archivo-Black.ttf"; sourceTree = "<group>"; };
@@ -406,7 +415,7 @@
 		FF5AF73229DFBE5D0020E716 /* AuthApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthApi.swift; sourceTree = "<group>"; };
 		FF5AF73329DFBE5D0020E716 /* AuthRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthRepo.swift; sourceTree = "<group>"; };
 		FF5AF73829DFC0230020E716 /* FaqModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaqModel.swift; sourceTree = "<group>"; };
-		FF5AF73929DFC0230020E716 /* WishListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishListModel.swift; sourceTree = "<group>"; };
+		FF5AF73929DFC0230020E716 /* UploadDocuments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadDocuments.swift; sourceTree = "<group>"; };
 		FF5AF73A29DFC0230020E716 /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		FF5AF73B29DFC0230020E716 /* SingleProductModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleProductModel.swift; sourceTree = "<group>"; };
 		FF5AF73C29DFC0230020E716 /* CategoriesProductsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesProductsModel.swift; sourceTree = "<group>"; };
@@ -430,8 +439,10 @@
 		FF67F2C429D4AF4E00CA2E0B /* PagingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingCollectionViewCell.swift; sourceTree = "<group>"; };
 		FF67F2C829D4AFD600CA2E0B /* OnBoardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		FF67F2C929D4AFD600CA2E0B /* OnBoardingCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingCollectionViewCell.xib; sourceTree = "<group>"; };
+		FF76275A29E1F224002D531F /* RegisterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterViewModel.swift; path = ../../../../API/RegisterViewModel.swift; sourceTree = "<group>"; };
+		FF76275E29E24E52002D531F /* AuctionHolderCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionHolderCellCollectionViewCell.swift; sourceTree = "<group>"; };
+		FF76275F29E24E52002D531F /* AuctionHolderCellCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuctionHolderCellCollectionViewCell.xib; sourceTree = "<group>"; };
 		FF7EBFAC29DD180B00261946 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
-		FF7F628829D8C56100E7D20E /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		FF81900629D50D6400033060 /* OnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewModel.swift; sourceTree = "<group>"; };
 		FF81900929D50D9000033060 /* OnBoardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingModel.swift; sourceTree = "<group>"; };
 		FF81900B29D5221C00033060 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -553,6 +564,7 @@
 				FA5F1F5B253AFB19007FEF72 /* LError.swift */,
 				FA5F1F5F253AFB1A007FEF72 /* MyReservationOB.swift */,
 				FA5F1F58253AFB18007FEF72 /* SessionManager.swift */,
+				FF2F701529E253730018B339 /* TableView + Extesnions.swift */,
 				FA5F1F5D253AFB19007FEF72 /* ChangeLangVC.swift */,
 			);
 			path = API;
@@ -791,6 +803,16 @@
 			path = Notification;
 			sourceTree = "<group>";
 		};
+		FF2F701729E274ED0018B339 /* Tickets */ = {
+			isa = PBXGroup;
+			children = (
+				FF2F701829E274FA0018B339 /* TicketsApi.swift */,
+				FF2F701A29E275090018B339 /* TicketNetworkingProtocol.swift */,
+				FF2F701C29E275140018B339 /* TicketsRepo.swift */,
+			);
+			path = Tickets;
+			sourceTree = "<group>";
+		};
 		FF4C7ECA29D379B70095396A /* Archivo */ = {
 			isa = PBXGroup;
 			children = (
@@ -890,7 +912,7 @@
 			isa = PBXGroup;
 			children = (
 				FF5AF73829DFC0230020E716 /* FaqModel.swift */,
-				FF5AF73929DFC0230020E716 /* WishListModel.swift */,
+				FF5AF73929DFC0230020E716 /* UploadDocuments.swift */,
 				FF5AF73A29DFC0230020E716 /* LoginModel.swift */,
 				FF5AF73B29DFC0230020E716 /* SingleProductModel.swift */,
 				FF5AF73C29DFC0230020E716 /* CategoriesProductsModel.swift */,
@@ -954,6 +976,24 @@
 			path = OnBoardingCell;
 			sourceTree = "<group>";
 		};
+		FF76275C29E24E22002D531F /* CategoryCell */ = {
+			isa = PBXGroup;
+			children = (
+				FFE2C52029DBB91E00F8C16F /* CategoriesCollectionViewCell.swift */,
+				FFE2C52129DBB91E00F8C16F /* CategoriesCollectionViewCell.xib */,
+			);
+			path = CategoryCell;
+			sourceTree = "<group>";
+		};
+		FF76275D29E24E31002D531F /* AuctionHolderCell */ = {
+			isa = PBXGroup;
+			children = (
+				FF76275E29E24E52002D531F /* AuctionHolderCellCollectionViewCell.swift */,
+				FF76275F29E24E52002D531F /* AuctionHolderCellCollectionViewCell.xib */,
+			);
+			path = AuctionHolderCell;
+			sourceTree = "<group>";
+		};
 		FF7F628629D8C53F00E7D20E /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -966,7 +1006,7 @@
 		FF7F628729D8C55A00E7D20E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				FF7F628829D8C56100E7D20E /* RegisterViewModel.swift */,
+				FF76275A29E1F224002D531F /* RegisterViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -990,6 +1030,7 @@
 		FF9C2B1F29DCA3A900FA3C77 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				FF2F701729E274ED0018B339 /* Tickets */,
 				FFC6DF5329E1121100BD9364 /* Transaction */,
 				FFC6DF4A29E107EB00BD9364 /* Core */,
 				FF1894CF29E105830032D951 /* Notification */,
@@ -1197,8 +1238,8 @@
 		FFE2C51D29DBB8E100F8C16F /* Adabter */ = {
 			isa = PBXGroup;
 			children = (
-				FFE2C52029DBB91E00F8C16F /* CategoriesCollectionViewCell.swift */,
-				FFE2C52129DBB91E00F8C16F /* CategoriesCollectionViewCell.xib */,
+				FF76275D29E24E31002D531F /* AuctionHolderCell */,
+				FF76275C29E24E22002D531F /* CategoryCell */,
 			);
 			path = Adabter;
 			sourceTree = "<group>";
@@ -1347,6 +1388,7 @@
 				FF4C7EF429D37B170095396A /* SplashViewController.xib in Resources */,
 				FABD939C2532DBF900BFB943 /* LaunchScreen.storyboard in Resources */,
 				FABD93D12532DD7B00BFB943 /* Color.xcassets in Resources */,
+				FF76276129E24E52002D531F /* AuctionHolderCellCollectionViewCell.xib in Resources */,
 				FA5935B925DE586F00C6026D /* GoogleService-Info.plist in Resources */,
 				FFD1BFCD29C4E7FF0008C814 /* ForgetPasswordViewController.xib in Resources */,
 				FABD93992532DBF900BFB943 /* Assets.xcassets in Resources */,
@@ -1443,9 +1485,10 @@
 				FABD93AE2532DC8900BFB943 /* NaveBarManager.swift in Sources */,
 				FF4C7F1A29D453CC0095396A /* UIButton + extension.swift in Sources */,
 				FAE9A801266503F100D40FD2 /* subAnswerColllectionCell.swift in Sources */,
-				FF5AF74629DFC0230020E716 /* WishListModel.swift in Sources */,
+				FF5AF74629DFC0230020E716 /* UploadDocuments.swift in Sources */,
 				FA762B7A259E0ADD0035E0EB /* Header.swift in Sources */,
 				FFA76A3029E11434000BD881 /* TransactionNetworkingProtocol.swift in Sources */,
+				FF76275B29E1F224002D531F /* RegisterViewModel.swift in Sources */,
 				FA7C7C88255114AF00BD1035 /* PakgesCell.swift in Sources */,
 				FF5AF74C29DFC0230020E716 /* SearchModel.swift in Sources */,
 				FF5AF74A29DFC0230020E716 /* MyOrdersModel.swift in Sources */,
@@ -1464,7 +1507,6 @@
 				FAF04BCF255E68CB00249556 /* CatCell.swift in Sources */,
 				FFD1BFBC29C4D21C0008C814 /* RegisterViewController.swift in Sources */,
 				FF5AF74E29DFC0230020E716 /* CartModel.swift in Sources */,
-				FF7F628929D8C56100E7D20E /* RegisterViewModel.swift in Sources */,
 				FFD1BFC229C4D9810008C814 /* OTPViewController.swift in Sources */,
 				FF4C7F1129D453CC0095396A /* CheckLanguage.swift in Sources */,
 				FA5F1F67253AFB1A007FEF72 /* MyReservationOB.swift in Sources */,
@@ -1496,6 +1538,7 @@
 				FF4C7F1629D453CC0095396A /* General.swift in Sources */,
 				FF4C7F1329D453CC0095396A /* Alert.swift in Sources */,
 				FA57ED9E2556242700D0C554 /* L012Localizer.swift in Sources */,
+				FF2F701B29E275090018B339 /* TicketNetworkingProtocol.swift in Sources */,
 				FAAAF46B253E69E100E17DAB /* RouteManager.swift in Sources */,
 				FF4C7F1E29D453CC0095396A /* HelperFunc.swift in Sources */,
 				FA4F79A325770E84008FC9A1 /* AppDelegate+FCM.swift in Sources */,
@@ -1531,12 +1574,15 @@
 				8E919FE926BFE3C4002D2E3B /* FQACell.swift in Sources */,
 				FFC6DF4929E106F200BD9364 /* NotificationRepo.swift in Sources */,
 				FF5AF75429E044BE0020E716 /* HomeApi.swift in Sources */,
+				FF76276029E24E52002D531F /* AuctionHolderCellCollectionViewCell.swift in Sources */,
 				FF5AF76129E0653D0020E716 /* HelperK.swift in Sources */,
 				FF4C7F1C29D453CC0095396A /* DispatchQueue + Extensions.swift in Sources */,
 				FF5AF75F29E05F880020E716 /* AuctionNetworkingProtocol.swift in Sources */,
 				FF7EBFAD29DD180B00261946 /* EndPoints.swift in Sources */,
+				FF2F701D29E275140018B339 /* TicketsRepo.swift in Sources */,
 				FFE2C52B29DBC7F200F8C16F /* HomeViewModel.swift in Sources */,
 				FF9C2B2529DCAA6D00FA3C77 /* User+UserDefaults.swift in Sources */,
+				FF2F701929E274FA0018B339 /* TicketsApi.swift in Sources */,
 				FF5AF74729DFC0230020E716 /* LoginModel.swift in Sources */,
 				FF5AF73529DFBE5D0020E716 /* AuthApi.swift in Sources */,
 				FF4C7EF929D37C340095396A /* OnBoardingViewController.swift in Sources */,

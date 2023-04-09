@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Kingfisher
 class HeaderHomeView: UIView {
 
   
@@ -27,19 +27,55 @@ class HeaderHomeView: UIView {
     var onTapNotification:(()->Void)?
     var onTapSearch:(()->Void)?
     //MARK: - LifeCycle
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setupUI()
+        setupLocalize()
+        configure()
+    }
     
-   
-   
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        loadSelfFromNib()
+    }
+    
     
     
     //MARK: - Methods
     func configure() {
-        
+        nameLabel.text = HelperK.getname()
+        guard let url = URL(string: HelperK.getAvatar()) else {return}
+        let placeholderImage = UIImage(named: "AppIcon")!
+        let processor = DefaultImageProcessor.default
+        profileImageView.kf.setImage(
+            with: url,
+            placeholder: placeholderImage,
+            options: [
+                .processor(processor),
+                .loadDiskFileSynchronously,
+                .cacheOriginalImage,
+                .transition(.fade(0.25)),
+            ],
+            progressBlock: { receivedSize, totalSize in
+                // Progress updated
+            },
+            completionHandler: { result in
+                // Done
+            }
+        )
+    }
+    private func setupLocalize() {
+        welcomeLabel.text = "welcomeBack"
     }
     
     private func setupUI() {
         searchView.circle()
         notificationView.circle()
+        imageContainerView.drawBorder(raduis: imageContainerView.frame.height / 2, borderColor: .white)
+        imageContainerView.layer.borderWidth = 1
+        notificationView.drawBorder(raduis: notificationView.frame.height / 2, borderColor: .clear)
+        searchView.drawBorder(raduis: searchView.frame.height / 2, borderColor: .clear)
+
     }
     
     @IBAction func searchButtonAction(_ sender: UIButton) {

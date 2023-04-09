@@ -189,11 +189,13 @@ extension UIView {
 }
 
 extension UICollectionView {
-    @discardableResult
-    func register<Cell:UICollectionViewCell>(nib cell : Cell.Type)->Self{
-        register(Cell.nib, forCellWithReuseIdentifier: cell.identifier)
-        return self
+    
+    func register<Cell:UICollectionViewCell>(nib cell : Cell.Type){
+        let nibName = String(describing: Cell.self)
+        self.register(UINib(nibName: nibName, bundle: nil), forCellWithReuseIdentifier: nibName)
+
     }
+    
     
     func dequeue<Cell: UICollectionViewCell>(at indexPath: IndexPath) -> Cell {
         let id = Cell.identifier
