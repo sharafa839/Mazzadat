@@ -54,11 +54,19 @@ class HomeViewController: UIViewController {
         screenHeight =  categoryCollectionView.bounds.height
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        layout.itemSize = CGSize(width: screenWidth/4, height: screenHeight/2.3)
+        layout.itemSize = !(CoreData.shared.personalSubscription?.isEmpty ?? false) ?  CGSize(width: screenWidth/4, height: screenHeight/2.3) : CGSize(width: screenWidth/3.5, height: screenHeight/2) 
         layout.scrollDirection = .horizontal
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
         categoryCollectionView.collectionViewLayout = layout
+        let auctionLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        auctionLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        auctionLayout.itemSize = CGSize(width: 140, height: 140)
+        auctionLayout.scrollDirection = .horizontal
+        auctionLayout.minimumInteritemSpacing = 0
+        auctionLayout.minimumLineSpacing = 0
+        auctionHolderCollectionView.collectionViewLayout = auctionLayout
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -72,6 +80,7 @@ class HomeViewController: UIViewController {
     private func setupUI () {
         continerView.setRoundCorners(5)
         packageSubscribePlan.setRoundCorners(5)
+  //     packageSubscribePlan.isHidden = !(CoreData.shared.personalSubscription?.isEmpty ?? false)
     }
     
     private func setupLocalize() {
@@ -82,6 +91,9 @@ class HomeViewController: UIViewController {
         categoryCollectionView.delegate = self
         categoryCollectionView.dataSource = self
         categoryCollectionView.register(CategoriesCollectionViewCell.nib, forCellWithReuseIdentifier: CategoriesCollectionViewCell.identifier)
+        auctionHolderCollectionView.delegate = self
+        auctionHolderCollectionView.dataSource = self
+        auctionHolderCollectionView.register(AuctionHolderCellCollectionViewCell.nib, forCellWithReuseIdentifier: AuctionHolderCellCollectionViewCell.identifier)
         
     }
     
@@ -109,6 +121,12 @@ class HomeViewController: UIViewController {
       viewModel.onSuccessGetCategories.subscribe { [weak self] _ in
         self?.categoryCollectionView.reloadData()
       }.disposed(by: viewModel.disposeBag)
+        
+        viewModel.onSuccessGetAuctionHolders.subscribe { [weak self] _ in
+          self?.auctionHolderCollectionView.reloadData()
+        }.disposed(by: viewModel.disposeBag)
+          
+        
 
     }
     //MARK: - Methods
@@ -144,26 +162,28 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if collectionView == categoryCollectionView {
         return CoreData.shared.categories?.count ?? 0
+        } else {
+            return viewModel.onSuccessGetAuctionHolders.value.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if collectionView == categoryCollectionView {
         let cell:CategoriesCollectionViewCell = collectionView.dequeue(at: indexPath)
         guard let category = CoreData.shared.categories?[indexPath.row] else {return UICollectionViewCell()}
         cell.configure(category)
         return cell
+        }else {
+            let cell:AuctionHolderCellCollectionViewCell = collectionView.dequeue(at: indexPath)
+             let auctionHolder = viewModel.onSuccessGetAuctionHolders.value[indexPath.row]
+            cell.setupAuctionHolder(auctionHolder)
+            return cell
+        }
     }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        collectionViewLayout.
-//        let widthOfCell = collectionView.frame.width / 3.5
-//        let heightOfCell = collectionView.frame.height / 2.5
-////
-//        return CGSize(width: 120, height: heightOfCell)
-//    }
-////
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        return 5
-//    }
-
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 10
+    }
 }

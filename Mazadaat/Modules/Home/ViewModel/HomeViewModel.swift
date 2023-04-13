@@ -17,11 +17,19 @@ class HomeViewModel:HomeNetworkingProtocol,CoreNetworkingProtocol  {
     var onSuccessGetImageSlider =   PublishSubject<[SliderModel]>()
     var onLoading = BehaviorRelay<Bool>(value: false)
     var onSuccessGetCategories =   BehaviorRelay<[Category]>(value: CoreData.shared.categories ?? [])
-    var onSuccessGetAuctionHolders =   BehaviorRelay<[Category]>(value: CoreData.shared.categories ?? [])
+    var onSuccessGetAuctionHolders =   BehaviorRelay<[AuctionHolder]>(value:[])
 
     func getAuctionHolders() {
+        onLoading.accept(true)
         auctionHolders { [weak self] result in
             
+            switch result {
+            case .success(let response):
+                guard let value = response.response?.data else {return}
+                self?.onSuccessGetAuctionHolders.accept(value)
+            case .failure(let error):
+                self?.onError.onNext(error.localizedDescription)
+            }
         }
     }
     

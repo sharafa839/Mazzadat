@@ -58,7 +58,7 @@ class CoreData {
     var countries: [Country]?
     var documentsTypes: [Category]?
     var essentials: Essentials?
-    
+    var personalSubscription:[Subscription]?
     func destory() {
         settings = nil
         subscriptions = nil

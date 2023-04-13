@@ -39,7 +39,8 @@ class PackageSubscribePlan: UIView {
     
     private func setupLocalize() {
         upgradeButton.setTitle("Upgrade", for: .normal)
-        
+        remainingPlanLabel.text = "remainingInYourPlan"
+        remainingValueOfPlan.text = "2000" + "of" + (CoreData.shared.personalSubscription?.first?.gainedBalance ?? "") + "SAR"
     }
     
     @IBAction func upgradeButtonAction(_ sender: UIButton) {

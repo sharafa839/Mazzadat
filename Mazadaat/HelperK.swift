@@ -91,7 +91,7 @@ class HelperK: NSObject {
     }
     class func getname ()->String{
         let def = UserDefaults.standard
-        return (def.object(forKey: "name") as! String)
+        return (def.object(forKey: "name") as? String ?? "")
     }
     class func getphone()->String{
         let def = UserDefaults.standard

@@ -145,13 +145,13 @@
 		FF5AF74529DFC0230020E716 /* FaqModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5AF73829DFC0230020E716 /* FaqModel.swift */; };
 		FF5AF74629DFC0230020E716 /* UploadDocuments.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5AF73929DFC0230020E716 /* UploadDocuments.swift */; };
 		FF5AF74729DFC0230020E716 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5AF73A29DFC0230020E716 /* LoginModel.swift */; };
-		FF5AF74829DFC0230020E716 /* SingleProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5AF73B29DFC0230020E716 /* SingleProductModel.swift */; };
+		FF5AF74829DFC0230020E716 /* AuctionHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5AF73B29DFC0230020E716 /* AuctionHolder.swift */; };
 		FF5AF74929DFC0230020E716 /* CategoriesProductsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5AF73C29DFC0230020E716 /* CategoriesProductsModel.swift */; };
 		FF5AF74A29DFC0230020E716 /* MyOrdersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5AF73D29DFC0230020E716 /* MyOrdersModel.swift */; };
 		FF5AF74B29DFC0230020E716 /* SlidersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5AF73E29DFC0230020E716 /* SlidersModel.swift */; };
 		FF5AF74C29DFC0230020E716 /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5AF73F29DFC0230020E716 /* SearchModel.swift */; };
 		FF5AF74D29DFC0230020E716 /* PaymentModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5AF74029DFC0230020E716 /* PaymentModels.swift */; };
-		FF5AF74E29DFC0230020E716 /* CartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5AF74129DFC0230020E716 /* CartModel.swift */; };
+		FF5AF74E29DFC0230020E716 /* HolderPlacesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5AF74129DFC0230020E716 /* HolderPlacesModel.swift */; };
 		FF5AF74F29DFC0230020E716 /* CategoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5AF74229DFC0230020E716 /* CategoriesModel.swift */; };
 		FF5AF75029DFC0230020E716 /* UpdateProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5AF74329DFC0230020E716 /* UpdateProfileModel.swift */; };
 		FF5AF75129DFC0230020E716 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5AF74429DFC0230020E716 /* ProfileModel.swift */; };
@@ -417,13 +417,13 @@
 		FF5AF73829DFC0230020E716 /* FaqModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaqModel.swift; sourceTree = "<group>"; };
 		FF5AF73929DFC0230020E716 /* UploadDocuments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadDocuments.swift; sourceTree = "<group>"; };
 		FF5AF73A29DFC0230020E716 /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
-		FF5AF73B29DFC0230020E716 /* SingleProductModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleProductModel.swift; sourceTree = "<group>"; };
+		FF5AF73B29DFC0230020E716 /* AuctionHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuctionHolder.swift; sourceTree = "<group>"; };
 		FF5AF73C29DFC0230020E716 /* CategoriesProductsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesProductsModel.swift; sourceTree = "<group>"; };
 		FF5AF73D29DFC0230020E716 /* MyOrdersModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyOrdersModel.swift; sourceTree = "<group>"; };
 		FF5AF73E29DFC0230020E716 /* SlidersModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlidersModel.swift; sourceTree = "<group>"; };
 		FF5AF73F29DFC0230020E716 /* SearchModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
 		FF5AF74029DFC0230020E716 /* PaymentModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentModels.swift; sourceTree = "<group>"; };
-		FF5AF74129DFC0230020E716 /* CartModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartModel.swift; sourceTree = "<group>"; };
+		FF5AF74129DFC0230020E716 /* HolderPlacesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HolderPlacesModel.swift; sourceTree = "<group>"; };
 		FF5AF74229DFC0230020E716 /* CategoriesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesModel.swift; sourceTree = "<group>"; };
 		FF5AF74329DFC0230020E716 /* UpdateProfileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateProfileModel.swift; sourceTree = "<group>"; };
 		FF5AF74429DFC0230020E716 /* ProfileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
@@ -813,6 +813,21 @@
 			path = Tickets;
 			sourceTree = "<group>";
 		};
+		FF2F701E29E2F1C10018B339 /* AuctionHolder */ = {
+			isa = PBXGroup;
+			children = (
+				FF2F702329E4EC960018B339 /* Header */,
+			);
+			path = AuctionHolder;
+			sourceTree = "<group>";
+		};
+		FF2F702329E4EC960018B339 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
 		FF4C7ECA29D379B70095396A /* Archivo */ = {
 			isa = PBXGroup;
 			children = (
@@ -841,6 +856,7 @@
 		FF4C7EF029D37AFB0095396A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FF2F701E29E2F1C10018B339 /* AuctionHolder */,
 				FFBA018629DB6B310021F2D8 /* Home */,
 				FFD252FD29D47A5F002CE41A /* OnBoardingScreens */,
 				FF4C7EF629D37C230095396A /* OnBoarding */,
@@ -914,13 +930,13 @@
 				FF5AF73829DFC0230020E716 /* FaqModel.swift */,
 				FF5AF73929DFC0230020E716 /* UploadDocuments.swift */,
 				FF5AF73A29DFC0230020E716 /* LoginModel.swift */,
-				FF5AF73B29DFC0230020E716 /* SingleProductModel.swift */,
+				FF5AF73B29DFC0230020E716 /* AuctionHolder.swift */,
 				FF5AF73C29DFC0230020E716 /* CategoriesProductsModel.swift */,
 				FF5AF73D29DFC0230020E716 /* MyOrdersModel.swift */,
 				FF5AF73E29DFC0230020E716 /* SlidersModel.swift */,
 				FF5AF73F29DFC0230020E716 /* SearchModel.swift */,
 				FF5AF74029DFC0230020E716 /* PaymentModels.swift */,
-				FF5AF74129DFC0230020E716 /* CartModel.swift */,
+				FF5AF74129DFC0230020E716 /* HolderPlacesModel.swift */,
 				FF5AF74229DFC0230020E716 /* CategoriesModel.swift */,
 				FF5AF74329DFC0230020E716 /* UpdateProfileModel.swift */,
 				FF5AF74429DFC0230020E716 /* ProfileModel.swift */,
@@ -1506,7 +1522,7 @@
 				FF5AF75029DFC0230020E716 /* UpdateProfileModel.swift in Sources */,
 				FAF04BCF255E68CB00249556 /* CatCell.swift in Sources */,
 				FFD1BFBC29C4D21C0008C814 /* RegisterViewController.swift in Sources */,
-				FF5AF74E29DFC0230020E716 /* CartModel.swift in Sources */,
+				FF5AF74E29DFC0230020E716 /* HolderPlacesModel.swift in Sources */,
 				FFD1BFC229C4D9810008C814 /* OTPViewController.swift in Sources */,
 				FF4C7F1129D453CC0095396A /* CheckLanguage.swift in Sources */,
 				FA5F1F67253AFB1A007FEF72 /* MyReservationOB.swift in Sources */,
@@ -1564,7 +1580,7 @@
 				FFD1BFCC29C4E7FF0008C814 /* ForgetPasswordViewController.swift in Sources */,
 				FA5F1F6D253AFBA9007FEF72 /* LoginVC.swift in Sources */,
 				FA57ED9B2556242700D0C554 /* MirroringViewController.swift in Sources */,
-				FF5AF74829DFC0230020E716 /* SingleProductModel.swift in Sources */,
+				FF5AF74829DFC0230020E716 /* AuctionHolder.swift in Sources */,
 				FF81900A29D50D9000033060 /* OnBoardingModel.swift in Sources */,
 				FFC6DF4C29E107FF00BD9364 /* CoreApi.swift in Sources */,
 				FF4C7F1929D453CC0095396A /* ActivityIndicatorManagerr.swift in Sources */,

@@ -49,7 +49,7 @@ extension TicketApi :TargetType, BaseApiHeadersProtocol {
     }
     
     var task: Task {
-        <#code#>
+        return .requestPlain
     }
     
     

@@ -220,13 +220,3 @@ struct Settings:Codable {
        }
 }
 
-// MARK: - Subscription
-struct Subscription:Codable {
-    var id: Int?
-    var name, description, price, gainedBalance: String?
-    enum CodingKeys: String, CodingKey {
-            case id
-            case gainedBalance = "gained_balance"
-            case name, description, price
-        }
-}

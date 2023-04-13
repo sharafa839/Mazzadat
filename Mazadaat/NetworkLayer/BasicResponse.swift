@@ -18,7 +18,7 @@ struct BaseResponse<T:Codable>:Codable {
     let status:ResponseStatus
     let response:Basic<T>?
     let code:Int
-    let paging:Int?
+    let paging:Paging?
 }
 
 enum NetworkServiceType:String {

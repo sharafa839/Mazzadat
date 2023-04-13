@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Kingfisher
 class AuctionHolderCellCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var auctionHolderTitle: UILabel!
@@ -20,10 +20,30 @@ class AuctionHolderCellCollectionViewCell: UICollectionViewCell {
     }
 
    private func setupUI() {
-        containerView.drawBorder(raduis: 5, borderColor: .orange)
+        containerView.drawBorder(raduis: 10, borderColor: .orange)
     }
     
-    func setupAuctionHolder() {
-        
+    func setupAuctionHolder(_ auctionHolder: AuctionHolder) {
+        auctionHolderTitle.text = auctionHolder.name
+        guard let image = auctionHolder.image else {return}
+        guard let url = URL(string: image) else {return}
+        let placeholderImage = UIImage(named: "AppIcon")!
+        let processor = DefaultImageProcessor.default
+        auctionHolderImageView.kf.setImage(
+            with: url,
+            placeholder: placeholderImage,
+            options: [
+                .processor(processor),
+                .loadDiskFileSynchronously,
+                .cacheOriginalImage,
+                .transition(.fade(0.25)),
+            ],
+            progressBlock: { receivedSize, totalSize in
+                // Progress updated
+            },
+            completionHandler: { result in
+                // Done
+            }
+        )
     }
 }

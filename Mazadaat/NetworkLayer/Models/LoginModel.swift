@@ -27,7 +27,7 @@ struct LoginPayload: Codable {
     var avatar: String?
     var lat, lng: JSONNull?
     var isSubscribed: Bool?
-    var subscriptions: [String]?
+    var subscriptions: [Subscription]?
     var appLocale: String?
     var notificationCount: Int?
     var accessToken, tokenType: String?
@@ -66,5 +66,14 @@ struct LoginPayload: Codable {
     public func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
         try container.encodeNil()
+    }
+}
+struct Subscription: Codable {
+    var id: Int?
+    var name, description, price, gainedBalance: String?
+
+    enum CodingKeys: String, CodingKey {
+        case id, name, description, price
+        case gainedBalance = "gained_balance"
     }
 }

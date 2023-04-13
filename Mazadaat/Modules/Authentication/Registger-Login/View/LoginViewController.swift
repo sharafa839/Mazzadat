@@ -89,8 +89,8 @@ class LoginViewController: UIViewController {
             self?.viewModel.loginWithPhoneAndPassword()
         }.disposed(by: viewModel.disposeBag)
         
-        ContinueAsGuestButton.rx.tap.subscribe { [weak self] in
-            
+        ContinueAsGuestButton.rx.tap.subscribe { [weak self] _ in
+            appDelegate.coordinator.setRoot(HomeViewController(viewModel: HomeViewModel()))
         }.disposed(by: viewModel.disposeBag)
         
         loginWithNafathButton.rx.tap.subscribe { [weak self] in

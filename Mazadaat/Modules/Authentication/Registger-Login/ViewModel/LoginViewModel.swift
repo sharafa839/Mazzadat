@@ -60,7 +60,8 @@ class LoginViewModel:AuthNetworkingProtocol {
              case .success(let response):
                  guard let loginPayload = response.response?.data else {return}
                  HelperK.setUserData(loginPayLoad: loginPayload)
-                 
+                 CoreData.shared.personalSubscription = loginPayload.subscriptions
+
                  self?.onSuccess.onNext(())
              }
          }
