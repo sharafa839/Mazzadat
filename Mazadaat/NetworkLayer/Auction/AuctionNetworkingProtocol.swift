@@ -12,7 +12,7 @@ protocol AuctionNetworkingProtocol {
     func all(completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
     func showOfficialAuction(auction_id:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
     func show(auction_id:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
-    func toggleFavorite(auction_id:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
+    func toggleFavorite(auction_id:String,completion:@escaping(Result<BaseResponse<FavoriteModel>,Error>)->Void)
     func favorites( completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
     func addBid(auction_id:String,price:String, completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
     
@@ -35,7 +35,7 @@ extension AuctionNetworkingProtocol {
         auction.request(target: .show(auction_id: auction_id), completion: completion)
     }
     
-    func toggleFavorite(auction_id:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void) {
+    func toggleFavorite(auction_id:String,completion:@escaping(Result<BaseResponse<FavoriteModel>,Error>)->Void) {
         auction.request(target: .toggleFavorite(auction_id: auction_id), completion: completion)
     }
     

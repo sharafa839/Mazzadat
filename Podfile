@@ -47,6 +47,7 @@ pod 'Spring'
   pod "ImageSlideshow/Kingfisher"
   pod 'Moya', '~> 15.0'
   pod 'NotificationBannerSwift', '~> 3.0.0'
+  pod 'NVActivityIndicatorView'
 
   # Pods for Mazadaat
 

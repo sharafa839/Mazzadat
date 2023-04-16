@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Archivo-Bold.ttf">
+            <string>Archivo-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="KindOfAuctionCollectionViewCell" customModule="Golden_Bell" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="145" height="52"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="145" height="52"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vtn-f7-ZmH">
+                        <rect key="frame" x="8" y="10" width="129" height="32"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMn-XR-gDu">
+                                <rect key="frame" x="0.0" y="0.0" width="129" height="32"/>
+                                <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="TextColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="nMn-XR-gDu" secondAttribute="bottom" id="2Kf-Bn-jaK"/>
+                            <constraint firstItem="nMn-XR-gDu" firstAttribute="leading" secondItem="vtn-f7-ZmH" secondAttribute="leading" id="31b-Kc-cxp"/>
+                            <constraint firstAttribute="trailing" secondItem="nMn-XR-gDu" secondAttribute="trailing" id="aic-uz-5w7"/>
+                            <constraint firstItem="nMn-XR-gDu" firstAttribute="top" secondItem="vtn-f7-ZmH" secondAttribute="top" id="jcu-Ag-hd9"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="vtn-f7-ZmH" secondAttribute="bottom" constant="10" id="AHe-qD-yc9"/>
+                <constraint firstItem="vtn-f7-ZmH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="boy-zV-u4M"/>
+                <constraint firstItem="vtn-f7-ZmH" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="nOq-28-mr9"/>
+                <constraint firstAttribute="trailing" secondItem="vtn-f7-ZmH" secondAttribute="trailing" constant="8" id="tex-Vf-cNy"/>
+            </constraints>
+            <size key="customSize" width="145" height="52"/>
+            <connections>
+                <outlet property="coontinerView" destination="vtn-f7-ZmH" id="AYn-LX-OPM"/>
+                <outlet property="sortingLabel" destination="nMn-XR-gDu" id="tpy-Ld-PnY"/>
+            </connections>
+            <point key="canvasLocation" x="206.52173913043481" y="46.205357142857139"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="TextColor">
+            <color red="0.078431372549019607" green="0.074509803921568626" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

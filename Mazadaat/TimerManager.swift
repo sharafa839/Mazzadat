@@ -103,3 +103,13 @@ return
 
     }
 }
+
+extension String {
+    func getDate()-> (day:String,hour:String,minute:String) {
+        guard let date = self.toDateNew() else {return ("","","")}
+        let calendar = Calendar.current
+        let executiveDate = calendar.dateComponents([.day,.hour,.minute], from: date)
+        return ("\(executiveDate.day ?? 0)","\(executiveDate.hour ?? 0)","\(executiveDate.minute ?? 0)")
+        
+    }
+}

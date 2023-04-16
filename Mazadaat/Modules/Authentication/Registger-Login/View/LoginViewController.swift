@@ -120,14 +120,8 @@ class LoginViewController: UIViewController {
       }.disposed(by: viewModel.disposeBag)
 
       viewModel.onSuccess.subscribe { [weak self] _ in
-        let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
-        
-        let main = storyBoard.instantiateViewController(withIdentifier: "main")
-        let home = UINavigationController(rootViewController:main )
-        home.modalPresentationStyle = .overFullScreen
-       
-        self?.present(home, animated: true, completion: nil)
-        
+          
+          appDelegate.coordinator.setRoot(UINavigationController(rootViewController: HomeViewController(viewModel: HomeViewModel())))
       }.disposed(by: viewModel.disposeBag)
 
     }

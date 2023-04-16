@@ -15,7 +15,7 @@ protocol HomeNetworkingProtocol {
     func uploadDocuments(frontImage : MultiPartItem ,backImage: MultiPartItem,id:Int,expiry_date:String,completion:@escaping(Result<BaseResponse<UploadDocuments>,Error>)->Void)
     func auctionHolders(completion:@escaping(Result<BaseResponse<[AuctionHolder]>,Error>)->Void)
     func holderPlaces(holderID:String,running:Bool?,upcoming:Bool?,expired:Bool?,completion:@escaping(Result<BaseResponse<[AuctionHolderPlaces]>,Error>)->Void)
-    func showHolderPlaces(placeID:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
+    func showHolderPlaces(placeID:String,completion:@escaping(Result<BaseResponse<HolderPlaces>,Error>)->Void)
     func payEntryFee(placeID:String,payment_method_id:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
 }
 
@@ -36,7 +36,9 @@ extension HomeNetworkingProtocol {
     func holderPlaces(holderID:String,running:Bool?,upcoming:Bool?,expired:Bool?,completion:@escaping(Result<BaseResponse<[AuctionHolderPlaces]>,Error>)->Void){
         home.request(target: .holderPlaces(holderID: holderID, running: running, upcoming: upcoming, expired: expired), completion: completion)
     }
-    func showHolderPlaces(placeID:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void){}
+    func showHolderPlaces(placeID:String,completion:@escaping(Result<BaseResponse<HolderPlaces>,Error>)->Void){
+        home.request(target: .showHolderPlaces(placeID: placeID), completion: completion)
+    }
     func payEntryFee(placeID:String,payment_method_id:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void){}
 }
 

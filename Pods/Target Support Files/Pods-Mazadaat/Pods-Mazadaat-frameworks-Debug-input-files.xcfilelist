@@ -23,6 +23,7 @@ ${BUILT_PRODUCTS_DIR}/MSPeekCollectionViewDelegateImplementation/MSPeekCollectio
 ${BUILT_PRODUCTS_DIR}/MXSegmentedControl/MXSegmentedControl.framework
 ${BUILT_PRODUCTS_DIR}/MarqueeLabel/MarqueeLabel.framework
 ${BUILT_PRODUCTS_DIR}/Moya/Moya.framework
+${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework
 ${BUILT_PRODUCTS_DIR}/NotificationBannerSwift/NotificationBannerSwift.framework
 ${BUILT_PRODUCTS_DIR}/OTPFieldView/OTPFieldView.framework
 ${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework

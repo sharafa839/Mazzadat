@@ -29,7 +29,7 @@ extension BaseApiHeadersProtocol {
          ]
        
         if authorization != "" {
-            header["Authorization"] = "\(authorization)"
+            header["Authorization"] = "Bearer \(authorization)"
     }
         return header
 }

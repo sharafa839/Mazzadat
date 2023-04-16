@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -45,25 +45,8 @@
                                     <constraint firstAttribute="width" constant="30" id="yPb-Ju-Br4"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.right.circle.fill" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrowRight"/>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="kMa-a9-0wC">
-                                <rect key="frame" x="8" y="49.5" width="361" height="20.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laW-zO-vHl">
-                                        <rect key="frame" x="0.0" y="0.0" width="167.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDp-qQ-tjd">
-                                        <rect key="frame" x="193.5" y="0.0" width="167.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="fUn-MT-aDY">
                                 <rect key="frame" x="8" y="86" width="361" height="67"/>
                                 <subviews>
@@ -139,15 +122,11 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="2ld-k3-8UB" secondAttribute="trailing" constant="8" id="8lp-mR-p4w"/>
                             <constraint firstAttribute="trailing" secondItem="fUn-MT-aDY" secondAttribute="trailing" constant="8" id="Ii4-ub-H1a"/>
-                            <constraint firstItem="kMa-a9-0wC" firstAttribute="leading" secondItem="xdh-GY-88D" secondAttribute="leading" constant="8" id="Jdq-Ai-Wy8"/>
                             <constraint firstItem="2ld-k3-8UB" firstAttribute="centerY" secondItem="4Cu-1g-6TL" secondAttribute="centerY" id="KKH-6P-mlL"/>
                             <constraint firstItem="4Cu-1g-6TL" firstAttribute="top" secondItem="xdh-GY-88D" secondAttribute="top" constant="16" id="P60-Td-KE8"/>
                             <constraint firstAttribute="bottom" secondItem="fUn-MT-aDY" secondAttribute="bottom" constant="8" id="SQL-gV-OZN"/>
                             <constraint firstItem="fUn-MT-aDY" firstAttribute="leading" secondItem="xdh-GY-88D" secondAttribute="leading" constant="8" id="b2g-pX-maD"/>
-                            <constraint firstItem="kMa-a9-0wC" firstAttribute="top" secondItem="2ld-k3-8UB" secondAttribute="bottom" constant="8" id="b7q-oX-T1x"/>
-                            <constraint firstAttribute="trailing" secondItem="kMa-a9-0wC" secondAttribute="trailing" constant="8" id="eeV-OC-CG5"/>
                             <constraint firstItem="4Cu-1g-6TL" firstAttribute="leading" secondItem="xdh-GY-88D" secondAttribute="leading" constant="20" id="nho-NP-X9H"/>
-                            <constraint firstItem="fUn-MT-aDY" firstAttribute="top" secondItem="kMa-a9-0wC" secondAttribute="bottom" constant="16" id="rae-8Q-KQN"/>
                             <constraint firstItem="2ld-k3-8UB" firstAttribute="leading" secondItem="4Cu-1g-6TL" secondAttribute="trailing" constant="181" id="yMi-vz-zfp"/>
                         </constraints>
                     </view>
@@ -164,7 +143,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="arrowshape.turn.up.right.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="arrowRight" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -56,7 +56,7 @@ class ActivityIndicatorManagerr  {
     
     func hideProgressView() {
         activityIndicator.stopAnimating()
-       // containerView.removeFromSuperview()
+        containerView.removeFromSuperview()
         progressView.removeFromSuperview()
     }
 }

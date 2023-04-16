@@ -22,7 +22,7 @@ class HomeViewModel:HomeNetworkingProtocol,CoreNetworkingProtocol  {
     func getAuctionHolders() {
         onLoading.accept(true)
         auctionHolders { [weak self] result in
-            
+            self?.onLoading.accept(false)
             switch result {
             case .success(let response):
                 guard let value = response.response?.data else {return}

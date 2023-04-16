@@ -54,7 +54,7 @@ class HomeViewController: UIViewController {
         screenHeight =  categoryCollectionView.bounds.height
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        layout.itemSize = !(CoreData.shared.personalSubscription?.isEmpty ?? false) ?  CGSize(width: screenWidth/4, height: screenHeight/2.3) : CGSize(width: screenWidth/3.5, height: screenHeight/2) 
+        layout.itemSize = !(CoreData.shared.personalSubscription?.isEmpty ?? false) ?  CGSize(width: screenWidth/4, height: screenHeight/2.3) : CGSize(width: screenWidth/3.5, height: screenHeight/2)
         layout.scrollDirection = .horizontal
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
@@ -80,7 +80,7 @@ class HomeViewController: UIViewController {
     private func setupUI () {
         continerView.setRoundCorners(5)
         packageSubscribePlan.setRoundCorners(5)
-  //     packageSubscribePlan.isHidden = !(CoreData.shared.personalSubscription?.isEmpty ?? false)
+       packageSubscribePlan.isHidden = !(CoreData.shared.personalSubscription?.isEmpty ?? false)
     }
     
     private func setupLocalize() {
@@ -126,8 +126,14 @@ class HomeViewController: UIViewController {
           self?.auctionHolderCollectionView.reloadData()
         }.disposed(by: viewModel.disposeBag)
           
+        viewModel.onError.subscribe { [weak self] error in
+            HelperK.showError(title: error.element ?? "", subtitle: "")
+          }.disposed(by: viewModel.disposeBag)
         
-
+        viewModel.onLoading.subscribe { [weak self] value in
+            guard let isLoading = value.element else {return}
+              isLoading ? ActivityIndicatorManager.shared.showProgressView() : ActivityIndicatorManagerr.shared.hideProgressView()
+          }.disposed(by: viewModel.disposeBag)
     }
     //MARK: - Methods
     
@@ -185,5 +191,16 @@ extension HomeViewController:UICollectionViewDelegate,UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == auctionHolderCollectionView {
+            let auctionHolder = viewModel.onSuccessGetAuctionHolders.value[indexPath.row]
+            let auctionHolderViewModel = AuctionHolderViewModel(holderId: "\(auctionHolder.id ?? 0)",auctionHolderImage: auctionHolder.image ?? "" ,auctionHolderName: auctionHolder.name ?? "")
+            let auctionHolderViewController = AuctionHolderViewController(viewModel: auctionHolderViewModel)
+            self.navigationController?.pushViewController(auctionHolderViewController, animated: true)
+        }else {
+            
+        }
     }
 }

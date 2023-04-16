@@ -52,7 +52,7 @@ enum EndPoints {
         case uploadDocuments = "api/home/upload_document"
         case sendNotification = "api/home/send_notification"
         case auctionHolder = "api/home/holders"
-        case holderPlaces = "api/home/holder_places?holder_id=1"
+        case holderPlaces = "api/home/holder_places"
         case showHolderPlaces = "api/home/show_holder_place"
         case payEntreeFee = "api/home/entry_fee"
     }
