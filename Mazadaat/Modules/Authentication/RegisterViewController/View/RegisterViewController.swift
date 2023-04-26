@@ -122,13 +122,7 @@ class RegisterViewController: UIViewController {
       }.disposed(by: viewModel.disposeBag)
 
       viewModel.onSuccess.subscribe { [weak self] _ in
-        let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
-        
-        let main = storyBoard.instantiateViewController(withIdentifier: "main")
-        let home = UINavigationController(rootViewController:main )
-        home.modalPresentationStyle = .overFullScreen
-        self?.present(home, animated: true, completion: nil)
-        
+          self?.navigationController?.pushViewController(OTPViewController(viewModel: OTPViewModel(phoneNumber: self?.viewModel.phone.value ?? "", typeOfAuth: .register)), animated: true)
       }.disposed(by: viewModel.disposeBag)
 
     }

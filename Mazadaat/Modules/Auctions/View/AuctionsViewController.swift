@@ -157,6 +157,13 @@ extension AuctionsViewController:UITableViewDelegate,UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let auctionId = viewModel.auctions.value[indexPath.row].id else {return}
+        let auctionDetailsViewModel = AuctionsDetailsViewModel(id: "\(auctionId)", type: viewModel.type ?? "")
+        let auctionDetailsViewController = AuctionsDetailsViewController(viewModel: auctionDetailsViewModel)
+        self.navigationController?.pushViewController(auctionDetailsViewController, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         170
     }

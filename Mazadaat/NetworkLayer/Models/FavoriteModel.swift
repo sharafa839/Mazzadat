@@ -4,7 +4,8 @@ import Foundation
 
 struct FavoriteModel: Codable {
     var id: Int?
-    var categoryID, category: String?
+    var categoryID:Int?
+    var category: Category?
     var cityID: Int?
     var city: City?
     var name, description, lat, lng: String?
@@ -12,7 +13,7 @@ struct FavoriteModel: Codable {
     var endAt, termsConditions: String?
     var auctionDetails: [AuctionDetail]?
     var status, bidsCount: Int?
-    var lastBid: JSONNull?
+    var lastBid: LastBid?
     var media: [Media]?
     var isFavourite: Bool?
 

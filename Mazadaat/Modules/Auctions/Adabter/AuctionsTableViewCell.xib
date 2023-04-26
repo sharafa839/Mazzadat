@@ -104,11 +104,11 @@
                                     <constraint firstAttribute="bottom" secondItem="ZQp-6s-NiL" secondAttribute="bottom" id="tzZ-Oq-tjl"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Wj-Kz-PkS">
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="6Wj-Kz-PkS">
                                 <rect key="frame" x="16" y="122" width="286" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLj-Sj-Ys8">
-                                        <rect key="frame" x="0.0" y="0.0" width="193.5" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="93.5" height="40"/>
                                         <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -213,7 +213,7 @@
     </objects>
     <resources>
         <image name="Golden Bell Icon" width="24" height="24"/>
-        <image name="auction-line" width="24" height="24"/>
+        <image name="auction-line" width="16" height="16"/>
         <namedColor name="Bronze-500">
             <color red="0.88627450980392153" green="0.56470588235294117" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

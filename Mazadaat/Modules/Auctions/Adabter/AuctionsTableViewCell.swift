@@ -45,6 +45,24 @@ class AuctionsTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    private func setupDate(_ end:String,_ start:String) {
+         let startedAt = Date()
+        guard let endAt = end.toDateNew() else {return}
+        let calendar = Calendar.current
+
+        let diffDateComponents = calendar.dateComponents([.day, .hour, .minute, .second], from: startedAt, to: endAt)
+        
+        let seconds = "\(diffDateComponents.second ?? 0)"
+
+        if seconds.contains("-"){
+            endInLabel.text = "expired"
+
+        }else {
+            endInLabel.text = "\(diffDateComponents.day ?? 0)d \(diffDateComponents.hour ?? 0)h \(diffDateComponents.minute ?? 0) m"
+
+
+        }
+    }
     
     func configure(_ with:Auction) {
         minLabel.text = "min"

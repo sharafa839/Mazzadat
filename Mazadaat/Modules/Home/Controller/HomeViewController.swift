@@ -80,7 +80,8 @@ class HomeViewController: UIViewController {
     private func setupUI () {
         continerView.setRoundCorners(5)
         packageSubscribePlan.setRoundCorners(5)
-       packageSubscribePlan.isHidden = !(CoreData.shared.personalSubscription?.isEmpty ?? false)
+       packageSubscribePlan.isHidden = (CoreData.shared.personalSubscription?.isEmpty ?? false)
+        headerHomeView.setupUI(view: .home)
     }
     
     private func setupLocalize() {
@@ -148,7 +149,6 @@ class HomeViewController: UIViewController {
     }
     
     private func setupViewsAction() {
-        
         packageSubscribePlan.onTapUpgrade = {[weak self]   in
             
             print("package")
@@ -156,12 +156,18 @@ class HomeViewController: UIViewController {
         }
         
         headerHomeView.onTapNotification = { [weak self] in
-            
-        }
+//            let notificationViewModel =  NotificationsViewModel()
+//            let notificationViewController = NotificationsViewController(viewModel:notificationViewModel)
+//            self?.navigationController?.pushViewController(notificationViewController, animated: true)
+//        }
+        } 
         
         headerHomeView.onTapSearch = { [weak self] in
-            
-        }
+                        let notificationViewModel =  ProfileViewModel()
+                        let notificationViewController = ProfileViewController(viewModel:notificationViewModel)
+                        self?.navigationController?.pushViewController(notificationViewController, animated: true)
+                    }
+        
     }
     
 }
@@ -200,7 +206,11 @@ extension HomeViewController:UICollectionViewDelegate,UICollectionViewDataSource
             let auctionHolderViewController = AuctionHolderViewController(viewModel: auctionHolderViewModel)
             self.navigationController?.pushViewController(auctionHolderViewController, animated: true)
         }else {
-            
+            guard let categoryId = viewModel.onSuccessGetCategories.value[indexPath.row].id else {return}
+            guard let categoryName = viewModel.onSuccessGetCategories.value[indexPath.row].name else {return}
+            let categoryViewModel = CategoriesViewModel(id: String(categoryId),title:categoryName)
+            let categoryController = CategoriesViewController(viewModel: categoryViewModel)
+            navigationController?.pushViewController(categoryController, animated: true)
         }
     }
 }

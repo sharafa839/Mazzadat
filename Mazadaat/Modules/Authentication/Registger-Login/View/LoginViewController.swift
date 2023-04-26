@@ -102,7 +102,7 @@ class LoginViewController: UIViewController {
         }.disposed(by: viewModel.disposeBag)
         
         forgetPasswordButton.rx.tap.subscribe { [weak self] _ in
-            let forgetPasswordViewController = ResetPasswordViewController()
+            let forgetPasswordViewController = ForgetPasswordViewController()
             self?.navigationController?.pushViewController(forgetPasswordViewController, animated: true)
         }.disposed(by: viewModel.disposeBag)
         
@@ -120,8 +120,11 @@ class LoginViewController: UIViewController {
       }.disposed(by: viewModel.disposeBag)
 
       viewModel.onSuccess.subscribe { [weak self] _ in
-          
-          appDelegate.coordinator.setRoot(UINavigationController(rootViewController: HomeViewController(viewModel: HomeViewModel())))
+          let homeViewController = HomeViewController(viewModel: HomeViewModel())
+          homeViewController.modalPresentationStyle = .overFullScreen
+          let root = UINavigationController(rootViewController: homeViewController)
+         // self?.present(root, animated: true, completion: nil)
+          self?.navigationController?.pushViewController(homeViewController, animated: true)
       }.disposed(by: viewModel.disposeBag)
 
     }

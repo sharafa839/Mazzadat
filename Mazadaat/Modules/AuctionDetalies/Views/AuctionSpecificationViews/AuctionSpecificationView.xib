@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuctionSpecificationView" customModule="Golden_Bell" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="IXF-pa-nB2" id="t5v-UT-K6P"/>
+                <outlet property="tableView" destination="4D4-Gv-5kd" id="uFP-ad-s1l"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="413" height="307"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IXF-pa-nB2">
+                    <rect key="frame" x="8" y="8" width="397" height="291"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4D4-Gv-5kd">
+                            <rect key="frame" x="8" y="8" width="381" height="275"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="4D4-Gv-5kd" secondAttribute="bottom" constant="8" id="E4d-64-LRn"/>
+                        <constraint firstItem="4D4-Gv-5kd" firstAttribute="top" secondItem="IXF-pa-nB2" secondAttribute="top" constant="8" id="aXm-IA-P52"/>
+                        <constraint firstAttribute="trailing" secondItem="4D4-Gv-5kd" secondAttribute="trailing" constant="8" id="rNM-QF-MRj"/>
+                        <constraint firstItem="4D4-Gv-5kd" firstAttribute="leading" secondItem="IXF-pa-nB2" secondAttribute="leading" constant="8" id="y7S-Gz-K1q"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="IXF-pa-nB2" secondAttribute="trailing" constant="8" id="TIc-ZB-ftY"/>
+                <constraint firstItem="IXF-pa-nB2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="cf1-8z-6ec"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="IXF-pa-nB2" secondAttribute="bottom" constant="8" id="ofY-BQ-fh5"/>
+                <constraint firstItem="IXF-pa-nB2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="wbB-Eq-p84"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="136.95652173913044" y="-125.55803571428571"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

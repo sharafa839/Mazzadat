@@ -48,6 +48,7 @@ class AuctionHolderTableViewCell: UITableViewCell {
         containerDetailesView.setRoundCorners(10)
         kindOfAuctionButton.setRoundCorners(10)
         countOfAuctionButton.setRoundCorners(10)
+        
     }
     
     func configure(_ with:AuctionHolderPlaces) {
@@ -68,14 +69,25 @@ class AuctionHolderTableViewCell: UITableViewCell {
         }
         cityLabel.text = with.name
         kindOfAuctionButton.setTitle(with.type, for: .normal)
-       
-       
+        let currentDate = Date()
+        let calendar = Calendar.current
+
+        let diffDateComponents = calendar.dateComponents([.day, .hour, .minute, .second], from: currentDate, to: with.auctionTime?.toDateNew() ?? Date())
+        
+        let seconds = "\(diffDateComponents.second ?? 0)"
+
+        if seconds.contains("-"){
+            startingInValueLabel.text = "expired"
+            auctionDaysValueLabel.text = "expired"
+
+        }else {
+            startingInValueLabel.text = "\(diffDateComponents.day ?? 0)d \(diffDateComponents.hour ?? 0)h \(diffDateComponents.minute ?? 0) m"
+            auctionDaysValueLabel.text = "\(diffDateComponents.day ?? 0)days"
+
+        }
         countOfAuctionButton.backgroundColor = .white
         countOfAuctionButton.setTitle("\(with.auctionsCount ?? 0) Auctions", for: .normal)
         entryFeeValueLabel.text = "\(with.entryFee ?? 0)"
-        guard let date = with.auctionTime?.getDate() else {return}
-        startingInValueLabel.text = "\(date.day+"d") \(date.hour+"h") \(date.minute+"m")"
-        auctionDaysValueLabel.text = date.day + "days"
         guard let image = with.cover else {return}
         guard let url = URL(string: image) else {return}
         let placeholderImage = UIImage(named: "AppIcon")!

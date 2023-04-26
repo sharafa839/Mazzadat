@@ -1,0 +1,52 @@
+//
+//  PlaceBidViewModel .swift
+//  Mazadaat
+//
+//  Created by Sharaf on 25/04/2023.
+//  Copyright © 2023 macbook. All rights reserved.
+//
+
+import Foundation
+import Foundation
+import RxRelay
+import RxSwift
+class PlaceBidViewModel:AuctionNetworkingProtocol {
+    let disposeBag = DisposeBag()
+    var onError = PublishSubject<String>()
+    var onLoading = BehaviorRelay<Bool>(value: false)
+    var onSuccessGetBid = PublishSubject<Void>()
+    var id:String
+    var price:Int
+    var priceChange = BehaviorRelay<Int>(value:0)
+    init(id:String,price:Int) {
+        self.id = id
+        self.price = price
+        priceChange.accept(Int(price))
+    }
+    
+    func placeBidding() {
+        onLoading.accept(true)
+        addBid(auction_id: id, price: "\(priceChange.value)") { [weak self]  result in
+            self?.onLoading.accept(false)
+            
+           
+            switch result {
+            case .failure(let error):
+                self?.onError.onNext(error.localizedDescription)
+            case .success(_):
+             
+                self?.onSuccessGetBid.onNext(())
+            }
+        }
+    }
+    
+    func adder() {
+        priceChange.accept(priceChange.value + 1)
+    }
+    
+    func subtract() {
+        guard priceChange.value - 1 > price else {return}
+        priceChange.accept(priceChange.value - 1)
+    }
+}
+

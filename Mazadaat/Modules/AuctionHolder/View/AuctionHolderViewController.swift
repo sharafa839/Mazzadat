@@ -200,6 +200,7 @@ extension UIViewController {
     func setNavigationItem(title:String, color: UIColor = .clear){
         navigationController?.navigationBar.backgroundColor = color
         navigationController?.navigationBar.isHidden = false
+        navigationController?.navigationBar.tintColor = .Bronze_500
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.compact)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         let titleLabel = UILabel()
@@ -208,6 +209,10 @@ extension UIViewController {
         titleLabel.textColor = UIColor.textColor
         titleLabel.font = UIFont(name: "Archivo-Regular", size: 20)
         self.navigationItem.titleView = titleLabel
+        let yourBackImage = UIImage(named: "arrow-left-line")
+        self.navigationController?.navigationBar.backIndicatorImage = yourBackImage
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = yourBackImage
+        
     }
   
 }

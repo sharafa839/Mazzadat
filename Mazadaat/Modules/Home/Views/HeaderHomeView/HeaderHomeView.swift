@@ -21,15 +21,18 @@ class HeaderHomeView: UIView {
     @IBOutlet weak var searchView: UIView!
     @IBOutlet weak var profileImageView: UIImageView!
     
+    @IBOutlet weak var arrowButton: UIButton!
+    @IBOutlet weak var gearButton: UIButton!
+    @IBOutlet weak var settingView: UIView!
     //MARK: - Properties
     
     //MARK: - Init
     var onTapNotification:(()->Void)?
     var onTapSearch:(()->Void)?
+    var onTapSetting:(()->Void)?
     //MARK: - LifeCycle
     override func awakeFromNib() {
         super.awakeFromNib()
-        setupUI()
         setupLocalize()
         configure()
     }
@@ -64,18 +67,32 @@ class HeaderHomeView: UIView {
             }
         )
     }
+    
     private func setupLocalize() {
         welcomeLabel.text = "welcomeBack"
     }
     
-    private func setupUI() {
-        searchView.circle()
-        notificationView.circle()
-        imageContainerView.drawBorder(raduis: imageContainerView.frame.height / 2, borderColor: .white)
-        imageContainerView.layer.borderWidth = 1
-        notificationView.drawBorder(raduis: notificationView.frame.height / 2, borderColor: .clear)
-        searchView.drawBorder(raduis: searchView.frame.height / 2, borderColor: .clear)
-
+    func setupUI(view:ViewType) {
+        if view == .profile {
+            setupViewInProfile()
+        }else{
+            settingView.isHidden = true
+            searchView.circle()
+            notificationView.circle()
+            imageContainerView.drawBorder(raduis: imageContainerView.frame.height / 2, borderColor: .white)
+            imageContainerView.layer.borderWidth = 1
+            notificationView.drawBorder(raduis: notificationView.frame.height / 2, borderColor: .clear)
+            searchView.drawBorder(raduis: searchView.frame.height / 2, borderColor: .clear)
+        }
+    }
+    
+    private func setupViewInProfile() {
+        settingView.setRoundCorners(15)
+        searchView.isHidden = true
+        notificationView.isHidden = true
+        nameLabel.textColor = .white
+        welcomeLabel.textColor = .white
+        nameLabel.font = .Archivo(18, weight: .Bold)
     }
     
     @IBAction func searchButtonAction(_ sender: UIButton) {
@@ -84,5 +101,11 @@ class HeaderHomeView: UIView {
     @IBAction func notificationButtonAction(_ sender: UIButton) {
         onTapNotification?()
     }
+    @IBAction func gearButtonAction(_ sender: UIButton) {
+        onTapSetting?()
+    }
     
+    @IBAction func arrowButtonAction(_ sender: UIButton) {
+        onTapSetting?()
+    }
 }

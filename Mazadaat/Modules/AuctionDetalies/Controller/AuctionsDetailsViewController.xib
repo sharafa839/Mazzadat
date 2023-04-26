@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuctionsDetailsViewController" customModule="Golden_Bell" customModuleProvider="target">
+            <connections>
+                <outlet property="auctionDetails" destination="5zG-SJ-RCH" id="4Uc-gs-Ebu"/>
+                <outlet property="auctionSpecification" destination="pSj-Xo-mi4" id="72J-zN-Igv"/>
+                <outlet property="biddingView" destination="fVL-yi-OF1" id="Sid-z6-9EF"/>
+                <outlet property="favoriteButton" destination="zQj-3W-EJZ" id="zeD-Dl-TGP"/>
+                <outlet property="favoriteView" destination="P2b-PX-Rrf" id="Cn2-d8-nQK"/>
+                <outlet property="imageSlider" destination="bAT-gZ-1aE" id="CFK-gX-KHe"/>
+                <outlet property="view" destination="xrY-Q2-AQ1" id="9O0-jP-rdk"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="xrY-Q2-AQ1">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hln-8U-vpn">
+                    <rect key="frame" x="0.0" y="60" width="414" height="836"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Upk-P4-tbO">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="836"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="FQ3-ir-ljW">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="836"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bAT-gZ-1aE" customClass="ImageSlideshow" customModule="ImageSlideshow">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="209"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5zG-SJ-RCH" customClass="AuctionDetailesView" customModule="Golden_Bell" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="209" width="414" height="209"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pSj-Xo-mi4" customClass="AuctionSpecificationView" customModule="Golden_Bell" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="418" width="414" height="209"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fVL-yi-OF1" customClass="BiddingView" customModule="Golden_Bell" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="627" width="414" height="209"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P2b-PX-Rrf">
+                                    <rect key="frame" x="330" y="124" width="60" height="60"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zQj-3W-EJZ">
+                                            <rect key="frame" x="8" y="8" width="44" height="44"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="zQj-3W-EJZ" firstAttribute="top" secondItem="P2b-PX-Rrf" secondAttribute="top" constant="8" id="9aW-Pr-z0O"/>
+                                        <constraint firstAttribute="bottom" secondItem="zQj-3W-EJZ" secondAttribute="bottom" constant="8" id="G4f-SO-0fe"/>
+                                        <constraint firstAttribute="trailing" secondItem="zQj-3W-EJZ" secondAttribute="trailing" constant="8" id="N2i-nY-wSy"/>
+                                        <constraint firstAttribute="height" constant="60" id="Tw9-6h-fze"/>
+                                        <constraint firstAttribute="width" constant="60" id="sh3-Y8-elx"/>
+                                        <constraint firstItem="zQj-3W-EJZ" firstAttribute="leading" secondItem="P2b-PX-Rrf" secondAttribute="leading" constant="8" id="uVQ-DL-N2I"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="P2b-PX-Rrf" firstAttribute="top" secondItem="bAT-gZ-1aE" secondAttribute="bottom" constant="-85" id="3hX-pW-udk"/>
+                                <constraint firstItem="bAT-gZ-1aE" firstAttribute="trailing" secondItem="P2b-PX-Rrf" secondAttribute="trailing" constant="24" id="4ac-h9-tFS"/>
+                                <constraint firstItem="FQ3-ir-ljW" firstAttribute="top" secondItem="Upk-P4-tbO" secondAttribute="top" id="AGu-lk-lki"/>
+                                <constraint firstItem="FQ3-ir-ljW" firstAttribute="leading" secondItem="Upk-P4-tbO" secondAttribute="leading" id="OUr-Rb-vha"/>
+                                <constraint firstAttribute="trailing" secondItem="FQ3-ir-ljW" secondAttribute="trailing" id="i5f-qZ-BOO"/>
+                                <constraint firstAttribute="bottom" secondItem="FQ3-ir-ljW" secondAttribute="bottom" id="oAi-Td-bKx"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Upk-P4-tbO" firstAttribute="centerX" secondItem="Hln-8U-vpn" secondAttribute="centerX" id="31p-0u-oM0"/>
+                        <constraint firstAttribute="bottom" secondItem="Upk-P4-tbO" secondAttribute="bottom" id="DZj-ot-okf"/>
+                        <constraint firstItem="Upk-P4-tbO" firstAttribute="leading" secondItem="Hln-8U-vpn" secondAttribute="leading" id="G84-EQ-smb"/>
+                        <constraint firstItem="Upk-P4-tbO" firstAttribute="centerY" secondItem="Hln-8U-vpn" secondAttribute="centerY" id="Mw3-o6-RQe"/>
+                        <constraint firstAttribute="trailing" secondItem="Upk-P4-tbO" secondAttribute="trailing" id="RIY-91-c59"/>
+                        <constraint firstItem="Upk-P4-tbO" firstAttribute="top" secondItem="Hln-8U-vpn" secondAttribute="top" id="Yle-b6-ha1"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="oKp-KR-3qH"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Hln-8U-vpn" firstAttribute="top" secondItem="oKp-KR-3qH" secondAttribute="top" constant="16" id="3u9-63-Ck0"/>
+                <constraint firstAttribute="bottom" secondItem="Hln-8U-vpn" secondAttribute="bottom" id="65i-8d-5XP"/>
+                <constraint firstItem="Hln-8U-vpn" firstAttribute="leading" secondItem="oKp-KR-3qH" secondAttribute="leading" id="YYC-b9-JWD"/>
+                <constraint firstItem="oKp-KR-3qH" firstAttribute="trailing" secondItem="Hln-8U-vpn" secondAttribute="trailing" id="ywf-z1-cMf"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="71.651785714285708"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

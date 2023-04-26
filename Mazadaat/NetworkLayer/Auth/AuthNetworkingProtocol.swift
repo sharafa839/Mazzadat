@@ -11,7 +11,7 @@ protocol AuthNetworkingProtocol {
   func register(phone:String,password:String,email:String,name:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
   func logout(completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
   func changePassword(currentPassword:String,newPassword:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
-  func resetPassword(phone:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
+    func resetPassword(phone:String,password:String,confirmPassword:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
     func update(name:String,phone:String,email:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
     
     func updateProfileImage(image:[MultiPartItem],completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
@@ -39,8 +39,8 @@ extension AuthNetworkingProtocol {
     auth.request(target: .changePassword(currentPassword: currentPassword, newPassword: newPassword), completion: completion)
   }
   
-  func resetPassword(phone:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void){
-    auth.request(target: .resetPassword(phone: phone), completion: completion)
+    func resetPassword(phone:String,password:String,confirmPassword:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void){
+        auth.request(target: .resetPassword(phone: phone, password: password, confirmPassword: confirmPassword), completion: completion)
   }
     
     func update(name:String,phone:String,email:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void) {

@@ -9,9 +9,40 @@
 import Foundation
 import UIKit
 import AVKit
+class AppUtilities {
+    static func changeRoot(root:UIViewController, animated:Bool = true, completion: (() -> Void)? = nil )  {
+        let coordinator = (UIApplication.shared.delegate as! AppDelegate).coordinator
+        guard animated else {
+            coordinator.setRoot(root)
+            return
+        }
+        
+        UIView.transition(with: coordinator.window, duration: 0.7, options: .transitionCrossDissolve, animations: {
+            let oldState: Bool = UIView.areAnimationsEnabled
+            UIView.setAnimationsEnabled(false)
+            coordinator.setRoot(root)
+            UIView.setAnimationsEnabled(oldState)
+        }, completion: { (finished: Bool) -> () in
+            if (completion != nil) {
+                completion!()
+            }
+        })
+    }
+}
+
+
 extension UIViewController {
     func hideNavigationShadow() {
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+    }
+    func setRoot(_ viewController: UIViewController, withNavigation: Bool = false, animated: Bool = true) {
+        let controller: UIViewController
+        if withNavigation {
+            controller = UINavigationController(rootViewController: viewController)
+        } else {
+            controller = viewController
+        }
+        AppUtilities.changeRoot(root: controller, animated: animated)
     }
     
 //        func setRoot(_ viewController: UIViewController, withNavigation: Bool = false, animated: Bool = true) {
@@ -60,4 +91,6 @@ print(url)
     }
     }
 }
+
+
 

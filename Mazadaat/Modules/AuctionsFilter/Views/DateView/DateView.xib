@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Archivo-Bold.ttf">
+            <string>Archivo-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DateView" customModule="Golden_Bell" customModuleProvider="target">
+            <connections>
+                <outlet property="fromContainerView" destination="jOu-CG-PI4" id="mwF-n3-qmt"/>
+                <outlet property="fromDatePicker" destination="iUb-eF-szF" id="T1V-1H-msP"/>
+                <outlet property="fromLabel" destination="bIE-B8-7lA" id="fer-7r-BZb"/>
+                <outlet property="titleLabel" destination="Sra-QD-GsG" id="RDB-Nh-HZf"/>
+                <outlet property="toContainerView" destination="7eN-YU-J3c" id="iUm-KF-m1b"/>
+                <outlet property="toDatePicker" destination="FCV-yt-egZ" id="85F-9P-36B"/>
+                <outlet property="toLabel" destination="gJP-DT-MQP" id="Lac-ag-IQY"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="495" height="146"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="dVy-uA-HyA">
+                    <rect key="frame" x="16" y="33.5" width="463" height="73.5"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="tEo-UM-Ljv">
+                            <rect key="frame" x="0.0" y="0.0" width="223.5" height="73.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIE-B8-7lA">
+                                    <rect key="frame" x="0.0" y="0.0" width="223.5" height="13.5"/>
+                                    <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="12"/>
+                                    <color key="textColor" name="TextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jOu-CG-PI4">
+                                    <rect key="frame" x="0.0" y="17.5" width="223.5" height="56"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="K5d-m5-HtO">
+                                            <rect key="frame" x="8" y="8" width="207.5" height="40"/>
+                                            <subviews>
+                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="iUb-eF-szF">
+                                                    <rect key="frame" x="0.0" y="0.0" width="167.5" height="40"/>
+                                                    <connections>
+                                                        <action selector="fromDatePickerAction:" destination="-1" eventType="valueChanged" id="ufc-Y4-gZy"/>
+                                                    </connections>
+                                                </datePicker>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar-event-line" translatesAutoresizingMaskIntoConstraints="NO" id="3ad-1W-pfv">
+                                                    <rect key="frame" x="167.5" y="0.0" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="A3l-wM-LVV"/>
+                                                        <constraint firstAttribute="width" constant="40" id="WNK-vn-Z5P"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="K5d-m5-HtO" secondAttribute="trailing" constant="8" id="ANZ-85-VJs"/>
+                                        <constraint firstAttribute="bottom" secondItem="K5d-m5-HtO" secondAttribute="bottom" constant="8" id="EZV-7u-ZCL"/>
+                                        <constraint firstItem="K5d-m5-HtO" firstAttribute="leading" secondItem="jOu-CG-PI4" secondAttribute="leading" constant="8" id="MIa-EL-GUj"/>
+                                        <constraint firstItem="K5d-m5-HtO" firstAttribute="top" secondItem="jOu-CG-PI4" secondAttribute="top" constant="8" id="eLr-wn-uFm"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="3Qq-en-RsD">
+                            <rect key="frame" x="239.5" y="0.0" width="223.5" height="73.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJP-DT-MQP">
+                                    <rect key="frame" x="0.0" y="0.0" width="223.5" height="13.5"/>
+                                    <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="12"/>
+                                    <color key="textColor" name="TextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7eN-YU-J3c">
+                                    <rect key="frame" x="0.0" y="17.5" width="223.5" height="56"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="4zh-ht-DqO">
+                                            <rect key="frame" x="8" y="8" width="207.5" height="40"/>
+                                            <subviews>
+                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="FCV-yt-egZ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="167.5" height="40"/>
+                                                    <connections>
+                                                        <action selector="toDatePickerAction:" destination="-1" eventType="valueChanged" id="j21-re-2oY"/>
+                                                    </connections>
+                                                </datePicker>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar-event-line" translatesAutoresizingMaskIntoConstraints="NO" id="kBy-hH-mDX">
+                                                    <rect key="frame" x="167.5" y="0.0" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="KRo-Xn-V74"/>
+                                                        <constraint firstAttribute="width" constant="40" id="Ry0-ms-BX8"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="4zh-ht-DqO" secondAttribute="trailing" constant="8" id="2RT-sO-RQd"/>
+                                        <constraint firstAttribute="bottom" secondItem="4zh-ht-DqO" secondAttribute="bottom" constant="8" id="9v4-R5-qSC"/>
+                                        <constraint firstItem="4zh-ht-DqO" firstAttribute="top" secondItem="7eN-YU-J3c" secondAttribute="top" constant="8" id="Gmm-G3-9Ge"/>
+                                        <constraint firstItem="4zh-ht-DqO" firstAttribute="leading" secondItem="7eN-YU-J3c" secondAttribute="leading" constant="8" id="wJx-Ay-0aj"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auctions Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sra-QD-GsG">
+                    <rect key="frame" x="16" y="8" width="107.5" height="17.5"/>
+                    <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="16"/>
+                    <color key="textColor" name="TextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wSx-nl-gY6">
+                    <rect key="frame" x="16" y="142" width="463" height="2"/>
+                    <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="22h-X2-fYq"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="wSx-nl-gY6" secondAttribute="trailing" constant="16" id="0ls-q5-fhT"/>
+                <constraint firstItem="dVy-uA-HyA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="4HU-Vp-KuS"/>
+                <constraint firstAttribute="trailing" secondItem="dVy-uA-HyA" secondAttribute="trailing" constant="16" id="BgM-tg-TPi"/>
+                <constraint firstItem="wSx-nl-gY6" firstAttribute="top" secondItem="dVy-uA-HyA" secondAttribute="bottom" constant="35" id="Kya-xo-rEQ"/>
+                <constraint firstItem="dVy-uA-HyA" firstAttribute="top" secondItem="Sra-QD-GsG" secondAttribute="bottom" constant="8" id="bVA-z4-fyE"/>
+                <constraint firstItem="Sra-QD-GsG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="oMu-H9-0Sv"/>
+                <constraint firstAttribute="bottom" secondItem="wSx-nl-gY6" secondAttribute="bottom" constant="2" id="rA4-Cu-c4v"/>
+                <constraint firstItem="dVy-uA-HyA" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="tk7-qF-NJ0"/>
+                <constraint firstItem="Sra-QD-GsG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="yOY-si-AGB"/>
+                <constraint firstItem="wSx-nl-gY6" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="zWf-R3-Tca"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="196.37681159420291" y="-179.46428571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="calendar-event-line" width="24" height="24"/>
+        <namedColor name="TextColor">
+            <color red="0.078431372549019607" green="0.074509803921568626" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="quaternaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.17999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

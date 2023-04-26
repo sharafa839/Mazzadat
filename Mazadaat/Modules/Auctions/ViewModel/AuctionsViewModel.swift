@@ -20,6 +20,7 @@ class AuctionsViewModel:HomeNetworkingProtocol,AuctionNetworkingProtocol {
     var places = BehaviorRelay<Place?>(value:nil)
     var onSuccessFavorite = PublishSubject<FavoriteModel>()
     var placeId:String
+    var type:String?
     init(placeId:String) {
         self.placeId = placeId
     }
@@ -34,6 +35,7 @@ class AuctionsViewModel:HomeNetworkingProtocol,AuctionNetworkingProtocol {
             case .success(let response):
                 guard let data = response.response?.data else {return}
                 self?.onSuccessGetAuctions.onNext(data)
+                self?.type = data.place?.type ?? ""
                 if data.auctions?.isEmpty ?? false {
                     self?.onAuctionsEmpty.onNext(())
                 }else {

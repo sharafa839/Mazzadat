@@ -23,12 +23,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OTPViewController" customModule="Golden_Bell" customModuleProvider="target">
             <connections>
+                <outlet property="descriptionLabel" destination="ZA0-aP-NPx" id="VEu-tU-NEB"/>
                 <outlet property="didntRecieveCodeLabel" destination="Bd0-kj-vgB" id="R8V-ea-1EG"/>
                 <outlet property="incorrecetCodeLabel" destination="qd9-7y-v7R" id="SYj-X8-9Uq"/>
                 <outlet property="otpTextFieldView" destination="DJB-ZE-uIg" id="JoI-0F-b4q"/>
                 <outlet property="resendVerificationCodeButton" destination="fGx-0L-PrR" id="adz-ij-Juj"/>
                 <outlet property="timeInSecondsLabel" destination="xe4-7F-yBx" id="13j-VX-guR"/>
                 <outlet property="verifyButton" destination="iEe-wd-BuG" id="qMe-Ue-vct"/>
+                <outlet property="verifyOtpLabel" destination="mM4-N4-knz" id="0py-oE-qWP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -44,34 +46,37 @@
                         <constraint firstAttribute="height" constant="60" id="3Lg-ai-BJK"/>
                     </constraints>
                 </view>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="nFP-7u-Iba">
-                    <rect key="frame" x="70" y="252" width="274" height="185"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="nFP-7u-Iba">
+                    <rect key="frame" x="70" y="252" width="274" height="145.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qd9-7y-v7R">
-                            <rect key="frame" x="0.0" y="0.0" width="274" height="32"/>
+                            <rect key="frame" x="0.0" y="0.0" width="274" height="15.5"/>
                             <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="14"/>
                             <color key="textColor" name="Red-500"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bd0-kj-vgB">
-                            <rect key="frame" x="0.0" y="51" width="274" height="32"/>
+                            <rect key="frame" x="0.0" y="34.5" width="274" height="15.5"/>
                             <fontDescription key="fontDescription" name="Archivo-Regular" family="Archivo" pointSize="14"/>
                             <color key="textColor" name="Neutral-v600"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xe4-7F-yBx">
-                            <rect key="frame" x="0.0" y="102" width="274" height="32"/>
+                            <rect key="frame" x="0.0" y="69" width="274" height="17.5"/>
                             <fontDescription key="fontDescription" name="Archivo-Regular" family="Archivo" pointSize="16"/>
                             <color key="textColor" name="Bronze-500"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGx-0L-PrR">
-                            <rect key="frame" x="0.0" y="153" width="274" height="32"/>
-                            <color key="backgroundColor" name="Bronze-100"/>
+                            <rect key="frame" x="0.0" y="105.5" width="274" height="40"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="fr4-YP-fzi"/>
+                            </constraints>
                             <fontDescription key="fontDescription" name="Archivo-SemiBold" family="Archivo" pointSize="18"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" title="Button">
-                                <color key="titleColor" name="Bronze-900"/>
+                                <color key="titleColor" name="Bronze-500"/>
                             </state>
                         </button>
                     </subviews>
@@ -95,7 +100,7 @@
                     </subviews>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iEe-wd-BuG" customClass="CustomButton" customModule="Golden_Bell" customModuleProvider="target">
-                    <rect key="frame" x="16" y="461" width="382" height="55"/>
+                    <rect key="frame" x="16" y="421.5" width="382" height="55"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="55" id="M9E-kd-8fd"/>
                     </constraints>
@@ -123,14 +128,8 @@
         </view>
     </objects>
     <resources>
-        <namedColor name="Bronze-100">
-            <color red="0.96470588235294119" green="0.8666666666666667" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="Bronze-500">
             <color red="0.88627450980392153" green="0.56470588235294117" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Bronze-900">
-            <color red="0.37254901960784315" green="0.23529411764705882" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Neutral-v600">
             <color red="0.39215686274509803" green="0.38823529411764707" blue="0.49411764705882355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

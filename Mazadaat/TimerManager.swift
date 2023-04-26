@@ -112,4 +112,22 @@ extension String {
         return ("\(executiveDate.day ?? 0)","\(executiveDate.hour ?? 0)","\(executiveDate.minute ?? 0)")
         
     }
+    
+    func getDifferenceBetweenDates(from:Date,to:Date)->String {
+       
+        let calendar = Calendar.current
+        let days =  calendar.numberOfDaysBetween(from, and: to)
+        return "\(days) Days"
+    }
+    
+    func getStartingIn(from:Date,to:Date)->(day:Int,hour:Int,minute:Int) {
+        
+        let calendar = Calendar.current
+        let days =  calendar.numberOfDaysHoursBetween(from, and: to)
+        
+        return(days.0,days.1,days.2)
+        
+    }
 }
+
+

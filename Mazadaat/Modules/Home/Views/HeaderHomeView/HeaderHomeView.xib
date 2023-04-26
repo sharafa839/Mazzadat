@@ -20,6 +20,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeaderHomeView" customModule="Golden_Bell" customModuleProvider="target">
             <connections>
+                <outlet property="arrowButton" destination="BJs-1k-XXI" id="Nx1-jT-0G9"/>
+                <outlet property="gearButton" destination="vYe-aH-5QR" id="WTg-m3-kne"/>
                 <outlet property="imageContainerView" destination="SB1-A5-A7o" id="jS4-hi-6bm"/>
                 <outlet property="nameLabel" destination="kjN-HN-hws" id="fRp-uy-51r"/>
                 <outlet property="notificationButton" destination="oye-pr-rDY" id="bqE-oU-ufP"/>
@@ -27,6 +29,7 @@
                 <outlet property="profileImageView" destination="Vny-xO-9sr" id="Nl8-vh-tHT"/>
                 <outlet property="searchButton" destination="Kcf-Ra-xDb" id="ngI-xc-CLl"/>
                 <outlet property="searchView" destination="jXg-HQ-m6P" id="tRA-yx-Rlw"/>
+                <outlet property="settingView" destination="lvb-fV-gDV" id="EQE-Xw-iiw"/>
                 <outlet property="welcomeLabel" destination="lEP-7u-jj6" id="oMk-XR-eaP"/>
             </connections>
         </placeholder>
@@ -38,7 +41,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SB1-A5-A7o">
                     <rect key="frame" x="16" y="11" width="52" height="52"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vny-xO-9sr">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vny-xO-9sr">
                             <rect key="frame" x="2" y="2" width="48" height="48"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="48" id="8La-mu-IZk"/>
@@ -74,7 +77,7 @@
                     </subviews>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5di-dS-UAs">
-                    <rect key="frame" x="260" y="12" width="110" height="50"/>
+                    <rect key="frame" x="200" y="12" width="170" height="50"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jXg-HQ-m6P">
                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -104,7 +107,7 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oye-pr-rDY">
                                     <rect key="frame" x="8" y="8" width="34" height="34"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                    <state key="normal" image="search-line"/>
+                                    <state key="normal" image="notification-3-line-1"/>
                                     <connections>
                                         <action selector="notificationButtonAction:" destination="-1" eventType="touchUpInside" id="0dc-6C-gX6"/>
                                     </connections>
@@ -116,6 +119,41 @@
                                 <constraint firstItem="oye-pr-rDY" firstAttribute="top" secondItem="mxz-6P-04h" secondAttribute="top" constant="8" id="KY1-lW-fbp"/>
                                 <constraint firstAttribute="bottom" secondItem="oye-pr-rDY" secondAttribute="bottom" constant="8" id="ThJ-m9-XNc"/>
                                 <constraint firstItem="oye-pr-rDY" firstAttribute="leading" secondItem="mxz-6P-04h" secondAttribute="leading" constant="8" id="hz5-K7-U2M"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lvb-fV-gDV">
+                            <rect key="frame" x="120" y="0.0" width="50" height="50"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="XGh-gZ-CCr">
+                                    <rect key="frame" x="1" y="1" width="48" height="48"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYe-aH-5QR">
+                                            <rect key="frame" x="0.0" y="0.0" width="23" height="48"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="notification-3-line-1"/>
+                                            <connections>
+                                                <action selector="gearButtonAction:" destination="-1" eventType="touchUpInside" id="Kh1-pH-nog"/>
+                                                <action selector="notificationButtonAction:" destination="-1" eventType="touchUpInside" id="WAv-5J-iry"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJs-1k-XXI">
+                                            <rect key="frame" x="25" y="0.0" width="23" height="48"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="notification-3-line-1"/>
+                                            <connections>
+                                                <action selector="arrowButtonAction:" destination="-1" eventType="touchUpInside" id="5mf-BG-rPA"/>
+                                                <action selector="notificationButtonAction:" destination="-1" eventType="touchUpInside" id="a6f-tr-yj8"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" name="Bronze-50"/>
+                            <constraints>
+                                <constraint firstItem="XGh-gZ-CCr" firstAttribute="leading" secondItem="lvb-fV-gDV" secondAttribute="leading" constant="1" id="sFn-To-tkD"/>
+                                <constraint firstAttribute="bottom" secondItem="XGh-gZ-CCr" secondAttribute="bottom" constant="1" id="uAV-kS-gav"/>
+                                <constraint firstItem="XGh-gZ-CCr" firstAttribute="top" secondItem="lvb-fV-gDV" secondAttribute="top" constant="1" id="udp-ND-dzU"/>
+                                <constraint firstAttribute="trailing" secondItem="XGh-gZ-CCr" secondAttribute="trailing" constant="1" id="wcT-NF-LX7"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -136,6 +174,7 @@
         </view>
     </objects>
     <resources>
+        <image name="notification-3-line-1" width="24" height="24"/>
         <image name="search-line" width="24" height="24"/>
         <namedColor name="Bronze-50">
             <color red="0.9882352941176471" green="0.95686274509803926" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

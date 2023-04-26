@@ -10,7 +10,9 @@ import UIKit
 
 class AuctionDetailesView: UIView {
 
-    @IBOutlet weak var heightConstraints: NSLayoutConstraint!
+    @IBOutlet weak var numberOfBidLabel: UILabel!
+    @IBOutlet weak var biddingCounterLabel: UILabel!
+    @IBOutlet weak var containerBidView: UIView!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var descriptionValueLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -18,4 +20,32 @@ class AuctionDetailesView: UIView {
     @IBOutlet weak var auctionName: UILabel!
     @IBOutlet weak var auctionTypeLabel: UILabel!
     //MARK: - IBOutlets
+    
+    func configure(_ with:AuctionDetailsModel,type:String) {
+        descriptionValueLabel.text = with.description
+        auctionPlaceLabel.text = "location"
+        auctionName.text = with.name
+        descriptionLabel.text = with.description
+        auctionTypeLabel.text = type
+        biddingCounterLabel.text = "\(with.bidsCount ?? 0)"
+        numberOfBidLabel.text = "numberOfBids:"
+        containerBidView.isHidden = !((with.bidsCount ?? 0) > 0)
+        layoutIfNeeded()
+    }
+    
+    private func setupUI() {
+        containerView.setRoundCorners(10)
+        containerBidView.drawBorder(raduis: 10, borderColor: .Bronze_50)
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setupUI()
+    }
+    
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        loadSelfFromNib()
+    }
 }

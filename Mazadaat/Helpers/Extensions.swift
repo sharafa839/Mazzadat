@@ -1773,6 +1773,55 @@ extension Date {
     }
 }
 
+extension Calendar {
+    func numberOfDaysBetween(_ from: Date, and to: Date) -> Int {
+        let fromDate = startOfDay(for: from) // <1>
+        let toDate = startOfDay(for: to) // <2>
+        let numberOfDays = dateComponents([.day], from: fromDate, to: toDate) // <3>
+        
+        return numberOfDays.day!
+    }
+    
+    func numberOfDaysHoursBetween(_ from: Date, and to: Date) -> (Int,Int,Int) {
+        let fromDate = startOfDay(for: from) // <1>
+        let toDate = startOfDay(for: to) // <2>
+        
+        let numberOfDays = dateComponents([.day,.hour,.minute], from: fromDate, to: toDate) // <3>
+    
+        return (numberOfDays.day!,numberOfDays.hour!,numberOfDays.minute!)
+    }
+    
+}
+
+
+
+extension Date {
+
+    static func -(recent: Date, previous: Date) -> (month: Int?, day: Int?, hour: Int?, minute: Int?, second: Int?) {
+        let day = Calendar.current.dateComponents([.day], from: previous, to: recent).day
+        let month = Calendar.current.dateComponents([.month], from: previous, to: recent).month
+        let hour = Calendar.current.dateComponents([.hour], from: previous, to: recent).hour
+        let minute = Calendar.current.dateComponents([.minute], from: previous, to: recent).minute
+        let second = Calendar.current.dateComponents([.second], from: previous, to: recent).second
+
+        return (month: month, day: day, hour: hour, minute: minute, second: second)
+    }
+    
+    func computeNewDate(from fromDate: Date, to toDate: Date) -> (day:Int,hour:Int,minute:Int)  {
+         let delta = toDate.timeIntervalSince(fromDate)
+         let today = Date()
+         if delta < 0 {
+             return (0,0,0)
+         } else {
+             let newDate =  today.addingTimeInterval(delta)
+             let calendar = Calendar.current
+             let components = calendar.dateComponents([.day,.hour,.minute], from: newDate)
+             return (components.day!,components.hour!,components.minute!)
+         }
+    }
+
+}
+
 extension String {
 
     func toDateNew(withFormat format: String = "yyyy-MM-dd HH:mm:ss")-> Date?{

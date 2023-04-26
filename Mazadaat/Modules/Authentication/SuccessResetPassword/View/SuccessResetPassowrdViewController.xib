@@ -23,7 +23,9 @@
                 <outlet property="containerView" destination="Ch0-56-jJY" id="8eD-MU-5rT"/>
                 <outlet property="descriptionLabel" destination="V9x-g8-uPs" id="YwQ-uP-Eyu"/>
                 <outlet property="doneButton" destination="EjB-Xh-sYp" id="Vd9-yl-gep"/>
+                <outlet property="rejectButton" destination="YMV-dc-TUF" id="S3r-JO-Hlw"/>
                 <outlet property="statusLabel" destination="WUq-jG-lYD" id="w5h-GV-oXS"/>
+                <outlet property="subTitleLabel" destination="FPS-32-yAr" id="7P7-F4-SdM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -33,10 +35,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ch0-56-jJY">
-                    <rect key="frame" x="0.0" y="583" width="414" height="313"/>
+                    <rect key="frame" x="0.0" y="537.5" width="414" height="358.5"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aBc-JA-4mz">
-                            <rect key="frame" x="187" y="40" width="40" height="80"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aBc-JA-4mz">
+                            <rect key="frame" x="187" y="20" width="40" height="80"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check-line" translatesAutoresizingMaskIntoConstraints="NO" id="Mml-be-jsv">
                                     <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -53,25 +55,31 @@
                                 </imageView>
                             </subviews>
                         </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="qAY-5z-P1o">
-                            <rect key="frame" x="100" y="132" width="214" height="47.5"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="qAY-5z-P1o">
+                            <rect key="frame" x="100" y="112" width="214" height="141.5"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUq-jG-lYD">
-                                    <rect key="frame" x="0.0" y="0.0" width="214" height="20"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUq-jG-lYD">
+                                    <rect key="frame" x="0.0" y="0.0" width="214" height="39"/>
                                     <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="18"/>
                                     <color key="textColor" name="TextColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9x-g8-uPs">
-                                    <rect key="frame" x="0.0" y="32" width="214" height="15.5"/>
+                                    <rect key="frame" x="0.0" y="51" width="214" height="39.5"/>
                                     <fontDescription key="fontDescription" name="Archivo-Regular" family="Archivo" pointSize="14"/>
                                     <color key="textColor" name="TextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPS-32-yAr">
+                                    <rect key="frame" x="0.0" y="102.5" width="214" height="39"/>
+                                    <fontDescription key="fontDescription" name="Archivo-Regular" family="Archivo" pointSize="14"/>
+                                    <color key="textColor" name="Bronze-500"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="e9E-iJ-CP1">
-                            <rect key="frame" x="24" y="211.5" width="366" height="50"/>
+                            <rect key="frame" x="24" y="269.5" width="366" height="50"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EjB-Xh-sYp" customClass="CustomButton" customModule="Golden_Bell" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="178" height="50"/>
@@ -97,20 +105,22 @@
                         <constraint firstAttribute="trailing" secondItem="e9E-iJ-CP1" secondAttribute="trailing" constant="24" id="A2C-00-7ER"/>
                         <constraint firstAttribute="trailing" secondItem="qAY-5z-P1o" secondAttribute="trailing" constant="100" id="H3H-PB-0IJ"/>
                         <constraint firstItem="e9E-iJ-CP1" firstAttribute="leading" secondItem="Ch0-56-jJY" secondAttribute="leading" constant="24" id="bKL-RY-WLf"/>
+                        <constraint firstItem="aBc-JA-4mz" firstAttribute="centerX" secondItem="Ch0-56-jJY" secondAttribute="centerX" id="bel-uN-9TI"/>
                         <constraint firstItem="qAY-5z-P1o" firstAttribute="top" secondItem="aBc-JA-4mz" secondAttribute="bottom" constant="12" id="fhc-0J-07e"/>
                         <constraint firstItem="qAY-5z-P1o" firstAttribute="leading" secondItem="Ch0-56-jJY" secondAttribute="leading" constant="100" id="h0f-h3-PaF"/>
-                        <constraint firstItem="e9E-iJ-CP1" firstAttribute="top" secondItem="qAY-5z-P1o" secondAttribute="bottom" constant="32" id="hK1-Ek-eF5"/>
-                        <constraint firstItem="aBc-JA-4mz" firstAttribute="top" secondItem="Ch0-56-jJY" secondAttribute="top" constant="40" id="rPi-jj-FEK"/>
+                        <constraint firstItem="e9E-iJ-CP1" firstAttribute="top" secondItem="qAY-5z-P1o" secondAttribute="bottom" constant="16" id="hK1-Ek-eF5"/>
+                        <constraint firstItem="aBc-JA-4mz" firstAttribute="top" secondItem="Ch0-56-jJY" secondAttribute="top" constant="20" id="rPi-jj-FEK"/>
+                        <constraint firstAttribute="bottom" secondItem="e9E-iJ-CP1" secondAttribute="bottom" constant="39" id="sSG-pI-Nd3"/>
                     </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="Ch0-56-jJY" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="539" id="4LN-Ud-J6Y"/>
                 <constraint firstItem="Ch0-56-jJY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="JKP-lP-nPP"/>
                 <constraint firstAttribute="bottom" secondItem="Ch0-56-jJY" secondAttribute="bottom" id="PCf-H0-zeB"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ch0-56-jJY" secondAttribute="trailing" id="hR1-IF-SlN"/>
+                <constraint firstItem="Ch0-56-jJY" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.4" id="zNL-dH-ORe"/>
             </constraints>
             <point key="canvasLocation" x="139" y="84"/>
         </view>
@@ -118,6 +128,9 @@
     <resources>
         <image name="Ellipse 243" width="40" height="6"/>
         <image name="check-line" width="44" height="44"/>
+        <namedColor name="Bronze-500">
+            <color red="0.88627450980392153" green="0.56470588235294117" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="TextColor">
             <color red="0.078431372549019607" green="0.074509803921568626" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

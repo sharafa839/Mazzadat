@@ -137,9 +137,9 @@ extension UITextField {
     
 }
 extension UIView {
-    func drawBorder(raduis:CGFloat, borderColor:UIColor) {
+    func drawBorder(raduis:CGFloat, borderColor:UIColor,borderWidth:Int = 1) {
         self.layer.borderColor = borderColor.cgColor
-        self.layer.borderWidth = 1
+        self.layer.borderWidth = CGFloat(borderWidth)
         self.setRoundCorners(raduis)
     }
 }

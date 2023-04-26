@@ -60,7 +60,7 @@ enum EndPoints {
     enum Auction:String {
         case all = "api/auctions/"
         case showOfficialAuction = "api/auctions/official_auction?auction_id=3"
-        case show = "api/auctions/show?auction_id"
+        case show = "api/auctions/show"
         case toggleFavorite = "api/auctions/toggle_favourite"
         case favorite = "api/auctions/favourites"
         case addBid = "api/auctions/add_bid"
