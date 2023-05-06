@@ -9,7 +9,7 @@
 import Foundation
 protocol TransactionNetworkingProtocol {
 func all(completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
-func myBalance(completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
+func myBalance(completion:@escaping(Result<BaseResponse<Int>,Error>)->Void)
 func generateCheckout(value:String,paymentToken:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
 func checkPayment(completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
 func requestRefund(completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
@@ -24,7 +24,7 @@ extension TransactionNetworkingProtocol {
         transaction.request(target: .all, completion: completion)
     }
     
-    func myBalance(completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void) {
+    func myBalance(completion:@escaping(Result<BaseResponse<Int>,Error>)->Void) {
         transaction.request(target: .myBalance, completion: completion)
 
     }

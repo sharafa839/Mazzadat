@@ -30,12 +30,14 @@ class AuctionDetailesView: UIView {
         biddingCounterLabel.text = "\(with.bidsCount ?? 0)"
         numberOfBidLabel.text = "numberOfBids:"
         containerBidView.isHidden = !((with.bidsCount ?? 0) > 0)
+        auctionPlaceLabel.text = with.city?.name
+        auctionTypeLabel.text = with.type
         layoutIfNeeded()
     }
     
     private func setupUI() {
         containerView.setRoundCorners(10)
-        containerBidView.drawBorder(raduis: 10, borderColor: .Bronze_50)
+        containerBidView.drawBorder(raduis: 10, borderColor: .Bronze_500)
     }
     
     override func awakeFromNib() {

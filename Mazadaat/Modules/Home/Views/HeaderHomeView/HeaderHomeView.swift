@@ -9,8 +9,8 @@
 import UIKit
 import Kingfisher
 class HeaderHomeView: UIView {
-
-  
+    
+    
     //MARK: - IBOutlets
     @IBOutlet weak var imageContainerView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -75,7 +75,9 @@ class HeaderHomeView: UIView {
     func setupUI(view:ViewType) {
         if view == .profile {
             setupViewInProfile()
-        }else{
+        }else if view == .askGoldenBell{
+           setupViewInProfile()
+        } else {
             settingView.isHidden = true
             searchView.circle()
             notificationView.circle()
@@ -92,7 +94,19 @@ class HeaderHomeView: UIView {
         notificationView.isHidden = true
         nameLabel.textColor = .white
         welcomeLabel.textColor = .white
+        backgroundColor = .Bronze_500
+        imageContainerView.drawBorder(raduis: imageContainerView.frame.height / 2, borderColor: .white)
         nameLabel.font = .Archivo(18, weight: .Bold)
+    }
+    
+    private func setupAskGoldenBell() {
+        settingView.isHidden = true
+        searchView.circle()
+        notificationView.circle()
+        imageContainerView.drawBorder(raduis: imageContainerView.frame.height / 2, borderColor: .white)
+        imageContainerView.layer.borderWidth = 1
+        notificationView.drawBorder(raduis: notificationView.frame.height / 2, borderColor: .clear)
+        searchView.drawBorder(raduis: searchView.frame.height / 2, borderColor: .clear)
     }
     
     @IBAction func searchButtonAction(_ sender: UIButton) {

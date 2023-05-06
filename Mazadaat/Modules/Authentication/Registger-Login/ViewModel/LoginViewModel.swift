@@ -27,7 +27,7 @@ class LoginViewModel:AuthNetworkingProtocol {
 
     var isPhoneEmpty : Observable<Bool> {
       return email.asObservable().map { (phoneIsValid)->Bool in
-          return (phoneIsValid.isValidEmail)
+          return (phoneIsValid.isValidEmail) || (phoneIsValid.isValidPhone)
       }
     }
     
@@ -59,6 +59,7 @@ class LoginViewModel:AuthNetworkingProtocol {
                  self?.onError.onNext(error.localizedDescription)
              case .success(let response):
                  guard let loginPayload = response.response?.data else {return}
+                 HelperK.saveToken(token: loginPayload.accessToken ?? "")
                  HelperK.setUserData(loginPayLoad: loginPayload)
                  CoreData.shared.personalSubscription = loginPayload.subscriptions
 

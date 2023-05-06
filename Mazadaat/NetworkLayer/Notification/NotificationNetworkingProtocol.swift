@@ -10,7 +10,7 @@ import Foundation
 
 protocol NotificationNetworkingProtocol {
     
-    func getAllNotification( completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
+    func getAllNotification( completion:@escaping(Result<BaseResponse<[NotificationsModel]>,Error>)->Void)
     
     func readAllNotification( completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
     
@@ -23,7 +23,7 @@ extension NotificationNetworkingProtocol {
         return NotificationRepo()
     }
     
-    func getAllNotification( completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void) {
+    func getAllNotification( completion:@escaping(Result<BaseResponse<[NotificationsModel]>,Error>)->Void) {
         notification.request(target: .all, completion: completion)
     }
     

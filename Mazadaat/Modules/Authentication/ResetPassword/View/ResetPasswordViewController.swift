@@ -90,7 +90,10 @@ class ResetPasswordViewController: UIViewController {
     
     private func setupViewModelObserver() {
         viewModel.onSuccess.subscribe { [weak self] _ in
-            self?.setRoot(UINavigationController(rootViewController: LoginViewController(viewModel: LoginViewModel())))
+            let resetPasswordSuccessViewModel = SuccessResetPasswordViewModel(success: true, title: "resetPass", subtitle: "reseet", descrption: "", type: .forgetPassword)
+            let resetPasswordViewController = SuccessResetPassowrdViewController(viewModel: resetPasswordSuccessViewModel)
+            self?.present(resetPasswordViewController, animated: true, completion: nil)
+            
         }.disposed(by: viewModel.disposeBag)
 
         viewModel.onLoading.subscribe { [weak self] value in

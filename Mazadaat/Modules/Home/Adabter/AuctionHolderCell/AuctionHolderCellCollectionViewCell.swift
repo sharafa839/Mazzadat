@@ -20,7 +20,7 @@ class AuctionHolderCellCollectionViewCell: UICollectionViewCell {
     }
 
    private func setupUI() {
-        containerView.drawBorder(raduis: 10, borderColor: .orange)
+       //containerView.drawBorder(raduis: 10, borderColor: .orange)
     }
     
     func setupAuctionHolder(_ auctionHolder: AuctionHolder) {

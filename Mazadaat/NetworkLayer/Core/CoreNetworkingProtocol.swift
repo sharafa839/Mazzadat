@@ -10,6 +10,7 @@ import Foundation
 protocol CoreNetworkingProtocol {
     func install( completion:@escaping(Result<BaseResponse<CoreAppModel>,Error>)->Void)
     func advertisement( completion:@escaping(Result<BaseResponse<[SliderModel]>,Error>)->Void)
+    func index( completion:@escaping(Result<BaseResponse<AskGoldenBellModel>,Error>)->Void)
 
 }
 
@@ -26,4 +27,7 @@ extension CoreNetworkingProtocol {
         core.request(target: .advertisement, completion: completion)
     }
     
+    func index( completion:@escaping(Result<BaseResponse<AskGoldenBellModel>,Error>)->Void) {
+        core.request(target: .index, completion: completion)
+    }
 }

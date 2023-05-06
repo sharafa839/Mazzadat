@@ -66,5 +66,5 @@ struct LastBid: Codable {
 struct User: Codable {
     var id: Int?
     var name, mobile, email: String?
-    var avatar, lat, lng: JSONNull?
+    var avatar, lat, lng: String?
 }

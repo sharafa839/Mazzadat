@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Archivo-Bold.ttf">
+            <string>Archivo-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="SelectionTableViewCell" customModule="Golden_Bell" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HGW-Ur-NWg">
+                        <rect key="frame" x="24" y="8" width="272" height="28"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gic-oC-njM">
+                                <rect key="frame" x="2" y="6" width="37" height="16"/>
+                                <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KZF-bh-LrS">
+                                <rect key="frame" x="232" y="3.5" width="20" height="21.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="bpZ-50-DnM"/>
+                                    <constraint firstAttribute="height" constant="20" id="fW4-Xh-Q43"/>
+                                </constraints>
+                                <imageReference key="image" image="checkmark.diamond" catalog="system" symbolScale="default" renderingMode="hierarchical">
+                                    <hierarchicalColors>
+                                        <color systemColor="systemGreenColor"/>
+                                        <color systemColor="systemGreenColor"/>
+                                        <color systemColor="systemGreenColor"/>
+                                    </hierarchicalColors>
+                                </imageReference>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KZF-bh-LrS" firstAttribute="centerY" secondItem="HGW-Ur-NWg" secondAttribute="centerY" id="1eL-oF-9ic"/>
+                            <constraint firstAttribute="trailing" secondItem="KZF-bh-LrS" secondAttribute="trailing" constant="20" id="MpJ-mj-0Iq"/>
+                            <constraint firstItem="gic-oC-njM" firstAttribute="centerY" secondItem="HGW-Ur-NWg" secondAttribute="centerY" id="SwD-e7-aAR"/>
+                            <constraint firstItem="gic-oC-njM" firstAttribute="leading" secondItem="HGW-Ur-NWg" secondAttribute="leading" constant="2" id="gKP-fy-PIv"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="HGW-Ur-NWg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="1C4-e9-W4h"/>
+                    <constraint firstItem="HGW-Ur-NWg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="IkE-uY-DW8"/>
+                    <constraint firstAttribute="trailing" secondItem="HGW-Ur-NWg" secondAttribute="trailing" constant="24" id="i7Y-AS-DZf"/>
+                    <constraint firstAttribute="bottom" secondItem="HGW-Ur-NWg" secondAttribute="bottom" constant="8" id="mv6-PQ-fxt"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" name="Neutral-v100"/>
+            <connections>
+                <outlet property="containerView" destination="HGW-Ur-NWg" id="LhM-Qm-fX0"/>
+                <outlet property="selectionImageView" destination="KZF-bh-LrS" id="Bz6-5M-Tp7"/>
+                <outlet property="titleLabel" destination="gic-oC-njM" id="tN1-7D-hgd"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="62.946428571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="checkmark.diamond" catalog="system" width="128" height="122"/>
+        <namedColor name="Neutral-v100">
+            <color red="0.96470588235294119" green="0.96470588235294119" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

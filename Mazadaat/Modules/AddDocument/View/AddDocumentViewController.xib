@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Archivo-Bold.ttf">
+            <string>Archivo-Bold</string>
+        </array>
+        <array key="Archivo-Regular.ttf">
+            <string>Archivo-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddDocumentViewController" customModule="Golden_Bell" customModuleProvider="target">
+            <connections>
+                <outlet property="backContaineeChangePhoto" destination="UtN-65-jc0" id="DeC-E4-ggg"/>
+                <outlet property="backContainer" destination="N88-gK-Oil" id="Ci3-aM-U0b"/>
+                <outlet property="backDoucmentIImageView" destination="lmM-rO-OZq" id="qep-oo-aM7"/>
+                <outlet property="backLabel" destination="hdm-Cq-VXn" id="Fls-wx-itq"/>
+                <outlet property="changeDocumentButton" destination="J2A-0Y-Dnq" id="euh-ht-2X9"/>
+                <outlet property="deleteBackButton" destination="dxZ-hd-axx" id="xcA-6w-bAs"/>
+                <outlet property="deleteButton" destination="gZN-Wm-BzO" id="cMh-2l-BAh"/>
+                <outlet property="frontContainer" destination="hNJ-bk-f8g" id="Yca-8M-KAI"/>
+                <outlet property="frontDocumentImageView" destination="X2N-4D-4Pl" id="9V9-qo-qsf"/>
+                <outlet property="frontLabel" destination="bHX-Wd-c2l" id="wuB-qs-mzi"/>
+                <outlet property="instructionBackLabel" destination="EKy-SR-V6Q" id="QPx-7L-TQS"/>
+                <outlet property="instructionFrontLabel" destination="17d-hZ-R3C" id="icb-AS-mvn"/>
+                <outlet property="tableView" destination="1yk-w3-LRs" id="WjP-n4-fLo"/>
+                <outlet property="uploadButtonBack" destination="mJw-cY-Pxy" id="9T3-r2-ShN"/>
+                <outlet property="uploadButtonFront" destination="O9S-Ft-auF" id="6lP-GC-1FQ"/>
+                <outlet property="uploadyourDocumentBackLabel" destination="rhp-98-o5I" id="7rX-Jq-shJ"/>
+                <outlet property="uploadyourDocumentFrontLabel" destination="3AL-QL-ogy" id="3Kr-aA-WOf"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LjC-rg-Vio">
+                    <rect key="frame" x="16" y="44" width="382" height="737"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHX-Wd-c2l">
+                            <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20.5" id="GzG-qt-M7i"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNJ-bk-f8g">
+                            <rect key="frame" x="0.0" y="20.5" width="382" height="190"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kQ3-Gg-JOb">
+                                    <rect key="frame" x="166" y="16" width="50" height="102"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2o-vT-I1U">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="1Vh-g2-6Mb"/>
+                                                <constraint firstAttribute="width" constant="50" id="WjR-wU-kWU"/>
+                                            </constraints>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3AL-QL-ogy">
+                                            <rect key="frame" x="0.0" y="60" width="50" height="17.5"/>
+                                            <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17d-hZ-R3C">
+                                            <rect key="frame" x="0.0" y="87.5" width="50" height="14.5"/>
+                                            <fontDescription key="fontDescription" name="Archivo-Regular" family="Archivo" pointSize="13"/>
+                                            <color key="textColor" name="BorderView"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9S-Ft-auF">
+                                    <rect key="frame" x="100" y="134" width="182" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="io1-3w-tfI"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="18"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Button">
+                                        <color key="titleColor" name="Bronze-500"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="O9S-Ft-auF" firstAttribute="leading" secondItem="hNJ-bk-f8g" secondAttribute="leading" constant="100" id="8l3-qi-MC9"/>
+                                <constraint firstItem="kQ3-Gg-JOb" firstAttribute="centerX" secondItem="hNJ-bk-f8g" secondAttribute="centerX" id="FXB-w7-pxi"/>
+                                <constraint firstItem="kQ3-Gg-JOb" firstAttribute="top" secondItem="hNJ-bk-f8g" secondAttribute="top" constant="16" id="beX-T8-ZZw"/>
+                                <constraint firstItem="O9S-Ft-auF" firstAttribute="top" secondItem="kQ3-Gg-JOb" secondAttribute="bottom" constant="16" id="bhA-Vc-Kw5"/>
+                                <constraint firstAttribute="trailing" secondItem="O9S-Ft-auF" secondAttribute="trailing" constant="100" id="mmK-tH-f44"/>
+                                <constraint firstAttribute="bottom" secondItem="O9S-Ft-auF" secondAttribute="bottom" constant="16" id="v59-yY-g5v"/>
+                                <constraint firstAttribute="height" constant="190" id="vs9-4X-8fg"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1E7-22-D8k">
+                            <rect key="frame" x="0.0" y="210.5" width="382" height="254"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X2N-4D-4Pl">
+                                    <rect key="frame" x="24" y="8" width="334" height="182"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="182" id="3Ib-T0-6oS"/>
+                                    </constraints>
+                                </imageView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="HjI-Fz-KLJ">
+                                    <rect key="frame" x="24" y="206" width="334" height="40"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xcO-O7-gLC">
+                                            <rect key="frame" x="0.0" y="0.0" width="334" height="40"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZN-Wm-BzO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="162" height="40"/>
+                                                    <color key="backgroundColor" name="Bronze-100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="nED-Qy-vbX"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="16"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleColor" name="Bronze-900"/>
+                                                    </state>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2A-0Y-Dnq">
+                                                    <rect key="frame" x="172" y="0.0" width="162" height="40"/>
+                                                    <color key="backgroundColor" name="Bronze-500"/>
+                                                    <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="16"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title="Button"/>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="HjI-Fz-KLJ" firstAttribute="leading" secondItem="1E7-22-D8k" secondAttribute="leading" constant="24" id="3B1-5Q-4WM"/>
+                                <constraint firstItem="HjI-Fz-KLJ" firstAttribute="top" secondItem="X2N-4D-4Pl" secondAttribute="bottom" constant="16" id="4qd-nZ-QCA"/>
+                                <constraint firstAttribute="trailing" secondItem="X2N-4D-4Pl" secondAttribute="trailing" constant="24" id="HSe-2Y-87d"/>
+                                <constraint firstAttribute="trailing" secondItem="HjI-Fz-KLJ" secondAttribute="trailing" constant="24" id="RG6-Qh-efT"/>
+                                <constraint firstItem="X2N-4D-4Pl" firstAttribute="top" secondItem="1E7-22-D8k" secondAttribute="top" constant="8" id="SAv-Sm-0Ij"/>
+                                <constraint firstItem="X2N-4D-4Pl" firstAttribute="leading" secondItem="1E7-22-D8k" secondAttribute="leading" constant="24" id="ZrK-zf-CUZ"/>
+                                <constraint firstAttribute="bottom" secondItem="HjI-Fz-KLJ" secondAttribute="bottom" constant="8" id="gWl-9z-a1O"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdm-Cq-VXn">
+                            <rect key="frame" x="0.0" y="464.5" width="382" height="20.5"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20.5" id="OcD-aS-cj0"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N88-gK-Oil">
+                            <rect key="frame" x="0.0" y="485" width="382" height="190"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DKf-Wp-cOH">
+                                    <rect key="frame" x="166" y="16" width="50" height="102"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIa-A8-kIt">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="QaH-dV-h8S"/>
+                                                <constraint firstAttribute="height" constant="50" id="ayb-vO-OH6"/>
+                                            </constraints>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhp-98-o5I">
+                                            <rect key="frame" x="0.0" y="60" width="50" height="17.5"/>
+                                            <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKy-SR-V6Q">
+                                            <rect key="frame" x="0.0" y="87.5" width="50" height="14.5"/>
+                                            <fontDescription key="fontDescription" name="Archivo-Regular" family="Archivo" pointSize="13"/>
+                                            <color key="textColor" name="BorderView"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mJw-cY-Pxy">
+                                    <rect key="frame" x="100" y="134" width="182" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="Dpl-wO-Z2h"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="18"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Button">
+                                        <color key="titleColor" name="Bronze-500"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="mJw-cY-Pxy" secondAttribute="bottom" constant="16" id="2T0-np-rIG"/>
+                                <constraint firstItem="DKf-Wp-cOH" firstAttribute="centerX" secondItem="N88-gK-Oil" secondAttribute="centerX" id="6iq-fL-KeV"/>
+                                <constraint firstAttribute="height" constant="190" id="Jh9-QW-Cvg"/>
+                                <constraint firstItem="mJw-cY-Pxy" firstAttribute="top" secondItem="DKf-Wp-cOH" secondAttribute="bottom" constant="16" id="Uo3-D6-mRg"/>
+                                <constraint firstAttribute="trailing" secondItem="mJw-cY-Pxy" secondAttribute="trailing" constant="100" id="hxe-CW-YqP"/>
+                                <constraint firstItem="mJw-cY-Pxy" firstAttribute="leading" secondItem="N88-gK-Oil" secondAttribute="leading" constant="100" id="sfy-MC-G8g"/>
+                                <constraint firstItem="DKf-Wp-cOH" firstAttribute="top" secondItem="N88-gK-Oil" secondAttribute="top" constant="16" id="xbQ-Vq-4iu"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UtN-65-jc0">
+                            <rect key="frame" x="0.0" y="485" width="382" height="252"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lmM-rO-OZq">
+                                    <rect key="frame" x="24" y="8" width="334" height="180"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="180" id="xfA-VR-8Ft"/>
+                                    </constraints>
+                                </imageView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="VQr-FS-kgk">
+                                    <rect key="frame" x="24" y="204" width="334" height="40"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UoB-d3-vhk">
+                                            <rect key="frame" x="0.0" y="0.0" width="334" height="40"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxZ-hd-axx">
+                                                    <rect key="frame" x="0.0" y="0.0" width="162" height="40"/>
+                                                    <color key="backgroundColor" name="Bronze-100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="WhI-As-l3I"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="16"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleColor" name="Bronze-900"/>
+                                                    </state>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKB-gc-JJY">
+                                                    <rect key="frame" x="172" y="0.0" width="162" height="40"/>
+                                                    <color key="backgroundColor" name="Bronze-500"/>
+                                                    <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="16"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title="Button"/>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="VQr-FS-kgk" firstAttribute="top" secondItem="lmM-rO-OZq" secondAttribute="bottom" constant="16" id="1e4-9c-vh9"/>
+                                <constraint firstItem="VQr-FS-kgk" firstAttribute="leading" secondItem="UtN-65-jc0" secondAttribute="leading" constant="24" id="D4Q-2h-Hen"/>
+                                <constraint firstAttribute="bottom" secondItem="VQr-FS-kgk" secondAttribute="bottom" constant="8" id="LvR-ER-Fc4"/>
+                                <constraint firstItem="lmM-rO-OZq" firstAttribute="leading" secondItem="UtN-65-jc0" secondAttribute="leading" constant="24" id="WRh-e1-g6l"/>
+                                <constraint firstAttribute="trailing" secondItem="VQr-FS-kgk" secondAttribute="trailing" constant="24" id="f8i-Zo-AcG"/>
+                                <constraint firstAttribute="trailing" secondItem="lmM-rO-OZq" secondAttribute="trailing" constant="24" id="sum-Gh-CvL"/>
+                                <constraint firstItem="lmM-rO-OZq" firstAttribute="top" secondItem="UtN-65-jc0" secondAttribute="top" constant="8" id="y5A-7p-Y2Z"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1yk-w3-LRs">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" name="Neutral-v100"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="1yk-w3-LRs" secondAttribute="bottom" id="0HM-vN-amY"/>
+                <constraint firstItem="1yk-w3-LRs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6d6-Vc-svX"/>
+                <constraint firstItem="1yk-w3-LRs" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="AnY-bY-O4s"/>
+                <constraint firstItem="LjC-rg-Vio" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="DaU-9y-BIW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LjC-rg-Vio" secondAttribute="trailing" constant="16" id="WYl-w3-FDe"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1yk-w3-LRs" secondAttribute="trailing" id="YO8-Pi-UlC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="LjC-rg-Vio" secondAttribute="bottom" id="sEE-QG-LR0"/>
+                <constraint firstItem="LjC-rg-Vio" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="yJf-3o-2i4"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="LjC-rg-Vio"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="139" y="61"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="BorderView">
+            <color red="0.71372549019607845" green="0.71372549019607845" blue="0.76470588235294112" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Bronze-100">
+            <color red="0.96470588235294119" green="0.8666666666666667" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Bronze-500">
+            <color red="0.88627450980392153" green="0.56470588235294117" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Bronze-900">
+            <color red="0.37254901960784315" green="0.23529411764705882" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Neutral-v100">
+            <color red="0.96470588235294119" green="0.96470588235294119" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

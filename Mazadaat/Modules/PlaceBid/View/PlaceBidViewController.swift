@@ -84,7 +84,7 @@ class PlaceBidViewController: UIViewController, HeightsBidding {
         
         viewModel.onSuccessGetBid.subscribe { [weak self] value in
             guard let self = self else {return}
-            let successResetViewModel = SuccessResetPasswordViewModel(success: false, title: "bidPlacesSuccssfully", subtitle: "bidPlacesSuccssfully", descrption: "bidPlacesSuccssfully")
+            let successResetViewModel = SuccessResetPasswordViewModel(success: false, title: "bidPlacesSuccssfully", subtitle: "bidPlacesSuccssfully", descrption: "bidPlacesSuccssfully", type: .auction)
             let successfullyVC = SuccessResetPassowrdViewController(viewModel: successResetViewModel)
             successfullyVC.delegate = self.delegate
             self.navigationController?.pushViewController(successfullyVC, animated: true)
@@ -93,8 +93,17 @@ class PlaceBidViewController: UIViewController, HeightsBidding {
         viewModel.onError.subscribe { [weak self] value in
             HelperK.showError(title: value.element ?? "" , subtitle: "")
         }.disposed(by: viewModel.disposeBag)
+        
+        viewModel.payEntryFee.subscribe { [weak self] value in
+            self?.goTOPay(placeId: self?.viewModel.id ?? "")
+        }.disposed(by: viewModel.disposeBag)
     }
     
+    private func goTOPay(placeId:String) {
+        let planViewModel = PlanDetailsViewModel(placeId: placeId)
+        let planViewController = PlanViewController(viewModel: planViewModel)
+        navigationController?.pushViewController(planViewController, animated: true)
+    }
 
 }
 

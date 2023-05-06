@@ -56,8 +56,13 @@ class SuccessResetPassowrdViewController: UIViewController {
     
     private func setupObservables() {
         doneButton.rx.tap.subscribe { [weak self] _  in
-            self?.delegate?.didBidding()
-            self?.dismiss(animated: true, completion: nil)
+            if self?.viewModel.opensource == .auction {
+                self?.delegate?.didBidding()
+                self?.dismiss(animated: true, completion: nil)
+            }else {
+                self?.setRoot(LoginViewController(viewModel: LoginViewModel()), withNavigation: true, animated: true)
+            }
+            
         }.disposed(by: viewModel.disposeBag)
 
     }

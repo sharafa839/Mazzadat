@@ -14,7 +14,7 @@ extension ImageSlideshow {
     
      func configSliderShow() {
           //self.sliderShow.floatView(raduis: 20.0)
-          self.slideshowInterval = 0.1
+          self.slideshowInterval = 1
           self.pageIndicatorPosition = .init(horizontal: .center, vertical: .bottom)
           self.contentScaleMode = UIView.ContentMode.scaleToFill
           let pageControl = UIPageControl()

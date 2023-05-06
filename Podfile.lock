@@ -867,6 +867,7 @@ PODS:
   - SwifterSwift/UIKit (5.2.0)
   - SwiftGifOrigin (1.7.0)
   - SwiftKeychainWrapper (4.0.1)
+  - SwiftyGif (5.4.4)
   - SwiftyJSON (5.0.1)
   - SwiftyStoreKit (0.16.1)
   - Swime (3.0.6)
@@ -905,6 +906,7 @@ DEPENDENCIES:
   - SwifterSwift
   - SwiftGifOrigin
   - SwiftKeychainWrapper (~> 4.0.1)
+  - SwiftyGif
   - SwiftyJSON
   - SwiftyStoreKit
   - Swime
@@ -966,6 +968,7 @@ SPEC REPOS:
     - SwifterSwift
     - SwiftGifOrigin
     - SwiftKeychainWrapper
+    - SwiftyGif
     - SwiftyJSON
     - SwiftyStoreKit
     - Swime
@@ -1026,6 +1029,7 @@ SPEC CHECKSUMS:
   SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
   SwiftGifOrigin: fbd6cf37afcfcf97a5c3db996ddc0492e5c5c145
   SwiftKeychainWrapper: 807ba1d63c33a7d0613288512399cd1eda1e470c
+  SwiftyGif: 93a1cc87bf3a51916001cf8f3d63835fb64c819f
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   SwiftyStoreKit: 6b9c08810269f030586dac1fae8e75871a82e84a
   Swime: d7b2c277503b6cea317774aedc2dce05613f8b0b
@@ -1033,6 +1037,6 @@ SPEC CHECKSUMS:
   TransitionButton: 36283346e17c64775a1b3bc3a7a72940a367de1f
   TwitterProfile: 104d0588d1c510a6c7841e3c24a48adda024159d
 
-PODFILE CHECKSUM: 1cc3548d57d2032f40c18b4f46605cee0dd92edc
+PODFILE CHECKSUM: f8a636c36b30bdfd468bc8a5c1b49bf0d6255287
 
 COCOAPODS: 1.11.0

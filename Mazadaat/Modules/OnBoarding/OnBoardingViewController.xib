@@ -29,13 +29,13 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ihA-Y7-N5E">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="ihA-Y7-N5E">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3x9-mG-kGa">
                     <rect key="frame" x="143" y="84" width="128" height="128"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oVg-z3-O6d">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppIcons" translatesAutoresizingMaskIntoConstraints="NO" id="oVg-z3-O6d">
                             <rect key="frame" x="29" y="29" width="70" height="70"/>
                         </imageView>
                     </subviews>
@@ -102,6 +102,8 @@
         </view>
     </objects>
     <resources>
+        <image name="1" width="3844" height="8232"/>
+        <image name="AppIcons" width="88" height="88"/>
         <namedColor name="Bronze-500">
             <color red="0.88627450980392153" green="0.56470588235294117" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -120,11 +120,8 @@ class LoginViewController: UIViewController {
       }.disposed(by: viewModel.disposeBag)
 
       viewModel.onSuccess.subscribe { [weak self] _ in
-          let homeViewController = HomeViewController(viewModel: HomeViewModel())
-          homeViewController.modalPresentationStyle = .overFullScreen
-          let root = UINavigationController(rootViewController: homeViewController)
-         // self?.present(root, animated: true, completion: nil)
-          self?.navigationController?.pushViewController(homeViewController, animated: true)
+          let tabBarViewController = MainTabBarController()
+          self?.navigationController?.pushViewController(tabBarViewController, animated: true)
       }.disposed(by: viewModel.disposeBag)
 
     }
@@ -133,7 +130,7 @@ class LoginViewController: UIViewController {
       
       phoneNumberTextField.rx.text.orEmpty.bind(to: viewModel.email).disposed(by: viewModel.disposeBag)
       passwordTextField.rx.text.orEmpty.bind(to: viewModel.password).disposed(by: viewModel.disposeBag)
-      viewModel.isContinueButtonEnabled.bind(to:  loginButton.rx.isEnabled).disposed(by: viewModel.disposeBag)
+     // viewModel.isContinueButtonEnabled.bind(to:  loginButton.rx.isEnabled).disposed(by: viewModel.disposeBag)
      
     }
     @IBAction func segmentAction(_ sender: CustomSegmentedControl) {

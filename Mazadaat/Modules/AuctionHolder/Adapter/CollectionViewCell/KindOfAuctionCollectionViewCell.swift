@@ -28,4 +28,23 @@ class KindOfAuctionCollectionViewCell: UICollectionViewCell {
          coontinerView.backgroundColor = with.selected ? .textColor : .white
          sortingLabel.textColor = with.selected ? .white : .textColor
     }
+    
+    func configureCell(_ by:AdvertisementCategory) {
+        if AppData.lang == "en" {
+            sortingLabel.text = by.name
+
+        }else {
+            sortingLabel.text = by.nameAr
+
+        }
+        
+        coontinerView.backgroundColor = isSelected ? .Bronze_500 : .white
+        sortingLabel.textColor = isSelected ? .white : .textColor
+   }
+
+}
+
+protocol DeqeueCell {
+    var name:String? {get}
+    var selected:Bool {get}
 }

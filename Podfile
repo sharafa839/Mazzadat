@@ -28,7 +28,8 @@ pod 'Spring'
   pod 'SideMenu', '~> 5.0.1'
   pod 'MSPeekCollectionViewDelegateImplementation'
   pod 'MXSegmentedControl'
-  
+  pod 'SwiftyGif'
+
   pod 'TransitionButton'
   pod 'SwiftGifOrigin'
   pod 'SwiftDate', '~> 5.0'

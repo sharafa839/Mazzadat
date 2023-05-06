@@ -11,18 +11,20 @@ import RxRelay
 import RxSwift
 import SwiftUI
 
-class HomeViewModel:HomeNetworkingProtocol,CoreNetworkingProtocol  {
+class HomeViewModel:HomeNetworkingProtocol,CoreNetworkingProtocol,TransactionNetworkingProtocol  {
     let disposeBag = DisposeBag()
     var onError = PublishSubject<String>()
     var onSuccessGetImageSlider =   PublishSubject<[SliderModel]>()
     var onLoading = BehaviorRelay<Bool>(value: false)
     var onSuccessGetCategories =   BehaviorRelay<[Category]>(value: CoreData.shared.categories ?? [])
     var onSuccessGetAuctionHolders =   BehaviorRelay<[AuctionHolder]>(value:[])
-
+    var onSuccessGetMybalance = BehaviorRelay<Int>(value:0)
+    var onSuccesGetSlider = BehaviorRelay<[SlidersModel]>(value: [])
+    var onAccessAuction = PublishSubject<(TypeEnum,Int)>()
     func getAuctionHolders() {
-        onLoading.accept(true)
+       // onLoading.accept(true)
         auctionHolders { [weak self] result in
-            self?.onLoading.accept(false)
+          //  self?.onLoading.accept(false)
             switch result {
             case .success(let response):
                 guard let value = response.response?.data else {return}
@@ -33,18 +35,59 @@ class HomeViewModel:HomeNetworkingProtocol,CoreNetworkingProtocol  {
         }
     }
     
-    func getSlider() {
-        onLoading.accept(true)
-        advertisement { [weak self] result in
-            self?.onLoading.accept(false)
+//    func getSlider() {
+//        onLoading.accept(true)
+//        advertisement { [weak self] result in
+//            self?.onLoading.accept(false)
+//            switch result {
+//            case .success(let response):
+//                guard let value = response.response?.data else {return}
+//                self?.onSuccessGetImageSlider.onNext(value)
+//            case .failure(let error):
+//                self?.onError.onNext(error.localizedDescription)
+//            }
+//        }
+//    }
+    
+    func getMyBalance() {
+       // onLoading.accept(true)
+        myBalance { [weak self] result in
+         //   self?.onLoading.accept(false)
             switch result {
             case .success(let response):
-                guard let value = response.response?.data else {return}
-                self?.onSuccessGetImageSlider.onNext(value)
+                self?.onSuccessGetMybalance.accept(response.response?.data ?? 0)
             case .failure(let error):
                 self?.onError.onNext(error.localizedDescription)
             }
         }
+    }
+    
+    func getSliders() {
+        getSlider { [weak self] result in
+            //self?.onLoading.accept(false)
+            switch result {
+            case .success(let response):
+                guard let slider = response.response?.data else {return}
+                self?.onSuccesGetSlider.accept(slider)
+            case .failure(let error):
+                self?.onError.onNext(error.localizedDescription)
+            }
+        }
+    }
+    
+     func didTapOnSlider(index:Int) {
+        let slider = onSuccesGetSlider.value[index]
+        guard let type = slider.type else {return}
+        guard let id = slider.id else {return}
+         guard let url = slider.url else {return}
+        
+        switch type {
+        case .advertisement:
+            HelperK.openFacebook(facebook: url)
+        case .auction:
+            onAccessAuction.onNext((type,id))
+        }
+        
     }
     
     

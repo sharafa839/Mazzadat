@@ -16,7 +16,7 @@ enum AuthApiServices {
     case resetPassword(phone:String,password:String,confirmPassword:String)
     case update(name:String,phone:String,email:String)
     case me
-    case updateProfileImage(images:[MultiPartItem])
+    case updateProfileImage(images:MultiPartItem)
 }
 
 extension AuthApiServices:TargetType,BaseApiHeadersProtocol {
@@ -57,7 +57,7 @@ extension AuthApiServices:TargetType,BaseApiHeadersProtocol {
         case .logout:
             return .requestPlain
         case .changePassword(let currentPassword, let newPassword):
-            return .requestParameters(parameters: ["currentPassword":currentPassword,"newPassword":newPassword], encoding: JSONEncoding.default)
+            return .requestParameters(parameters: ["old_password":currentPassword,"password":newPassword], encoding: JSONEncoding.default)
         case .resetPassword(let phone,let password,let ConfirmPassword):
             return .requestParameters(parameters: ["mobile_number":phone,"password":password,"password_confirmation":ConfirmPassword], encoding: JSONEncoding.default)
         case .update(name: let name, phone: let phone, email: let email):
@@ -66,15 +66,7 @@ extension AuthApiServices:TargetType,BaseApiHeadersProtocol {
             return .requestPlain
         case .updateProfileImage(let images):
             let imageName = "img-\(CACurrentMediaTime()).png"
-            var multipart: [MultipartFormData] = []
-            
-            
-            let multipartImages = images.map { image in
-                MultipartFormData(provider: .data(image.data), name: image.keyName,
-                                  fileName: image.fileName, mimeType: image.mimeType)
-            }
-            
-            multipart.append(contentsOf: multipartImages)
+            let multipart = [MultipartFormData(provider: .data(images.data), name: images.keyName, fileName: images.fileName, mimeType: images.mimeType)]
             return .uploadMultipart(multipart)
         }
     }

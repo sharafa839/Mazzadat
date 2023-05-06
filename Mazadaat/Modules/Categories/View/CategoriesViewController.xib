@@ -59,7 +59,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YzS-JS-Xx5">
                                                     <rect key="frame" x="2" y="0.0" width="77.5" height="13.5"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                    <state key="normal" image="list"/>
+                                                    <state key="normal" image="list-settings-line"/>
                                                 </button>
                                             </subviews>
                                         </stackView>
@@ -97,7 +97,7 @@
         </view>
     </objects>
     <resources>
-        <image name="list" width="23.5" height="18"/>
+        <image name="list-settings-line" width="24" height="24"/>
         <namedColor name="Bronze-200">
             <color red="0.94901960784313721" green="0.80000000000000004" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

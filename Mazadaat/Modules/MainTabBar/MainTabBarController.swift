@@ -12,8 +12,14 @@ class MainTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupAppearance()
+        setControllers()
+        view.backgroundColor = .red
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("Tab bar ")
     }
 
     private func setControllers() {
@@ -21,12 +27,26 @@ class MainTabBarController: UITabBarController {
        let homeViewController = HomeViewController(viewModel: homeViewModel)
         
        let profileViewController = ProfileViewController(viewModel: ProfileViewModel())
-        let rawViewControllers: [UIViewController] = [homeViewController,
+        let askGoldenBell = AskGoldenBellViewController(viewModel: AskGoldenBellViewModel())
+        let auctionSection = AuctionsSectionViewController(viewModel: AuctionSectionViewModel())
+        let rawViewControllers: [UIViewController] = [homeViewController,askGoldenBell,auctionSection,
                                                           profileViewController]
         
         let navigationViewControllers = rawViewControllers.map(UINavigationController.init)
         setupNavigationAppearance(navigationViewControllers)
         setViewControllers(navigationViewControllers, animated: true)
+    }
+    
+    private func setupAppearance() {
+        UITabBar.appearance().barTintColor = .textColor
+        UITabBar.appearance().tintColor = .Bronze_500
+        UITabBar.appearance().unselectedItemTintColor = .white
+        guard #available(iOS 13.0, *) else { return }
+        let appearance = UITabBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = .white
+        tabBar.standardAppearance = appearance
+        if #available(iOS 15.0, *) { tabBar.scrollEdgeAppearance = tabBar.standardAppearance }
     }
     
     private func setupNavigationAppearance(_ navigationControllers: [UINavigationController]) {
@@ -37,10 +57,10 @@ class MainTabBarController: UITabBarController {
                                 "auctions",
                                 "profile"]
         
-        let unselectedImageNames = ["unselected-home-icon",
-                                    "unselected-myorders",
-                                    "unselected-cart",
-                                    "unselectedDeals"
+        let unselectedImageNames = ["home-5-fill",
+                                    "question-mark",
+                                    "auction-line",
+                                    "user-smile-line"
                                     ]
         let selectedImageNames = ["selected-home-icon",
                                   "selected-myorders",
@@ -58,12 +78,3 @@ class MainTabBarController: UITabBarController {
     }
 }
 
-
-class TabBarViewController: UIViewController {
-    var updateCartCount: (() -> Void)?
-    
-    override func viewWillAppear(_ animated: Bool) {
-        updateCartCount?()
-        super.viewWillAppear(animated)
-    }
-}

@@ -21,6 +21,10 @@ class BiddingView: UIView {
     @IBOutlet weak var heighstValueLabel: UILabel!
 
     var nextBid = 0
+    var initialPrice = 0
+    var total:Int {
+        return nextBid + initialPrice
+    }
     var didTapBiddingButton:((_:Int)->Void)?
     //MARK: - Init
     
@@ -47,8 +51,9 @@ class BiddingView: UIView {
         }else {
             heighstValueLabel.isHidden = true
             hightImage.isHidden = true
+        initialPrice = Int(with.price  ?? "0") ?? 0
         nextBid = Int(with.lastBid?.price ?? "0") ?? 0
-        biddingValueLabel.text = "\(nextBid + 1 )"
+        biddingValueLabel.text = "\(nextBid + initialPrice )"
         endingInLabel.text = "endingIn"
         setupDate(with.endAt ?? "", with.startAt ?? "")
         nextBidLabel.text = "nextBidding"
@@ -80,7 +85,7 @@ class BiddingView: UIView {
     }
 
     @IBAction func biddingButtonAction(_ sender: UIButton) {
-        didTapBiddingButton?(nextBid + 1)
+        didTapBiddingButton?(total)
     }
     
 }

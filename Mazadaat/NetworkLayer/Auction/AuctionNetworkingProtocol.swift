@@ -9,11 +9,11 @@
 import Foundation
 protocol AuctionNetworkingProtocol {
     
-    func all(completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
-    func showOfficialAuction(auction_id:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
+    func all(myBids:Bool? ,myAuction:Bool?,completion:@escaping(Result<BaseResponse<[FavoriteModel]>,Error>)->Void)
+    func showOfficialAuction(auction_id:String,completion:@escaping(Result<BaseResponse<AuctionDetailsModel>,Error>)->Void)
     func show(auction_id:String,completion:@escaping(Result<BaseResponse<AuctionDetailsModel>,Error>)->Void)
     func toggleFavorite(auction_id:String,completion:@escaping(Result<BaseResponse<FavoriteModel>,Error>)->Void)
-    func favorites( completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
+    func favorites( completion:@escaping(Result<BaseResponse<[FavoriteModel]>,Error>)->Void) 
     func addBid(auction_id:String,price:String, completion:@escaping(Result<BaseResponse<FavoriteModel>,Error>)->Void)
     func filterAuctions(search:String?  , byCategoryId:String? ,code:String? ,status:String? ,priceFrom:String? ,priceTo:String? ,endAt:String?,endFrom:String?, completion:@escaping(Result<BaseResponse<[CategoryAuctions]>,Error>)->Void)
 }
@@ -23,11 +23,11 @@ extension AuctionNetworkingProtocol {
         return AuctionRepo()
     }
     
-    func all(completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void) {
-        auction.request(target: .all, completion: completion)
+    func all(myBids:Bool? = nil,myAuction:Bool? = nil,completion:@escaping(Result<BaseResponse<[FavoriteModel]>,Error>)->Void) {
+        auction.request(target: .all(myBids: myBids ?? false, myAuction: myAuction ?? false), completion: completion)
     }
     
-    func showOfficialAuction(auction_id:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void) {
+    func showOfficialAuction(auction_id:String,completion:@escaping(Result<BaseResponse<AuctionDetailsModel>,Error>)->Void) {
         auction.request(target: .showOfficialAuction(auction_id: auction_id), completion: completion)
     }
     
@@ -39,7 +39,7 @@ extension AuctionNetworkingProtocol {
         auction.request(target: .toggleFavorite(auction_id: auction_id), completion: completion)
     }
     
-    func favorites( completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void) {
+    func favorites( completion:@escaping(Result<BaseResponse<[FavoriteModel]>,Error>)->Void) {
         auction.request(target: .favorites, completion: completion)
     }
     

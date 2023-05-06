@@ -13,11 +13,11 @@ import UIKit
 class OnBoardingViewModel {
 
     let onBoardViews:[OnBoardingModel] =
-    [OnBoardingModel(image: UIImage(named: "hotel (1)") ?? UIImage(),title:"Bid with Confidence - Our Guarantee to You",
+    [OnBoardingModel(image: UIImage(named: "2") ?? UIImage(),title:"Bid with Confidence - Our Guarantee to You",
                      description: "Description: Place your bids on your favorite items and win with confidence. Our auctions app offers a secure and reliable platform for bidding and purchasing items."),
-     OnBoardingModel(image: UIImage(named: "hotel (1)") ?? UIImage(),title:"Bid with Confidence - Our Guarantee to You",
+     OnBoardingModel(image: UIImage(named: "5") ?? UIImage(),title:"Bid with Confidence - Our Guarantee to You",
                       description: "Description: Place your bids on your favorite items and win with confidence. Our auctions app offers a secure and reliable platform for bidding and purchasing items.")
-     ,OnBoardingModel(image: UIImage(named: "hotel (1)") ?? UIImage(),title:"Bid with Confidence - Our Guarantee to You",
+     ,OnBoardingModel(image: UIImage(named: "4") ?? UIImage(),title:"Bid with Confidence - Our Guarantee to You",
                                                                                                                                                                                                                             description: "Description: Place your bids on your favorite items and win with confidence. Our auctions app offers a secure and reliable platform for bidding and purchasing items.")
     ]
     

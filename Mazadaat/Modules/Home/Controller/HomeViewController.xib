@@ -45,7 +45,7 @@
                     </constraints>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="y7i-Dk-D5L">
-                    <rect key="frame" x="24" y="123" width="366" height="267"/>
+                    <rect key="frame" x="24" y="123" width="366" height="249"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qaW-uJ-ov2" customClass="PackageSubscribePlan" customModule="Golden_Bell" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="366" height="60"/>
@@ -55,14 +55,14 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YUc-2X-duo" customClass="ImageSlideshow" customModule="ImageSlideshow">
-                            <rect key="frame" x="0.0" y="70" width="366" height="197"/>
+                            <rect key="frame" x="0.0" y="70" width="366" height="179"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </stackView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="0F9-Zi-scR">
-                    <rect key="frame" x="24" y="556" width="366" height="306"/>
+                    <rect key="frame" x="24" y="548" width="366" height="314"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="glD-a7-Svo">
                         <size key="itemSize" width="128" height="128"/>
@@ -72,10 +72,10 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="pK2-bf-Jqe">
-                    <rect key="frame" x="20" y="400" width="366" height="140"/>
+                    <rect key="frame" x="20" y="382" width="366" height="150"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="140" id="TbJ-Zg-y8D"/>
+                        <constraint firstAttribute="height" constant="150" id="TbJ-Zg-y8D"/>
                     </constraints>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KAf-DY-fCA">
                         <size key="itemSize" width="128" height="128"/>
@@ -94,7 +94,7 @@
                 <constraint firstItem="0F9-Zi-scR" firstAttribute="leading" secondItem="pK2-bf-Jqe" secondAttribute="leading" constant="4" id="ERi-et-bh2"/>
                 <constraint firstItem="y7i-Dk-D5L" firstAttribute="trailing" secondItem="qVe-Bi-W3W" secondAttribute="trailing" id="JE5-Jg-AlY"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pK2-bf-Jqe" secondAttribute="trailing" constant="28" id="Ogc-XR-ixW"/>
-                <constraint firstItem="YUc-2X-duo" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.219866" id="YJ6-W2-5cz"/>
+                <constraint firstItem="YUc-2X-duo" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.2" id="YJ6-W2-5cz"/>
                 <constraint firstItem="yJa-dl-RrN" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.332" id="ZO8-N2-ngF"/>
                 <constraint firstItem="0F9-Zi-scR" firstAttribute="trailing" secondItem="pK2-bf-Jqe" secondAttribute="trailing" constant="4" id="cBY-bQ-h7W"/>
                 <constraint firstItem="pK2-bf-Jqe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="i3s-Uf-cI7"/>

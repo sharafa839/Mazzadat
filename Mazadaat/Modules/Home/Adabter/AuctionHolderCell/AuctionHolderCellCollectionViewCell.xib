@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -24,27 +23,15 @@
                 <rect key="frame" x="0.0" y="0.0" width="148" height="136"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="63i-Ty-fPW">
-                        <rect key="frame" x="8" y="8" width="132" height="92"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TfN-p1-kw0">
-                                <rect key="frame" x="1" y="1" width="130" height="90"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TfN-p1-kw0">
+                        <rect key="frame" x="9" y="9" width="130" height="93.5"/>
                         <constraints>
-                            <constraint firstItem="TfN-p1-kw0" firstAttribute="leading" secondItem="63i-Ty-fPW" secondAttribute="leading" constant="1" id="4bv-lE-btc"/>
-                            <constraint firstAttribute="trailing" secondItem="TfN-p1-kw0" secondAttribute="trailing" constant="1" id="LTw-tB-Yw8"/>
-                            <constraint firstAttribute="bottom" secondItem="TfN-p1-kw0" secondAttribute="bottom" constant="1" id="XdR-uj-cC1"/>
-                            <constraint firstItem="TfN-p1-kw0" firstAttribute="top" secondItem="63i-Ty-fPW" secondAttribute="top" constant="1" id="aBT-SC-QPW"/>
+                            <constraint firstAttribute="height" constant="93.5" id="nW6-mj-l6V"/>
                         </constraints>
-                    </view>
+                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5c-IY-Y14">
-                        <rect key="frame" x="8" y="108" width="132" height="20"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="20" id="pJD-ZS-RMU"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="18"/>
+                        <rect key="frame" x="8" y="111.5" width="132" height="17.5"/>
+                        <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="16"/>
                         <color key="textColor" name="TextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -52,29 +39,24 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
+                <constraint firstItem="g5c-IY-Y14" firstAttribute="top" secondItem="TfN-p1-kw0" secondAttribute="bottom" constant="9" id="7Ho-zA-1Vb"/>
                 <constraint firstAttribute="trailing" secondItem="g5c-IY-Y14" secondAttribute="trailing" constant="8" id="9xV-al-Yzg"/>
-                <constraint firstAttribute="trailing" secondItem="63i-Ty-fPW" secondAttribute="trailing" constant="8" id="CmK-6x-HX0"/>
-                <constraint firstAttribute="bottom" secondItem="g5c-IY-Y14" secondAttribute="bottom" constant="8" id="FZR-69-uND"/>
-                <constraint firstItem="63i-Ty-fPW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="SPE-GI-4b6"/>
-                <constraint firstItem="g5c-IY-Y14" firstAttribute="top" secondItem="63i-Ty-fPW" secondAttribute="bottom" constant="8" id="SSR-oM-XtW"/>
+                <constraint firstAttribute="trailing" secondItem="TfN-p1-kw0" secondAttribute="trailing" constant="9" id="B7H-PU-Hkp"/>
+                <constraint firstItem="TfN-p1-kw0" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="9" id="PhQ-FG-WM6"/>
                 <constraint firstItem="g5c-IY-Y14" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="UeD-wk-EuL"/>
-                <constraint firstItem="63i-Ty-fPW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="l8j-l2-gxG"/>
+                <constraint firstItem="TfN-p1-kw0" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="9" id="UsR-EH-Bsb"/>
             </constraints>
-            <size key="customSize" width="148" height="136"/>
+            <size key="customSize" width="187" height="149"/>
             <connections>
                 <outlet property="auctionHolderImageView" destination="TfN-p1-kw0" id="wu2-kY-C3B"/>
                 <outlet property="auctionHolderTitle" destination="g5c-IY-Y14" id="ZrW-rj-iFG"/>
-                <outlet property="containerView" destination="63i-Ty-fPW" id="ouk-Aj-fj8"/>
             </connections>
-            <point key="canvasLocation" x="208.69565217391306" y="150.66964285714286"/>
+            <point key="canvasLocation" x="180.43478260869566" y="155.02232142857142"/>
         </collectionViewCell>
     </objects>
     <resources>
         <namedColor name="TextColor">
             <color red="0.078431372549019607" green="0.074509803921568626" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

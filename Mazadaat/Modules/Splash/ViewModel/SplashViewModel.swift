@@ -8,7 +8,7 @@
 
 import Foundation
 import RxSwift
-class SplashViewModel:CoreNetworkingProtocol {
+class SplashViewModel:CoreNetworkingProtocol,AuthNetworkingProtocol {
     let disposeBag = DisposeBag()
     var onSuccess = PublishSubject<Route>()
     var onError = PublishSubject<String>()
@@ -24,6 +24,8 @@ class SplashViewModel:CoreNetworkingProtocol {
                 CoreData.shared.bankAccounts = core.bankAccounts
                 CoreData.shared.categories = core.categories
                 CoreData.shared.settings = core.settings
+                CoreData.shared.subscriptions = core.subscriptions
+                
                 self?.setRoot()
                     
             case .failure(let error):
@@ -32,10 +34,25 @@ class SplashViewModel:CoreNetworkingProtocol {
         }
     }
     
-    private func setRoot() {
+    func getMe() {
+        me { [weak self] result in
+            switch result {
+            case .success(let response):
+                guard let loginModel = response.response?.data else {return}
+                CoreData.shared.personalSubscription = loginModel.subscriptions ?? []
+                CoreData.shared.loginModel = loginModel
+                self?.onSuccess.onNext(.home)
+            case .failure(let error):
+              return
+                //self?.onError.onNext(error.localizedDescription)
+            }
+        }
+    }
+    
+     func setRoot() {
         if HelperK.checkFirstTime() {
             if HelperK.checkUserToken() {
-                onSuccess.onNext(.home)
+              getMe()
             }else{
                 onSuccess.onNext(.login)
             }
@@ -52,6 +69,7 @@ case home,login,onBoarding
 class CoreData {
    static let shared = CoreData()
     var settings: Settings?
+    var loginModel:LoginPayload?
     var subscriptions: [Subscription]?
     var bankAccounts: [BankAccount]?
     var categories: [Category]?

@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import SwiftyGif
 
-class SplashViewController: UIViewController {
+class SplashViewController: UIViewController, SwiftyGifDelegate {
 
+    @IBOutlet weak var splashImage: UIImageView!
     var viewModel:SplashViewModel
     
     init(viewModel:SplashViewModel) {
@@ -23,10 +25,28 @@ class SplashViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       setupViewModelObserver()
+        setupViewModelObserver()
+        splashImage.delegate = self
+        playGif()
+    }
+    
+    func gifDidStop(sender: UIImageView) {
         viewModel.getCore()
     }
+    
+    func playGif() {
+        guard let gif = try? UIImage(gifName: "Splash Ui O-w.gif") else { return }
+        splashImage.startAnimatingGif()
+        splashImage.setGifImage(gif, loopCount: 1)
+    }
 
+    private func disConnect() {
+        guard let gif = try? UIImage(gifName: "Splash Ui O-w.gif") else { return }
+        splashImage.setGifImage(gif, loopCount: 1)
+        splashImage.stopAnimatingGif()
+       
+    }
+    
     private func setupViewModelObserver() {
         viewModel.onSuccess.subscribe { [weak self] route in
             self?.navigateToNewRoot(route: route.element ?? .login)
@@ -40,8 +60,8 @@ class SplashViewController: UIViewController {
     private func navigateToNewRoot(route:Route) {
         switch route {
         case .home:
-           
-            appDelegate.coordinator.setRoot(UINavigationController(rootViewController: HomeViewController(viewModel: HomeViewModel())))
+           let tabBarViewController = MainTabBarController()
+            appDelegate.coordinator.setRoot(tabBarViewController)
 
         case .login:
             appDelegate.coordinator.setRoot(UINavigationController(rootViewController: LoginViewController(viewModel: LoginViewModel())))
@@ -55,3 +75,4 @@ class SplashViewController: UIViewController {
    
 
 }
+

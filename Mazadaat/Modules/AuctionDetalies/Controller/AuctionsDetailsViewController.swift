@@ -63,7 +63,12 @@ class AuctionsDetailsViewController: UIViewController, HeightsBidding {
     }
     
     private func setupViewModel() {
-        viewModel.getAuctionsDetails()
+        if viewModel.isOfficialAuction {
+            viewModel.getOfficialAuction()
+        }else {
+            viewModel.getAuctionsDetails()
+
+        }
     }
     
     private func setupViewModelObserver() {
@@ -96,6 +101,12 @@ class AuctionsDetailsViewController: UIViewController, HeightsBidding {
             self?.favoriteButton.setImage(result.isFavourite ?? false ? UIImage(named: "heart"):UIImage(named: "heart-add-line") , for: .normal)
             self?.favoriteView.backgroundColor = result.isFavourite ?? false ? .Bronze_500 : .lightGray
         }.disposed(by: viewModel.disposeBag)
+        
+        viewModel.verifyWithNafath.subscribe { [weak self]  value in
+            let verifyWithNafathViewController = LoginWithNafathViewController()
+            verifyWithNafathViewController.modalPresentationStyle = .custom
+            self?.present(verifyWithNafathViewController, animated: true, completion: nil)
+        }.disposed(by: viewModel.disposeBag)
 
     }
     
@@ -104,12 +115,12 @@ class AuctionsDetailsViewController: UIViewController, HeightsBidding {
         auctionDetails.configure(with,type: viewModel.type)
         auctionSpecification.configure(with.auctionDetails ?? [], description: with.description ?? "")
         biddingView.configure(with, didBid: false)
-        biddingView.didTapBiddingButton = { value in
-            let placeBidViewModel = PlaceBidViewModel(id: self.viewModel.id , price: value)
+        biddingView.didTapBiddingButton = {[weak self] value in
+            let placeBidViewModel = PlaceBidViewModel(placeId: self?.viewModel.placeId ?? "", id: self?.viewModel.id ?? "" , price: value)
             
             let placeBidViewController = PlaceBidViewController(viewModel: placeBidViewModel)
             placeBidViewController.delegate = self
-            self.present(UINavigationController(rootViewController: placeBidViewController), animated: true, completion: nil)
+            self?.present(UINavigationController(rootViewController: placeBidViewController), animated: true, completion: nil)
             
         }
     }

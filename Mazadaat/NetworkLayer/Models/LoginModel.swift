@@ -22,28 +22,37 @@ import Foundation
 // MARK: - DataClass
 struct LoginPayload: Codable {
     var id: Int?
-    var name, mobile, email: String?
-    var mobileVerifiedAt, emailVerifiedAt: String?
-    var avatar: String?
-    var lat, lng: JSONNull?
-    var isSubscribed: Bool?
-    var subscriptions: [Subscription]?
-    var appLocale: String?
-    var notificationCount: Int?
-    var accessToken, tokenType: String?
+       var name, mobile, email, mobileVerifiedAt: String?
+       var emailVerifiedAt: String?
+       var avatar: String?
+       var lat, lng: String?
+       var isSubscribed, isVerified, isPayEntryFee: Bool?
+       var subscriptions: [Subscription]?
+       var placesPayedFee: [String]?
+       var appLocale: String?
+       var notificationCount: Int?
+       var auctionAlerts, bidUpdates, auctionEndingSoon, promotions: Bool?
+       var accessToken, tokenType: String?
 
-    enum CodingKeys: String, CodingKey {
-        case id, name, mobile, email
-        case mobileVerifiedAt = "mobile_verified_at"
-        case emailVerifiedAt = "email_verified_at"
-        case avatar, lat, lng
-        case isSubscribed = "is_subscribed"
-        case subscriptions = "Subscriptions"
-        case appLocale = "app_locale"
-        case notificationCount = "notification_count"
-        case accessToken = "access_token"
-        case tokenType = "token_type"
-    }
+       enum CodingKeys: String, CodingKey {
+           case id, name, mobile, email
+           case mobileVerifiedAt = "mobile_verified_at"
+           case emailVerifiedAt = "email_verified_at"
+           case avatar, lat, lng
+           case isSubscribed = "is_subscribed"
+           case isVerified = "is_verified"
+           case isPayEntryFee = "is_pay_entry_fee"
+           case subscriptions = "Subscriptions"
+           case placesPayedFee = "places_payed_fee"
+           case appLocale = "app_locale"
+           case notificationCount = "notification_count"
+           case auctionAlerts = "auction_alerts"
+           case bidUpdates = "bid_updates"
+           case auctionEndingSoon = "auction_ending_soon"
+           case promotions
+           case accessToken = "access_token"
+           case tokenType = "token_type"
+       }
 }
 
 // MARK: - Encode/decode helpers

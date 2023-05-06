@@ -19,7 +19,7 @@ class PackageSubscribePlan: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
-        setupLocalize()
+        
     }
     
     required init?(coder: NSCoder) {
@@ -37,11 +37,11 @@ class PackageSubscribePlan: UIView {
         
     }
     
-    private func setupLocalize() {
+    func setupLocalize(balance:String) {
         upgradeButton.setTitle("Upgrade", for: .normal)
         remainingPlanLabel.text = "remainingInYourPlan"
         let x = CoreData.shared.personalSubscription?.first?.gainedBalance ?? ""
-        remainingValueOfPlan.text = "2000" + "of" + (CoreData.shared.personalSubscription?.first?.gainedBalance ?? "") + "SAR"
+        remainingValueOfPlan.text =  balance + "of" + (CoreData.shared.personalSubscription?.first?.gainedBalance ?? "") + "SAR"
     }
     
     @IBAction func upgradeButtonAction(_ sender: UIButton) {

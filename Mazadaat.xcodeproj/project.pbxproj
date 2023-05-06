@@ -94,6 +94,9 @@
 		FF2F701929E274FA0018B339 /* TicketsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F701829E274FA0018B339 /* TicketsApi.swift */; };
 		FF2F701B29E275090018B339 /* TicketNetworkingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F701A29E275090018B339 /* TicketNetworkingProtocol.swift */; };
 		FF2F701D29E275140018B339 /* TicketsRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F701C29E275140018B339 /* TicketsRepo.swift */; };
+		FF46E8492A01FE1200474A46 /* SliderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF46E8482A01FE1200474A46 /* SliderModel.swift */; };
+		FF46E84B2A0215EB00474A46 /* AskGoldenBellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF46E84A2A0215EB00474A46 /* AskGoldenBellViewModel.swift */; };
+		FF46E84D2A02163E00474A46 /* AskGoldenBellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF46E84C2A02163E00474A46 /* AskGoldenBellModel.swift */; };
 		FF4C7EDD29D379B70095396A /* Archivo-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF4C7ECB29D379B70095396A /* Archivo-BlackItalic.ttf */; };
 		FF4C7EDE29D379B70095396A /* Archivo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF4C7ECC29D379B70095396A /* Archivo-Regular.ttf */; };
 		FF4C7EDF29D379B70095396A /* Archivo-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF4C7ECD29D379B70095396A /* Archivo-Black.ttf */; };
@@ -138,6 +141,9 @@
 		FF4C7F2429D453CC0095396A /* TimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4C7F0F29D453CC0095396A /* TimeHelper.swift */; };
 		FF4C7F2529D453CC0095396A /* UITextField + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4C7F1029D453CC0095396A /* UITextField + extension.swift */; };
 		FF4C7F2729D4608B0095396A /* UIView + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4C7F2629D4608A0095396A /* UIView + extension.swift */; };
+		FF4F9C302A0023C100BEDF18 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4F9C2E2A0023C100BEDF18 /* FeedbackViewController.swift */; };
+		FF4F9C312A0023C100BEDF18 /* FeedbackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF4F9C2F2A0023C100BEDF18 /* FeedbackViewController.xib */; };
+		FF4F9C352A0028AA00BEDF18 /* FeedbackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4F9C342A0028AA00BEDF18 /* FeedbackViewModel.swift */; };
 		FF5AF73429DFBE5D0020E716 /* AuthNetworkingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5AF73129DFBE5D0020E716 /* AuthNetworkingProtocol.swift */; };
 		FF5AF73529DFBE5D0020E716 /* AuthApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5AF73229DFBE5D0020E716 /* AuthApi.swift */; };
 		FF5AF73629DFBE5D0020E716 /* AuthRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5AF73329DFBE5D0020E716 /* AuthRepo.swift */; };
@@ -172,6 +178,13 @@
 		FF708E0E29F7211D001C8003 /* AuctionSpcificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF708E0C29F7211D001C8003 /* AuctionSpcificationTableViewCell.xib */; };
 		FF708E1229F72E20001C8003 /* PlaceBidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF708E1029F72E20001C8003 /* PlaceBidViewController.swift */; };
 		FF708E1329F72E20001C8003 /* PlaceBidViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF708E1129F72E20001C8003 /* PlaceBidViewController.xib */; };
+		FF7185D829FB7CFD00867213 /* PersonalInformationHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7185D629FB7CFD00867213 /* PersonalInformationHeader.swift */; };
+		FF7185D929FB7CFD00867213 /* PersonalInformationHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF7185D729FB7CFD00867213 /* PersonalInformationHeader.xib */; };
+		FF7185DC29FB7EC900867213 /* EditPeronalInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7185DB29FB7EC900867213 /* EditPeronalInformationViewModel.swift */; };
+		FF7185E429FB90D800867213 /* PersonalInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7185E229FB90D800867213 /* PersonalInformationViewController.swift */; };
+		FF7185E529FB90D800867213 /* PersonalInformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF7185E329FB90D800867213 /* PersonalInformationViewController.xib */; };
+		FF7185E929FB946800867213 /* ControlCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7185E729FB946800867213 /* ControlCenterViewController.swift */; };
+		FF7185EA29FB946800867213 /* ControlCenterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF7185E829FB946800867213 /* ControlCenterViewController.xib */; };
 		FF76275B29E1F224002D531F /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF76275A29E1F224002D531F /* RegisterViewModel.swift */; };
 		FF76276029E24E52002D531F /* AuctionHolderCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF76275E29E24E52002D531F /* AuctionHolderCellCollectionViewCell.swift */; };
 		FF76276129E24E52002D531F /* AuctionHolderCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF76275F29E24E52002D531F /* AuctionHolderCellCollectionViewCell.xib */; };
@@ -183,7 +196,11 @@
 		FF79E39529F1889000CEED4D /* NotificationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF79E39429F1889000CEED4D /* NotificationsViewModel.swift */; };
 		FF79E39829F19A7600CEED4D /* NotificationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF79E39729F19A7600CEED4D /* NotificationsModel.swift */; };
 		FF7C054A29EB984800F08787 /* OTPViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7C054929EB984800F08787 /* OTPViewModel.swift */; };
+		FF7C464F29FCFC4000615314 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7C464D29FCFC4000615314 /* SettingViewController.swift */; };
+		FF7C465029FCFC4100615314 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF7C464E29FCFC4000615314 /* SettingViewController.xib */; };
 		FF7EBFAD29DD180B00261946 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7EBFAC29DD180B00261946 /* EndPoints.swift */; };
+		FF7EEA2929FDCE4400BE1CBE /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7EEA2729FDCE4400BE1CBE /* ContactUsViewController.swift */; };
+		FF7EEA2A29FDCE4400BE1CBE /* ContactUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF7EEA2829FDCE4400BE1CBE /* ContactUsViewController.xib */; };
 		FF818B7529F76AD500CA9A99 /* SuccessResetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF818B7429F76AD500CA9A99 /* SuccessResetPasswordViewModel.swift */; };
 		FF818B7929F8425D00CA9A99 /* AuctionStortingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF818B7729F8425D00CA9A99 /* AuctionStortingViewController.swift */; };
 		FF818B7A29F8425D00CA9A99 /* AuctionStortingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF818B7829F8425D00CA9A99 /* AuctionStortingViewController.xib */; };
@@ -204,22 +221,45 @@
 		FF81900729D50D6400033060 /* OnBoardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF81900629D50D6400033060 /* OnBoardingViewModel.swift */; };
 		FF81900A29D50D9000033060 /* OnBoardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF81900929D50D9000033060 /* OnBoardingModel.swift */; };
 		FF81900C29D5221C00033060 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF81900B29D5221C00033060 /* Coordinator.swift */; };
+		FF85828229FAEB6B002D98ED /* AskGoldenBellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF85828029FAEB6B002D98ED /* AskGoldenBellViewController.swift */; };
+		FF85828329FAEB6B002D98ED /* AskGoldenBellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF85828129FAEB6B002D98ED /* AskGoldenBellViewController.xib */; };
 		FF85AD2029EEE53900BED67F /* CategoriesAuctionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF85AD1F29EEE53900BED67F /* CategoriesAuctionsModel.swift */; };
 		FF8B256F29EB29FC00302346 /* AuctionDetailesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8B256E29EB29FC00302346 /* AuctionDetailesView.swift */; };
 		FF8B257129EB2A1A00302346 /* AuctionDetailesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF8B257029EB2A1A00302346 /* AuctionDetailesView.xib */; };
 		FF8B257529EB310000302346 /* AuctionOwnerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF8B257429EB310000302346 /* AuctionOwnerView.xib */; };
 		FF8B257729EB310C00302346 /* AuctionOwnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8B257629EB310B00302346 /* AuctionOwnerView.swift */; };
+		FF8B950C29FA698A00441899 /* BiddingAuctionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8B950A29FA698A00441899 /* BiddingAuctionsTableViewCell.swift */; };
+		FF8B950D29FA698A00441899 /* BiddingAuctionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF8B950B29FA698A00441899 /* BiddingAuctionsTableViewCell.xib */; };
+		FF8B951229FA69D800441899 /* MyAuctionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8B951029FA69D800441899 /* MyAuctionsTableViewCell.swift */; };
+		FF8B951329FA69D800441899 /* MyAuctionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF8B951129FA69D800441899 /* MyAuctionsTableViewCell.xib */; };
+		FF8B951A29FA6ADE00441899 /* AskGoldenBellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8B951829FA6ADE00441899 /* AskGoldenBellTableViewCell.swift */; };
+		FF8B951B29FA6ADE00441899 /* AskGoldenBellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF8B951929FA6ADE00441899 /* AskGoldenBellTableViewCell.xib */; };
+		FF8B951F29FACDA100441899 /* AuctionsSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8B951D29FACDA100441899 /* AuctionsSectionViewController.swift */; };
+		FF8B952029FACDA100441899 /* AuctionsSectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF8B951E29FACDA100441899 /* AuctionsSectionViewController.xib */; };
 		FF8D31DB29F93C2F0000958D /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8D31D929F93C2F0000958D /* MainTabBarController.swift */; };
 		FF8D31DC29F93C2F0000958D /* MainTabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF8D31DA29F93C2F0000958D /* MainTabBarController.xib */; };
-		FF8D31E329F9436F0000958D /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8D31E229F9436F0000958D /* EditProfileViewModel.swift */; };
-		FF8D31E729F944270000958D /* EditProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8D31E529F944270000958D /* EditProfileHeader.swift */; };
-		FF8D31E829F944270000958D /* EditProfileHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF8D31E629F944270000958D /* EditProfileHeader.xib */; };
+		FF8D31E329F9436F0000958D /* ControlCenterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8D31E229F9436F0000958D /* ControlCenterViewModel.swift */; };
+		FF8D31E729F944270000958D /* ControlCenterHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8D31E529F944270000958D /* ControlCenterHeader.swift */; };
+		FF8D31E829F944270000958D /* ControlCenterHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF8D31E629F944270000958D /* ControlCenterHeader.xib */; };
 		FF8E83C429EC35A9009AE77C /* ResetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8E83C329EC35A9009AE77C /* ResetPasswordViewModel.swift */; };
 		FF8E83C729EC70EB009AE77C /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8E83C629EC70EB009AE77C /* CategoriesViewModel.swift */; };
 		FF8E83CC29EC7129009AE77C /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8E83CA29EC7129009AE77C /* CategoriesViewController.swift */; };
 		FF8E83CD29EC7129009AE77C /* CategoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF8E83CB29EC7129009AE77C /* CategoriesViewController.xib */; };
 		FF8E83D329EED14F009AE77C /* AuctionCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8E83D129EED14F009AE77C /* AuctionCategoryTableViewCell.swift */; };
 		FF8E83D429EED14F009AE77C /* AuctionCategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF8E83D229EED14F009AE77C /* AuctionCategoryTableViewCell.xib */; };
+		FF92D93C29FB6B14006BAF9B /* ControlCenterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF92D93A29FB6B14006BAF9B /* ControlCenterTableViewCell.swift */; };
+		FF92D93D29FB6B14006BAF9B /* ControlCenterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF92D93B29FB6B14006BAF9B /* ControlCenterTableViewCell.xib */; };
+		FF92D94129FB6BE3006BAF9B /* ControlCentetrFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF92D93F29FB6BE3006BAF9B /* ControlCentetrFooter.swift */; };
+		FF92D94229FB6BE3006BAF9B /* ControlCentetrFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF92D94029FB6BE3006BAF9B /* ControlCentetrFooter.xib */; };
+		FF92D94B29FB7107006BAF9B /* PersonalInformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF92D94929FB7107006BAF9B /* PersonalInformationTableViewCell.swift */; };
+		FF92D94C29FB7107006BAF9B /* PersonalInformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF92D94A29FB7107006BAF9B /* PersonalInformationTableViewCell.xib */; };
+		FF9443822A0033930094AC1F /* RequesActionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9443812A0033930094AC1F /* RequesActionViewModel.swift */; };
+		FF9443872A0033C10094AC1F /* RequestAuctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9443852A0033C10094AC1F /* RequestAuctionViewController.swift */; };
+		FF9443882A0033C10094AC1F /* RequestAuctionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF9443862A0033C10094AC1F /* RequestAuctionViewController.xib */; };
+		FF94438D2A003C320094AC1F /* TicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF94438B2A003C320094AC1F /* TicketViewController.swift */; };
+		FF94438E2A003C320094AC1F /* TicketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF94438C2A003C320094AC1F /* TicketViewController.xib */; };
+		FF9443922A003C490094AC1F /* TicketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9443902A003C490094AC1F /* TicketTableViewCell.swift */; };
+		FF9443932A003C490094AC1F /* TicketTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF9443912A003C490094AC1F /* TicketTableViewCell.xib */; };
 		FF9C2B2129DCA58800FA3C77 /* BasicResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9C2B2029DCA58800FA3C77 /* BasicResponse.swift */; };
 		FF9C2B2329DCA5FF00FA3C77 /* BaseApiHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9C2B2229DCA5FF00FA3C77 /* BaseApiHeaders.swift */; };
 		FF9C2B2529DCAA6D00FA3C77 /* User+UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9C2B2429DCAA6D00FA3C77 /* User+UserDefaults.swift */; };
@@ -227,6 +267,9 @@
 		FFA76A3029E11434000BD881 /* TransactionNetworkingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA76A2F29E11434000BD881 /* TransactionNetworkingProtocol.swift */; };
 		FFA76A3229E11445000BD881 /* TransactionRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA76A3129E11445000BD881 /* TransactionRepo.swift */; };
 		FFA76A3629E11630000BD881 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA76A3529E11630000BD881 /* SplashViewModel.swift */; };
+		FFAA4D672A03BEC90027B478 /* AddDocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAA4D652A03BEC90027B478 /* AddDocumentViewController.swift */; };
+		FFAA4D682A03BEC90027B478 /* AddDocumentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFAA4D662A03BEC90027B478 /* AddDocumentViewController.xib */; };
+		FFAA4D6A2A03E2840027B478 /* Splash Ui O-w.gif in Resources */ = {isa = PBXBuildFile; fileRef = FFAA4D692A03E2830027B478 /* Splash Ui O-w.gif */; };
 		FFACF05829E9C1B700B8C41F /* KindOfAuctionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFACF05629E9C1B700B8C41F /* KindOfAuctionCollectionViewCell.swift */; };
 		FFACF05929E9C1B700B8C41F /* KindOfAuctionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFACF05729E9C1B700B8C41F /* KindOfAuctionCollectionViewCell.xib */; };
 		FFACF05E29EA59B700B8C41F /* AuctionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFACF05C29EA59B700B8C41F /* AuctionsViewController.swift */; };
@@ -234,9 +277,19 @@
 		FFACF06229EA59D000B8C41F /* AuctionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFACF06129EA59D000B8C41F /* AuctionsViewModel.swift */; };
 		FFACF06629EA60B200B8C41F /* AuctionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFACF06429EA60B200B8C41F /* AuctionsTableViewCell.swift */; };
 		FFACF06729EA60B200B8C41F /* AuctionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFACF06529EA60B200B8C41F /* AuctionsTableViewCell.xib */; };
+		FFB3E12C2A04248A0078BAF4 /* AuctionsSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB3E12B2A04248A0078BAF4 /* AuctionsSectionViewModel.swift */; };
+		FFB3E12E2A0478460078BAF4 /* FavoritesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB3E12D2A0478460078BAF4 /* FavoritesModel.swift */; };
 		FFBA018429DB68100021F2D8 /* SuccessResetPassowrdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBA018229DB68100021F2D8 /* SuccessResetPassowrdViewController.swift */; };
 		FFBA018529DB68100021F2D8 /* SuccessResetPassowrdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFBA018329DB68100021F2D8 /* SuccessResetPassowrdViewController.xib */; };
 		FFBA018B29DB6B590021F2D8 /* HeaderHomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFBA018A29DB6B590021F2D8 /* HeaderHomeView.xib */; };
+		FFBC3C0D2A032BCC00547566 /* DoucmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBC3C0B2A032BCC00547566 /* DoucmentsViewController.swift */; };
+		FFBC3C0E2A032BCC00547566 /* DoucmentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFBC3C0C2A032BCC00547566 /* DoucmentsViewController.xib */; };
+		FFBC3C142A032D4100547566 /* EmptyDocumentsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBC3C122A032D4100547566 /* EmptyDocumentsCollectionViewCell.swift */; };
+		FFBC3C152A032D4100547566 /* EmptyDocumentsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFBC3C132A032D4100547566 /* EmptyDocumentsCollectionViewCell.xib */; };
+		FFBC3C1A2A03307D00547566 /* FillDocumentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBC3C182A03307D00547566 /* FillDocumentCollectionViewCell.swift */; };
+		FFBC3C1B2A03307D00547566 /* FillDocumentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFBC3C192A03307D00547566 /* FillDocumentCollectionViewCell.xib */; };
+		FFBC3C1D2A0334D100547566 /* DocumentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBC3C1C2A0334D100547566 /* DocumentViewModel.swift */; };
+		FFBC3C1F2A03359900547566 /* DocumentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBC3C1E2A03359900547566 /* DocumentModel.swift */; };
 		FFBC7F6E29F0E6F700579E20 /* AuctionsFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBC7F6D29F0E6F700579E20 /* AuctionsFilterViewModel.swift */; };
 		FFBC7F7229F0E72C00579E20 /* AuctionsFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBC7F7029F0E72C00579E20 /* AuctionsFilterViewController.swift */; };
 		FFBC7F7329F0E72C00579E20 /* AuctionsFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFBC7F7129F0E72C00579E20 /* AuctionsFilterViewController.xib */; };
@@ -263,6 +316,19 @@
 		FFC6DF5029E1082B00BD9364 /* CoreRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC6DF4F29E1082B00BD9364 /* CoreRepo.swift */; };
 		FFC6DF5229E10A7A00BD9364 /* CoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC6DF5129E10A7A00BD9364 /* CoreModel.swift */; };
 		FFC6DF5529E1122000BD9364 /* TransactionApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC6DF5429E1122000BD9364 /* TransactionApi.swift */; };
+		FFC9004029FCA2300003A4FF /* EditFullNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC9003E29FCA2300003A4FF /* EditFullNameViewController.swift */; };
+		FFC9004129FCA2300003A4FF /* EditFullNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFC9003F29FCA2300003A4FF /* EditFullNameViewController.xib */; };
+		FFC9004429FCA2480003A4FF /* EditFullNameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC9004329FCA2480003A4FF /* EditFullNameViewModel.swift */; };
+		FFCB6E692A035C4C0024ECC3 /* AddDocumenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCB6E682A035C4C0024ECC3 /* AddDocumenViewModel.swift */; };
+		FFCB6E6D2A035CA80024ECC3 /* EmptyAddDocumentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCB6E6B2A035CA80024ECC3 /* EmptyAddDocumentTableViewCell.swift */; };
+		FFCB6E6E2A035CA80024ECC3 /* EmptyAddDocumentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFCB6E6C2A035CA80024ECC3 /* EmptyAddDocumentTableViewCell.xib */; };
+		FFCB6E732A035CDB0024ECC3 /* FillAddDocumentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCB6E712A035CDA0024ECC3 /* FillAddDocumentTableViewCell.swift */; };
+		FFCB6E742A035CDB0024ECC3 /* FillAddDocumentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFCB6E722A035CDB0024ECC3 /* FillAddDocumentTableViewCell.xib */; };
+		FFCDB41C2A051662008A5937 /* PlansViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCDB41B2A051662008A5937 /* PlansViewModel.swift */; };
+		FFCDB4222A051689008A5937 /* PlansTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCDB4202A051689008A5937 /* PlansTableViewCell.swift */; };
+		FFCDB4232A051689008A5937 /* PlansTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFCDB4212A051689008A5937 /* PlansTableViewCell.xib */; };
+		FFCDB4262A0516D7008A5937 /* PlansViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCDB4242A0516D7008A5937 /* PlansViewController.swift */; };
+		FFCDB4272A0516D7008A5937 /* PlansViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFCDB4252A0516D7008A5937 /* PlansViewController.xib */; };
 		FFD1BFB029C4CBA60008C814 /* MazzadTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD1BFAB29C4CBA60008C814 /* MazzadTableViewCell.xib */; };
 		FFD1BFB129C4CBA60008C814 /* MazzadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD1BFAC29C4CBA60008C814 /* MazzadTableViewCell.swift */; };
 		FFD1BFB229C4CBA60008C814 /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD1BFAE29C4CBA60008C814 /* NotificationTableViewCell.xib */; };
@@ -290,6 +356,13 @@
 		FFE2C52729DBBD3000F8C16F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE2C52529DBBD3000F8C16F /* HomeViewController.swift */; };
 		FFE2C52829DBBD3000F8C16F /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFE2C52629DBBD3000F8C16F /* HomeViewController.xib */; };
 		FFE2C52B29DBC7F200F8C16F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE2C52A29DBC7F200F8C16F /* HomeViewModel.swift */; };
+		FFFE91932A052BE3001BE377 /* PlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFE91912A052BE3001BE377 /* PlanViewController.swift */; };
+		FFFE91942A052BE3001BE377 /* PlanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFFE91922A052BE3001BE377 /* PlanViewController.xib */; };
+		FFFE91982A052C28001BE377 /* SelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFE91962A052C28001BE377 /* SelectionTableViewCell.swift */; };
+		FFFE91992A052C28001BE377 /* SelectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFFE91972A052C28001BE377 /* SelectionTableViewCell.xib */; };
+		FFFE919D2A053006001BE377 /* PlanDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFE919C2A053006001BE377 /* PlanDetailsViewModel.swift */; };
+		FFFE91A12A055C36001BE377 /* LoginWithNafathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFE919F2A055C36001BE377 /* LoginWithNafathViewController.swift */; };
+		FFFE91A22A055C36001BE377 /* LoginWithNafathViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFFE91A02A055C36001BE377 /* LoginWithNafathViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -440,6 +513,9 @@
 		FF2F701829E274FA0018B339 /* TicketsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsApi.swift; sourceTree = "<group>"; };
 		FF2F701A29E275090018B339 /* TicketNetworkingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketNetworkingProtocol.swift; sourceTree = "<group>"; };
 		FF2F701C29E275140018B339 /* TicketsRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsRepo.swift; sourceTree = "<group>"; };
+		FF46E8482A01FE1200474A46 /* SliderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderModel.swift; sourceTree = "<group>"; };
+		FF46E84A2A0215EB00474A46 /* AskGoldenBellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskGoldenBellViewModel.swift; sourceTree = "<group>"; };
+		FF46E84C2A02163E00474A46 /* AskGoldenBellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskGoldenBellModel.swift; sourceTree = "<group>"; };
 		FF4C7ECB29D379B70095396A /* Archivo-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Archivo-BlackItalic.ttf"; sourceTree = "<group>"; };
 		FF4C7ECC29D379B70095396A /* Archivo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Archivo-Regular.ttf"; sourceTree = "<group>"; };
 		FF4C7ECD29D379B70095396A /* Archivo-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Archivo-Black.ttf"; sourceTree = "<group>"; };
@@ -484,6 +560,9 @@
 		FF4C7F0F29D453CC0095396A /* TimeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeHelper.swift; sourceTree = "<group>"; };
 		FF4C7F1029D453CC0095396A /* UITextField + extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField + extension.swift"; sourceTree = "<group>"; };
 		FF4C7F2629D4608A0095396A /* UIView + extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView + extension.swift"; sourceTree = "<group>"; };
+		FF4F9C2E2A0023C100BEDF18 /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
+		FF4F9C2F2A0023C100BEDF18 /* FeedbackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedbackViewController.xib; sourceTree = "<group>"; };
+		FF4F9C342A0028AA00BEDF18 /* FeedbackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewModel.swift; sourceTree = "<group>"; };
 		FF5AF73129DFBE5D0020E716 /* AuthNetworkingProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthNetworkingProtocol.swift; sourceTree = "<group>"; };
 		FF5AF73229DFBE5D0020E716 /* AuthApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthApi.swift; sourceTree = "<group>"; };
 		FF5AF73329DFBE5D0020E716 /* AuthRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthRepo.swift; sourceTree = "<group>"; };
@@ -518,6 +597,13 @@
 		FF708E0C29F7211D001C8003 /* AuctionSpcificationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuctionSpcificationTableViewCell.xib; sourceTree = "<group>"; };
 		FF708E1029F72E20001C8003 /* PlaceBidViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceBidViewController.swift; sourceTree = "<group>"; };
 		FF708E1129F72E20001C8003 /* PlaceBidViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceBidViewController.xib; sourceTree = "<group>"; };
+		FF7185D629FB7CFD00867213 /* PersonalInformationHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformationHeader.swift; sourceTree = "<group>"; };
+		FF7185D729FB7CFD00867213 /* PersonalInformationHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalInformationHeader.xib; sourceTree = "<group>"; };
+		FF7185DB29FB7EC900867213 /* EditPeronalInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPeronalInformationViewModel.swift; sourceTree = "<group>"; };
+		FF7185E229FB90D800867213 /* PersonalInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformationViewController.swift; sourceTree = "<group>"; };
+		FF7185E329FB90D800867213 /* PersonalInformationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalInformationViewController.xib; sourceTree = "<group>"; };
+		FF7185E729FB946800867213 /* ControlCenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCenterViewController.swift; sourceTree = "<group>"; };
+		FF7185E829FB946800867213 /* ControlCenterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ControlCenterViewController.xib; sourceTree = "<group>"; };
 		FF76275A29E1F224002D531F /* RegisterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterViewModel.swift; path = ../../../../API/RegisterViewModel.swift; sourceTree = "<group>"; };
 		FF76275E29E24E52002D531F /* AuctionHolderCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionHolderCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		FF76275F29E24E52002D531F /* AuctionHolderCellCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuctionHolderCellCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -529,7 +615,11 @@
 		FF79E39429F1889000CEED4D /* NotificationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewModel.swift; sourceTree = "<group>"; };
 		FF79E39729F19A7600CEED4D /* NotificationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsModel.swift; sourceTree = "<group>"; };
 		FF7C054929EB984800F08787 /* OTPViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewModel.swift; sourceTree = "<group>"; };
+		FF7C464D29FCFC4000615314 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		FF7C464E29FCFC4000615314 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 		FF7EBFAC29DD180B00261946 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
+		FF7EEA2729FDCE4400BE1CBE /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
+		FF7EEA2829FDCE4400BE1CBE /* ContactUsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactUsViewController.xib; sourceTree = "<group>"; };
 		FF818B7429F76AD500CA9A99 /* SuccessResetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessResetPasswordViewModel.swift; sourceTree = "<group>"; };
 		FF818B7729F8425D00CA9A99 /* AuctionStortingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionStortingViewController.swift; sourceTree = "<group>"; };
 		FF818B7829F8425D00CA9A99 /* AuctionStortingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuctionStortingViewController.xib; sourceTree = "<group>"; };
@@ -550,22 +640,45 @@
 		FF81900629D50D6400033060 /* OnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewModel.swift; sourceTree = "<group>"; };
 		FF81900929D50D9000033060 /* OnBoardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingModel.swift; sourceTree = "<group>"; };
 		FF81900B29D5221C00033060 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		FF85828029FAEB6B002D98ED /* AskGoldenBellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskGoldenBellViewController.swift; sourceTree = "<group>"; };
+		FF85828129FAEB6B002D98ED /* AskGoldenBellViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AskGoldenBellViewController.xib; sourceTree = "<group>"; };
 		FF85AD1F29EEE53900BED67F /* CategoriesAuctionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesAuctionsModel.swift; sourceTree = "<group>"; };
 		FF8B256E29EB29FC00302346 /* AuctionDetailesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionDetailesView.swift; sourceTree = "<group>"; };
 		FF8B257029EB2A1A00302346 /* AuctionDetailesView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuctionDetailesView.xib; sourceTree = "<group>"; };
 		FF8B257429EB310000302346 /* AuctionOwnerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuctionOwnerView.xib; sourceTree = "<group>"; };
 		FF8B257629EB310B00302346 /* AuctionOwnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionOwnerView.swift; sourceTree = "<group>"; };
+		FF8B950A29FA698A00441899 /* BiddingAuctionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiddingAuctionsTableViewCell.swift; sourceTree = "<group>"; };
+		FF8B950B29FA698A00441899 /* BiddingAuctionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BiddingAuctionsTableViewCell.xib; sourceTree = "<group>"; };
+		FF8B951029FA69D800441899 /* MyAuctionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAuctionsTableViewCell.swift; sourceTree = "<group>"; };
+		FF8B951129FA69D800441899 /* MyAuctionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyAuctionsTableViewCell.xib; sourceTree = "<group>"; };
+		FF8B951829FA6ADE00441899 /* AskGoldenBellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskGoldenBellTableViewCell.swift; sourceTree = "<group>"; };
+		FF8B951929FA6ADE00441899 /* AskGoldenBellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AskGoldenBellTableViewCell.xib; sourceTree = "<group>"; };
+		FF8B951D29FACDA100441899 /* AuctionsSectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionsSectionViewController.swift; sourceTree = "<group>"; };
+		FF8B951E29FACDA100441899 /* AuctionsSectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuctionsSectionViewController.xib; sourceTree = "<group>"; };
 		FF8D31D929F93C2F0000958D /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		FF8D31DA29F93C2F0000958D /* MainTabBarController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTabBarController.xib; sourceTree = "<group>"; };
-		FF8D31E229F9436F0000958D /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
-		FF8D31E529F944270000958D /* EditProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileHeader.swift; sourceTree = "<group>"; };
-		FF8D31E629F944270000958D /* EditProfileHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileHeader.xib; sourceTree = "<group>"; };
+		FF8D31E229F9436F0000958D /* ControlCenterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCenterViewModel.swift; sourceTree = "<group>"; };
+		FF8D31E529F944270000958D /* ControlCenterHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCenterHeader.swift; sourceTree = "<group>"; };
+		FF8D31E629F944270000958D /* ControlCenterHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ControlCenterHeader.xib; sourceTree = "<group>"; };
 		FF8E83C329EC35A9009AE77C /* ResetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewModel.swift; sourceTree = "<group>"; };
 		FF8E83C629EC70EB009AE77C /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
 		FF8E83CA29EC7129009AE77C /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		FF8E83CB29EC7129009AE77C /* CategoriesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesViewController.xib; sourceTree = "<group>"; };
 		FF8E83D129EED14F009AE77C /* AuctionCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionCategoryTableViewCell.swift; sourceTree = "<group>"; };
 		FF8E83D229EED14F009AE77C /* AuctionCategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuctionCategoryTableViewCell.xib; sourceTree = "<group>"; };
+		FF92D93A29FB6B14006BAF9B /* ControlCenterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCenterTableViewCell.swift; sourceTree = "<group>"; };
+		FF92D93B29FB6B14006BAF9B /* ControlCenterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ControlCenterTableViewCell.xib; sourceTree = "<group>"; };
+		FF92D93F29FB6BE3006BAF9B /* ControlCentetrFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCentetrFooter.swift; sourceTree = "<group>"; };
+		FF92D94029FB6BE3006BAF9B /* ControlCentetrFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ControlCentetrFooter.xib; sourceTree = "<group>"; };
+		FF92D94929FB7107006BAF9B /* PersonalInformationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformationTableViewCell.swift; sourceTree = "<group>"; };
+		FF92D94A29FB7107006BAF9B /* PersonalInformationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalInformationTableViewCell.xib; sourceTree = "<group>"; };
+		FF9443812A0033930094AC1F /* RequesActionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequesActionViewModel.swift; sourceTree = "<group>"; };
+		FF9443852A0033C10094AC1F /* RequestAuctionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAuctionViewController.swift; sourceTree = "<group>"; };
+		FF9443862A0033C10094AC1F /* RequestAuctionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestAuctionViewController.xib; sourceTree = "<group>"; };
+		FF94438B2A003C320094AC1F /* TicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketViewController.swift; sourceTree = "<group>"; };
+		FF94438C2A003C320094AC1F /* TicketViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TicketViewController.xib; sourceTree = "<group>"; };
+		FF9443902A003C490094AC1F /* TicketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketTableViewCell.swift; sourceTree = "<group>"; };
+		FF9443912A003C490094AC1F /* TicketTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TicketTableViewCell.xib; sourceTree = "<group>"; };
 		FF9C2B2029DCA58800FA3C77 /* BasicResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicResponse.swift; sourceTree = "<group>"; };
 		FF9C2B2229DCA5FF00FA3C77 /* BaseApiHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseApiHeaders.swift; sourceTree = "<group>"; };
 		FF9C2B2429DCAA6D00FA3C77 /* User+UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+UserDefaults.swift"; sourceTree = "<group>"; };
@@ -573,6 +686,9 @@
 		FFA76A2F29E11434000BD881 /* TransactionNetworkingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionNetworkingProtocol.swift; sourceTree = "<group>"; };
 		FFA76A3129E11445000BD881 /* TransactionRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRepo.swift; sourceTree = "<group>"; };
 		FFA76A3529E11630000BD881 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		FFAA4D652A03BEC90027B478 /* AddDocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDocumentViewController.swift; sourceTree = "<group>"; };
+		FFAA4D662A03BEC90027B478 /* AddDocumentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddDocumentViewController.xib; sourceTree = "<group>"; };
+		FFAA4D692A03E2830027B478 /* Splash Ui O-w.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Splash Ui O-w.gif"; sourceTree = "<group>"; };
 		FFACF05629E9C1B700B8C41F /* KindOfAuctionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KindOfAuctionCollectionViewCell.swift; sourceTree = "<group>"; };
 		FFACF05729E9C1B700B8C41F /* KindOfAuctionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KindOfAuctionCollectionViewCell.xib; sourceTree = "<group>"; };
 		FFACF05C29EA59B700B8C41F /* AuctionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionsViewController.swift; sourceTree = "<group>"; };
@@ -580,9 +696,19 @@
 		FFACF06129EA59D000B8C41F /* AuctionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionsViewModel.swift; sourceTree = "<group>"; };
 		FFACF06429EA60B200B8C41F /* AuctionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionsTableViewCell.swift; sourceTree = "<group>"; };
 		FFACF06529EA60B200B8C41F /* AuctionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuctionsTableViewCell.xib; sourceTree = "<group>"; };
+		FFB3E12B2A04248A0078BAF4 /* AuctionsSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionsSectionViewModel.swift; sourceTree = "<group>"; };
+		FFB3E12D2A0478460078BAF4 /* FavoritesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesModel.swift; sourceTree = "<group>"; };
 		FFBA018229DB68100021F2D8 /* SuccessResetPassowrdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessResetPassowrdViewController.swift; sourceTree = "<group>"; };
 		FFBA018329DB68100021F2D8 /* SuccessResetPassowrdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuccessResetPassowrdViewController.xib; sourceTree = "<group>"; };
 		FFBA018A29DB6B590021F2D8 /* HeaderHomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderHomeView.xib; sourceTree = "<group>"; };
+		FFBC3C0B2A032BCC00547566 /* DoucmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoucmentsViewController.swift; sourceTree = "<group>"; };
+		FFBC3C0C2A032BCC00547566 /* DoucmentsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoucmentsViewController.xib; sourceTree = "<group>"; };
+		FFBC3C122A032D4100547566 /* EmptyDocumentsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDocumentsCollectionViewCell.swift; sourceTree = "<group>"; };
+		FFBC3C132A032D4100547566 /* EmptyDocumentsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyDocumentsCollectionViewCell.xib; sourceTree = "<group>"; };
+		FFBC3C182A03307D00547566 /* FillDocumentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillDocumentCollectionViewCell.swift; sourceTree = "<group>"; };
+		FFBC3C192A03307D00547566 /* FillDocumentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FillDocumentCollectionViewCell.xib; sourceTree = "<group>"; };
+		FFBC3C1C2A0334D100547566 /* DocumentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewModel.swift; sourceTree = "<group>"; };
+		FFBC3C1E2A03359900547566 /* DocumentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentModel.swift; sourceTree = "<group>"; };
 		FFBC7F6D29F0E6F700579E20 /* AuctionsFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionsFilterViewModel.swift; sourceTree = "<group>"; };
 		FFBC7F7029F0E72C00579E20 /* AuctionsFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionsFilterViewController.swift; sourceTree = "<group>"; };
 		FFBC7F7129F0E72C00579E20 /* AuctionsFilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuctionsFilterViewController.xib; sourceTree = "<group>"; };
@@ -609,6 +735,19 @@
 		FFC6DF4F29E1082B00BD9364 /* CoreRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreRepo.swift; sourceTree = "<group>"; };
 		FFC6DF5129E10A7A00BD9364 /* CoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreModel.swift; sourceTree = "<group>"; };
 		FFC6DF5429E1122000BD9364 /* TransactionApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionApi.swift; sourceTree = "<group>"; };
+		FFC9003E29FCA2300003A4FF /* EditFullNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFullNameViewController.swift; sourceTree = "<group>"; };
+		FFC9003F29FCA2300003A4FF /* EditFullNameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditFullNameViewController.xib; sourceTree = "<group>"; };
+		FFC9004329FCA2480003A4FF /* EditFullNameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFullNameViewModel.swift; sourceTree = "<group>"; };
+		FFCB6E682A035C4C0024ECC3 /* AddDocumenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDocumenViewModel.swift; sourceTree = "<group>"; };
+		FFCB6E6B2A035CA80024ECC3 /* EmptyAddDocumentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyAddDocumentTableViewCell.swift; sourceTree = "<group>"; };
+		FFCB6E6C2A035CA80024ECC3 /* EmptyAddDocumentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyAddDocumentTableViewCell.xib; sourceTree = "<group>"; };
+		FFCB6E712A035CDA0024ECC3 /* FillAddDocumentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillAddDocumentTableViewCell.swift; sourceTree = "<group>"; };
+		FFCB6E722A035CDB0024ECC3 /* FillAddDocumentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FillAddDocumentTableViewCell.xib; sourceTree = "<group>"; };
+		FFCDB41B2A051662008A5937 /* PlansViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlansViewModel.swift; sourceTree = "<group>"; };
+		FFCDB4202A051689008A5937 /* PlansTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlansTableViewCell.swift; sourceTree = "<group>"; };
+		FFCDB4212A051689008A5937 /* PlansTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlansTableViewCell.xib; sourceTree = "<group>"; };
+		FFCDB4242A0516D7008A5937 /* PlansViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlansViewController.swift; sourceTree = "<group>"; };
+		FFCDB4252A0516D7008A5937 /* PlansViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlansViewController.xib; sourceTree = "<group>"; };
 		FFD1BFAB29C4CBA60008C814 /* MazzadTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MazzadTableViewCell.xib; sourceTree = "<group>"; };
 		FFD1BFAC29C4CBA60008C814 /* MazzadTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MazzadTableViewCell.swift; sourceTree = "<group>"; };
 		FFD1BFAE29C4CBA60008C814 /* NotificationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationTableViewCell.xib; sourceTree = "<group>"; };
@@ -636,6 +775,13 @@
 		FFE2C52529DBBD3000F8C16F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FFE2C52629DBBD3000F8C16F /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		FFE2C52A29DBC7F200F8C16F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		FFFE91912A052BE3001BE377 /* PlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanViewController.swift; sourceTree = "<group>"; };
+		FFFE91922A052BE3001BE377 /* PlanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlanViewController.xib; sourceTree = "<group>"; };
+		FFFE91962A052C28001BE377 /* SelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionTableViewCell.swift; sourceTree = "<group>"; };
+		FFFE91972A052C28001BE377 /* SelectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectionTableViewCell.xib; sourceTree = "<group>"; };
+		FFFE919C2A053006001BE377 /* PlanDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanDetailsViewModel.swift; sourceTree = "<group>"; };
+		FFFE919F2A055C36001BE377 /* LoginWithNafathViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithNafathViewController.swift; sourceTree = "<group>"; };
+		FFFE91A02A055C36001BE377 /* LoginWithNafathViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginWithNafathViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -857,10 +1003,10 @@
 				FF4C7EF029D37AFB0095396A /* Modules */,
 				FAE9A81E2665E2DE00D40FD2 /* AnswerQVC.swift */,
 				FFD1BFAA29C4CBA60008C814 /* MazzadTableViewCell */,
-				FFD1BFAD29C4CBA60008C814 /* NotificationTableViewCell */,
 				FA4F79A225770E84008FC9A1 /* AppDelegate+FCM.swift */,
 				FF4C7EFB29D453CC0095396A /* CustomizeComponents */,
 				FABD93912532DBF600BFB943 /* SceneDelegate.swift */,
+				FFAA4D692A03E2830027B478 /* Splash Ui O-w.gif */,
 				FABD93932532DBF600BFB943 /* ViewController.swift */,
 				FABD93982532DBF900BFB943 /* Assets.xcassets */,
 				FABD93D02532DD7B00BFB943 /* Color.xcassets */,
@@ -998,6 +1144,20 @@
 		FF4C7EF029D37AFB0095396A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FFFE919E2A055BFA001BE377 /* VerifyWithNafath */,
+				FFFE91902A052BC7001BE377 /* PlanDetails */,
+				FFCDB41A2A051650008A5937 /* Plans */,
+				FFCB6E672A035C3F0024ECC3 /* AddDocument */,
+				FFBC3C0A2A032BAE00547566 /* DocumentsViewController  */,
+				FF9443892A003C190094AC1F /* Ticket */,
+				FF9443802A0033770094AC1F /* RequestAuction */,
+				FF4F9C2D2A0023A800BEDF18 /* Feedback */,
+				FF7EEA2629FDCE2D00BE1CBE /* ContactUs */,
+				FF7C464C29FCFC2E00615314 /* Settings */,
+				FFC9003D29FCA2190003A4FF /* EditFullName */,
+				FF92D94729FB70DF006BAF9B /* Personalnformation */,
+				FF8B951429FA6A3300441899 /* AskGoldenBell */,
+				FF8B950629FA694300441899 /* AuctionsSection */,
 				FF8D31DD29F9433D0000958D /* ControlCenter */,
 				FF8D31D829F93C030000958D /* MainTabBar */,
 				FF818B8829F86A9800CA9A99 /* Profile */,
@@ -1067,6 +1227,32 @@
 			path = CustomizeComponents;
 			sourceTree = "<group>";
 		};
+		FF4F9C2D2A0023A800BEDF18 /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				FF4F9C332A00284800BEDF18 /* ViewModel */,
+				FF4F9C322A00283E00BEDF18 /* View */,
+			);
+			path = Feedback;
+			sourceTree = "<group>";
+		};
+		FF4F9C322A00283E00BEDF18 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FF4F9C2E2A0023C100BEDF18 /* FeedbackViewController.swift */,
+				FF4F9C2F2A0023C100BEDF18 /* FeedbackViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FF4F9C332A00284800BEDF18 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FF4F9C342A0028AA00BEDF18 /* FeedbackViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		FF5AF73029DFBE5D0020E716 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
@@ -1097,6 +1283,10 @@
 				FF85AD1F29EEE53900BED67F /* CategoriesAuctionsModel.swift */,
 				FF79E39729F19A7600CEED4D /* NotificationsModel.swift */,
 				FFC5B0FC29F70F720039AB0E /* AuctionDetailsModel.swift */,
+				FF46E8482A01FE1200474A46 /* SliderModel.swift */,
+				FF46E84C2A02163E00474A46 /* AskGoldenBellModel.swift */,
+				FFBC3C1E2A03359900547566 /* DocumentModel.swift */,
+				FFB3E12D2A0478460078BAF4 /* FavoritesModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1177,6 +1367,32 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		FF7185D429FB7CD400867213 /* PersonalInformationHeader */ = {
+			isa = PBXGroup;
+			children = (
+				FF7185D629FB7CFD00867213 /* PersonalInformationHeader.swift */,
+				FF7185D729FB7CFD00867213 /* PersonalInformationHeader.xib */,
+			);
+			path = PersonalInformationHeader;
+			sourceTree = "<group>";
+		};
+		FF7185DA29FB7EB400867213 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FF7185DB29FB7EC900867213 /* EditPeronalInformationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FF7185DD29FB801C00867213 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FF7185E229FB90D800867213 /* PersonalInformationViewController.swift */,
+				FF7185E329FB90D800867213 /* PersonalInformationViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		FF76275C29E24E22002D531F /* CategoryCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1213,6 +1429,7 @@
 		FF79E38E29F1885600CEED4D /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
+				FFD1BFAD29C4CBA60008C814 /* NotificationTableViewCell */,
 				FF79E39329F1887A00CEED4D /* View */,
 				FF79E39629F1889600CEED4D /* ViewModel */,
 			);
@@ -1260,6 +1477,24 @@
 				FF7C054929EB984800F08787 /* OTPViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FF7C464C29FCFC2E00615314 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				FF7C464D29FCFC4000615314 /* SettingViewController.swift */,
+				FF7C464E29FCFC4000615314 /* SettingViewController.xib */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		FF7EEA2629FDCE2D00BE1CBE /* ContactUs */ = {
+			isa = PBXGroup;
+			children = (
+				FF7EEA2729FDCE4400BE1CBE /* ContactUsViewController.swift */,
+				FF7EEA2829FDCE4400BE1CBE /* ContactUsViewController.xib */,
+			);
+			path = ContactUs;
 			sourceTree = "<group>";
 		};
 		FF7F628629D8C53F00E7D20E /* View */ = {
@@ -1478,6 +1713,96 @@
 			path = AuctionOwnerView;
 			sourceTree = "<group>";
 		};
+		FF8B950629FA694300441899 /* AuctionsSection */ = {
+			isa = PBXGroup;
+			children = (
+				FF8B950929FA696C00441899 /* ViewModel */,
+				FF8B950829FA696300441899 /* View */,
+				FF8B950729FA695900441899 /* Adabter */,
+			);
+			path = AuctionsSection;
+			sourceTree = "<group>";
+		};
+		FF8B950729FA695900441899 /* Adabter */ = {
+			isa = PBXGroup;
+			children = (
+				FF8B950F29FA69BF00441899 /* MyAcutionTableViewCell */,
+				FF8B950E29FA699000441899 /* BiddingAuctionTableViewCell */,
+			);
+			path = Adabter;
+			sourceTree = "<group>";
+		};
+		FF8B950829FA696300441899 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FF8B951D29FACDA100441899 /* AuctionsSectionViewController.swift */,
+				FF8B951E29FACDA100441899 /* AuctionsSectionViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FF8B950929FA696C00441899 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FFB3E12B2A04248A0078BAF4 /* AuctionsSectionViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FF8B950E29FA699000441899 /* BiddingAuctionTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FF8B950A29FA698A00441899 /* BiddingAuctionsTableViewCell.swift */,
+				FF8B950B29FA698A00441899 /* BiddingAuctionsTableViewCell.xib */,
+			);
+			path = BiddingAuctionTableViewCell;
+			sourceTree = "<group>";
+		};
+		FF8B950F29FA69BF00441899 /* MyAcutionTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FF8B951029FA69D800441899 /* MyAuctionsTableViewCell.swift */,
+				FF8B951129FA69D800441899 /* MyAuctionsTableViewCell.xib */,
+			);
+			path = MyAcutionTableViewCell;
+			sourceTree = "<group>";
+		};
+		FF8B951429FA6A3300441899 /* AskGoldenBell */ = {
+			isa = PBXGroup;
+			children = (
+				FF8B951729FA6A4B00441899 /* ViewModel */,
+				FF8B951629FA6A4700441899 /* View */,
+				FF8B951529FA6A3B00441899 /* Adabter */,
+			);
+			path = AskGoldenBell;
+			sourceTree = "<group>";
+		};
+		FF8B951529FA6A3B00441899 /* Adabter */ = {
+			isa = PBXGroup;
+			children = (
+				FF8B951829FA6ADE00441899 /* AskGoldenBellTableViewCell.swift */,
+				FF8B951929FA6ADE00441899 /* AskGoldenBellTableViewCell.xib */,
+			);
+			path = Adabter;
+			sourceTree = "<group>";
+		};
+		FF8B951629FA6A4700441899 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FF85828029FAEB6B002D98ED /* AskGoldenBellViewController.swift */,
+				FF85828129FAEB6B002D98ED /* AskGoldenBellViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FF8B951729FA6A4B00441899 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FF46E84A2A0215EB00474A46 /* AskGoldenBellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		FF8D31D829F93C030000958D /* MainTabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -1508,6 +1833,8 @@
 		FF8D31DF29F943500000958D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FF7185E729FB946800867213 /* ControlCenterViewController.swift */,
+				FF7185E829FB946800867213 /* ControlCenterViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1515,6 +1842,8 @@
 		FF8D31E029F943580000958D /* Adabter */ = {
 			isa = PBXGroup;
 			children = (
+				FF92D93E29FB6BC9006BAF9B /* ControlCenterFooter */,
+				FF92D93929FB6AFE006BAF9B /* ControlCenterTableViewCell */,
 				FF8D31E429F9440F0000958D /* ControlCenterHeader */,
 			);
 			path = Adabter;
@@ -1523,7 +1852,7 @@
 		FF8D31E129F9435E0000958D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				FF8D31E229F9436F0000958D /* EditProfileViewModel.swift */,
+				FF8D31E229F9436F0000958D /* ControlCenterViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1531,8 +1860,8 @@
 		FF8D31E429F9440F0000958D /* ControlCenterHeader */ = {
 			isa = PBXGroup;
 			children = (
-				FF8D31E529F944270000958D /* EditProfileHeader.swift */,
-				FF8D31E629F944270000958D /* EditProfileHeader.xib */,
+				FF8D31E529F944270000958D /* ControlCenterHeader.swift */,
+				FF8D31E629F944270000958D /* ControlCenterHeader.xib */,
 			);
 			path = ControlCenterHeader;
 			sourceTree = "<group>";
@@ -1590,6 +1919,97 @@
 			path = Adabter;
 			sourceTree = "<group>";
 		};
+		FF92D93929FB6AFE006BAF9B /* ControlCenterTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FF92D93A29FB6B14006BAF9B /* ControlCenterTableViewCell.swift */,
+				FF92D93B29FB6B14006BAF9B /* ControlCenterTableViewCell.xib */,
+			);
+			path = ControlCenterTableViewCell;
+			sourceTree = "<group>";
+		};
+		FF92D93E29FB6BC9006BAF9B /* ControlCenterFooter */ = {
+			isa = PBXGroup;
+			children = (
+				FF92D93F29FB6BE3006BAF9B /* ControlCentetrFooter.swift */,
+				FF92D94029FB6BE3006BAF9B /* ControlCentetrFooter.xib */,
+			);
+			path = ControlCenterFooter;
+			sourceTree = "<group>";
+		};
+		FF92D94729FB70DF006BAF9B /* Personalnformation */ = {
+			isa = PBXGroup;
+			children = (
+				FF7185DD29FB801C00867213 /* View */,
+				FF7185DA29FB7EB400867213 /* ViewModel */,
+				FF92D94829FB70ED006BAF9B /* Adabter */,
+			);
+			path = Personalnformation;
+			sourceTree = "<group>";
+		};
+		FF92D94829FB70ED006BAF9B /* Adabter */ = {
+			isa = PBXGroup;
+			children = (
+				FF7185D429FB7CD400867213 /* PersonalInformationHeader */,
+				FF92D94929FB7107006BAF9B /* PersonalInformationTableViewCell.swift */,
+				FF92D94A29FB7107006BAF9B /* PersonalInformationTableViewCell.xib */,
+			);
+			path = Adabter;
+			sourceTree = "<group>";
+		};
+		FF9443802A0033770094AC1F /* RequestAuction */ = {
+			isa = PBXGroup;
+			children = (
+				FF9443842A0033B00094AC1F /* View */,
+				FF9443832A0033A90094AC1F /* ViewModel */,
+			);
+			path = RequestAuction;
+			sourceTree = "<group>";
+		};
+		FF9443832A0033A90094AC1F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FF9443812A0033930094AC1F /* RequesActionViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FF9443842A0033B00094AC1F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FF9443852A0033C10094AC1F /* RequestAuctionViewController.swift */,
+				FF9443862A0033C10094AC1F /* RequestAuctionViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FF9443892A003C190094AC1F /* Ticket */ = {
+			isa = PBXGroup;
+			children = (
+				FF94438F2A003C3A0094AC1F /* Adabtetr */,
+				FF94438A2A003C210094AC1F /* View */,
+			);
+			path = Ticket;
+			sourceTree = "<group>";
+		};
+		FF94438A2A003C210094AC1F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FF94438B2A003C320094AC1F /* TicketViewController.swift */,
+				FF94438C2A003C320094AC1F /* TicketViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FF94438F2A003C3A0094AC1F /* Adabtetr */ = {
+			isa = PBXGroup;
+			children = (
+				FF9443902A003C490094AC1F /* TicketTableViewCell.swift */,
+				FF9443912A003C490094AC1F /* TicketTableViewCell.xib */,
+			);
+			path = Adabtetr;
+			sourceTree = "<group>";
+		};
 		FF9C2B1F29DCA3A900FA3C77 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -1624,6 +2044,15 @@
 				FFA76A3529E11630000BD881 /* SplashViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FFAA4D642A03BEB90027B478 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FFAA4D652A03BEC90027B478 /* AddDocumentViewController.swift */,
+				FFAA4D662A03BEC90027B478 /* AddDocumentViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		FFACF05429E9C18500B8C41F /* TableViewCell */ = {
@@ -1707,6 +2136,60 @@
 				FFE2C51C29DBB18200F8C16F /* PackageSubscribePlanView */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		FFBC3C0A2A032BAE00547566 /* DocumentsViewController  */ = {
+			isa = PBXGroup;
+			children = (
+				FFBC3C112A032D2700547566 /* Adabter */,
+				FFBC3C102A032D2300547566 /* ViewModel */,
+				FFBC3C0F2A032D1500547566 /* View */,
+			);
+			path = "DocumentsViewController ";
+			sourceTree = "<group>";
+		};
+		FFBC3C0F2A032D1500547566 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FFBC3C0B2A032BCC00547566 /* DoucmentsViewController.swift */,
+				FFBC3C0C2A032BCC00547566 /* DoucmentsViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FFBC3C102A032D2300547566 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FFBC3C1C2A0334D100547566 /* DocumentViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FFBC3C112A032D2700547566 /* Adabter */ = {
+			isa = PBXGroup;
+			children = (
+				FFBC3C172A03304D00547566 /* Fill */,
+				FFBC3C162A03304400547566 /* Empty */,
+			);
+			path = Adabter;
+			sourceTree = "<group>";
+		};
+		FFBC3C162A03304400547566 /* Empty */ = {
+			isa = PBXGroup;
+			children = (
+				FFBC3C122A032D4100547566 /* EmptyDocumentsCollectionViewCell.swift */,
+				FFBC3C132A032D4100547566 /* EmptyDocumentsCollectionViewCell.xib */,
+			);
+			path = Empty;
+			sourceTree = "<group>";
+		};
+		FFBC3C172A03304D00547566 /* Fill */ = {
+			isa = PBXGroup;
+			children = (
+				FFBC3C182A03307D00547566 /* FillDocumentCollectionViewCell.swift */,
+				FFBC3C192A03307D00547566 /* FillDocumentCollectionViewCell.xib */,
+			);
+			path = Fill;
 			sourceTree = "<group>";
 		};
 		FFBC7F6C29F0E6E300579E20 /* AuctionsFilter */ = {
@@ -1826,6 +2309,105 @@
 				FFA76A3129E11445000BD881 /* TransactionRepo.swift */,
 			);
 			path = Transaction;
+			sourceTree = "<group>";
+		};
+		FFC9003D29FCA2190003A4FF /* EditFullName */ = {
+			isa = PBXGroup;
+			children = (
+				FFC9004229FCA2350003A4FF /* View */,
+				FFC9004529FCA24C0003A4FF /* ViewModel */,
+			);
+			path = EditFullName;
+			sourceTree = "<group>";
+		};
+		FFC9004229FCA2350003A4FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FFC9003E29FCA2300003A4FF /* EditFullNameViewController.swift */,
+				FFC9003F29FCA2300003A4FF /* EditFullNameViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FFC9004529FCA24C0003A4FF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FFC9004329FCA2480003A4FF /* EditFullNameViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FFCB6E672A035C3F0024ECC3 /* AddDocument */ = {
+			isa = PBXGroup;
+			children = (
+				FFAA4D642A03BEB90027B478 /* View */,
+				FFCB6E702A035CC80024ECC3 /* Fill */,
+				FFCB6E6A2A035C5F0024ECC3 /* ViewModel */,
+				FFCB6E6F2A035CAE0024ECC3 /* Empty */,
+			);
+			path = AddDocument;
+			sourceTree = "<group>";
+		};
+		FFCB6E6A2A035C5F0024ECC3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FFCB6E682A035C4C0024ECC3 /* AddDocumenViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FFCB6E6F2A035CAE0024ECC3 /* Empty */ = {
+			isa = PBXGroup;
+			children = (
+				FFCB6E6B2A035CA80024ECC3 /* EmptyAddDocumentTableViewCell.swift */,
+				FFCB6E6C2A035CA80024ECC3 /* EmptyAddDocumentTableViewCell.xib */,
+			);
+			path = Empty;
+			sourceTree = "<group>";
+		};
+		FFCB6E702A035CC80024ECC3 /* Fill */ = {
+			isa = PBXGroup;
+			children = (
+				FFCB6E712A035CDA0024ECC3 /* FillAddDocumentTableViewCell.swift */,
+				FFCB6E722A035CDB0024ECC3 /* FillAddDocumentTableViewCell.xib */,
+			);
+			path = Fill;
+			sourceTree = "<group>";
+		};
+		FFCDB41A2A051650008A5937 /* Plans */ = {
+			isa = PBXGroup;
+			children = (
+				FFCDB41F2A051675008A5937 /* Adabter */,
+				FFCDB41E2A051671008A5937 /* View */,
+				FFCDB41D2A051666008A5937 /* PlansViewModel */,
+			);
+			path = Plans;
+			sourceTree = "<group>";
+		};
+		FFCDB41D2A051666008A5937 /* PlansViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FFCDB41B2A051662008A5937 /* PlansViewModel.swift */,
+			);
+			path = PlansViewModel;
+			sourceTree = "<group>";
+		};
+		FFCDB41E2A051671008A5937 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FFCDB4242A0516D7008A5937 /* PlansViewController.swift */,
+				FFCDB4252A0516D7008A5937 /* PlansViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FFCDB41F2A051675008A5937 /* Adabter */ = {
+			isa = PBXGroup;
+			children = (
+				FFCDB4202A051689008A5937 /* PlansTableViewCell.swift */,
+				FFCDB4212A051689008A5937 /* PlansTableViewCell.xib */,
+			);
+			path = Adabter;
 			sourceTree = "<group>";
 		};
 		FFD1BFAA29C4CBA60008C814 /* MazzadTableViewCell */ = {
@@ -1986,6 +2568,59 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		FFFE91902A052BC7001BE377 /* PlanDetails */ = {
+			isa = PBXGroup;
+			children = (
+				FFFE919B2A052FF1001BE377 /* ViewModel */,
+				FFFE91952A052BED001BE377 /* View */,
+				FFFE919A2A052C2E001BE377 /* Adapter */,
+			);
+			path = PlanDetails;
+			sourceTree = "<group>";
+		};
+		FFFE91952A052BED001BE377 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FFFE91912A052BE3001BE377 /* PlanViewController.swift */,
+				FFFE91922A052BE3001BE377 /* PlanViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FFFE919A2A052C2E001BE377 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				FFFE91962A052C28001BE377 /* SelectionTableViewCell.swift */,
+				FFFE91972A052C28001BE377 /* SelectionTableViewCell.xib */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		FFFE919B2A052FF1001BE377 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FFFE919C2A053006001BE377 /* PlanDetailsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FFFE919E2A055BFA001BE377 /* VerifyWithNafath */ = {
+			isa = PBXGroup;
+			children = (
+				FFFE91A32A055C3A001BE377 /* View */,
+			);
+			path = VerifyWithNafath;
+			sourceTree = "<group>";
+		};
+		FFFE91A32A055C3A001BE377 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FFFE919F2A055C36001BE377 /* LoginWithNafathViewController.swift */,
+				FFFE91A02A055C36001BE377 /* LoginWithNafathViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2050,23 +2685,32 @@
 			files = (
 				FA49CE152546A063004CDD6E /* Roboto-Light.ttf in Resources */,
 				FF8D31DC29F93C2F0000958D /* MainTabBarController.xib in Resources */,
+				FF8B950D29FA698A00441899 /* BiddingAuctionsTableViewCell.xib in Resources */,
+				FF7EEA2A29FDCE4400BE1CBE /* ContactUsViewController.xib in Resources */,
 				FA49CE132546A058004CDD6E /* Roboto-BoldItalic.ttf in Resources */,
 				FA4E023E25743D4500D14B03 /* fave.gif in Resources */,
 				FFE2C52829DBBD3000F8C16F /* HomeViewController.xib in Resources */,
 				FA762B77259E0AD30035E0EB /* Header.xib in Resources */,
+				FF94438E2A003C320094AC1F /* TicketViewController.xib in Resources */,
+				FF7185D929FB7CFD00867213 /* PersonalInformationHeader.xib in Resources */,
 				FF4C7EE629D379B70095396A /* Archivo-ThinItalic.ttf in Resources */,
 				FFD1BFBD29C4D21C0008C814 /* RegisterViewController.xib in Resources */,
 				FF8B257129EB2A1A00302346 /* AuctionDetailesView.xib in Resources */,
+				FFFE91942A052BE3001BE377 /* PlanViewController.xib in Resources */,
+				FF7185E529FB90D800867213 /* PersonalInformationViewController.xib in Resources */,
 				FFACF05929E9C1B700B8C41F /* KindOfAuctionCollectionViewCell.xib in Resources */,
+				FF92D94229FB6BE3006BAF9B /* ControlCentetrFooter.xib in Resources */,
 				FA49CE142546A05B004CDD6E /* Roboto-Italic.ttf in Resources */,
 				FFBA018B29DB6B590021F2D8 /* HeaderHomeView.xib in Resources */,
 				FAA348EE266E0D0300243DAF /* 371903340_LOCATION_MARKER_400.gif in Resources */,
 				FADE023125DD359D00FB1675 /* animation_500_kl9crrb3.gif in Resources */,
 				FF4C7EE429D379B70095396A /* Archivo-LightItalic.ttf in Resources */,
+				FFAA4D682A03BEC90027B478 /* AddDocumentViewController.xib in Resources */,
 				FA49CE122546A056004CDD6E /* Roboto-Bold.ttf in Resources */,
 				FABA8C862585A7D700E1D2AB /* Localizable.strings in Resources */,
 				FA49CE162546A065004CDD6E /* Roboto-LightItalic.ttf in Resources */,
 				FFD1BFB029C4CBA60008C814 /* MazzadTableViewCell.xib in Resources */,
+				FF92D94C29FB7107006BAF9B /* PersonalInformationTableViewCell.xib in Resources */,
 				FF4C7EE229D379B70095396A /* Archivo-SemiBoldItalic.ttf in Resources */,
 				FA49CE1B2546A06F004CDD6E /* Roboto-ThinItalic.ttf in Resources */,
 				FFC5B0F129F6EA550039AB0E /* BiddingView.xib in Resources */,
@@ -2074,14 +2718,18 @@
 				FA2B63E02570C7830015DF42 /* logoApp.gif in Resources */,
 				FF4C7EEA29D379B70095396A /* Archivo-Bold.ttf in Resources */,
 				FF4C7EE329D379B70095396A /* Archivo-Medium.ttf in Resources */,
+				FF8B951329FA69D800441899 /* MyAuctionsTableViewCell.xib in Resources */,
 				FA49CE112546A053004CDD6E /* Roboto-BlackItalic.ttf in Resources */,
 				FF818B7A29F8425D00CA9A99 /* AuctionStortingViewController.xib in Resources */,
+				FFCB6E742A035CDB0024ECC3 /* FillAddDocumentTableViewCell.xib in Resources */,
+				FF4F9C312A0023C100BEDF18 /* FeedbackViewController.xib in Resources */,
 				FA3B7BCF25C7F31000303819 /* animation_500_kkmaroj2.gif in Resources */,
 				FFD6D95D29E8B3480044ECD9 /* AuctionHolderViewController.xib in Resources */,
 				FF818B9F29F86BFD00CA9A99 /* ProfileHeaderTableViewCell.xib in Resources */,
 				FFBC7F7829F0E93400579E20 /* AuctionCodeView.xib in Resources */,
 				FA49CE102546A051004CDD6E /* Roboto-Black.ttf in Resources */,
 				FF818B8D29F86AC400CA9A99 /* ProfileTableViewCell.xib in Resources */,
+				FF9443932A003C490094AC1F /* TicketTableViewCell.xib in Resources */,
 				FFBA018529DB68100021F2D8 /* SuccessResetPassowrdViewController.xib in Resources */,
 				FF78D59429F7565400D9FBC9 /* AuctionSpecificationHeader.xib in Resources */,
 				FF4C7EE029D379B70095396A /* Archivo-MediumItalic.ttf in Resources */,
@@ -2091,10 +2739,14 @@
 				FA3B7C6A25C7FE7000303819 /* animation_500_kkmcz3rp.gif in Resources */,
 				FA49CE182546A069004CDD6E /* Roboto-MediumItalic.ttf in Resources */,
 				FF8E83D429EED14F009AE77C /* AuctionCategoryTableViewCell.xib in Resources */,
+				FF8B951B29FA6ADE00441899 /* AskGoldenBellTableViewCell.xib in Resources */,
+				FF85828329FAEB6B002D98ED /* AskGoldenBellViewController.xib in Resources */,
 				FFBC7F8029F0ECCC00579E20 /* PriceRangeView.xib in Resources */,
 				FA49CE1A2546A06D004CDD6E /* Roboto-Thin.ttf in Resources */,
 				FF708E0E29F7211D001C8003 /* AuctionSpcificationTableViewCell.xib in Resources */,
-				FF8D31E829F944270000958D /* EditProfileHeader.xib in Resources */,
+				FF8D31E829F944270000958D /* ControlCenterHeader.xib in Resources */,
+				FF7C465029FCFC4100615314 /* SettingViewController.xib in Resources */,
+				FFCB6E6E2A035CA80024ECC3 /* EmptyAddDocumentTableViewCell.xib in Resources */,
 				FF4C7EDF29D379B70095396A /* Archivo-Black.ttf in Resources */,
 				FA49CE172546A067004CDD6E /* Roboto-Medium.ttf in Resources */,
 				FF4C7EE129D379B70095396A /* Archivo-SemiBold.ttf in Resources */,
@@ -2109,11 +2761,13 @@
 				FFBC7F7329F0E72C00579E20 /* AuctionsFilterViewController.xib in Resources */,
 				FA9DD4492664AA7F00DFE590 /* QuestionSubSectionCell.xib in Resources */,
 				FF708E1329F72E20001C8003 /* PlaceBidViewController.xib in Resources */,
+				FF9443882A0033C10094AC1F /* RequestAuctionViewController.xib in Resources */,
 				FF79E39229F1887500CEED4D /* NotificationsViewController.xib in Resources */,
 				FF4C7EDE29D379B70095396A /* Archivo-Regular.ttf in Resources */,
 				FFC29A6529D7B4AE0040C722 /* LoginViewController.xib in Resources */,
 				FF4C7EE929D379B70095396A /* Archivo-ExtraBoldItalic.ttf in Resources */,
 				FF4C7EFA29D37C340095396A /* OnBoardingViewController.xib in Resources */,
+				FF92D93D29FB6B14006BAF9B /* ControlCenterTableViewCell.xib in Resources */,
 				FFE2C52329DBB91E00F8C16F /* CategoriesCollectionViewCell.xib in Resources */,
 				FF4C7EE529D379B70095396A /* Archivo-ExtraLight.ttf in Resources */,
 				FF818BA429F86C5500CA9A99 /* ProfileViewController.xib in Resources */,
@@ -2121,13 +2775,19 @@
 				FF4C7EE729D379B70095396A /* Archivo-BoldItalic.ttf in Resources */,
 				FF708E0929F7149B001C8003 /* AuctionSpecificationView.xib in Resources */,
 				FF4C7EEC29D379B70095396A /* Archivo-ExtraBold.ttf in Resources */,
+				FFAA4D6A2A03E2840027B478 /* Splash Ui O-w.gif in Resources */,
+				FFCDB4232A051689008A5937 /* PlansTableViewCell.xib in Resources */,
 				FA9DD44C2664ABFD00DFE590 /* headView.xib in Resources */,
+				FFBC3C152A032D4100547566 /* EmptyDocumentsCollectionViewCell.xib in Resources */,
 				FF818B9329F86B1600CA9A99 /* HeaderView.xib in Resources */,
+				FFBC3C0E2A032BCC00547566 /* DoucmentsViewController.xib in Resources */,
+				FFFE91A22A055C36001BE377 /* LoginWithNafathViewController.xib in Resources */,
 				FFD2530129D47A7D002CE41A /* OnBoardingScreensViewController.xib in Resources */,
 				FABD93C22532DD3F00BFB943 /* ArbFONTS-Jozoor-Font.otf in Resources */,
 				FA49CE192546A06B004CDD6E /* Roboto-Regular.ttf in Resources */,
 				FABD93D62536DDEA00BFB943 /* homeCell.xib in Resources */,
 				FABD93C32532DD4100BFB943 /* ArbFONTS-Jozoor-Font.ttf in Resources */,
+				FFBC3C1B2A03307D00547566 /* FillDocumentCollectionViewCell.xib in Resources */,
 				FF4C7EEB29D379B70095396A /* Archivo-ExtraLightItalic.ttf in Resources */,
 				FF4C7EDD29D379B70095396A /* Archivo-BlackItalic.ttf in Resources */,
 				FADE022E25DD30F200FB1675 /* animation_500_kl9c26qc.gif in Resources */,
@@ -2139,14 +2799,19 @@
 				FABD93D12532DD7B00BFB943 /* Color.xcassets in Resources */,
 				FF76276129E24E52002D531F /* AuctionHolderCellCollectionViewCell.xib in Resources */,
 				FA5935B925DE586F00C6026D /* GoogleService-Info.plist in Resources */,
+				FFC9004129FCA2300003A4FF /* EditFullNameViewController.xib in Resources */,
+				FF7185EA29FB946800867213 /* ControlCenterViewController.xib in Resources */,
 				FFD1BFCD29C4E7FF0008C814 /* ForgetPasswordViewController.xib in Resources */,
 				FABD93992532DBF900BFB943 /* Assets.xcassets in Resources */,
 				FFBC7F8329F0EF1C00579E20 /* DateView.xib in Resources */,
 				FA5099FB25804DFE00B9FB50 /* animation_500_kignrnoe.gif in Resources */,
 				FFD1BFC329C4D9810008C814 /* OTPViewController.xib in Resources */,
 				FFACF05F29EA59B700B8C41F /* AuctionsViewController.xib in Resources */,
+				FFCDB4272A0516D7008A5937 /* PlansViewController.xib in Resources */,
 				FFD1BFC829C4E66E0008C814 /* ResetPasswordViewController.xib in Resources */,
 				FABD93972532DBF600BFB943 /* Main.storyboard in Resources */,
+				FFFE91992A052C28001BE377 /* SelectionTableViewCell.xib in Resources */,
+				FF8B952029FACDA100441899 /* AuctionsSectionViewController.xib in Resources */,
 				FF8B257529EB310000302346 /* AuctionOwnerView.xib in Resources */,
 				FADE022B25DD2FFE00FB1675 /* animation_500_kl9bwexy.gif in Resources */,
 				FFD6D96629E8B6C50044ECD9 /* AuctionHolderTableViewCell.xib in Resources */,
@@ -2221,15 +2886,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF46E84B2A0215EB00474A46 /* AskGoldenBellViewModel.swift in Sources */,
 				FABD93AA2532DC6400BFB943 /* Extensions.swift in Sources */,
 				FFBA018429DB68100021F2D8 /* SuccessResetPassowrdViewController.swift in Sources */,
 				FF9C2B2329DCA5FF00FA3C77 /* BaseApiHeaders.swift in Sources */,
 				FF5AF74F29DFC0230020E716 /* CategoriesModel.swift in Sources */,
 				FA45C054254EA32E0042235A /* menuCell.swift in Sources */,
 				FF4C7F2729D4608B0095396A /* UIView + extension.swift in Sources */,
+				FFBC3C1D2A0334D100547566 /* DocumentViewModel.swift in Sources */,
 				FFC29A6429D7B4AE0040C722 /* LoginViewController.swift in Sources */,
 				FFD1BFB129C4CBA60008C814 /* MazzadTableViewCell.swift in Sources */,
 				FABD93A82532DC5600BFB943 /* DesignableView.swift in Sources */,
+				FFCDB41C2A051662008A5937 /* PlansViewModel.swift in Sources */,
 				FF79E39129F1887500CEED4D /* NotificationsViewController.swift in Sources */,
 				FF4C7F1829D453CC0095396A /* CardView.swift in Sources */,
 				FFACF06229EA59D000B8C41F /* AuctionsViewModel.swift in Sources */,
@@ -2242,7 +2910,11 @@
 				FABD93AE2532DC8900BFB943 /* NaveBarManager.swift in Sources */,
 				FF4C7F1A29D453CC0095396A /* UIButton + extension.swift in Sources */,
 				FAE9A801266503F100D40FD2 /* subAnswerColllectionCell.swift in Sources */,
+				FFFE91932A052BE3001BE377 /* PlanViewController.swift in Sources */,
+				FF8B950C29FA698A00441899 /* BiddingAuctionsTableViewCell.swift in Sources */,
+				FF85828229FAEB6B002D98ED /* AskGoldenBellViewController.swift in Sources */,
 				FF5AF74629DFC0230020E716 /* UploadDocuments.swift in Sources */,
+				FFFE91982A052C28001BE377 /* SelectionTableViewCell.swift in Sources */,
 				FA762B7A259E0ADD0035E0EB /* Header.swift in Sources */,
 				FFA76A3029E11434000BD881 /* TransactionNetworkingProtocol.swift in Sources */,
 				FF76275B29E1F224002D531F /* RegisterViewModel.swift in Sources */,
@@ -2250,7 +2922,10 @@
 				FF5AF74C29DFC0230020E716 /* SearchModel.swift in Sources */,
 				FF5AF74A29DFC0230020E716 /* FavoriteModel.swift in Sources */,
 				FF818B8629F8561300CA9A99 /* SortingViewModel.swift in Sources */,
+				FF8B951F29FACDA100441899 /* AuctionsSectionViewController.swift in Sources */,
+				FF46E8492A01FE1200474A46 /* SliderModel.swift in Sources */,
 				FFD2530029D47A7D002CE41A /* OnBoardingScreensViewController.swift in Sources */,
+				FFB3E12C2A04248A0078BAF4 /* AuctionsSectionViewModel.swift in Sources */,
 				FA49CE212546E1F0004CDD6E /* Constants.swift in Sources */,
 				FFD1BFB329C4CBA60008C814 /* NotificationTableViewCell.swift in Sources */,
 				FF4C7EF329D37B170095396A /* SplashViewController.swift in Sources */,
@@ -2262,6 +2937,7 @@
 				FF8E83CC29EC7129009AE77C /* CategoriesViewController.swift in Sources */,
 				FF78D58F29F7409300D9FBC9 /* PlaceBidViewModel .swift in Sources */,
 				FF9C2B2129DCA58800FA3C77 /* BasicResponse.swift in Sources */,
+				FF7185E429FB90D800867213 /* PersonalInformationViewController.swift in Sources */,
 				FABD93942532DBF600BFB943 /* ViewController.swift in Sources */,
 				FA57ED9D2556242700D0C554 /* BundleExtension.swift in Sources */,
 				FF5AF75029DFC0230020E716 /* UpdateProfileModel.swift in Sources */,
@@ -2269,15 +2945,19 @@
 				FFD1BFBC29C4D21C0008C814 /* RegisterViewController.swift in Sources */,
 				FF818B7929F8425D00CA9A99 /* AuctionStortingViewController.swift in Sources */,
 				FF5AF74E29DFC0230020E716 /* HolderPlacesModel.swift in Sources */,
+				FF9443922A003C490094AC1F /* TicketTableViewCell.swift in Sources */,
 				FFD1BFC229C4D9810008C814 /* OTPViewController.swift in Sources */,
 				FF4C7F1129D453CC0095396A /* CheckLanguage.swift in Sources */,
+				FF46E84D2A02163E00474A46 /* AskGoldenBellModel.swift in Sources */,
 				FF818B9929F86B3B00CA9A99 /* HeaderProfileView.swift in Sources */,
 				FA5F1F67253AFB1A007FEF72 /* MyReservationOB.swift in Sources */,
+				FFB3E12E2A0478460078BAF4 /* FavoritesModel.swift in Sources */,
 				FF8D31DB29F93C2F0000958D /* MainTabBarController.swift in Sources */,
 				FA57ED9C2556242700D0C554 /* MirroringLabel.swift in Sources */,
 				FA5F1F6F253AFBAE007FEF72 /* RegisterVC.swift in Sources */,
 				FFC5B0FB29F70EAD0039AB0E /* AuctionsDetailsViewModel.swift in Sources */,
 				FA49CE1F2546DF5B004CDD6E /* TimerManager.swift in Sources */,
+				FFBC3C142A032D4100547566 /* EmptyDocumentsCollectionViewCell.swift in Sources */,
 				FF79E39529F1889000CEED4D /* NotificationsViewModel.swift in Sources */,
 				FFC6DF5029E1082B00BD9364 /* CoreRepo.swift in Sources */,
 				FFE2C51B29DBB17300F8C16F /* PackageSubscribePlan.swift in Sources */,
@@ -2285,20 +2965,28 @@
 				FF818BA729F86C6A00CA9A99 /* ProfileViewModel.swift in Sources */,
 				FABD93902532DBF600BFB943 /* AppDelegate.swift in Sources */,
 				FF5AF73429DFBE5D0020E716 /* AuthNetworkingProtocol.swift in Sources */,
+				FF4F9C352A0028AA00BEDF18 /* FeedbackViewModel.swift in Sources */,
+				FFFE91A12A055C36001BE377 /* LoginWithNafathViewController.swift in Sources */,
+				FF7185E929FB946800867213 /* ControlCenterViewController.swift in Sources */,
 				FF5AF75D29E05F7A0020E716 /* AuctionRepo.swift in Sources */,
 				FFC6DF4E29E1080E00BD9364 /* CoreNetworkingProtocol.swift in Sources */,
 				FFC29A6729D7C8CF0040C722 /* SegmentContrtolEX.swift in Sources */,
+				FF9443822A0033930094AC1F /* RequesActionViewModel.swift in Sources */,
 				FAF04BC9255E062C00249556 /* UserManager.swift in Sources */,
 				FF67F2CA29D4AFD600CA2E0B /* OnBoardingCollectionViewCell.swift in Sources */,
 				FF4C7F2129D453CC0095396A /* LottieHelper.swift in Sources */,
 				FF4C7F2529D453CC0095396A /* UITextField + extension.swift in Sources */,
+				FFCB6E692A035C4C0024ECC3 /* AddDocumenViewModel.swift in Sources */,
 				FF5AF76329E0690B0020E716 /* ActivityIndicatorManager.swift in Sources */,
 				FFC6DF4729E106C800BD9364 /* NotificationNetworkingProtocol.swift in Sources */,
+				FF94438D2A003C320094AC1F /* TicketViewController.swift in Sources */,
 				FA5F1F63253AFB1A007FEF72 /* LError.swift in Sources */,
 				FA5F1F7A253B7836007FEF72 /* CatCollectionViewCell.swift in Sources */,
 				FFD1BFC729C4E66E0008C814 /* ResetPasswordViewController.swift in Sources */,
+				FFCB6E732A035CDB0024ECC3 /* FillAddDocumentTableViewCell.swift in Sources */,
 				FF81900C29D5221C00033060 /* Coordinator.swift in Sources */,
 				FF8B257729EB310C00302346 /* AuctionOwnerView.swift in Sources */,
+				FF7C464F29FCFC4000615314 /* SettingViewController.swift in Sources */,
 				FFBC7F7229F0E72C00579E20 /* AuctionsFilterViewController.swift in Sources */,
 				FF4C7F2329D453CC0095396A /* DesignView.swift in Sources */,
 				FFA76A3629E11630000BD881 /* SplashViewModel.swift in Sources */,
@@ -2306,23 +2994,31 @@
 				FF818B8329F855DA00CA9A99 /* AuctionSortingTableViewCell.swift in Sources */,
 				FF4C7F1629D453CC0095396A /* General.swift in Sources */,
 				FF4C7F1329D453CC0095396A /* Alert.swift in Sources */,
+				FF8B951A29FA6ADE00441899 /* AskGoldenBellTableViewCell.swift in Sources */,
 				FA57ED9E2556242700D0C554 /* L012Localizer.swift in Sources */,
+				FFC9004029FCA2300003A4FF /* EditFullNameViewController.swift in Sources */,
 				FFBC7F8529F0EF5400579E20 /* DateView.swift in Sources */,
 				FFD6D96129E8B3690044ECD9 /* AuctionHolderViewModel.swift in Sources */,
-				FF8D31E329F9436F0000958D /* EditProfileViewModel.swift in Sources */,
+				FF7185D829FB7CFD00867213 /* PersonalInformationHeader.swift in Sources */,
+				FF8D31E329F9436F0000958D /* ControlCenterViewModel.swift in Sources */,
 				FF2F701B29E275090018B339 /* TicketNetworkingProtocol.swift in Sources */,
 				FAAAF46B253E69E100E17DAB /* RouteManager.swift in Sources */,
+				FFBC3C1F2A03359900547566 /* DocumentModel.swift in Sources */,
 				FF4C7F1E29D453CC0095396A /* HelperFunc.swift in Sources */,
 				FA4F79A325770E84008FC9A1 /* AppDelegate+FCM.swift in Sources */,
+				FF92D94B29FB7107006BAF9B /* PersonalInformationTableViewCell.swift in Sources */,
 				FABD93AC2532DC6C00BFB943 /* userDefaultRapper.swift in Sources */,
+				FF92D94129FB6BE3006BAF9B /* ControlCentetrFooter.swift in Sources */,
 				FF5AF74B29DFC0230020E716 /* SlidersModel.swift in Sources */,
 				FF5AF75829E05A330020E716 /* HomeRepo.swift in Sources */,
 				FF4C7F1F29D453CC0095396A /* TableViewController + extension.swift in Sources */,
+				FFAA4D672A03BEC90027B478 /* AddDocumentViewController.swift in Sources */,
 				FFC6DF5529E1122000BD9364 /* TransactionApi.swift in Sources */,
-				FF8D31E729F944270000958D /* EditProfileHeader.swift in Sources */,
+				FF8D31E729F944270000958D /* ControlCenterHeader.swift in Sources */,
 				FFE2C51629DBAB9800F8C16F /* HeaderHomeView.swift in Sources */,
 				FA57EDAB25565C5600D0C554 /* docCell.swift in Sources */,
 				FF8E83C429EC35A9009AE77C /* ResetPasswordViewModel.swift in Sources */,
+				FFC9004429FCA2480003A4FF /* EditFullNameViewModel.swift in Sources */,
 				FF4C7F2029D453CC0095396A /* TableView + Extesnions.swift in Sources */,
 				FFC5B0FD29F70F720039AB0E /* AuctionDetailsModel.swift in Sources */,
 				FF4C7F2229D453CC0095396A /* imageSliderShowCong.swift in Sources */,
@@ -2352,13 +3048,19 @@
 				FF818B9E29F86BFD00CA9A99 /* ProfileHeaderTableViewCell.swift in Sources */,
 				FF4C7F1929D453CC0095396A /* ActivityIndicatorManagerr.swift in Sources */,
 				FF4C7F1429D453CC0095396A /* HapticEffect.swift in Sources */,
+				FF4F9C302A0023C100BEDF18 /* FeedbackViewController.swift in Sources */,
 				FA762B7D259E0B000035E0EB /* Model.swift in Sources */,
+				FFCDB4262A0516D7008A5937 /* PlansViewController.swift in Sources */,
 				FFE2C52229DBB91E00F8C16F /* CategoriesCollectionViewCell.swift in Sources */,
 				8E919FE926BFE3C4002D2E3B /* FQACell.swift in Sources */,
+				FF9443872A0033C10094AC1F /* RequestAuctionViewController.swift in Sources */,
+				FFCDB4222A051689008A5937 /* PlansTableViewCell.swift in Sources */,
+				FF92D93C29FB6B14006BAF9B /* ControlCenterTableViewCell.swift in Sources */,
 				FFC6DF4929E106F200BD9364 /* NotificationRepo.swift in Sources */,
 				FF79E39829F19A7600CEED4D /* NotificationsModel.swift in Sources */,
 				FF5AF75429E044BE0020E716 /* HomeApi.swift in Sources */,
 				FF76276029E24E52002D531F /* AuctionHolderCellCollectionViewCell.swift in Sources */,
+				FFBC3C1A2A03307D00547566 /* FillDocumentCollectionViewCell.swift in Sources */,
 				FFD6D95C29E8B3480044ECD9 /* AuctionHolderViewController.swift in Sources */,
 				FF5AF76129E0653D0020E716 /* HelperK.swift in Sources */,
 				FF85AD2029EEE53900BED67F /* CategoriesAuctionsModel.swift in Sources */,
@@ -2369,7 +3071,10 @@
 				FF7EBFAD29DD180B00261946 /* EndPoints.swift in Sources */,
 				FF708E0D29F7211D001C8003 /* AuctionSpcificationTableViewCell.swift in Sources */,
 				FF2F701D29E275140018B339 /* TicketsRepo.swift in Sources */,
+				FFBC3C0D2A032BCC00547566 /* DoucmentsViewController.swift in Sources */,
 				FFE2C52B29DBC7F200F8C16F /* HomeViewModel.swift in Sources */,
+				FFCB6E6D2A035CA80024ECC3 /* EmptyAddDocumentTableViewCell.swift in Sources */,
+				FF7EEA2929FDCE4400BE1CBE /* ContactUsViewController.swift in Sources */,
 				FF9C2B2529DCAA6D00FA3C77 /* User+UserDefaults.swift in Sources */,
 				FF2F701929E274FA0018B339 /* TicketsApi.swift in Sources */,
 				FF5AF74729DFC0230020E716 /* LoginModel.swift in Sources */,
@@ -2381,6 +3086,7 @@
 				FFBC7F7E29F0ECBF00579E20 /* PriceRangeView.swift in Sources */,
 				FA3B7C0625C7FC6100303819 /* LoaderManager.swift in Sources */,
 				FF5AF74529DFC0230020E716 /* FaqModel.swift in Sources */,
+				FF7185DC29FB7EC900867213 /* EditPeronalInformationViewModel.swift in Sources */,
 				FFACF05E29EA59B700B8C41F /* AuctionsViewController.swift in Sources */,
 				FAE525E42595C9460007049A /* RPicker.swift in Sources */,
 				FF4C7F1229D453CC0095396A /* Str + Extension.swift in Sources */,
@@ -2389,7 +3095,9 @@
 				FF67F2C629D4AF4E00CA2E0B /* PagingCollectionViewCell.swift in Sources */,
 				FA57EDA3255629B300D0C554 /* DocumentCell.swift in Sources */,
 				FA05F5B12576F379001527A9 /* MyCartCell.swift in Sources */,
+				FFFE919D2A053006001BE377 /* PlanDetailsViewModel.swift in Sources */,
 				FF5AF74D29DFC0230020E716 /* PaymentModels.swift in Sources */,
+				FF8B951229FA69D800441899 /* MyAuctionsTableViewCell.swift in Sources */,
 				FFC5B0F329F6EA630039AB0E /* BiddingView.swift in Sources */,
 				FF5AF74929DFC0230020E716 /* CategoriesProductsModel.swift in Sources */,
 				FF5AF73629DFBE5D0020E716 /* AuthRepo.swift in Sources */,

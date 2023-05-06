@@ -18,11 +18,15 @@ class AuctionsDetailsViewModel:AuctionNetworkingProtocol {
     var id:String
     var type:String
     var price:String?
+    var isOfficialAuction:Bool
     var onSuccessFavorite = PublishSubject<FavoriteModel>()
-
-    init(id:String,type:String) {
+    var verifyWithNafath = PublishSubject<Void>()
+    var placeId:String
+    init(id:String,type:String,isOfficialAuction:Bool,placeId:String?) {
         self.id = id
         self.type = type
+        self.isOfficialAuction = isOfficialAuction
+        self.placeId = placeId ?? ""
     }
     
     func getAuctionsDetails() {
@@ -37,6 +41,33 @@ class AuctionsDetailsViewModel:AuctionNetworkingProtocol {
                 self?.price = auction.price ?? ""
             case .failure(let error):
                 self?.onError.onNext(error.localizedDescription)
+            }
+        }
+    }
+    
+    func getOfficialAuction() {
+        onLoading.accept(true)
+        showOfficialAuction(auction_id: id) { [weak self] result in
+            self?.onLoading.accept(false)
+            switch result {
+            case .success(let response):
+                guard let auction = response.response?.data else {return}
+                self?.detectIsAllowToBidding(auction: auction)
+                self?.auctionDetails.onNext(auction)
+                self?.auctionDetailArray.accept(auction.auctionDetails ?? [])
+                self?.price = auction.price ?? ""
+                
+            case .failure(let error):
+                self?.onError.onNext(error.localizedDescription)
+            }
+        }
+    }
+    
+    private func detectIsAllowToBidding(auction:AuctionDetailsModel) {
+        if auction.auctionVisitors != "all_users" {
+            if HelperK.getVerification(){
+                onError.onNext("notAllowedForAllUsers")
+                verifyWithNafath.onNext(())
             }
         }
     }

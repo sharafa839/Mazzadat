@@ -112,6 +112,30 @@ struct AuctionStatuses :Codable{
        }
 }
 
+enum AuctionStatus:Int {
+    case waitingStart = 0, bidingTime, waitingSupplierApproval, waitingCustomerPayment,finished, supplierRejected, customerCanceled, finishedWithoutAnyBid
+    var status:String {
+        switch self {
+        case .waitingStart:
+            return "waitingStart"
+        case .bidingTime:
+            return "bidingTime"
+        case .waitingSupplierApproval:
+            return "waitingSupplierApproval"
+        case .waitingCustomerPayment:
+            return "waitingCustomerPayment"
+        case .finished:
+            return "finished"
+        case .supplierRejected:
+            return "supplierRejected"
+        case .customerCanceled:
+            return "customerCanceled"
+        case .finishedWithoutAnyBid:
+            return "finishedWithoutAnyBid"
+        }
+    }
+}
+
 // MARK: - NotificationType
 struct NotificationType:Codable {
     var general, auction, ticket, chat: Int?

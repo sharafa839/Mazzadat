@@ -15,10 +15,12 @@ class PlaceBidViewModel:AuctionNetworkingProtocol {
     var onError = PublishSubject<String>()
     var onLoading = BehaviorRelay<Bool>(value: false)
     var onSuccessGetBid = PublishSubject<Void>()
+    var payEntryFee = PublishSubject<Void>()
+
     var id:String
     var price:Int
     var priceChange = BehaviorRelay<Int>(value:0)
-    init(id:String,price:Int) {
+    init(placeId:String,id:String,price:Int) {
         self.id = id
         self.price = price
         priceChange.accept(Int(price))
@@ -33,8 +35,12 @@ class PlaceBidViewModel:AuctionNetworkingProtocol {
             switch result {
             case .failure(let error):
                 self?.onError.onNext(error.localizedDescription)
+                 let errorMessage = error.localizedDescription
+                if errorMessage == "لم يتم دفع قيمه شيك الدخول !" || errorMessage == "Entry Fee Not Payed!"{
+                    self?.payEntryFee.onNext(())
+                }
             case .success(_):
-             
+                
                 self?.onSuccessGetBid.onNext(())
             }
         }

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Archivo-Bold.ttf">
+            <string>Archivo-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="FillDocumentCollectionViewCell" customModule="Golden_Bell" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="386" height="228"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="386" height="228"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i5E-oW-204">
+                        <rect key="frame" x="8" y="8" width="370" height="212"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xDN-fc-x22">
+                                <rect key="frame" x="24" y="8" width="322" height="140"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="tOn-m6-rgc">
+                                <rect key="frame" x="24" y="164" width="322" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NbF-UE-mLg">
+                                        <rect key="frame" x="0.0" y="0.0" width="153" height="40"/>
+                                        <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="16"/>
+                                        <color key="textColor" name="TextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9FN-m1-oi9">
+                                        <rect key="frame" x="169" y="0.0" width="153" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k0A-cj-B5c">
+                                                <rect key="frame" x="0.0" y="0.0" width="71.5" height="40"/>
+                                                <color key="backgroundColor" name="Bronze-100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="1vd-4e-Atk"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="16"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button">
+                                                    <color key="titleColor" name="Bronze-900"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="deleteButtonAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="HBG-Zy-nfy"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j2w-MG-EWL">
+                                                <rect key="frame" x="81.5" y="0.0" width="71.5" height="40"/>
+                                                <color key="backgroundColor" name="Bronze-500"/>
+                                                <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="16"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="changeButtonAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="3wt-od-miS"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="tOn-m6-rgc" secondAttribute="trailing" constant="24" id="6eY-Lh-jDD"/>
+                            <constraint firstItem="xDN-fc-x22" firstAttribute="leading" secondItem="i5E-oW-204" secondAttribute="leading" constant="24" id="BEM-7H-aeH"/>
+                            <constraint firstItem="tOn-m6-rgc" firstAttribute="leading" secondItem="i5E-oW-204" secondAttribute="leading" constant="24" id="Jnf-p6-zDx"/>
+                            <constraint firstAttribute="bottom" secondItem="tOn-m6-rgc" secondAttribute="bottom" constant="8" id="STd-F0-sq5"/>
+                            <constraint firstAttribute="trailing" secondItem="xDN-fc-x22" secondAttribute="trailing" constant="24" id="lSl-5T-ekP"/>
+                            <constraint firstItem="tOn-m6-rgc" firstAttribute="top" secondItem="xDN-fc-x22" secondAttribute="bottom" constant="16" id="lY7-Mp-WNd"/>
+                            <constraint firstItem="xDN-fc-x22" firstAttribute="top" secondItem="i5E-oW-204" secondAttribute="top" constant="8" id="qeb-P7-miK"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="i5E-oW-204" secondAttribute="trailing" constant="8" id="0d7-qn-O0Q"/>
+                <constraint firstAttribute="bottom" secondItem="i5E-oW-204" secondAttribute="bottom" constant="8" id="EfX-xL-sm3"/>
+                <constraint firstItem="i5E-oW-204" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="l8m-0e-e6X"/>
+                <constraint firstItem="i5E-oW-204" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="vZg-93-NJy"/>
+            </constraints>
+            <size key="customSize" width="386" height="228"/>
+            <connections>
+                <outlet property="changeButton" destination="j2w-MG-EWL" id="ZS3-cy-cfM"/>
+                <outlet property="containerView" destination="i5E-oW-204" id="FPy-Xa-UtM"/>
+                <outlet property="deleteButton" destination="k0A-cj-B5c" id="OLZ-9N-Zp0"/>
+                <outlet property="documentImageView" destination="xDN-fc-x22" id="zu1-ay-l2z"/>
+                <outlet property="documentNameLabel" destination="NbF-UE-mLg" id="fgN-Gy-meC"/>
+            </connections>
+            <point key="canvasLocation" x="400.00000000000006" y="167.41071428571428"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Bronze-100">
+            <color red="0.96470588235294119" green="0.8666666666666667" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Bronze-500">
+            <color red="0.88627450980392153" green="0.56470588235294117" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Bronze-900">
+            <color red="0.37254901960784315" green="0.23529411764705882" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextColor">
+            <color red="0.078431372549019607" green="0.074509803921568626" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

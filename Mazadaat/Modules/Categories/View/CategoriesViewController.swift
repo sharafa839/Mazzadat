@@ -76,9 +76,10 @@ class CategoriesViewController: UIViewController, FilterAuctionProtocol, Sorting
     private func setupUI() {
         setNavigationItem(title: viewModel.categoryName)
         packageView.drawBorder(raduis: 10, borderColor: .Bronze_500)
-        let myimage = UIImage(named: "list")?.withRenderingMode(.alwaysOriginal)
+        let myimage = UIImage(named: "filter-line")?.withRenderingMode(.alwaysOriginal)
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: myimage, style: .plain, target: self, action: #selector(buttonTapped))
-
+        packageView.setupLocalize(balance: HelperK.getMoney())
+        packageView.isHidden = (CoreData.shared.personalSubscription?.isEmpty ?? false)
 
     }
     
@@ -136,7 +137,7 @@ extension CategoriesViewController:UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let auctionId = viewModel.onSuccessGetAuctions.value[indexPath.row].id else {return}
         
-        let auctionDetailsViewModel = AuctionsDetailsViewModel(id: "\(auctionId)", type:"")
+        let auctionDetailsViewModel = AuctionsDetailsViewModel(id: "\(auctionId)", type:"", isOfficialAuction: false, placeId: nil)
         let auctionDetailsViewController = AuctionsDetailsViewController(viewModel: auctionDetailsViewModel)
         self.navigationController?.pushViewController(auctionDetailsViewController, animated: true)
     }

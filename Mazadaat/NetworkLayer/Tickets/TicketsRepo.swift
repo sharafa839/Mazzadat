@@ -7,3 +7,6 @@
 //
 
 import Foundation
+class TicketRepo:MoyaHelper<TicketApi>,TicketNetworkingProtocol {
+    
+}

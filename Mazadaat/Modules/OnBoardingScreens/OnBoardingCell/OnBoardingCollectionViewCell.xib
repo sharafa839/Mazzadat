@@ -27,22 +27,25 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="diT-Pb-qYv">
-                        <rect key="frame" x="0.0" y="0.0" width="297" height="489"/>
+                        <rect key="frame" x="24" y="0.0" width="249" height="489"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Twr-YD-GZ2">
-                                <rect key="frame" x="8" y="8" width="281" height="289.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Twr-YD-GZ2">
+                                <rect key="frame" x="0.0" y="8" width="249" height="315.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="315.5" id="AJX-i9-nfp"/>
+                                </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="dWT-6J-RWD">
-                                <rect key="frame" x="8" y="343.5" width="281" height="137.5"/>
+                                <rect key="frame" x="0.0" y="343.5" width="249" height="137.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bid with Confidence - Our Guarantee to You" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZt-lN-qSh">
-                                        <rect key="frame" x="0.0" y="0.0" width="281" height="52.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="249" height="52.5"/>
                                         <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9I-rN-Qdx">
-                                        <rect key="frame" x="0.0" y="76.5" width="281" height="61"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9I-rN-Qdx">
+                                        <rect key="frame" x="0.0" y="76.5" width="249" height="61"/>
                                         <string key="text">Description: Place your bids on your favorite items and win with confidence. Our auctions app offers a secure and reliable platform for bidding and purchasing items.</string>
                                         <fontDescription key="fontDescription" name="Archivo-Regular" family="Archivo" pointSize="14"/>
                                         <nil key="textColor"/>
@@ -53,22 +56,22 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Twr-YD-GZ2" firstAttribute="leading" secondItem="diT-Pb-qYv" secondAttribute="leading" constant="8" id="4a4-yJ-BDD"/>
+                            <constraint firstItem="Twr-YD-GZ2" firstAttribute="leading" secondItem="diT-Pb-qYv" secondAttribute="leading" id="4a4-yJ-BDD"/>
                             <constraint firstItem="dWT-6J-RWD" firstAttribute="trailing" secondItem="Twr-YD-GZ2" secondAttribute="trailing" id="N4a-fa-fO8"/>
                             <constraint firstAttribute="bottom" secondItem="dWT-6J-RWD" secondAttribute="bottom" constant="8" id="TLY-7Z-Ow2"/>
                             <constraint firstItem="dWT-6J-RWD" firstAttribute="leading" secondItem="Twr-YD-GZ2" secondAttribute="leading" id="U5m-1P-pvf"/>
-                            <constraint firstItem="dWT-6J-RWD" firstAttribute="top" secondItem="Twr-YD-GZ2" secondAttribute="bottom" constant="46" id="at9-xi-4wc"/>
+                            <constraint firstItem="dWT-6J-RWD" firstAttribute="top" secondItem="Twr-YD-GZ2" secondAttribute="bottom" constant="20" id="at9-xi-4wc"/>
                             <constraint firstItem="Twr-YD-GZ2" firstAttribute="top" secondItem="diT-Pb-qYv" secondAttribute="top" constant="8" id="eFP-VZ-SGt"/>
-                            <constraint firstAttribute="trailing" secondItem="Twr-YD-GZ2" secondAttribute="trailing" constant="8" id="qns-nD-piP"/>
+                            <constraint firstAttribute="trailing" secondItem="Twr-YD-GZ2" secondAttribute="trailing" id="qns-nD-piP"/>
                         </constraints>
                     </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="diT-Pb-qYv" secondAttribute="trailing" id="1A1-t7-Ir7"/>
+                <constraint firstAttribute="trailing" secondItem="diT-Pb-qYv" secondAttribute="trailing" constant="24" id="1A1-t7-Ir7"/>
                 <constraint firstAttribute="bottom" secondItem="diT-Pb-qYv" secondAttribute="bottom" id="KaN-wk-MuF"/>
-                <constraint firstItem="diT-Pb-qYv" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="dm2-wX-HZm"/>
+                <constraint firstItem="diT-Pb-qYv" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="24" id="dm2-wX-HZm"/>
                 <constraint firstItem="diT-Pb-qYv" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="jim-5q-yWl"/>
             </constraints>
             <size key="customSize" width="297" height="489"/>

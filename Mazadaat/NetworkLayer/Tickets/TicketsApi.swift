@@ -13,6 +13,7 @@ enum TicketApi {
     case response
     case store
     case show
+    case changeName(name:String)
 }
 
 extension TicketApi :TargetType, BaseApiHeadersProtocol {
@@ -29,6 +30,8 @@ extension TicketApi :TargetType, BaseApiHeadersProtocol {
         case .show:
             return EndPoints.Tickets.show.rawValue
 
+        case .changeName:
+            return EndPoints.Tickets.changeName.rawValue
         }
     }
     
@@ -45,11 +48,19 @@ extension TicketApi :TargetType, BaseApiHeadersProtocol {
         case .show:
             return .get
 
+        case .changeName:
+            return .post
         }
     }
     
     var task: Task {
-        return .requestPlain
+        switch self {
+        
+        case .changeName(let name):
+            return .requestParameters(parameters: ["name":name], encoding: JSONEncoding.default)
+        default : return .requestPlain
+        }
+        
     }
     
     

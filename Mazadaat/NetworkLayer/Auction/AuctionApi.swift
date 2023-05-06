@@ -9,13 +9,14 @@
 import Foundation
 import Moya
 enum AuctionApi {
-    case all
+    case all(myBids:Bool,myAuction:Bool)
     case showOfficialAuction(auction_id:String)
     case show(auction_id:String)
     case toggleFavorite(auction_id:String)
     case favorites
     case addBid(auction_id:String,price:String)
     case auctionsFilter(search:String? = nil , byCategoryId:String? = nil,code:String? = nil,status:String? = nil,priceFrom:String? = nil,priceTo:String? = nil,endAt:String? = nil,endFrom:String? = nil)
+    case advertisement(advertisement_category_id :String?)
 }
 
 extension AuctionApi:TargetType,BaseApiHeadersProtocol {
@@ -33,6 +34,8 @@ extension AuctionApi:TargetType,BaseApiHeadersProtocol {
             return EndPoints.Auction.favorite.rawValue
         case .addBid:
             return EndPoints.Auction.addBid.rawValue
+        case .advertisement(advertisement_category_id: let advertisement_category_id):
+            return EndPoints.Auction.advertisement.rawValue
         }
     }
     
@@ -47,17 +50,28 @@ extension AuctionApi:TargetType,BaseApiHeadersProtocol {
         case .toggleFavorite:
             return .post
         case .favorites:
-            return .post
+            return .get
         case .addBid:
             return .post
 
-    }
+        case .advertisement :
+            return .get
+        }
     }
     
     var task: Task {
         switch self {
-        case .all:
-            return .requestPlain
+        case .all(let myBids, let myAuction):
+            var parameter:[String:Any] = [:]
+            if myBids == true {
+                parameter["my_bids"] = "true"
+            }
+            if  myAuction == true {
+                parameter["my_purchases"] = "true"
+            }
+           
+            return .requestParameters(parameters: parameter, encoding: URLEncoding.default)
+           
         case .showOfficialAuction(let auction_id):
             return .requestParameters(parameters: ["auction_id":auction_id], encoding: URLEncoding.default)
         case .show(let auction_id):
@@ -98,6 +112,15 @@ extension AuctionApi:TargetType,BaseApiHeadersProtocol {
                 parameter["end_at_from"] = endFrom
             }
             return .requestParameters(parameters: parameter, encoding: URLEncoding.default)
+        case .advertisement(let advertisement_category_id):
+            var parameter:[String:Any] = [:]
+            if let advertisement_category_id = advertisement_category_id {
+                parameter["my_bids"] = advertisement_category_id
+            }
+            
+           
+            return .requestParameters(parameters: parameter, encoding: JSONEncoding.default)
+           
         }
     }
     

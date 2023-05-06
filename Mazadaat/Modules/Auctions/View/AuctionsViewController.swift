@@ -129,6 +129,10 @@ class AuctionsViewController: UIViewController {
                     }
         }.disposed(by: viewModel.disposeBag)
         
+        mapView.rx.tap.subscribe { [weak self] _ in
+            
+        }.disposed(by: viewModel.disposeBag)
+        
         rulesButton.rx.tap.subscribe { [weak self] _ in
             guard let bourchoure = self?.viewModel.places.value?.terms else {return}
             guard let url = URL(string: bourchoure) else {return}
@@ -159,7 +163,7 @@ extension AuctionsViewController:UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let auctionId = viewModel.auctions.value[indexPath.row].id else {return}
-        let auctionDetailsViewModel = AuctionsDetailsViewModel(id: "\(auctionId)", type: viewModel.type ?? "")
+        let auctionDetailsViewModel = AuctionsDetailsViewModel(id: "\(auctionId)", type: viewModel.type ?? "", isOfficialAuction: true, placeId: viewModel.placeId)
         let auctionDetailsViewController = AuctionsDetailsViewController(viewModel: auctionDetailsViewModel)
         self.navigationController?.pushViewController(auctionDetailsViewController, animated: true)
     }

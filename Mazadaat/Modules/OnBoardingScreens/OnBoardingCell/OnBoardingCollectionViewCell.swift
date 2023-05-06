@@ -20,7 +20,9 @@ class OnBoardingCollectionViewCell: UICollectionViewCell {
 
     //MARK: - Methods
     
-    func configure(items:String) {
-        
+    func configure(items:OnBoardingModel) {
+        imageView.image = items.image
+        detailesOnBoardingLabel.text = items.description
+        titleOnBoardingLabel.text = items.title
     }
 }

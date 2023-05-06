@@ -8,7 +8,11 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, SentRequestDelegate {
+    func sendRequest() {
+        
+    }
+    
 
   
     //MARK: - IBOutlets
@@ -46,6 +50,7 @@ class ProfileViewController: UIViewController {
     private func setupUI() {
         containerView.setRoundCorners(20)
         packageView.setRoundCorners(5)
+        packageView.setupLocalize(balance: HelperK.getMoney())
         packageView.isHidden = (CoreData.shared.personalSubscription?.isEmpty ?? false)
         
     }
@@ -56,7 +61,28 @@ class ProfileViewController: UIViewController {
     
     private func setupViews() {
         headerView.configure(.profile)
+        headerView.onTapNotification = { [weak self] in
+            self?.openNotification()
+        }
+        
+        profileView.onTapSetting = { [weak self] in
+            self?.openControlCenter()
+        }
         profileView.setupUI(view: .profile)
+    }
+    
+    private func openControlCenter() {
+        let controlCenterViewModel = ControlCenterViewModel()
+        let controlCenterViewController = ControlCenterViewController(viewModel: controlCenterViewModel)
+        controlCenterViewController.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(controlCenterViewController, animated: true)
+    }
+    
+    private func openNotification() {
+        let notificationsViewModel = NotificationsViewModel()
+        let notificationsViewController = NotificationsViewController(viewModel: notificationsViewModel)
+        notificationsViewController.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(notificationsViewController, animated: true)
     }
     
     private func setupViewModelObserver() {
@@ -86,10 +112,34 @@ extension ProfileViewController:UITableViewDelegate,UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = viewModel.profileDataSource[indexPath.row]
+        switch indexPath.row {
+        case 0:
+            let documentViewModel = DocumentViewModel()
+            let documentViewController = DoucmentsViewController(viewModel: documentViewModel)
+            documentViewController.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(documentViewController, animated: true)
+        case 1:
+            return
+        case 3:
+            let planViewController = PlansViewController()
+            planViewController.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(planViewController, animated: true)
+
+           
+        default:
+            return
+        }
+    }
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let cell:ProfileHeaderTableViewCell = tableView.dequeue()
-        cell.didTapRequestAction = {
-            print("Connnt")
+        cell.didTapRequestAction = { [weak self]  in
+            let requestViewModel = RequestAuctionViewModel()
+            let requestViewController = RequestAuctionViewController(viewModel: requestViewModel)
+            requestViewController.delegate = self
+            self?.navigationController?.pushViewController(requestViewController, animated: true)
         }
         return cell
     }

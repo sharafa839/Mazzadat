@@ -21,6 +21,7 @@ class OnBoardingViewController: UIViewController {
         super.viewDidLoad()
 
         startButton.setTitle("Next", for: .normal)
+        viewOfImage.circle()
     }
     
     //MARK: - Methods

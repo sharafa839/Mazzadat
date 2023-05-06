@@ -340,47 +340,54 @@
 			<key>orderHint</key>
 			<integer>51</integer>
 		</dict>
-		<key>SwiftyJSON.xcscheme</key>
+		<key>SwiftyGif.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>54</integer>
 		</dict>
-		<key>SwiftyStoreKit.xcscheme</key>
+		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>55</integer>
 		</dict>
-		<key>Swime.xcscheme</key>
+		<key>SwiftyStoreKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>56</integer>
 		</dict>
-		<key>Toast-Swift.xcscheme</key>
+		<key>Swime.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>57</integer>
 		</dict>
-		<key>TransitionButton.xcscheme</key>
+		<key>Toast-Swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>58</integer>
 		</dict>
-		<key>TwitterProfile.xcscheme</key>
+		<key>TransitionButton.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>59</integer>
+		</dict>
+		<key>TwitterProfile.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>60</integer>
 		</dict>
 		<key>abseil.xcscheme</key>
 		<dict>

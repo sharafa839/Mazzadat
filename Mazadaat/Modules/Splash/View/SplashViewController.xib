@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SplashViewController" customModule="Golden_Bell" customModuleProvider="target">
             <connections>
+                <outlet property="splashImage" destination="IuK-N7-yvT" id="y99-Gt-Blk"/>
                 <outlet property="view" destination="DKZ-tc-yKC" id="3Y5-LQ-CU4"/>
             </connections>
         </placeholder>
@@ -19,23 +20,22 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slogan" translatesAutoresizingMaskIntoConstraints="NO" id="9zo-ID-MB1">
-                    <rect key="frame" x="83" y="398.5" width="248" height="99"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IuK-N7-yvT">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                 </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="48u-6b-gSW"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="9zo-ID-MB1" firstAttribute="width" secondItem="DKZ-tc-yKC" secondAttribute="width" multiplier="0.6" id="h8P-JZ-ZRb"/>
-                <constraint firstItem="9zo-ID-MB1" firstAttribute="height" secondItem="DKZ-tc-yKC" secondAttribute="height" multiplier="0.11" id="iD0-3c-pdh"/>
-                <constraint firstItem="9zo-ID-MB1" firstAttribute="centerX" secondItem="DKZ-tc-yKC" secondAttribute="centerX" id="nBJ-T9-f2g"/>
-                <constraint firstItem="9zo-ID-MB1" firstAttribute="centerY" secondItem="DKZ-tc-yKC" secondAttribute="centerY" id="pYU-8S-Ai1"/>
+                <constraint firstAttribute="bottom" secondItem="IuK-N7-yvT" secondAttribute="bottom" id="Lcx-pq-CtT"/>
+                <constraint firstItem="IuK-N7-yvT" firstAttribute="leading" secondItem="DKZ-tc-yKC" secondAttribute="leading" id="Nuv-Mo-itM"/>
+                <constraint firstItem="48u-6b-gSW" firstAttribute="trailing" secondItem="IuK-N7-yvT" secondAttribute="trailing" id="REz-3z-bXu"/>
+                <constraint firstItem="IuK-N7-yvT" firstAttribute="top" secondItem="48u-6b-gSW" secondAttribute="top" id="sS9-Kj-ado"/>
             </constraints>
             <point key="canvasLocation" x="-152" y="83"/>
         </view>
     </objects>
     <resources>
-        <image name="slogan" width="200" height="137"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

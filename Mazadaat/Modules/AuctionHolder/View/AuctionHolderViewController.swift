@@ -39,7 +39,7 @@ class AuctionHolderViewController: UIViewController {
         setupViewModelObserver()
         setupTableView()
         setupViewModel()
-        setupUI()
+       // setupUI()
         setupCollectionView()
     }
     //MARK: - Methods
@@ -65,6 +65,7 @@ class AuctionHolderViewController: UIViewController {
           }.disposed(by: viewModel.disposeBag)
         viewModel.onSuccessGetPlaces.subscribe { [weak self] value in
             self?.tableView.reloadData()
+            self?.setupUI()
         }.disposed(by: viewModel.disposeBag)
         
         viewModel.kindOfAuction.subscribe { [weak self]value in

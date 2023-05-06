@@ -32,6 +32,8 @@ class MoyaHelper<T: TargetType> {
         print("deinit: \(Self.self)")
     }
     
+    
+    
         // MARK: - Methods
     
     func request<R: Codable>(target: T, completion: @escaping(Result<BaseResponse<R>, Error>) -> Void) {
@@ -41,7 +43,17 @@ class MoyaHelper<T: TargetType> {
                 case .success(let response):
                     if response.status == .fail {
                         let error = NetworkError(code: 0, message: response.message?.first ?? "L10n.App.somethingWentWrong")
-                        completion(.failure(error))
+                        if let message = response.message?.first  {
+                            if message == "You have to be logged in first ."{
+                                HelperK.deletUserDefaults()
+                                AppUtilities.changeRoot(root: UINavigationController(rootViewController: LoginViewController(viewModel: LoginViewModel())))
+                                let error = NetworkError(code: 9, message: response.message?.first ?? "L10n.App.somethingWentWrong")
+                                completion(.failure(error))
+                            }else {
+                                completion(.failure(error))
+                            }
+                        }
+                       
                     } else {
                         completion(.success(response))
                     }
@@ -142,3 +154,4 @@ extension Data {
             message
         }
     }
+

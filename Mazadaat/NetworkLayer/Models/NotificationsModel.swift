@@ -7,9 +7,11 @@
 //
 
 import Foundation
+// MARK: - Datum
 struct NotificationsModel: Codable {
     var id: Int?
-    var title, message: String?
+    var title: String?
+    var message: String?
     var refID, type: Int?
     var readAt: String?
     var createdAt: String?

@@ -48,20 +48,24 @@ class HomeViewController: UIViewController {
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        viewModel.getMyBalance()
+    }
+    
     func setupLayout() {
         screenSize = UIScreen.main.bounds
         screenWidth = screenSize.width
         screenHeight =  categoryCollectionView.bounds.height
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        layout.itemSize = !(CoreData.shared.personalSubscription?.isEmpty ?? false) ?  CGSize(width: screenWidth/4, height: screenHeight/2.3) : CGSize(width: screenWidth/3.5, height: screenHeight/2)
+        layout.itemSize = !(CoreData.shared.personalSubscription?.isEmpty ?? false) ?  CGSize(width: screenWidth/4, height: screenHeight/2.5) : CGSize(width: screenWidth/3.5, height: screenHeight/2)
         layout.scrollDirection = .horizontal
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
         categoryCollectionView.collectionViewLayout = layout
         let auctionLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         auctionLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        auctionLayout.itemSize = CGSize(width: 140, height: 140)
+        auctionLayout.itemSize = CGSize(width: 140, height: 175)
         auctionLayout.scrollDirection = .horizontal
         auctionLayout.minimumInteritemSpacing = 0
         auctionLayout.minimumLineSpacing = 0
@@ -71,10 +75,12 @@ class HomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = true
+        hidesBottomBarWhenPushed = false
     }
     private func setupViewModel() {
-        viewModel.getSlider()
+        //viewModel.getSlider()
         viewModel.getAuctionHolders()
+        viewModel.getSliders()
     }
     
     private func setupUI () {
@@ -135,6 +141,42 @@ class HomeViewController: UIViewController {
             guard let isLoading = value.element else {return}
               isLoading ? ActivityIndicatorManager.shared.showProgressView() : ActivityIndicatorManagerr.shared.hideProgressView()
           }.disposed(by: viewModel.disposeBag)
+        
+        viewModel.onAccessAuction.subscribe { [weak self] value in
+            guard let element = value.element else {return}
+            switch element.0 {
+            case .auction:
+                let id = element.1
+                self?.openAuction(id: id)
+            default:
+               return
+            }
+        }.disposed(by: viewModel.disposeBag)
+
+        viewModel.onSuccessGetMybalance.subscribe{ [weak self] value in
+            guard let remaining = value.element else {return}
+            HelperK.saveMoney(Type: "\(remaining)")
+            self?.packageSubscribePlan.setupLocalize(balance: "\(remaining)")
+          }.disposed(by: viewModel.disposeBag)
+        
+        viewModel.onSuccesGetSlider.subscribe { [weak self] sliders in
+            guard let slider = sliders.element else {return}
+          guard let self = self else {return}
+          self.imageSource.removeAll()
+            for media in slider {
+                guard let images = media.image else {return}
+                   
+                    ActivityIndicatorManager.shared.hideProgressView()
+                  guard let king = KingfisherSource(urlString: images) else {return}
+                  self.imageSource.append(king)
+                                           
+                  DispatchQueue.main.async {
+                    self.imageSlider.setImageInputs(self.imageSource)
+
+                  }
+                }
+            
+        }.disposed(by:viewModel.disposeBag)
     }
     //MARK: - Methods
     
@@ -142,32 +184,49 @@ class HomeViewController: UIViewController {
         self.imageSlider.configSliderShow()
         self.imageSlider.setRoundCorners(15)
         self.imageSlider.addActionn(vc: self, action: #selector(didTab))
+        
     }
     
     @objc func didTab()  {
-        imageSlider.presentFullScreenController(from: self)
+        var current = imageSlider.currentPage
+        viewModel.didTapOnSlider(index: current)
+    }
+    
+    
+    private func goToPlans() {
+    let planViewController = PlansViewController()
+        navigationController?.pushViewController(planViewController, animated: true)
+    }
+    
+    private func goToNotifications() {
+        let notificationViewModel =  NotificationsViewModel()
+        let notificationViewController = NotificationsViewController(viewModel:notificationViewModel)
+        notificationViewController.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(notificationViewController, animated: true)
     }
     
     private func setupViewsAction() {
         packageSubscribePlan.onTapUpgrade = {[weak self]   in
-            
-            print("package")
-            
+            self?.goToPlans()
         }
         
         headerHomeView.onTapNotification = { [weak self] in
-//            let notificationViewModel =  NotificationsViewModel()
-//            let notificationViewController = NotificationsViewController(viewModel:notificationViewModel)
-//            self?.navigationController?.pushViewController(notificationViewController, animated: true)
-//        }
-        } 
+            self?.goToNotifications()
+        }
         
         headerHomeView.onTapSearch = { [weak self] in
-                        let notificationViewModel =  ProfileViewModel()
-                        let notificationViewController = ProfileViewController(viewModel:notificationViewModel)
-                        self?.navigationController?.pushViewController(notificationViewController, animated: true)
+                        let profileViewModel =  ProfileViewModel()
+                        let profileViewController = ProfileViewController(viewModel:profileViewModel)
+                        self?.navigationController?.pushViewController(profileViewController, animated: true)
                     }
         
+    }
+    
+    private func openAuction(id:Int,image:String = "",name:String="") {
+        let auctionHolderViewModel = AuctionHolderViewModel(holderId: "\(id)",auctionHolderImage: image  ,auctionHolderName: name)
+        let auctionHolderViewController = AuctionHolderViewController(viewModel: auctionHolderViewModel)
+        auctionHolderViewController.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(auctionHolderViewController, animated: true)
     }
     
 }
@@ -200,16 +259,16 @@ extension HomeViewController:UICollectionViewDelegate,UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+       
         if collectionView == auctionHolderCollectionView {
             let auctionHolder = viewModel.onSuccessGetAuctionHolders.value[indexPath.row]
-            let auctionHolderViewModel = AuctionHolderViewModel(holderId: "\(auctionHolder.id ?? 0)",auctionHolderImage: auctionHolder.image ?? "" ,auctionHolderName: auctionHolder.name ?? "")
-            let auctionHolderViewController = AuctionHolderViewController(viewModel: auctionHolderViewModel)
-            self.navigationController?.pushViewController(auctionHolderViewController, animated: true)
+            openAuction(id: auctionHolder.id ?? 0, image: auctionHolder.image ?? "", name: auctionHolder.name ?? "")
         }else {
             guard let categoryId = viewModel.onSuccessGetCategories.value[indexPath.row].id else {return}
             guard let categoryName = viewModel.onSuccessGetCategories.value[indexPath.row].name else {return}
             let categoryViewModel = CategoriesViewModel(id: String(categoryId),title:categoryName)
             let categoryController = CategoriesViewController(viewModel: categoryViewModel)
+            categoryController.hidesBottomBarWhenPushed = true
             navigationController?.pushViewController(categoryController, animated: true)
         }
     }

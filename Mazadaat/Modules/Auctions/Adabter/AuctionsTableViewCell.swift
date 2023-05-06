@@ -10,6 +10,10 @@ import UIKit
 import Kingfisher
 class AuctionsTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var biddingImageView: UIImageView!
+    @IBOutlet weak var biddingValueLabel: UILabel!
+    @IBOutlet weak var biddingStatusLabel: UILabel!
+    @IBOutlet weak var biddingStatusView: UIView!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var auctionImageView: UIImageView!
     @IBOutlet weak var minValue: UILabel!
@@ -38,6 +42,7 @@ class AuctionsTableViewCell: UITableViewCell {
         auctionContinerView.setRoundCorners(auctionContinerView.frame.height/2)
         countView.setRoundCorners(10)
         endInView.setRoundCorners(10)
+        biddingStatusView.setRoundCorners(5)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -65,6 +70,101 @@ class AuctionsTableViewCell: UITableViewCell {
     }
     
     func configure(_ with:Auction) {
+        biddingStatusView.isHidden = true
+        minLabel.text = "min"
+        minValue.text = with.minimumBid
+        favoriteButton.setImage(with.isFavourite ?? false ? UIImage(named: "heart"):UIImage(named: "heart-add-line") , for: .normal)
+        heartView.backgroundColor = with.isFavourite ?? false ? .Bronze_500 : .lightGray
+        priceLabel.text = with.price
+        titleLabel.text = with.name
+        auctionsCountLabel.text = "\(with.bidsCount ?? 0)"
+        guard let date = with.endAt?.getDate() else {return}
+        
+        endInLabel.text = "\(date.day+"d") \(date.hour+"h") \(date.minute+"m")"
+        guard let image = with.media?.first?.file else {return}
+        guard let url = URL(string: image) else {return}
+        let placeholderImage = UIImage(named: "AppIcon")!
+        let processor = DefaultImageProcessor.default
+        auctionImageView.kf.setImage(
+            with: url,
+            placeholder: placeholderImage,
+            options: [
+                .processor(processor),
+                .loadDiskFileSynchronously,
+                .cacheOriginalImage,
+                .transition(.fade(0.25)),
+            ],
+            progressBlock: { receivedSize, totalSize in
+                // Progress updated
+            },
+            completionHandler: { result in
+                // Done
+            }
+        )
+    }
+    
+    
+    func configureToGoldenList(with:FavoriteModel) {
+        biddingStatusView.isHidden = true
+        
+        minLabel.text = "min"
+        minValue.text = with.minimumBid
+        favoriteButton.setImage( UIImage(systemName: "trash"), for: .normal)
+        heartView.backgroundColor = with.isFavourite ?? false ? .Bronze_500 : .lightGray
+        priceLabel.text = with.price
+        titleLabel.text = with.name
+        auctionsCountLabel.text = "\(with.bidsCount ?? 0)"
+        guard let date = with.endAt?.getDate() else {return}
+        
+        endInLabel.text = "\(date.day+"d") \(date.hour+"h") \(date.minute+"m")"
+        guard let image = with.media?.first?.file else {return}
+        guard let url = URL(string: image) else {return}
+        let placeholderImage = UIImage(named: "AppIcon")!
+        let processor = DefaultImageProcessor.default
+        auctionImageView.kf.setImage(
+            with: url,
+            placeholder: placeholderImage,
+            options: [
+                .processor(processor),
+                .loadDiskFileSynchronously,
+                .cacheOriginalImage,
+                .transition(.fade(0.25)),
+            ],
+            progressBlock: { receivedSize, totalSize in
+                // Progress updated
+            },
+            completionHandler: { result in
+                // Done
+            }
+        )
+    }
+    
+    func setTitleColorForBidding() {
+        minValue.textColor = .white
+        minLabel.textColor = .white
+        priceLabel.textColor = .white
+        titleLabel.textColor = .white
+    }
+    
+    func configureToBidding(with:FavoriteModel) {
+        
+        setTitleColorForBidding()
+        if with.lastBid?.userID == HelperK.getId() {
+            biddingStatusLabel.text = "yourTheHeighstNow"
+            biddingValueLabel.text =  with.lastBid?.price ?? ""
+            biddingStatusView.backgroundColor = .Bronze_100
+            biddingValueLabel.textColor = .Bronze_900
+            biddingStatusLabel.textColor = .Bronze_900
+        }else {
+            biddingStatusLabel.text = "yourOutBid"
+            biddingValueLabel.text = "AgainToLead"
+            biddingStatusView.backgroundColor = .Natural_200
+            biddingValueLabel.textColor = .textColor
+            biddingStatusLabel.textColor = .textColor
+
+            biddingImageView.isHidden = true
+        }
+        
         minLabel.text = "min"
         minValue.text = with.minimumBid
         favoriteButton.setImage(with.isFavourite ?? false ? UIImage(named: "heart"):UIImage(named: "heart-add-line") , for: .normal)

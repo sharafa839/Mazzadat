@@ -100,6 +100,7 @@ class OnBoardingScreensViewController: UIViewController {
     private func changeLanguage() {
         
     }
+    
     private func navigateToLogin() {
         HelperK.saveFristTime(token: true)
         let loginViewModel = LoginViewModel()
@@ -114,7 +115,9 @@ class OnBoardingScreensViewController: UIViewController {
         let page = currentPage + 1
         viewModel.currentPage.accept(page)
         let indexPath = IndexPath(row:page , section: 0)
-        onBoardingCollectionView.tryScroll(to: indexPath)
+        onBoardingCollectionView.isPagingEnabled = false
+        onBoardingCollectionView.tryScroll(to: indexPath,position: .centeredHorizontally)
+        onBoardingCollectionView.isPagingEnabled = true
         
     }
     
@@ -122,7 +125,7 @@ class OnBoardingScreensViewController: UIViewController {
         let page = currentPage - 1
         viewModel.currentPage.accept(page)
         let indexPath = IndexPath(row:page, section: 0)
-        onBoardingCollectionView.tryScroll(to: indexPath)
+        onBoardingCollectionView.tryScroll(to: indexPath,position: .centeredVertically)
     }
     
     private func configureUI(currentPage:Int) {
@@ -151,8 +154,8 @@ extension OnBoardingScreensViewController:UICollectionViewDelegate,UICollectionV
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == onBoardingCollectionView {
-            let cell:OnBoardingCollectionViewCell = collectionView.dequeue(at: indexPath)
-            
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: OnBoardingCollectionViewCell.identifier, for: indexPath) as! OnBoardingCollectionViewCell
+            cell.configure(items: viewModel.onBoardViews[indexPath.row])
             return cell
         }else {
             let cell:PagingCollectionViewCell = collectionView.dequeue(at: indexPath)
@@ -179,6 +182,20 @@ extension OnBoardingScreensViewController:UICollectionViewDelegate,UICollectionV
     }
     
     
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let width = onBoardingCollectionView.frame.width
+        let currentPage = Int(scrollView.contentOffset.x / width)
+        viewModel.currentPage.accept(currentPage)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        if collectionView == onBoardingCollectionView {
+            return UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
+        }else{
+            return UIEdgeInsets(top: 5, left: (paginationCollectionView.frame.width/2) - 40, bottom: 5, right:  (paginationCollectionView.frame.width/2) - 20)
+        }
+        
+    }
 }
 
 extension UIView {

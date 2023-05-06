@@ -39,6 +39,9 @@ extension UIColor {
     static var Bronze_50:UIColor{
         return UIColor(named: "Bronze-50")!
     }
+    static var Bronze_100:UIColor{
+        return UIColor(named: "Bronze-100")!
+    }
     static var textColor:UIColor{
         return UIColor(named: "TextColor")!
     }
@@ -48,5 +51,8 @@ extension UIColor {
     }
     static var Bronze_900:UIColor {
         return UIColor(named: "Bronze-900")!
+    }
+    static var Natural_200:UIColor {
+        return UIColor(named: "Natural_200")!
     }
 }

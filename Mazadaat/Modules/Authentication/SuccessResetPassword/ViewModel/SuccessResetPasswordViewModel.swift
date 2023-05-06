@@ -19,11 +19,16 @@ class SuccessResetPasswordViewModel {
     var title:String
     var subTitle:String
     var description:String
-    init(success:Bool,title:String,subtitle:String,descrption:String) {
+    var opensource:openSource
+    init(success:Bool,title:String,subtitle:String,descrption:String,type:openSource) {
         self.success = success
         self.title = title
         self.subTitle = subtitle
         self.description = descrption
+        self.opensource = type
     }
 }
 
+enum openSource {
+    case forgetPassword,auction
+}

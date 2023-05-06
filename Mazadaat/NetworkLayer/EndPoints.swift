@@ -23,7 +23,7 @@ enum EndPoints {
     }
     
     enum Notifications: String {
-        case all = "api/notifications/"
+        case all = "api/notifications"
         case send = "api/notifications/send"
         case read = "api/notifications/read"
         case readAll = "api/notifications/read/all"
@@ -42,6 +42,7 @@ enum EndPoints {
         case show = "api/tickets/show?ticket_id"
         case store = "api/tickets/store"
         case response = "api/tickets/response"
+        case changeName = "api/tickets/change-name"
     }
     
     enum Home:String {
@@ -55,19 +56,22 @@ enum EndPoints {
         case holderPlaces = "api/home/holder_places"
         case showHolderPlaces = "api/home/show_holder_place"
         case payEntreeFee = "api/home/entry_fee"
+        case slider = "api/home/sliders"
     }
     
     enum Auction:String {
-        case all = "api/auctions/"
-        case showOfficialAuction = "api/auctions/official_auction?auction_id=3"
+        case all = "api/auctions"
+        case showOfficialAuction = "api/auctions/official_auction"
         case show = "api/auctions/show"
         case toggleFavorite = "api/auctions/toggle_favourite"
         case favorite = "api/auctions/favourites"
         case addBid = "api/auctions/add_bid"
+        case advertisement = "api/home/sliders"
     }
     
     enum Core:String {
         case install = "api/install"
         case advertisements  = "api/auctions"
+        case index = "api/advertisement/index"
     }
 }

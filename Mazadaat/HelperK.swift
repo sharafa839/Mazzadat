@@ -87,7 +87,7 @@ class HelperK: NSObject {
     }
     class func getemail()->String{
         let def = UserDefaults.standard
-        return (def.object(forKey: "email") as! String)
+        return (def.object(forKey: "email") as? String ?? "")
     }
     class func getname ()->String{
         let def = UserDefaults.standard
@@ -95,7 +95,7 @@ class HelperK: NSObject {
     }
     class func getphone()->String{
         let def = UserDefaults.standard
-        return (def.object(forKey: "phone") as! String)
+        return (def.object(forKey: "phone") as? String ?? "")
     }
     class func getCode() -> String {
         let def = UserDefaults.standard
@@ -192,10 +192,12 @@ class HelperK: NSObject {
         let def = UserDefaults.standard
         return (def.object(forKey: "kind")  as? String) != nil
     }
+    
     class func checkdate()->Bool{
         let def = UserDefaults.standard
         return (def.object(forKey: "datee")  as? String) != nil
     }
+    
     class func fetCurrentDate()->String{
        let date=Date()
     let formatter = DateFormatter()
@@ -203,6 +205,12 @@ class HelperK: NSObject {
         let result = formatter.string(from: date)
         return result
     }
+    
+    class func getVerification()->Bool{
+        let def = UserDefaults.standard
+        return (def.object(forKey: "isVerified")as? Bool ?? false)
+    }
+    
     
   class func setUserData(loginPayLoad:LoginPayload){
         
@@ -212,7 +220,10 @@ class HelperK: NSObject {
     def.setValue(loginPayLoad.name ?? "", forKey: "name")
     def.setValue(loginPayLoad.email ?? "", forKey: "email")
     def.setValue(loginPayLoad.id ?? "", forKey: "Id")
-      def.setValue(loginPayLoad.avatar ?? "", forKey: "avatar")
+    def.setValue(loginPayLoad.avatar ?? "", forKey: "avatar")
+    def.setValue(loginPayLoad.isVerified ?? "", forKey: "isVerified")
+
+      
       saveToken(token: loginPayLoad.accessToken ?? "")
         def.synchronize()
     }
@@ -223,9 +234,27 @@ class HelperK: NSObject {
           def.synchronize()
       }
     
+    
+    
     class func getAvatar() -> String {
         let def = UserDefaults.standard
         return (def.object(forKey: "avatar") as? String ?? "0.0")
+    }
+    
+    class func getId() -> Int {
+        let def = UserDefaults.standard
+        return (def.object(forKey: "Id") as? Int ?? 0)
+    }
+    
+    class func setImage() -> String {
+        let def = UserDefaults.standard
+        return (def.object(forKey: "image") as? String ?? "0.0")
+    }
+    
+    
+    class func getImage() -> String {
+        let def = UserDefaults.standard
+        return (def.object(forKey: "image") as? String ?? "0.0")
     }
     
     class func getMoney() -> String {
