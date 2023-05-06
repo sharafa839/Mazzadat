@@ -54,18 +54,18 @@ class HomeViewController: UIViewController {
     
     func setupLayout() {
         screenSize = UIScreen.main.bounds
-        screenWidth = screenSize.width
+        screenWidth = categoryCollectionView.bounds.width
         screenHeight =  categoryCollectionView.bounds.height
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        layout.itemSize = !(CoreData.shared.personalSubscription?.isEmpty ?? false) ?  CGSize(width: screenWidth/4, height: screenHeight/2.5) : CGSize(width: screenWidth/3.5, height: screenHeight/2)
+        layout.itemSize = !(CoreData.shared.personalSubscription?.isEmpty ?? false) ?  CGSize(width: screenWidth/4, height: screenHeight/2.8) : CGSize(width: screenWidth/3.5, height: screenHeight/2)
         layout.scrollDirection = .horizontal
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
         categoryCollectionView.collectionViewLayout = layout
         let auctionLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         auctionLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        auctionLayout.itemSize = CGSize(width: 140, height: 175)
+        auctionLayout.itemSize = CGSize(width: categoryCollectionView.frame.width / 3, height: 150)
         auctionLayout.scrollDirection = .horizontal
         auctionLayout.minimumInteritemSpacing = 0
         auctionLayout.minimumLineSpacing = 0
@@ -84,7 +84,7 @@ class HomeViewController: UIViewController {
     }
     
     private func setupUI () {
-        continerView.setRoundCorners(5)
+        continerView.setRoundCorners(25)
         packageSubscribePlan.setRoundCorners(5)
        packageSubscribePlan.isHidden = (CoreData.shared.personalSubscription?.isEmpty ?? false)
         headerHomeView.setupUI(view: .home)
@@ -147,7 +147,10 @@ class HomeViewController: UIViewController {
             switch element.0 {
             case .auction:
                 let id = element.1
-                self?.openAuction(id: id)
+                self?.openAuctionDetails(id: id)
+            case .place :
+                let id = element.1
+                self?.openAuctionPlaces(id: id)
             default:
                return
             }
@@ -195,6 +198,7 @@ class HomeViewController: UIViewController {
     
     private func goToPlans() {
     let planViewController = PlansViewController()
+        planViewController.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(planViewController, animated: true)
     }
     
@@ -203,6 +207,13 @@ class HomeViewController: UIViewController {
         let notificationViewController = NotificationsViewController(viewModel:notificationViewModel)
         notificationViewController.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(notificationViewController, animated: true)
+    }
+    
+    private func goToProfile() {
+        let profileViewModel =  ProfileViewModel()
+        let profileViewController = ProfileViewController(viewModel:profileViewModel)
+        profileViewController.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(profileViewController, animated: true)
     }
     
     private func setupViewsAction() {
@@ -215,18 +226,33 @@ class HomeViewController: UIViewController {
         }
         
         headerHomeView.onTapSearch = { [weak self] in
-                        let profileViewModel =  ProfileViewModel()
-                        let profileViewController = ProfileViewController(viewModel:profileViewModel)
-                        self?.navigationController?.pushViewController(profileViewController, animated: true)
+            self?.goToProfile()
                     }
         
     }
     
-    private func openAuction(id:Int,image:String = "",name:String="") {
-        let auctionHolderViewModel = AuctionHolderViewModel(holderId: "\(id)",auctionHolderImage: image  ,auctionHolderName: name)
+    private func openAuctionHolder(holderId:Int,image:String = "",name:String="") {
+        let auctionHolderViewModel = AuctionHolderViewModel(holderId: "\(holderId)",auctionHolderImage: image  ,auctionHolderName: name)
         let auctionHolderViewController = AuctionHolderViewController(viewModel: auctionHolderViewModel)
         auctionHolderViewController.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(auctionHolderViewController, animated: true)
+
+        navigationController?.pushViewController(auctionHolderViewController, animated: true)
+
+    }
+    
+    
+    private func openAuctionDetails(id:Int,image:String = "",name:String="") {
+        let auctionHolderViewModel = AuctionsDetailsViewModel(id: "\(id)", type: "", isOfficialAuction: false, placeId: nil)
+        let auctionHolderViewController = AuctionsDetailsViewController(viewModel: auctionHolderViewModel)
+        auctionHolderViewController.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(auctionHolderViewController, animated: true)
+    }
+    
+    private func openAuctionPlaces(id:Int) {
+        let AuctionsViewModel = AuctionsViewModel(placeId: "\(id)")
+        let auctionsViewController = AuctionsViewController(viewModel: AuctionsViewModel)
+        auctionsViewController.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(auctionsViewController, animated: true)
     }
     
 }
@@ -255,14 +281,14 @@ extension HomeViewController:UICollectionViewDelegate,UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 10
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
        
         if collectionView == auctionHolderCollectionView {
             let auctionHolder = viewModel.onSuccessGetAuctionHolders.value[indexPath.row]
-            openAuction(id: auctionHolder.id ?? 0, image: auctionHolder.image ?? "", name: auctionHolder.name ?? "")
+            openAuctionHolder(holderId: auctionHolder.id ?? 0, image: auctionHolder.image ?? "", name: auctionHolder.name ?? "")
         }else {
             guard let categoryId = viewModel.onSuccessGetCategories.value[indexPath.row].id else {return}
             guard let categoryName = viewModel.onSuccessGetCategories.value[indexPath.row].name else {return}

@@ -70,6 +70,10 @@ class AuctionsSectionViewController: UIViewController {
 
     }
     
+    private func openAuctionDetails(id:Int) {
+        let auctionDetailsViewModel = AuctionsDetailsViewModel(id: "\(id)", type: "", isOfficialAuction: false, placeId: nil)
+    }
+    
     @IBAction func segmentAuction(_ sender: UISegmentedControl) {
         let segment = sender.selectedSegmentIndex
         switch segment {
@@ -117,8 +121,13 @@ extension AuctionsSectionViewController:UITableViewDelegate,UITableViewDataSourc
        
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let id = viewModel.onSuccessGetData.value[indexPath.row].id else {return}
+        openAuctionDetails(id: id)
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        210
+        240
     }
     
 }

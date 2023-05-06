@@ -38,7 +38,7 @@ enum EndPoints {
     }
     
     enum Tickets: String {
-        case all = "api/tickets/"
+        case all = "api/tickets"
         case show = "api/tickets/show?ticket_id"
         case store = "api/tickets/store"
         case response = "api/tickets/response"

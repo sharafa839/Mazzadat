@@ -70,6 +70,7 @@ class AuctionsTableViewCell: UITableViewCell {
     }
     
     func configure(_ with:Auction) {
+        setTitleColorForBidding()
         biddingStatusView.isHidden = true
         minLabel.text = "min"
         minValue.text = with.minimumBid

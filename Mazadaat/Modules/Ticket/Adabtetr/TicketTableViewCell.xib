@@ -76,7 +76,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Dr-fS-HGs">
-                                <rect key="frame" x="297" y="16" width="42" height="17.5"/>
+                                <rect key="frame" x="300" y="16" width="39" height="17.5"/>
                                 <fontDescription key="fontDescription" name="Archivo-Regular" family="Archivo" pointSize="16"/>
                                 <color key="textColor" name="BorderView"/>
                                 <nil key="highlightedColor"/>
@@ -90,7 +90,7 @@
                             <constraint firstItem="Vcf-lh-w5o" firstAttribute="trailing" secondItem="Q62-jN-nsa" secondAttribute="trailing" id="BZd-PU-fZo"/>
                             <constraint firstItem="Q62-jN-nsa" firstAttribute="trailing" secondItem="rDp-YC-lwY" secondAttribute="trailing" id="GIh-mF-h4j"/>
                             <constraint firstItem="7Dr-fS-HGs" firstAttribute="top" secondItem="rDp-YC-lwY" secondAttribute="top" id="GNx-Gp-LKR"/>
-                            <constraint firstItem="7Dr-fS-HGs" firstAttribute="leading" secondItem="rDp-YC-lwY" secondAttribute="trailing" constant="143.5" id="Uvg-aC-aCc"/>
+                            <constraint firstItem="7Dr-fS-HGs" firstAttribute="leading" secondItem="rDp-YC-lwY" secondAttribute="trailing" priority="250" constant="16" id="Uvg-aC-aCc"/>
                             <constraint firstItem="Vcf-lh-w5o" firstAttribute="leading" secondItem="Q62-jN-nsa" secondAttribute="leading" id="XEU-D5-hZY"/>
                             <constraint firstAttribute="trailing" secondItem="RKE-vj-7Sw" secondAttribute="trailing" constant="8" id="Xal-82-TKS"/>
                             <constraint firstItem="Q62-jN-nsa" firstAttribute="leading" secondItem="rDp-YC-lwY" secondAttribute="leading" id="b4w-u6-CXF"/>
@@ -112,6 +112,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="containerView" destination="M0F-zp-PtO" id="lHH-rb-GLK"/>
                 <outlet property="descriptionLabel" destination="Vcf-lh-w5o" id="Gjg-on-Juo"/>
                 <outlet property="imageContainerView" destination="3tf-aB-B51" id="Xvc-fe-zhH"/>
                 <outlet property="newView" destination="RKE-vj-7Sw" id="oTa-Hc-78X"/>

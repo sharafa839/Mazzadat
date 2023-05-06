@@ -32,20 +32,33 @@ class PlanViewController: UIViewController {
 
         setupUI()
         setupTableView()
+        setupViewModelObservers()
         setupObservables()
     }
 
     private func setupUI() {
-        planTitleLabel.text = viewModel.subscription.name
-        descriptionLabel.text = viewModel.subscription.description
+        if viewModel.placeId != "" {
+            planTitleLabel.text = "payToGo"
+            descriptionLabel.text = "payEntreeFeeForThisPlaceToGetAllAuctionSubscription"
+        }else{
+            planTitleLabel.text = viewModel.subscription.name
+            descriptionLabel.text = viewModel.subscription.description
+        }
+        
     }
     
     private func setupObservables() {
         payButton.rx.tap.subscribe { [weak self] _ in
+            guard let paymentMethodId = self?.viewModel.paymentMethodId else {
+                HelperK.showError(title: "youHaveToSelectPaymentMethodId", subtitle: "")
+                return
+            }
+            
             if self?.viewModel.placeId == "" {
-                self?.viewModel.uploadBankTransfer(image: self?.multipart, subscriptionId:"\( self?.viewModel.subscription.id ?? 0)", paymentMethod: "\(self?.viewModel.paymentMethodId)")
+                guard let paymentMethodId = self?.viewModel.paymentMethodId else { return}
+                self?.viewModel.uploadBankTransfer(image: self?.multipart, subscriptionId:"\( self?.viewModel.subscription.id ?? 0)", paymentMethod: "\(paymentMethodId)")
             }else {
-                self?.viewModel.payEntryFees(image: self?.multipart, placeId: self?.viewModel.placeId ?? "", paymentMethod: "\(self?.viewModel.paymentMethodId)")
+                self?.viewModel.payEntryFees(image: self?.multipart, placeId: self?.viewModel.placeId ?? "", paymentMethod: "\(paymentMethodId)")
             }
            
         }.disposed(by: viewModel.disposeBag)

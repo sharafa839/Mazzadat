@@ -52,7 +52,7 @@ class AuctionsDetailsViewModel:AuctionNetworkingProtocol {
             switch result {
             case .success(let response):
                 guard let auction = response.response?.data else {return}
-                self?.detectIsAllowToBidding(auction: auction)
+//                self?.detectIsAllowToBidding(auction: auction)
                 self?.auctionDetails.onNext(auction)
                 self?.auctionDetailArray.accept(auction.auctionDetails ?? [])
                 self?.price = auction.price ?? ""
@@ -63,12 +63,17 @@ class AuctionsDetailsViewModel:AuctionNetworkingProtocol {
         }
     }
     
-    private func detectIsAllowToBidding(auction:AuctionDetailsModel) {
-        if auction.auctionVisitors != "all_users" {
+     func detectIsAllowToBidding(auction:AuctionDetailsModel)->Bool {
+         if auction.auctionVisitors != "all_users" || auction.auctionVisitors != nil {
             if HelperK.getVerification(){
+                return true
+            }else{
                 onError.onNext("notAllowedForAllUsers")
                 verifyWithNafath.onNext(())
+                return false
             }
+        }else{
+            return true
         }
     }
     

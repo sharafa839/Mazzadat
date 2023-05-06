@@ -33,7 +33,7 @@ class AddDocumentViewController: UIViewController {
     var frontMultiPartItem:MultiPartItem?
     var backMultiPartItem:MultiPartItem?
     var button:UIBarButtonItem?
-
+    var delegate:didImageUpdates?
 var viewModel:AddDocumentViewModel
     init(viewModel:AddDocumentViewModel) {
         self.viewModel = viewModel
@@ -48,7 +48,7 @@ var viewModel:AddDocumentViewModel
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-       setupViewModelObservers()
+        setupViewModelObservers()
         setNavigationItem(title: "AddDocument")
         //setupMultiPart()
     }
@@ -83,8 +83,10 @@ var viewModel:AddDocumentViewModel
         }.disposed(by: viewModel.disposeBag)
         
         viewModel.onSuccess.subscribe {[weak self] model in
-           
+            HelperK.showSuccess(title: "picUploaded", subtitle: "")
+            self?.delegate?.imagesUpdates()
             self?.tableView.reloadData()
+            self?.navigationController?.popViewController(animated: true)
         }.disposed(by: viewModel.disposeBag)
     }
     

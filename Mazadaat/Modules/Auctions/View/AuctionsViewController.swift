@@ -50,6 +50,7 @@ class AuctionsViewController: UIViewController {
         setupViewModelObservables()
         setupViewModel()
         setupObservables()
+        setupViews()
     }
     
     private func setupUI() {
@@ -143,7 +144,28 @@ class AuctionsViewController: UIViewController {
     }
     
     
+    private func setupViews() {
+        packageSubscription.setupLocalize(balance: HelperK.getMoney())
+        packageSubscription.onTapUpgrade = { [weak self] in
+            self?.goToPlans()
+           
+        }
+    }
+    
+    
     //MARK: - Methods
+    private func openAuctionDetails(_ auctionId:Int) {
+        let auctionDetailsViewModel = AuctionsDetailsViewModel(id: "\(auctionId)", type: viewModel.type ?? "", isOfficialAuction: viewModel.isOfficial ?? false, placeId: viewModel.placeId)
+        let auctionDetailsViewController = AuctionsDetailsViewController(viewModel: auctionDetailsViewModel)
+        navigationController?.pushViewController(auctionDetailsViewController, animated: true)
+    }
+    
+    private func goToPlans() {
+    let planViewController = PlansViewController()
+        planViewController.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(planViewController, animated: true)
+    }
+    
 }
 
 extension AuctionsViewController:UITableViewDelegate,UITableViewDataSource {
@@ -163,13 +185,11 @@ extension AuctionsViewController:UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let auctionId = viewModel.auctions.value[indexPath.row].id else {return}
-        let auctionDetailsViewModel = AuctionsDetailsViewModel(id: "\(auctionId)", type: viewModel.type ?? "", isOfficialAuction: true, placeId: viewModel.placeId)
-        let auctionDetailsViewController = AuctionsDetailsViewController(viewModel: auctionDetailsViewModel)
-        self.navigationController?.pushViewController(auctionDetailsViewController, animated: true)
+        openAuctionDetails(auctionId)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        170
+        220
     }
     
 }

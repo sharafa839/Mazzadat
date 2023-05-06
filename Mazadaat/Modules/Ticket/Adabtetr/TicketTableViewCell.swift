@@ -10,6 +10,7 @@ import UIKit
 
 class TicketTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var newView: UIView!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -25,7 +26,20 @@ class TicketTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+        setupUI()
+    }
+    
+    private func setupUI() {
+        containerView.setRoundCorners(5)
+    }
+    
+    func configure(_ by:TicketModel) {
+        timeLabel.text = ""
+        descriptionLabel.text = by.message
+        titleLabel.text = by.title
+        refrenceIdLabel.text = "#\(by.id ?? 0)"
+        ticketImageView.downlodImage(str: by.attachment ?? "")
+        
     }
     
 }

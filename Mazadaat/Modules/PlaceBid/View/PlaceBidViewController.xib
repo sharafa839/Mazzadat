@@ -60,7 +60,7 @@
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yi6-GX-rvw">
                             <rect key="frame" x="16" y="8" width="142" height="41"/>
-                            <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="14"/>
+                            <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="16"/>
                             <color key="textColor" name="TextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -93,13 +93,13 @@
                                             <rect key="frame" x="8" y="2" width="138" height="46"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8ds-bJ-eON">
-                                                    <rect key="frame" x="0.0" y="0.0" width="90.5" height="46"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="105" height="46"/>
+                                                    <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Cg-2R-8Xg">
-                                                    <rect key="frame" x="96.5" y="0.0" width="41.5" height="46"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="111" y="0.0" width="27" height="46"/>
+                                                    <fontDescription key="fontDescription" name="Archivo-Regular" family="Archivo" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>

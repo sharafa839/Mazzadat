@@ -8,7 +8,11 @@
 
 import UIKit
 
-class DoucmentsViewController: UIViewController {
+class DoucmentsViewController: UIViewController, didImageUpdates {
+    func imagesUpdates() {
+        viewModel.getDocuments()
+    }
+    
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var instructionsLabel: UILabel!
@@ -25,7 +29,7 @@ class DoucmentsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-setNavigationItem(title: "Document")
+        setNavigationItem(title: "Document")
         setupTableView()
         setupViewModelObservers()
         setupViewModel()
@@ -92,6 +96,7 @@ extension DoucmentsViewController:UICollectionViewDelegate,UICollectionViewDataS
     private func goToAddDocument(document:UploadDocuments?) {
         let addDocumentViewModel = AddDocumentViewModel(document: document)
         let addDocumentViewController = AddDocumentViewController(viewModel: addDocumentViewModel)
+        addDocumentViewController.delegate = self
         navigationController?.pushViewController(addDocumentViewController, animated: true)
     }
     
@@ -110,7 +115,7 @@ extension DoucmentsViewController:UICollectionViewDelegate,UICollectionViewDataS
             
             return CGSize(width:collectionView.frame.size.width*0.9, height: 250)
         }else {
-            return CGSize(width:194, height: 161)
+            return CGSize(width:collectionView.frame.size.width/2, height: 161)
         }
     }
     
@@ -121,4 +126,8 @@ extension DoucmentsViewController:UICollectionViewDelegate,UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return CGFloat(0)
     }
+}
+
+protocol didImageUpdates {
+    func imagesUpdates()
 }

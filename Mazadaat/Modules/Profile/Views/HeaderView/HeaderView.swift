@@ -21,7 +21,7 @@ class HeaderView: UIView {
     //MARK: - LifeCycle
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.backgroundColor = .Bronze_500
+       
     }
     
     required init?(coder: NSCoder) {
@@ -46,11 +46,15 @@ class HeaderView: UIView {
     private func setupProfile() {
         searchButton.isHidden = true
         titleLabel.text = "profile"
+        self.backgroundColor = .Bronze_500
+
     }
     
     private func setupAskGoldenBell() {
         titleLabel.font = .Archivo(28, weight: .Bold)
         titleLabel.text = "askGoldenBell"
+        self.backgroundColor = .Bronze_500
+
     }
     
     @IBAction func searchButtonAction(_ sender: UIButton) {

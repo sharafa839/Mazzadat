@@ -27,19 +27,20 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FuA-Fj-VK3">
                         <rect key="frame" x="8" y="8" width="125" height="137"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oFF-xy-fWe">
-                                <rect key="frame" x="16" y="8" width="93" height="93"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oFF-xy-fWe">
+                                <rect key="frame" x="8" y="8" width="109" height="93"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="93" id="Klf-a2-y1g"/>
+                                    <constraint firstAttribute="width" constant="109" id="Klf-a2-y1g"/>
+                                    <constraint firstAttribute="height" constant="93" id="ctr-sD-rbh"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" name="TextColor"/>
                         <constraints>
                             <constraint firstItem="oFF-xy-fWe" firstAttribute="top" secondItem="FuA-Fj-VK3" secondAttribute="top" constant="8" id="2hK-Ib-aLJ"/>
-                            <constraint firstAttribute="trailing" secondItem="oFF-xy-fWe" secondAttribute="trailing" constant="16" id="Bbe-qd-8mO"/>
+                            <constraint firstAttribute="trailing" secondItem="oFF-xy-fWe" secondAttribute="trailing" constant="8" id="Bbe-qd-8mO"/>
                             <constraint firstAttribute="bottom" secondItem="oFF-xy-fWe" secondAttribute="bottom" constant="36" id="Qvr-0A-vFV"/>
-                            <constraint firstItem="oFF-xy-fWe" firstAttribute="leading" secondItem="FuA-Fj-VK3" secondAttribute="leading" constant="16" id="TVd-11-52W"/>
+                            <constraint firstItem="oFF-xy-fWe" firstAttribute="leading" secondItem="FuA-Fj-VK3" secondAttribute="leading" constant="8" id="TVd-11-52W"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t7u-C9-WLd">

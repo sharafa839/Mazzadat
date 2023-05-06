@@ -42,7 +42,7 @@ struct Auction: Codable {
     var name, price, minimumBid, startAt: String?
     var endAt: String?
     var bidsCount: Int?
-    var lastBid: Int?
+    var lastBid: LastBid?
     var media: [Media]?
     var isFavourite: Bool?
 

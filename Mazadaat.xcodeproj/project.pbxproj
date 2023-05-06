@@ -144,6 +144,8 @@
 		FF4F9C302A0023C100BEDF18 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4F9C2E2A0023C100BEDF18 /* FeedbackViewController.swift */; };
 		FF4F9C312A0023C100BEDF18 /* FeedbackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF4F9C2F2A0023C100BEDF18 /* FeedbackViewController.xib */; };
 		FF4F9C352A0028AA00BEDF18 /* FeedbackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4F9C342A0028AA00BEDF18 /* FeedbackViewModel.swift */; };
+		FF5894772A06986F00620ABB /* TicketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5894762A06986F00620ABB /* TicketViewModel.swift */; };
+		FF5894792A069B9300620ABB /* TicketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5894782A069B9300620ABB /* TicketModel.swift */; };
 		FF5AF73429DFBE5D0020E716 /* AuthNetworkingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5AF73129DFBE5D0020E716 /* AuthNetworkingProtocol.swift */; };
 		FF5AF73529DFBE5D0020E716 /* AuthApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5AF73229DFBE5D0020E716 /* AuthApi.swift */; };
 		FF5AF73629DFBE5D0020E716 /* AuthRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5AF73329DFBE5D0020E716 /* AuthRepo.swift */; };
@@ -563,6 +565,8 @@
 		FF4F9C2E2A0023C100BEDF18 /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		FF4F9C2F2A0023C100BEDF18 /* FeedbackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedbackViewController.xib; sourceTree = "<group>"; };
 		FF4F9C342A0028AA00BEDF18 /* FeedbackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewModel.swift; sourceTree = "<group>"; };
+		FF5894762A06986F00620ABB /* TicketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketViewModel.swift; sourceTree = "<group>"; };
+		FF5894782A069B9300620ABB /* TicketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketModel.swift; sourceTree = "<group>"; };
 		FF5AF73129DFBE5D0020E716 /* AuthNetworkingProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthNetworkingProtocol.swift; sourceTree = "<group>"; };
 		FF5AF73229DFBE5D0020E716 /* AuthApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthApi.swift; sourceTree = "<group>"; };
 		FF5AF73329DFBE5D0020E716 /* AuthRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthRepo.swift; sourceTree = "<group>"; };
@@ -1253,6 +1257,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		FF5894752A06986200620ABB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FF5894762A06986F00620ABB /* TicketViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		FF5AF73029DFBE5D0020E716 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
@@ -1287,6 +1299,7 @@
 				FF46E84C2A02163E00474A46 /* AskGoldenBellModel.swift */,
 				FFBC3C1E2A03359900547566 /* DocumentModel.swift */,
 				FFB3E12D2A0478460078BAF4 /* FavoritesModel.swift */,
+				FF5894782A069B9300620ABB /* TicketModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1986,6 +1999,7 @@
 		FF9443892A003C190094AC1F /* Ticket */ = {
 			isa = PBXGroup;
 			children = (
+				FF5894752A06986200620ABB /* ViewModel */,
 				FF94438F2A003C3A0094AC1F /* Adabtetr */,
 				FF94438A2A003C210094AC1F /* View */,
 			);
@@ -2987,6 +3001,7 @@
 				FF81900C29D5221C00033060 /* Coordinator.swift in Sources */,
 				FF8B257729EB310C00302346 /* AuctionOwnerView.swift in Sources */,
 				FF7C464F29FCFC4000615314 /* SettingViewController.swift in Sources */,
+				FF5894772A06986F00620ABB /* TicketViewModel.swift in Sources */,
 				FFBC7F7229F0E72C00579E20 /* AuctionsFilterViewController.swift in Sources */,
 				FF4C7F2329D453CC0095396A /* DesignView.swift in Sources */,
 				FFA76A3629E11630000BD881 /* SplashViewModel.swift in Sources */,
@@ -3052,6 +3067,7 @@
 				FA762B7D259E0B000035E0EB /* Model.swift in Sources */,
 				FFCDB4262A0516D7008A5937 /* PlansViewController.swift in Sources */,
 				FFE2C52229DBB91E00F8C16F /* CategoriesCollectionViewCell.swift in Sources */,
+				FF5894792A069B9300620ABB /* TicketModel.swift in Sources */,
 				8E919FE926BFE3C4002D2E3B /* FQACell.swift in Sources */,
 				FF9443872A0033C10094AC1F /* RequestAuctionViewController.swift in Sources */,
 				FFCDB4222A051689008A5937 /* PlansTableViewCell.swift in Sources */,

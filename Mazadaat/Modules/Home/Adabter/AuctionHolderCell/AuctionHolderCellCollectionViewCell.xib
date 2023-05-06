@@ -23,15 +23,15 @@
                 <rect key="frame" x="0.0" y="0.0" width="148" height="136"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TfN-p1-kw0">
-                        <rect key="frame" x="9" y="9" width="130" height="93.5"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app icons-12" translatesAutoresizingMaskIntoConstraints="NO" id="TfN-p1-kw0">
+                        <rect key="frame" x="4" y="9" width="140" height="93.5"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="93.5" id="nW6-mj-l6V"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5c-IY-Y14">
-                        <rect key="frame" x="8" y="111.5" width="132" height="17.5"/>
-                        <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="16"/>
+                        <rect key="frame" x="4" y="111.5" width="140" height="13.5"/>
+                        <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="12"/>
                         <color key="textColor" name="TextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -40,10 +40,10 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstItem="g5c-IY-Y14" firstAttribute="top" secondItem="TfN-p1-kw0" secondAttribute="bottom" constant="9" id="7Ho-zA-1Vb"/>
-                <constraint firstAttribute="trailing" secondItem="g5c-IY-Y14" secondAttribute="trailing" constant="8" id="9xV-al-Yzg"/>
-                <constraint firstAttribute="trailing" secondItem="TfN-p1-kw0" secondAttribute="trailing" constant="9" id="B7H-PU-Hkp"/>
-                <constraint firstItem="TfN-p1-kw0" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="9" id="PhQ-FG-WM6"/>
-                <constraint firstItem="g5c-IY-Y14" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="UeD-wk-EuL"/>
+                <constraint firstAttribute="trailing" secondItem="g5c-IY-Y14" secondAttribute="trailing" constant="4" id="9xV-al-Yzg"/>
+                <constraint firstAttribute="trailing" secondItem="TfN-p1-kw0" secondAttribute="trailing" constant="4" id="B7H-PU-Hkp"/>
+                <constraint firstItem="TfN-p1-kw0" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="PhQ-FG-WM6"/>
+                <constraint firstItem="g5c-IY-Y14" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="UeD-wk-EuL"/>
                 <constraint firstItem="TfN-p1-kw0" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="9" id="UsR-EH-Bsb"/>
             </constraints>
             <size key="customSize" width="187" height="149"/>
@@ -55,6 +55,7 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="app icons-12" width="2084" height="2084"/>
         <namedColor name="TextColor">
             <color red="0.078431372549019607" green="0.074509803921568626" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

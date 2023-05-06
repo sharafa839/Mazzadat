@@ -116,11 +116,16 @@ class AuctionsDetailsViewController: UIViewController, HeightsBidding {
         auctionSpecification.configure(with.auctionDetails ?? [], description: with.description ?? "")
         biddingView.configure(with, didBid: false)
         biddingView.didTapBiddingButton = {[weak self] value in
-            let placeBidViewModel = PlaceBidViewModel(placeId: self?.viewModel.placeId ?? "", id: self?.viewModel.id ?? "" , price: value)
-            
-            let placeBidViewController = PlaceBidViewController(viewModel: placeBidViewModel)
-            placeBidViewController.delegate = self
-            self?.present(UINavigationController(rootViewController: placeBidViewController), animated: true, completion: nil)
+            guard let self = self else {return}
+
+            if self.viewModel.detectIsAllowToBidding(auction: with) {
+                let placeBidViewModel = PlaceBidViewModel(placeId: self.viewModel.placeId ?? "", id: self.viewModel.id ?? "" , price: value)
+                
+                let placeBidViewController = PlaceBidViewController(viewModel: placeBidViewModel)
+                placeBidViewController.delegate = self
+                self.present(UINavigationController(rootViewController: placeBidViewController), animated: true, completion: nil)
+            }
+           
             
         }
     }

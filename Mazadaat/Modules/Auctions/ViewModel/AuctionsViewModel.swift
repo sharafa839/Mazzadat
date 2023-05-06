@@ -21,6 +21,7 @@ class AuctionsViewModel:HomeNetworkingProtocol,AuctionNetworkingProtocol {
     var onSuccessFavorite = PublishSubject<FavoriteModel>()
     var placeId:String
     var type:String?
+    var isOfficial:Bool?
     init(placeId:String) {
         self.placeId = placeId
     }
@@ -35,7 +36,8 @@ class AuctionsViewModel:HomeNetworkingProtocol,AuctionNetworkingProtocol {
             case .success(let response):
                 guard let data = response.response?.data else {return}
                 self?.onSuccessGetAuctions.onNext(data)
-                self?.type = data.place?.type ?? ""
+                self?.type = data.place?.type ?? "online"
+                self?.isOfficial = data.place?.entryFee != nil || data.place?.entryFee != 0
                 if data.auctions?.isEmpty ?? false {
                     self?.onAuctionsEmpty.onNext(())
                 }else {

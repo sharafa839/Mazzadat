@@ -78,13 +78,18 @@ class HomeViewModel:HomeNetworkingProtocol,CoreNetworkingProtocol,TransactionNet
      func didTapOnSlider(index:Int) {
         let slider = onSuccesGetSlider.value[index]
         guard let type = slider.type else {return}
-        guard let id = slider.id else {return}
-         guard let url = slider.url else {return}
+       
+        
         
         switch type {
         case .advertisement:
+            guard let url = slider.url else {return}
             HelperK.openFacebook(facebook: url)
         case .auction:
+            guard let id = slider.id else {return}
+            onAccessAuction.onNext((type,id))
+        case .place:
+            guard let id = slider.id else {return}
             onAccessAuction.onNext((type,id))
         }
         

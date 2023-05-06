@@ -23,6 +23,19 @@ class LoginWithNafathViewController: UIViewController {
         setupUI()
         setupObservables()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIView.animate(withDuration: 0.25, delay: 0.35, options: .curveEaseOut, animations: {
+            self.view.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.3437071918)
+        })
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        view.backgroundColor = .clear
+    }
+    
 
 
     private func setupUI() {
