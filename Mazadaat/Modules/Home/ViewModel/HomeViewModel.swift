@@ -85,10 +85,7 @@ class HomeViewModel:HomeNetworkingProtocol,CoreNetworkingProtocol,TransactionNet
         case .advertisement:
             guard let url = slider.url else {return}
             HelperK.openFacebook(facebook: url)
-        case .auction:
-            guard let id = slider.id else {return}
-            onAccessAuction.onNext((type,id))
-        case .place:
+        case .auction,.place,.subscription:
             guard let id = slider.id else {return}
             onAccessAuction.onNext((type,id))
         }

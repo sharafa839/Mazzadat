@@ -12,15 +12,22 @@ import Foundation
 // MARK: - Response
 
 
+
 // MARK: - Datum
-struct FAQModel:Codable {
+struct FAQModel: Codable {
     var id: Int?
     var name: String?
     var faqs: [FAQElement]?
+    var isCollapseSection:Bool = false
+    enum CodingKeys: String, CodingKey {
+        case id, name
+        case faqs = "Faqs"
+    }
 }
 
-// MARK: - FAQElement
-struct FAQElement:Codable {
+// MARK: - FAQ
+struct FAQElement: Codable {
     var id: Int?
     var question, answer: String?
+    var isCollapseRow:Bool = false
 }

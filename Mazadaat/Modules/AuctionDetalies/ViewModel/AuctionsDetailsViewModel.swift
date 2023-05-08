@@ -64,7 +64,7 @@ class AuctionsDetailsViewModel:AuctionNetworkingProtocol {
     }
     
      func detectIsAllowToBidding(auction:AuctionDetailsModel)->Bool {
-         if auction.auctionVisitors != "all_users" || auction.auctionVisitors != nil {
+         if auction.auctionVisitors != "all_users" {
             if HelperK.getVerification(){
                 return true
             }else{

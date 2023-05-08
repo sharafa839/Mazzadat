@@ -34,6 +34,7 @@ class PlanViewController: UIViewController {
         setupTableView()
         setupViewModelObservers()
         setupObservables()
+        setNavigationItem(title: "subscribe")
     }
 
     private func setupUI() {

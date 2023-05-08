@@ -262,6 +262,9 @@
 		FF94438E2A003C320094AC1F /* TicketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF94438C2A003C320094AC1F /* TicketViewController.xib */; };
 		FF9443922A003C490094AC1F /* TicketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9443902A003C490094AC1F /* TicketTableViewCell.swift */; };
 		FF9443932A003C490094AC1F /* TicketTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF9443912A003C490094AC1F /* TicketTableViewCell.xib */; };
+		FF98D0C92A06D51C00B0AEA3 /* FaqTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF98D0C72A06D51C00B0AEA3 /* FaqTableViewCell.swift */; };
+		FF98D0CA2A06D51C00B0AEA3 /* FaqTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF98D0C82A06D51C00B0AEA3 /* FaqTableViewCell.xib */; };
+		FF98D0CF2A06DD3300B0AEA3 /* FAQViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF98D0CE2A06DD3300B0AEA3 /* FAQViewModel.swift */; };
 		FF9C2B2129DCA58800FA3C77 /* BasicResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9C2B2029DCA58800FA3C77 /* BasicResponse.swift */; };
 		FF9C2B2329DCA5FF00FA3C77 /* BaseApiHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9C2B2229DCA5FF00FA3C77 /* BaseApiHeaders.swift */; };
 		FF9C2B2529DCAA6D00FA3C77 /* User+UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9C2B2429DCAA6D00FA3C77 /* User+UserDefaults.swift */; };
@@ -683,6 +686,9 @@
 		FF94438C2A003C320094AC1F /* TicketViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TicketViewController.xib; sourceTree = "<group>"; };
 		FF9443902A003C490094AC1F /* TicketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketTableViewCell.swift; sourceTree = "<group>"; };
 		FF9443912A003C490094AC1F /* TicketTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TicketTableViewCell.xib; sourceTree = "<group>"; };
+		FF98D0C72A06D51C00B0AEA3 /* FaqTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqTableViewCell.swift; sourceTree = "<group>"; };
+		FF98D0C82A06D51C00B0AEA3 /* FaqTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FaqTableViewCell.xib; sourceTree = "<group>"; };
+		FF98D0CE2A06DD3300B0AEA3 /* FAQViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewModel.swift; sourceTree = "<group>"; };
 		FF9C2B2029DCA58800FA3C77 /* BasicResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicResponse.swift; sourceTree = "<group>"; };
 		FF9C2B2229DCA5FF00FA3C77 /* BaseApiHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseApiHeaders.swift; sourceTree = "<group>"; };
 		FF9C2B2429DCAA6D00FA3C77 /* User+UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+UserDefaults.swift"; sourceTree = "<group>"; };
@@ -1148,6 +1154,8 @@
 		FF4C7EF029D37AFB0095396A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FF98D0CC2A06DA1E00B0AEA3 /* TermsAndConditions */,
+				FF98D0C62A06D50B00B0AEA3 /* FAQ */,
 				FFFE919E2A055BFA001BE377 /* VerifyWithNafath */,
 				FFFE91902A052BC7001BE377 /* PlanDetails */,
 				FFCDB41A2A051650008A5937 /* Plans */,
@@ -2024,6 +2032,39 @@
 			path = Adabtetr;
 			sourceTree = "<group>";
 		};
+		FF98D0C62A06D50B00B0AEA3 /* FAQ */ = {
+			isa = PBXGroup;
+			children = (
+				FF98D0CD2A06DD2300B0AEA3 /* ViewModel */,
+				FF98D0CB2A06D52000B0AEA3 /* FAQTableViewCell */,
+			);
+			path = FAQ;
+			sourceTree = "<group>";
+		};
+		FF98D0CB2A06D52000B0AEA3 /* FAQTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FF98D0C72A06D51C00B0AEA3 /* FaqTableViewCell.swift */,
+				FF98D0C82A06D51C00B0AEA3 /* FaqTableViewCell.xib */,
+			);
+			path = FAQTableViewCell;
+			sourceTree = "<group>";
+		};
+		FF98D0CC2A06DA1E00B0AEA3 /* TermsAndConditions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TermsAndConditions;
+			sourceTree = "<group>";
+		};
+		FF98D0CD2A06DD2300B0AEA3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FF98D0CE2A06DD3300B0AEA3 /* FAQViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		FF9C2B1F29DCA3A900FA3C77 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -2813,6 +2854,7 @@
 				FABD93D12532DD7B00BFB943 /* Color.xcassets in Resources */,
 				FF76276129E24E52002D531F /* AuctionHolderCellCollectionViewCell.xib in Resources */,
 				FA5935B925DE586F00C6026D /* GoogleService-Info.plist in Resources */,
+				FF98D0CA2A06D51C00B0AEA3 /* FaqTableViewCell.xib in Resources */,
 				FFC9004129FCA2300003A4FF /* EditFullNameViewController.xib in Resources */,
 				FF7185EA29FB946800867213 /* ControlCenterViewController.xib in Resources */,
 				FFD1BFCD29C4E7FF0008C814 /* ForgetPasswordViewController.xib in Resources */,
@@ -2981,6 +3023,7 @@
 				FF5AF73429DFBE5D0020E716 /* AuthNetworkingProtocol.swift in Sources */,
 				FF4F9C352A0028AA00BEDF18 /* FeedbackViewModel.swift in Sources */,
 				FFFE91A12A055C36001BE377 /* LoginWithNafathViewController.swift in Sources */,
+				FF98D0CF2A06DD3300B0AEA3 /* FAQViewModel.swift in Sources */,
 				FF7185E929FB946800867213 /* ControlCenterViewController.swift in Sources */,
 				FF5AF75D29E05F7A0020E716 /* AuctionRepo.swift in Sources */,
 				FFC6DF4E29E1080E00BD9364 /* CoreNetworkingProtocol.swift in Sources */,
@@ -3119,6 +3162,7 @@
 				FF5AF73629DFBE5D0020E716 /* AuthRepo.swift in Sources */,
 				FA5F1F64253AFB1A007FEF72 /* ISCategoryOperations.swift in Sources */,
 				FA5F1F6A253AFB71007FEF72 /* userOB.swift in Sources */,
+				FF98D0C92A06D51C00B0AEA3 /* FaqTableViewCell.swift in Sources */,
 				FF8E83D329EED14F009AE77C /* AuctionCategoryTableViewCell.swift in Sources */,
 				FFD6D96529E8B6C50044ECD9 /* AuctionHolderTableViewCell.swift in Sources */,
 				FF81900729D50D6400033060 /* OnBoardingViewModel.swift in Sources */,

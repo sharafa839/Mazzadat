@@ -33,7 +33,7 @@ class OTPViewModel {
         timerStart()
         Auth.auth().settings?.isAppVerificationDisabledForTesting=false
 
-        PhoneAuthProvider.provider().verifyPhoneNumber("+201100638509", uiDelegate: nil) {[weak self] (verificationID, error) in
+        PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumber, uiDelegate: nil) {[weak self] (verificationID, error) in
             if let error = error {
            
                 print("error \(error.localizedDescription)")

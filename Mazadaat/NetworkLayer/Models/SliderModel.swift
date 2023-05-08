@@ -17,4 +17,5 @@ enum TypeEnum: String, Codable {
     case advertisement = "advertisement"
     case auction = "auction"
     case place = "place"
+    case subscription = "subscription"
 }

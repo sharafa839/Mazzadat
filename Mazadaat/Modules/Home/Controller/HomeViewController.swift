@@ -151,6 +151,9 @@ class HomeViewController: UIViewController {
             case .place :
                 let id = element.1
                 self?.openAuctionPlaces(id: id)
+            case .subscription:
+                let id = element.1
+                self?.openSubscription(id: id)
             default:
                return
             }
@@ -253,6 +256,14 @@ class HomeViewController: UIViewController {
         let auctionsViewController = AuctionsViewController(viewModel: AuctionsViewModel)
         auctionsViewController.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(auctionsViewController, animated: true)
+    }
+    
+    private func openSubscription(id:Int) {
+        guard let index = CoreData.shared.subscriptions?.firstIndex(where: {$0.id == id}) else {return}
+        guard let subscription = CoreData.shared.subscriptions?[index] else  {return}
+        let planViewModel = PlanDetailsViewModel(subscription: subscription)
+        let planViewController = PlanViewController(viewModel: planViewModel)
+        navigationController?.pushViewController(planViewController, animated: true)
     }
     
 }
