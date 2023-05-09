@@ -44,6 +44,7 @@ class FeedbackViewController: UIViewController {
 
         }
         setupObservables()
+        setupViewModelObservers()
     }
     
     private func setupUI() {
@@ -66,10 +67,27 @@ class FeedbackViewController: UIViewController {
     }
     
     private func setupObservables() {
-        sendMessageButton.rx.tap.subscribe { [weak self]  in
-            
+        sendMessageButton.rx.tap.subscribe { [weak self] _ in
+            guard let text = self?.textView.text , text.isEmpty else {
+                HelperK.showError(title: "pleaseFillTheFieldWithYourFeedBack", subtitle: "")
+                return
+            }
+            self?.viewModel.addFeedBack(content: text)
         }.disposed(by: viewModel.disposeBag)
 
+    }
+    
+    private func setupViewModelObservers() {
+        viewModel.onError.subscribe { [weak self] value in
+            HelperK.showError(title: value.element ?? "", subtitle: "")
+        }.disposed(by: viewModel.disposeBag)
+        viewModel.onLoading.subscribe { [weak self] _ in
+            
+        }.disposed(by: viewModel.disposeBag)
+        
+        viewModel.onSuccess.subscribe { [weak self] _ in
+            HelperK.showSuccess(title: "thankYou", subtitle: "")
+        }.disposed(by: viewModel.disposeBag)
     }
     //MARK: - Methods
 

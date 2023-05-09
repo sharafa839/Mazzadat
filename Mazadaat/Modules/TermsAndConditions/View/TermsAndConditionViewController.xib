@@ -22,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xkZ-Ph-FUF">
-                    <rect key="frame" x="24" y="68" width="366" height="828"/>
+                    <rect key="frame" x="24" y="68" width="366" height="778"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <color key="textColor" systemColor="labelColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -34,7 +34,7 @@
             <color key="backgroundColor" name="Neutral-v100"/>
             <constraints>
                 <constraint firstItem="xkZ-Ph-FUF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="2gA-Dj-fw5"/>
-                <constraint firstAttribute="bottom" secondItem="xkZ-Ph-FUF" secondAttribute="bottom" id="GGA-bT-IU1"/>
+                <constraint firstAttribute="bottom" secondItem="xkZ-Ph-FUF" secondAttribute="bottom" constant="50" id="GGA-bT-IU1"/>
                 <constraint firstItem="xkZ-Ph-FUF" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="24" id="KyN-JQ-JF0"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xkZ-Ph-FUF" secondAttribute="trailing" constant="24" id="fcI-1u-Mqb"/>
             </constraints>

@@ -11,13 +11,31 @@ import Foundation
 import RxRelay
 import RxSwift
 
-class FeedbackViewModel {
+class FeedbackViewModel:HomeNetworkingProtocol {
     let disposeBag = DisposeBag()
     var onError = PublishSubject<String>()
     var onLoading = BehaviorRelay<Bool>(value: false)
+    var onSuccess = PublishSubject<Void>()
+
     var isEmailView:Bool
     init(isEmailView:Bool) {
         self.isEmailView = isEmailView
+    }
+    
+    
+    func addFeedBack(content:String) {
+        if !isEmailView {
+        onLoading.accept(true)
+        addFeedback(content: content) { [weak self] result in
+            self?.onLoading.accept(false)
+            switch result {
+            case .success(let response):
+                self?.onSuccess.onNext(())
+            case .failure(let error):
+                self?.onError.onNext(error.localizedDescription)
+            }
+        }
+    }
     }
 }
 

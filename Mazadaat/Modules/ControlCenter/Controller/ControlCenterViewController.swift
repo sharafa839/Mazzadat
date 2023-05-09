@@ -155,7 +155,9 @@ extension ControlCenterViewController:UITableViewDelegate,UITableViewDataSource 
             case 0:
                 openContactUs()
             case 1:
-                return
+                let feedbackViewModel = FeedbackViewModel(isEmailView: false)
+                let feedbackViewController = FeedbackViewController(viewModel: feedbackViewModel)
+                navigationController?.pushViewController(feedbackViewController, animated: true)
             case 2:
                 return
             default:

@@ -30,10 +30,10 @@ class TermsAndConditionViewController: UIViewController {
     private func setupConfiguration() {
         textView.setRoundCorners(10)
         if viewModel.isPrivacyAndPolicy{
-            textView.text = viewModel.privacy
+            textView.text = viewModel.privacy.html2String
             setNavigationItem(title: "privacy")
         }else {
-            textView.text = viewModel.terms
+            textView.text = viewModel.terms.html2String
             setNavigationItem(title: "terms")
 
         }
