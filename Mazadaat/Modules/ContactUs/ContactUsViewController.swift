@@ -45,12 +45,13 @@ class ContactUsViewController: UIViewController {
     }
     
     private func setupObservables() {
-        mobilePhoneButton.rx.tap.subscribe  { [weak self] in
+        mobilePhoneButton.rx.tap.subscribe  { [weak self] _ in
             HelperK.openCalling(phone: CoreData.shared.settings?.mobile ?? "")
         }.disposed(by: disposeBag)
         
-        emailButton.rx.tap.subscribe  { [weak self] in
+        emailButton.rx.tap.subscribe  { [weak self] _ in
             HelperK.openEmail(email: CoreData.shared.settings?.email ?? "")
         }.disposed(by: disposeBag)
     }
+    
 }

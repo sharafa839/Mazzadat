@@ -62,7 +62,7 @@ class LoginViewModel:AuthNetworkingProtocol {
                  HelperK.saveToken(token: loginPayload.accessToken ?? "")
                  HelperK.setUserData(loginPayLoad: loginPayload)
                  CoreData.shared.personalSubscription = loginPayload.subscriptions
-
+                 CoreData.shared.loginModel = loginPayload
                  self?.onSuccess.onNext(())
              }
          }

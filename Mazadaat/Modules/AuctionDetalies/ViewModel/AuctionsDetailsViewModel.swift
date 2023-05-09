@@ -64,17 +64,18 @@ class AuctionsDetailsViewModel:AuctionNetworkingProtocol {
     }
     
      func detectIsAllowToBidding(auction:AuctionDetailsModel)->Bool {
-         if auction.auctionVisitors != "all_users" {
-            if HelperK.getVerification(){
-                return true
-            }else{
-                onError.onNext("notAllowedForAllUsers")
-                verifyWithNafath.onNext(())
-                return false
-            }
-        }else{
-            return true
-        }
+         if auction.auctionVisitors == "all_users" {
+           return true
+         }else {
+             if HelperK.getVerification(){
+                 return true
+             }else {
+                 onError.onNext("notAllowedForAllUsers")
+                 verifyWithNafath.onNext(())
+                 return false
+             }
+         }
+
     }
     
     func toggleFavorites() {

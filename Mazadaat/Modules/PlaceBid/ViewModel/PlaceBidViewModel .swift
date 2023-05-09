@@ -16,19 +16,22 @@ class PlaceBidViewModel:AuctionNetworkingProtocol {
     var onLoading = BehaviorRelay<Bool>(value: false)
     var onSuccessGetBid = PublishSubject<Void>()
     var payEntryFee = PublishSubject<Void>()
-
+    var isOfficial:Bool
     var id:String
     var price:Int
+    var placeId:String
     var priceChange = BehaviorRelay<Int>(value:0)
-    init(placeId:String,id:String,price:Int) {
+    init(placeId:String,id:String,price:Int,isOfficial:Bool) {
         self.id = id
+        self.placeId = placeId
         self.price = price
+        self.isOfficial = isOfficial
         priceChange.accept(Int(price))
     }
     
     func placeBidding() {
         onLoading.accept(true)
-        addBid(auction_id: id, price: "\(priceChange.value)") { [weak self]  result in
+        addBid(auction_id: id, price: "\(priceChange.value)", isOfficial: isOfficial) { [weak self]  result in
             self?.onLoading.accept(false)
             
            

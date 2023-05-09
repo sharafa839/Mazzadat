@@ -17,6 +17,7 @@ enum AuthApiServices {
     case update(name:String,phone:String,email:String)
     case me
     case updateProfileImage(images:MultiPartItem)
+    case  setupNotification(auctionAlert:Bool?,bidUpdates:Bool?,promotion:Bool?,auctionEndingSoon:Bool?)
 }
 
 extension AuthApiServices:TargetType,BaseApiHeadersProtocol {
@@ -38,6 +39,8 @@ extension AuthApiServices:TargetType,BaseApiHeadersProtocol {
         case .update,.updateProfileImage:
             return EndPoints.Auth.update.rawValue
             
+        case .setupNotification(auctionAlert: let auctionAlert, bidUpdates: let bidUpdates, promotion: let promotion, auctionEndingSoon: let auctionEndingSoon):
+            return  EndPoints.Auth.notificationSetting.rawValue
         }
     }
     
@@ -68,6 +71,21 @@ extension AuthApiServices:TargetType,BaseApiHeadersProtocol {
             let imageName = "img-\(CACurrentMediaTime()).png"
             let multipart = [MultipartFormData(provider: .data(images.data), name: images.keyName, fileName: images.fileName, mimeType: images.mimeType)]
             return .uploadMultipart(multipart)
+        case .setupNotification( let auctionAlert, let bidUpdates, let promotion, let auctionEndingSoon):
+            var parameters : [String:Any] = [:]
+            if let auctionAlert = auctionAlert {
+                parameters["auction_alerts"] = auctionAlert
+            }
+            if let bidUpdates = bidUpdates {
+                parameters["bid_updates"] = auctionAlert
+            }
+            if let promotion = promotion {
+                parameters["promotions"] = auctionAlert
+            }
+            if let auctionEndingSoon = auctionEndingSoon {
+                parameters["auction_ending_soon"] = auctionEndingSoon
+            }
+            return .requestParameters(parameters: parameters, encoding: JSONEncoding.default)
         }
     }
     

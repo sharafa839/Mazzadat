@@ -79,6 +79,11 @@ extension DoucmentsViewController:UICollectionViewDelegate,UICollectionViewDataS
                 self?.goToAddDocument(document: document)
 
             }
+            cell.onTapDelete = {[weak self] in
+                
+                self?.viewModel.removeDocuments(typeId: document.documentTypeID ?? "")
+
+        }
             cell.configure(document)
             return cell
         }else {
@@ -88,6 +93,7 @@ extension DoucmentsViewController:UICollectionViewDelegate,UICollectionViewDataS
                 self?.goToAddDocument(document: document)
                 
             }
+           
             return cell
         }
        

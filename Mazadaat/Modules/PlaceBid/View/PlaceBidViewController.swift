@@ -95,7 +95,7 @@ class PlaceBidViewController: UIViewController, HeightsBidding {
         }.disposed(by: viewModel.disposeBag)
         
         viewModel.payEntryFee.subscribe { [weak self] value in
-            self?.goTOPay(placeId: self?.viewModel.id ?? "")
+            self?.goTOPay(placeId: self?.viewModel.placeId ?? "")
         }.disposed(by: viewModel.disposeBag)
     }
     

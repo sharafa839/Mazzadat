@@ -40,6 +40,14 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sVX-PP-cPI">
                     <rect key="frame" x="0.0" y="60" width="414" height="86.5"/>
                     <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDL-Lt-JKy">
+                            <rect key="frame" x="24" y="36.5" width="366" height="50"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            <connections>
+                                <action selector="changLanguageAction:" destination="-1" eventType="touchUpInside" id="vfu-IY-nRH"/>
+                            </connections>
+                        </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EAn-8B-7Ra">
                             <rect key="frame" x="40" y="8" width="41.5" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -87,6 +95,10 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="LDt-WL-EXg" firstAttribute="leading" secondItem="sVX-PP-cPI" secondAttribute="leading" constant="24" id="6ky-jy-BSx"/>
+                        <constraint firstItem="NDL-Lt-JKy" firstAttribute="bottom" secondItem="LDt-WL-EXg" secondAttribute="bottom" id="FUj-Oh-vnr"/>
+                        <constraint firstItem="NDL-Lt-JKy" firstAttribute="trailing" secondItem="LDt-WL-EXg" secondAttribute="trailing" id="Nb5-aq-BMj"/>
+                        <constraint firstItem="NDL-Lt-JKy" firstAttribute="top" secondItem="LDt-WL-EXg" secondAttribute="top" id="PVQ-5A-7fH"/>
+                        <constraint firstItem="NDL-Lt-JKy" firstAttribute="leading" secondItem="LDt-WL-EXg" secondAttribute="leading" id="ays-fa-5By"/>
                         <constraint firstAttribute="bottom" secondItem="LDt-WL-EXg" secondAttribute="bottom" id="jeS-dJ-lsH"/>
                         <constraint firstItem="EAn-8B-7Ra" firstAttribute="top" secondItem="sVX-PP-cPI" secondAttribute="top" constant="8" id="jkZ-iW-dPi"/>
                         <constraint firstItem="LDt-WL-EXg" firstAttribute="top" secondItem="EAn-8B-7Ra" secondAttribute="bottom" constant="8" id="kVb-qD-yl0"/>
@@ -117,6 +129,9 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="Mjj-Oq-mtL"/>
                                     </constraints>
+                                    <connections>
+                                        <action selector="auctionAlertAction:" destination="-1" eventType="valueChanged" id="qhb-dP-n1V"/>
+                                    </connections>
                                 </switch>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -150,6 +165,9 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="Z27-Bp-rMk"/>
                                     </constraints>
+                                    <connections>
+                                        <action selector="bidsUpdateAction:" destination="-1" eventType="valueChanged" id="KvA-pS-3Fe"/>
+                                    </connections>
                                 </switch>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -167,13 +185,13 @@
                             <rect key="frame" x="0.0" y="258" width="382" height="128"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flR-ei-25E">
-                                    <rect key="frame" x="16" y="16" width="41.5" height="20.5"/>
+                                    <rect key="frame" x="16" y="16" width="41.5" height="67.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5u7-AG-AJV">
-                                    <rect key="frame" x="16" y="52.5" width="41.5" height="67.5"/>
+                                    <rect key="frame" x="16" y="99.5" width="41.5" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -183,6 +201,9 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="6Sx-LL-SBy"/>
                                     </constraints>
+                                    <connections>
+                                        <action selector="auctionEndingSoonActions:" destination="-1" eventType="valueChanged" id="Cu2-LY-baU"/>
+                                    </connections>
                                 </switch>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -200,13 +221,13 @@
                             <rect key="frame" x="0.0" y="387" width="382" height="128"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDq-gO-caR">
-                                    <rect key="frame" x="16" y="16" width="41.5" height="20.5"/>
+                                    <rect key="frame" x="16" y="16" width="41.5" height="67.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0I-4O-ocx">
-                                    <rect key="frame" x="16" y="52.5" width="41.5" height="67.5"/>
+                                    <rect key="frame" x="16" y="99.5" width="41.5" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -216,6 +237,9 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="Zmp-7N-en8"/>
                                     </constraints>
+                                    <connections>
+                                        <action selector="promotionAction:" destination="-1" eventType="valueChanged" id="0gi-GS-QSg"/>
+                                    </connections>
                                 </switch>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>

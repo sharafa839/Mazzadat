@@ -14,7 +14,7 @@ enum AuctionApi {
     case show(auction_id:String)
     case toggleFavorite(auction_id:String)
     case favorites
-    case addBid(auction_id:String,price:String)
+    case addBid(auction_id:String,price:String,isOfficial:Bool)
     case auctionsFilter(search:String? = nil , byCategoryId:String? = nil,code:String? = nil,status:String? = nil,priceFrom:String? = nil,priceTo:String? = nil,endAt:String? = nil,endFrom:String? = nil)
     case advertisement(advertisement_category_id :String?)
 }
@@ -81,8 +81,8 @@ extension AuctionApi:TargetType,BaseApiHeadersProtocol {
 
         case .favorites:
             return .requestPlain
-        case .addBid(let auction_id, let price):
-            return .requestParameters(parameters: ["auction_id":auction_id,"price":price], encoding: JSONEncoding.default)
+        case .addBid(let auction_id, let price,let isOfficial):
+            return .requestParameters(parameters: ["auction_id":auction_id,"price":price,"official":isOfficial], encoding: JSONEncoding.default)
 
         case .auctionsFilter(search: let search, byCategoryId: let byCategoryId, code: let code, status: let status, priceFrom: let priceFrom, priceTo: let priceTo, endAt: let endAt, endFrom: let endFrom):
             var parameter:[String:Any] = [:]

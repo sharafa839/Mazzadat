@@ -36,7 +36,6 @@ class FAQViewModel:HomeNetworkingProtocol {
         sections.isCollapseSection.toggle()
         onGetFAQ.accept(faqModel)
         
-        
     }
 }
 

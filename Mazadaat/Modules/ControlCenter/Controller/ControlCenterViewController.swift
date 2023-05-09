@@ -127,7 +127,7 @@ extension ControlCenterViewController:UITableViewDelegate,UITableViewDataSource 
     
 
     func openSetting() {
-        let setting = SettingViewController()
+        let setting = SettingViewController(viewModel: SettingViewModel())
     self.navigationController?.pushViewController(setting, animated: true)
     }
     func openContactUs() {
@@ -164,9 +164,13 @@ extension ControlCenterViewController:UITableViewDelegate,UITableViewDataSource 
         case 2:
             switch row {
             case 0:
-                return
+                let termsViewModel = TermsAndConditionViewModel(isPrivacyAndPolicy: false)
+                let termsViewController = TermsAndConditionViewController(viewModel: termsViewModel)
+                navigationController?.pushViewController(termsViewController, animated: true)
             case 1:
-                return
+                let termsViewModel = TermsAndConditionViewModel(isPrivacyAndPolicy: true)
+                let termsViewController = TermsAndConditionViewController(viewModel: termsViewModel)
+                navigationController?.pushViewController(termsViewController, animated: true)
                 
             default:
                 return

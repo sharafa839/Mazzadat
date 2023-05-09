@@ -13,6 +13,8 @@ import RxSwift
 class DocumentViewModel:HomeNetworkingProtocol {
     let disposeBag = DisposeBag()
     var onError = PublishSubject<String>()
+    var onSuccrssRemoveDocument = PublishSubject<Void>()
+
     var onLoading = BehaviorRelay<Bool>(value: false)
     var onSuccessGetDocument = BehaviorRelay<[UploadDocuments]>(value: [])
     var documentDataSource = BehaviorRelay<[UploadDocuments]>(value: [
@@ -54,5 +56,17 @@ class DocumentViewModel:HomeNetworkingProtocol {
     func setDataSSourc() {
         let documets = [UploadDocuments(id: 2, documentTypeID: "1", documentType: DocumentType(id: 1, name: "nationalId", image: ""), expiryDate: "", frontFace: nil, backFace: nil),UploadDocuments(id: 2, documentTypeID: "3", documentType: DocumentType(id: 3, name: "drivingLicencse", image: ""), expiryDate: "", frontFace: nil, backFace: nil)]
     }
+    
+    func removeDocuments(typeId:String) {
+        onLoading.accept(true)
+        removeDocuments(type: typeId, front: true, back: true) { [weak self] result in
+            self?.onLoading.accept(false)
+            switch result {
+            case .success(let response):
+                self?.getDocuments()
+            case .failure(let error):
+                self?.onError.onNext(error.localizedDescription)
+            }
+        }    }
 }
 

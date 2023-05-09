@@ -119,7 +119,7 @@ class AuctionsDetailsViewController: UIViewController, HeightsBidding {
             guard let self = self else {return}
 
             if self.viewModel.detectIsAllowToBidding(auction: with) {
-                let placeBidViewModel = PlaceBidViewModel(placeId: self.viewModel.placeId ?? "", id: self.viewModel.id ?? "" , price: value)
+                let placeBidViewModel = PlaceBidViewModel(placeId: self.viewModel.placeId ?? "", id: self.viewModel.id ?? "" , price: value, isOfficial: self.viewModel.isOfficialAuction)
                 
                 let placeBidViewController = PlaceBidViewController(viewModel: placeBidViewModel)
                 placeBidViewController.delegate = self

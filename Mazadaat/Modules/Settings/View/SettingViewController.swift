@@ -33,6 +33,16 @@ class SettingViewController: UIViewController {
     @IBOutlet weak var promotionDescriptionLabel: UILabel!
     @IBOutlet weak var promotionLabel: UILabel!
     
+    var viewModel:SettingViewModel
+    init(viewModel:SettingViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -45,6 +55,31 @@ class SettingViewController: UIViewController {
         languageView.setRoundCorners(5)
         auctionAlertView.roundCorners([.layerMaxXMinYCorner,.layerMinXMinYCorner], radius: 5)
         promotionView.roundCorners([.layerMinXMaxYCorner,.layerMinXMaxYCorner], radius: 5)
+        promotionButton.isOn = CoreData.shared.loginModel?.promotions ?? false
+        auctionAlertButton.isOn = CoreData.shared.loginModel?.auctionAlerts ?? false
+        bidUpdateButton.isOn = CoreData.shared.loginModel?.bidUpdates ?? false
+        auctionEndingSoonButton.isOn = CoreData.shared.loginModel?.bidUpdates ?? false
+    }
+    @IBAction func auctionAlertAction(_ sender: UISwitch) {
+        let value = sender.isOn
+        viewModel.editNotification(autionAlert: value, bidUpdates: nil, promotion: nil, auctionEndingSoon: nil)
+    }
+    
+    @IBAction func bidsUpdateAction(_ sender: UISwitch) {
+        let value = sender.isOn
+        viewModel.editNotification(autionAlert: nil, bidUpdates: value, promotion: nil, auctionEndingSoon: nil)
+    }
+    
+    @IBAction func auctionEndingSoonActions(_ sender: UISwitch) {
+        let value = sender.isOn
+        viewModel.editNotification(autionAlert: nil, bidUpdates: nil, promotion: nil, auctionEndingSoon:value )
+    }
+    
+    @IBAction func promotionAction(_ sender: UISwitch) {
+        let value = sender.isOn
+        viewModel.editNotification(autionAlert: value, bidUpdates: nil, promotion: value, auctionEndingSoon: nil)
+    }
+    @IBAction func changLanguageAction(_ sender: UIButton) {
         
     }
 }

@@ -85,5 +85,6 @@ class CoreData {
         countries = nil
         documentsTypes = nil
         essentials = nil
+        loginModel = nil
     }
 }

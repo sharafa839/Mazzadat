@@ -321,6 +321,10 @@
 		FFC6DF5029E1082B00BD9364 /* CoreRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC6DF4F29E1082B00BD9364 /* CoreRepo.swift */; };
 		FFC6DF5229E10A7A00BD9364 /* CoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC6DF5129E10A7A00BD9364 /* CoreModel.swift */; };
 		FFC6DF5529E1122000BD9364 /* TransactionApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC6DF5429E1122000BD9364 /* TransactionApi.swift */; };
+		FFC71F0A2A0975CB009A1E0F /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC71F092A0975CB009A1E0F /* SettingViewModel.swift */; };
+		FFC71F0D2A0A0ED9009A1E0F /* TermsAndConditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC71F0B2A0A0ED9009A1E0F /* TermsAndConditionViewController.swift */; };
+		FFC71F0E2A0A0ED9009A1E0F /* TermsAndConditionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFC71F0C2A0A0ED9009A1E0F /* TermsAndConditionViewController.xib */; };
+		FFC71F122A0A0EFB009A1E0F /* TermsAndConditionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC71F112A0A0EFB009A1E0F /* TermsAndConditionViewModel.swift */; };
 		FFC9004029FCA2300003A4FF /* EditFullNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC9003E29FCA2300003A4FF /* EditFullNameViewController.swift */; };
 		FFC9004129FCA2300003A4FF /* EditFullNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFC9003F29FCA2300003A4FF /* EditFullNameViewController.xib */; };
 		FFC9004429FCA2480003A4FF /* EditFullNameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC9004329FCA2480003A4FF /* EditFullNameViewModel.swift */; };
@@ -745,6 +749,10 @@
 		FFC6DF4F29E1082B00BD9364 /* CoreRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreRepo.swift; sourceTree = "<group>"; };
 		FFC6DF5129E10A7A00BD9364 /* CoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreModel.swift; sourceTree = "<group>"; };
 		FFC6DF5429E1122000BD9364 /* TransactionApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionApi.swift; sourceTree = "<group>"; };
+		FFC71F092A0975CB009A1E0F /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
+		FFC71F0B2A0A0ED9009A1E0F /* TermsAndConditionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionViewController.swift; sourceTree = "<group>"; };
+		FFC71F0C2A0A0ED9009A1E0F /* TermsAndConditionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermsAndConditionViewController.xib; sourceTree = "<group>"; };
+		FFC71F112A0A0EFB009A1E0F /* TermsAndConditionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionViewModel.swift; sourceTree = "<group>"; };
 		FFC9003E29FCA2300003A4FF /* EditFullNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFullNameViewController.swift; sourceTree = "<group>"; };
 		FFC9003F29FCA2300003A4FF /* EditFullNameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditFullNameViewController.xib; sourceTree = "<group>"; };
 		FFC9004329FCA2480003A4FF /* EditFullNameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFullNameViewModel.swift; sourceTree = "<group>"; };
@@ -1503,8 +1511,8 @@
 		FF7C464C29FCFC2E00615314 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				FF7C464D29FCFC4000615314 /* SettingViewController.swift */,
-				FF7C464E29FCFC4000615314 /* SettingViewController.xib */,
+				FFC71F082A0975BA009A1E0F /* ViewModel */,
+				FFC71F072A0975B0009A1E0F /* View */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -2053,6 +2061,8 @@
 		FF98D0CC2A06DA1E00B0AEA3 /* TermsAndConditions */ = {
 			isa = PBXGroup;
 			children = (
+				FFC71F102A0A0EE6009A1E0F /* ViewModel */,
+				FFC71F0F2A0A0EE1009A1E0F /* View */,
 			);
 			path = TermsAndConditions;
 			sourceTree = "<group>";
@@ -2364,6 +2374,40 @@
 				FFA76A3129E11445000BD881 /* TransactionRepo.swift */,
 			);
 			path = Transaction;
+			sourceTree = "<group>";
+		};
+		FFC71F072A0975B0009A1E0F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FF7C464D29FCFC4000615314 /* SettingViewController.swift */,
+				FF7C464E29FCFC4000615314 /* SettingViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FFC71F082A0975BA009A1E0F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FFC71F092A0975CB009A1E0F /* SettingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FFC71F0F2A0A0EE1009A1E0F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FFC71F0B2A0A0ED9009A1E0F /* TermsAndConditionViewController.swift */,
+				FFC71F0C2A0A0ED9009A1E0F /* TermsAndConditionViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FFC71F102A0A0EE6009A1E0F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FFC71F112A0A0EFB009A1E0F /* TermsAndConditionViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		FFC9003D29FCA2190003A4FF /* EditFullName */ = {
@@ -2738,6 +2782,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFC71F0E2A0A0ED9009A1E0F /* TermsAndConditionViewController.xib in Resources */,
 				FA49CE152546A063004CDD6E /* Roboto-Light.ttf in Resources */,
 				FF8D31DC29F93C2F0000958D /* MainTabBarController.xib in Resources */,
 				FF8B950D29FA698A00441899 /* BiddingAuctionsTableViewCell.xib in Resources */,
@@ -2948,6 +2993,7 @@
 				FF9C2B2329DCA5FF00FA3C77 /* BaseApiHeaders.swift in Sources */,
 				FF5AF74F29DFC0230020E716 /* CategoriesModel.swift in Sources */,
 				FA45C054254EA32E0042235A /* menuCell.swift in Sources */,
+				FFC71F0D2A0A0ED9009A1E0F /* TermsAndConditionViewController.swift in Sources */,
 				FF4C7F2729D4608B0095396A /* UIView + extension.swift in Sources */,
 				FFBC3C1D2A0334D100547566 /* DocumentViewModel.swift in Sources */,
 				FFC29A6429D7B4AE0040C722 /* LoginViewController.swift in Sources */,
@@ -2960,6 +3006,7 @@
 				FA4F79A825771776008FC9A1 /* BadgedBarButtonItem.swift in Sources */,
 				FF4C7F1729D453CC0095396A /* ViewController + extensions.swift in Sources */,
 				FFA76A3229E11445000BD881 /* TransactionRepo.swift in Sources */,
+				FFC71F122A0A0EFB009A1E0F /* TermsAndConditionViewModel.swift in Sources */,
 				FA5F1F60253AFB1A007FEF72 /* SessionManager.swift in Sources */,
 				FF78D59329F7565400D9FBC9 /* AuctionSpecificationHeader.swift in Sources */,
 				FF1894D129E105950032D951 /* NotificationApi.swift in Sources */,
@@ -3147,6 +3194,7 @@
 				FF5AF74529DFC0230020E716 /* FaqModel.swift in Sources */,
 				FF7185DC29FB7EC900867213 /* EditPeronalInformationViewModel.swift in Sources */,
 				FFACF05E29EA59B700B8C41F /* AuctionsViewController.swift in Sources */,
+				FFC71F0A2A0975CB009A1E0F /* SettingViewModel.swift in Sources */,
 				FAE525E42595C9460007049A /* RPicker.swift in Sources */,
 				FF4C7F1229D453CC0095396A /* Str + Extension.swift in Sources */,
 				FFC29A6A29D7D28C0040C722 /* LoginViewModel.swift in Sources */,

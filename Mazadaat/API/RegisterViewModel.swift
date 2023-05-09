@@ -112,6 +112,7 @@ class RegisterViewModel:AuthNetworkingProtocol {
        
           guard let value = response.response?.data else {return}
           HelperK.saveToken(token: value.accessToken ?? "")
+          CoreData.shared.loginModel = value
           HelperK.setUserData(loginPayLoad: value)
         self?.onSuccess.onNext(())
         

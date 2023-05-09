@@ -39,7 +39,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FhN-lF-fsN">
-                    <rect key="frame" x="24" y="146.5" width="44" height="20"/>
+                    <rect key="frame" x="24" y="146.5" width="366" height="20"/>
                     <fontDescription key="fontDescription" name="Archivo-Regular" family="Archivo" pointSize="18"/>
                     <color key="textColor" name="TextColor"/>
                     <nil key="highlightedColor"/>
@@ -61,6 +61,7 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="FhN-lF-fsN" firstAttribute="top" secondItem="KFl-iC-SSw" secondAttribute="bottom" constant="24" id="4Co-mN-BSZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FhN-lF-fsN" secondAttribute="trailing" constant="24" id="7Bi-sf-55d"/>
                 <constraint firstItem="FhN-lF-fsN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="G6x-4T-EaQ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yNu-Fy-gqp" secondAttribute="trailing" constant="24" id="RYY-rF-uJh"/>
                 <constraint firstItem="H6n-6p-XsD" firstAttribute="leading" secondItem="yNu-Fy-gqp" secondAttribute="leading" id="TaF-Y1-kgV"/>

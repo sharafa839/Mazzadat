@@ -20,6 +20,7 @@ enum EndPoints {
         case resendVerify = "api/auth/resend_verify"
         case changePassword = "api/auth/change_password"
         case verify = "api/auth/verify"
+        case notificationSetting = "api/auth/update_setting"
     }
     
     enum Notifications: String {
@@ -57,6 +58,9 @@ enum EndPoints {
         case showHolderPlaces = "api/home/show_holder_place"
         case payEntreeFee = "api/home/entry_fee"
         case slider = "api/home/sliders"
+        case removeDocument = "api/home/remove_document"
+        case addAdvertisementRequest = "api/home/add_advertisement"
+        case addFeedback = "api/home/add_feedback"
     }
     
     enum Auction:String {

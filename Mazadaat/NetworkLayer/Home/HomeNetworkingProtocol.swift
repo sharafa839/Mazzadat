@@ -18,6 +18,12 @@ protocol HomeNetworkingProtocol {
     func showHolderPlaces(placeID:String,completion:@escaping(Result<BaseResponse<HolderPlaces>,Error>)->Void)
     func payEntryFee(placeID:String,payment_method_id:String?,image:MultiPartItem?,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
     func getSlider(completion:@escaping(Result<BaseResponse<[SlidersModel]>,Error>)->Void)
+    func removeDocuments(type:String,front:Bool?,back:Bool?,completion:@escaping(Result<BaseResponse<[LoginPayload]>,Error>)->Void)
+    
+    func addAdvertismentRequest(title:String,description:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
+    
+    func addFeedback(content:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
+
 
 }
 
@@ -54,6 +60,19 @@ extension HomeNetworkingProtocol {
     func getSlider(completion:@escaping(Result<BaseResponse<[SlidersModel]>,Error>)->Void) {
         home.request(target: .getSlider, completion: completion)
     }
+    
+    func removeDocuments(type:String,front:Bool?,back:Bool?,completion:@escaping(Result<BaseResponse<[LoginPayload]>,Error>)->Void) {
+        home.request(target: .removeDocument(front: front, back: back, documentTypeId: "\(type)"), completion: completion)
+    }
+    
+    func addAdvertismentRequest(title:String,description:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void) {
+        home.request(target: .addAdvertisementRequest(title: title, description: description), completion: completion)
+    }
+    
+    func addFeedback(content:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void) {
+        home.request(target: .addFeedback(content: content), completion: completion)
+    }
+
 }
 
 

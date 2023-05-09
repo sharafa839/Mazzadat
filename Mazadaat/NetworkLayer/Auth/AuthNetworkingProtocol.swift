@@ -16,7 +16,7 @@ protocol AuthNetworkingProtocol {
     
     func updateProfileImage(image:MultiPartItem,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
     func me(completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
-
+    func setupNotification(autionAlert:Bool?,bidUpdates:Bool?,promotion:Bool?,auctionEndingSoon:Bool?,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
 }
 
 extension AuthNetworkingProtocol {
@@ -54,6 +54,10 @@ extension AuthNetworkingProtocol {
 
     func me(completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void) {
         auth.request(target: .me, completion: completion)
+    }
+    
+    func setupNotification(autionAlert:Bool?,bidUpdates:Bool?,promotion:Bool?,auctionEndingSoon:Bool?,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void) {
+        auth.request(target: .setupNotification(auctionAlert: autionAlert, bidUpdates: bidUpdates, promotion: promotion, auctionEndingSoon: auctionEndingSoon), completion: completion)
     }
 
 }
