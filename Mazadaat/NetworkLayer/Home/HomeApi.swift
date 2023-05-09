@@ -22,7 +22,7 @@ enum HomeApiServices {
     case getSlider
     case removeDocument(front:Bool?,back:Bool?,documentTypeId:String)
     case addAdvertisementRequest(title:String,description:String)
-    case addFeedback(content:String)
+    case addFeedback(content:String,message:String)
 }
 
 extension HomeApiServices:TargetType,BaseApiHeadersProtocol {
@@ -184,8 +184,8 @@ extension HomeApiServices:TargetType,BaseApiHeadersProtocol {
             return .requestParameters(parameters: parameter, encoding: JSONEncoding.default)
         case .addAdvertisementRequest( let title,let description):
             return .requestParameters(parameters: ["title":title,"description":description], encoding: JSONEncoding.default)
-        case .addFeedback(content: let content):
-            return .requestParameters(parameters: ["content":content], encoding: JSONEncoding.default)
+        case .addFeedback(content: let content,let message):
+            return .requestParameters(parameters: ["content":content,"message":message], encoding: JSONEncoding.default)
 
         }
     }

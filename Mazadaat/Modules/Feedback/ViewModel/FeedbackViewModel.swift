@@ -23,10 +23,10 @@ class FeedbackViewModel:HomeNetworkingProtocol {
     }
     
     
-    func addFeedBack(content:String) {
+    func addFeedBack(content:String,message:String) {
         if !isEmailView {
         onLoading.accept(true)
-        addFeedback(content: content) { [weak self] result in
+            addFeedback(content: content,message:message) { [weak self] result in
             self?.onLoading.accept(false)
             switch result {
             case .success(let response):

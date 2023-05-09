@@ -68,11 +68,12 @@ class FeedbackViewController: UIViewController {
     
     private func setupObservables() {
         sendMessageButton.rx.tap.subscribe { [weak self] _ in
-            guard let text = self?.textView.text , text.isEmpty else {
+            guard let text = self?.textView.text , !text.isEmpty else {
                 HelperK.showError(title: "pleaseFillTheFieldWithYourFeedBack", subtitle: "")
                 return
             }
-            self?.viewModel.addFeedBack(content: text)
+         
+            self?.viewModel.addFeedBack(content: text,message: "title")
         }.disposed(by: viewModel.disposeBag)
 
     }

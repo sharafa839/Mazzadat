@@ -22,7 +22,7 @@ protocol HomeNetworkingProtocol {
     
     func addAdvertismentRequest(title:String,description:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
     
-    func addFeedback(content:String,completion:@escaping(Result<BaseResponse<[LoginPayload]>,Error>)->Void)
+    func addFeedback(content:String,message:String,completion:@escaping(Result<BaseResponse<[LoginPayload]>,Error>)->Void)
 
 
 }
@@ -69,8 +69,8 @@ extension HomeNetworkingProtocol {
         home.request(target: .addAdvertisementRequest(title: title, description: description), completion: completion)
     }
     
-    func addFeedback(content:String,completion:@escaping(Result<BaseResponse<[LoginPayload]>,Error>)->Void) {
-        home.request(target: .addFeedback(content: content), completion: completion)
+    func addFeedback(content:String,message:String,completion:@escaping(Result<BaseResponse<[LoginPayload]>,Error>)->Void) {
+        home.request(target: .addFeedback(content: content,message: message), completion: completion)
     }
 
 }
