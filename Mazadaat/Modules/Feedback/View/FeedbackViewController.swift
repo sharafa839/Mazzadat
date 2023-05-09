@@ -73,7 +73,7 @@ class FeedbackViewController: UIViewController {
                 return
             }
          
-            self?.viewModel.addFeedBack(content: text,message: "title")
+            self?.viewModel.addFeedBack(message: text)
         }.disposed(by: viewModel.disposeBag)
 
     }

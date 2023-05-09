@@ -262,6 +262,7 @@
 		FF94438E2A003C320094AC1F /* TicketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF94438C2A003C320094AC1F /* TicketViewController.xib */; };
 		FF9443922A003C490094AC1F /* TicketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9443902A003C490094AC1F /* TicketTableViewCell.swift */; };
 		FF9443932A003C490094AC1F /* TicketTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF9443912A003C490094AC1F /* TicketTableViewCell.xib */; };
+		FF97158F2A0AD4B20094B9F2 /* LocalizationFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF97158E2A0AD4B20094B9F2 /* LocalizationFile.swift */; };
 		FF98D0C92A06D51C00B0AEA3 /* FaqTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF98D0C72A06D51C00B0AEA3 /* FaqTableViewCell.swift */; };
 		FF98D0CA2A06D51C00B0AEA3 /* FaqTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF98D0C82A06D51C00B0AEA3 /* FaqTableViewCell.xib */; };
 		FF98D0CF2A06DD3300B0AEA3 /* FAQViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF98D0CE2A06DD3300B0AEA3 /* FAQViewModel.swift */; };
@@ -690,6 +691,7 @@
 		FF94438C2A003C320094AC1F /* TicketViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TicketViewController.xib; sourceTree = "<group>"; };
 		FF9443902A003C490094AC1F /* TicketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketTableViewCell.swift; sourceTree = "<group>"; };
 		FF9443912A003C490094AC1F /* TicketTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TicketTableViewCell.xib; sourceTree = "<group>"; };
+		FF97158E2A0AD4B20094B9F2 /* LocalizationFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationFile.swift; sourceTree = "<group>"; };
 		FF98D0C72A06D51C00B0AEA3 /* FaqTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqTableViewCell.swift; sourceTree = "<group>"; };
 		FF98D0C82A06D51C00B0AEA3 /* FaqTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FaqTableViewCell.xib; sourceTree = "<group>"; };
 		FF98D0CE2A06DD3300B0AEA3 /* FAQViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewModel.swift; sourceTree = "<group>"; };
@@ -859,6 +861,7 @@
 				FA57ED9A2556242600D0C554 /* L102Language.swift */,
 				FA57ED972556242500D0C554 /* MirroringLabel.swift */,
 				FA57ED962556242500D0C554 /* MirroringViewController.swift */,
+				FF97158E2A0AD4B20094B9F2 /* LocalizationFile.swift */,
 			);
 			path = localize;
 			sourceTree = "<group>";
@@ -3045,6 +3048,7 @@
 				FA57ED9D2556242700D0C554 /* BundleExtension.swift in Sources */,
 				FF5AF75029DFC0230020E716 /* UpdateProfileModel.swift in Sources */,
 				FAF04BCF255E68CB00249556 /* CatCell.swift in Sources */,
+				FF97158F2A0AD4B20094B9F2 /* LocalizationFile.swift in Sources */,
 				FFD1BFBC29C4D21C0008C814 /* RegisterViewController.swift in Sources */,
 				FF818B7929F8425D00CA9A99 /* AuctionStortingViewController.swift in Sources */,
 				FF5AF74E29DFC0230020E716 /* HolderPlacesModel.swift in Sources */,
