@@ -55,11 +55,11 @@ class OTPViewController: UIViewController {
         }
     
     private func setupLocalize() {
-        didntRecieveCodeLabel.text = "didntRecieveCodeRequestNewOneIn"
-        descriptionLabel.text = "weHaveSentCodeSixDigits"
-        incorrecetCodeLabel.text = "incorrectCode"
-        verifyButton.setTitle("verify", for: .normal)
-        resendVerificationCodeButton.setTitle("resendCode", for: .normal)
+        didntRecieveCodeLabel.text = Localizations.dontRecieve.localize
+        descriptionLabel.text = Localizations.weHaveSent.localize
+        incorrecetCodeLabel.text = Localizations.incorrectCode.localize
+        verifyButton.setTitle(Localizations.verify.localize, for: .normal)
+        resendVerificationCodeButton.setTitle(Localizations.resendVerificationCode.localize, for: .normal)
         
     }
     
@@ -78,7 +78,7 @@ class OTPViewController: UIViewController {
                 self?.timeInSecondsLabel.isHidden = true
                 self?.didntRecieveCodeLabel.isHidden = true
             }
-            self?.timeInSecondsLabel.text = "\(seconds) sec"
+            self?.timeInSecondsLabel.text = "\(seconds)"
             
         }.disposed(by: viewModel.disposeBag)
         
@@ -95,16 +95,17 @@ class OTPViewController: UIViewController {
     
     private func setupObservables() {
         resendVerificationCodeButton.rx.tap.subscribe { [weak self] _ in
-            self?.viewModel.getVerificationCode()
+            self?.viewModel.counter.accept(60)
+            self?.viewModel.timerStart()
         }.disposed(by: viewModel.disposeBag)
         verifyButton.rx.tap.subscribe { [weak self] _ in
-            self?.viewModel.verify(verificationCode: self?.input ?? "")
+            self?.viewModel.verification(code: self?.input ?? "")
         }.disposed(by: viewModel.disposeBag)
     }
     
     
     private func setupUI() {
-        setNavigationItem(title: "OTPVerification")
+        setNavigationItem(title: Localizations.verifyYourOtp.localize)
         resendVerificationCodeButton.drawBorder(raduis: 10, borderColor: .Bronze_500)
         resendVerificationCodeButton.isHidden = true
         incorrecetCodeLabel.isHidden = true

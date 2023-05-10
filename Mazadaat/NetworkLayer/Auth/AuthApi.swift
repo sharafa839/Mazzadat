@@ -18,6 +18,7 @@ enum AuthApiServices {
     case me
     case updateProfileImage(images:MultiPartItem)
     case  setupNotification(auctionAlert:Bool?,bidUpdates:Bool?,promotion:Bool?,auctionEndingSoon:Bool?)
+    case verify(code:String)
 }
 
 extension AuthApiServices:TargetType,BaseApiHeadersProtocol {
@@ -41,6 +42,8 @@ extension AuthApiServices:TargetType,BaseApiHeadersProtocol {
             
         case .setupNotification(auctionAlert: let auctionAlert, bidUpdates: let bidUpdates, promotion: let promotion, auctionEndingSoon: let auctionEndingSoon):
             return  EndPoints.Auth.notificationSetting.rawValue
+        case .verify(code: let code):
+            return EndPoints.Auth.verify.rawValue
         }
     }
     
@@ -86,6 +89,8 @@ extension AuthApiServices:TargetType,BaseApiHeadersProtocol {
                 parameters["auction_ending_soon"] = auctionEndingSoon
             }
             return .requestParameters(parameters: parameters, encoding: JSONEncoding.default)
+        case .verify(code: let code):
+            return .requestParameters(parameters: ["type":"2","code":code], encoding: JSONEncoding.default)
         }
     }
     

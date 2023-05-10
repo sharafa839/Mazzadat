@@ -276,6 +276,9 @@
 		FFA0476F2A0C2B8C00B8D390 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA0476D2A0C2B8C00B8D390 /* SearchViewController.swift */; };
 		FFA047702A0C2B8C00B8D390 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFA0476E2A0C2B8C00B8D390 /* SearchViewController.xib */; };
 		FFA047742A0C2DA700B8D390 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA047732A0C2DA700B8D390 /* SearchViewModel.swift */; };
+		FFA047792A0C453300B8D390 /* RemoveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA047772A0C453300B8D390 /* RemoveViewController.swift */; };
+		FFA0477A2A0C453300B8D390 /* RemoveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFA047782A0C453300B8D390 /* RemoveViewController.xib */; };
+		FFA0477D2A0C4C3D00B8D390 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA0477C2A0C4C3D00B8D390 /* ViewModel.swift */; };
 		FFA76A3029E11434000BD881 /* TransactionNetworkingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA76A2F29E11434000BD881 /* TransactionNetworkingProtocol.swift */; };
 		FFA76A3229E11445000BD881 /* TransactionRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA76A3129E11445000BD881 /* TransactionRepo.swift */; };
 		FFA76A3629E11630000BD881 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA76A3529E11630000BD881 /* SplashViewModel.swift */; };
@@ -713,6 +716,9 @@
 		FFA0476D2A0C2B8C00B8D390 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		FFA0476E2A0C2B8C00B8D390 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		FFA047732A0C2DA700B8D390 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		FFA047772A0C453300B8D390 /* RemoveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RemoveViewController.swift; path = Mazadaat/Modules/Search/ViewModel/RemoveViewController.swift; sourceTree = SOURCE_ROOT; };
+		FFA047782A0C453300B8D390 /* RemoveViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = RemoveViewController.xib; path = Mazadaat/Modules/Search/ViewModel/RemoveViewController.xib; sourceTree = SOURCE_ROOT; };
+		FFA0477C2A0C4C3D00B8D390 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		FFA76A2F29E11434000BD881 /* TransactionNetworkingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionNetworkingProtocol.swift; sourceTree = "<group>"; };
 		FFA76A3129E11445000BD881 /* TransactionRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRepo.swift; sourceTree = "<group>"; };
 		FFA76A3529E11630000BD881 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
@@ -1180,6 +1186,7 @@
 		FF4C7EF029D37AFB0095396A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FFA047752A0C450C00B8D390 /* RemoveQuestion */,
 				FFA0476C2A0C2B7A00B8D390 /* Search */,
 				FF5BE5B22A0B9D5F00811AB7 /* ExploreGoldenBell */,
 				FF98D0CC2A06DA1E00B0AEA3 /* TermsAndConditions */,
@@ -2150,6 +2157,32 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		FFA047752A0C450C00B8D390 /* RemoveQuestion */ = {
+			isa = PBXGroup;
+			children = (
+				FFA0477B2A0C4C3000B8D390 /* ViewModel */,
+				FFA047762A0C452000B8D390 /* View */,
+			);
+			path = RemoveQuestion;
+			sourceTree = "<group>";
+		};
+		FFA047762A0C452000B8D390 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FFA047772A0C453300B8D390 /* RemoveViewController.swift */,
+				FFA047782A0C453300B8D390 /* RemoveViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FFA0477B2A0C4C3000B8D390 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FFA0477C2A0C4C3D00B8D390 /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		FFA76A3329E11615000BD881 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -2942,6 +2975,7 @@
 				FABD93C22532DD3F00BFB943 /* ArbFONTS-Jozoor-Font.otf in Resources */,
 				FA49CE192546A06B004CDD6E /* Roboto-Regular.ttf in Resources */,
 				FABD93D62536DDEA00BFB943 /* homeCell.xib in Resources */,
+				FFA0477A2A0C453300B8D390 /* RemoveViewController.xib in Resources */,
 				FFA047702A0C2B8C00B8D390 /* SearchViewController.xib in Resources */,
 				FABD93C32532DD4100BFB943 /* ArbFONTS-Jozoor-Font.ttf in Resources */,
 				FFBC3C1B2A03307D00547566 /* FillDocumentCollectionViewCell.xib in Resources */,
@@ -3181,6 +3215,7 @@
 				FFAA4D672A03BEC90027B478 /* AddDocumentViewController.swift in Sources */,
 				FFC6DF5529E1122000BD9364 /* TransactionApi.swift in Sources */,
 				FF8D31E729F944270000958D /* ControlCenterHeader.swift in Sources */,
+				FFA0477D2A0C4C3D00B8D390 /* ViewModel.swift in Sources */,
 				FFE2C51629DBAB9800F8C16F /* HeaderHomeView.swift in Sources */,
 				FA57EDAB25565C5600D0C554 /* docCell.swift in Sources */,
 				FF8E83C429EC35A9009AE77C /* ResetPasswordViewModel.swift in Sources */,
@@ -3195,6 +3230,7 @@
 				FF4C7F1B29D453CC0095396A /* RightToLeftTransition.swift in Sources */,
 				FF4C7F1D29D453CC0095396A /* CollectionCell + extension.swift in Sources */,
 				FF4C7F2429D453CC0095396A /* TimeHelper.swift in Sources */,
+				FFA047792A0C453300B8D390 /* RemoveViewController.swift in Sources */,
 				FFACF06629EA60B200B8C41F /* AuctionsTableViewCell.swift in Sources */,
 				FA57ED9F2556242700D0C554 /* L102Language.swift in Sources */,
 				FF5AF75B29E05B0B0020E716 /* AuctionApi.swift in Sources */,

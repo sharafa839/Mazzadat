@@ -38,6 +38,8 @@ class RequestAuctionViewController: UIViewController {
         
         setupUI()
         setupObservables()
+        setupLocalize()
+        setupViewModelObservers()
     }
     
     
@@ -48,16 +50,45 @@ class RequestAuctionViewController: UIViewController {
         auctionDetailsTextField.drawBorder(raduis: 5, borderColor: .gray,borderWidth: Int(0.5))
         titleAuctionRequestTextField.drawBorder(raduis: 5, borderColor: .gray,borderWidth: Int(0.5))
 
-        setNavigationItem(title: "newAuctionRequest")
+        setNavigationItem(title: Localizations.newAuctionRequest.localize)
         
+    }
+    
+    private func setupViewModelObservers() {
+        viewModel.onError.subscribe { [weak self] value in
+            HelperK.showError(title: value.element ?? "" , subtitle: "")
+        }.disposed(by: viewModel.disposeBag)
+        viewModel.onLoading.subscribe { [weak self] in
+            
+        }.disposed(by: viewModel.disposeBag)
+        
+        viewModel.onSuccess.subscribe { [weak self] in
+            self?.delegate?.sendRequest()
+            self?.navigationController?.popViewController(animated: true)
+        }.disposed(by: viewModel.disposeBag)
+        
+    }
+    
+    private func setupLocalize() {
+        titleAuctionRequestLabel.text = Localizations.auctionTitle.localize
+        auctionDetailsLabel.text =  Localizations.auctionDescription.localize
+        titleAuctionRequestTextField.placeholder =  Localizations.writeAuctionTitle.localize
+        auctionDetailsTextField.placeholder =  Localizations.writeAuctionDescription.localize
     }
     
     private func setupObservables() {
         sendButton.rx.tap.subscribe { [weak self]_ in
-            self?.delegate?.sendRequest()
+            
+            guard let title = self?.titleAuctionRequestTextField.text , title.count > 3 else {return}
+            guard let description = self?.auctionDetailsTextField.text else {return}
+            self?.viewModel.addRequest(title: title, description: description)
+          
         }.disposed(by: viewModel.disposeBag)
 
     }
+    
+    
+    
 
 }
 

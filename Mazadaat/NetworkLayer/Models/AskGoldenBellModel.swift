@@ -19,7 +19,7 @@ struct AskGoldenBellModel: Codable {
 
 // MARK: - AdvertisementCategory
 struct AdvertisementCategory: Codable {
-    var id: Int?
+    var id: String?
     var name, nameAr: String?
 
     enum CodingKeys: String, CodingKey {

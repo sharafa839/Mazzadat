@@ -62,7 +62,8 @@ class ExploreGoldenBellViewController: UIViewController {
         }.disposed(by: disposBag)
         
         aboutGoldenBellAuctionButton.rx.tap.subscribe {[weak self] _ in
-            
+            let termsViewController = TermsAndConditionViewController(viewModel: TermsAndConditionViewModel(obligations: .about))
+            self?.navigationController?.pushViewController(termsViewController, animated: true)
         }.disposed(by: disposBag)
         
     }

@@ -30,7 +30,7 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setNavigationItem(title: Localizations.search.localize)
         setupTableView()
         setupViewModelObserver()
     }

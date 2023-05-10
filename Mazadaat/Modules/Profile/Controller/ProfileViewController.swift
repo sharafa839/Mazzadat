@@ -10,7 +10,7 @@ import UIKit
 
 class ProfileViewController: UIViewController, SentRequestDelegate {
     func sendRequest() {
-        
+        HelperK.showSuccess(title: Localizations.yourAuctionRequest.localize, subtitle: "")
     }
     
 

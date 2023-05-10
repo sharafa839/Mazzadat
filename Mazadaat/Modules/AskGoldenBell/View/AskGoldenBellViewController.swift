@@ -103,7 +103,7 @@ extension AskGoldenBellViewController:UITableViewDelegate,UITableViewDataSource 
             
         }
         cell.onTapChat = { [weak self] in
-            
+            HelperK.openWhatsapp(phone: item.phoneWhatsapp ?? "")
         }
         return cell
     }

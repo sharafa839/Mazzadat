@@ -8,6 +8,7 @@
 import Foundation
 protocol AuthNetworkingProtocol {
   func login(email:String,password:String, completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
+    func verify(code:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
   func register(phone:String,password:String,email:String,name:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
   func logout(completion:@escaping(Result<BaseResponse<[LogoutModel]>,Error>)->Void)
   func changePassword(currentPassword:String,newPassword:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
@@ -60,4 +61,7 @@ extension AuthNetworkingProtocol {
         auth.request(target: .setupNotification(auctionAlert: autionAlert, bidUpdates: bidUpdates, promotion: promotion, auctionEndingSoon: auctionEndingSoon), completion: completion)
     }
 
+    func verify(code:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void) {
+        auth.request(target: .verify(code: code), completion: completion)
+    }
 }

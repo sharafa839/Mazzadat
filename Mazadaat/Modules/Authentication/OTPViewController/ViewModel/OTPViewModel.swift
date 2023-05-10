@@ -11,7 +11,7 @@ import Foundation
 import RxRelay
 import RxSwift
 import FirebaseAuth
-class OTPViewModel {
+class OTPViewModel:AuthNetworkingProtocol {
     let disposeBag = DisposeBag()
     var onError = PublishSubject<String>()
     var onLoading = BehaviorRelay<Bool>(value: false)
@@ -25,7 +25,24 @@ class OTPViewModel {
     init(phoneNumber:String,typeOfAuth:AuthState) {
         self.phoneNumber = phoneNumber
         self.typeOfAuth = typeOfAuth
-        getVerificationCode()
+      //  getVerificationCode()
+        counter.accept(60)
+        timerStart()
+    }
+    
+    func verification(code:String) {
+        
+        onLoading.accept(true)
+        verify(code: code) { [weak self] result in
+            self?.onLoading.accept(false)
+            switch result {
+            case .success(let response):
+                self?.navigateTo.onNext(self?.typeOfAuth ?? .forgetPassword)
+            case .failure(let error):
+                self?.incorrectCode.onNext(())
+                self?.onError.onNext(error.localizedDescription)
+            }
+        }
     }
     
     func getVerificationCode()  {
