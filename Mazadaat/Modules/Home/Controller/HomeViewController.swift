@@ -229,9 +229,16 @@ class HomeViewController: UIViewController {
         }
         
         headerHomeView.onTapSearch = { [weak self] in
-            self?.goToProfile()
-                    }
+            self?.goToSearch()
+        }
         
+    }
+    
+    private func goToSearch() {
+        let searchViewModel = SearchViewModel()
+        let searchViewController = SearchViewController(viewModel: searchViewModel)
+        searchViewController.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(searchViewController, animated: true)
     }
     
     private func openAuctionHolder(holderId:Int,image:String = "",name:String="") {

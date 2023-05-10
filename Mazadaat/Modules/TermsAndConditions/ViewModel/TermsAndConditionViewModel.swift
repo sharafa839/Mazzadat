@@ -15,11 +15,12 @@ class TermsAndConditionViewModel {
     var onError = PublishSubject<String>()
     var onLoading = BehaviorRelay<Bool>(value: false)
     
-    var isPrivacyAndPolicy:Bool
+    var type:Obligations
     var terms:String = CoreData.shared.settings?.terms ?? ""
     var privacy:String = CoreData.shared.settings?.privacy ?? ""
-    init(isPrivacyAndPolicy:Bool) {
-        self.isPrivacyAndPolicy = isPrivacyAndPolicy
+    var about:String = CoreData.shared.settings?.about ?? "" 
+    init(obligations:Obligations) {
+        self.type = obligations
     }
 }
 

@@ -36,10 +36,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UNUserNotificationCenter.current().delegate = self
 
         setupIAP()
+        LocalizationManager.shared.setAppInnitLanguage()
+        LocalizationManager.shared.delegate = self
+        
         GMSPlacesClient.provideAPIKey("AIzaSyDR4OvW6PYXeKL5iq_TpEDbHzeq4SajVQc")
         GMSServices.provideAPIKey("AIzaSyDR4OvW6PYXeKL5iq_TpEDbHzeq4SajVQc")
-        let lang = UserDefaults.standard.string(forKey: "lang")
-//        AppData.isLogin
         
         if AppData.lang == "en"{
             changeLanguage(lang: "en")
@@ -50,14 +51,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         coordinator.setRoot(SplashViewController(viewModel:SplashViewModel()))
         
-        
-//        if lang == "en" {
-//                     changeLanguage(lang: "en")
-//                     L102Localizer.DoTheMagic()
-//                 }else{
-//                     changeLanguage(lang: "ar")
-//                     L102Localizer.DoTheMagic()
-//                 }
         
         configureNotifications(application)
         connectToFcm()
@@ -169,3 +162,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+
+extension AppDelegate:LocalizationManagerDelegate {
+    func resetApp() {
+      
+        print("local")
+        if HelperK.checkFirstTime() == true{
+            
+            if HelperK.checkUserToken() == true{
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "main")
+                coordinator.setRoot(vc)
+        let option : UIView.AnimationOptions = .transitionCrossDissolve
+        let duration : TimeInterval = 0.3
+                UIView.transition(with: vc.view, duration: duration, options: option, animations: nil, completion: nil)
+                
+                }else{
+                    let login = LoginViewController(viewModel: LoginViewModel())
+                    let vc = UINavigationController(rootViewController: login)
+                    coordinator.setRoot(vc)
+                    let option : UIView.AnimationOptions = .transitionCrossDissolve
+                    let duration : TimeInterval = 0.3
+                    UIView.transition(with:vc.view , duration: duration, options: option, animations: nil, completion: nil)
+                }}else{
+                
+                    let onBoarding = OnBoardingViewController()
+                    let vc = UINavigationController(rootViewController: onBoarding)
+                    coordinator.setRoot(vc)
+                let option : UIView.AnimationOptions = .transitionCrossDissolve
+                let duration : TimeInterval = 0.3
+                    UIView.transition(with: vc.view, duration: duration, options: option, animations: nil, completion: nil)
+            }
+        
+    }
+    
+
+}

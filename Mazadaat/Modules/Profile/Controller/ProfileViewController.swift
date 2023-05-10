@@ -119,20 +119,20 @@ extension ProfileViewController:UITableViewDelegate,UITableViewDataSource {
             let documentViewModel = DocumentViewModel()
             let documentViewController = DoucmentsViewController(viewModel: documentViewModel)
             documentViewController.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(documentViewController, animated: true)
+            navigationController?.pushViewController(documentViewController, animated: true)
         case 1:
             let ticketViewModel = TicketViewModel()
             let ticketViewController = TicketViewController(viewModel: ticketViewModel)
             ticketViewController.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(ticketViewController, animated: true)
+            navigationController?.pushViewController(ticketViewController, animated: true)
         case 3:
             let planViewController = PlansViewController()
             planViewController.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(planViewController, animated: true)
+            navigationController?.pushViewController(planViewController, animated: true)
 
         case 4 :
-            return
-
+            let exploreGoldenBell = ExploreGoldenBellViewController()
+            navigationController?.pushViewController(exploreGoldenBell, animated: true)
         default:
             return
         }

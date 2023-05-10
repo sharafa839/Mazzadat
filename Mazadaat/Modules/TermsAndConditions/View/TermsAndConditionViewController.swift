@@ -29,12 +29,19 @@ class TermsAndConditionViewController: UIViewController {
 
     private func setupConfiguration() {
         textView.setRoundCorners(10)
-        if viewModel.isPrivacyAndPolicy{
+        let type = viewModel.type
+        switch type {
+        case .community :
+            return 
+        case .about:
+            textView.text = viewModel.about.html2String
+            setNavigationItem(title: Localizations.about.localize)
+        case .privacy:
             textView.text = viewModel.privacy.html2String
-            setNavigationItem(title: "privacy")
-        }else {
+            setNavigationItem(title:  Localizations.privacyPolicy.localize)
+        case .terms:
             textView.text = viewModel.terms.html2String
-            setNavigationItem(title: "terms")
+            setNavigationItem(title:  Localizations.termsOfUse.localize)
 
         }
     }

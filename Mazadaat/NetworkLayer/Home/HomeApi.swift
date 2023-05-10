@@ -184,7 +184,7 @@ extension HomeApiServices:TargetType,BaseApiHeadersProtocol {
             return .requestParameters(parameters: parameter, encoding: JSONEncoding.default)
         case .addAdvertisementRequest( let title,let description):
             return .requestParameters(parameters: ["title":title,"description":description], encoding: JSONEncoding.default)
-        case .addFeedback(content: let message):
+        case .addFeedback( let message):
             return .requestParameters(parameters: ["message":message], encoding: JSONEncoding.default)
 
         }
