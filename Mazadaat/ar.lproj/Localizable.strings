@@ -2,14 +2,31 @@
   Localizable.strings
   Mazadaat
 
-  Created by Sharaf on 10/05/2023.
+  Created by Sharaf on 11/05/2023.
   Copyright © 2023 macbook. All rights reserved.
 */
-
-
+"yourTheHeighstNow" = "انت المزايد الاعلى الان";
+"expired" = "انتهى";
+"min" = "اقل مزايدة";
+"youHaveToSelectPaymentMethod" = "اختر طريقة للدفع";
+"payToGo" = "لكي تشارك بالمزاد ادفع الرسوم";
+"payEntreeFeeForThisPlaceToGetAllAuctionSubscription" = "ادفع رسوم دخول المكان لتحصل على الاشتراك في جميع المزادات";
+"subscription" = "اشتراك";
+"chooseImage" = "اختر صورة";
+"suubscripe successfully" = "تم الاشتراك بنجاح";
+"Camera" = "كاميرا";
+"Gallery" = "المعرض";
+"cash" = "نقدي";
+"bankTransfer" = "تحويل بنكي";
+"AuctionHolder" = "مسئول المزاد";
+"of" = "من";
+"remainingInYourPlan" = "المتبقي";
+"nattionalId" = "الهوية";
+"arabic" = "العربية";
+"english" = "الانجليزية";
 "goodToSeeYou" = "اهلا وسهلا";
 "welcome" = "مرحباً بك في تطبيق الجرس الذهبي";
-"signIn" = "تسجيل الدخول";;
+"signIn" = "تسجيل الدخول";
 "register" = "انشاء حساب";
 "enterYourMobile" = "رقم الهاتف";
 "enterPassword" = "كلمة السر";
@@ -43,7 +60,7 @@
 "enterYourEmail" = "البريد الالكتروني";
 "createAPassword" = "الرقم السري";
 "verifyWithNafath" = "التحقيق من من خلال نفاذ";
-"loginToNafath" = "التجيل من خلال نفاذ";
+"loginToNafath" = "التسجيل من خلال نفاذ";
 "cancel" = "الغاء";
 "welcomeBack" = "مرحبا";
 "home" = "الرئيسية";
@@ -129,4 +146,23 @@
 "myGoldenList" = "قائمتي الذهبية";
 "share" = "شارك";
 "about" = "عنا";
-"search" = "ابحث";
+"search" = "البحث";
+"passwordNotMatch" = "كلمتان السر غير متطابقتان";
+"upcoming" = "التالي";
+"logout" = "تسجيل خروج";
+"AddDocument" = "اضف وثيقة";
+"picUploaded" = "تم رفع عالصورة بنجاح";
+"fillAllData" = "املئ جميع البيانات ";
+"Warning" = "تحذير";
+"You don't have permission to access gallery." = "انت لا تملك سماحية للوصول إلى المعرض";
+"yourOutBid" = "انت خارج المزايدة";
+"AgainToLead" = "زايد مرة اخرى";
+"d" = "ي";
+"h" = "س";
+"m" = "د";
+"s" = "ث";
+"instagram" = "انستقرام";
+"facebook" = "فيس بوك";
+"twitter" = "تويتر";
+"whatsapp" = "واتساب";
+"language" = "اللغة";

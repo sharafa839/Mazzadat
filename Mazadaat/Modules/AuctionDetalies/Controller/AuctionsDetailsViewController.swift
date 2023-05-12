@@ -29,6 +29,7 @@ class AuctionsDetailsViewController: UIViewController, HeightsBidding {
     var delegate:HeightsBidding?
     var viewModel:AuctionsDetailsViewModel
     var auctionDetailsModel:AuctionDetailsModel?
+    var valueOfBidding = 0
     //MARK: - Init
     init(viewModel:AuctionsDetailsViewModel) {
         self.viewModel = viewModel

@@ -14,7 +14,7 @@ class ControlCenterViewModel:AuthNetworkingProtocol {
     var onError = PublishSubject<String>()
     var onLoading = BehaviorRelay<Bool>(value: false)
     let onSuccess = PublishSubject<Void>()
-    let editProfileDataSource = [[ControlCenter(title: "personalInformation", round: .top),ControlCenter(title: "settings", round: .bottom)],[ControlCenter(title: "contactUs", round: .top),ControlCenter(title: "giveFeedback", round: .none),ControlCenter(title: "FAQ", round: .bottom)],[ControlCenter(title: "privacyAndPolicy", round: .top),ControlCenter(title: "termsOfUse", round: .bottom)]]
+    let editProfileDataSource = [[ControlCenter(title: Localizations.personslInformation.localize, round: .top),ControlCenter(title: Localizations.settings.localize, round: .bottom)],[ControlCenter(title:Localizations.contactUs.localize, round: .top),ControlCenter(title: Localizations.giveAFeedback.localize, round: .none),ControlCenter(title: Localizations.faqs.localize, round: .bottom)],[ControlCenter(title: Localizations.privacyPolicy.localize, round: .top),ControlCenter(title: Localizations.termsOfUse.localize, round: .bottom)]]
     
     func logout() {
         onLoading.accept(true)

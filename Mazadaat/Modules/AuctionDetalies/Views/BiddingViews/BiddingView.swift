@@ -20,10 +20,16 @@ class BiddingView: UIView {
     @IBOutlet weak var biddingValueLabel: UILabel!
     @IBOutlet weak var heighstValueLabel: UILabel!
 
-    var nextBid = 0
+    var lastBid = 0
     var initialPrice = 0
+    var minimumBid = 0
     var total:Int {
-        return nextBid + initialPrice
+        if lastBid == 0 {
+            return initialPrice + minimumBid
+        }else {
+            return lastBid + minimumBid
+        }
+        
     }
     var didTapBiddingButton:((_:Int)->Void)?
     //MARK: - Init
@@ -41,19 +47,24 @@ class BiddingView: UIView {
     
     func configure(_ with:AuctionDetailsModel,didBid:Bool) {
         if didBid {
-            nextBidLabel.text = "yourTheHeighstOne"
+            nextBidLabel.text = "yourTheHeighstNow".localize
             biddingValueLabel.isHidden = true
             hightImage.isHidden = false
             biddingButtonView.isHidden = true
             biddingValueLabel.isHidden = true
             heighstValueLabel.isHidden = false
-            heighstValueLabel.text = with.lastBid?.price ?? "" + "SAR"
+            heighstValueLabel.text = with.lastBid?.price ?? "" + Localizations.SAR.localize
         }else {
             heighstValueLabel.isHidden = true
             hightImage.isHidden = true
         initialPrice = Int(with.price  ?? "0") ?? 0
-        nextBid = Int(with.lastBid?.price ?? "0") ?? 0
-        biddingValueLabel.text = "\(nextBid + initialPrice )"
+        lastBid = Int(with.lastBid?.price ?? "0") ?? 0
+        minimumBid = Int(with.minimumBid ?? "0") ?? 0
+            if lastBid == 0 {
+                biddingValueLabel.text = "\(minimumBid + initialPrice )"
+            }else {
+                biddingValueLabel.text = "\(lastBid + minimumBid )"
+            }
         endingInLabel.text = "endingIn"
         setupDate(with.endAt ?? "", with.startAt ?? "")
         nextBidLabel.text = "nextBidding"

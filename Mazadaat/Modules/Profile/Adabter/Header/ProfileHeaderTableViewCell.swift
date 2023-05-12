@@ -22,6 +22,7 @@ class ProfileHeaderTableViewCell: UITableViewCell {
     
     private func setupUI() {
         containerView.setRoundCorners(10)
+        addRequestLabel.text = Localizations.newAuctionRequest.localize
     }
     
     @IBAction func addRequestAction(_ sender: UIButton) {

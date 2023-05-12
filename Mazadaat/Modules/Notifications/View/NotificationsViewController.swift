@@ -43,6 +43,7 @@ class NotificationsViewController: UIViewController {
     
     private func setupUI() {
         setNavigationItem(title: "Notification")
+        
     }
     
     private func setupTableView() {

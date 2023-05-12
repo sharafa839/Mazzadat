@@ -37,6 +37,10 @@ class OTPViewModel:AuthNetworkingProtocol {
             self?.onLoading.accept(false)
             switch result {
             case .success(let response):
+                guard let value = response.response?.data else {return}
+                HelperK.saveToken(token: value.accessToken ?? "")
+                CoreData.shared.loginModel = value
+                HelperK.setUserData(loginPayLoad: value)
                 self?.navigateTo.onNext(self?.typeOfAuth ?? .forgetPassword)
             case .failure(let error):
                 self?.incorrectCode.onNext(())

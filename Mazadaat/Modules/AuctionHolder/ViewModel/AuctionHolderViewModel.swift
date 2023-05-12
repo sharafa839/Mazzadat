@@ -17,7 +17,7 @@ class AuctionHolderViewModel:HomeRepo {
     var holderId:String
     var auctionHolderImage:String
     var auctionHolderName:String
-    var kindOfAuction = BehaviorRelay<[KindOFAuction]>(value:[KindOFAuction(name: "all", selected: true),KindOFAuction(name: "running", selected: false),KindOFAuction(name: "upcoming", selected: false),KindOFAuction(name: "expired", selected: false)])
+    var kindOfAuction = BehaviorRelay<[KindOFAuction]>(value:[KindOFAuction(name: Localizations.all.localize, selected: true),KindOFAuction(name: Localizations.running.localize, selected: false),KindOFAuction(name: "upcoming".localize, selected: false),KindOFAuction(name: "expired".localize, selected: false)])
     init(holderId:String,auctionHolderImage:String,auctionHolderName:String) {
         self.holderId = holderId
         self.auctionHolderName = auctionHolderName

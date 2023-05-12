@@ -21,7 +21,16 @@ class LoginWithNafathViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setupLocalize()
         setupObservables()
+    }
+    
+    
+    private func setupLocalize() {
+        verifyWithNafathTitle.text = Localizations.loginToNafath.localize
+        descriptionLabel.text = Localizations.verifyWithNafath.localize
+        loginWithNafathButton.setTitle(Localizations.signIn.localize, for: .normal)
+        cancelButton.setTitle(Localizations.cancel.localize, for: .normal)
     }
     
     override func viewWillAppear(_ animated: Bool) {

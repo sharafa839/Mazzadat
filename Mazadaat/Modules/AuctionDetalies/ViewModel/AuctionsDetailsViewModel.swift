@@ -64,9 +64,7 @@ class AuctionsDetailsViewModel:AuctionNetworkingProtocol {
     }
     
      func detectIsAllowToBidding(auction:AuctionDetailsModel)->Bool {
-         if auction.auctionVisitors == "all_users" {
-           return true
-         }else {
+         if auction.auctionVisitors == "official" {
              if HelperK.getVerification(){
                  return true
              }else {
@@ -74,6 +72,9 @@ class AuctionsDetailsViewModel:AuctionNetworkingProtocol {
                  verifyWithNafath.onNext(())
                  return false
              }
+          
+         }else {
+             return true
          }
 
     }

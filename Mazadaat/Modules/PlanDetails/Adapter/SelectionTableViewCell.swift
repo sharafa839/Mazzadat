@@ -31,11 +31,11 @@ class SelectionTableViewCell: UITableViewCell {
 }
 
 enum PaymentMethodCases:Int {
-    case bankTransfer = 1 , cash = 2
+    case bankTransfer = 2 , cash = 1
     var title:String {
         switch self {
-        case .bankTransfer: return "bankTransfer"
-        case .cash:return "cash"
+        case .bankTransfer: return "bankTransfer".localize
+        case .cash:return "cash".localize
         }
     }
 }

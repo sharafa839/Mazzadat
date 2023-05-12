@@ -28,7 +28,7 @@ class ControlCentetrFooter: UITableViewCell {
     private func setupUI() {
         containerView.setRoundCorners(5)
         
-        logoutButton.setTitle("logout", for: .normal)
+        logoutButton.setTitle("logout".localize, for: .normal)
     }
     
     @IBAction func logouttAction(_ sender: UIButton) {

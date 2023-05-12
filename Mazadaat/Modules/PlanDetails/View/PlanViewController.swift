@@ -34,13 +34,13 @@ class PlanViewController: UIViewController {
         setupTableView()
         setupViewModelObservers()
         setupObservables()
-        setNavigationItem(title: "subscribe")
+        setNavigationItem(title: "subscribe".localize)
     }
 
     private func setupUI() {
         if viewModel.placeId != "" {
-            planTitleLabel.text = "payToGo"
-            descriptionLabel.text = "payEntreeFeeForThisPlaceToGetAllAuctionSubscription"
+            planTitleLabel.text = "payToGo".localize
+            descriptionLabel.text = "payEntreeFeeForThisPlaceToGetAllAuctionSubscription".localize
         }else{
             planTitleLabel.text = viewModel.subscription.name
             descriptionLabel.text = viewModel.subscription.description
@@ -51,7 +51,7 @@ class PlanViewController: UIViewController {
     private func setupObservables() {
         payButton.rx.tap.subscribe { [weak self] _ in
             guard let paymentMethodId = self?.viewModel.paymentMethodId else {
-                HelperK.showError(title: "youHaveToSelectPaymentMethodId", subtitle: "")
+                HelperK.showError(title: "youHaveToSelectPaymentMethod".localize, subtitle: "")
                 return
             }
             
@@ -80,7 +80,7 @@ class PlanViewController: UIViewController {
         }.disposed(by: viewModel.disposeBag)
         
         viewModel.onSuccess.subscribe { [weak self] _ in
-            HelperK.showSuccess(title: "suubscripe successfully", subtitle: "")
+            HelperK.showSuccess(title: "suubscripe successfully".localize, subtitle: "")
         }.disposed(by: viewModel.disposeBag)
 
     }
@@ -93,18 +93,18 @@ class PlanViewController: UIViewController {
 
        
     }
-    
+
     private func imageTapped() {
-        let alert = UIAlertController(title: "chooseImage", message: nil, preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { _ in
+        let alert = UIAlertController(title: "chooseImage".localize, message: nil, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Camera".localize, style: .default, handler: { _ in
             self.openCamera()
         }))
         
-        alert.addAction(UIAlertAction(title: "Gallery", style: .default, handler: { _ in
+        alert.addAction(UIAlertAction(title: "Gallery".localize, style: .default, handler: { _ in
             self.openGallery()
         }))
         
-        alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction.init(title: Localizations.cancel.localize, style: .cancel, handler: nil))
         
         self.present(alert, animated: true, completion: nil)
         
@@ -160,7 +160,7 @@ extension PlanViewController:UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
          let id = viewModel.methods[indexPath.row].rawValue
         viewModel.paymentMethodId = id
-        if id == 1 {
+        if id == 2 {
             imageTapped()
         }
     }

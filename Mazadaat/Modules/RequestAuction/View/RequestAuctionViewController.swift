@@ -74,6 +74,7 @@ class RequestAuctionViewController: UIViewController {
         auctionDetailsLabel.text =  Localizations.auctionDescription.localize
         titleAuctionRequestTextField.placeholder =  Localizations.writeAuctionTitle.localize
         auctionDetailsTextField.placeholder =  Localizations.writeAuctionDescription.localize
+        sendButton.setTitle(Localizations.sendRequesst.localize, for: .normal)
     }
     
     private func setupObservables() {

@@ -129,16 +129,16 @@ var viewModel:AddDocumentViewModel
     
     
     private func imageTapped() {
-        let alert = UIAlertController(title: "chooseImage", message: nil, preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { _ in
+        let alert = UIAlertController(title: "chooseImage".localize, message: nil, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Camera".localize, style: .default, handler: { _ in
             self.openCamera()
         }))
         
-        alert.addAction(UIAlertAction(title: "Gallery", style: .default, handler: { _ in
+        alert.addAction(UIAlertAction(title: "Gallery".localize, style: .default, handler: { _ in
             self.openGallery()
         }))
         
-        alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction.init(title: "Cancel".localize, style: .cancel, handler: nil))
         
         self.present(alert, animated: true, completion: nil)
         
@@ -183,7 +183,7 @@ var viewModel:AddDocumentViewModel
     func rightButtonBar() {
         
             
-        button = UIBarButtonItem(title: "save", style: .plain, target: self, action: #selector(saveImages))
+        button = UIBarButtonItem(title: Localizations.save.localize, style: .plain, target: self, action: #selector(saveImages))
         navigationItem.rightBarButtonItem = button
         navigationItem.rightBarButtonItem?.tintColor = .Bronze_500
         
@@ -200,9 +200,9 @@ extension AddDocumentViewController:UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0 {
-            return "Front"
+            return Localizations.frontView.localize
         }else {
-            return "back"
+            return Localizations.backView.localize
         }
     }
     

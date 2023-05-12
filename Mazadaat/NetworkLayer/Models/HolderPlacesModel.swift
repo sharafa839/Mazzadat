@@ -69,7 +69,8 @@ struct Place: Codable {
     var auctionTime: String?
     var brochure, terms: String?
     var type: String?
-
+    var lat:String?
+    var lng:String?
     enum CodingKeys: String, CodingKey {
         case id, name, cover, description
         case entryFee = "entry_fee"

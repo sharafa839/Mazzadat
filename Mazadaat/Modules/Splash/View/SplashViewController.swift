@@ -61,13 +61,16 @@ class SplashViewController: UIViewController, SwiftyGifDelegate {
         switch route {
         case .home:
            let tabBarViewController = MainTabBarController()
-            appDelegate.coordinator.setRoot(tabBarViewController)
+            
+            AppUtilities.changeRoot(root: UINavigationController(rootViewController: tabBarViewController))
 
         case .login:
-            appDelegate.coordinator.setRoot(UINavigationController(rootViewController: LoginViewController(viewModel: LoginViewModel())))
+            AppUtilities.changeRoot(root: UINavigationController(rootViewController: LoginViewController(viewModel: LoginViewModel())))
+            
 
         case .onBoarding:
-            appDelegate.coordinator.setRoot(UINavigationController(rootViewController: OnBoardingViewController()))
+            AppUtilities.changeRoot(root: UINavigationController(rootViewController: OnBoardingViewController()))
+
 
         }
        

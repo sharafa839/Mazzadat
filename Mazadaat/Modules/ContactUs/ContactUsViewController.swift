@@ -33,6 +33,7 @@ class ContactUsViewController: UIViewController {
         
         setupUI()
         setupObservables()
+        setupLocalize()
     }
     
     
@@ -40,8 +41,13 @@ class ContactUsViewController: UIViewController {
     private func setupUI() {
         phoneContainerView.setRoundCorners(5)
         emailContainerView.setRoundCorners(5)
-        setNavigationItem(title: "contactUs")
+        setNavigationItem(title: Localizations.contactUs.localize)
         imageView.circle()
+    }
+    
+    private func setupLocalize() {
+        emailLabel.text = Localizations.emailUs.localize
+        mobilePhoneLabel.text = Localizations.callUs.localize
     }
     
     private func setupObservables() {

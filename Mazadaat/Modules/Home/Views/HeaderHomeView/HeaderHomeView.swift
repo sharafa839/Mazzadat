@@ -69,7 +69,7 @@ class HeaderHomeView: UIView {
     }
     
     private func setupLocalize() {
-        welcomeLabel.text = "welcomeBack"
+        welcomeLabel.text = Localizations.welcomeBack.localize
     }
     
     func setupUI(view:ViewType) {

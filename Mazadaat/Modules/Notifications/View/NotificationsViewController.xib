@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,10 +23,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="96W-f8-liS">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                    <rect key="frame" x="0.0" y="48" width="414" height="100"/>
                     <subviews>
                         <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1ym-ee-bH6">
-                            <rect key="frame" x="16" y="98" width="382" height="41"/>
+                            <rect key="frame" x="16" y="48" width="382" height="41"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="qC9-jY-DAC"/>
                             </constraints>
@@ -40,23 +41,23 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="150" id="Nuy-lc-3aX"/>
+                        <constraint firstAttribute="height" constant="100" id="Nuy-lc-3aX"/>
                         <constraint firstAttribute="bottom" secondItem="1ym-ee-bH6" secondAttribute="bottom" constant="12" id="TIV-84-BT0"/>
                         <constraint firstItem="1ym-ee-bH6" firstAttribute="leading" secondItem="96W-f8-liS" secondAttribute="leading" constant="16" id="aTw-nE-0Jq"/>
                         <constraint firstAttribute="trailing" secondItem="1ym-ee-bH6" secondAttribute="trailing" constant="16" id="oXB-Gw-hKA"/>
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="iNA-lk-5IK">
-                    <rect key="frame" x="16" y="174" width="382" height="722"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <rect key="frame" x="16" y="172" width="382" height="724"/>
+                    <color key="backgroundColor" name="Neutral-v100"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemGray6Color"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="iNA-lk-5IK" firstAttribute="top" secondItem="96W-f8-liS" secondAttribute="bottom" constant="24" id="2bm-7a-ETM"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="96W-f8-liS" secondAttribute="trailing" id="3dP-KP-Ocb"/>
-                <constraint firstItem="96W-f8-liS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="AXA-5t-z7b"/>
+                <constraint firstItem="96W-f8-liS" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="AXA-5t-z7b"/>
                 <constraint firstItem="iNA-lk-5IK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="OhH-wd-shD"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iNA-lk-5IK" secondAttribute="trailing" constant="16" id="QqD-AO-ZQu"/>
                 <constraint firstItem="96W-f8-liS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="r2d-xA-vwl"/>
@@ -66,11 +67,11 @@
         </view>
     </objects>
     <resources>
+        <namedColor name="Neutral-v100">
+            <color red="0.96470588235294119" green="0.96470588235294119" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

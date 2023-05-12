@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -51,27 +51,31 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C4c-Tx-BzR">
-                    <rect key="frame" x="336" y="52" width="70" height="48"/>
+                    <rect key="frame" x="336" y="56" width="70" height="40"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqf-8w-jSV">
-                            <rect key="frame" x="8" y="8" width="54" height="32"/>
+                            <rect key="frame" x="8" y="8" width="54" height="24"/>
                             <fontDescription key="fontDescription" name="Archivo-Regular" family="Archivo" pointSize="18"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" title="Button">
                                 <color key="titleColor" name="TextColor"/>
                             </state>
+                            <connections>
+                                <action selector="langChange:" destination="-1" eventType="touchUpInside" id="0D1-FY-kjM"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="uqf-8w-jSV" secondAttribute="bottom" constant="8" id="0RL-YC-ypg"/>
                         <constraint firstItem="uqf-8w-jSV" firstAttribute="top" secondItem="C4c-Tx-BzR" secondAttribute="top" constant="8" id="OBA-9b-B6B"/>
+                        <constraint firstAttribute="height" constant="40" id="Rwf-8g-ddJ"/>
                         <constraint firstAttribute="trailing" secondItem="uqf-8w-jSV" secondAttribute="trailing" constant="8" id="nDa-Un-heJ"/>
                         <constraint firstItem="uqf-8w-jSV" firstAttribute="leading" secondItem="C4c-Tx-BzR" secondAttribute="leading" constant="8" id="sXV-jS-bex"/>
                     </constraints>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VKn-RJ-lLe">
-                    <rect key="frame" x="32" y="120" width="350" height="100"/>
+                    <rect key="frame" x="32" y="116" width="350" height="100"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It’s good to see you!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5D-38-K8S">
                             <rect key="frame" x="0.0" y="0.0" width="350" height="46"/>
@@ -88,7 +92,7 @@
                     </subviews>
                 </stackView>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dZi-yb-cCK" customClass="CustomSegmentedControl" customModule="Golden_Bell" customModuleProvider="target">
-                    <rect key="frame" x="24" y="250" width="366" height="51"/>
+                    <rect key="frame" x="24" y="246" width="366" height="51"/>
                     <color key="backgroundColor" name="Bronze-200"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="Lz4-cT-lU0"/>
@@ -104,9 +108,9 @@
                     </connections>
                 </segmentedControl>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Uf-9I-Tq1">
-                    <rect key="frame" x="24" y="332" width="366" height="60"/>
+                    <rect key="frame" x="24" y="328" width="366" height="60"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nWC-cM-mXP">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="dsdsds" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nWC-cM-mXP">
                             <rect key="frame" x="49" y="8" width="309" height="44"/>
                             <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="16"/>
                             <textInputTraits key="textInputTraits"/>
@@ -132,7 +136,7 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6a-7o-zny">
-                    <rect key="frame" x="346" y="476" width="44" height="28"/>
+                    <rect key="frame" x="346" y="472" width="44" height="28"/>
                     <fontDescription key="fontDescription" name="Archivo-SemiBold" family="Archivo" pointSize="14"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title="Button">
@@ -140,7 +144,7 @@
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqd-CF-Pqx" customClass="CustomButton" customModule="Golden_Bell" customModuleProvider="target">
-                    <rect key="frame" x="24" y="519" width="365" height="50"/>
+                    <rect key="frame" x="24" y="515" width="365" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="CmW-PK-YT7"/>
                     </constraints>
@@ -148,13 +152,13 @@
                     <buttonConfiguration key="configuration" style="plain" title="Button"/>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIo-R6-Hmk">
-                    <rect key="frame" x="184" y="576" width="46" height="20.5"/>
+                    <rect key="frame" x="184" y="572" width="46" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="C6C-1H-gOl">
-                    <rect key="frame" x="24" y="585" width="366" height="2"/>
+                    <rect key="frame" x="24" y="581" width="366" height="2"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MKH-Jk-OGK">
                             <rect key="frame" x="0.0" y="0.0" width="116.5" height="2"/>
@@ -184,7 +188,7 @@
                     </subviews>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QSF-WQ-zaS">
-                    <rect key="frame" x="24" y="603" width="366" height="56"/>
+                    <rect key="frame" x="24" y="599" width="366" height="56"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qqQ-XR-2ur">
                             <rect key="frame" x="0.0" y="0.0" width="366" height="56"/>
@@ -222,6 +226,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="366" height="56"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    <connections>
+                                        <action selector="asGuest:" destination="-1" eventType="touchUpInside" id="1iH-t6-auM"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cS-EW-z0r">
                                     <rect key="frame" x="16" y="15.5" width="25" height="25"/>
@@ -252,7 +259,7 @@
                     </variation>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="THA-1m-Szf">
-                    <rect key="frame" x="24" y="400" width="366" height="60"/>
+                    <rect key="frame" x="24" y="396" width="366" height="60"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ko8-0h-1V9">
                             <rect key="frame" x="49" y="8" width="282" height="44"/>

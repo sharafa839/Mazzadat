@@ -158,7 +158,7 @@ class HelperK: NSObject {
     class func checkUserToken()->Bool {
         let def = UserDefaults.standard
         let xxx = def.string(forKey: "token")
-        return (def.string(forKey: "token") as? String) != nil
+        return (def.string(forKey: "token")) != nil
     }
     
     class func saveFristTime(token: Bool) {

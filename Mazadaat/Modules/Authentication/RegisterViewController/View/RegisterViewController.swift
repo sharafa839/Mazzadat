@@ -71,6 +71,7 @@ class RegisterViewController: UIViewController {
     //MARK: - Methods
     
     private func setupUI() {
+        
         fullNameView.drawBorder(raduis: 10, borderColor: .borderColor)
         phoneNumberView.drawBorder(raduis: 10, borderColor: .borderColor)
         confirmPassewordView.drawBorder(raduis: 10, borderColor: .borderColor)
@@ -87,18 +88,30 @@ class RegisterViewController: UIViewController {
     }
     
     private func setupLocalize() {
-        kindOfAuhenticationSectionSegment.setTitle("login", forSegmentAt: 0)
-        kindOfAuhenticationSectionSegment.setTitle("register", forSegmentAt: 1)
-        loginButton.setTitle("login", for: .normal)
-        loginWithNafathButton.setTitle("loginWithNafathApp", for: .normal)
-        ContinueAsGuestButton.setTitle("continueAsGuest", for: .normal)
-        phoneNumberTextField.placeholder = "enterYourMobileNumber"
-        passwordTextField.placeholder = "enterPassword"
-        orLabel.text = "or"
-        confirmPasswordTextField.placeholder = "confirmPassword"
-        emailTextField.placeholder = "enterYourEmail"
+        guard let currentLanguage = LocalizationManager.shared.getLanguage() else {return}
+        if  currentLanguage == .Arabic {
+            langaugeButton.setTitle(Localizations.english.localize, for: .normal)
+        }else {
+            langaugeButton.setTitle(Localizations.arabic.localize, for: .normal)
+        }
+        welcomeDescriptionLabel.text = Localizations.welcome.localize
+        welcomeTitleLabel.text = Localizations.goodToSeeYou.localize
+        kindOfAuhenticationSectionSegment.setTitle(Localizations.signIn.localize, forSegmentAt: 0)
+        kindOfAuhenticationSectionSegment.setTitle(Localizations.register.localize, forSegmentAt: 1)
+        loginButton.setTitle(Localizations.signIn.localize, for: .normal)
+        loginWithNafathButton.setTitle(Localizations.loginToNafath.localize, for: .normal)
+        ContinueAsGuestButton.setTitle(Localizations.continueAsGuest.localize, for: .normal)
+        phoneNumberTextField.placeholder = Localizations.enterYourMobileNumber.localize
+        passwordTextField.placeholder = Localizations.enterPassword.localize
+        orLabel.text = Localizations.or.localize
+        confirmPasswordTextField.placeholder = Localizations.confirmPassword.localize
+        emailTextField.placeholder = Localizations.enterYourEmail.localize
         kindOfAuhenticationSectionSegment.selectedSegmentIndex = 1
+        fullNameTextField.placeholder = Localizations.enterYourFullName.localize
+       
     }
+    
+    
     
     private func setupProperty() {
       phoneNumberTextField.rx.text.orEmpty.bind(to: viewModel.phone).disposed(by: viewModel.disposeBag)
@@ -134,17 +147,31 @@ class RegisterViewController: UIViewController {
             self?.viewModel.signUp()
         }.disposed(by: viewModel.disposeBag)
         
-        ContinueAsGuestButton.rx.tap.subscribe { [weak self] _ in
-            let homeViewController = HomeViewController(viewModel: HomeViewModel())
-            appDelegate.coordinator.setRoot(homeViewController)
+       
+        showPasswordButton.rx.tap.subscribe { [weak self] _ in
+            guard let self = self else {return}
+
+            self.passwordTextField.isSecureTextEntry = !self.passwordTextField.isSecureTextEntry
+        }.disposed(by: viewModel.disposeBag)
+        confirmPasswordButton.rx.tap.subscribe { [weak self] _ in
+            guard let self = self else {return}
+
+            self.confirmPasswordTextField.isSecureTextEntry = !self.confirmPasswordTextField.isSecureTextEntry
         }.disposed(by: viewModel.disposeBag)
         
         loginWithNafathButton.rx.tap.subscribe { [weak self] in
             
         }.disposed(by: viewModel.disposeBag)
         
-        langaugeButton.rx.tap.subscribe { [weak self] in
-            
+        langaugeButton.rx.tap.subscribe { [weak self] _ in
+            guard let currentLanguage = LocalizationManager.shared.getLanguage() else {return}
+            guard currentLanguage == .Arabic else {
+                LocalizationManager.shared.setLanguage(language: .English)
+
+                return
+            }
+            LocalizationManager.shared.setLanguage(language: .Arabic)
+
         }.disposed(by: viewModel.disposeBag)
         
         
@@ -154,8 +181,13 @@ class RegisterViewController: UIViewController {
         
         if sender.selectedSegmentIndex == 0 {
             let registerViewController = LoginViewController(viewModel: LoginViewModel())
-            navigationController?.pushViewController(registerViewController, animated: true)
+            AppUtilities.changeRoot(root: registerViewController)
         }
+    }
+    
+    @IBAction func asGuest(_ sender: UIButton) {
+        AppUtilities.changeRoot(root: MainTabBarController())
+
     }
     
 }

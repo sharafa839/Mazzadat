@@ -24,20 +24,20 @@ class ForgetPasswordViewController: UIViewController {
     }
 
     private func setupLocalize() {
-        forgetPasswordLabel.text = "enterThePhoneNumberRelatedToYourAccount"
-        forgetPasswordDescriptionLabel.text = "enterThePhoneNumberRelatedToYourAccount"
-        phoneNumberTextField.placeholder = "enterYourMobileNumber"
+        forgetPasswordLabel.text = Localizations.enterYourMobileNumber.localize
+        forgetPasswordDescriptionLabel.text = Localizations.enterYourMobileNumber.localize
+        phoneNumberTextField.placeholder = Localizations.enterYourMobileNumber.localize
 
     }
     
     private func setupUI() {
         phoneNumberView.drawBorder(raduis: 10, borderColor: .borderColor)
-        setNavigationItem(title: "ForgetPassword")
+        setNavigationItem(title: Localizations.forgetPassword.localize)
     }
 
     @IBAction func sendButtonAction(_ sender: CustomButton) {
         guard let text = phoneNumberTextField.text,text.isValidPhone else {
-            HelperK.showError(title: "haveToTypeYourPhoneNumber", subtitle: "")
+            HelperK.showError(title: Localizations.anError.localize, subtitle: "")
             return
         }
         let otpViewModel = OTPViewModel(phoneNumber: text, typeOfAuth: .forgetPassword)

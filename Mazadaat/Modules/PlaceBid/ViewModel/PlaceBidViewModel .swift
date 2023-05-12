@@ -29,9 +29,9 @@ class PlaceBidViewModel:AuctionNetworkingProtocol {
         priceChange.accept(Int(price))
     }
     
-    func placeBidding() {
+    func placeBidding(price:Int) {
         onLoading.accept(true)
-        addBid(auction_id: id, price: "\(priceChange.value)", isOfficial: isOfficial) { [weak self]  result in
+        addBid(auction_id: id, price: "\(price)", isOfficial: isOfficial) { [weak self]  result in
             self?.onLoading.accept(false)
             
            

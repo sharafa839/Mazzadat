@@ -15,9 +15,9 @@ enum ResponseStatus:String,Codable {
 
 struct BaseResponse<T:Codable>:Codable {
     let message:[String]?
-    let status:ResponseStatus
+    let status:ResponseStatus?
     let response:Basic<T>?
-    let code:Int
+    let code:Int?
     let paging:Paging?
 }
 

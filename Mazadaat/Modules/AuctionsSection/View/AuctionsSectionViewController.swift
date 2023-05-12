@@ -34,14 +34,15 @@ class AuctionsSectionViewController: UIViewController {
     }
     
     private func setupUI() {
+        titleLabel.text = Localizations.auctions.localize
         segmentController.drawBorder(raduis: 20, borderColor: .Bronze_500)
-        segmentController.setTitle("myBidding", forSegmentAt: 0)
-        segmentController.setTitle("myAuction", forSegmentAt: 1)
-        segmentController.setTitle("goldenList", forSegmentAt: 2)
+        segmentController.setTitle(Localizations.biddings.localize, forSegmentAt: 0)
+        segmentController.setTitle(Localizations.myauctions.localize, forSegmentAt: 1)
+        segmentController.setTitle(Localizations.myGoldenList.localize, forSegmentAt: 2)
         segmentController.setTitleColor(.white, state: .selected)
         segmentController.setTitleColor(.textColor, state: .normal)
         segmentController.layer.borderWidth = 2
-        segmentController.setTitleFont(.Archivo(18, weight: .Bold))
+        segmentController.setTitleFont(.Archivo(16, weight: .Bold))
         segmentController.backgroundColor = .white
     }
     

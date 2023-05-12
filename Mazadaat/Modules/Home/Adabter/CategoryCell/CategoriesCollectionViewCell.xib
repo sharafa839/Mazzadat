@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -64,7 +64,7 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xb0-AA-IPi">
-                        <rect key="frame" x="16" y="163" width="109" height="12"/>
+                        <rect key="frame" x="16" y="171" width="109" height="12"/>
                         <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="11"/>
                         <color key="textColor" name="TextColor"/>
                         <nil key="highlightedColor"/>
@@ -78,9 +78,9 @@
                 <constraint firstItem="Xb0-AA-IPi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="PoE-xP-zXi"/>
                 <constraint firstAttribute="trailing" secondItem="Xb0-AA-IPi" secondAttribute="trailing" constant="16" id="SD1-SQ-b1M"/>
                 <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="t7u-C9-WLd" secondAttribute="bottom" constant="28" id="YCv-t1-Oeq"/>
+                <constraint firstItem="Xb0-AA-IPi" firstAttribute="top" secondItem="t7u-C9-WLd" secondAttribute="bottom" constant="16" id="aQG-9U-ChT"/>
                 <constraint firstItem="FuA-Fj-VK3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="kOR-mF-8i1"/>
                 <constraint firstAttribute="trailing" secondItem="FuA-Fj-VK3" secondAttribute="trailing" constant="8" id="lCq-Lz-fob"/>
-                <constraint firstAttribute="bottom" secondItem="Xb0-AA-IPi" secondAttribute="bottom" constant="8" id="oGA-gS-mJ7"/>
                 <constraint firstItem="FuA-Fj-VK3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="pAF-O1-193"/>
             </constraints>
             <size key="customSize" width="141" height="183"/>

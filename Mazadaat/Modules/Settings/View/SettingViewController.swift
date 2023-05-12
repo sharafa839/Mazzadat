@@ -45,11 +45,24 @@ class SettingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupLocalize()
         setupUI()
-        setNavigationItem(title: "setting")
+        setNavigationItem(title: Localizations.settings.localize)
     }
 
+    private func setupLocalize() {
+        auctionEndingSoonLabel.text = Localizations.auctionEndingSoon.localize
+        auctionAlertDescriptionLabel.text =  Localizations.auctionEndingSoon.localize
+        promotionLabel.text = Localizations.promotions.localize
+        bidUpdateLabel.text = Localizations.bidUpdates.localize
+        bidUpdateDescriptionLabel.text = Localizations.bidUpdates.localize
+        auctionAlertLabel.text = Localizations.auctionTitle.localize
+        auctionAlertDescriptionLabel.text = Localizations.auctionAlerts.localize
+        languageValue.text =  LocalizationManager.shared.getLanguage() == .Arabic ? Localizations.english.localize : Localizations.arabic.localize
+        appLanguage.text = "language"
+        languageLabel.text = Localizations.appLanguage.localize
+        
+    }
 
     private func setupUI() {
         languageView.setRoundCorners(5)

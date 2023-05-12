@@ -28,7 +28,7 @@ struct LoginPayload: Codable {
        var lat, lng: String?
        var isSubscribed, isVerified, isPayEntryFee: Bool?
        var subscriptions: [Subscription]?
-       var placesPayedFee: [String]?
+    
        var appLocale: String?
        var notificationCount: Int?
        var auctionAlerts, bidUpdates, auctionEndingSoon, promotions: Bool?
@@ -43,7 +43,6 @@ struct LoginPayload: Codable {
            case isVerified = "is_verified"
            case isPayEntryFee = "is_pay_entry_fee"
            case subscriptions = "Subscriptions"
-           case placesPayedFee = "places_payed_fee"
            case appLocale = "app_locale"
            case notificationCount = "notification_count"
            case auctionAlerts = "auction_alerts"
@@ -86,3 +85,4 @@ struct Subscription: Codable {
         case gainedBalance = "gained_balance"
     }
 }
+

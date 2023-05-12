@@ -68,7 +68,8 @@ class PlaceBidViewController: UIViewController, HeightsBidding {
             self?.viewModel.subtract()
         }.disposed(by: viewModel.disposeBag)
         placeBidButton.rx.tap.subscribe { [weak self] _ in
-            self?.viewModel.placeBidding()
+            guard let price = Int(self?.priceTextField.text ?? "") , price > 0 else {return}
+            self?.viewModel.placeBidding(price:price)
         }.disposed(by: viewModel.disposeBag)
 
         closeButtton.rx.tap.subscribe { [weak self] _ in

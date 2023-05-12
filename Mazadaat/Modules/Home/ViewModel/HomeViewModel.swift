@@ -51,6 +51,7 @@ class HomeViewModel:HomeNetworkingProtocol,CoreNetworkingProtocol,TransactionNet
     
     func getMyBalance() {
        // onLoading.accept(true)
+        guard HelperK.checkUserToken() else {return}
         myBalance { [weak self] result in
          //   self?.onLoading.accept(false)
             switch result {

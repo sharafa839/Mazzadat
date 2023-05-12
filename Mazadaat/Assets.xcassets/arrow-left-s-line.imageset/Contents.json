@@ -3,19 +3,19 @@
     {
       "filename" : "arrow-left-s-line.jpg",
       "idiom" : "universal",
-      "language-direction" : "left-to-right",
+      "language-direction" : "right-to-left",
       "scale" : "1x"
     },
     {
       "filename" : "arrow-left-s-line@2x.jpg",
       "idiom" : "universal",
-      "language-direction" : "left-to-right",
+      "language-direction" : "right-to-left",
       "scale" : "2x"
     },
     {
       "filename" : "arrow-left-s-line@3x.jpg",
       "idiom" : "universal",
-      "language-direction" : "left-to-right",
+      "language-direction" : "right-to-left",
       "scale" : "3x"
     }
   ],

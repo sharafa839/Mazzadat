@@ -9,7 +9,7 @@
 
 import Foundation
 import UIKit
-protocol LocalizationManagerDelegate: class {
+protocol LocalizationManagerDelegate: AnyObject {
     func resetApp()
 }
 
@@ -99,9 +99,14 @@ class LocalizationManager: NSObject {
         case .rightToLeft:
             semantic = .forceRightToLeft
         }
-        UITabBar.appearance().semanticContentAttribute = semantic
         UIView.appearance().semanticContentAttribute = semantic
+        UIButton.appearance().semanticContentAttribute = semantic
+        UITextView.appearance().semanticContentAttribute = semantic
+        UITextField.appearance().semanticContentAttribute = semantic
         UINavigationBar.appearance().semanticContentAttribute = semantic
+        UITabBar.appearance().semanticContentAttribute = semantic
+        UISearchBar.appearance().semanticContentAttribute = semantic
+        UILabel.appearance().semanticContentAttribute = semantic
         delegate?.resetApp()
     }
     

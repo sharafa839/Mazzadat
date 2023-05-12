@@ -73,15 +73,25 @@ class LoginViewController: UIViewController {
     }
     
     private func setupLocalize() {
-        kindOfAuhenticationSectionSegment.setTitle("login", forSegmentAt: 0)
-        kindOfAuhenticationSectionSegment.setTitle("register", forSegmentAt: 1)
-        forgetPasswordButton.setTitle("forgetPassword", for: .normal)
-        loginButton.setTitle("login", for: .normal)
-        loginWithNafathButton.setTitle("loginWithNafathApp", for: .normal)
-        ContinueAsGuestButton.setTitle("continueAsGuest", for: .normal)
-        phoneNumberTextField.placeholder = "enterYourMobileNumber"
-        passwordTextField.placeholder = "enterPassword"
-        orLabel.text = "or"
+        guard let currentLanguage = LocalizationManager.shared.getLanguage() else {return}
+        if  currentLanguage == .Arabic {
+            langaugeButton.setTitle(Localizations.english.localize, for: .normal)
+        }else {
+            langaugeButton.setTitle(Localizations.arabic.localize, for: .normal)
+        }
+        welcomeDescriptionLabel.text = Localizations.welcome.localize
+        welcomeTitleLabel.text = Localizations.goodToSeeYou.localize
+        kindOfAuhenticationSectionSegment.setTitle(Localizations.signIn.localize, forSegmentAt: 0)
+        kindOfAuhenticationSectionSegment.setTitle(Localizations.register.localize, forSegmentAt: 1)
+        loginButton.setTitle(Localizations.signIn.localize, for: .normal)
+        loginWithNafathButton.setTitle(Localizations.loginToNafath.localize, for: .normal)
+        ContinueAsGuestButton.setTitle(Localizations.continueAsGuest.localize, for: .normal)
+        phoneNumberTextField.placeholder = Localizations.enterYourMobileNumber.localize
+        passwordTextField.placeholder = Localizations.enterPassword.localize
+        orLabel.text = Localizations.or.localize
+        kindOfAuhenticationSectionSegment.selectedSegmentIndex = 0
+        forgetPasswordButton.setTitle(Localizations.forgetPassword.localize, for: .normal)
+     
     }
     
     private func setupObservables() {
@@ -89,23 +99,31 @@ class LoginViewController: UIViewController {
             self?.viewModel.loginWithPhoneAndPassword()
         }.disposed(by: viewModel.disposeBag)
         
-        ContinueAsGuestButton.rx.tap.subscribe { [weak self] _ in
-            appDelegate.coordinator.setRoot(HomeViewController(viewModel: HomeViewModel()))
+        showPasswordButton.rx.tap.subscribe { [weak self] _ in
+            guard let self = self else {return}
+
+            self.passwordTextField.isSecureTextEntry = !self.passwordTextField.isSecureTextEntry
         }.disposed(by: viewModel.disposeBag)
-        
-        loginWithNafathButton.rx.tap.subscribe { [weak self] in
-            
-        }.disposed(by: viewModel.disposeBag)
-        
-        langaugeButton.rx.tap.subscribe { [weak self] in
-            
-        }.disposed(by: viewModel.disposeBag)
+  
+       
         
         forgetPasswordButton.rx.tap.subscribe { [weak self] _ in
             let forgetPasswordViewController = ForgetPasswordViewController()
             self?.navigationController?.pushViewController(forgetPasswordViewController, animated: true)
         }.disposed(by: viewModel.disposeBag)
         
+    }
+    @IBAction func langChange(_ sender: UIButton) {
+        guard let currentLanguage = LocalizationManager.shared.getLanguage() else {return}
+        if currentLanguage == .Arabic  {
+            LocalizationManager.shared.setLanguage(language: .English)
+           
+            return
+        }else{
+            LocalizationManager.shared.setLanguage(language: .Arabic)
+          return
+        }
+
     }
     
     private func setupViewModelObserver() {
@@ -137,10 +155,15 @@ class LoginViewController: UIViewController {
         
         if sender.selectedSegmentIndex == 1 {
             let registerViewController = RegisterViewController(viewModel: RegisterViewModel())
-            navigationController?.pushViewController(registerViewController, animated: true)
+            AppUtilities.changeRoot(root: registerViewController)
+            
         }
     }
     
+    @IBAction func asGuest(_ sender: UIButton) {
+        AppUtilities.changeRoot(root: MainTabBarController())
+
+    }
 }
 
 

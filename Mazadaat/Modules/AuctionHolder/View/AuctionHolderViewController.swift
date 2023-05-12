@@ -81,7 +81,7 @@ class AuctionHolderViewController: UIViewController {
     }
     
     private func setupUI() {
-        setNavigationItem(title: "AuctionHolder",color: .white)
+        setNavigationItem(title: "AuctionHolder".localize,color: .white)
          let image = viewModel.auctionHolderImage
         guard let url = URL(string: image) else {return}
         let placeholderImage = UIImage(named: "AppIcon")!
@@ -200,11 +200,13 @@ enum AuctionState:Int {
 extension UIViewController {
     func setNavigationItem(title:String, color: UIColor = .clear){
         navigationController?.navigationBar.backgroundColor = color
+        navigationController?.navigationBar.backItem?.title = ""
         navigationController?.navigationBar.isHidden = false
         navigationController?.navigationBar.tintColor = .Bronze_500
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.compact)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         let titleLabel = UILabel()
+        navigationItem.backButtonTitle = ""
         titleLabel.textAlignment = .center
         titleLabel.text = title
         titleLabel.textColor = UIColor.textColor

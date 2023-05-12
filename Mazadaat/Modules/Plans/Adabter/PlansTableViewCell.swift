@@ -38,10 +38,10 @@ class PlansTableViewCell: UITableViewCell {
         containerView.setRoundCorners(5)
         upgradeButton.setRoundCorners(25)
         selectionImageView.circle()
-        youWillPayLabel.text = "youWillPay"
-        yourLimitedTToBidLabel.text = "youLimitedToBidding"
-        currencyLabel.text = "sar"
-        currencyLimitedLabel.text = "sar"
+        youWillPayLabel.text = Localizations.youPay.localize
+        yourLimitedTToBidLabel.text = Localizations.yourLimitBid.localize
+        currencyLabel.text = Localizations.SAR.localize
+        currencyLimitedLabel.text = Localizations.SAR.localize
     }
     
     func configure(_ with:Subscription) {
@@ -52,16 +52,16 @@ class PlansTableViewCell: UITableViewCell {
         limittedBidValue.text = with.gainedBalance
        
         if with.id == 6 {
-            upgradeButton.setTitle("yourCurrentPackage", for: .normal)
+            upgradeButton.setTitle(Localizations.yourCuurrentPlan.localize, for: .normal)
             upgradeButton.isEnabled = false
             upgradeButton.backgroundColor = .borderColor
         }else {
         if    with.id == CoreData.shared.personalSubscription?.first?.id {
-            upgradeButton.setTitle("yourCurrentPackage", for: .normal)
+            upgradeButton.setTitle(Localizations.yourCuurrentPlan.localize, for: .normal)
             upgradeButton.backgroundColor = .borderColor
             upgradeButton.isEnabled = false
             }else{
-                upgradeButton.setTitle("upgrade", for: .normal)
+                upgradeButton.setTitle(Localizations.upgrade.localize, for: .normal)
             }
         }
         

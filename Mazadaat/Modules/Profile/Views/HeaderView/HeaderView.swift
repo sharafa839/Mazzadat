@@ -45,14 +45,14 @@ class HeaderView: UIView {
     
     private func setupProfile() {
         searchButton.isHidden = true
-        titleLabel.text = "profile"
+        titleLabel.text = Localizations.profile.localize
         self.backgroundColor = .Bronze_500
 
     }
     
     private func setupAskGoldenBell() {
         titleLabel.font = .Archivo(28, weight: .Bold)
-        titleLabel.text = "askGoldenBell"
+        titleLabel.text = Localizations.askGoldenBell.localize
         self.backgroundColor = .Bronze_500
 
     }

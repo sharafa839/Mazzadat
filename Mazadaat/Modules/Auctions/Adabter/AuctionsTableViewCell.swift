@@ -60,7 +60,7 @@ class AuctionsTableViewCell: UITableViewCell {
         let seconds = "\(diffDateComponents.second ?? 0)"
 
         if seconds.contains("-"){
-            endInLabel.text = "expired"
+            endInLabel.text = "expired".localize
 
         }else {
             endInLabel.text = "\(diffDateComponents.day ?? 0)d \(diffDateComponents.hour ?? 0)h \(diffDateComponents.minute ?? 0) m"
@@ -72,7 +72,7 @@ class AuctionsTableViewCell: UITableViewCell {
     func configure(_ with:Auction) {
         setTitleColorForBidding()
         biddingStatusView.isHidden = true
-        minLabel.text = "min"
+        minLabel.text = "min".localize
         minValue.text = with.minimumBid
         favoriteButton.setImage(with.isFavourite ?? false ? UIImage(named: "heart"):UIImage(named: "heart-add-line") , for: .normal)
         heartView.backgroundColor = with.isFavourite ?? false ? .Bronze_500 : .lightGray
@@ -81,7 +81,7 @@ class AuctionsTableViewCell: UITableViewCell {
         auctionsCountLabel.text = "\(with.bidsCount ?? 0)"
         guard let date = with.endAt?.getDate() else {return}
         
-        endInLabel.text = "\(date.day+"d") \(date.hour+"h") \(date.minute+"m")"
+        endInLabel.text = "\(date.day + "d".localize) \(date.hour + "h".localize) \(date.minute + "m".localize)"
         guard let image = with.media?.first?.file else {return}
         guard let url = URL(string: image) else {return}
         let placeholderImage = UIImage(named: "AppIcon")!
@@ -108,7 +108,7 @@ class AuctionsTableViewCell: UITableViewCell {
     func configureToGoldenList(with:FavoriteModel) {
         biddingStatusView.isHidden = true
         
-        minLabel.text = "min"
+        minLabel.text = "min".localize
         minValue.text = with.minimumBid
         favoriteButton.setImage( UIImage(systemName: "trash"), for: .normal)
         heartView.backgroundColor = with.isFavourite ?? false ? .Bronze_500 : .lightGray
@@ -117,7 +117,7 @@ class AuctionsTableViewCell: UITableViewCell {
         auctionsCountLabel.text = "\(with.bidsCount ?? 0)"
         guard let date = with.endAt?.getDate() else {return}
         
-        endInLabel.text = "\(date.day+"d") \(date.hour+"h") \(date.minute+"m")"
+        endInLabel.text = "\(date.day + "d".localize) \(date.hour + "h".localize) \(date.minute + "m".localize)"
         guard let image = with.media?.first?.file else {return}
         guard let url = URL(string: image) else {return}
         let placeholderImage = UIImage(named: "AppIcon")!
@@ -151,14 +151,14 @@ class AuctionsTableViewCell: UITableViewCell {
         
         setTitleColorForBidding()
         if with.lastBid?.userID == HelperK.getId() {
-            biddingStatusLabel.text = "yourTheHeighstNow"
-            biddingValueLabel.text =  with.lastBid?.price ?? ""
+            biddingStatusLabel.text = "yourTheHeighstNow".localize
+            biddingValueLabel.text =  (with.lastBid?.price ?? "") + Localizations.SAR.localize
             biddingStatusView.backgroundColor = .Bronze_100
             biddingValueLabel.textColor = .Bronze_900
             biddingStatusLabel.textColor = .Bronze_900
         }else {
-            biddingStatusLabel.text = "yourOutBid"
-            biddingValueLabel.text = "AgainToLead"
+            biddingStatusLabel.text = "yourOutBid".localize
+            biddingValueLabel.text = "AgainToLead".localize
             biddingStatusView.backgroundColor = .Natural_200
             biddingValueLabel.textColor = .textColor
             biddingStatusLabel.textColor = .textColor
@@ -166,7 +166,7 @@ class AuctionsTableViewCell: UITableViewCell {
             biddingImageView.isHidden = true
         }
         
-        minLabel.text = "min"
+        minLabel.text = "min".localize
         minValue.text = with.minimumBid
         favoriteButton.setImage(with.isFavourite ?? false ? UIImage(named: "heart"):UIImage(named: "heart-add-line") , for: .normal)
         heartView.backgroundColor = with.isFavourite ?? false ? .Bronze_500 : .lightGray
@@ -175,7 +175,7 @@ class AuctionsTableViewCell: UITableViewCell {
         auctionsCountLabel.text = "\(with.bidsCount ?? 0)"
         guard let date = with.endAt?.getDate() else {return}
         
-        endInLabel.text = "\(date.day+"d") \(date.hour+"h") \(date.minute+"m")"
+        endInLabel.text = "\(date.day + "d".localize) \(date.hour + "h".localize) \(date.minute + "m".localize)"
         guard let image = with.media?.first?.file else {return}
         guard let url = URL(string: image) else {return}
         let placeholderImage = UIImage(named: "AppIcon")!

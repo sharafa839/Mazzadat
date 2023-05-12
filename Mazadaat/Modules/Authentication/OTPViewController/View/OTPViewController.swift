@@ -41,7 +41,7 @@ class OTPViewController: UIViewController {
     }
 
     func setupOtpView(){
-            self.otpTextFieldView.fieldsCount = 6
+            self.otpTextFieldView.fieldsCount = 5
             self.otpTextFieldView.fieldBorderWidth = 0.5
             self.otpTextFieldView.defaultBorderColor = UIColor.gray
             self.otpTextFieldView.filledBorderColor = UIColor.textColor
@@ -87,7 +87,8 @@ class OTPViewController: UIViewController {
             if destination == .forgetPassword {
                 self?.navigationController?.pushViewController(ResetPasswordViewController(viewModel: ResetPasswordViewModel(phoneNumber: self?.viewModel.phoneNumber ?? "")), animated: true)
             }else {
-                AppUtilities.changeRoot(root: HomeViewController(viewModel: HomeViewModel()))
+                appDelegate.coordinator.setRoot(MainTabBarController())
+
             }
         }.disposed(by: viewModel.disposeBag)
 

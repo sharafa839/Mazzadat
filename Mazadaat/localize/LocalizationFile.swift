@@ -14,12 +14,16 @@ protocol Localizable {
 enum Localizations {
     
     
-    case goodToSeeYou,welcome,signIn,register,enterYourMobile,enterPassword,forgetPassword,or,continueAsGuest,enterTheEmail,enterYourMobileNumber,verifyYourOtp,weHaveSent,dontRecieve,verify,incorrectCode,resendVerificationCode,resetPassword,passwordShouldBe,newPassword,confirmPassword,save,success,yourPassword,confirm,failed,anError,dismissing,tryAgain,join,withAFree,enterYourFullName,etnerYourMobileNumber,enterYourEmail,createAPassword,verifyWithNafath,loginToNafath,cancel,welcomeBack,home,askGoldenBell,auctions,profile,exploreGoldenBell,aboutGoldenBell,GoldenBellCommuunity,rateGoldenBell,plans,freePlan,youPay,yourLimitBid,SAR,premiumPlan,yourCuurrentPlan,upgrade,deleteYourNationalIDCard,areYouSureYouWantToDeleteNationalId,remove,discardChanges,anyChanges,discard,myProfile,myDocuments,toBid,delete,change,drivingLicence,add,frontView,backView,uploadDocument,requestAnAuction,myTickets,chat,plan,yourAuctionRequest,newAuctionRequest,auctionTitle,writeAuctionTitle,auctionDescription,writeAuctionDescription,sendRequesst,all,running,solved,giveAFeedback,writeYourFeedback,sendFeedback,contactUs,inquryAbout,yourMessage,writeYourMessage,call,contact,setting,appLanguage,genrealNotification,auctionAlerts,bidUpdates,auctionEndingSoon,promotions,changePassword,oldPassword,supportingText,confrimNewPassword,emailAddress,verifyPhoneNumber,emailUs,callUs,settings,phoneNumber,displayName,personslInformation,emilAddress,faqs,privacyPolicy,termsOfUse,biddings,myauctions,myGoldenList,share,about,search
+    case goodToSeeYou,welcome,signIn,register,enterYourMobile,enterPassword,forgetPassword,or,continueAsGuest,enterTheEmail,enterYourMobileNumber,verifyYourOtp,weHaveSent,dontRecieve,verify,incorrectCode,resendVerificationCode,resetPassword,passwordShouldBe,newPassword,confirmPassword,save,success,yourPassword,confirm,failed,anError,dismissing,tryAgain,join,withAFree,enterYourFullName,etnerYourMobileNumber,enterYourEmail,createAPassword,verifyWithNafath,loginToNafath,cancel,welcomeBack,home,askGoldenBell,auctions,profile,exploreGoldenBell,aboutGoldenBell,GoldenBellCommuunity,rateGoldenBell,plans,freePlan,youPay,yourLimitBid,SAR,premiumPlan,yourCuurrentPlan,upgrade,deleteYourNationalIDCard,areYouSureYouWantToDeleteNationalId,remove,discardChanges,anyChanges,discard,myProfile,myDocuments,toBid,delete,change,drivingLicence,add,frontView,backView,uploadDocument,requestAnAuction,myTickets,chat,plan,yourAuctionRequest,newAuctionRequest,auctionTitle,writeAuctionTitle,auctionDescription,writeAuctionDescription,sendRequesst,all,running,solved,giveAFeedback,writeYourFeedback,sendFeedback,contactUs,inquryAbout,yourMessage,writeYourMessage,call,contact,setting,appLanguage,genrealNotification,auctionAlerts,bidUpdates,auctionEndingSoon,promotions,changePassword,oldPassword,supportingText,confrimNewPassword,emailAddress,verifyPhoneNumber,emailUs,callUs,settings,phoneNumber,displayName,personslInformation,emilAddress,faqs,privacyPolicy,termsOfUse,biddings,myauctions,myGoldenList,share,arabic,english,about,search,passwordNotMatch,nattionalId
 }
 
 extension Localizations:Localizable {
     var localize: String {
         switch self {
+        case .nattionalId:
+            return "nattionalId".localize
+        case .passwordNotMatch:
+            return "passwordNotMatch".localize
         case .search:
             return "search".localize
         case .about:
@@ -44,7 +48,7 @@ extension Localizations:Localizable {
         case .or:
             return "or".localize
         case .continueAsGuest:
-            return "continueAsGues".localize
+            return "continueAsGuest".localize
         case .enterTheEmail:
             return "enterTheEmail".localize
         case .enterYourMobileNumber:
@@ -270,6 +274,10 @@ extension Localizations:Localizable {
             return "myauctions".localize
         case .myGoldenList:
             return "myGoldenList".localize
+        case .arabic:
+            return "arabic".localize
+        case .english:
+            return "english".localize
         }
     }
 }

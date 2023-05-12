@@ -17,7 +17,7 @@ class PlanDetailsViewModel:HomeNetworkingProtocol {
     var methods:[PaymentMethodCases] = [.bankTransfer,.cash]
     var onSuccess = PublishSubject<Void>()
     var subscription:Subscription
-    var paymentMethodId = 1
+    var paymentMethodId = 2
     var placeId:String
     
     init(subscription:Subscription) {

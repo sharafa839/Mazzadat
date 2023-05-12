@@ -50,7 +50,7 @@ class ResetPasswordViewController: UIViewController {
     private func setupUI() {
         confirmPassewordView.drawBorder(raduis: 10, borderColor: .borderColor)
         passewordView.drawBorder(raduis: 10, borderColor: .borderColor)
-       setNavigationItem(title: "resetPassword")
+       setNavigationItem(title:Localizations.resetPassword.localize)
         
     }
     
@@ -64,9 +64,9 @@ class ResetPasswordViewController: UIViewController {
     
     private func setupLocalize() {
       
-        passwordTextField.placeholder = "enterPassword"
-        confirmPasswordTextField.placeholder = "confirmPassword"
-        saveButton.setTitle("save", for: .normal)
+        passwordTextField.placeholder = Localizations.enterPassword.localize
+        confirmPasswordTextField.placeholder = Localizations.confirmPassword.localize
+        saveButton.setTitle(Localizations.enterYourMobileNumber.localize, for: .normal)
         
     }
     
@@ -90,7 +90,7 @@ class ResetPasswordViewController: UIViewController {
     
     private func setupViewModelObserver() {
         viewModel.onSuccess.subscribe { [weak self] _ in
-            let resetPasswordSuccessViewModel = SuccessResetPasswordViewModel(success: true, title: "resetPass", subtitle: "reseet", descrption: "", type: .forgetPassword)
+            let resetPasswordSuccessViewModel = SuccessResetPasswordViewModel(success: true, title: Localizations.resetPassword.localize, subtitle:Localizations.resetPassword.localize, descrption: "", type: .forgetPassword)
             let resetPasswordViewController = SuccessResetPassowrdViewController(viewModel: resetPasswordSuccessViewModel)
             self?.present(resetPasswordViewController, animated: true, completion: nil)
             

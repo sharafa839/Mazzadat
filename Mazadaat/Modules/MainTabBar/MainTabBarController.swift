@@ -19,6 +19,7 @@ class MainTabBarController: UITabBarController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
         print("Tab bar ")
     }
 
@@ -52,10 +53,10 @@ class MainTabBarController: UITabBarController {
     private func setupNavigationAppearance(_ navigationControllers: [UINavigationController]) {
         let font = UIFont.Archivo(12, weight: .Bold)
         
-        let titles: [String] = ["home",
-                                "askGoldenBell",
-                                "auctions",
-                                "profile"]
+        let titles: [String] = [Localizations.home.localize,
+                                Localizations.askGoldenBell.localize,
+                                Localizations.auctions.localize,
+                                Localizations.myProfile.localize]
         
         let unselectedImageNames = ["home-5-fill",
                                     "question-mark",

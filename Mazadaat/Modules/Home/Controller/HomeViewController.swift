@@ -50,6 +50,12 @@ class HomeViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         viewModel.getMyBalance()
+        navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = false
+
     }
     
     func setupLayout() {
@@ -88,6 +94,7 @@ class HomeViewController: UIViewController {
         packageSubscribePlan.setRoundCorners(5)
        packageSubscribePlan.isHidden = (CoreData.shared.personalSubscription?.isEmpty ?? false)
         headerHomeView.setupUI(view: .home)
+        packageSubscribePlan.isHidden = !HelperK.checkUserToken()
     }
     
     private func setupLocalize() {

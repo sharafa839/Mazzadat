@@ -20,7 +20,7 @@ protocol HomeNetworkingProtocol {
     func getSlider(completion:@escaping(Result<BaseResponse<[SlidersModel]>,Error>)->Void)
     func removeDocuments(type:String,front:Bool?,back:Bool?,completion:@escaping(Result<BaseResponse<[LoginPayload]>,Error>)->Void)
     
-    func addAdvertismentRequest(title:String,description:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
+    func addAdvertismentRequest(title:String,description:String,completion:@escaping(Result<BaseResponse<[LoginPayload]>,Error>)->Void)
     
     func addFeedback(message:String,completion:@escaping(Result<BaseResponse<[LoginPayload]>,Error>)->Void)
 
@@ -65,7 +65,7 @@ extension HomeNetworkingProtocol {
         home.request(target: .removeDocument(front: front, back: back, documentTypeId: "\(type)"), completion: completion)
     }
     
-    func addAdvertismentRequest(title:String,description:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void) {
+    func addAdvertismentRequest(title:String,description:String,completion:@escaping(Result<BaseResponse<[LoginPayload]>,Error>)->Void) {
         home.request(target: .addAdvertisementRequest(title: title, description: description), completion: completion)
     }
     

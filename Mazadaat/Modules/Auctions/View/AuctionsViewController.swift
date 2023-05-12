@@ -131,7 +131,7 @@ class AuctionsViewController: UIViewController {
         }.disposed(by: viewModel.disposeBag)
         
         mapView.rx.tap.subscribe { [weak self] _ in
-            
+            HelperK.openMapOnAddress(long: self?.viewModel.places.value?.lng ?? "", lat: self?.viewModel.places.value?.lat ?? "", name: self?.viewModel.places.value?.name ?? "")
         }.disposed(by: viewModel.disposeBag)
         
         rulesButton.rx.tap.subscribe { [weak self] _ in

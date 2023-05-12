@@ -97,7 +97,7 @@ class RegisterViewModel:AuthNetworkingProtocol {
   func signUp() {
     showLoading.accept(true)
     guard password.value == confirmPassword.value else {
-      HelperK.showError(title: "Localize.passwordNotMatch.localize", subtitle: "")
+        HelperK.showError(title: Localizations.passwordNotMatch.localize, subtitle: "")
       return
       
     }

@@ -36,7 +36,7 @@ class PlansViewController: UIViewController {
     }
     
     private func setupUI() {
-        setNavigationItem(title: "plans")
+        setNavigationItem(title: Localizations.plans.localize)
     }
     
     private func setupTableView() {
