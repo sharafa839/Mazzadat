@@ -872,8 +872,6 @@ PODS:
   - SwiftyStoreKit (0.16.1)
   - Swime (3.0.6)
   - Toast-Swift (5.0.1)
-  - TransitionButton (0.5.3)
-  - TwitterProfile (1.0.1)
 
 DEPENDENCIES:
   - CollapsibleTableSectionViewController (~> 2.0.1)
@@ -911,8 +909,6 @@ DEPENDENCIES:
   - SwiftyStoreKit
   - Swime
   - Toast-Swift
-  - TransitionButton
-  - TwitterProfile
 
 SPEC REPOS:
   trunk:
@@ -973,8 +969,6 @@ SPEC REPOS:
     - SwiftyStoreKit
     - Swime
     - Toast-Swift
-    - TransitionButton
-    - TwitterProfile
 
 SPEC CHECKSUMS:
   abseil: ebe5b5529fb05d93a8bdb7951607be08b7fa71bc
@@ -1034,9 +1028,7 @@ SPEC CHECKSUMS:
   SwiftyStoreKit: 6b9c08810269f030586dac1fae8e75871a82e84a
   Swime: d7b2c277503b6cea317774aedc2dce05613f8b0b
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
-  TransitionButton: 36283346e17c64775a1b3bc3a7a72940a367de1f
-  TwitterProfile: 104d0588d1c510a6c7841e3c24a48adda024159d
 
-PODFILE CHECKSUM: ea32a02fb4bd7a34248beb838f8e4923355fb621
+PODFILE CHECKSUM: beea217903666c32f04962b003d2e9bb8b3a3b49
 
 COCOAPODS: 1.11.0

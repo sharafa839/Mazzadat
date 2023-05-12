@@ -17,7 +17,6 @@ pod 'IAPurchaseManager'
 pod 'SwiftyStoreKit'
 pod 'Spring'
  pod 'SwifterSwift'
-  pod 'TransitionButton'
   pod 'Swime'
   pod "RappleProgressHUD"
    pod "ImageSlideshow/SDWebImage"
@@ -30,7 +29,6 @@ pod 'Spring'
   pod 'MXSegmentedControl'
   pod 'SwiftyGif'
 
-  pod 'TransitionButton'
   pod 'SwiftGifOrigin'
   pod 'SwiftDate', '~> 5.0'
 
@@ -41,7 +39,6 @@ pod 'Spring'
   pod 'OTPFieldView'
   pod 'RxSwift', '~> 5.1.1'
   pod 'RxCocoa', '~> 5.1.1' 
-  pod 'TwitterProfile'
   pod 'ReachabilitySwift'
   pod 'Kingfisher', '~> 5.13.4'
   pod 'SwiftKeychainWrapper', '~> 4.0.1'

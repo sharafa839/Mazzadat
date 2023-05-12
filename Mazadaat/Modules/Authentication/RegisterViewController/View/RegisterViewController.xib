@@ -64,6 +64,9 @@
                             <state key="normal" title="Button">
                                 <color key="titleColor" name="TextColor"/>
                             </state>
+                            <connections>
+                                <action selector="langChange:" destination="-1" eventType="touchUpInside" id="ENb-Ho-ba8"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>

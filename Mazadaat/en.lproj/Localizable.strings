@@ -164,5 +164,21 @@
 "instagram" = "instagram";
 "facebook" = "facebook";
 "twitter" = "twitter";
-"whatsapp" = "whats app";
+"whatsapp" = "Youtube";
 "language" = "Language";
+"OK" = "OK";
+"editProfile" = "Edit Profile";
+
+"to" = "to";
+"from" = "from";
+"code" = "code";
+"auctionFilter" = "Auction Filter";
+"sort" = "Sort";
+"apply" = "Apply";
+"reset" = "Reset";
+"priceAscending" = "Price Ascending";
+"priceDescending" = "Price Descending";
+"recently" = "recently";
+"oldest" = "Oldest";
+"Default" = "Default";
+"map" = "Location";

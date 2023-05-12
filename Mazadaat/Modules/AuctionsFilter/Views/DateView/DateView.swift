@@ -26,12 +26,18 @@ class DateView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
+        setupLocalize()
     }
     
     private func setupUI() {
         toContainerView.drawBorder(raduis: 10, borderColor: .borderColor)
         fromContainerView.drawBorder(raduis: 10, borderColor: .borderColor)
         
+    }
+    
+    private func setupLocalize() {
+        toLabel.text = "to".localize
+        fromLabel.text = "from".localize
     }
     
     required init?(coder: NSCoder) {

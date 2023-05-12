@@ -27,18 +27,17 @@ class EmptyDocumentsCollectionViewCell: UICollectionViewCell {
         addView.setRoundCorners(20)
         addButton.setRoundCorners(20)
         containerView.setRoundCorners(5)
-        addLabel.text = "add"
+        addLabel.text = Localizations.add.localize
     }
     
     func configure(_ document:UploadDocuments) {
         documentLabel.text = document.documentType?.name
-        guard let front = document.frontFace else {
-            guard let image = document.backFace else {
+        guard let front = document.documentType?.image else {
                 
                 return
                 
             }
-            guard let url = URL(string: image) else {return}
+            guard let url = URL(string: front) else {return}
             let placeholderImage = UIImage(named: "AppIcon")!
             let processor = DefaultImageProcessor.default
             documentIImageView.kf.setImage(
@@ -60,26 +59,6 @@ class EmptyDocumentsCollectionViewCell: UICollectionViewCell {
             return
         }
         
-        guard let url = URL(string: front) else {return}
-        let placeholderImage = UIImage(named: "AppIcon")!
-        let processor = DefaultImageProcessor.default
-        documentIImageView.kf.setImage(
-            with: url,
-            placeholder: placeholderImage,
-            options: [
-                .processor(processor),
-                .loadDiskFileSynchronously,
-                .cacheOriginalImage,
-                .transition(.fade(0.25)),
-            ],
-            progressBlock: { receivedSize, totalSize in
-                // Progress updated
-            },
-            completionHandler: { result in
-                // Done
-            }
-        )
-    }
 
     @IBAction func addButtonAction(_ sender: UIButton) {
         onTapAdd?()

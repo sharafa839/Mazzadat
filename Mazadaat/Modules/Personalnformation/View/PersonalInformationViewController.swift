@@ -15,7 +15,7 @@ class PersonalInformationViewController: UIViewController, didChangeFullName, di
    
     func changeEmail(Email: String) {
         var data = viewModel.personalInformationDataSource.value
-        guard let index = data.firstIndex(where: {$0.title == "emailAddress" }) else {return}
+        guard let index = data.firstIndex(where: {$0.title == Localizations.emilAddress.localize}) else {return}
         data[index].value = HelperK.getemail()
         viewModel.personalInformationDataSource.accept(data)
         
@@ -25,7 +25,7 @@ class PersonalInformationViewController: UIViewController, didChangeFullName, di
    
     func changePhoneNumber(number: String) {
         var data = viewModel.personalInformationDataSource.value
-        guard let index = data.firstIndex(where: {$0.title == "phoneNumber" }) else {return}
+        guard let index = data.firstIndex(where: {$0.title == Localizations.phoneNumber.localize }) else {return}
         data[index].value = HelperK.getphone()
         viewModel.personalInformationDataSource.accept(data)
         
@@ -35,7 +35,7 @@ class PersonalInformationViewController: UIViewController, didChangeFullName, di
     
     func changeFullName(name: String) {
         var data = viewModel.personalInformationDataSource.value
-        guard let index = data.firstIndex(where: {$0.title == "displayName" }) else {return}
+        guard let index = data.firstIndex(where: {$0.title == Localizations.displayName.localize }) else {return}
         data[index].value = HelperK.getname()
         viewModel.requestChangeName(name: name)
         
@@ -61,17 +61,14 @@ class PersonalInformationViewController: UIViewController, didChangeFullName, di
         super.viewDidLoad()
         setupViewModelObservers()
         setupTableView()
-        setNavigationItem(title: "editProfile")
+        setNavigationItem(title: "editProfile".localize)
     }
     
-    private func setupUI() {
-        setNavigationItem(title: "editProfile")
-    }
-    
+  
     func rightButtonBar() {
         
             
-        button = UIBarButtonItem(title: "save", style: .plain, target: self, action: #selector(updateImage))
+        button = UIBarButtonItem(title: Localizations.save.localize, style: .plain, target: self, action: #selector(updateImage))
         navigationItem.rightBarButtonItem = button
         navigationItem.rightBarButtonItem?.tintColor = .Bronze_500
         
@@ -113,16 +110,16 @@ class PersonalInformationViewController: UIViewController, didChangeFullName, di
     }
     
     private func imageTapped() {
-        let alert = UIAlertController(title: "chooseImage", message: nil, preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { _ in
+        let alert = UIAlertController(title: "chooseImage".localize, message: nil, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Camera".localize, style: .default, handler: { _ in
             self.openCamera()
         }))
         
-        alert.addAction(UIAlertAction(title: "Gallery", style: .default, handler: { _ in
+        alert.addAction(UIAlertAction(title: "Gallery".localize, style: .default, handler: { _ in
             self.openGallery()
         }))
         
-        alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction.init(title: Localizations.cancel.localize, style: .cancel, handler: nil))
         
         self.present(alert, animated: true, completion: nil)
         
@@ -140,8 +137,8 @@ class PersonalInformationViewController: UIViewController, didChangeFullName, di
         }
         else
         {
-            let alert  = UIAlertController(title: "Warning", message: "You don't have camera", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            let alert  = UIAlertController(title: "Warning".localize, message: "You don't have camera", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK".localize, style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
     }
@@ -158,8 +155,9 @@ class PersonalInformationViewController: UIViewController, didChangeFullName, di
         }
         else
         {
-            let alert  = UIAlertController(title: "Warning", message: "You don't have permission to access gallery.", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            let alert  = UIAlertController(title: "Warning".localize, message: "You don't have permission to access gallery.".localize, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK".localize
+                                          , style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
     }

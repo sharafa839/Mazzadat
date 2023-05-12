@@ -25,7 +25,7 @@ extension BaseApiHeadersProtocol {
         let authorization = checkAuthorization ? HelperK.getUserToken() : ""
         var header:[String:String] =
         ["Accept":"application/json"
-         ,"X-localization": "\(LocalizationManager.shared.getLanguage()?.rawValue)",
+         ,"X-localization": "\(LocalizationManager.shared.getLanguage()?.rawValue ?? "en")",
          
          ]
        

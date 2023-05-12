@@ -16,7 +16,7 @@ class EditPeronalInformationViewModel:AuthNetworkingProtocol,TicketNetworkingPro
     var onError = PublishSubject<String>()
     var onLoading = BehaviorRelay<Bool>(value: false)
     var onSuccess = PublishSubject<Void>()
-    let personalInformationDataSource = BehaviorRelay <[PersonalInformation]>(value:[PersonalInformation(title: "displayName", value: HelperK.getname(), image: false),PersonalInformation(title: "phoneNumber", value: HelperK.getphone(),image: true),PersonalInformation(title: "emailAddress", value: HelperK.getemail(), image: false),PersonalInformation(title: "password", value: "********", image: false)])
+    let personalInformationDataSource = BehaviorRelay <[PersonalInformation]>(value:[PersonalInformation(title: Localizations.displayName.localize, value: HelperK.getname(), image: false),PersonalInformation(title: Localizations.phoneNumber.localize, value: HelperK.getphone(),image: true),PersonalInformation(title: Localizations.emilAddress.localize, value: HelperK.getemail(), image: false),PersonalInformation(title: Localizations.yourPassword.localize, value: "********", image: false)])
         var didImageChange = BehaviorRelay<UIImage?>(value: nil)
     
     func getImage() {

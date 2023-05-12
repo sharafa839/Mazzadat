@@ -99,10 +99,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
             UIApplication.shared.registerUserNotificationSettings(settings)
             UIApplication.shared.registerForRemoteNotifications()
         }
-//      Messaging.messaging().subscribe(toTopic: topic) { error in
-//          print("Subscribed to \(topic)")
-//
-//        }
+
     }
 }
 
@@ -113,7 +110,5 @@ extension AppDelegate: MessagingDelegate {
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
 
         print("Fcmtoken",fcmToken)
-        AppData.fcmToken = fcmToken ?? ""
-//            Keychain.system.setSecret(fcmToken, forKey: "fcmToken")
     }
 }

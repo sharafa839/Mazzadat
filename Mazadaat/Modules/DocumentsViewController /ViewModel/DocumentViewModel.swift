@@ -29,23 +29,23 @@ class DocumentViewModel:HomeNetworkingProtocol {
             case .success(let response):
                 guard let onLineData = response.response?.data else {return}
                 self?.onSuccessGetDocument.accept(onLineData)
-                if onLineData.isEmpty {
-                    
-                    self?.onSuccessGetDocument.accept(self?.documentDataSource.value ?? [])
-                }else if onLineData.count == 1 {
-                    let item = onLineData.first
-                    if item?.documentTypeID == "1" {
-                        guard var value = self?.onSuccessGetDocument.value else {return}
-                        value.append( UploadDocuments(id: nil, documentTypeID: "3", documentType: DocumentType(id: 3, name: "drivingLicencse", image: ""), expiryDate: "", frontFace: nil, backFace: nil))
-                        self?.onSuccessGetDocument.accept(value )
-                    }else {
-                            guard var value = self?.onSuccessGetDocument.value else {return}
-                            value.append(     UploadDocuments(id: nil, documentTypeID: "1", documentType: DocumentType(id: 1, name: "nationalId", image: ""), expiryDate: "", frontFace: nil, backFace: nil))
-                        self?.onSuccessGetDocument.accept(value )
-                    }
-                }else {
-                    return
-                }
+//                if onLineData.isEmpty {
+//
+//                    self?.onSuccessGetDocument.accept(self?.documentDataSource.value ?? [])
+//                }else if onLineData.count == 1 {
+//                    let item = onLineData.first
+//                    if item?.documentTypeID == "1" {
+//                        guard var value = self?.onSuccessGetDocument.value else {return}
+//                        value.append( UploadDocuments(id: nil, documentTypeID: "3", documentType: DocumentType(id: 3, name: "drivingLicencse", image: ""), expiryDate: "", frontFace: nil, backFace: nil))
+//                        self?.onSuccessGetDocument.accept(value )
+//                    }else {
+//                            guard var value = self?.onSuccessGetDocument.value else {return}
+//                            value.append(     UploadDocuments(id: nil, documentTypeID: "1", documentType: DocumentType(id: 1, name: "nationalId", image: ""), expiryDate: "", frontFace: nil, backFace: nil))
+//                        self?.onSuccessGetDocument.accept(value )
+//                    }
+//                }else {
+//                    return
+//                }
             
             case .failure(let error):
                 self?.onError.onNext(error.localizedDescription)

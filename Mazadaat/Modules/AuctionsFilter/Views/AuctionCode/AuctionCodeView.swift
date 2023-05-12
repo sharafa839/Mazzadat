@@ -24,11 +24,17 @@ class AuctionCodeView: UIView, UITextFieldDelegate {
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
+        setupLocalize()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         loadSelfFromNib()
+    }
+    
+    private func setupLocalize() {
+        titleLabel.text = "code".localize
+       
     }
     
     private func setupUI() {

@@ -92,6 +92,7 @@ class EditFullNameViewController: UIViewController, didChangePhoneNumber {
     
     private func setupUI() {
         saveButton.setRoundCorners(20)
+        saveButton.setTitle(Localizations.save.localize, for: .normal)
         dismissButton.circle()
         parentView.setRoundCorners(20)
         viewModel.isContinueButtonEnabled.bind(to:  saveButton.rx.isEnabled).disposed(by: viewModel.disposeBag)
@@ -114,27 +115,28 @@ class EditFullNameViewController: UIViewController, didChangePhoneNumber {
     
     private func setupFullName() {
         fullNameView.isHidden = false
-        titleLabel.text = "displayName"
-        fullNameLabel.text = "displayName"
-        fullNameSupportingTextLabel.text = "supportingText"
+        titleLabel.text = Localizations.displayName.localize
+        fullNameLabel.text = Localizations.displayName.localize
+        fullNameSupportingTextLabel.text = Localizations.supportingText.localize
         fullNameTextField.rx.text.orEmpty.bind(to: viewModel.name).disposed(by: viewModel.disposeBag)
         fullNameTextContinerView.drawBorder(raduis: 5, borderColor: .black)
     }
     
     private func setupEmail() {
         emailView.isHidden = false
-        titleLabel.text = "emailAddress"
-        emailLabel.text = "emailAddress"
-        emailSupportingTextLabel.text = "supportingText"
+        titleLabel.text = Localizations.emilAddress.localize
+        emailLabel.text = Localizations.emilAddress.localize
+        emailSupportingTextLabel.text =  Localizations.supportingText.localize
         emailTextField.rx.text.orEmpty.bind(to: viewModel.email).disposed(by: viewModel.disposeBag)
         emailTextContainerView.drawBorder(raduis: 5, borderColor: .black)
     }
     
     private func setupPhoneNumber() {
         phoneNumberView.isHidden = false
-        titleLabel.text = "phoneNumber"
-        phoneNumberLabel.text = "phoneNumber"
-        phoneNumberSupportingTextLabel.text = "supportingText"
+        titleLabel.text =   Localizations.phoneNumber.localize
+        phoneNumberLabel.text = Localizations.phoneNumber.localize
+        phoneNumberTextField.keyboardType = .numberPad
+        phoneNumberSupportingTextLabel.text = Localizations.supportingText.localize
         phoneNumberTextField.rx.text.orEmpty.bind(to: viewModel.phone).disposed(by: viewModel.disposeBag)
         phoneNumberTextContainerView.drawBorder(raduis: 5, borderColor: .black)
     }
@@ -142,13 +144,13 @@ class EditFullNameViewController: UIViewController, didChangePhoneNumber {
     private func setupOTP() {
         setupOtpView()
         otpView.isHidden = false
-        titleLabel.text = "verifyPhoneNumber"
-        otpLabel.text = "verifyYourOTP"
-        otpSupportingTextLabel.text = "weHaveSentSixCodeDigit"
+        titleLabel.text = Localizations.verifyPhoneNumber.localize
+        otpLabel.text = Localizations.verifyYourOtp.localize
+        otpSupportingTextLabel.text = Localizations.weHaveSent.localize
     }
     
     func setupOtpView(){
-            self.otpFieldView.fieldsCount = 6
+            self.otpFieldView.fieldsCount = 5
             self.otpFieldView.fieldBorderWidth = 0.5
             self.otpFieldView.defaultBorderColor = UIColor.gray
             self.otpFieldView.filledBorderColor = UIColor.textColor
@@ -165,19 +167,19 @@ class EditFullNameViewController: UIViewController, didChangePhoneNumber {
         passwordView.isHidden = false
         confirmPasswordView.isHidden = false
         oldPasswordView.isHidden = false
-        titleLabel.text = "changePassword"
-        passwordLabel.text = "newPassword"
-        passwordSupportingTextLabel.text = "supportingText"
+        titleLabel.text = Localizations.changePassword.localize
+        passwordLabel.text = Localizations.newPassword.localize
+        passwordSupportingTextLabel.text = Localizations.supportingText.localize
         passwordTextField.rx.text.orEmpty.bind(to: viewModel.newPassword).disposed(by: viewModel.disposeBag)
         passwordTextContainerView.drawBorder(raduis: 5, borderColor: .borderColor)
         
-        confirmPasswordLabel.text = "confirmNewPassword"
-        confirmPasswordSupportingTextLabel.text = "supportingText"
+        confirmPasswordLabel.text = Localizations.confirmPassword.localize
+        confirmPasswordSupportingTextLabel.text = Localizations.supportingText.localize
         confirmPasswordTextField.rx.text.orEmpty.bind(to: viewModel.confirmPassword).disposed(by: viewModel.disposeBag)
         confirmPasswordTextContainerView.drawBorder(raduis: 5, borderColor: .borderColor)
         
-        oldPasswordLabel.text = "oldPassword"
-        oldPasswordSupportingTextLabel.text = "supportingText"
+        oldPasswordLabel.text = Localizations.oldPassword.localize
+        oldPasswordSupportingTextLabel.text = Localizations.supportingText.localize
         oldPasswordTextField.rx.text.orEmpty.bind(to: viewModel.oldPassword).disposed(by: viewModel.disposeBag)
         oldPasswordTextContainerView.drawBorder(raduis: 5, borderColor: .borderColor)
     }

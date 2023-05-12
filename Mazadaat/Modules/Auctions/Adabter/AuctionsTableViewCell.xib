@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -185,8 +185,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Yb-hP-ENA">
                                 <rect key="frame" x="0.0" y="178" width="318" height="50"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="PHg-cS-zJo">
-                                        <rect key="frame" x="48" y="12.5" width="222" height="25"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PHg-cS-zJo">
+                                        <rect key="frame" x="20" y="12.5" width="278" height="25"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Golden Bell Icon-1" translatesAutoresizingMaskIntoConstraints="NO" id="fAG-CY-z4F">
                                                 <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -195,14 +195,14 @@
                                                     <constraint firstAttribute="height" constant="25" id="pjR-hi-kMr"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oc-ge-20K">
-                                                <rect key="frame" x="55" y="0.0" width="53.5" height="25"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oc-ge-20K">
+                                                <rect key="frame" x="35" y="0.0" width="190.5" height="25"/>
                                                 <fontDescription key="fontDescription" name="Archivo-Regular" family="Archivo" pointSize="16"/>
                                                 <color key="textColor" name="TextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BX1-3o-2tc">
-                                                <rect key="frame" x="138.5" y="0.0" width="83.5" height="25"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BX1-3o-2tc">
+                                                <rect key="frame" x="235.5" y="0.0" width="42.5" height="25"/>
                                                 <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="16"/>
                                                 <color key="textColor" name="TextColor"/>
                                                 <nil key="highlightedColor"/>
@@ -212,10 +212,10 @@
                                 </subviews>
                                 <color key="backgroundColor" name="Bronze-100"/>
                                 <constraints>
+                                    <constraint firstItem="PHg-cS-zJo" firstAttribute="leading" secondItem="9Yb-hP-ENA" secondAttribute="leading" constant="20" id="9cP-t9-e1s"/>
                                     <constraint firstItem="PHg-cS-zJo" firstAttribute="centerY" secondItem="9Yb-hP-ENA" secondAttribute="centerY" id="HUq-5p-6zS"/>
-                                    <constraint firstAttribute="trailing" secondItem="PHg-cS-zJo" secondAttribute="trailing" constant="48" id="XLc-XY-HWH"/>
+                                    <constraint firstAttribute="trailing" secondItem="PHg-cS-zJo" secondAttribute="trailing" constant="20" id="XLc-XY-HWH"/>
                                     <constraint firstAttribute="height" constant="50" id="jke-zi-8gg"/>
-                                    <constraint firstItem="PHg-cS-zJo" firstAttribute="leading" secondItem="9Yb-hP-ENA" secondAttribute="leading" constant="48" id="nEF-5I-6fZ"/>
                                 </constraints>
                             </view>
                         </subviews>

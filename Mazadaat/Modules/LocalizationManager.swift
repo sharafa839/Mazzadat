@@ -99,6 +99,7 @@ class LocalizationManager: NSObject {
         case .rightToLeft:
             semantic = .forceRightToLeft
         }
+        
         UIView.appearance().semanticContentAttribute = semantic
         UIButton.appearance().semanticContentAttribute = semantic
         UITextView.appearance().semanticContentAttribute = semantic

@@ -200,8 +200,7 @@ enum AuctionState:Int {
 extension UIViewController {
     func setNavigationItem(title:String, color: UIColor = .clear){
         navigationController?.navigationBar.backgroundColor = color
-        navigationController?.navigationBar.backItem?.title = ""
-        navigationController?.navigationBar.isHidden = false
+
         navigationController?.navigationBar.tintColor = .Bronze_500
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.compact)
         self.navigationController?.navigationBar.shadowImage = UIImage()

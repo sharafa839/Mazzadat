@@ -25,7 +25,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FuA-Fj-VK3">
-                        <rect key="frame" x="8" y="8" width="125" height="137"/>
+                        <rect key="frame" x="8" y="0.0" width="125" height="131"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oFF-xy-fWe">
                                 <rect key="frame" x="8" y="8" width="109" height="93"/>
@@ -39,12 +39,12 @@
                         <constraints>
                             <constraint firstItem="oFF-xy-fWe" firstAttribute="top" secondItem="FuA-Fj-VK3" secondAttribute="top" constant="8" id="2hK-Ib-aLJ"/>
                             <constraint firstAttribute="trailing" secondItem="oFF-xy-fWe" secondAttribute="trailing" constant="8" id="Bbe-qd-8mO"/>
-                            <constraint firstAttribute="bottom" secondItem="oFF-xy-fWe" secondAttribute="bottom" constant="36" id="Qvr-0A-vFV"/>
+                            <constraint firstAttribute="bottom" secondItem="oFF-xy-fWe" secondAttribute="bottom" constant="30" id="Qvr-0A-vFV"/>
                             <constraint firstItem="oFF-xy-fWe" firstAttribute="leading" secondItem="FuA-Fj-VK3" secondAttribute="leading" constant="8" id="TVd-11-52W"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t7u-C9-WLd">
-                        <rect key="frame" x="55.5" y="130" width="30" height="25"/>
+                        <rect key="frame" x="55.5" y="116" width="30" height="25"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHh-4R-L1f">
                                 <rect key="frame" x="2" y="2" width="26" height="21"/>
@@ -64,7 +64,7 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xb0-AA-IPi">
-                        <rect key="frame" x="16" y="171" width="109" height="12"/>
+                        <rect key="frame" x="16" y="149" width="109" height="12"/>
                         <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="11"/>
                         <color key="textColor" name="TextColor"/>
                         <nil key="highlightedColor"/>
@@ -78,10 +78,10 @@
                 <constraint firstItem="Xb0-AA-IPi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="PoE-xP-zXi"/>
                 <constraint firstAttribute="trailing" secondItem="Xb0-AA-IPi" secondAttribute="trailing" constant="16" id="SD1-SQ-b1M"/>
                 <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="t7u-C9-WLd" secondAttribute="bottom" constant="28" id="YCv-t1-Oeq"/>
-                <constraint firstItem="Xb0-AA-IPi" firstAttribute="top" secondItem="t7u-C9-WLd" secondAttribute="bottom" constant="16" id="aQG-9U-ChT"/>
+                <constraint firstItem="Xb0-AA-IPi" firstAttribute="top" secondItem="t7u-C9-WLd" secondAttribute="bottom" constant="8" id="aQG-9U-ChT"/>
                 <constraint firstItem="FuA-Fj-VK3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="kOR-mF-8i1"/>
                 <constraint firstAttribute="trailing" secondItem="FuA-Fj-VK3" secondAttribute="trailing" constant="8" id="lCq-Lz-fob"/>
-                <constraint firstItem="FuA-Fj-VK3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="pAF-O1-193"/>
+                <constraint firstItem="FuA-Fj-VK3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="pAF-O1-193"/>
             </constraints>
             <size key="customSize" width="141" height="183"/>
             <connections>

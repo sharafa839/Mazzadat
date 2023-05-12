@@ -53,6 +53,7 @@ class LoginViewController: UIViewController {
         setupObservables()
         setupViewModelObserver()
         setupProperty()
+        print("\(self.view.semanticContentAttribute.rawValue)")
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -155,8 +156,8 @@ class LoginViewController: UIViewController {
         
         if sender.selectedSegmentIndex == 1 {
             let registerViewController = RegisterViewController(viewModel: RegisterViewModel())
-            AppUtilities.changeRoot(root: registerViewController)
-            
+            AppUtilities.changeRoot(root: UINavigationController(rootViewController: registerViewController))
+
         }
     }
     

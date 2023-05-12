@@ -30,7 +30,7 @@ class ExploreGoldenBellViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setNavigationItem(title: Localizations.exploreGoldenBell.localize)
         setupLocalize()
         setupUI()
         setupObservers()
@@ -41,6 +41,10 @@ class ExploreGoldenBellViewController: UIViewController {
         GoldenBellAuctionCommunityButton.setTitle(Localizations.GoldenBellCommuunity.localize, for: .normal)
         rate.setTitle(Localizations.rateGoldenBell.localize, for: .normal)
         aboutGoldenBellAuctionButton.setTitle(Localizations.about.localize, for: .normal)
+        instgramLabel.text = "instagram".localize
+        facebookLabel.text = "facebook".localize
+        twitterLabel.text = "twitter".localize
+        youtubeLabel.text = "whatsapp".localize
     }
     
     private func setupUI() {

@@ -30,7 +30,7 @@ class KindOfAuctionCollectionViewCell: UICollectionViewCell {
     }
     
     func configureCell(_ by:AdvertisementCategory) {
-        if AppData.lang == "en" {
+        if LocalizationManager.shared.getLanguage()?.rawValue ?? "en" == "en" {
             sortingLabel.text = by.name
 
         }else {

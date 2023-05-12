@@ -46,7 +46,9 @@ class AuctionsFilterViewController: UIViewController {
     }
     
     private func setupLocalize() {
-        
+        titleLabel.text = "auctionFilter".localize
+        applyButton.setTitle("apply".localize, for: .normal)
+        resetButton.setTitle("reset".localize, for: .normal)
     }
     
     private func setupViews() {

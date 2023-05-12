@@ -163,30 +163,29 @@ class RegisterViewController: UIViewController {
             
         }.disposed(by: viewModel.disposeBag)
         
-        langaugeButton.rx.tap.subscribe { [weak self] _ in
-            guard let currentLanguage = LocalizationManager.shared.getLanguage() else {return}
-            guard currentLanguage == .Arabic else {
-                LocalizationManager.shared.setLanguage(language: .English)
-
-                return
-            }
-            LocalizationManager.shared.setLanguage(language: .Arabic)
-
-        }.disposed(by: viewModel.disposeBag)
-        
-        
     }
     
     @IBAction func segmentAction(_ sender: CustomSegmentedControl) {
         
         if sender.selectedSegmentIndex == 0 {
             let registerViewController = LoginViewController(viewModel: LoginViewModel())
-            AppUtilities.changeRoot(root: registerViewController)
+            AppUtilities.changeRoot(root: UINavigationController(rootViewController: registerViewController))
         }
     }
     
     @IBAction func asGuest(_ sender: UIButton) {
+        //AppUtilities.changeRoot(root: MainTabBarController())
         AppUtilities.changeRoot(root: MainTabBarController())
+    }
+    
+    @IBAction func langChange(_ sender: UIButton) {
+        guard let currentLanguage = LocalizationManager.shared.getLanguage() else {return}
+        guard currentLanguage == .Arabic else {
+            LocalizationManager.shared.setLanguage(language: .Arabic)
+
+            return
+        }
+        LocalizationManager.shared.setLanguage(language: .English)
 
     }
     

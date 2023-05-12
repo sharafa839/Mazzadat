@@ -45,8 +45,6 @@ ${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework
 ${BUILT_PRODUCTS_DIR}/SwiftyStoreKit/SwiftyStoreKit.framework
 ${BUILT_PRODUCTS_DIR}/Swime/Swime.framework
 ${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework
-${BUILT_PRODUCTS_DIR}/TransitionButton/TransitionButton.framework
-${BUILT_PRODUCTS_DIR}/TwitterProfile/TwitterProfile.framework
 ${BUILT_PRODUCTS_DIR}/abseil/absl.framework
 ${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework
 ${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework

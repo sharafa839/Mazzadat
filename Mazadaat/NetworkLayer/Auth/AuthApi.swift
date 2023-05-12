@@ -59,7 +59,7 @@ extension AuthApiServices:TargetType,BaseApiHeadersProtocol {
         case .login(let password, let email):
             return .requestParameters(parameters: ["email":email,"password":password,"device_token":" AppData.fcmToken","device_type":"iOS"], encoding: JSONEncoding.default)
         case .register(let name, let phone, let password, let email):
-            return .requestParameters(parameters: ["email" : email,"password":password,"name":name,"mobile":phone,"app_locale":AppData.lang,"device_token": "AppData.fcmToken","device_type":"iOS"], encoding: JSONEncoding.default)
+            return .requestParameters(parameters: ["email" : email,"password":password,"name":name,"mobile":phone,"app_locale":LocalizationManager.shared.getLanguage()?.rawValue ?? "en" ,"device_token": "AppData.fcmToken","device_type":"iOS"], encoding: JSONEncoding.default)
         case .logout:
             return .requestPlain
         case .changePassword(let currentPassword, let newPassword):

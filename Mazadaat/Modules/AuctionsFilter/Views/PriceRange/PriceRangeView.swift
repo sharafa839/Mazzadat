@@ -32,11 +32,17 @@ class PriceRangeView: UIView,UITextFieldDelegate {
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
+        setupLocalize()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         loadSelfFromNib()
+    }
+    
+    private func setupLocalize() {
+        titlePriceToTextFieldLabel.text = "to".localize
+        titlePriceFromTextFieldLabel.text = "from".localize
     }
     
     private func setupUI() {

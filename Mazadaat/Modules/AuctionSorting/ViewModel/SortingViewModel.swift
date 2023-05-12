@@ -14,11 +14,11 @@ class AuctionSortingViewModel {
     let disposeBag = DisposeBag()
     var onError = PublishSubject<String>()
     var onLoading = BehaviorRelay<Bool>(value: false)
-    let sortingDataSource = [SortingModel(title: "Default", selected: true),
-                             SortingModel(title: "priceAscending", selected: false),
-                             SortingModel(title: "priceDescending", selected: false),
-                             SortingModel(title: "recently", selected: false),
-                             SortingModel(title: "oldest", selected: false),]
+    let sortingDataSource = [SortingModel(title: "Default".localize, selected: true),
+                             SortingModel(title: "priceAscending".localize, selected: false),
+                             SortingModel(title: "priceDescending".localize, selected: false),
+                             SortingModel(title: "recently".localize, selected: false),
+                             SortingModel(title: "oldest".localize, selected: false),]
 }
 
 struct SortingModel {

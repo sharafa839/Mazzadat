@@ -29,7 +29,7 @@ class DoucmentsViewController: UIViewController, didImageUpdates {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setNavigationItem(title: "Document")
+        setNavigationItem(title: Localizations.myDocuments.localize)
         setupTableView()
         setupViewModelObservers()
         setupViewModel()
@@ -73,7 +73,7 @@ extension DoucmentsViewController:UICollectionViewDelegate,UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let document = viewModel.onSuccessGetDocument.value[indexPath.row]
-        if document.id != nil {
+        if document.frontFace != nil {
             let cell:FillDocumentCollectionViewCell = collectionView.dequeue(at: indexPath)
             cell.onTapChange = {[weak self] in
                 self?.goToAddDocument(document: document)
@@ -117,7 +117,7 @@ extension DoucmentsViewController:UICollectionViewDelegate,UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let document = viewModel.onSuccessGetDocument.value[indexPath.row]
-        if document.id != nil {
+        if document.frontFace != nil {
             
             return CGSize(width:collectionView.frame.size.width*0.9, height: 250)
         }else {

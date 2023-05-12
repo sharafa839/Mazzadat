@@ -30,6 +30,7 @@ class AskGoldenBellTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
+        setupLocalize()
     }
 
     private func setupUI() {
@@ -39,6 +40,12 @@ class AskGoldenBellTableViewCell: UITableViewCell {
         callView.setRoundCorners(5)
         chatView.setRoundCorners(5)
         
+    }
+    
+    private func setupLocalize() {
+        mapLabel.text = "map".localize
+        callLabel.text = Localizations.call.localize
+        chatLabel.text = Localizations.chat.localize
     }
     
     func configure(_ with:AllAdvertisement) {
