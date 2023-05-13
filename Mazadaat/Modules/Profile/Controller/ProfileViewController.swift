@@ -45,6 +45,9 @@ class ProfileViewController: UIViewController, SentRequestDelegate {
         setupViewModelObserver()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationItem.backButtonTitle = ""
+    }
     
     //MARK: - Methods
     private func setupUI() {

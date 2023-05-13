@@ -59,7 +59,7 @@ class SettingViewController: UIViewController {
         auctionAlertLabel.text = Localizations.auctionTitle.localize
         auctionAlertDescriptionLabel.text = Localizations.auctionAlerts.localize
         languageValue.text =  LocalizationManager.shared.getLanguage() == .Arabic ? Localizations.english.localize : Localizations.arabic.localize
-        appLanguage.text = "language"
+        appLanguage.text = "language".localize
         languageLabel.text = Localizations.appLanguage.localize
         
     }

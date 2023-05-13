@@ -23,12 +23,12 @@ class AuctionDetailesView: UIView {
     
     func configure(_ with:AuctionDetailsModel,type:String) {
         descriptionValueLabel.text = with.description
-        auctionPlaceLabel.text = "location"
+        auctionPlaceLabel.text = "map".localize
         auctionName.text = with.name
         descriptionLabel.text = with.description
         auctionTypeLabel.text = type
         biddingCounterLabel.text = "\(with.bidsCount ?? 0)"
-        numberOfBidLabel.text = "numberOfBids:"
+        numberOfBidLabel.text = "numberOfBids".localize
         containerBidView.isHidden = !((with.bidsCount ?? 0) > 0)
         auctionPlaceLabel.text = with.city?.name
         auctionTypeLabel.text = with.type

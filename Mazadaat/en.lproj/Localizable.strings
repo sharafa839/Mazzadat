@@ -183,3 +183,7 @@
 "Default" = "Default";
 "map" = "Location";
 "edit" = "Edit";
+"numberOfBids" = "Number of bids:";
+"endingIn" = "Ending in";
+"nextBidding" = "Next bidding";
+"bidNow" = "Bid now";

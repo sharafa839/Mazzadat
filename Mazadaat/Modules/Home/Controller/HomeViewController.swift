@@ -51,6 +51,7 @@ class HomeViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         viewModel.getMyBalance()
         navigationController?.isNavigationBarHidden = true
+        setNavigationItem(title: "")
     }
     
     override func viewWillDisappear(_ animated: Bool) {

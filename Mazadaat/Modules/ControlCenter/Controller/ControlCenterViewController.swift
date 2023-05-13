@@ -35,6 +35,7 @@ class ControlCenterViewController: UIViewController {
     
     private func setupUI() {
         setNavigationItem(title: Localizations.profile.localize)
+        
     }
     
     private func setupViewModelObservers() {

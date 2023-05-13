@@ -65,10 +65,10 @@ class BiddingView: UIView {
             }else {
                 biddingValueLabel.text = "\(lastBid + minimumBid )"
             }
-        endingInLabel.text = "endingIn"
+            endingInLabel.text = "endingIn".localize
         setupDate(with.endAt ?? "", with.startAt ?? "")
-        nextBidLabel.text = "nextBidding"
-        biddingButton.setTitle("bidNow", for: .normal)
+            nextBidLabel.text = "nextBidding".localize
+            biddingButton.setTitle("bidNow".localize, for: .normal)
         }
     }
     
@@ -87,10 +87,10 @@ class BiddingView: UIView {
         let seconds = "\(diffDateComponents.second ?? 0)"
 
         if seconds.contains("-"){
-            endingInValueLabel.text = "expired"
+            endingInValueLabel.text = "expired".localize
 
         }else {
-            endingInValueLabel.text = "\(diffDateComponents.day ?? 0)d \(diffDateComponents.hour ?? 0)h \(diffDateComponents.minute ?? 0) m"
+            endingInValueLabel.text = "\(diffDateComponents.day ?? 0)" + "d".localize + "\(diffDateComponents.hour ?? 0)" + "h".localize + "\(diffDateComponents.minute ?? 0)" "m".localize
 
         }
     }

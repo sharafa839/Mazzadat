@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import StoreKit
 
 class ExploreGoldenBellViewController: UIViewController {
     @IBOutlet weak var shareGoldenBellButton: UIButton!
@@ -101,7 +102,7 @@ class ExploreGoldenBellViewController: UIViewController {
         }.disposed(by: disposBag)
         
         rate.rx.tap.subscribe {[weak self] _ in
-            
+            self?.rateApp()
         }.disposed(by: disposBag)
         
         aboutGoldenBellAuctionButton.rx.tap.subscribe {[weak self] _ in
@@ -127,6 +128,27 @@ class ExploreGoldenBellViewController: UIViewController {
         HelperK.openFacebook(facebook: facebook)
     }
     
+
+    func rateApp() {
+
+        if #available(iOS 10.3, *) {
+
+            SKStoreReviewController.requestReview()
+        
+        } else {
+
+            let appID = "Your App ID on App Store"
+            let urlStr = "https://itunes.apple.com/app/id\(appID)?action=write-review" // (Option 2) Open App Review Page
+            
+            guard let url = URL(string: urlStr), UIApplication.shared.canOpenURL(url) else { return }
+            
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(url) // openURL(_:) is deprecated from iOS 10.
+            }
+        }
+    }
 
 }
 

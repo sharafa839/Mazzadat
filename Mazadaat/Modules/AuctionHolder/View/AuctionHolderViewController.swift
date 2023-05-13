@@ -199,22 +199,24 @@ enum AuctionState:Int {
 
 extension UIViewController {
     func setNavigationItem(title:String, color: UIColor = .clear){
-        navigationController?.navigationBar.backgroundColor = color
-
+        navigationController?.navigationBar.isHidden = false
+        navigationItem.title = title
+//        navigationController?.navigationBar.backgroundColor = color
+//
         navigationController?.navigationBar.tintColor = .Bronze_500
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.compact)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        let titleLabel = UILabel()
+//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.compact)
+//        self.navigationController?.navigationBar.shadowImage = UIImage()
+//        let titleLabel = UILabel()
         navigationItem.backButtonTitle = ""
-        titleLabel.textAlignment = .center
-        titleLabel.text = title
-        titleLabel.textColor = UIColor.textColor
-        titleLabel.font = UIFont(name: "Archivo-Regular", size: 20)
-        self.navigationItem.titleView = titleLabel
-        let yourBackImage = UIImage(named: "arrow-left-line")
-        self.navigationController?.navigationBar.backIndicatorImage = yourBackImage
-        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = yourBackImage
-        
+//        titleLabel.textAlignment = .center
+//        titleLabel.text = title
+//        titleLabel.textColor = UIColor.textColor
+//        titleLabel.font = UIFont(name: "Archivo-Regular", size: 20)
+//        self.navigationItem.titleView = titleLabel
+//        let yourBackImage = UIImage(named: "arrow-left-line")
+//        self.navigationController?.navigationBar.backIndicatorImage = yourBackImage
+//        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = yourBackImage
+//        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "zzzz", style: .plain, target: nil, action: nil)
     }
   
 }
