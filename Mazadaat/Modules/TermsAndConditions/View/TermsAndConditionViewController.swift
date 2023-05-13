@@ -25,6 +25,7 @@ class TermsAndConditionViewController: UIViewController {
         super.viewDidLoad()
 
        setupConfiguration()
+        [textView].map({$0?.textAlignment = LocalizationManager.shared.getLanguage() == .Arabic ? .right : .left})
     }
 
     private func setupConfiguration() {

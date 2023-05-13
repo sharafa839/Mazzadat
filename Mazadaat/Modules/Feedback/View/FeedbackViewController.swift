@@ -37,10 +37,10 @@ class FeedbackViewController: UIViewController {
         setupUI()
         if viewModel.isEmailView {
             setupIfEmail()
-            setNavigationItem(title: "email")
+            setNavigationItem(title: Localizations.emilAddress.localize)
         }else {
             setupIfFeedback()
-            setNavigationItem(title: "feedback")
+            setNavigationItem(title: Localizations.giveAFeedback.localize)
 
         }
         setupObservables()
@@ -50,19 +50,19 @@ class FeedbackViewController: UIViewController {
     private func setupUI() {
         butttonView.setRoundCorners(5)
         textView.setRoundCorners(5)
-        sendMessageButton.setTitle("send", for: .normal)
+        sendMessageButton.setTitle(Localizations.save.localize, for: .normal)
         sendMessageButton.setRoundCorners(25)
     }
     
     private func setupIfFeedback() {
-        titleTextView.text = "feedback"
-        textView.text = "yourfeedback"
+        titleTextView.text = Localizations.giveAFeedback.localize
+        textView.text = Localizations.writeYourFeedback.localize
         emailView.isHidden = true
     }
     
     private func setupIfEmail() {
-        titleTextView.text = "email"
-        textView.text = "yourEmail"
+        titleTextView.text = Localizations.emilAddress.localize
+        textView.text = Localizations.enterYourEmail.localize
         emailView.isHidden = true
     }
     

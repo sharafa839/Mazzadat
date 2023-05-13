@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+import MapKit
+import GoogleMaps
 class AskGoldenBellViewController: UIViewController {
 
     @IBOutlet weak var decorationView: UIView!
@@ -81,6 +82,48 @@ class AskGoldenBellViewController: UIViewController {
 
     }
     
+    
+    func openMaps(auction:AllAdvertisement) {
+        
+        let alert = UIAlertController(title: "", message: "", preferredStyle: .actionSheet)
+           
+           alert.addAction(UIAlertAction(title: "Google", style: .default , handler:{ (UIAlertAction)in
+               self.openGoogle(lat: auction.latitude ?? ""  , lon: auction.longitude ?? "" )
+           }))
+           
+           alert.addAction(UIAlertAction(title: "Apple", style: .default , handler:{ (UIAlertAction)in
+               self.openApple(lat: auction.latitude ?? "", lon: auction.longitude ?? "", name: auction.name ?? "")
+           }))
+
+           
+
+           self.present(alert, animated: true, completion: {
+               print("completion block")
+           })
+        
+
+    }
+    
+    private func openApple(lat:String,lon:String,name:String) {
+        HelperK.openMapOnAddress(long: lat , lat: lon  , name:  name)
+
+    }
+    
+    private func openGoogle(lat:String,lon:String) {
+        if (UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!)) {  //if phone has an app
+
+            if let url = URL(string: "comgooglemaps-x-callback://?saddr=&daddr=\(lat),\(lon)&directionsmode=driving") {
+                      UIApplication.shared.open(url, options: [:])
+             }}
+        else {
+               //Open in browser
+              if let urlDestination = URL.init(string: "https://www.google.co.in/maps/dir/?saddr=&daddr=\(lat),\(lon)&directionsmode=driving") {
+                                 UIApplication.shared.open(urlDestination)
+                             }
+                  }
+
+    }
+ 
 }
 
 extension AskGoldenBellViewController:UITableViewDelegate,UITableViewDataSource {
@@ -94,7 +137,7 @@ extension AskGoldenBellViewController:UITableViewDelegate,UITableViewDataSource 
          let item = viewModel.onSuccessGetAllAds.value[indexPath.row]
         cell.onTapMap = {[weak self] in
            
-            HelperK.openMapOnAddress(long: item.longitude ?? "", lat: item.latitude ?? "" , name: item.name ?? "")
+            self?.openMaps(auction: item)
             
         }
         

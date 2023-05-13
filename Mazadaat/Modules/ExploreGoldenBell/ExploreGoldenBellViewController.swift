@@ -47,15 +47,54 @@ class ExploreGoldenBellViewController: UIViewController {
         youtubeLabel.text = "whatsapp".localize
     }
     
+    @IBAction func shareApp(_ sender: UIButton) {
+        let firstActivityItem = "shareMazzadat"
+
+            // Setting url
+            let secondActivityItem : NSURL = NSURL(string: "http://your-url.com/")!
+            
+            // If you want to use an image
+            let image : UIImage = UIImage(named: "appIcon")!
+            let activityViewController : UIActivityViewController = UIActivityViewController(
+                activityItems: [firstActivityItem, secondActivityItem, image], applicationActivities: nil)
+            
+            // This lines is for the popover you need to show in iPad
+            activityViewController.popoverPresentationController?.sourceView = (sender as! UIButton)
+            
+            // This line remove the arrow of the popover to show in iPad
+            activityViewController.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.down
+            activityViewController.popoverPresentationController?.sourceRect = CGRect(x: 150, y: 150, width: 0, height: 0)
+            
+            // Pre-configuring activity items
+            activityViewController.activityItemsConfiguration = [
+            UIActivity.ActivityType.message
+            ] as? UIActivityItemsConfigurationReading
+            
+            // Anything you want to exclude
+            activityViewController.excludedActivityTypes = [
+                UIActivity.ActivityType.postToWeibo,
+                UIActivity.ActivityType.print,
+                UIActivity.ActivityType.assignToContact,
+                UIActivity.ActivityType.saveToCameraRoll,
+                UIActivity.ActivityType.addToReadingList,
+                UIActivity.ActivityType.postToFlickr,
+                UIActivity.ActivityType.postToVimeo,
+                UIActivity.ActivityType.postToTencentWeibo,
+                UIActivity.ActivityType.postToFacebook
+            ]
+            
+            activityViewController.isModalInPresentation = true
+            self.present(activityViewController, animated: true, completion: nil)
+    }
+    
     private func setupUI() {
         firstSectionView.drawBorder(raduis: 10, borderColor: .borderColor)
         secondSectionView.drawBorder(raduis: 10, borderColor: .borderColor)
+        [GoldenBellAuctionCommunityButton,rate,aboutGoldenBellAuctionButton,shareGoldenBellButton].map({$0?.contentHorizontalAlignment = LocalizationManager.shared.getLanguage() == .Arabic ? .right : .left})
     }
     
     private func setupObservers() {
-        shareGoldenBellButton.rx.tap.subscribe {[weak self] _ in
-            
-        }.disposed(by: disposBag)
+      
         
         GoldenBellAuctionCommunityButton.rx.tap.subscribe {[weak self] _ in
             

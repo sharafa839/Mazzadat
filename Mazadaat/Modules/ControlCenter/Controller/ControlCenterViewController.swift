@@ -166,11 +166,11 @@ extension ControlCenterViewController:UITableViewDelegate,UITableViewDataSource 
         case 2:
             switch row {
             case 0:
-                let termsViewModel = TermsAndConditionViewModel(obligations: .terms)
+                let termsViewModel = TermsAndConditionViewModel(obligations: .privacy)
                 let termsViewController = TermsAndConditionViewController(viewModel: termsViewModel)
                 navigationController?.pushViewController(termsViewController, animated: true)
             case 1:
-                let termsViewModel = TermsAndConditionViewModel(obligations: .privacy)
+                let termsViewModel = TermsAndConditionViewModel(obligations: .terms)
                 let termsViewController = TermsAndConditionViewController(viewModel: termsViewModel)
                 navigationController?.pushViewController(termsViewController, animated: true)
                 

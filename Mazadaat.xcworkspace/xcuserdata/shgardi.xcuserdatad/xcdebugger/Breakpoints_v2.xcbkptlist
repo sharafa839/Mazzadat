@@ -132,5 +132,84 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "03E23180-E83C-4734-A6A1-F58F6285AC07"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mazadaat/Modules/LocalizationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
+            landmarkName = "setDirection()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "03E23180-E83C-4734-A6A1-F58F6285AC07 - e85c7faae14d9771"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__C.UIViewController.setDirection() -&gt; ()"
+                  moduleName = "Golden Bell"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shgardi/golden-bell-repo-ios/Mazadaat/Modules/LocalizationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "153"
+                  endingLineNumber = "153"
+                  offsetFromSymbolStart = "902">
+               </Location>
+               <Location
+                  uuid = "03E23180-E83C-4734-A6A1-F58F6285AC07 - e85c7faae14d978e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__C.UIViewController.setDirection() -&gt; ()"
+                  moduleName = "Golden Bell"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shgardi/golden-bell-repo-ios/Mazadaat/Modules/LocalizationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "154"
+                  endingLineNumber = "154"
+                  offsetFromSymbolStart = "977">
+               </Location>
+               <Location
+                  uuid = "03E23180-E83C-4734-A6A1-F58F6285AC07 - e85c7faae14d978e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__C.UIViewController.setDirection() -&gt; ()"
+                  moduleName = "Golden Bell"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shgardi/golden-bell-repo-ios/Mazadaat/Modules/LocalizationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "154"
+                  endingLineNumber = "154"
+                  offsetFromSymbolStart = "902">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2D25CA5D-E7ED-418C-A2FD-E6F10782BDC7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mazadaat/Modules/LocalizationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
+            landmarkName = "setDirection()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

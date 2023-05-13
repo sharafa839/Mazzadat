@@ -73,6 +73,7 @@ class SettingViewController: UIViewController {
         bidUpdateButton.isOn = CoreData.shared.loginModel?.bidUpdates ?? false
         auctionEndingSoonButton.isOn = CoreData.shared.loginModel?.bidUpdates ?? false
     }
+    
     @IBAction func auctionAlertAction(_ sender: UISwitch) {
         let value = sender.isOn
         viewModel.editNotification(autionAlert: value, bidUpdates: nil, promotion: nil, auctionEndingSoon: nil)
@@ -90,9 +91,11 @@ class SettingViewController: UIViewController {
     
     @IBAction func promotionAction(_ sender: UISwitch) {
         let value = sender.isOn
-        viewModel.editNotification(autionAlert: value, bidUpdates: nil, promotion: value, auctionEndingSoon: nil)
+        viewModel.editNotification(autionAlert: nil, bidUpdates: nil, promotion: value, auctionEndingSoon: nil)
     }
+    
     @IBAction func changLanguageAction(_ sender: UIButton) {
-        
+        let changeLanguageViewController = LanguageViewController()
+        present(changeLanguageViewController, animated: true)
     }
 }

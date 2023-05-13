@@ -25,9 +25,23 @@ class SettingViewModel:AuthNetworkingProtocol {
                 
             case .success(let response):
                 guard let login = response.response?.data else {return}
-                self?.onSuccess.accept(login)
-                CoreData.shared.loginModel = response.response?.data
                 
+                self?.getMe()
+            }
+        }
+    }
+    
+    func getMe() {
+        me { [weak self] result in
+            switch result {
+            case .success(let response):
+                guard let loginModel = response.response?.data else {return}
+                CoreData.shared.personalSubscription = loginModel.subscriptions ?? []
+                CoreData.shared.loginModel = loginModel
+                HelperK.saveToken(token: loginModel.accessToken ?? "" )
+            case .failure(let error):
+              return
+                //self?.onError.onNext(error.localizedDescription)
             }
         }
     }

@@ -75,6 +75,8 @@ class RequestAuctionViewController: UIViewController {
         titleAuctionRequestTextField.placeholder =  Localizations.writeAuctionTitle.localize
         auctionDetailsTextField.placeholder =  Localizations.writeAuctionDescription.localize
         sendButton.setTitle(Localizations.sendRequesst.localize, for: .normal)
+        [titleAuctionRequestTextField,auctionDetailsTextField].map({$0?.textAlignment = LocalizationManager.shared.getLanguage() == .Arabic ? .right : .left})
+
     }
     
     private func setupObservables() {

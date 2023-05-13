@@ -30,7 +30,7 @@ class PersonalInformationHeader: UITableViewCell {
     private func setupUI() {
         imageContainerView.circle()
         personalImageView.circle()
-        editButton.setTitle("edit", for: .normal)
+        editButton.setTitle("edit".localize, for: .normal)
         guard let url = URL(string: HelperK.getAvatar()) else {return}
         let placeholderImage = UIImage(named: HelperK.getAvatar()) ?? UIImage(named: "AppIcon")
         let processor = DefaultImageProcessor.default

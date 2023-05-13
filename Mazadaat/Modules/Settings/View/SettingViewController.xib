@@ -49,14 +49,6 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sVX-PP-cPI">
                             <rect key="frame" x="0.0" y="10" width="414" height="86.5"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDL-Lt-JKy">
-                                    <rect key="frame" x="16" y="36.5" width="382" height="50"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                    <connections>
-                                        <action selector="changLanguageAction:" destination="-1" eventType="touchUpInside" id="vfu-IY-nRH"/>
-                                    </connections>
-                                </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EAn-8B-7Ra">
                                     <rect key="frame" x="32" y="8" width="41.5" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -100,6 +92,13 @@
                                         <constraint firstItem="6iR-j1-NMs" firstAttribute="leading" secondItem="LDt-WL-EXg" secondAttribute="leading" constant="16" id="o4B-tE-ZoI"/>
                                     </constraints>
                                 </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDL-Lt-JKy">
+                                    <rect key="frame" x="16" y="36.5" width="382" height="50"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <connections>
+                                        <action selector="changLanguageAction:" destination="-1" eventType="touchUpInside" id="vfu-IY-nRH"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
@@ -122,13 +121,13 @@
                                     <rect key="frame" x="0.0" y="0.0" width="382" height="128"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4h-nZ-smJ">
-                                            <rect key="frame" x="16" y="16" width="39" height="76"/>
+                                            <rect key="frame" x="16" y="16" width="39" height="17.5"/>
                                             <fontDescription key="fontDescription" name="Archivo-Regular" family="Archivo" pointSize="16"/>
                                             <color key="textColor" name="TextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6u-cV-Yy3">
-                                            <rect key="frame" x="16" y="108" width="27" height="12"/>
+                                            <rect key="frame" x="16" y="49.5" width="27" height="70.5"/>
                                             <fontDescription key="fontDescription" name="Archivo-Regular" family="Archivo" pointSize="11"/>
                                             <color key="textColor" name="Neutral-v600"/>
                                             <nil key="highlightedColor"/>
@@ -196,13 +195,13 @@
                                     <rect key="frame" x="0.0" y="258" width="382" height="128"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flR-ei-25E">
-                                            <rect key="frame" x="16" y="16" width="39" height="17.5"/>
+                                            <rect key="frame" x="16" y="16" width="39" height="76"/>
                                             <fontDescription key="fontDescription" name="Archivo-Regular" family="Archivo" pointSize="16"/>
                                             <color key="textColor" name="TextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5u7-AG-AJV">
-                                            <rect key="frame" x="16" y="49.5" width="285" height="70.5"/>
+                                            <rect key="frame" x="16" y="108" width="285" height="12"/>
                                             <fontDescription key="fontDescription" name="Archivo-Regular" family="Archivo" pointSize="11"/>
                                             <color key="textColor" name="Neutral-v600"/>
                                             <nil key="highlightedColor"/>

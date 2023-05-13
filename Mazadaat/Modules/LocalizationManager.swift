@@ -111,6 +111,8 @@ class LocalizationManager: NSObject {
         delegate?.resetApp()
     }
     
+
+    
     // configure startup language
     func setAppInnitLanguage() {
         if let selectedLanguage = getLanguage() {
@@ -132,5 +134,31 @@ class LocalizationManager: NSObject {
 extension String {
     var localize: String {
         return LocalizationManager.shared.localizedString(for: self, value: "")
+    }
+}
+
+extension UIViewController {
+    func setDirection() {
+        if LocalizationManager.shared.getLanguage() == .Arabic {
+            
+            UIView.appearance().semanticContentAttribute = .forceRightToLeft
+            UIButton.appearance().semanticContentAttribute = .forceRightToLeft
+            UITextView.appearance().semanticContentAttribute = .forceRightToLeft
+            UITextField.appearance().semanticContentAttribute = .forceRightToLeft
+            UINavigationBar.appearance().semanticContentAttribute = .forceRightToLeft
+            UITabBar.appearance().semanticContentAttribute = .forceRightToLeft
+            UISearchBar.appearance().semanticContentAttribute = .forceRightToLeft
+            UILabel.appearance().semanticContentAttribute = .forceRightToLeft
+           
+        }else {
+            UIView.appearance().semanticContentAttribute = .forceLeftToRight
+            UIButton.appearance().semanticContentAttribute = .forceLeftToRight
+            UITextView.appearance().semanticContentAttribute = .forceLeftToRight
+            UITextField.appearance().semanticContentAttribute = .forceLeftToRight
+            UINavigationBar.appearance().semanticContentAttribute = .forceLeftToRight
+            UITabBar.appearance().semanticContentAttribute = .forceLeftToRight
+            UISearchBar.appearance().semanticContentAttribute = .forceLeftToRight
+            UILabel.appearance().semanticContentAttribute = .forceLeftToRight
+        }
     }
 }

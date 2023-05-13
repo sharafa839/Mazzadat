@@ -357,6 +357,8 @@
 		FFE2C52829DBBD3000F8C16F /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFE2C52629DBBD3000F8C16F /* HomeViewController.xib */; };
 		FFE2C52B29DBC7F200F8C16F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE2C52A29DBC7F200F8C16F /* HomeViewModel.swift */; };
 		FFF7E39F2A0E684A00B0749F /* QLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3B7C0225C7FC5100303819 /* QLoaderView.swift */; };
+		FFF7E3A52A0EBC6F00B0749F /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF7E3A32A0EBC6F00B0749F /* LanguageViewController.swift */; };
+		FFF7E3A62A0EBC6F00B0749F /* LanguageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFF7E3A42A0EBC6F00B0749F /* LanguageViewController.xib */; };
 		FFFE91932A052BE3001BE377 /* PlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFE91912A052BE3001BE377 /* PlanViewController.swift */; };
 		FFFE91942A052BE3001BE377 /* PlanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFFE91922A052BE3001BE377 /* PlanViewController.xib */; };
 		FFFE91982A052C28001BE377 /* SelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFE91962A052C28001BE377 /* SelectionTableViewCell.swift */; };
@@ -789,6 +791,8 @@
 		FFE2C52529DBBD3000F8C16F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FFE2C52629DBBD3000F8C16F /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		FFE2C52A29DBC7F200F8C16F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		FFF7E3A32A0EBC6F00B0749F /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
+		FFF7E3A42A0EBC6F00B0749F /* LanguageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LanguageViewController.xib; sourceTree = "<group>"; };
 		FFFE91912A052BE3001BE377 /* PlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanViewController.swift; sourceTree = "<group>"; };
 		FFFE91922A052BE3001BE377 /* PlanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlanViewController.xib; sourceTree = "<group>"; };
 		FFFE91962A052C28001BE377 /* SelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionTableViewCell.swift; sourceTree = "<group>"; };
@@ -1155,6 +1159,7 @@
 		FF4C7EF029D37AFB0095396A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FFF7E3A22A0EBC5A00B0749F /* LanguageViewController */,
 				FFA047752A0C450C00B8D390 /* RemoveQuestion */,
 				FFA0476C2A0C2B7A00B8D390 /* Search */,
 				FF5BE5B22A0B9D5F00811AB7 /* ExploreGoldenBell */,
@@ -2726,6 +2731,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		FFF7E3A22A0EBC5A00B0749F /* LanguageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FFF7E3A32A0EBC6F00B0749F /* LanguageViewController.swift */,
+				FFF7E3A42A0EBC6F00B0749F /* LanguageViewController.xib */,
+			);
+			path = LanguageViewController;
+			sourceTree = "<group>";
+		};
 		FFFE91902A052BC7001BE377 /* PlanDetails */ = {
 			isa = PBXGroup;
 			children = (
@@ -2842,6 +2856,7 @@
 			files = (
 				FFC71F0E2A0A0ED9009A1E0F /* TermsAndConditionViewController.xib in Resources */,
 				FA49CE152546A063004CDD6E /* Roboto-Light.ttf in Resources */,
+				FFF7E3A62A0EBC6F00B0749F /* LanguageViewController.xib in Resources */,
 				FF8D31DC29F93C2F0000958D /* MainTabBarController.xib in Resources */,
 				FF8B950D29FA698A00441899 /* BiddingAuctionsTableViewCell.xib in Resources */,
 				FF7EEA2A29FDCE4400BE1CBE /* ContactUsViewController.xib in Resources */,
@@ -3076,6 +3091,7 @@
 				FF5AF74629DFC0230020E716 /* UploadDocuments.swift in Sources */,
 				FFFE91982A052C28001BE377 /* SelectionTableViewCell.swift in Sources */,
 				FA762B7A259E0ADD0035E0EB /* Header.swift in Sources */,
+				FFF7E3A52A0EBC6F00B0749F /* LanguageViewController.swift in Sources */,
 				FFA76A3029E11434000BD881 /* TransactionNetworkingProtocol.swift in Sources */,
 				FF76275B29E1F224002D531F /* RegisterViewModel.swift in Sources */,
 				FA7C7C88255114AF00BD1035 /* PakgesCell.swift in Sources */,

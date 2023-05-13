@@ -810,8 +810,6 @@ PODS:
     - Moya/Core (= 15.0.0)
   - Moya/Core (15.0.0):
     - Alamofire (~> 5.0)
-  - MSPeekCollectionViewDelegateImplementation (3.2.0)
-  - MXSegmentedControl (1.1.0)
   - nanopb (2.30909.0):
     - nanopb/decode (= 2.30909.0)
     - nanopb/encode (= 2.30909.0)
@@ -840,31 +838,6 @@ PODS:
   - SnapKit (5.0.1)
   - Spring (1.0.5)
   - SwiftDate (5.1.0)
-  - SwifterSwift (5.2.0):
-    - SwifterSwift/AppKit (= 5.2.0)
-    - SwifterSwift/CoreAnimation (= 5.2.0)
-    - SwifterSwift/CoreGraphics (= 5.2.0)
-    - SwifterSwift/CoreLocation (= 5.2.0)
-    - SwifterSwift/Dispatch (= 5.2.0)
-    - SwifterSwift/Foundation (= 5.2.0)
-    - SwifterSwift/MapKit (= 5.2.0)
-    - SwifterSwift/SceneKit (= 5.2.0)
-    - SwifterSwift/SpriteKit (= 5.2.0)
-    - SwifterSwift/StoreKit (= 5.2.0)
-    - SwifterSwift/SwiftStdlib (= 5.2.0)
-    - SwifterSwift/UIKit (= 5.2.0)
-  - SwifterSwift/AppKit (5.2.0)
-  - SwifterSwift/CoreAnimation (5.2.0)
-  - SwifterSwift/CoreGraphics (5.2.0)
-  - SwifterSwift/CoreLocation (5.2.0)
-  - SwifterSwift/Dispatch (5.2.0)
-  - SwifterSwift/Foundation (5.2.0)
-  - SwifterSwift/MapKit (5.2.0)
-  - SwifterSwift/SceneKit (5.2.0)
-  - SwifterSwift/SpriteKit (5.2.0)
-  - SwifterSwift/StoreKit (5.2.0)
-  - SwifterSwift/SwiftStdlib (5.2.0)
-  - SwifterSwift/UIKit (5.2.0)
   - SwiftGifOrigin (1.7.0)
   - SwiftKeychainWrapper (4.0.1)
   - SwiftyGif (5.4.4)
@@ -888,8 +861,6 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift
   - Kingfisher (~> 5.13.4)
   - Moya (~> 15.0)
-  - MSPeekCollectionViewDelegateImplementation
-  - MXSegmentedControl
   - NotificationBannerSwift (~> 3.0.0)
   - NVActivityIndicatorView
   - OTPFieldView
@@ -901,7 +872,6 @@ DEPENDENCIES:
   - SideMenu (~> 5.0.1)
   - Spring
   - SwiftDate (~> 5.0)
-  - SwifterSwift
   - SwiftGifOrigin
   - SwiftKeychainWrapper (~> 4.0.1)
   - SwiftyGif
@@ -944,8 +914,6 @@ SPEC REPOS:
     - Libuv-gRPC
     - MarqueeLabel
     - Moya
-    - MSPeekCollectionViewDelegateImplementation
-    - MXSegmentedControl
     - nanopb
     - NotificationBannerSwift
     - NVActivityIndicatorView
@@ -961,7 +929,6 @@ SPEC REPOS:
     - SnapKit
     - Spring
     - SwiftDate
-    - SwifterSwift
     - SwiftGifOrigin
     - SwiftKeychainWrapper
     - SwiftyGif
@@ -1003,8 +970,6 @@ SPEC CHECKSUMS:
   Libuv-gRPC: 55e51798e14ef436ad9bc45d12d43b77b49df378
   MarqueeLabel: 00cc0bcd087111dca575878b3531af980559707d
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
-  MSPeekCollectionViewDelegateImplementation: be35a217bd302976a9e4476151be992c1f150127
-  MXSegmentedControl: f39e46199a52cbc03b1c845e150215119f2542f5
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
   NotificationBannerSwift: 7021be2338f8f29cf424b0aca43da462bf9e2a1a
   NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
@@ -1020,7 +985,6 @@ SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   Spring: 17901566c8ecf3a1327902b940406c64512f9bb1
   SwiftDate: 6329e58969a2de31cea7f1ee1143b247693196e7
-  SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
   SwiftGifOrigin: fbd6cf37afcfcf97a5c3db996ddc0492e5c5c145
   SwiftKeychainWrapper: 807ba1d63c33a7d0613288512399cd1eda1e470c
   SwiftyGif: 93a1cc87bf3a51916001cf8f3d63835fb64c819f
@@ -1029,6 +993,6 @@ SPEC CHECKSUMS:
   Swime: d7b2c277503b6cea317774aedc2dce05613f8b0b
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: beea217903666c32f04962b003d2e9bb8b3a3b49
+PODFILE CHECKSUM: 731412b3378cd3832656d7828b7a9e12cf6ac380
 
 COCOAPODS: 1.11.0

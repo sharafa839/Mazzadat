@@ -77,16 +77,16 @@ extension AuthApiServices:TargetType,BaseApiHeadersProtocol {
         case .setupNotification( let auctionAlert, let bidUpdates, let promotion, let auctionEndingSoon):
             var parameters : [String:Any] = [:]
             if let auctionAlert = auctionAlert {
-                parameters["auction_alerts"] = auctionAlert
+                parameters["auction_alerts"] = "\(auctionAlert)"
             }
             if let bidUpdates = bidUpdates {
-                parameters["bid_updates"] = auctionAlert
+                parameters["bid_updates"] = "\(bidUpdates)"
             }
             if let promotion = promotion {
-                parameters["promotions"] = auctionAlert
+                parameters["promotions"] = "\(promotion)"
             }
             if let auctionEndingSoon = auctionEndingSoon {
-                parameters["auction_ending_soon"] = auctionEndingSoon
+                parameters["auction_ending_soon"] = "\(auctionEndingSoon)"
             }
             return .requestParameters(parameters: parameters, encoding: JSONEncoding.default)
         case .verify(code: let code):
