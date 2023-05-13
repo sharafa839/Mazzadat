@@ -53,9 +53,9 @@ class TicketViewController: UIViewController {
 
     private func setupUI() {
         segmentController.drawBorder(raduis: 20, borderColor: .Bronze_500)
-        segmentController.setTitle("all", forSegmentAt: 0)
-        segmentController.setTitle("running", forSegmentAt: 1)
-        segmentController.setTitle("closed", forSegmentAt: 2)
+        segmentController.setTitle("all".localize, forSegmentAt: 0)
+        segmentController.setTitle("running".localize, forSegmentAt: 1)
+        segmentController.setTitle("closed".localize, forSegmentAt: 2)
         segmentController.setTitleColor(.white, state: .selected)
         segmentController.setTitleColor(.textColor, state: .normal)
         segmentController.layer.borderWidth = 2

@@ -17,6 +17,7 @@ class AuctionsDetailsViewController: UIViewController, HeightsBidding {
 
     
     //MARK: - IBOutlets
+    
     @IBOutlet weak var favoriteView: UIView!
     @IBOutlet weak var favoriteButton: UIButton!
     @IBOutlet weak var imageSlider: ImageSlideshow!
@@ -131,7 +132,12 @@ class AuctionsDetailsViewController: UIViewController, HeightsBidding {
         }
     }
     
-     
+    @IBAction func chatButton(_ sender: Any) {
+        guard let auctionId = auctionDetailsModel?.id else {return}
+        let chatViewModel = ChatViewModel(chatId: "\(auctionId)",name:auctionDetailsModel?.name ?? "")
+        let chatViewController = ChatViewController(viewModel: chatViewModel)
+        navigationController?.pushViewController(chatViewController, animated: true)
+    }
     
     //MARK: - Methods
     

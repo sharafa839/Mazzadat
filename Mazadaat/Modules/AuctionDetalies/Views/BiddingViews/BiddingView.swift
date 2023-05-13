@@ -90,7 +90,7 @@ class BiddingView: UIView {
             endingInValueLabel.text = "expired".localize
 
         }else {
-            endingInValueLabel.text = "\(diffDateComponents.day ?? 0)" + "d".localize + "\(diffDateComponents.hour ?? 0)" + "h".localize + "\(diffDateComponents.minute ?? 0)" "m".localize
+            endingInValueLabel.text = "\(diffDateComponents.day ?? 0)" + "d".localize + "\(diffDateComponents.hour ?? 0)" + "h".localize + "\(diffDateComponents.minute ?? 0)" + "m".localize
 
         }
     }

@@ -24,6 +24,8 @@ protocol HomeNetworkingProtocol {
     
     func addFeedback(message:String,completion:@escaping(Result<BaseResponse<[LoginPayload]>,Error>)->Void)
 
+    func sendMessage(message:String,auctionId:String?,completion:@escaping(Result<BaseResponse<String>,Error>)->Void)
+
 
 }
 
@@ -73,6 +75,10 @@ extension HomeNetworkingProtocol {
         home.request(target: .addFeedback(message: message), completion: completion)
     }
 
+    func sendMessage(message:String,auctionId:String?,completion:@escaping(Result<BaseResponse<String>,Error>)->Void)  {
+        home.request(target: .sendMessage(message: message, auctionId: auctionId), completion: completion)
+
+    }
 }
 
 

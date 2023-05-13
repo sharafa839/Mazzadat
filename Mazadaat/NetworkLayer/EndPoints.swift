@@ -61,6 +61,7 @@ enum EndPoints {
         case removeDocument = "api/home/remove_document"
         case addAdvertisementRequest = "api/home/add_advertisement"
         case addFeedback = "api/home/add_feedback"
+        case sendMessage = "api/home/send-message"
     }
     
     enum Auction:String {

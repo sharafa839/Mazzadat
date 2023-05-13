@@ -614,6 +614,9 @@ PODS:
     - FirebaseAnalytics (~> 10.7.0)
   - Firebase/CoreOnly (10.7.0):
     - FirebaseCore (= 10.7.0)
+  - Firebase/Database (10.7.0):
+    - Firebase/CoreOnly
+    - FirebaseDatabase (~> 10.7.0)
   - Firebase/Messaging (10.7.0):
     - Firebase/CoreOnly
     - FirebaseMessaging (~> 10.7.0)
@@ -648,6 +651,9 @@ PODS:
     - FirebaseCore (~> 10.0)
   - FirebaseCoreInternal (10.7.0):
     - "GoogleUtilities/NSData+zlib (~> 7.8)"
+  - FirebaseDatabase (10.7.0):
+    - FirebaseCore (~> 10.0)
+    - leveldb-library (~> 1.22)
   - FirebaseFirestore (10.7.0):
     - abseil/algorithm (~> 1.20211102.0)
     - abseil/base (~> 1.20211102.0)
@@ -850,6 +856,7 @@ DEPENDENCIES:
   - CollapsibleTableSectionViewController (~> 2.0.1)
   - Firebase/Analytics
   - Firebase/Auth
+  - Firebase/Database
   - Firebase/Messaging
   - FirebaseFirestoreSwift
   - GoogleMaps
@@ -892,6 +899,7 @@ SPEC REPOS:
     - FirebaseCore
     - FirebaseCoreExtension
     - FirebaseCoreInternal
+    - FirebaseDatabase
     - FirebaseFirestore
     - FirebaseFirestoreSwift
     - FirebaseInstallations
@@ -948,6 +956,7 @@ SPEC CHECKSUMS:
   FirebaseCore: e317665b9d744727a97e623edbbed009320afdd7
   FirebaseCoreExtension: f17247ba8c61e4d3c8d136b5e2de3cb4ac6a85b6
   FirebaseCoreInternal: 8845798510aae74703467480f71ac613788d0696
+  FirebaseDatabase: 06195bac336b5e4c893ec04a111631a4cdb00178
   FirebaseFirestore: 3963a6edd1c84b4748dab3e2c62624a29d03eca1
   FirebaseFirestoreSwift: fc1fdfd56acd12a0fbcc5f00cca2d42784ceb142
   FirebaseInstallations: 59c0e4c7a816a0f76710d83f77e5369b3e45eb96
@@ -993,6 +1002,6 @@ SPEC CHECKSUMS:
   Swime: d7b2c277503b6cea317774aedc2dce05613f8b0b
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 731412b3378cd3832656d7828b7a9e12cf6ac380
+PODFILE CHECKSUM: 46f3478288742d4179fc48ca822a083cc86b82a6
 
 COCOAPODS: 1.11.0

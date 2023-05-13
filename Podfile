@@ -42,7 +42,8 @@ target 'Mazadaat' do
   pod 'Moya', '~> 15.0'
   pod 'NotificationBannerSwift', '~> 3.0.0'
   pod 'NVActivityIndicatorView'
-  
+  pod 'Firebase/Database'
+
   # Pods for Mazadaat
   post_install do |installer|
     installer.generated_projects.each do |project|

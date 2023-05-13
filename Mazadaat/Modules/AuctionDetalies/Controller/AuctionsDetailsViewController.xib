@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -26,34 +28,34 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hln-8U-vpn">
-                    <rect key="frame" x="0.0" y="60" width="414" height="836"/>
+                    <rect key="frame" x="0.0" y="64" width="414" height="832"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Upk-P4-tbO">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="836"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="832"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="FQ3-ir-ljW">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="836"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="832"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bAT-gZ-1aE" customClass="ImageSlideshow" customModule="ImageSlideshow">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="209"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="208"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5zG-SJ-RCH" customClass="AuctionDetailesView" customModule="Golden_Bell" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="209" width="414" height="209"/>
+                                            <rect key="frame" x="0.0" y="208" width="414" height="208"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pSj-Xo-mi4" customClass="AuctionSpecificationView" customModule="Golden_Bell" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="418" width="414" height="209"/>
+                                            <rect key="frame" x="0.0" y="416" width="414" height="208"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fVL-yi-OF1" customClass="BiddingView" customModule="Golden_Bell" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="627" width="414" height="209"/>
+                                            <rect key="frame" x="0.0" y="624" width="414" height="208"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         </view>
                                     </subviews>
                                 </stackView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P2b-PX-Rrf">
-                                    <rect key="frame" x="330" y="124" width="60" height="60"/>
+                                    <rect key="frame" x="330" y="123" width="60" height="60"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zQj-3W-EJZ">
                                             <rect key="frame" x="8" y="8" width="44" height="44"/>
@@ -70,15 +72,49 @@
                                         <constraint firstItem="zQj-3W-EJZ" firstAttribute="leading" secondItem="P2b-PX-Rrf" secondAttribute="leading" constant="8" id="uVQ-DL-N2I"/>
                                     </constraints>
                                 </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cRi-eS-9j0">
+                                    <rect key="frame" x="24" y="123" width="60" height="60"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfF-f2-NHu">
+                                            <rect key="frame" x="8" y="8" width="44" height="44"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal">
+                                                <imageReference key="image" image="message.fill" catalog="system" renderingMode="hierarchical">
+                                                    <hierarchicalColors>
+                                                        <color name="Bronze-500"/>
+                                                        <color systemColor="secondaryLabelColor"/>
+                                                        <color systemColor="tertiaryLabelColor"/>
+                                                    </hierarchicalColors>
+                                                </imageReference>
+                                            </state>
+                                            <connections>
+                                                <action selector="chatButton:" destination="-1" eventType="touchUpInside" id="3t8-Ji-IDW"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="tfF-f2-NHu" secondAttribute="bottom" constant="8" id="4gj-Pu-Md9"/>
+                                        <constraint firstItem="tfF-f2-NHu" firstAttribute="leading" secondItem="cRi-eS-9j0" secondAttribute="leading" constant="8" id="ELp-LE-Y7R"/>
+                                        <constraint firstAttribute="height" constant="60" id="Gko-Mt-aVx"/>
+                                        <constraint firstAttribute="width" constant="60" id="dsE-eV-dkF"/>
+                                        <constraint firstAttribute="trailing" secondItem="tfF-f2-NHu" secondAttribute="trailing" constant="8" id="hpP-N4-pcx"/>
+                                        <constraint firstItem="tfF-f2-NHu" firstAttribute="top" secondItem="cRi-eS-9j0" secondAttribute="top" constant="8" id="kGA-zJ-OLk"/>
+                                    </constraints>
+                                </view>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="P2b-PX-Rrf" firstAttribute="top" secondItem="bAT-gZ-1aE" secondAttribute="bottom" constant="-85" id="3hX-pW-udk"/>
                                 <constraint firstItem="bAT-gZ-1aE" firstAttribute="trailing" secondItem="P2b-PX-Rrf" secondAttribute="trailing" constant="24" id="4ac-h9-tFS"/>
                                 <constraint firstItem="FQ3-ir-ljW" firstAttribute="top" secondItem="Upk-P4-tbO" secondAttribute="top" id="AGu-lk-lki"/>
+                                <constraint firstItem="cRi-eS-9j0" firstAttribute="leading" secondItem="Upk-P4-tbO" secondAttribute="leading" constant="24" id="MFs-4o-gft"/>
                                 <constraint firstItem="FQ3-ir-ljW" firstAttribute="leading" secondItem="Upk-P4-tbO" secondAttribute="leading" id="OUr-Rb-vha"/>
+                                <constraint firstItem="cRi-eS-9j0" firstAttribute="top" secondItem="P2b-PX-Rrf" secondAttribute="top" id="Xrj-0W-Jde"/>
                                 <constraint firstAttribute="trailing" secondItem="FQ3-ir-ljW" secondAttribute="trailing" id="i5f-qZ-BOO"/>
                                 <constraint firstAttribute="bottom" secondItem="FQ3-ir-ljW" secondAttribute="bottom" id="oAi-Td-bKx"/>
+                                <constraint firstItem="cRi-eS-9j0" firstAttribute="centerY" secondItem="P2b-PX-Rrf" secondAttribute="centerY" id="pHI-iY-e3M"/>
+                                <constraint firstItem="cRi-eS-9j0" firstAttribute="bottom" secondItem="P2b-PX-Rrf" secondAttribute="bottom" id="xCc-8m-vhD"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -104,8 +140,18 @@
         </view>
     </objects>
     <resources>
+        <image name="message.fill" catalog="system" width="128" height="114"/>
+        <namedColor name="Bronze-500">
+            <color red="0.88627450980392153" green="0.56470588235294117" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

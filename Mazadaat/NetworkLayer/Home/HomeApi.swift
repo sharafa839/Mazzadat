@@ -23,6 +23,7 @@ enum HomeApiServices {
     case removeDocument(front:Bool?,back:Bool?,documentTypeId:String)
     case addAdvertisementRequest(title:String,description:String)
     case addFeedback(message:String)
+    case sendMessage(message:String,auctionId:String?)
 }
 
 extension HomeApiServices:TargetType,BaseApiHeadersProtocol {
@@ -52,6 +53,8 @@ extension HomeApiServices:TargetType,BaseApiHeadersProtocol {
             return EndPoints.Home.addAdvertisementRequest.rawValue
         case .addFeedback:
             return EndPoints.Home.addFeedback.rawValue
+        case .sendMessage:
+            return EndPoints.Home.sendMessage.rawValue
         }
         
     }
@@ -60,7 +63,7 @@ extension HomeApiServices:TargetType,BaseApiHeadersProtocol {
         switch self {
         case .faqs:
             return .get
-        case .subscribe:
+        case .subscribe,.sendMessage:
             return .post
         case .documents:
             return .get
@@ -186,6 +189,15 @@ extension HomeApiServices:TargetType,BaseApiHeadersProtocol {
             return .requestParameters(parameters: ["title":title,"description":description], encoding: JSONEncoding.default)
         case .addFeedback( let message):
             return .requestParameters(parameters: ["message":message], encoding: JSONEncoding.default)
+
+        case .sendMessage(message: let message, auctionId: let auctionId):
+            var parameter:[String:Any] = [:]
+            if let auctionId = auctionId {
+                parameter["auction_id"] = auctionId
+            }
+            parameter["message"] = message
+            
+            return .requestParameters(parameters: parameter, encoding: JSONEncoding.default)
 
         }
     }

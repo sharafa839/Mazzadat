@@ -266,6 +266,13 @@
 		FFAA4D672A03BEC90027B478 /* AddDocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAA4D652A03BEC90027B478 /* AddDocumentViewController.swift */; };
 		FFAA4D682A03BEC90027B478 /* AddDocumentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFAA4D662A03BEC90027B478 /* AddDocumentViewController.xib */; };
 		FFAA4D6A2A03E2840027B478 /* Splash Ui O-w.gif in Resources */ = {isa = PBXBuildFile; fileRef = FFAA4D692A03E2830027B478 /* Splash Ui O-w.gif */; };
+		FFAC5EBC2A0FBC9F00AAE96D /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAC5EBB2A0FBC9F00AAE96D /* ChatViewModel.swift */; };
+		FFAC5EC02A0FF14D00AAE96D /* MCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAC5EBE2A0FF14C00AAE96D /* MCell.swift */; };
+		FFAC5EC12A0FF14D00AAE96D /* MCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFAC5EBF2A0FF14C00AAE96D /* MCell.xib */; };
+		FFAC5EC62A0FF1A300AAE96D /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAC5EC42A0FF1A300AAE96D /* ChatViewController.swift */; };
+		FFAC5EC72A0FF1A300AAE96D /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFAC5EC52A0FF1A300AAE96D /* ChatViewController.xib */; };
+		FFAC5ECB2A10003E00AAE96D /* AddTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAC5EC92A10003E00AAE96D /* AddTicketViewController.swift */; };
+		FFAC5ECC2A10003E00AAE96D /* AddTicketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFAC5ECA2A10003E00AAE96D /* AddTicketViewController.xib */; };
 		FFACF05829E9C1B700B8C41F /* KindOfAuctionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFACF05629E9C1B700B8C41F /* KindOfAuctionCollectionViewCell.swift */; };
 		FFACF05929E9C1B700B8C41F /* KindOfAuctionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFACF05729E9C1B700B8C41F /* KindOfAuctionCollectionViewCell.xib */; };
 		FFACF05E29EA59B700B8C41F /* AuctionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFACF05C29EA59B700B8C41F /* AuctionsViewController.swift */; };
@@ -701,6 +708,13 @@
 		FFAA4D652A03BEC90027B478 /* AddDocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDocumentViewController.swift; sourceTree = "<group>"; };
 		FFAA4D662A03BEC90027B478 /* AddDocumentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddDocumentViewController.xib; sourceTree = "<group>"; };
 		FFAA4D692A03E2830027B478 /* Splash Ui O-w.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Splash Ui O-w.gif"; sourceTree = "<group>"; };
+		FFAC5EBB2A0FBC9F00AAE96D /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		FFAC5EBE2A0FF14C00AAE96D /* MCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCell.swift; sourceTree = "<group>"; };
+		FFAC5EBF2A0FF14C00AAE96D /* MCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCell.xib; sourceTree = "<group>"; };
+		FFAC5EC42A0FF1A300AAE96D /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		FFAC5EC52A0FF1A300AAE96D /* ChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
+		FFAC5EC92A10003E00AAE96D /* AddTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTicketViewController.swift; sourceTree = "<group>"; };
+		FFAC5ECA2A10003E00AAE96D /* AddTicketViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTicketViewController.xib; sourceTree = "<group>"; };
 		FFACF05629E9C1B700B8C41F /* KindOfAuctionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KindOfAuctionCollectionViewCell.swift; sourceTree = "<group>"; };
 		FFACF05729E9C1B700B8C41F /* KindOfAuctionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KindOfAuctionCollectionViewCell.xib; sourceTree = "<group>"; };
 		FFACF05C29EA59B700B8C41F /* AuctionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionsViewController.swift; sourceTree = "<group>"; };
@@ -1159,6 +1173,7 @@
 		FF4C7EF029D37AFB0095396A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FFAC5EBA2A0FBC9100AAE96D /* Chat */,
 				FFF7E3A22A0EBC5A00B0749F /* LanguageViewController */,
 				FFA047752A0C450C00B8D390 /* RemoveQuestion */,
 				FFA0476C2A0C2B7A00B8D390 /* Search */,
@@ -2027,6 +2042,7 @@
 		FF9443892A003C190094AC1F /* Ticket */ = {
 			isa = PBXGroup;
 			children = (
+				FFAC5EC82A10002A00AAE96D /* AddTicket */,
 				FF5894752A06986200620ABB /* ViewModel */,
 				FF94438F2A003C3A0094AC1F /* Adabtetr */,
 				FF94438A2A003C210094AC1F /* View */,
@@ -2182,6 +2198,51 @@
 				FFAA4D662A03BEC90027B478 /* AddDocumentViewController.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		FFAC5EBA2A0FBC9100AAE96D /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				FFAC5EC32A0FF19500AAE96D /* View */,
+				FFAC5EC22A0FF15000AAE96D /* Adapter */,
+				FFAC5EBD2A0FBCA200AAE96D /* ViewModel */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		FFAC5EBD2A0FBCA200AAE96D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FFAC5EBB2A0FBC9F00AAE96D /* ChatViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FFAC5EC22A0FF15000AAE96D /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				FFAC5EBE2A0FF14C00AAE96D /* MCell.swift */,
+				FFAC5EBF2A0FF14C00AAE96D /* MCell.xib */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		FFAC5EC32A0FF19500AAE96D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FFAC5EC42A0FF1A300AAE96D /* ChatViewController.swift */,
+				FFAC5EC52A0FF1A300AAE96D /* ChatViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FFAC5EC82A10002A00AAE96D /* AddTicket */ = {
+			isa = PBXGroup;
+			children = (
+				FFAC5EC92A10003E00AAE96D /* AddTicketViewController.swift */,
+				FFAC5ECA2A10003E00AAE96D /* AddTicketViewController.xib */,
+			);
+			path = AddTicket;
 			sourceTree = "<group>";
 		};
 		FFACF05429E9C18500B8C41F /* TableViewCell */ = {
@@ -2912,6 +2973,7 @@
 				FA3B7C6A25C7FE7000303819 /* animation_500_kkmcz3rp.gif in Resources */,
 				FA49CE182546A069004CDD6E /* Roboto-MediumItalic.ttf in Resources */,
 				FF8E83D429EED14F009AE77C /* AuctionCategoryTableViewCell.xib in Resources */,
+				FFAC5EC72A0FF1A300AAE96D /* ChatViewController.xib in Resources */,
 				FF8B951B29FA6ADE00441899 /* AskGoldenBellTableViewCell.xib in Resources */,
 				FF85828329FAEB6B002D98ED /* AskGoldenBellViewController.xib in Resources */,
 				FFBC7F8029F0ECCC00579E20 /* PriceRangeView.xib in Resources */,
@@ -2954,6 +3016,7 @@
 				FFBC3C152A032D4100547566 /* EmptyDocumentsCollectionViewCell.xib in Resources */,
 				FF818B9329F86B1600CA9A99 /* HeaderView.xib in Resources */,
 				FFBC3C0E2A032BCC00547566 /* DoucmentsViewController.xib in Resources */,
+				FFAC5ECC2A10003E00AAE96D /* AddTicketViewController.xib in Resources */,
 				FFFE91A22A055C36001BE377 /* LoginWithNafathViewController.xib in Resources */,
 				FFD2530129D47A7D002CE41A /* OnBoardingScreensViewController.xib in Resources */,
 				FABD93C22532DD3F00BFB943 /* ArbFONTS-Jozoor-Font.otf in Resources */,
@@ -2962,6 +3025,7 @@
 				FFA0477A2A0C453300B8D390 /* RemoveViewController.xib in Resources */,
 				FFA047702A0C2B8C00B8D390 /* SearchViewController.xib in Resources */,
 				FABD93C32532DD4100BFB943 /* ArbFONTS-Jozoor-Font.ttf in Resources */,
+				FFAC5EC12A0FF14D00AAE96D /* MCell.xib in Resources */,
 				FFBC3C1B2A03307D00547566 /* FillDocumentCollectionViewCell.xib in Resources */,
 				FF4C7EEB29D379B70095396A /* Archivo-ExtraLightItalic.ttf in Resources */,
 				FF4C7EDD29D379B70095396A /* Archivo-BlackItalic.ttf in Resources */,
@@ -3133,6 +3197,7 @@
 				FA49CE1F2546DF5B004CDD6E /* TimerManager.swift in Sources */,
 				FFBC3C142A032D4100547566 /* EmptyDocumentsCollectionViewCell.swift in Sources */,
 				FF79E39529F1889000CEED4D /* NotificationsViewModel.swift in Sources */,
+				FFAC5EC62A0FF1A300AAE96D /* ChatViewController.swift in Sources */,
 				FFC6DF5029E1082B00BD9364 /* CoreRepo.swift in Sources */,
 				FFE2C51B29DBB17300F8C16F /* PackageSubscribePlan.swift in Sources */,
 				FF12B1F82A0D7D55009C4FFC /* VerifyModel.swift in Sources */,
@@ -3152,6 +3217,7 @@
 				FF67F2CA29D4AFD600CA2E0B /* OnBoardingCollectionViewCell.swift in Sources */,
 				FF4C7F2129D453CC0095396A /* LottieHelper.swift in Sources */,
 				FF4C7F2529D453CC0095396A /* UITextField + extension.swift in Sources */,
+				FFAC5EBC2A0FBC9F00AAE96D /* ChatViewModel.swift in Sources */,
 				FFCB6E692A035C4C0024ECC3 /* AddDocumenViewModel.swift in Sources */,
 				FF5AF76329E0690B0020E716 /* ActivityIndicatorManager.swift in Sources */,
 				FFC6DF4729E106C800BD9364 /* NotificationNetworkingProtocol.swift in Sources */,
@@ -3191,6 +3257,7 @@
 				FFE2C51629DBAB9800F8C16F /* HeaderHomeView.swift in Sources */,
 				FA57EDAB25565C5600D0C554 /* docCell.swift in Sources */,
 				FF8E83C429EC35A9009AE77C /* ResetPasswordViewModel.swift in Sources */,
+				FFAC5ECB2A10003E00AAE96D /* AddTicketViewController.swift in Sources */,
 				FFC9004429FCA2480003A4FF /* EditFullNameViewModel.swift in Sources */,
 				FF5BE5B52A0B9D8600811AB7 /* ExploreGoldenBellViewController.swift in Sources */,
 				FF4C7F2029D453CC0095396A /* TableView + Extesnions.swift in Sources */,
@@ -3217,6 +3284,7 @@
 				FF5AF74829DFC0230020E716 /* AuctionHolder.swift in Sources */,
 				FF81900A29D50D9000033060 /* OnBoardingModel.swift in Sources */,
 				FFC6DF4C29E107FF00BD9364 /* CoreApi.swift in Sources */,
+				FFAC5EC02A0FF14D00AAE96D /* MCell.swift in Sources */,
 				FF818B9E29F86BFD00CA9A99 /* ProfileHeaderTableViewCell.swift in Sources */,
 				FF4C7F1929D453CC0095396A /* ActivityIndicatorManagerr.swift in Sources */,
 				FF4C7F1429D453CC0095396A /* HapticEffect.swift in Sources */,
