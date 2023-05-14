@@ -92,7 +92,7 @@ class HomeViewController: UIViewController {
     
     private func setupUI () {
         continerView.setRoundCorners(25)
-        packageSubscribePlan.setRoundCorners(5)
+        packageSubscribePlan.drawBorder(raduis: 10, borderColor: .Bronze_500)
        packageSubscribePlan.isHidden = (CoreData.shared.personalSubscription?.isEmpty ?? false)
         headerHomeView.setupUI(view: .home)
         packageSubscribePlan.isHidden = !HelperK.checkUserToken()

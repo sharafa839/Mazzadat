@@ -77,6 +77,6 @@ enum EndPoints {
     enum Core:String {
         case install = "api/install"
         case advertisements  = "api/auctions"
-        case index = "api/advertisement/index"
+        case index = "api/advertisement/index/"
     }
 }

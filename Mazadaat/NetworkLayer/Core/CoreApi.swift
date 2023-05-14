@@ -11,7 +11,7 @@ import Moya
 
 enum CoreApi {
     case install
-    case index
+    case index(id:Int)
     case advertisement
 }
 
@@ -20,8 +20,8 @@ extension CoreApi:TargetType,BaseApiHeadersProtocol {
         switch self {
         case .advertisement : return EndPoints.Core.advertisements.rawValue
         case .install: return EndPoints.Core.install.rawValue
-        case .index:
-            return EndPoints.Core.index.rawValue
+        case .index(let id):
+            return EndPoints.Core.index.rawValue +  "\(id)"
         }
     }
     

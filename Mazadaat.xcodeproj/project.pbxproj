@@ -72,6 +72,8 @@
 		FAE9A801266503F100D40FD2 /* subAnswerColllectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE9A800266503F100D40FD2 /* subAnswerColllectionCell.swift */; };
 		FF12B1F22A0CFCAF009C4FFC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF12B1F42A0CFCAF009C4FFC /* Localizable.strings */; };
 		FF12B1F82A0D7D55009C4FFC /* VerifyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF12B1F72A0D7D55009C4FFC /* VerifyModel.swift */; };
+		FF154EA42A11789D00ABDC80 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF154EA22A11789D00ABDC80 /* CategoryCollectionViewCell.swift */; };
+		FF154EA52A11789D00ABDC80 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF154EA32A11789D00ABDC80 /* CategoryCollectionViewCell.xib */; };
 		FF1894D129E105950032D951 /* NotificationApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1894D029E105950032D951 /* NotificationApi.swift */; };
 		FF2F701929E274FA0018B339 /* TicketsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F701829E274FA0018B339 /* TicketsApi.swift */; };
 		FF2F701B29E275090018B339 /* TicketNetworkingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F701A29E275090018B339 /* TicketNetworkingProtocol.swift */; };
@@ -512,6 +514,8 @@
 		FF12B1F52A0CFCBC009C4FFC /* ar */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ar; path = ar.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF12B1F62A0CFCBC009C4FFC /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FF12B1F72A0D7D55009C4FFC /* VerifyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyModel.swift; sourceTree = "<group>"; };
+		FF154EA22A11789D00ABDC80 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		FF154EA32A11789D00ABDC80 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		FF1894D029E105950032D951 /* NotificationApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationApi.swift; sourceTree = "<group>"; };
 		FF2F701529E253730018B339 /* TableView + Extesnions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TableView + Extesnions.swift"; sourceTree = "<group>"; };
 		FF2F701829E274FA0018B339 /* TicketsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsApi.swift; sourceTree = "<group>"; };
@@ -1113,6 +1117,15 @@
 				FABD93BE2532DD2A00BFB943 /* ArbFONTS-Jozoor-Font.ttf */,
 			);
 			path = Jozoor;
+			sourceTree = "<group>";
+		};
+		FF154EA12A11788300ABDC80 /* CategoryCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FF154EA22A11789D00ABDC80 /* CategoryCollectionViewCell.swift */,
+				FF154EA32A11789D00ABDC80 /* CategoryCollectionViewCell.xib */,
+			);
+			path = CategoryCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		FF1894CF29E105830032D951 /* Notification */ = {
@@ -1826,6 +1839,7 @@
 		FF8B951429FA6A3300441899 /* AskGoldenBell */ = {
 			isa = PBXGroup;
 			children = (
+				FF154EA12A11788300ABDC80 /* CategoryCollectionViewCell */,
 				FF8B951729FA6A4B00441899 /* ViewModel */,
 				FF8B951629FA6A4700441899 /* View */,
 				FF8B951529FA6A3B00441899 /* Adabter */,
@@ -2929,6 +2943,7 @@
 				FF7185D929FB7CFD00867213 /* PersonalInformationHeader.xib in Resources */,
 				FF4C7EE629D379B70095396A /* Archivo-ThinItalic.ttf in Resources */,
 				FFD1BFBD29C4D21C0008C814 /* RegisterViewController.xib in Resources */,
+				FF154EA52A11789D00ABDC80 /* CategoryCollectionViewCell.xib in Resources */,
 				FF8B257129EB2A1A00302346 /* AuctionDetailesView.xib in Resources */,
 				FF12B1F22A0CFCAF009C4FFC /* Localizable.strings in Resources */,
 				FFFE91942A052BE3001BE377 /* PlanViewController.xib in Resources */,
@@ -3201,6 +3216,7 @@
 				FFC6DF5029E1082B00BD9364 /* CoreRepo.swift in Sources */,
 				FFE2C51B29DBB17300F8C16F /* PackageSubscribePlan.swift in Sources */,
 				FF12B1F82A0D7D55009C4FFC /* VerifyModel.swift in Sources */,
+				FF154EA42A11789D00ABDC80 /* CategoryCollectionViewCell.swift in Sources */,
 				FFA0476F2A0C2B8C00B8D390 /* SearchViewController.swift in Sources */,
 				FA9DD44F2664AC0800DFE590 /* CollapsibleTableViewHeader.swift in Sources */,
 				FF818BA729F86C6A00CA9A99 /* ProfileViewModel.swift in Sources */,

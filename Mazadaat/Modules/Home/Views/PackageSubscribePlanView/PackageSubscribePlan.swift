@@ -34,7 +34,7 @@ class PackageSubscribePlan: UIView {
     private func setupUI() {
         continerView.setRoundCorners(5)
         upgradeButton.setRoundCorners(20)
-        
+    
     }
     
     func setupLocalize(balance:String) {
@@ -42,7 +42,7 @@ class PackageSubscribePlan: UIView {
         remainingPlanLabel.text = "remainingInYourPlan".localize
          CoreData.shared.personalSubscription?.first?.gainedBalance ?? ""
         
-        remainingValueOfPlan.text =  balance + "of".localize + (CoreData.shared.personalSubscription?.first?.gainedBalance ?? "") + "  " + Localizations.SAR.localize
+        remainingValueOfPlan.text =  balance + " " + "of".localize + " " + (CoreData.shared.personalSubscription?.first?.gainedBalance ?? "") + "  " + Localizations.SAR.localize
     }
     
     @IBAction func upgradeButtonAction(_ sender: UIButton) {

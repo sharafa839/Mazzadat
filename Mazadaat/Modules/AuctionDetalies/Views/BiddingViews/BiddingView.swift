@@ -97,7 +97,7 @@ class BiddingView: UIView {
     
     func timerStart(endDate:String) {
         TimerManagerr(interval: 1, endDate: endDate, stopTimer: false) { (day, hour, minute, second, true) in
-            self.endInValueLabel.text =  + day + "d".localize + hour + "h".localize + minute + "m".localize + second + "s".localize
+            self.endingInValueLabel.text =  "endingIn".localize + day + "d".localize + hour + "h".localize + minute + "m".localize + second + "s".localize
         }.start()
     }
 

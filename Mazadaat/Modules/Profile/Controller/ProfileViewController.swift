@@ -53,7 +53,7 @@ class ProfileViewController: UIViewController, SentRequestDelegate {
     //MARK: - Methods
     private func setupUI() {
         containerView.setRoundCorners(20)
-        packageView.setRoundCorners(5)
+        packageView.drawBorder(raduis: 10, borderColor: .Bronze_500)
         packageView.setupLocalize(balance: HelperK.getMoney())
         packageView.isHidden = (CoreData.shared.personalSubscription?.isEmpty ?? false)
         

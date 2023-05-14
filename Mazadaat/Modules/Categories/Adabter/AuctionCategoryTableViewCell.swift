@@ -39,7 +39,7 @@ class AuctionCategoryTableViewCell: UITableViewCell {
     
     func timerStart(endDate:String) {
         TimerManagerr(interval: 1, endDate: endDate, stopTimer: false) { (day, hour, minute, second, true) in
-            self.endInValueLabel.text = "EndIn".localize + day + "d".localize + hour + "h".localize + minute + "m".localize + second + "s".localize
+            self.endInValueLabel.text = "EndIn".localize + " " + day + " " + "d".localize + " " + hour + "h".localize + " " + minute + " " + "m".localize + " " + second + " " + "s".localize
         }.start()
     }
     
@@ -60,8 +60,8 @@ class AuctionCategoryTableViewCell: UITableViewCell {
         let seconds = "\(diffDateComponents.second ?? 0)"
 
         if seconds.contains("-"){
-            daysValueLabel.text = "expired"
-            endInValueLabel.text = "expired"
+            daysValueLabel.text = "expired".localize
+            endInValueLabel.text = "expired".localize
 
         }else {
             
@@ -72,6 +72,7 @@ class AuctionCategoryTableViewCell: UITableViewCell {
     
      func configure(_ with:CategoryAuctions) {
          auctionTypeLabel.text = ""
+         daysValueLabel.text = ""
         setupDate(with)
         favoriteButton.setImage(with.isFavourite ?? false ? UIImage(named: "heart"):UIImage(named: "heart-add-line") , for: .normal)
         favoriteView.backgroundColor = with.isFavourite ?? false ? .Bronze_500 : .lightGray

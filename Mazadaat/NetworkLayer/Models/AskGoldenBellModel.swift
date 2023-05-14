@@ -21,6 +21,7 @@ struct AskGoldenBellModel: Codable {
 struct AdvertisementCategory: Codable {
     var id: Int?
     var name, nameAr: String?
+    var selected = false
 
     enum CodingKeys: String, CodingKey {
         case id, name

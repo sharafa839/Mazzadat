@@ -46,6 +46,8 @@ class HeaderHomeView: UIView {
     
     //MARK: - Methods
     func configure() {
+        [nameLabel,welcomeLabel].map({$0?.textAlignment = LocalizationManager.shared.getLanguage() == .Arabic ? .right : .left})
+
         nameLabel.text = HelperK.getname()
         guard let url = URL(string: HelperK.getAvatar()) else {return}
         let placeholderImage = UIImage(named: "AppIcon")!

@@ -73,7 +73,7 @@ class CategoriesViewController: UIViewController, FilterAuctionProtocol, Sorting
     private func setupViewModelObserver() {
         viewModel.onSuccessGetAuctions.subscribe { [weak self] value in
             guard let category = value.element else {return}
-            self?.resultLabel.text = "result".localize + "\(category.count)"
+            self?.resultLabel.text = "result".localize + "  " +  "\(category.count)"
             self?.tableView.reloadData()
         }.disposed(by: viewModel.disposeBag)
         viewModel.onSuccessFavorite.subscribe { [weak self] value in

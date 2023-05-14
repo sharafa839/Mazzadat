@@ -40,8 +40,8 @@ class AuctionsTableViewCell: UITableViewCell {
         containerView.setRoundCorners(10)
         auctionImageView.setRoundCorners(10)
         auctionContinerView.setRoundCorners(auctionContinerView.frame.height/2)
-        countView.setRoundCorners(10)
-        endInView.setRoundCorners(10)
+        countView.setRoundCorners(5)
+        endInView.setRoundCorners(5)
         biddingStatusView.setRoundCorners(5)
     }
     
@@ -63,7 +63,7 @@ class AuctionsTableViewCell: UITableViewCell {
             endInLabel.text = "expired".localize
 
         }else {
-            endInLabel.text = "\(diffDateComponents.day ?? 0)d \(diffDateComponents.hour ?? 0)h \(diffDateComponents.minute ?? 0) m"
+            endInLabel.text =  "endingIn".localize + "\(diffDateComponents.day ?? 0)" + " " + "d".localize + " " + " " +  "\(diffDateComponents.hour ?? 0)" + " " + "h".localize + " " + "\(diffDateComponents.minute ?? 0)" + " " + "m".localize
 
 
         }
@@ -81,7 +81,7 @@ class AuctionsTableViewCell: UITableViewCell {
         auctionsCountLabel.text = "\(with.bidsCount ?? 0)"
         guard let date = with.endAt?.getDate() else {return}
         
-        endInLabel.text = "\(date.day + "d".localize) \(date.hour + "h".localize) \(date.minute + "m".localize)"
+        endInLabel.text = "endingIn".localize + " " + "\(date.day + " " + "d".localize) \(date.hour + " " + "h".localize) \(date.minute + " " + "m".localize)"
         guard let image = with.media?.first?.file else {return}
         guard let url = URL(string: image) else {return}
         let placeholderImage = UIImage(named: "AppIcon")!

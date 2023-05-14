@@ -78,7 +78,7 @@ class AskGoldenBellViewController: UIViewController {
         tableView.register(AskGoldenBellTableViewCell.nib, forCellReuseIdentifier: AskGoldenBellTableViewCell.identifier)
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(KindOfAuctionCollectionViewCell.nib, forCellWithReuseIdentifier: KindOfAuctionCollectionViewCell.identifier)
+        collectionView.register(CategoryCollectionViewCell.nib, forCellWithReuseIdentifier: CategoryCollectionViewCell.identifier)
 
     }
     
@@ -159,27 +159,30 @@ extension AskGoldenBellViewController:UICollectionViewDelegate,UICollectionViewD
         viewModel.onSuccessGetAllCats.value.count
     }
     
+    
+  
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell:KindOfAuctionCollectionViewCell = collectionView.dequeue(at: indexPath)
+        let cell:CategoryCollectionViewCell = collectionView.dequeue(at: indexPath)
         cell.configureCell(viewModel.onSuccessGetAllCats.value[indexPath.row])
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 200 , height: 50)
-    }
+   
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        var kindOfCollection = viewModel.onSuccessGetAllCats.value
-//        guard let index =  kindOfCollection.firstIndex(where: {$0.selected == true}) else {return}
-//        kindOfCollection[index].selected = false
-//        kindOfCollection[indexPath.row].selected = true
-//        viewModel.onSuccessGetAllCats.accept(kindOfCollection)
-//        guard let auctionState = AuctionState(rawValue: indexPath.row) else {return}
-        //getAuctionHolder(state: auctionState)
+        guard let id = viewModel.onSuccessGetAllCats.value[indexPath.row].id else {return}
+        viewModel.getGoldenBell(id: id)
         
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+      let language =   LocalizationManager.shared.getLanguage()
+        
+        guard let widthInEnglish = viewModel.onSuccessGetAllCats.value[indexPath.row].name?.widthOfString(usingFont:.Archivo(18,weight: .Bold)) else {return CGSize(width: 100 , height: 48)}
+        
+        guard let widthInArabic = viewModel.onSuccessGetAllCats.value[indexPath.row].nameAr?.widthOfString(usingFont:.Archivo(18,weight: .Bold)) else {return CGSize(width: 100 , height: 48)}
+        
+        return  language == .Arabic ?  CGSize(width: widthInArabic + 65, height: 48): CGSize(width: widthInEnglish + 65, height: 48)
+    }
     
 }
