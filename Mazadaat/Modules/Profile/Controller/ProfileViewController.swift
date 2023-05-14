@@ -43,6 +43,7 @@ class ProfileViewController: UIViewController, SentRequestDelegate {
         setupTableView()
         setupViews()
         setupViewModelObserver()
+        setupViews()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -56,6 +57,14 @@ class ProfileViewController: UIViewController, SentRequestDelegate {
         packageView.setupLocalize(balance: HelperK.getMoney())
         packageView.isHidden = (CoreData.shared.personalSubscription?.isEmpty ?? false)
         
+    }
+    
+    
+    
+    private func goToPlans() {
+    let planViewController = PlansViewController()
+        planViewController.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(planViewController, animated: true)
     }
     
     private func setupLocalize() {
@@ -72,6 +81,10 @@ class ProfileViewController: UIViewController, SentRequestDelegate {
             self?.openControlCenter()
         }
         profileView.setupUI(view: .profile)
+        
+        packageView.onTapUpgrade = { [weak self]   in
+            self?.goToPlans()
+        }
     }
     
     private func openControlCenter() {
@@ -128,6 +141,13 @@ extension ProfileViewController:UITableViewDelegate,UITableViewDataSource {
             let ticketViewController = TicketViewController(viewModel: ticketViewModel)
             ticketViewController.hidesBottomBarWhenPushed = true
             navigationController?.pushViewController(ticketViewController, animated: true)
+        case 2:
+            let chatId = ""
+            let chatViewModel = ChatViewModel(chatId: chatId, name: Localizations.chat.localize)
+            let chatViewController  = ChatViewController(viewModel: chatViewModel)
+            chatViewController.hidesBottomBarWhenPushed = true
+            navigationController?.pushViewController(chatViewController, animated: true)
+
         case 3:
             let planViewController = PlansViewController()
             planViewController.hidesBottomBarWhenPushed = true
@@ -146,6 +166,7 @@ extension ProfileViewController:UITableViewDelegate,UITableViewDataSource {
         cell.didTapRequestAction = { [weak self]  in
             let requestViewModel = RequestAuctionViewModel()
             let requestViewController = RequestAuctionViewController(viewModel: requestViewModel)
+            requestViewController.hidesBottomBarWhenPushed = true
             requestViewController.delegate = self
             self?.navigationController?.pushViewController(requestViewController, animated: true)
         }

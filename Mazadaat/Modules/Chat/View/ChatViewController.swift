@@ -30,7 +30,7 @@ class ChatViewController: UIViewController {
         setupObservables()
         setupViewModelObservers()
         viewModel.getMessages()
-        setNavigationItem(title: viewModel.name)
+        setNavigationItem(title: viewModel.name ?? Localizations.chat.localize)
     }
 
 

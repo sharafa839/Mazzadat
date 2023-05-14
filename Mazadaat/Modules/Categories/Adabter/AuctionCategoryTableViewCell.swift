@@ -25,7 +25,7 @@ class AuctionCategoryTableViewCell: UITableViewCell {
     
     var onTapFavoriteButton:(()->Void)?
 
-    
+    var timer:Timer?
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
@@ -35,6 +35,12 @@ class AuctionCategoryTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func timerStart(endDate:String) {
+        TimerManagerr(interval: 1, endDate: endDate, stopTimer: false) { (day, hour, minute, second, true) in
+            self.endInValueLabel.text = "EndIn".localize + day + "d".localize + hour + "h".localize + minute + "m".localize + second + "s".localize
+        }.start()
     }
     
     private func setupUI() {
@@ -58,14 +64,14 @@ class AuctionCategoryTableViewCell: UITableViewCell {
             endInValueLabel.text = "expired"
 
         }else {
-            endInValueLabel.text = "End In \(diffDateComponents.day ?? 0)d \(diffDateComponents.hour ?? 0)h \(diffDateComponents.minute ?? 0) m"
-            daysValueLabel.text = "\(diffDateComponents.day ?? 0) days"
+            
+            timerStart(endDate: with.endAt ?? "")
 
         }
     }
     
      func configure(_ with:CategoryAuctions) {
-       //  auctionTypeLabel.text = ""
+         auctionTypeLabel.text = ""
         setupDate(with)
         favoriteButton.setImage(with.isFavourite ?? false ? UIImage(named: "heart"):UIImage(named: "heart-add-line") , for: .normal)
         favoriteView.backgroundColor = with.isFavourite ?? false ? .Bronze_500 : .lightGray

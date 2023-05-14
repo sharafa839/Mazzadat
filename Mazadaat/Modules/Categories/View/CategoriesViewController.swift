@@ -51,6 +51,19 @@ class CategoriesViewController: UIViewController, FilterAuctionProtocol, Sorting
         setupUI()
         setupLocalize()
         setupObservables()
+        setupViews()
+    }
+    
+    private func setupViews() {
+        packageView.onTapUpgrade = { [weak self]   in
+            self?.goToPlans()
+        }
+    }
+    
+    private func goToPlans() {
+    let planViewController = PlansViewController()
+        planViewController.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(planViewController, animated: true)
     }
     
     private func getAuctionsDetails() {
@@ -60,7 +73,7 @@ class CategoriesViewController: UIViewController, FilterAuctionProtocol, Sorting
     private func setupViewModelObserver() {
         viewModel.onSuccessGetAuctions.subscribe { [weak self] value in
             guard let category = value.element else {return}
-            self?.resultLabel.text = "result \(category.count)"
+            self?.resultLabel.text = "result".localize + "\(category.count)"
             self?.tableView.reloadData()
         }.disposed(by: viewModel.disposeBag)
         viewModel.onSuccessFavorite.subscribe { [weak self] value in

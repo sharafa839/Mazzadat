@@ -58,48 +58,22 @@ class TimerManagerr {
         
         if timerStop == true {
             tick("0", "0", "0", "0",true)
-return
+            return
         }
-//        let d = (endDate?.toDate()
         var calendar = Calendar.current
 
         let endDatee = self.endDate?.toDateNew()
         
-//        if timerStop == true {
-//            timer?.invalidate()
-//            return
-//        }
-        
-        let timeInterval = calendar.dateComponents([.day, .hour, .minute, .second], from: Date(), to: endDatee! )
-            
-//            if  timeInterval.isValidDate{
-                print("Viald")
 
-           
-            
+        let timeInterval = calendar.dateComponents([.day, .hour, .minute, .second], from: Date(), to: endDatee! )
+        
             let days = "\(timeInterval.day ?? 0)"
             let hours = " \(timeInterval.hour  ?? 0)"
          
             let minutes = " \(timeInterval.minute ?? 0)"
             let seconds = " \(timeInterval.second ?? 0)"
-         
-    //
-    //        if days <= "0" && hours <= "0" && minutes <= "0" {
-    //            stopTimer()
-    //            isHideen = true
-    //        }
+
             tick(days, hours, minutes, seconds, isHideen ?? false)
-        
-
-        
-        
-//        let nowD = Date().toString(format: .custom(Constants.DateFormat.personalizedOfferDateFormat))
-////        let calendar = Calendar.current
-//        let currentDate = nowD.toDate(withFormat: Constants.DateFormat.personalizedOfferDateFormat)!
-//        let endtDatee =  (endDate?.toDate(withFormat: Constants.DateFormat.personalizedOfferDateFormat))!
-
-        //timer interval between current date and offer end date!
-       
 
     }
 }

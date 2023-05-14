@@ -16,6 +16,7 @@
                 <outlet property="auctionDetails" destination="5zG-SJ-RCH" id="4Uc-gs-Ebu"/>
                 <outlet property="auctionSpecification" destination="pSj-Xo-mi4" id="72J-zN-Igv"/>
                 <outlet property="biddingView" destination="fVL-yi-OF1" id="Sid-z6-9EF"/>
+                <outlet property="chatView" destination="cRi-eS-9j0" id="UMN-Av-1RJ"/>
                 <outlet property="favoriteButton" destination="zQj-3W-EJZ" id="zeD-Dl-TGP"/>
                 <outlet property="favoriteView" destination="P2b-PX-Rrf" id="Cn2-d8-nQK"/>
                 <outlet property="imageSlider" destination="bAT-gZ-1aE" id="CFK-gX-KHe"/>

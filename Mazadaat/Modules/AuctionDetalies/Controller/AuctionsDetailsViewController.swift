@@ -18,6 +18,7 @@ class AuctionsDetailsViewController: UIViewController, HeightsBidding {
     
     //MARK: - IBOutlets
     
+    @IBOutlet weak var chatView: UIView!
     @IBOutlet weak var favoriteView: UIView!
     @IBOutlet weak var favoriteButton: UIButton!
     @IBOutlet weak var imageSlider: ImageSlideshow!
@@ -56,6 +57,7 @@ class AuctionsDetailsViewController: UIViewController, HeightsBidding {
     
     private func setupUI() {
         favoriteView.setRoundCorners(favoriteView.frame.height/2)
+        chatView.circle()
     }
     
     private func setupViewObservables() {
@@ -134,7 +136,7 @@ class AuctionsDetailsViewController: UIViewController, HeightsBidding {
     
     @IBAction func chatButton(_ sender: Any) {
         guard let auctionId = auctionDetailsModel?.id else {return}
-        let chatViewModel = ChatViewModel(chatId: "\(auctionId)",name:auctionDetailsModel?.name ?? "")
+        let chatViewModel = ChatViewModel(chatId: nil,auctionId: "\(auctionId)",name:auctionDetailsModel?.name ?? "")
         let chatViewController = ChatViewController(viewModel: chatViewModel)
         navigationController?.pushViewController(chatViewController, animated: true)
     }

@@ -90,9 +90,15 @@ class BiddingView: UIView {
             endingInValueLabel.text = "expired".localize
 
         }else {
-            endingInValueLabel.text = "\(diffDateComponents.day ?? 0)" + "d".localize + "\(diffDateComponents.hour ?? 0)" + "h".localize + "\(diffDateComponents.minute ?? 0)" + "m".localize
+            timerStart(endDate: end)
 
         }
+    }
+    
+    func timerStart(endDate:String) {
+        TimerManagerr(interval: 1, endDate: endDate, stopTimer: false) { (day, hour, minute, second, true) in
+            self.endInValueLabel.text =  + day + "d".localize + hour + "h".localize + minute + "m".localize + second + "s".localize
+        }.start()
     }
 
     @IBAction func biddingButtonAction(_ sender: UIButton) {
