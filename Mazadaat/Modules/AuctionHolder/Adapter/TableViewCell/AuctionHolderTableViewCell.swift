@@ -38,9 +38,9 @@ class AuctionHolderTableViewCell: UITableViewCell {
     }
     
     private func setupLocalize() {
-        entryFeeLabel.text = "entryFee"
-        startinLabel.text = "startingIn"
-        auctionDaysLabel.text = "auctionDays"
+        entryFeeLabel.text = "entryFee".localize
+        startinLabel.text = "startingIn".localize
+        auctionDaysLabel.text = "auctionDays".localize
     }
     
     private func setupUI() {
@@ -68,7 +68,7 @@ class AuctionHolderTableViewCell: UITableViewCell {
             kindOfAuctionButton.backgroundColor = .white
         }
         cityLabel.text = with.name
-        kindOfAuctionButton.setTitle(with.type, for: .normal)
+        kindOfAuctionButton.setTitle(with.type?.localize, for: .normal)
         let currentDate = Date()
         let calendar = Calendar.current
 
@@ -77,16 +77,17 @@ class AuctionHolderTableViewCell: UITableViewCell {
         let seconds = "\(diffDateComponents.second ?? 0)"
 
         if seconds.contains("-"){
-            startingInValueLabel.text = "expired"
-            auctionDaysValueLabel.text = "expired"
+            startingInValueLabel.text = "expired".localize
+            auctionDaysValueLabel.text = "expired".localize
 
         }else {
-            startingInValueLabel.text = "\(diffDateComponents.day ?? 0)d \(diffDateComponents.hour ?? 0)h \(diffDateComponents.minute ?? 0) m"
-            auctionDaysValueLabel.text = "\(diffDateComponents.day ?? 0)days"
+            startingInValueLabel.text = "\(diffDateComponents.day ?? 0)" + " " + "d".localize + " " + " " +  "\(diffDateComponents.hour ?? 0)" + " " + "h".localize + " " + "\(diffDateComponents.minute ?? 0)" + " " + "m".localize
+
+            auctionDaysValueLabel.text = "\(diffDateComponents.day ?? 0)" + "days".localize
 
         }
         countOfAuctionButton.backgroundColor = .white
-        countOfAuctionButton.setTitle("\(with.auctionsCount ?? 0) Auctions", for: .normal)
+        countOfAuctionButton.setTitle("\(with.auctionsCount ?? 0)" + " " + "auctionsCount".localize, for: .normal)
         entryFeeValueLabel.text = "\(with.entryFee ?? 0)"
         guard let image = with.cover else {return}
         guard let url = URL(string: image) else {return}
@@ -116,4 +117,14 @@ enum AuctionType:String {
     case online = "online"
     case offline = "offline"
     case hybrid =  "hybrid"
+    var localize:String {
+        switch self {
+        case .online:
+            return "online".localize
+        case .offline:
+            return "offline".localize
+        case .hybrid:
+            return "hybrid".localize
+        }
+    }
 }

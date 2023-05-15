@@ -33,6 +33,8 @@ class ForgetPasswordViewController: UIViewController {
     private func setupUI() {
         phoneNumberView.drawBorder(raduis: 10, borderColor: .borderColor)
         setNavigationItem(title: Localizations.forgetPassword.localize)
+        sendButton.setTitle("send".localize, for: .normal)
+        phoneNumberTextField.map({$0.textAlignment = LocalizationManager.shared.getLanguage() == .Arabic ? .right : .left})
     }
 
     @IBAction func sendButtonAction(_ sender: CustomButton) {

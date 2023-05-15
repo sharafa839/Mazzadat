@@ -84,7 +84,7 @@ class RegisterViewController: UIViewController {
         let titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.Bronze_900]
             kindOfAuhenticationSectionSegment.setTitleTextAttributes(titleTextAttributes, for: .normal)
             kindOfAuhenticationSectionSegment.setTitleTextAttributes(titleTextAttributes, for: .selected)
-        [phoneNumberTextField,passwordTextField,confirmPasswordTextField,fullNameTextField,phoneNumberTextField].map({$0?.textAlignment = LocalizationManager.shared.getLanguage() == .Arabic ? .right : .left})
+        [phoneNumberTextField,passwordTextField,confirmPasswordTextField,fullNameTextField,phoneNumberTextField,emailTextField].map({$0?.textAlignment = LocalizationManager.shared.getLanguage() == .Arabic ? .right : .left})
     }
     
     private func setupLocalize() {

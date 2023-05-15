@@ -35,7 +35,7 @@ class SplashViewController: UIViewController, SwiftyGifDelegate {
     }
     
     func playGif() {
-        guard let gif = try? UIImage(gifName: "Splash Ui O-w.gif") else { return }
+        guard let gif = try? UIImage(gifName: "Splash-Ui-01.gif") else { return }
         splashImage.startAnimatingGif()
         splashImage.setGifImage(gif, loopCount: 1)
     }

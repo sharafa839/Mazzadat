@@ -37,13 +37,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="318" height="176"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="wVm-KC-WfZ">
-                                        <rect key="frame" x="16" y="16" width="126" height="30"/>
+                                        <rect key="frame" x="16" y="16" width="146" height="30"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kHr-LP-I15">
-                                                <rect key="frame" x="0.0" y="0.0" width="81" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="101" height="30"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0Y-rd-6TJ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="81" height="30"/>
+                                                        <rect key="frame" x="2" y="0.0" width="97" height="30"/>
                                                         <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -51,14 +51,14 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstItem="c0Y-rd-6TJ" firstAttribute="leading" secondItem="kHr-LP-I15" secondAttribute="leading" id="5sN-LZ-1kX"/>
-                                                    <constraint firstAttribute="trailing" secondItem="c0Y-rd-6TJ" secondAttribute="trailing" id="L9F-wK-JJI"/>
+                                                    <constraint firstItem="c0Y-rd-6TJ" firstAttribute="leading" secondItem="kHr-LP-I15" secondAttribute="leading" constant="2" id="5sN-LZ-1kX"/>
+                                                    <constraint firstAttribute="trailing" secondItem="c0Y-rd-6TJ" secondAttribute="trailing" constant="2" id="L9F-wK-JJI"/>
                                                     <constraint firstItem="c0Y-rd-6TJ" firstAttribute="top" secondItem="kHr-LP-I15" secondAttribute="top" id="eHD-7B-4rh"/>
                                                     <constraint firstAttribute="bottom" secondItem="c0Y-rd-6TJ" secondAttribute="bottom" id="kB8-4K-Ot3"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NkH-7X-zF5">
-                                                <rect key="frame" x="86" y="0.0" width="40" height="30"/>
+                                                <rect key="frame" x="106" y="0.0" width="40" height="30"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="DHN-Rw-moV">
                                                         <rect key="frame" x="2" y="2" width="36" height="26"/>
@@ -171,7 +171,7 @@
                                 <constraints>
                                     <constraint firstItem="6Wj-Kz-PkS" firstAttribute="top" secondItem="35a-mr-Z1E" secondAttribute="bottom" constant="10" id="5Ga-NE-vPz"/>
                                     <constraint firstItem="35a-mr-Z1E" firstAttribute="leading" secondItem="XNp-2i-EFB" secondAttribute="leading" constant="16" id="BKv-dO-bBm"/>
-                                    <constraint firstItem="NBy-40-Spb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wVm-KC-WfZ" secondAttribute="trailing" constant="116" id="BrR-wy-Cm9"/>
+                                    <constraint firstItem="NBy-40-Spb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wVm-KC-WfZ" secondAttribute="trailing" constant="100" id="BrR-wy-Cm9"/>
                                     <constraint firstAttribute="trailing" secondItem="NBy-40-Spb" secondAttribute="trailing" constant="16" id="CmK-yv-SLc"/>
                                     <constraint firstItem="wVm-KC-WfZ" firstAttribute="top" secondItem="XNp-2i-EFB" secondAttribute="top" constant="16" id="HTN-3a-B8f"/>
                                     <constraint firstItem="wVm-KC-WfZ" firstAttribute="leading" secondItem="XNp-2i-EFB" secondAttribute="leading" constant="16" id="LtQ-Mo-ciV"/>
@@ -195,13 +195,13 @@
                                                     <constraint firstAttribute="height" constant="25" id="pjR-hi-kMr"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oc-ge-20K">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oc-ge-20K">
                                                 <rect key="frame" x="35" y="0.0" width="190.5" height="25"/>
                                                 <fontDescription key="fontDescription" name="Archivo-Regular" family="Archivo" pointSize="16"/>
                                                 <color key="textColor" name="TextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BX1-3o-2tc">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BX1-3o-2tc">
                                                 <rect key="frame" x="235.5" y="0.0" width="42.5" height="25"/>
                                                 <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="16"/>
                                                 <color key="textColor" name="TextColor"/>

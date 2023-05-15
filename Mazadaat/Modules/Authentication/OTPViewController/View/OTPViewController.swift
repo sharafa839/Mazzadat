@@ -78,7 +78,7 @@ class OTPViewController: UIViewController {
                 self?.timeInSecondsLabel.isHidden = true
                 self?.didntRecieveCodeLabel.isHidden = true
             }
-            self?.timeInSecondsLabel.text = "\(seconds)"
+            self?.timeInSecondsLabel.text = "\(seconds)"  + "sec".localize
             
         }.disposed(by: viewModel.disposeBag)
         
@@ -90,8 +90,14 @@ class OTPViewController: UIViewController {
                 appDelegate.coordinator.setRoot(MainTabBarController())
 
             }
+            
+           
         }.disposed(by: viewModel.disposeBag)
 
+        viewModel.onError.subscribe {  [weak self] value in
+            
+            self?.incorrecetCodeLabel.isHidden = false
+        }.disposed(by: viewModel.disposeBag)
     }
     
     private func setupObservables() {

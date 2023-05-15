@@ -51,7 +51,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C4c-Tx-BzR">
-                    <rect key="frame" x="336" y="56" width="70" height="40"/>
+                    <rect key="frame" x="312" y="56" width="70" height="40"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqf-8w-jSV">
                             <rect key="frame" x="8" y="8" width="54" height="24"/>
@@ -152,13 +152,13 @@
                     <buttonConfiguration key="configuration" style="plain" title="Button"/>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIo-R6-Hmk">
-                    <rect key="frame" x="184" y="572" width="46" height="20.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <rect key="frame" x="187" y="648.5" width="46" height="15.5"/>
+                    <fontDescription key="fontDescription" name="Archivo-Regular" family="Archivo" pointSize="14"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="C6C-1H-gOl">
-                    <rect key="frame" x="24" y="581" width="366" height="2"/>
+                    <rect key="frame" x="24" y="655" width="366" height="2"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MKH-Jk-OGK">
                             <rect key="frame" x="0.0" y="0.0" width="116.5" height="2"/>
@@ -188,15 +188,18 @@
                     </subviews>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QSF-WQ-zaS">
-                    <rect key="frame" x="24" y="599" width="366" height="56"/>
+                    <rect key="frame" x="24" y="681" width="366" height="56"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qqQ-XR-2ur">
                             <rect key="frame" x="0.0" y="0.0" width="366" height="56"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHV-WP-fFF" customClass="LoginWithOtherSideButton" customModule="Golden_Bell" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="366" height="56"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="18"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal">
+                                        <color key="titleColor" name="Bronze-900"/>
+                                    </state>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q47-6O-bEO">
                                     <rect key="frame" x="16" y="15.5" width="25" height="25"/>
@@ -224,8 +227,11 @@
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTT-AS-Sqj" customClass="LoginWithOtherSideButton" customModule="Golden_Bell" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="366" height="56"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="16"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Button">
+                                        <color key="titleColor" name="Bronze-900"/>
+                                    </state>
                                     <connections>
                                         <action selector="asGuest:" destination="-1" eventType="touchUpInside" id="1iH-t6-auM"/>
                                     </connections>
@@ -237,7 +243,7 @@
                                         <constraint firstAttribute="height" constant="25" id="iuB-qx-Bqb"/>
                                     </constraints>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                    <state key="normal" title="Button" image="NIC_400"/>
+                                    <state key="normal" title="Button" image="user-shared-line"/>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" name="Bronze-50"/>
@@ -301,20 +307,20 @@
             <viewLayoutGuide key="safeArea" id="Dse-3C-nRl"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="OIo-R6-Hmk" firstAttribute="centerX" secondItem="C6C-1H-gOl" secondAttribute="centerX" id="0Jn-Ly-JFZ"/>
-                <constraint firstAttribute="trailing" secondItem="C4c-Tx-BzR" secondAttribute="trailing" constant="8" id="1OW-jf-zwm"/>
+                <constraint firstItem="OIo-R6-Hmk" firstAttribute="centerX" secondItem="C6C-1H-gOl" secondAttribute="centerX" constant="3" id="0Jn-Ly-JFZ"/>
+                <constraint firstAttribute="trailing" secondItem="C4c-Tx-BzR" secondAttribute="trailing" constant="32" id="1OW-jf-zwm"/>
                 <constraint firstItem="THA-1m-Szf" firstAttribute="top" secondItem="4Uf-9I-Tq1" secondAttribute="bottom" constant="8" id="3ty-yv-2hT"/>
-                <constraint firstItem="QSF-WQ-zaS" firstAttribute="top" secondItem="C6C-1H-gOl" secondAttribute="bottom" constant="16" id="8xX-RD-ALX"/>
+                <constraint firstItem="QSF-WQ-zaS" firstAttribute="top" secondItem="C6C-1H-gOl" secondAttribute="bottom" constant="24" id="8xX-RD-ALX"/>
                 <constraint firstItem="C6C-1H-gOl" firstAttribute="leading" secondItem="b8c-PU-DUf" secondAttribute="leading" constant="24" id="Avh-LV-2cV"/>
                 <constraint firstItem="dZi-yb-cCK" firstAttribute="leading" secondItem="Dse-3C-nRl" secondAttribute="leading" constant="24" id="HR0-ta-azE"/>
-                <constraint firstItem="OIo-R6-Hmk" firstAttribute="leading" secondItem="C6C-1H-gOl" secondAttribute="leading" constant="160" id="Jom-Qr-jkz"/>
-                <constraint firstItem="C6C-1H-gOl" firstAttribute="top" secondItem="cqd-CF-Pqx" secondAttribute="bottom" constant="16" id="Jus-ov-7aV"/>
+                <constraint firstItem="OIo-R6-Hmk" firstAttribute="leading" secondItem="C6C-1H-gOl" secondAttribute="leading" constant="163" id="Jom-Qr-jkz"/>
+                <constraint firstItem="C6C-1H-gOl" firstAttribute="top" secondItem="cqd-CF-Pqx" secondAttribute="bottom" constant="90" id="Jus-ov-7aV"/>
                 <constraint firstItem="Dse-3C-nRl" firstAttribute="trailing" secondItem="THA-1m-Szf" secondAttribute="trailing" constant="24" id="MBT-n7-KdA"/>
                 <constraint firstItem="Dse-3C-nRl" firstAttribute="trailing" secondItem="dZi-yb-cCK" secondAttribute="trailing" constant="24" id="NpA-5T-1Gm"/>
                 <constraint firstItem="Dse-3C-nRl" firstAttribute="trailing" secondItem="QSF-WQ-zaS" secondAttribute="trailing" constant="24" id="PlG-o1-rXo"/>
                 <constraint firstItem="w6a-7o-zny" firstAttribute="top" secondItem="THA-1m-Szf" secondAttribute="bottom" constant="16" id="QRg-z6-RxI"/>
                 <constraint firstItem="VKn-RJ-lLe" firstAttribute="top" secondItem="C4c-Tx-BzR" secondAttribute="bottom" constant="20" id="SES-dO-nLo"/>
-                <constraint firstItem="OIo-R6-Hmk" firstAttribute="trailing" secondItem="C6C-1H-gOl" secondAttribute="trailing" constant="-160" id="SUF-r5-Xip"/>
+                <constraint firstItem="OIo-R6-Hmk" firstAttribute="trailing" secondItem="C6C-1H-gOl" secondAttribute="trailing" constant="-157" id="SUF-r5-Xip"/>
                 <constraint firstItem="dZi-yb-cCK" firstAttribute="top" secondItem="VKn-RJ-lLe" secondAttribute="bottom" constant="30" id="VJP-23-nVZ"/>
                 <constraint firstItem="4Uf-9I-Tq1" firstAttribute="leading" secondItem="Dse-3C-nRl" secondAttribute="leading" constant="24" id="Zzw-cA-Oj2"/>
                 <constraint firstItem="Dse-3C-nRl" firstAttribute="trailing" secondItem="VKn-RJ-lLe" secondAttribute="trailing" constant="32" id="ayX-lY-QI2"/>
@@ -335,7 +341,6 @@
         </view>
     </objects>
     <resources>
-        <image name="NIC_400" width="24" height="24"/>
         <image name="eye-close-line" width="24" height="24"/>
         <image name="key-line" width="24" height="24"/>
         <image name="user-line" width="24" height="24"/>
@@ -345,6 +350,9 @@
         </namedColor>
         <namedColor name="Bronze-50">
             <color red="0.9882352941176471" green="0.95686274509803926" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Bronze-900">
+            <color red="0.37254901960784315" green="0.23529411764705882" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Gold">
             <color red="0.95899999141693115" green="0.69900000095367432" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

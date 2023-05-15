@@ -75,6 +75,8 @@
 		FF154EA42A11789D00ABDC80 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF154EA22A11789D00ABDC80 /* CategoryCollectionViewCell.swift */; };
 		FF154EA52A11789D00ABDC80 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF154EA32A11789D00ABDC80 /* CategoryCollectionViewCell.xib */; };
 		FF1894D129E105950032D951 /* NotificationApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1894D029E105950032D951 /* NotificationApi.swift */; };
+		FF29755F2A126CA000591B38 /* SendMessagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF29755E2A126CA000591B38 /* SendMessagesModel.swift */; };
+		FF2975612A12988300591B38 /* Splash-Ui-01.gif in Resources */ = {isa = PBXBuildFile; fileRef = FF2975602A12988300591B38 /* Splash-Ui-01.gif */; };
 		FF2F701929E274FA0018B339 /* TicketsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F701829E274FA0018B339 /* TicketsApi.swift */; };
 		FF2F701B29E275090018B339 /* TicketNetworkingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F701A29E275090018B339 /* TicketNetworkingProtocol.swift */; };
 		FF2F701D29E275140018B339 /* TicketsRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F701C29E275140018B339 /* TicketsRepo.swift */; };
@@ -517,6 +519,8 @@
 		FF154EA22A11789D00ABDC80 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		FF154EA32A11789D00ABDC80 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		FF1894D029E105950032D951 /* NotificationApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationApi.swift; sourceTree = "<group>"; };
+		FF29755E2A126CA000591B38 /* SendMessagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMessagesModel.swift; sourceTree = "<group>"; };
+		FF2975602A12988300591B38 /* Splash-Ui-01.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Splash-Ui-01.gif"; sourceTree = "<group>"; };
 		FF2F701529E253730018B339 /* TableView + Extesnions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TableView + Extesnions.swift"; sourceTree = "<group>"; };
 		FF2F701829E274FA0018B339 /* TicketsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsApi.swift; sourceTree = "<group>"; };
 		FF2F701A29E275090018B339 /* TicketNetworkingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketNetworkingProtocol.swift; sourceTree = "<group>"; };
@@ -1041,6 +1045,7 @@
 				FA4F79A225770E84008FC9A1 /* AppDelegate+FCM.swift */,
 				FF4C7EFB29D453CC0095396A /* CustomizeComponents */,
 				FABD93912532DBF600BFB943 /* SceneDelegate.swift */,
+				FF2975602A12988300591B38 /* Splash-Ui-01.gif */,
 				FFAA4D692A03E2830027B478 /* Splash Ui O-w.gif */,
 				FABD93932532DBF600BFB943 /* ViewController.swift */,
 				FABD93982532DBF900BFB943 /* Assets.xcassets */,
@@ -1347,6 +1352,7 @@
 				FFB3E12D2A0478460078BAF4 /* FavoritesModel.swift */,
 				FF5894782A069B9300620ABB /* TicketModel.swift */,
 				FF12B1F72A0D7D55009C4FFC /* VerifyModel.swift */,
+				FF29755E2A126CA000591B38 /* SendMessagesModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -3064,6 +3070,7 @@
 				FFCDB4272A0516D7008A5937 /* PlansViewController.xib in Resources */,
 				FFD1BFC829C4E66E0008C814 /* ResetPasswordViewController.xib in Resources */,
 				FFFE91992A052C28001BE377 /* SelectionTableViewCell.xib in Resources */,
+				FF2975612A12988300591B38 /* Splash-Ui-01.gif in Resources */,
 				FF8B952029FACDA100441899 /* AuctionsSectionViewController.xib in Resources */,
 				FF8B257529EB310000302346 /* AuctionOwnerView.xib in Resources */,
 				FADE022B25DD2FFE00FB1675 /* animation_500_kl9bwexy.gif in Resources */,
@@ -3315,6 +3322,7 @@
 				FF92D93C29FB6B14006BAF9B /* ControlCenterTableViewCell.swift in Sources */,
 				FFC6DF4929E106F200BD9364 /* NotificationRepo.swift in Sources */,
 				FF79E39829F19A7600CEED4D /* NotificationsModel.swift in Sources */,
+				FF29755F2A126CA000591B38 /* SendMessagesModel.swift in Sources */,
 				FF5AF75429E044BE0020E716 /* HomeApi.swift in Sources */,
 				FF76276029E24E52002D531F /* AuctionHolderCellCollectionViewCell.swift in Sources */,
 				FFBC3C1A2A03307D00547566 /* FillDocumentCollectionViewCell.swift in Sources */,

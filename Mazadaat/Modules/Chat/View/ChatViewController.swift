@@ -31,6 +31,7 @@ class ChatViewController: UIViewController {
         setupViewModelObservers()
         viewModel.getMessages()
         setNavigationItem(title: viewModel.name ?? Localizations.chat.localize)
+        setupUI()
     }
 
 
@@ -43,14 +44,20 @@ class ChatViewController: UIViewController {
             let date = Date()
             let message = Message(senderType: "user", date: date.toString(format: "yyyy-mm-dd"), message: text, name: HelperK.getname())
             
-            viewModel.sendMessageToBackend(message: message)
+            viewModel.sendMessage(message: message)
+            textField.text = ""
         }.disposed(by: viewModel.disposeBag)
+    }
+    
+    private func setupUI() {
+        sendButton.isEnabled = textField.text != ""
     }
     
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(MCell.nib, forCellReuseIdentifier: MCell.identifier)
+        textField.delegate = self
     }
     
     private func setupViewModelObservers() {
@@ -75,10 +82,17 @@ extension ChatViewController : UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:MCell = tableView.dequeue()
-        cell.configure(message: viewModel.messages.value[indexPath.row])
+         let message = viewModel.messages.value[indexPath.row]
+        cell.configure(message:message)
         return cell
     }
     
    
     
+}
+
+extension ChatViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        sendButton.isEnabled = true
+    }
 }

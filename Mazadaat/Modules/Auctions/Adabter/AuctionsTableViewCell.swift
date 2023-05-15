@@ -117,7 +117,7 @@ class AuctionsTableViewCell: UITableViewCell {
         auctionsCountLabel.text = "\(with.bidsCount ?? 0)"
         guard let date = with.endAt?.getDate() else {return}
         
-        endInLabel.text = "\(date.day + "d".localize) \(date.hour + "h".localize) \(date.minute + "m".localize)"
+        endInLabel.text = "\(date.day + " " + "d".localize) \(date.hour + " " + "h".localize) \(date.minute + " " + "m".localize)"
         guard let image = with.media?.first?.file else {return}
         guard let url = URL(string: image) else {return}
         let placeholderImage = UIImage(named: "AppIcon")!
@@ -148,7 +148,7 @@ class AuctionsTableViewCell: UITableViewCell {
     }
     
     func configureToBidding(with:FavoriteModel) {
-        
+        biddingStatusView.isHidden = false
         setTitleColorForBidding()
         if with.lastBid?.userID == HelperK.getId() {
             biddingStatusLabel.text = "yourTheHeighstNow".localize
@@ -156,6 +156,7 @@ class AuctionsTableViewCell: UITableViewCell {
             biddingStatusView.backgroundColor = .Bronze_100
             biddingValueLabel.textColor = .Bronze_900
             biddingStatusLabel.textColor = .Bronze_900
+            biddingImageView.isHidden = false
         }else {
             biddingStatusLabel.text = "yourOutBid".localize
             biddingValueLabel.text = "AgainToLead".localize
@@ -175,7 +176,7 @@ class AuctionsTableViewCell: UITableViewCell {
         auctionsCountLabel.text = "\(with.bidsCount ?? 0)"
         guard let date = with.endAt?.getDate() else {return}
         
-        endInLabel.text = "\(date.day + "d".localize) \(date.hour + "h".localize) \(date.minute + "m".localize)"
+        endInLabel.text = "\(date.day + " " + "d".localize) \(date.hour + " " + "h".localize) \(date.minute + " " + "m".localize)"
         guard let image = with.media?.first?.file else {return}
         guard let url = URL(string: image) else {return}
         let placeholderImage = UIImage(named: "AppIcon")!

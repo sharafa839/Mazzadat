@@ -5,6 +5,7 @@
   Created by Sharaf on 11/05/2023.
   Copyright © 2023 macbook. All rights reserved.
 */
+"waitingSupplierApproval" = "في انتظار موافقة البائع";
 "yourTheHeighstNow" = "انت المزايد الاعلى الان";
 "expired" = "انتهى";
 "min" = "اقل مزايدة";
@@ -32,7 +33,7 @@
 "enterPassword" = "كلمة السر";
 "forgetPassword" = "نسيت كلمةالسر؟";
 "or" = "أو";
-"continueAsGuest" = "المتابعة كذائر";
+"continueAsGuest" = "المتابعة كزائر";
 "enterTheEmail" = "ادخل البريد الألكتروني";
 "enterYourMobileNumber" = "رقم الهاتف";
 "verifyYourOtp" = "تأكيد الرقم السري اللحظي";
@@ -188,5 +189,19 @@
 "bidNow" = "زايد الأن";
 "EndIn" = "ينتهي خلال";
 "result" = "النتائج";
-"waitingSupplierApproval" = "في انتظار موافقة البائع";
 "yourBidWon" = "مزايدتك ربحت ";
+"days" = "يوم";
+"entryFee" = "رسوم الدخول";
+"startingIn" = "يبدأ خلال";
+"auctionDays" = "ايام المزاد";
+"online" = "متصل";
+"offline" = "مكان";
+"hybrid" = "هجين";
+"auctionsCount" = "مزاد";
+"uploadImage" = "ارفق صورة";
+"isThereAnyComplainWithYou" = "هل واجهتك اي مشاكل؟";
+"To bid on auctions, we require certain personal documents to be uploaded and verified for your trust and safety." = "لكي تشارك في عملية المزايدة بامان نحتاج لارفاق بعض الملفات الشخصية";
+"inJpegOrPNG" = "بصيغة PNG , JPEG";
+"AddDocument" = "ارفق ملف";
+"youNeedToUpgradeYourPackageToGotMoreAuctions" = "اشترك في الباقات الاعلى لتشترك في مزادات اكثر";
+"sec" = "ث";

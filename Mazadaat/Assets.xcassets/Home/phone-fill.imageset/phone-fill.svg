@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+  <g id="phone-fill" transform="translate(-4 -4)">
+    <path id="Path_2234" data-name="Path 2234" d="M0,0H28V28H0Z" transform="translate(4 4)" fill="none"/>
+    <path id="mail-send-line" d="M24.818,3A1.2,1.2,0,0,1,26,4.222V23.786A1.2,1.2,0,0,1,24.828,25H3.536a1.194,1.194,0,0,1-1.172-1.214v-1.23H23.636V8.256l-9.455,8.8-11.818-11V4.222A1.2,1.2,0,0,1,3.545,3ZM9.455,17.667v2.444H0V17.667ZM5.909,11.556V14H0V11.556ZM23.123,5.444H5.24l8.941,8.322Z" transform="translate(5 4)" fill="#e2902d"/>
+  </g>
+</svg>

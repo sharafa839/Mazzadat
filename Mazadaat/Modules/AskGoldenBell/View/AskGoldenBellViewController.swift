@@ -185,4 +185,13 @@ extension AskGoldenBellViewController:UICollectionViewDelegate,UICollectionViewD
         return  language == .Arabic ?  CGSize(width: widthInArabic + 65, height: 48): CGSize(width: widthInEnglish + 65, height: 48)
     }
     
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return CGFloat.init(10)
+    }
+    
 }

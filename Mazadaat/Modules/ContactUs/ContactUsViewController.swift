@@ -13,6 +13,7 @@ class ContactUsViewController: UIViewController,MFMailComposeViewControllerDeleg
     
     
     //MARK: - IBOutlets
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var phoneContainerView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var mobilePhoneLabel: UILabel!
@@ -42,12 +43,14 @@ class ContactUsViewController: UIViewController,MFMailComposeViewControllerDeleg
         phoneContainerView.setRoundCorners(5)
         emailContainerView.setRoundCorners(5)
         setNavigationItem(title: Localizations.contactUs.localize)
-        imageView.circle()
+        
+        containerView.circle()
     }
     
     private func setupLocalize() {
         emailLabel.text = Localizations.emailUs.localize
         mobilePhoneLabel.text = Localizations.callUs.localize
+        titleLabel.text = "isThereAnyComplainWithYou".localize
     }
     
     private func setupObservables() {

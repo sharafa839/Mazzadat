@@ -121,7 +121,7 @@ enum AuctionStatus:Int {
         case .bidingTime:
             return "bidingTime"
         case .waitingSupplierApproval:
-            return "waitingSupplierApproval"
+            return "waitingSupplierApproval".localize
         case .waitingCustomerPayment:
             return "waitingCustomerPayment"
         case .finished:

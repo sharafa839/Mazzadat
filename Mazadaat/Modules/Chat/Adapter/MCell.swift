@@ -9,41 +9,90 @@ import UIKit
 
 class MCell: UITableViewCell {
 
-    @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var leftImage: UIImageView!
-    @IBOutlet weak var rightImage: UIImageView!
-    @IBOutlet weak var messageBubble: UIView!
+    
+    @IBOutlet weak var contentStackView: UIStackView!
+    @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var messageView: UIView!
+    @IBOutlet weak var messageDateLabel: UILabel!
+    
+    var longPressDidTapped: (() -> Void)?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        messageBubble.roundCorners( radius: 20)
-        messageBubble.backgroundColor = UIColor(red: 0.02, green: 0.36, blue: 0.62, alpha: 1)
-
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
-    func configure(message:Message) {
-        label.text = message.message
-        messageBubble.backgroundColor = message.senderType == "user" ? .Bronze_900 : .Bronze_500
-        leftImage.isHidden = message.senderType == "user"
     }
     
     
-    
-}
-extension UIView{
- 
-    func roundCorners( radius: CGFloat) {
-        self.layer.cornerRadius = radius
-        self.layer.maskedCorners = [.layerMaxXMaxYCorner,.layerMaxXMinYCorner,.layerMinXMaxYCorner]
+    func configure(message: Message){
+        let text = message.message ?? ""
+        let senderType = UserType(rawValue: message.senderType) ?? .user
+        messageView.backgroundColor = senderType.messageContainerColor
+        contentStackView.alignment = senderType.alignment
+        
+         let view = stackView.subviews[senderType == .user ? 1 : 0]
+            stackView.addArrangedSubview(view)
+        
+        
+        if text.isPhoneNumber, text.count < 13, text.count > 3 {
+            messageLabel.textColor = .blue
+            let longGesture = UILongPressGestureRecognizer(target: self, action:#selector(longTap))
+            addGestureRecognizer(longGesture)
+        } else {
+            messageLabel.textColor = senderType.messageTextColor
         }
-    func circleButton(radius:CGFloat)  {
-        self.layer.cornerRadius = radius
-        self.layer.maskedCorners = [.layerMaxXMaxYCorner,.layerMaxXMinYCorner,.layerMinXMaxYCorner,.layerMinXMinYCorner]
+        if let url = URL(string: text), UIApplication.shared.canOpenURL(url) {
+            messageLabel.textColor = .blue
+        } else {
+            messageLabel.textColor = senderType.messageTextColor
+        }
+  
+        messageLabel.text = text
+        let date = message.date.toDateNew(withFormat: "yyyy/mmm/dd")
+        messageDateLabel.text = date?.toString(format: "yyyy/mmm/dd")
     }
-   }
+    
+    @objc func longTap(gestureRecognizer: UIGestureRecognizer) {
+        longPressDidTapped?()
+    }
+}
+
+
+enum UserType: String {
+    case user = "user"
+    case admin = "admin"
+    
+    
+    var messageTextColor: UIColor {
+        switch self {
+        case .user: return .white
+        default: return .textColor
+        }
+    }
+    
+    var messageContainerColor: UIColor {
+        switch self {
+        case .user: return .Bronze_500
+        default: return .Bronze_100
+        }
+    }
+    
+    var alignment: UIStackView.Alignment {
+        switch self {
+        case .user: return .trailing
+        default: return .leading
+        }
+    }
+  
+}
+
+public extension String {
+    
+    var isPhoneNumber: Bool {
+        let char  = NSCharacterSet(charactersIn: "+0123456789").inverted
+        var filtered:NSString!
+        let inputString = self.components(separatedBy: char)
+        filtered = inputString.joined(separator: "") as NSString
+        return  self == filtered as String
+    }
+}

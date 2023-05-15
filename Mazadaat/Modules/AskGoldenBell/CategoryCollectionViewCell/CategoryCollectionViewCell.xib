@@ -25,10 +25,10 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0aT-vW-o7u">
-                        <rect key="frame" x="24" y="8" width="145" height="38"/>
+                        <rect key="frame" x="4" y="8" width="185" height="38"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ye9-Sd-e9D">
-                                <rect key="frame" x="8" y="8" width="129" height="22"/>
+                                <rect key="frame" x="8" y="8" width="169" height="22"/>
                                 <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="17"/>
                                 <color key="textColor" name="TextColor"/>
                                 <nil key="highlightedColor"/>
@@ -37,7 +37,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ye9-Sd-e9D" firstAttribute="leading" secondItem="0aT-vW-o7u" secondAttribute="leading" constant="8" id="EOc-lk-e75"/>
-                            <constraint firstAttribute="width" constant="145" id="bfo-XI-aam"/>
                             <constraint firstAttribute="bottom" secondItem="ye9-Sd-e9D" secondAttribute="bottom" constant="8" id="jRy-Cd-2a2"/>
                             <constraint firstAttribute="height" constant="38" id="lqZ-yM-f2Q"/>
                             <constraint firstAttribute="trailing" secondItem="ye9-Sd-e9D" secondAttribute="trailing" constant="8" id="oq7-Hb-Ccr"/>
@@ -48,9 +47,9 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="0aT-vW-o7u" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="24" id="Ls1-bW-RSK"/>
+                <constraint firstItem="0aT-vW-o7u" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="Ls1-bW-RSK"/>
                 <constraint firstItem="0aT-vW-o7u" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="csS-2y-R4r"/>
-                <constraint firstAttribute="trailing" secondItem="0aT-vW-o7u" secondAttribute="trailing" constant="24" id="jCh-7Q-roV"/>
+                <constraint firstAttribute="trailing" secondItem="0aT-vW-o7u" secondAttribute="trailing" constant="4" id="jCh-7Q-roV"/>
                 <constraint firstAttribute="bottom" secondItem="0aT-vW-o7u" secondAttribute="bottom" constant="8" id="vts-2h-RJU"/>
             </constraints>
             <size key="customSize" width="193" height="54"/>

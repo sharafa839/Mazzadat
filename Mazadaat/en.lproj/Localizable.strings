@@ -5,6 +5,7 @@
   Created by Sharaf on 11/05/2023.
   Copyright © 2023 macbook. All rights reserved.
 */
+"waitingSupplierApproval" = "Waiting supplier approval";
 "yourTheHeighstNow" = "you are the heighest now";
 "expired" = "expired";
 "min" = "minimum bid";
@@ -181,7 +182,7 @@
 "recently" = "recently";
 "oldest" = "Oldest";
 "Default" = "Default";
-"map" = "Location";
+"map" = "Maps";
 "edit" = "Edit";
 "numberOfBids" = "Number of bids:";
 "endingIn" = "Ending in";
@@ -189,5 +190,21 @@
 "bidNow" = "Bid now";
 "EndIn" = "End in";
 "result" = "result";
-"waitingSupplierApproval" = "Waiting supplier approval";
 "yourBidWon" = " your bid won";
+"days" = "days";
+"entryFee" = "Entree Fee";
+"startingIn" = "starting in";
+"startingIn" = "starting in";
+"auctionDays" = "auction days";
+"online" = "online";
+"offline" = "offline";
+"hybrid" = "hybrid";
+"auctionsCount" = "auctions";
+"uploadImage" = "upload image";
+"isThereAnyComplainWithYou" = "is there any complaint with you ? ";
+"To bid on auctions, we require certain personal documents to be uploaded and verified for your trust and safety." = "To bid on auctions, we require certain personal documents to be uploaded and verified for your trust and safety.";
+"inJpegOrPNG" = "In JPEG or PNG format";
+"AddDocument" = "Add Document";
+"youNeedToUpgradeYourPackageToGotMoreAuctions" = "you need to upgrade your package to get more auctions"; 
+"sec" = "sec";
+

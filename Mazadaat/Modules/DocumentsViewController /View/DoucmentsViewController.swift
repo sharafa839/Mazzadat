@@ -33,9 +33,12 @@ class DoucmentsViewController: UIViewController, didImageUpdates {
         setupTableView()
         setupViewModelObservers()
         setupViewModel()
-        
+        setupLocalize()
     }
 
+    private func setupLocalize() {
+        instructionsLabel.text = "To bid on auctions, we require certain personal documents to be uploaded and verified for your trust and safety.".localize
+    }
 
     private func setupTableView() {
         collectionView.delegate = self

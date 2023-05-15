@@ -26,5 +26,6 @@ class ProfileTableViewCell: UITableViewCell {
     func configure(_ with:ProfileModel) {
         titleLabel.text = with.title
         subTitleLabel.text = with.subTitle
+        
     }
 }

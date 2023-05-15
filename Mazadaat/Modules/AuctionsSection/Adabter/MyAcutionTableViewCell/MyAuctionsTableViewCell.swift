@@ -36,7 +36,7 @@ class MyAuctionsTableViewCell: UITableViewCell {
     private func setupLocalize() {
         yourBidWonLabel.text = "yourBidWon".localize
         currencyLabel.text = Localizations.SAR.localize
-        instructionLabel.text = "waitingSupplierApproval".localize
+       
     }
     
  

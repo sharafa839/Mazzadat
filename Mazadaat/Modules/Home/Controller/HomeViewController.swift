@@ -16,6 +16,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var packageSubscribePlan: PackageSubscribePlan!
     @IBOutlet weak var imageSlider: ImageSlideshow!
     
+    @IBOutlet weak var containerConstraintsLayout: NSLayoutConstraint!
     @IBOutlet weak var auctionHolderCollectionView: UICollectionView!
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     //MARK: - Properties
@@ -24,6 +25,8 @@ class HomeViewController: UIViewController {
     var screenSize: CGRect!
        var screenWidth: CGFloat!
        var screenHeight: CGFloat!
+    var isHaveAsubscrption = !(CoreData.shared.personalSubscription?.isEmpty ?? true)
+
     //MARK: - Init
     init(viewModel:HomeViewModel) {
         self.viewModel = viewModel
@@ -44,8 +47,8 @@ class HomeViewController: UIViewController {
         setupCollectionViews()
         setupViewModel()
         setupLayout()
-       setupViewsAction()
-        
+        setupViewsAction()
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -60,13 +63,15 @@ class HomeViewController: UIViewController {
     }
     
     func setupLayout() {
+         var isHaveAsubscrption = !(CoreData.shared.personalSubscription?.isEmpty ?? true)
         screenSize = UIScreen.main.bounds
         screenWidth = categoryCollectionView.bounds.width
         screenHeight =  categoryCollectionView.bounds.height
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        layout.itemSize = !(CoreData.shared.personalSubscription?.isEmpty ?? false) ?  CGSize(width: screenWidth/4, height: screenHeight/2.8) : CGSize(width: screenWidth/3.5, height: screenHeight/2)
-        layout.scrollDirection = .horizontal
+    
+        layout.itemSize = isHaveAsubscrption ?  CGSize(width: screenWidth/4, height: screenHeight/3.2) : CGSize(width: screenWidth/4, height: screenHeight/2.8)
+        layout.scrollDirection = .vertical
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
         categoryCollectionView.collectionViewLayout = layout

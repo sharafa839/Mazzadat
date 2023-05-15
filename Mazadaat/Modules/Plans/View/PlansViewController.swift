@@ -32,7 +32,7 @@ class PlansViewController: UIViewController {
     
     //MARK: - Methods
     private func setupLocalize() {
-        
+        titleLabel.text = "youNeedToUpgradeYourPackageToGotMoreAuctions".localize
     }
     
     private func setupUI() {

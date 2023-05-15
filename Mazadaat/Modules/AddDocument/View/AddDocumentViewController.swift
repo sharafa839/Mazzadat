@@ -49,7 +49,7 @@ var viewModel:AddDocumentViewModel
         super.viewDidLoad()
         setupTableView()
         setupViewModelObservers()
-        setNavigationItem(title: "AddDocument")
+        setNavigationItem(title: "AddDocument".localize)
         //setupMultiPart()
     }
     

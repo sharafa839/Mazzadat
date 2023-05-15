@@ -28,7 +28,9 @@ class EmptyAddDocumentTableViewCell: UITableViewCell {
         containerView.setRoundCorners(5)
         uploadPictureButton.circle()
         uploadButton.setRoundCorners(20)
-        uploadPictureButton.setTitle(Localizations.uploadDocument.localize, for: .normal)
+        uploadButton.setTitle(Localizations.uploadDocument.localize, for: .normal)
+        instrtuctionLabel.text = "inJpegOrPNG".localize
+        uploadPhotoLabel.text = "uploadImage".localize
     }
     
     @IBAction func uploadPhoto(_ sender: UIButton) {

@@ -60,7 +60,7 @@ class MainTabBarController: UITabBarController {
         
         let unselectedImageNames = ["home-5-fill",
                                     "question-mark",
-                                    "auction-line",
+                                    "auction-line-2",
                                     "user-smile-line"
                                     ]
         let selectedImageNames = ["selected-home-icon",

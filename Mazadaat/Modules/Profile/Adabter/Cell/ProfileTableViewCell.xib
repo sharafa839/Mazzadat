@@ -38,16 +38,16 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="c4z-VX-9OH">
-                                <rect key="frame" x="64" y="8" width="207" height="55"/>
+                                <rect key="frame" x="64" y="8" width="215" height="55"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJc-PV-Lwe">
-                                        <rect key="frame" x="0.0" y="0.0" width="207" height="19.5"/>
-                                        <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="18"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="215" height="19.5"/>
+                                        <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixP-Aq-O0k">
-                                        <rect key="frame" x="0.0" y="35.5" width="207" height="19.5"/>
+                                        <rect key="frame" x="0.0" y="35.5" width="215" height="19.5"/>
                                         <fontDescription key="fontDescription" name="Archivo-Regular" family="Archivo" pointSize="11"/>
                                         <color key="textColor" name="Neutral-v600"/>
                                         <nil key="highlightedColor"/>
@@ -64,7 +64,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Kfl-rS-RgQ" firstAttribute="leading" secondItem="c4z-VX-9OH" secondAttribute="trailing" constant="20" id="5D8-TM-dtl"/>
+                            <constraint firstItem="Kfl-rS-RgQ" firstAttribute="leading" secondItem="c4z-VX-9OH" secondAttribute="trailing" constant="12" id="5D8-TM-dtl"/>
                             <constraint firstItem="c4z-VX-9OH" firstAttribute="top" secondItem="aHv-pY-4eh" secondAttribute="top" constant="8" id="FQg-2y-2QL"/>
                             <constraint firstItem="c4z-VX-9OH" firstAttribute="leading" secondItem="qXy-KL-v8c" secondAttribute="trailing" constant="16" id="I2x-US-Lkb"/>
                             <constraint firstAttribute="bottom" secondItem="c4z-VX-9OH" secondAttribute="bottom" constant="8" id="TAp-bE-5W3"/>

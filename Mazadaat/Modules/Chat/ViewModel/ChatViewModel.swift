@@ -35,23 +35,24 @@ class ChatViewModel:HomeNetworkingProtocol {
     }
     
     func getMessages() {
-        ref =  Database.database(url: "https://golden-auctions.firebaseio.com/").reference().child("chats").child("\(CoreData.shared.loginModel?.id ?? 0)")
-        handle = ref?.observe(.childAdded, with: {[weak self] snapShot in
-            let data = snapShot.value as? NSDictionary
-            guard let name = data?["userName"] as? String else{return}
-            guard let date =  data?["date"] as? String else{return}
-            guard let text = data?["messages"] as? String else {return}
-            guard let senderType = data?["sender_Type"] as? String else {return}
+        ref =  Database.database(url: "https://golden-auctions.firebaseio.com/").reference().child("chats").child("\(2)")
+        handle = ref?.observe(.childAdded) {[weak self] snapShot in
+            guard let data = snapShot.value as? [String:Any] else {return}
+            guard let name = data["user_name"] as? String else{return}
+            guard let date =  data["date"] as? String else{return}
+            guard let text = data["messages"] as? String else {return}
+            guard let senderType = data["sender_type"] as? String else {return}
             var message = Message(senderType: senderType, date: date, message: text, name: name)
             var chat = self?.messages.value
             chat?.append(message)
             self?.messages.accept(chat ?? [])
-        })
+        }
     }
     
-    private func sendMessage(message:Message) {
-        let messageDictionary = ["sender_Type":message.senderType,"messages":message.message,"date":Date(),"userName":message.name] as [String : Any]
-        Database.database().reference().child("chats").child("\(CoreData.shared.loginModel?.id ?? 0)").childByAutoId().setValue(messageDictionary)
+     func sendMessage(message:Message) {
+         let date = Date().toString(format: "yyyy/mm/dd")
+         let messageDictionary = ["sender_Type":message.senderType,"messages":message.message,"date":date ?? "","userName":message.name] as [String : Any]
+        Database.database().reference().child("chats").child("\(2)").childByAutoId().setValue(messageDictionary)
     }
     
     func sendMessageToBackend(message:Message) {

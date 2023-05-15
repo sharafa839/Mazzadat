@@ -35,6 +35,10 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sjY-Z6-qUp">
+                    <rect key="frame" x="0.0" y="100" width="393" height="752"/>
+                    <color key="backgroundColor" name="Neutral-v100"/>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cbI-xs-8e0">
                     <rect key="frame" x="24" y="109" width="345" height="105"/>
                     <subviews>
@@ -177,14 +181,14 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="xXL-SF-pyg">
                                     <rect key="frame" x="0.0" y="0.0" width="86.333333333333329" height="107.33333333333333"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbs-86-Gcx">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbs-86-Gcx">
                                             <rect key="frame" x="3" y="0.0" width="80" height="80"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="80" id="0hX-xc-dVy"/>
                                                 <constraint firstAttribute="width" constant="80" id="NfC-XA-LNb"/>
                                             </constraints>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="instagram"/>
                                             <connections>
                                                 <action selector="openInstgram:" destination="-1" eventType="touchUpInside" id="6st-EX-vOo"/>
                                             </connections>
@@ -200,14 +204,14 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="WrV-Gg-JBC">
                                     <rect key="frame" x="86.333333333333343" y="0.0" width="86.333333333333343" height="107.33333333333333"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Set-EB-fHC">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Set-EB-fHC">
                                             <rect key="frame" x="3" y="0.0" width="80" height="80"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="80" id="0gL-HA-HLf"/>
                                                 <constraint firstAttribute="height" constant="80" id="Klg-BK-riE"/>
                                             </constraints>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="twitter"/>
                                             <connections>
                                                 <action selector="openTwitter:" destination="-1" eventType="touchUpInside" id="6QY-ci-Ouz"/>
                                             </connections>
@@ -223,14 +227,14 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="d5S-gt-VZz">
                                     <rect key="frame" x="172.66666666666666" y="0.0" width="85.999999999999972" height="107.33333333333333"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ed2-CR-Daf">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ed2-CR-Daf">
                                             <rect key="frame" x="3" y="0.0" width="80" height="80"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="80" id="iWt-t2-WaP"/>
                                                 <constraint firstAttribute="width" constant="80" id="yAm-uT-UjD"/>
                                             </constraints>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="youtube"/>
                                             <connections>
                                                 <action selector="openYoutube:" destination="-1" eventType="touchUpInside" id="J27-Da-q4X"/>
                                             </connections>
@@ -246,14 +250,14 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="eOk-4G-Gxw">
                                     <rect key="frame" x="258.66666666666669" y="0.0" width="86.333333333333314" height="107.33333333333333"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Irf-Nb-0Lh">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Irf-Nb-0Lh">
                                             <rect key="frame" x="3.3333333333333144" y="0.0" width="80" height="80"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="80" id="oZ1-kF-wtr"/>
                                                 <constraint firstAttribute="height" constant="80" id="rSr-ak-znd"/>
                                             </constraints>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="facebook"/>
                                             <connections>
                                                 <action selector="openFacebook:" destination="-1" eventType="touchUpInside" id="cRn-uy-w2L"/>
                                             </connections>
@@ -279,23 +283,31 @@
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" name="Neutral-v100"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="W6k-Ir-WRl" firstAttribute="top" secondItem="aVz-ah-cyl" secondAttribute="bottom" constant="24" id="2sI-uk-HJf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sjY-Z6-qUp" secondAttribute="trailing" id="56x-Wq-NNV"/>
                 <constraint firstItem="cbI-xs-8e0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="99O-4h-i3K"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="W6k-Ir-WRl" secondAttribute="trailing" constant="24" id="9tb-E7-BGh"/>
-                <constraint firstItem="cbI-xs-8e0" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="PJ8-RX-dVc"/>
+                <constraint firstItem="sjY-Z6-qUp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Ly1-TS-dMe"/>
+                <constraint firstItem="sjY-Z6-qUp" firstAttribute="top" secondItem="cbI-xs-8e0" secondAttribute="bottom" constant="-114" id="NSA-rb-9rs"/>
                 <constraint firstItem="W6k-Ir-WRl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="ReJ-Gg-wcS"/>
+                <constraint firstItem="sjY-Z6-qUp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="YHE-z0-hyl"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cbI-xs-8e0" secondAttribute="trailing" constant="24" id="eSb-1D-Cgz"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aVz-ah-cyl" secondAttribute="trailing" constant="24" id="rDT-46-At1"/>
                 <constraint firstItem="aVz-ah-cyl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="uOy-fy-JOM"/>
                 <constraint firstItem="aVz-ah-cyl" firstAttribute="top" secondItem="cbI-xs-8e0" secondAttribute="bottom" constant="16" id="uSv-39-YSO"/>
+                <constraint firstAttribute="bottom" secondItem="sjY-Z6-qUp" secondAttribute="bottom" id="x25-1i-3w2"/>
             </constraints>
             <point key="canvasLocation" x="136.64122137404578" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
         <image name="arrow-left-s-line" width="24" height="24"/>
+        <image name="facebook" width="56" height="56"/>
+        <image name="instagram" width="56" height="56"/>
+        <image name="twitter" width="56" height="56"/>
+        <image name="youtube" width="56" height="56"/>
         <namedColor name="Neutral-v100">
             <color red="0.96470588235294119" green="0.96470588235294119" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
