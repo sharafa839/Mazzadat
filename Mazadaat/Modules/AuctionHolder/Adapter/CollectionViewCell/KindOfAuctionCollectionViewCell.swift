@@ -20,12 +20,12 @@ class KindOfAuctionCollectionViewCell: UICollectionViewCell {
 
     private func setupUI() {
         
-        coontinerView.setRoundCorners(15)
+        coontinerView.setRoundCorners(20)
     }
     
      func configureCell(_ with:KindOFAuction) {
          sortingLabel.text = with.name
-         coontinerView.backgroundColor = with.selected ? .textColor : .white
+         coontinerView.backgroundColor = with.selected ? .textColor : .Natural_200
          sortingLabel.textColor = with.selected ? .white : .textColor
     }
     

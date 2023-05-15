@@ -41,12 +41,12 @@ extension UIView {
     
     func floatView(raduis: CGFloat,color:UIColor) {
            self.layer.cornerRadius = raduis
-        self.layer.shadowColor = UIColor(named: "MainColor")?.cgColor
-           self.layer.shadowOffset = CGSize(width: 0, height: 5)
+           self.layer.shadowOffset = CGSize(width: 0, height: 1)
            self.layer.shadowOpacity = 0.5
            self.layer.shadowRadius = 4
-        self.layer.borderColor = color.cgColor
-        self.layer.borderWidth = 0.3
+        self.layer.shadowColor =  color.cgColor
+     
+        self.layer.borderWidth = 0
        }
     
     func pinEdges(to other: UIView) {
@@ -280,3 +280,41 @@ extension String {
         let size = self.size(withAttributes: fontAttributes)
         return size.width
     }}
+
+extension UIView {
+    func applyDropShadow(withOffset offset: CGSize,
+                         opacity: Float,
+                         radius: CGFloat,
+                         color: UIColor) {
+        layer.applyDropShadow(withOffset: offset,
+                              opacity: opacity,
+                              radius: radius,
+                              color: color)
+    }
+    
+    func removeDropShadow() {
+        layer.removeDropShadow()
+    }
+}
+
+extension CALayer {
+    func applyDropShadow(withOffset offset: CGSize,
+                         opacity: Float,
+                         radius: CGFloat,
+                         color: UIColor) {
+        shadowOffset = offset
+        shadowOpacity = opacity
+        shadowRadius = radius
+        shadowColor = color.cgColor
+        shouldRasterize = true
+        rasterizationScale = UIScreen.main.scale
+    }
+    
+    func removeDropShadow() {
+        shadowOffset = .zero
+        shadowOpacity = 0
+        shadowRadius = 0
+        shadowColor = UIColor.clear.cgColor
+        shouldRasterize = false
+    }
+}

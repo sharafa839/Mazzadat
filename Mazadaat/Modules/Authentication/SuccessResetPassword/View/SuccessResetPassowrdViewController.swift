@@ -47,6 +47,7 @@ class SuccessResetPassowrdViewController: UIViewController {
         statusLabel.text = viewModel.title
         descriptionLabel.text = viewModel.description
         subTitleLabel.text = viewModel.subTitle
+        doneButton.setTitle("done".localize, for: .normal)
     }
     
     private func setupUI() {

@@ -205,3 +205,9 @@
 "AddDocument" = "ارفق ملف";
 "youNeedToUpgradeYourPackageToGotMoreAuctions" = "اشترك في الباقات الاعلى لتشترك في مزادات اكثر";
 "sec" = "ث";
+"buchoure" = "كتيب";
+"rules" = "قواعد";
+"bidPlacesSuccssfully" = "تمت المزايدة بنجاح";
+"placeBid" = "زايد";
+"setYourBidForThisAuction" = "ضع مزايدتك لهذا المزاد";
+"done" = "تم ";

@@ -44,7 +44,7 @@ class ChatViewController: UIViewController {
             let date = Date()
             let message = Message(senderType: "user", date: date.toString(format: "yyyy-mm-dd"), message: text, name: HelperK.getname())
             
-            viewModel.sendMessage(message: message)
+            viewModel.sendMessageToBackend(message: message)
             textField.text = ""
         }.disposed(by: viewModel.disposeBag)
     }
@@ -82,9 +82,15 @@ extension ChatViewController : UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:MCell = tableView.dequeue()
-         let message = viewModel.messages.value[indexPath.row]
-        cell.configure(message:message)
-        return cell
+        
+        if viewModel.messages.value.count > indexPath.row {
+            let message = viewModel.messages.value[indexPath.row]
+           cell.configure(message:message)
+           return cell
+        }else {
+            return UITableViewCell()
+        }
+        
     }
     
    

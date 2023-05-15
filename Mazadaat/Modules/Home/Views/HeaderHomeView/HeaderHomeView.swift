@@ -91,7 +91,7 @@ class HeaderHomeView: UIView {
     }
     
     private func setupViewInProfile() {
-        settingView.setRoundCorners(15)
+        settingView.setRoundCorners(20)
         searchView.isHidden = true
         notificationView.isHidden = true
         nameLabel.textColor = .white

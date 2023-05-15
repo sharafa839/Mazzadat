@@ -41,6 +41,7 @@ class AuctionHolderViewController: UIViewController {
         setupViewModel()
        // setupUI()
         setupCollectionView()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "share-line") ?? UIImage(), style: .plain, target: self, action: nil)
     }
     //MARK: - Methods
 

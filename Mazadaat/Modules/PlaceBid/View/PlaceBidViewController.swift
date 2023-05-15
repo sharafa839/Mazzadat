@@ -54,10 +54,10 @@ class PlaceBidViewController: UIViewController, HeightsBidding {
     }
     
     private func setupLocalize() {
-        placeBidButton.setTitle("placeBid", for: .normal)
-        subTitleLabel.text = "setYourBidForThisAuction"
-        currencyLabel.text = "SAR"
-        titleLabel.text = "Bidding"
+        placeBidButton.setTitle("placeBid".localize, for: .normal)
+        subTitleLabel.text = "setYourBidForThisAuction".localize
+        currencyLabel.text = Localizations.SAR.localize
+        titleLabel.text = "Bidding".localize
     }
     
     private func setupObservables() {
@@ -85,7 +85,7 @@ class PlaceBidViewController: UIViewController, HeightsBidding {
         
         viewModel.onSuccessGetBid.subscribe { [weak self] value in
             guard let self = self else {return}
-            let successResetViewModel = SuccessResetPasswordViewModel(success: false, title: "bidPlacesSuccssfully", subtitle: "bidPlacesSuccssfully", descrption: "bidPlacesSuccssfully", type: .auction)
+            let successResetViewModel = SuccessResetPasswordViewModel(success: false, title: "bidPlacesSuccssfully".localize, subtitle: "bidPlacesSuccssfully".localize, descrption: "bidPlacesSuccssfully".localize, type: .auction)
             let successfullyVC = SuccessResetPassowrdViewController(viewModel: successResetViewModel)
             successfullyVC.delegate = self.delegate
             self.navigationController?.pushViewController(successfullyVC, animated: true)

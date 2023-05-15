@@ -35,14 +35,15 @@ class ChatViewModel:HomeNetworkingProtocol {
     }
     
     func getMessages() {
-        ref =  Database.database(url: "https://golden-auctions.firebaseio.com/").reference().child("chats").child("\(2)")
+        ref =  Database.database(url: "https://golden-auctions.firebaseio.com/").reference().child("chats").child("\(1)")
         handle = ref?.observe(.childAdded) {[weak self] snapShot in
             guard let data = snapShot.value as? [String:Any] else {return}
             guard let name = data["user_name"] as? String else{return}
             guard let date =  data["date"] as? String else{return}
             guard let text = data["messages"] as? String else {return}
             guard let senderType = data["sender_type"] as? String else {return}
-            var message = Message(senderType: senderType, date: date, message: text, name: name)
+         
+            let message = Message(senderType: senderType, date: date, message: text, name: name)
             var chat = self?.messages.value
             chat?.append(message)
             self?.messages.accept(chat ?? [])

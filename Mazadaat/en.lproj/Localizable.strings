@@ -208,3 +208,9 @@
 "youNeedToUpgradeYourPackageToGotMoreAuctions" = "you need to upgrade your package to get more auctions"; 
 "sec" = "sec";
 
+"buchoure" = "brochure";
+"rules" = "rules";
+"bidPlacesSuccssfully" = "Bid Place Successfully";
+"placeBid" = "place bid";
+"setYourBidForThisAuction" = "Set Your Bid For This Auction";
+"done" = "done";

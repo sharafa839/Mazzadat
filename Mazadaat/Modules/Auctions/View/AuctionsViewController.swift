@@ -61,11 +61,11 @@ class AuctionsViewController: UIViewController {
     }
     
     private func setupLocalize() {
-        burchoureLabel.text = "buchoure"
-        rulesLabel.text = "rules"
-        startingInLabel.text = "startingIn"
-        enttryFeeLabel.text = "entrtyFee"
-        auctionDaysLabel.text = "auctionDays"
+        burchoureLabel.text = "buchoure".localize
+        rulesLabel.text = "rules".localize
+        startingInLabel.text = "startingIn".localize
+        enttryFeeLabel.text = "entryFee".localize
+        auctionDaysLabel.text = "auctionDays".localize
     }
     
     private func setupTableView() {

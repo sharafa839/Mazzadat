@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -46,7 +46,7 @@
                                 </state>
                             </button>
                             <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Hd6-AZ-4Fd">
-                                <rect key="frame" x="16" y="180" width="378" height="108"/>
+                                <rect key="frame" x="16" y="172" width="378" height="116"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="dbQ-pC-4PP">
                                         <rect key="frame" x="20" y="16" width="304" height="22"/>
@@ -80,7 +80,7 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button" image="arrow-left-s-line"/>
                                     </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="S1q-23-utD">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="S1q-23-utD">
                                         <rect key="frame" x="8" y="58" width="362" height="50"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Jc7-fH-lUW">
@@ -156,7 +156,7 @@
                                     <constraint firstItem="dbQ-pC-4PP" firstAttribute="top" secondItem="Hd6-AZ-4Fd" secondAttribute="top" constant="16" id="1au-lV-6FA"/>
                                     <constraint firstItem="dbQ-pC-4PP" firstAttribute="leading" secondItem="Hd6-AZ-4Fd" secondAttribute="leading" constant="20" id="H5r-yf-qfA"/>
                                     <constraint firstItem="S1q-23-utD" firstAttribute="leading" secondItem="Hd6-AZ-4Fd" secondAttribute="leading" constant="8" id="H8i-DZ-jv9"/>
-                                    <constraint firstAttribute="bottom" secondItem="S1q-23-utD" secondAttribute="bottom" id="HXw-7b-AF5"/>
+                                    <constraint firstAttribute="bottom" secondItem="S1q-23-utD" secondAttribute="bottom" constant="8" id="HXw-7b-AF5"/>
                                     <constraint firstItem="fB7-ht-C0r" firstAttribute="leading" secondItem="dbQ-pC-4PP" secondAttribute="trailing" constant="16" id="Jj4-8G-Usk"/>
                                     <constraint firstItem="fB7-ht-C0r" firstAttribute="centerY" secondItem="dbQ-pC-4PP" secondAttribute="centerY" id="LvS-Lt-ad2"/>
                                     <constraint firstAttribute="trailing" secondItem="S1q-23-utD" secondAttribute="trailing" constant="8" id="MX0-E4-s7e"/>
@@ -191,7 +191,7 @@
                         </constraints>
                     </view>
                 </subviews>
-                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <color key="backgroundColor" name="Neutral-v100"/>
                 <constraints>
                     <constraint firstItem="NEf-Zx-5XM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="BDa-J1-5cI"/>
                     <constraint firstAttribute="bottom" secondItem="NEf-Zx-5XM" secondAttribute="bottom" constant="48" id="Wuj-Jm-YEZ"/>

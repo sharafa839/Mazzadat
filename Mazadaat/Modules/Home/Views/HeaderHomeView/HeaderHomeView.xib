@@ -125,10 +125,10 @@
                             <rect key="frame" x="120" y="0.0" width="50" height="50"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="XGh-gZ-CCr">
-                                    <rect key="frame" x="1" y="1" width="48" height="48"/>
+                                    <rect key="frame" x="5" y="1" width="44" height="48"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYe-aH-5QR">
-                                            <rect key="frame" x="0.0" y="0.0" width="23" height="48"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="21" height="48"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" image="settings-3-line"/>
                                             <connections>
@@ -137,7 +137,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJs-1k-XXI">
-                                            <rect key="frame" x="25" y="0.0" width="23" height="48"/>
+                                            <rect key="frame" x="23" y="0.0" width="21" height="48"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" image="arrow-up-s-line"/>
                                             <connections>
@@ -150,7 +150,7 @@
                             </subviews>
                             <color key="backgroundColor" name="Bronze-50"/>
                             <constraints>
-                                <constraint firstItem="XGh-gZ-CCr" firstAttribute="leading" secondItem="lvb-fV-gDV" secondAttribute="leading" constant="1" id="sFn-To-tkD"/>
+                                <constraint firstItem="XGh-gZ-CCr" firstAttribute="leading" secondItem="lvb-fV-gDV" secondAttribute="leading" constant="5" id="sFn-To-tkD"/>
                                 <constraint firstAttribute="bottom" secondItem="XGh-gZ-CCr" secondAttribute="bottom" constant="1" id="uAV-kS-gav"/>
                                 <constraint firstItem="XGh-gZ-CCr" firstAttribute="top" secondItem="lvb-fV-gDV" secondAttribute="top" constant="1" id="udp-ND-dzU"/>
                                 <constraint firstAttribute="trailing" secondItem="XGh-gZ-CCr" secondAttribute="trailing" constant="1" id="wcT-NF-LX7"/>

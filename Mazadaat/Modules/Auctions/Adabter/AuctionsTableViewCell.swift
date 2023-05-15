@@ -10,6 +10,7 @@ import UIKit
 import Kingfisher
 class AuctionsTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var endingInLabel: UILabel!
     @IBOutlet weak var biddingImageView: UIImageView!
     @IBOutlet weak var biddingValueLabel: UILabel!
     @IBOutlet weak var biddingStatusLabel: UILabel!
@@ -43,6 +44,7 @@ class AuctionsTableViewCell: UITableViewCell {
         countView.setRoundCorners(5)
         endInView.setRoundCorners(5)
         biddingStatusView.setRoundCorners(5)
+        endingInLabel.text = "endingIn".localize
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -63,7 +65,7 @@ class AuctionsTableViewCell: UITableViewCell {
             endInLabel.text = "expired".localize
 
         }else {
-            endInLabel.text =  "endingIn".localize + "\(diffDateComponents.day ?? 0)" + " " + "d".localize + " " + " " +  "\(diffDateComponents.hour ?? 0)" + " " + "h".localize + " " + "\(diffDateComponents.minute ?? 0)" + " " + "m".localize
+            endInLabel.text =  "\(diffDateComponents.day ?? 0)" + " " + "d".localize + " " + " " +  "\(diffDateComponents.hour ?? 0)" + " " + "h".localize + " " + "\(diffDateComponents.minute ?? 0)" + " " + "m".localize
 
 
         }
@@ -73,15 +75,15 @@ class AuctionsTableViewCell: UITableViewCell {
         setTitleColorForBidding()
         biddingStatusView.isHidden = true
         minLabel.text = "min".localize
-        minValue.text = with.minimumBid
+        minValue.text = (with.minimumBid ?? "") + " " + Localizations.SAR.localize
         favoriteButton.setImage(with.isFavourite ?? false ? UIImage(named: "heart"):UIImage(named: "heart-add-line") , for: .normal)
         heartView.backgroundColor = with.isFavourite ?? false ? .Bronze_500 : .lightGray
-        priceLabel.text = with.price
+        priceLabel.text = (with.price ?? "") + " " + Localizations.SAR.localize
         titleLabel.text = with.name
         auctionsCountLabel.text = "\(with.bidsCount ?? 0)"
         guard let date = with.endAt?.getDate() else {return}
         
-        endInLabel.text = "endingIn".localize + " " + "\(date.day + " " + "d".localize) \(date.hour + " " + "h".localize) \(date.minute + " " + "m".localize)"
+        endInLabel.text = "\(date.day + " " + "d".localize) \(date.hour + " " + "h".localize) \(date.minute + " " + "m".localize)"
         guard let image = with.media?.first?.file else {return}
         guard let url = URL(string: image) else {return}
         let placeholderImage = UIImage(named: "AppIcon")!
@@ -109,10 +111,10 @@ class AuctionsTableViewCell: UITableViewCell {
         biddingStatusView.isHidden = true
         
         minLabel.text = "min".localize
-        minValue.text = with.minimumBid
-        favoriteButton.setImage( UIImage(systemName: "trash"), for: .normal)
-        heartView.backgroundColor = with.isFavourite ?? false ? .Bronze_500 : .lightGray
-        priceLabel.text = with.price
+        minValue.text = " + " + (with.minimumBid ?? "") + " " + Localizations.SAR.localize
+        favoriteButton.setImage( UIImage(named:"trash"), for: .normal)
+        heartView.backgroundColor = (with.isFavourite ?? false) ?  .white : .Bronze_500
+        priceLabel.text = (with.price ?? "") + " " + Localizations.SAR.localize
         titleLabel.text = with.name
         auctionsCountLabel.text = "\(with.bidsCount ?? 0)"
         guard let date = with.endAt?.getDate() else {return}
@@ -150,6 +152,7 @@ class AuctionsTableViewCell: UITableViewCell {
     func configureToBidding(with:FavoriteModel) {
         biddingStatusView.isHidden = false
         setTitleColorForBidding()
+        biddingValueLabel.textAlignment = LocalizationManager.shared.getLanguage() == .Arabic ? .right : .left
         if with.lastBid?.userID == HelperK.getId() {
             biddingStatusLabel.text = "yourTheHeighstNow".localize
             biddingValueLabel.text =  (with.lastBid?.price ?? "") + Localizations.SAR.localize
@@ -168,15 +171,15 @@ class AuctionsTableViewCell: UITableViewCell {
         }
         
         minLabel.text = "min".localize
-        minValue.text = with.minimumBid
+        minValue.text = "+" + (with.minimumBid ?? "") + " " + Localizations.SAR.localize
         favoriteButton.setImage(with.isFavourite ?? false ? UIImage(named: "heart"):UIImage(named: "heart-add-line") , for: .normal)
-        heartView.backgroundColor = with.isFavourite ?? false ? .Bronze_500 : .lightGray
-        priceLabel.text = with.price
+        heartView.backgroundColor = with.isFavourite ?? false ? .Bronze_500 : .gray
+        priceLabel.text = (with.price ?? "") + " " + Localizations.SAR.localize
         titleLabel.text = with.name
         auctionsCountLabel.text = "\(with.bidsCount ?? 0)"
         guard let date = with.endAt?.getDate() else {return}
         
-        endInLabel.text = "\(date.day + " " + "d".localize) \(date.hour + " " + "h".localize) \(date.minute + " " + "m".localize)"
+        endInLabel.text =  " " + "\(date.day + " " + "d".localize) \(date.hour + " " + "h".localize) \(date.minute + " " + "m".localize)"
         guard let image = with.media?.first?.file else {return}
         guard let url = URL(string: image) else {return}
         let placeholderImage = UIImage(named: "AppIcon")!

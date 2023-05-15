@@ -37,28 +37,38 @@
                                 <rect key="frame" x="0.0" y="0.0" width="318" height="176"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="wVm-KC-WfZ">
-                                        <rect key="frame" x="16" y="16" width="146" height="30"/>
+                                        <rect key="frame" x="16" y="16" width="164" height="30"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kHr-LP-I15">
-                                                <rect key="frame" x="0.0" y="0.0" width="101" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="119" height="30"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0Y-rd-6TJ">
-                                                        <rect key="frame" x="2" y="0.0" width="97" height="30"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcx-iE-BIK">
+                                                        <rect key="frame" x="4" y="0.0" width="37" height="30"/>
                                                         <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="14"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" name="TextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0Y-rd-6TJ">
+                                                        <rect key="frame" x="44" y="0.0" width="75" height="30"/>
+                                                        <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="14"/>
+                                                        <color key="textColor" name="Red-500"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstItem="c0Y-rd-6TJ" firstAttribute="leading" secondItem="kHr-LP-I15" secondAttribute="leading" constant="2" id="5sN-LZ-1kX"/>
-                                                    <constraint firstAttribute="trailing" secondItem="c0Y-rd-6TJ" secondAttribute="trailing" constant="2" id="L9F-wK-JJI"/>
-                                                    <constraint firstItem="c0Y-rd-6TJ" firstAttribute="top" secondItem="kHr-LP-I15" secondAttribute="top" id="eHD-7B-4rh"/>
-                                                    <constraint firstAttribute="bottom" secondItem="c0Y-rd-6TJ" secondAttribute="bottom" id="kB8-4K-Ot3"/>
+                                                    <constraint firstItem="c0Y-rd-6TJ" firstAttribute="leading" secondItem="gcx-iE-BIK" secondAttribute="trailing" constant="3" id="4Db-Tv-DCi"/>
+                                                    <constraint firstItem="gcx-iE-BIK" firstAttribute="top" secondItem="kHr-LP-I15" secondAttribute="top" id="7XR-Jr-kIt"/>
+                                                    <constraint firstAttribute="trailing" secondItem="c0Y-rd-6TJ" secondAttribute="trailing" id="C23-vT-ocs"/>
+                                                    <constraint firstAttribute="bottom" secondItem="c0Y-rd-6TJ" secondAttribute="bottom" id="ZAv-OG-BYI"/>
+                                                    <constraint firstAttribute="bottom" secondItem="gcx-iE-BIK" secondAttribute="bottom" id="gDT-Q3-rP9"/>
+                                                    <constraint firstItem="gcx-iE-BIK" firstAttribute="leading" secondItem="kHr-LP-I15" secondAttribute="leading" constant="4" id="hZI-PV-iGR"/>
+                                                    <constraint firstItem="c0Y-rd-6TJ" firstAttribute="leading" secondItem="gcx-iE-BIK" secondAttribute="trailing" constant="3" id="lKS-1z-zC1"/>
+                                                    <constraint firstItem="c0Y-rd-6TJ" firstAttribute="top" secondItem="kHr-LP-I15" secondAttribute="top" id="z92-hc-oV6"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NkH-7X-zF5">
-                                                <rect key="frame" x="106" y="0.0" width="40" height="30"/>
+                                                <rect key="frame" x="124" y="0.0" width="40" height="30"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="DHN-Rw-moV">
                                                         <rect key="frame" x="2" y="2" width="36" height="26"/>
@@ -110,12 +120,12 @@
                                             <constraint firstAttribute="bottom" secondItem="ZQp-6s-NiL" secondAttribute="bottom" id="tzZ-Oq-tjl"/>
                                         </constraints>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="6Wj-Kz-PkS">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="6Wj-Kz-PkS">
                                         <rect key="frame" x="16" y="120" width="286" height="40"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLj-Sj-Ys8">
-                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="40"/>
-                                                <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="22"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="123.5" height="40"/>
+                                                <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="20"/>
                                                 <color key="textColor" name="TextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -171,7 +181,7 @@
                                 <constraints>
                                     <constraint firstItem="6Wj-Kz-PkS" firstAttribute="top" secondItem="35a-mr-Z1E" secondAttribute="bottom" constant="10" id="5Ga-NE-vPz"/>
                                     <constraint firstItem="35a-mr-Z1E" firstAttribute="leading" secondItem="XNp-2i-EFB" secondAttribute="leading" constant="16" id="BKv-dO-bBm"/>
-                                    <constraint firstItem="NBy-40-Spb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wVm-KC-WfZ" secondAttribute="trailing" constant="100" id="BrR-wy-Cm9"/>
+                                    <constraint firstItem="NBy-40-Spb" firstAttribute="leading" secondItem="wVm-KC-WfZ" secondAttribute="trailing" constant="82" id="BrR-wy-Cm9"/>
                                     <constraint firstAttribute="trailing" secondItem="NBy-40-Spb" secondAttribute="trailing" constant="16" id="CmK-yv-SLc"/>
                                     <constraint firstItem="wVm-KC-WfZ" firstAttribute="top" secondItem="XNp-2i-EFB" secondAttribute="top" constant="16" id="HTN-3a-B8f"/>
                                     <constraint firstItem="wVm-KC-WfZ" firstAttribute="leading" secondItem="XNp-2i-EFB" secondAttribute="leading" constant="16" id="LtQ-Mo-ciV"/>
@@ -247,6 +257,7 @@
                 <outlet property="countView" destination="NkH-7X-zF5" id="9pT-HN-Zi2"/>
                 <outlet property="endInLabel" destination="c0Y-rd-6TJ" id="wYH-T8-spN"/>
                 <outlet property="endInView" destination="kHr-LP-I15" id="pXn-ho-XZ8"/>
+                <outlet property="endingInLabel" destination="gcx-iE-BIK" id="2H6-jV-eCo"/>
                 <outlet property="favoriteButton" destination="ZQp-6s-NiL" id="rr6-0t-z6J"/>
                 <outlet property="heartView" destination="NBy-40-Spb" id="7we-Ks-sdU"/>
                 <outlet property="minLabel" destination="iJ8-1c-Jct" id="bXX-7E-vrb"/>
@@ -260,12 +271,15 @@
     <resources>
         <image name="Golden Bell Icon" width="24" height="24"/>
         <image name="Golden Bell Icon-1" width="20" height="20"/>
-        <image name="auction-line" width="24" height="24"/>
+        <image name="auction-line" width="28" height="28"/>
         <namedColor name="Bronze-100">
             <color red="0.96470588235294119" green="0.8666666666666667" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Bronze-500">
             <color red="0.88627450980392153" green="0.56470588235294117" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Red-500">
+            <color red="0.74901960784313726" green="0.14901960784313725" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="TextColor">
             <color red="0.078431372549019607" green="0.074509803921568626" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

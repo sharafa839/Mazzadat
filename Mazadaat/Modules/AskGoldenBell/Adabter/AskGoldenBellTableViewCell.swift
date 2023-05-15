@@ -34,7 +34,8 @@ class AskGoldenBellTableViewCell: UITableViewCell {
     }
 
     private func setupUI() {
-        continerView.setRoundCorners(5)
+        continerView.floatView(raduis: 5, color: .Natural_200)
+       // continerView.setRoundCorners(5)
         auctionImageView.setRoundCorners(5)
         mapsView.drawBorder(raduis: 5, borderColor: .Bronze_500)
         callView.setRoundCorners(5)
@@ -83,4 +84,15 @@ class AskGoldenBellTableViewCell: UITableViewCell {
         onTapCall?()
     }
     
+}
+
+extension UIView{
+    func addShadow(cornerRadius: CGFloat, maskedCorners: CACornerMask, color: UIColor, offset: CGSize, opacity: Float, shadowRadius: CGFloat) {
+            self.layer.cornerRadius = cornerRadius
+            self.layer.maskedCorners = maskedCorners
+            self.layer.shadowColor = color.cgColor
+            self.layer.shadowOffset = offset
+            self.layer.shadowOpacity = opacity
+            self.layer.shadowRadius = shadowRadius
+        }
 }

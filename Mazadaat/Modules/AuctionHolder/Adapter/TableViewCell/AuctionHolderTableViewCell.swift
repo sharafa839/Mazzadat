@@ -44,8 +44,9 @@ class AuctionHolderTableViewCell: UITableViewCell {
     }
     
     private func setupUI() {
+        containerDetailesView.floatView(raduis: 10, color: .Natural_200)
         auctionPlaceImageView.setRoundCorners(10)
-        containerDetailesView.setRoundCorners(10)
+        
         kindOfAuctionButton.setRoundCorners(10)
         countOfAuctionButton.setRoundCorners(10)
         
