@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -59,10 +59,10 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="93d-TH-43G">
-                                <rect key="frame" x="24" y="65.5" width="296" height="80.5"/>
+                                <rect key="frame" x="24" y="65.5" width="296" height="72.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="iqE-3e-e4w">
-                                        <rect key="frame" x="0.0" y="14" width="116" height="53"/>
+                                        <rect key="frame" x="0.0" y="10" width="116" height="53"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QdM-eE-xUx">
                                                 <rect key="frame" x="42" y="0.0" width="32" height="13.5"/>
@@ -90,14 +90,14 @@
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SeQ-zk-QHS">
-                                        <rect key="frame" x="147.5" y="0.0" width="1" height="80.5"/>
+                                        <rect key="frame" x="147.5" y="0.0" width="1" height="72.5"/>
                                         <color key="backgroundColor" name="BorderView"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="1" id="AeS-rh-YCr"/>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="dDf-gE-OgV">
-                                        <rect key="frame" x="180" y="14" width="116" height="53"/>
+                                        <rect key="frame" x="180" y="10" width="116" height="53"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hh-lQ-ibe">
                                                 <rect key="frame" x="42" y="0.0" width="32" height="13.5"/>
@@ -127,7 +127,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBf-1G-jB0" customClass="CustomButton" customModule="Golden_Bell" customModuleProvider="target">
-                                <rect key="frame" x="24" y="162" width="296" height="50"/>
+                                <rect key="frame" x="24" y="154" width="296" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="aLG-XI-RfN"/>
                                 </constraints>
@@ -150,7 +150,7 @@
                             <constraint firstItem="JkQ-rp-fLv" firstAttribute="top" secondItem="dQi-8P-Xfx" secondAttribute="top" constant="16" id="XIk-dP-7m6"/>
                             <constraint firstItem="mBf-1G-jB0" firstAttribute="leading" secondItem="dQi-8P-Xfx" secondAttribute="leading" constant="24" id="bMG-v1-dxP"/>
                             <constraint firstAttribute="trailing" secondItem="93d-TH-43G" secondAttribute="trailing" constant="24" id="bXH-L3-oj6"/>
-                            <constraint firstAttribute="bottom" secondItem="mBf-1G-jB0" secondAttribute="bottom" constant="8" id="dGl-c7-NFf"/>
+                            <constraint firstAttribute="bottom" secondItem="mBf-1G-jB0" secondAttribute="bottom" constant="16" id="dGl-c7-NFf"/>
                             <constraint firstItem="iLd-4U-ngH" firstAttribute="centerY" secondItem="JkQ-rp-fLv" secondAttribute="centerY" id="fnx-or-8Hb"/>
                             <constraint firstItem="meJ-Gv-J7I" firstAttribute="leading" secondItem="dQi-8P-Xfx" secondAttribute="leading" constant="16" id="vNr-S4-XKj"/>
                             <constraint firstItem="IQP-Up-zmJ" firstAttribute="centerY" secondItem="JkQ-rp-fLv" secondAttribute="centerY" id="w9h-If-bOf"/>

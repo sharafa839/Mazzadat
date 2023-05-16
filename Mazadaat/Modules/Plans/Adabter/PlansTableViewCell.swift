@@ -29,13 +29,13 @@ class PlansTableViewCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        containerView.drawBorder(raduis: 5, borderColor: selected ? .Bronze_500:.borderColor)
+        containerView.drawBorder(raduis: 15, borderColor: selected ? .Bronze_500:.Natural_200,borderWidth: 2)
 
     }
     
     private func setupUI() {
         containerView.applyShadowWithCornerRadius(color: .borderColor, opacity: 0.4, radius: 5, edge: .Bottom_Left, shadowSpace: 1, cornerRadius: 5)
-        containerView.setRoundCorners(5)
+        containerView.setRoundCorners(15)
         upgradeButton.setRoundCorners(25)
         selectionImageView.circle()
         youWillPayLabel.text = Localizations.youPay.localize
@@ -45,7 +45,7 @@ class PlansTableViewCell: UITableViewCell {
     }
     
     func configure(_ with:Subscription) {
-        containerView.drawBorder(raduis: 5, borderColor: isSelected ? .Bronze_900:.borderColor)
+        containerView.drawBorder(raduis: 5, borderColor: isSelected ? .Bronze_900:.Natural_200)
         
         packageName.text = with.name
         priceLabel.text = with.price
@@ -62,6 +62,8 @@ class PlansTableViewCell: UITableViewCell {
             upgradeButton.isEnabled = false
             }else{
                 upgradeButton.setTitle(Localizations.upgrade.localize, for: .normal)
+                upgradeButton.isEnabled = false
+                upgradeButton.backgroundColor = .borderColor
             }
         }
         

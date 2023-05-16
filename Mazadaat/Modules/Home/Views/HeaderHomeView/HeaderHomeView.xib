@@ -148,8 +148,9 @@
                                     </subviews>
                                 </stackView>
                             </subviews>
-                            <color key="backgroundColor" name="Bronze-50"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
+                                <constraint firstAttribute="width" constant="56" id="jAw-3G-gOS"/>
                                 <constraint firstItem="XGh-gZ-CCr" firstAttribute="leading" secondItem="lvb-fV-gDV" secondAttribute="leading" constant="5" id="sFn-To-tkD"/>
                                 <constraint firstAttribute="bottom" secondItem="XGh-gZ-CCr" secondAttribute="bottom" constant="1" id="uAV-kS-gav"/>
                                 <constraint firstItem="XGh-gZ-CCr" firstAttribute="top" secondItem="lvb-fV-gDV" secondAttribute="top" constant="1" id="udp-ND-dzU"/>

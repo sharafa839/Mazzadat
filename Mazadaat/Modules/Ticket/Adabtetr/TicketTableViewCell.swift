@@ -30,7 +30,10 @@ class TicketTableViewCell: UITableViewCell {
     }
     
     private func setupUI() {
-        containerView.setRoundCorners(5)
+        containerView.setRoundCorners(15)
+        newView.circle()
+        imageContainerView.circle()
+        
     }
     
     func configure(_ by:TicketModel) {

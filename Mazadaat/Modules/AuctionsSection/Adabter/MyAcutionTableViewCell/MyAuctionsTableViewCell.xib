@@ -23,12 +23,12 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="308" id="KGk-i7-Jjw" customClass="MyAuctionsTableViewCell" customModule="Golden_Bell" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="419" height="308"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="419" height="308"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i46-Jy-ech">
-                        <rect key="frame" x="16" y="8" width="387" height="292"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i46-Jy-ech">
+                        <rect key="frame" x="16" y="8" width="387" height="292.5"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jiv-kA-eID">
                                 <rect key="frame" x="16" y="16" width="355" height="154.5"/>
@@ -73,7 +73,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0L-iv-nTY">
-                                <rect key="frame" x="24" y="200.5" width="339" height="18"/>
+                                <rect key="frame" x="24" y="208.5" width="339" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="18" id="2yx-F4-tYS"/>
                                 </constraints>
@@ -82,7 +82,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xfO-SD-u5M">
-                                <rect key="frame" x="0.0" y="226.5" width="387" height="50"/>
+                                <rect key="frame" x="0.0" y="242.5" width="387" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2r-bs-a7S">
                                         <rect key="frame" x="16" y="16" width="355" height="18"/>
@@ -91,7 +91,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" name="Bronze-100"/>
+                                <color key="backgroundColor" name="Bronze-50"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="F2r-bs-a7S" secondAttribute="bottom" constant="16" id="3DB-lm-znn"/>
                                     <constraint firstItem="F2r-bs-a7S" firstAttribute="top" secondItem="xfO-SD-u5M" secondAttribute="top" constant="16" id="64E-cs-tDp"/>
@@ -105,7 +105,7 @@
                         <constraints>
                             <constraint firstItem="9UW-pk-vul" firstAttribute="top" secondItem="jiv-kA-eID" secondAttribute="bottom" constant="-19" id="137-2Z-sCN"/>
                             <constraint firstItem="9UW-pk-vul" firstAttribute="trailing" secondItem="jiv-kA-eID" secondAttribute="trailing" constant="-16" id="4XF-FK-TOQ"/>
-                            <constraint firstItem="xfO-SD-u5M" firstAttribute="top" secondItem="k0L-iv-nTY" secondAttribute="bottom" constant="8" id="5FA-ra-KA9"/>
+                            <constraint firstItem="xfO-SD-u5M" firstAttribute="top" secondItem="k0L-iv-nTY" secondAttribute="bottom" constant="16" id="5FA-ra-KA9"/>
                             <constraint firstAttribute="trailing" secondItem="jiv-kA-eID" secondAttribute="trailing" constant="16" id="9sF-kG-4Hb"/>
                             <constraint firstItem="jiv-kA-eID" firstAttribute="leading" secondItem="i46-Jy-ech" secondAttribute="leading" constant="16" id="AAJ-an-hn9"/>
                             <constraint firstItem="jiv-kA-eID" firstAttribute="top" secondItem="i46-Jy-ech" secondAttribute="top" constant="16" id="FWp-8A-x8t"/>
@@ -113,8 +113,9 @@
                             <constraint firstItem="9UW-pk-vul" firstAttribute="leading" secondItem="jiv-kA-eID" secondAttribute="leading" constant="16" id="RYf-Oq-amu"/>
                             <constraint firstAttribute="bottom" secondItem="xfO-SD-u5M" secondAttribute="bottom" id="Suh-yM-e5b"/>
                             <constraint firstItem="xfO-SD-u5M" firstAttribute="leading" secondItem="i46-Jy-ech" secondAttribute="leading" id="cph-Fe-RkF"/>
+                            <constraint firstAttribute="bottom" secondItem="xfO-SD-u5M" secondAttribute="bottom" id="nSO-zY-b2K"/>
                             <constraint firstAttribute="trailing" secondItem="k0L-iv-nTY" secondAttribute="trailing" constant="24" id="oQU-YF-JVK"/>
-                            <constraint firstItem="k0L-iv-nTY" firstAttribute="top" secondItem="9UW-pk-vul" secondAttribute="bottom" constant="8" id="s13-6S-Gjl"/>
+                            <constraint firstItem="k0L-iv-nTY" firstAttribute="top" secondItem="9UW-pk-vul" secondAttribute="bottom" constant="16" id="s13-6S-Gjl"/>
                             <constraint firstAttribute="trailing" secondItem="xfO-SD-u5M" secondAttribute="trailing" id="wqf-LW-2qz"/>
                         </constraints>
                     </view>
@@ -143,8 +144,8 @@
         </tableViewCell>
     </objects>
     <resources>
-        <namedColor name="Bronze-100">
-            <color red="0.96470588235294119" green="0.8666666666666667" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="Bronze-50">
+            <color red="0.9882352941176471" green="0.95686274509803926" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Bronze-500">
             <color red="0.88627450980392153" green="0.56470588235294117" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

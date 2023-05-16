@@ -43,7 +43,7 @@ class AuctionsTableViewCell: UITableViewCell {
         auctionContinerView.setRoundCorners(auctionContinerView.frame.height/2)
         countView.setRoundCorners(5)
         endInView.setRoundCorners(5)
-        biddingStatusView.setRoundCorners(5)
+        biddingStatusView.roundCorners([.layerMaxXMaxYCorner,.layerMinXMaxYCorner], radius: 15)
         endingInLabel.text = "endingIn".localize
     }
     
@@ -86,7 +86,7 @@ class AuctionsTableViewCell: UITableViewCell {
         endInLabel.text = "\(date.day + " " + "d".localize) \(date.hour + " " + "h".localize) \(date.minute + " " + "m".localize)"
         guard let image = with.media?.first?.file else {return}
         guard let url = URL(string: image) else {return}
-        let placeholderImage = UIImage(named: "AppIcon")!
+        let placeholderImage = UIImage(named: "AppIcons")!
         let processor = DefaultImageProcessor.default
         auctionImageView.kf.setImage(
             with: url,
@@ -122,7 +122,7 @@ class AuctionsTableViewCell: UITableViewCell {
         endInLabel.text = "\(date.day + " " + "d".localize) \(date.hour + " " + "h".localize) \(date.minute + " " + "m".localize)"
         guard let image = with.media?.first?.file else {return}
         guard let url = URL(string: image) else {return}
-        let placeholderImage = UIImage(named: "AppIcon")!
+        let placeholderImage = UIImage(named: "AppIcons")!
         let processor = DefaultImageProcessor.default
         auctionImageView.kf.setImage(
             with: url,
@@ -155,7 +155,7 @@ class AuctionsTableViewCell: UITableViewCell {
         biddingValueLabel.textAlignment = LocalizationManager.shared.getLanguage() == .Arabic ? .right : .left
         if with.lastBid?.userID == HelperK.getId() {
             biddingStatusLabel.text = "yourTheHeighstNow".localize
-            biddingValueLabel.text =  (with.lastBid?.price ?? "") + Localizations.SAR.localize
+            biddingValueLabel.text =  (with.lastBid?.price ?? "") + " " + Localizations.SAR.localize
             biddingStatusView.backgroundColor = .Bronze_100
             biddingValueLabel.textColor = .Bronze_900
             biddingStatusLabel.textColor = .Bronze_900
@@ -182,7 +182,7 @@ class AuctionsTableViewCell: UITableViewCell {
         endInLabel.text =  " " + "\(date.day + " " + "d".localize) \(date.hour + " " + "h".localize) \(date.minute + " " + "m".localize)"
         guard let image = with.media?.first?.file else {return}
         guard let url = URL(string: image) else {return}
-        let placeholderImage = UIImage(named: "AppIcon")!
+        let placeholderImage = UIImage(named: "AppIcons")!
         let processor = DefaultImageProcessor.default
         auctionImageView.kf.setImage(
             with: url,

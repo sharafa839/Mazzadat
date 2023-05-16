@@ -44,7 +44,7 @@ class AuctionCategoryTableViewCell: UITableViewCell {
     }
     
     private func setupUI() {
-        containerView.setRoundCorners(5)
+        containerView.floating(raduis: 15)
         favoriteView.setRoundCorners(favoriteView.frame.height/2)
         bidView.setRoundCorners(bidView.frame.height/2)
         auctionImageView.setRoundCorners(10)
@@ -76,10 +76,10 @@ class AuctionCategoryTableViewCell: UITableViewCell {
         setupDate(with)
         favoriteButton.setImage(with.isFavourite ?? false ? UIImage(named: "heart"):UIImage(named: "heart-add-line") , for: .normal)
         favoriteView.backgroundColor = with.isFavourite ?? false ? .Bronze_500 : .lightGray
-        priceLabel.text = with.price
+         priceLabel.text = (with.price ?? "") + " " +  Localizations.SAR.localize
         nameLabel.text = with.name
          auctionsCountLabel.text = "\(with.bidsCount ?? 0)"
-        minBidLabel.text = with.minimumBid ?? ""
+         minBidLabel.text = "+" + " " + (with.minimumBid ?? "")
         guard let image = with.media?.first?.file else {return}
         guard let url = URL(string: image) else {return}
         let placeholderImage = UIImage(named: "AppIcon")!

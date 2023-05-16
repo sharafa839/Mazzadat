@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,26 +32,26 @@
                         <rect key="frame" x="16" y="8" width="381" height="175"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vdT-Yx-K9y">
-                                <rect key="frame" x="116" y="8" width="191" height="100"/>
+                                <rect key="frame" x="132" y="16" width="175" height="100"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="ZFt-vZ-dsa">
-                                        <rect key="frame" x="0.0" y="0.0" width="191" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="175" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wD1-6n-NhO">
-                                                <rect key="frame" x="0.0" y="0.0" width="153" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="139.5" height="50"/>
                                                 <fontDescription key="fontDescription" name="Archivo-Regular" family="Archivo" pointSize="12"/>
                                                 <color key="textColor" name="TextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="by7-cH-Nsg">
-                                                <rect key="frame" x="155" y="0.0" width="2" height="50"/>
+                                                <rect key="frame" x="141.5" y="0.0" width="2" height="50"/>
                                                 <color key="backgroundColor" name="Neutral-v100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="2" id="vl5-2Z-uzU"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KuZ-Ag-rDj">
-                                                <rect key="frame" x="159" y="0.0" width="32" height="50"/>
+                                                <rect key="frame" x="145.5" y="0.0" width="29.5" height="50"/>
                                                 <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="12"/>
                                                 <color key="textColor" name="TextColor"/>
                                                 <nil key="highlightedColor"/>
@@ -58,7 +59,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljd-u9-lXb">
-                                        <rect key="frame" x="0.0" y="60" width="191" height="40"/>
+                                        <rect key="frame" x="0.0" y="60" width="175" height="40"/>
                                         <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -66,20 +67,20 @@
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IKx-am-5OV">
-                                <rect key="frame" x="8" y="8" width="100" height="100"/>
+                                <rect key="frame" x="16" y="16" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="coQ-gc-BbK"/>
                                     <constraint firstAttribute="width" constant="100" id="zeh-hs-Suk"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOB-fS-oN4">
-                                <rect key="frame" x="8" y="140" width="58" height="26"/>
+                                <rect key="frame" x="16" y="129" width="54" height="26"/>
                                 <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MbO-nI-48W">
-                                <rect key="frame" x="82" y="147" width="60" height="12"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="MbO-nI-48W">
+                                <rect key="frame" x="86" y="136" width="60" height="12"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="auction-line-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ub2-Oj-iMT">
                                         <rect key="frame" x="0.0" y="0.0" width="12" height="12"/>
@@ -89,7 +90,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fht-SH-hwG">
-                                        <rect key="frame" x="12" y="0.0" width="48" height="12"/>
+                                        <rect key="frame" x="20" y="0.0" width="40" height="12"/>
                                         <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -100,10 +101,10 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="aDF-1K-6Tw">
-                                <rect key="frame" x="323" y="8" width="50" height="159"/>
+                                <rect key="frame" x="315" y="16" width="50" height="143"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dXW-I5-UMq">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="89"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="73"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GuO-Jb-Nxq">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -128,7 +129,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKF-3p-6wu">
-                                                <rect key="frame" x="0.0" y="50" width="50" height="39"/>
+                                                <rect key="frame" x="0.0" y="50" width="50" height="23"/>
                                                 <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -136,7 +137,7 @@
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ebs-c6-tBa">
-                                        <rect key="frame" x="0.0" y="109" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="93" width="50" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6g-By-1MA">
                                                 <rect key="frame" x="8" y="8" width="34" height="34"/>
@@ -157,7 +158,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXs-bQ-R1E">
-                                <rect key="frame" x="270" y="134.5" width="37" height="15.5"/>
+                                <rect key="frame" x="264.5" y="126" width="34.5" height="16.5"/>
                                 <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -165,21 +166,20 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vdT-Yx-K9y" firstAttribute="top" secondItem="tec-o5-2TP" secondAttribute="top" constant="8" id="3E9-kM-l1P"/>
-                            <constraint firstItem="iOB-fS-oN4" firstAttribute="top" secondItem="IKx-am-5OV" secondAttribute="bottom" constant="32" id="3fA-ur-QcE"/>
-                            <constraint firstAttribute="bottom" secondItem="aDF-1K-6Tw" secondAttribute="bottom" constant="8" id="4YT-h8-Ch3"/>
-                            <constraint firstItem="IKx-am-5OV" firstAttribute="leading" secondItem="tec-o5-2TP" secondAttribute="leading" constant="8" id="UGJ-9a-REw"/>
+                            <constraint firstItem="vdT-Yx-K9y" firstAttribute="top" secondItem="tec-o5-2TP" secondAttribute="top" constant="16" id="3E9-kM-l1P"/>
+                            <constraint firstAttribute="bottom" secondItem="aDF-1K-6Tw" secondAttribute="bottom" constant="16" id="4YT-h8-Ch3"/>
+                            <constraint firstItem="IKx-am-5OV" firstAttribute="leading" secondItem="tec-o5-2TP" secondAttribute="leading" constant="16" id="UGJ-9a-REw"/>
                             <constraint firstItem="iOB-fS-oN4" firstAttribute="leading" secondItem="IKx-am-5OV" secondAttribute="leading" id="XdR-gL-upt"/>
-                            <constraint firstItem="aDF-1K-6Tw" firstAttribute="top" secondItem="tec-o5-2TP" secondAttribute="top" constant="8" id="ai6-po-nvc"/>
+                            <constraint firstItem="aDF-1K-6Tw" firstAttribute="top" secondItem="tec-o5-2TP" secondAttribute="top" constant="16" id="ai6-po-nvc"/>
                             <constraint firstItem="aDF-1K-6Tw" firstAttribute="leading" secondItem="xXs-bQ-R1E" secondAttribute="trailing" constant="16" id="dVU-eT-0f2"/>
                             <constraint firstItem="vdT-Yx-K9y" firstAttribute="bottom" secondItem="IKx-am-5OV" secondAttribute="bottom" id="hyL-XI-GFY"/>
-                            <constraint firstItem="MbO-nI-48W" firstAttribute="top" secondItem="IKx-am-5OV" secondAttribute="bottom" constant="39" id="i7d-N5-qTN"/>
-                            <constraint firstItem="IKx-am-5OV" firstAttribute="top" secondItem="tec-o5-2TP" secondAttribute="top" constant="8" id="k94-lW-zT7"/>
-                            <constraint firstItem="aDF-1K-6Tw" firstAttribute="leading" secondItem="vdT-Yx-K9y" secondAttribute="trailing" constant="16" id="ma2-X2-Ns4"/>
+                            <constraint firstItem="MbO-nI-48W" firstAttribute="top" secondItem="IKx-am-5OV" secondAttribute="bottom" constant="20" id="i7d-N5-qTN"/>
+                            <constraint firstItem="IKx-am-5OV" firstAttribute="top" secondItem="tec-o5-2TP" secondAttribute="top" constant="16" id="k94-lW-zT7"/>
+                            <constraint firstItem="aDF-1K-6Tw" firstAttribute="leading" secondItem="vdT-Yx-K9y" secondAttribute="trailing" constant="8" id="ma2-X2-Ns4"/>
                             <constraint firstItem="MbO-nI-48W" firstAttribute="leading" secondItem="iOB-fS-oN4" secondAttribute="trailing" constant="16" id="ppi-Lu-cPC"/>
                             <constraint firstItem="iOB-fS-oN4" firstAttribute="centerY" secondItem="MbO-nI-48W" secondAttribute="centerY" id="rEg-bX-Y0e"/>
-                            <constraint firstItem="vdT-Yx-K9y" firstAttribute="leading" secondItem="IKx-am-5OV" secondAttribute="trailing" constant="8" id="rLs-WV-Wvp"/>
-                            <constraint firstAttribute="trailing" secondItem="aDF-1K-6Tw" secondAttribute="trailing" constant="8" id="x4S-mb-PJk"/>
+                            <constraint firstItem="vdT-Yx-K9y" firstAttribute="leading" secondItem="IKx-am-5OV" secondAttribute="trailing" constant="16" id="rLs-WV-Wvp"/>
+                            <constraint firstAttribute="trailing" secondItem="aDF-1K-6Tw" secondAttribute="trailing" constant="16" id="x4S-mb-PJk"/>
                             <constraint firstItem="xXs-bQ-R1E" firstAttribute="centerY" secondItem="E6g-By-1MA" secondAttribute="centerY" id="x7b-H8-HPh"/>
                         </constraints>
                     </view>

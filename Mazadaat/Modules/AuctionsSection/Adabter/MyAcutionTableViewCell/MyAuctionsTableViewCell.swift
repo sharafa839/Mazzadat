@@ -27,10 +27,10 @@ class MyAuctionsTableViewCell: UITableViewCell {
     }
     
     private func setupUI() {
-        containerView.setRoundCorners(20)
-        instructionView.roundCorners([.layerMaxXMinYCorner,.layerMaxXMaxYCorner], radius: 20)
+        containerView.floatView(raduis: 15, color: .clear)
+        instructionView.roundCorners([.layerMaxXMinYCorner,.layerMaxXMaxYCorner], radius: 15)
         biddingView.setRoundCorners(10)
-        
+        auctionImageView.setRoundCorners(5)
     }
     
     private func setupLocalize() {
@@ -46,7 +46,7 @@ class MyAuctionsTableViewCell: UITableViewCell {
         instructionLabel.text = AuctionStatus(rawValue: with.status ?? 0)?.status
         guard let image = with.category?.image else {return}
         guard let url = URL(string: image) else {return}
-        let placeholderImage = UIImage(named: "AppIcon")!
+        let placeholderImage = UIImage(named: "AppIcons")!
         let processor = DefaultImageProcessor.default
         auctionImageView.kf.setImage(
             with: url,

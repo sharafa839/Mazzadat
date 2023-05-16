@@ -43,13 +43,13 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="119" height="30"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcx-iE-BIK">
-                                                        <rect key="frame" x="4" y="0.0" width="37" height="30"/>
-                                                        <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="14"/>
+                                                        <rect key="frame" x="12" y="0.0" width="34" height="30"/>
+                                                        <fontDescription key="fontDescription" name="Archivo-Regular" family="Archivo" pointSize="14"/>
                                                         <color key="textColor" name="TextColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0Y-rd-6TJ">
-                                                        <rect key="frame" x="44" y="0.0" width="75" height="30"/>
+                                                        <rect key="frame" x="49" y="0.0" width="70" height="30"/>
                                                         <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="14"/>
                                                         <color key="textColor" name="Red-500"/>
                                                         <nil key="highlightedColor"/>
@@ -62,7 +62,7 @@
                                                     <constraint firstAttribute="trailing" secondItem="c0Y-rd-6TJ" secondAttribute="trailing" id="C23-vT-ocs"/>
                                                     <constraint firstAttribute="bottom" secondItem="c0Y-rd-6TJ" secondAttribute="bottom" id="ZAv-OG-BYI"/>
                                                     <constraint firstAttribute="bottom" secondItem="gcx-iE-BIK" secondAttribute="bottom" id="gDT-Q3-rP9"/>
-                                                    <constraint firstItem="gcx-iE-BIK" firstAttribute="leading" secondItem="kHr-LP-I15" secondAttribute="leading" constant="4" id="hZI-PV-iGR"/>
+                                                    <constraint firstItem="gcx-iE-BIK" firstAttribute="leading" secondItem="kHr-LP-I15" secondAttribute="leading" constant="12" id="hZI-PV-iGR"/>
                                                     <constraint firstItem="c0Y-rd-6TJ" firstAttribute="leading" secondItem="gcx-iE-BIK" secondAttribute="trailing" constant="3" id="lKS-1z-zC1"/>
                                                     <constraint firstItem="c0Y-rd-6TJ" firstAttribute="top" secondItem="kHr-LP-I15" secondAttribute="top" id="z92-hc-oV6"/>
                                                 </constraints>
@@ -152,7 +152,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P4l-5b-NSF">
                                                         <rect key="frame" x="52.5" y="0.0" width="40" height="40"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Golden Bell Icon" translatesAutoresizingMaskIntoConstraints="NO" id="wCB-mN-yIA">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Golden Bell Icons" translatesAutoresizingMaskIntoConstraints="NO" id="wCB-mN-yIA">
                                                                 <rect key="frame" x="8" y="8" width="24" height="24"/>
                                                             </imageView>
                                                         </subviews>
@@ -269,8 +269,8 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="Golden Bell Icon" width="24" height="24"/>
         <image name="Golden Bell Icon-1" width="20" height="20"/>
+        <image name="Golden Bell Icons" width="24" height="24"/>
         <image name="auction-line" width="28" height="28"/>
         <namedColor name="Bronze-100">
             <color red="0.96470588235294119" green="0.8666666666666667" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -36,7 +36,7 @@ class ChatViewModel:HomeNetworkingProtocol {
     }
     
     func getMessages() {
-        ref =  Database.database(url: "https://golden-auctions.firebaseio.com/").reference().child("chats").child("1")
+        ref =  Database.database(url: "https://golden-auctions.firebaseio.com/").reference().child("chats").child("\(CoreData.shared.loginModel?.chat_id ?? 0)")
         handle = ref?.observe(.childAdded) {[weak self] snapShot in
             guard let self = self else {return}
 
@@ -58,7 +58,7 @@ class ChatViewModel:HomeNetworkingProtocol {
      func sendMessage(message:Message) {
          let date = Date().toString(format: "yyyy/mm/dd")
          let messageDictionary = ["sender_Type":message.senderType,"messages":message.message,"date":date ?? "","userName":message.name] as [String : Any]
-        Database.database().reference().child("chats").child("\(2)").childByAutoId().setValue(messageDictionary)
+         Database.database().reference().child("chats").child("\(CoreData.shared.loginModel?.chat_id)").childByAutoId().setValue(messageDictionary)
     }
     
     func sendMessageToBackend(message:Message) {

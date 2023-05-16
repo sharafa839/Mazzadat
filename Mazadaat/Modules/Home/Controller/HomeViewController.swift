@@ -78,7 +78,7 @@ class HomeViewController: UIViewController {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     
-        layout.itemSize = isHaveAsubscrption ?  CGSize(width: screenWidth/4, height: screenHeight/3.2) : CGSize(width: screenWidth/4, height: screenHeight/2.8)
+        layout.itemSize = isHaveAsubscrption ?  CGSize(width: screenWidth/4, height: screenHeight/3) : CGSize(width: screenWidth/4, height: screenHeight/2.8)
         layout.scrollDirection = .vertical
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0

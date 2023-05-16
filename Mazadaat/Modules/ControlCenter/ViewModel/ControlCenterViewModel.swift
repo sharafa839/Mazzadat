@@ -23,6 +23,8 @@ class ControlCenterViewModel:AuthNetworkingProtocol {
             switch result {
             case .success(let response):
                 self?.onSuccess.onNext(())
+                CoreData.shared.loginModel = nil
+                CoreData.shared.personalSubscription = nil
             case .failure(let error):
                 self?.onError.onNext(error.localizedDescription)
             }

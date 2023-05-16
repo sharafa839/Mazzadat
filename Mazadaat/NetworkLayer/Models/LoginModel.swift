@@ -28,7 +28,7 @@ struct LoginPayload: Codable {
        var lat, lng: String?
        var isSubscribed, isVerified, isPayEntryFee: Bool?
        var subscriptions: [Subscription]?
-    
+       var chat_id:Int?
        var appLocale: String?
        var notificationCount: Int?
        var auctionAlerts, bidUpdates, auctionEndingSoon, promotions: Bool?

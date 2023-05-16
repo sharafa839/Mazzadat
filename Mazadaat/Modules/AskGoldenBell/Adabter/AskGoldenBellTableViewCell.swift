@@ -36,7 +36,7 @@ class AskGoldenBellTableViewCell: UITableViewCell {
     private func setupUI() {
         continerView.floatView(raduis: 5, color: .Natural_200)
        // continerView.setRoundCorners(5)
-        auctionImageView.setRoundCorners(5)
+        auctionImageView.setRoundCorners(10)
         mapsView.drawBorder(raduis: 5, borderColor: .Bronze_500)
         callView.setRoundCorners(5)
         chatView.setRoundCorners(5)
