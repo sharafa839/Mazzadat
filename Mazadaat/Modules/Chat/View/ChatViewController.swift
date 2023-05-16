@@ -44,8 +44,8 @@ class ChatViewController: UIViewController {
             let date = Date()
             let message = Message(senderType: "user", date: date.toString(format: "yyyy-mm-dd"), message: text, name: HelperK.getname())
             
-            viewModel.sendMessageToBackend(message: message)
-            textField.text = ""
+            self.viewModel.sendMessageToBackend(message: message)
+            self.textField.text = ""
         }.disposed(by: viewModel.disposeBag)
     }
     
