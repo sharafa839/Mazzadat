@@ -36,6 +36,10 @@ class HomeViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    deinit {
+        print("deinit\(Self.self)")
+    }
     //MARK: - LifeCycle
     
     override func viewDidLoad() {
@@ -62,8 +66,12 @@ class HomeViewController: UIViewController {
 
     }
     
+   
+    
     func setupLayout() {
+      
          var isHaveAsubscrption = !(CoreData.shared.personalSubscription?.isEmpty ?? true)
+       // containerConstraintsLayout.constant = isHaveAsubscrption ? view.frame.height * 0.3 : view.frame.height * 0.22
         screenSize = UIScreen.main.bounds
         screenWidth = categoryCollectionView.bounds.width
         screenHeight =  categoryCollectionView.bounds.height

@@ -17,6 +17,7 @@ class ChatViewModel:HomeNetworkingProtocol {
     var onError = PublishSubject<String>()
     var onLoading = BehaviorRelay<Bool>(value: false)
     var messages = BehaviorRelay<[Message]>(value: [])
+    var message : Message?
     var chatId: String?
     var auctionId:String?
     var ref: DatabaseReference?
@@ -35,19 +36,23 @@ class ChatViewModel:HomeNetworkingProtocol {
     }
     
     func getMessages() {
-        ref =  Database.database(url: "https://golden-auctions.firebaseio.com/").reference().child("chats").child("\(1)")
+        ref =  Database.database(url: "https://golden-auctions.firebaseio.com/").reference().child("chats").child("1")
         handle = ref?.observe(.childAdded) {[weak self] snapShot in
-            guard let data = snapShot.value as? [String:Any] else {return}
+            guard let self = self else {return}
+
+            guard let data = snapShot.value as? NSDictionary else {return}
             guard let name = data["user_name"] as? String else{return}
             guard let date =  data["date"] as? String else{return}
             guard let text = data["messages"] as? String else {return}
             guard let senderType = data["sender_type"] as? String else {return}
          
-            let message = Message(senderType: senderType, date: date, message: text, name: name)
-            var chat = self?.messages.value
-            chat?.append(message)
-            self?.messages.accept(chat ?? [])
+             message = Message(senderType: senderType, date: date, message: text, name: name)
+            var chat = messages.value
+            chat.append(Message(senderType: message?.senderType ?? "" , date: message?.date  ?? "", message: message?.message ?? "", name: message?.name ?? ""))
+            messages.accept(chat)
+
         }
+        
     }
     
      func sendMessage(message:Message) {
@@ -80,6 +85,3 @@ struct Message {
     var name:String
     
 }
-
-
-

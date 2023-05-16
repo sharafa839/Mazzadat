@@ -16,7 +16,6 @@ class MCell: UITableViewCell {
     @IBOutlet weak var messageView: UIView!
     @IBOutlet weak var messageDateLabel: UILabel!
     
-    var longPressDidTapped: (() -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,36 +24,35 @@ class MCell: UITableViewCell {
     
     
     func configure(message: Message){
-        let text = message.message ?? ""
+        let text = message.message
         let senderType = UserType(rawValue: message.senderType) ?? .user
+        messageLabel.text = text
         messageView.backgroundColor = senderType.messageContainerColor
         contentStackView.alignment = senderType.alignment
-        
-         let view = stackView.subviews[senderType == .user ? 1 : 0]
-            stackView.addArrangedSubview(view)
-        
-        
-        if text.isPhoneNumber, text.count < 13, text.count > 3 {
-            messageLabel.textColor = .blue
-            let longGesture = UILongPressGestureRecognizer(target: self, action:#selector(longTap))
-            addGestureRecognizer(longGesture)
-        } else {
-            messageLabel.textColor = senderType.messageTextColor
-        }
-        if let url = URL(string: text), UIApplication.shared.canOpenURL(url) {
-            messageLabel.textColor = .blue
-        } else {
-            messageLabel.textColor = senderType.messageTextColor
-        }
-  
-        messageLabel.text = text
-        let date = message.date.toDateNew(withFormat: "yyyy/mmm/dd")
-        messageDateLabel.text = date?.toString(format: "yyyy/mmm/dd")
+//
+//         let view = stackView.subviews[senderType == .user ? 1 : 0]
+//            stackView.addArrangedSubview(view)
+//
+//
+//        if text.isPhoneNumber, text.count < 13, text.count > 3 {
+//            messageLabel.textColor = .blue
+//            let longGesture = UILongPressGestureRecognizer(target: self, action:#selector(longTap))
+//            addGestureRecognizer(longGesture)
+//        } else {
+//            messageLabel.textColor = senderType.messageTextColor
+//        }
+//        if let url = URL(string: text), UIApplication.shared.canOpenURL(url) {
+//            messageLabel.textColor = .blue
+//        } else {
+//            messageLabel.textColor = senderType.messageTextColor
+//        }
+//  
+//        messageLabel.text = text
+//        let date = message.date.toDateNew(withFormat: "yyyy/mmm/dd")
+//        messageDateLabel.text = date?.toString(format: "yyyy/mmm/dd")
     }
     
-    @objc func longTap(gestureRecognizer: UIGestureRecognizer) {
-        longPressDidTapped?()
-    }
+   
 }
 
 

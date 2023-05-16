@@ -68,9 +68,12 @@ class ChatViewController: UIViewController {
             
         }.disposed(by: viewModel.disposeBag)
         
-        viewModel.messages.subscribe { [weak self] _ in
-            
-            self?.tableView.reloadData()
+        viewModel.messages.subscribe { [weak self] value in
+            guard let chat = value.element ,!chat.isEmpty else {return}
+          
+                self?.tableView.reloadData()
+           
+           
         }.disposed(by: viewModel.disposeBag)
     }
 }
@@ -79,12 +82,12 @@ extension ChatViewController : UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.messages.value.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell:MCell = tableView.dequeue()
+        let cell = tableView.dequeueReusableCell(withIdentifier: MCell.identifier, for: indexPath) as! MCell
         
-        if viewModel.messages.value.count > indexPath.row {
-            let message = viewModel.messages.value[indexPath.row]
+        if viewModel.messages.value.count > 0 {
+             let message = viewModel.messages.value[indexPath.row]
            cell.configure(message:message)
            return cell
         }else {
