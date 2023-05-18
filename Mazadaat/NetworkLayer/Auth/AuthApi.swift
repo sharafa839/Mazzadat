@@ -19,6 +19,7 @@ enum AuthApiServices {
     case updateProfileImage(images:MultiPartItem)
     case  setupNotification(auctionAlert:Bool?,bidUpdates:Bool?,promotion:Bool?,auctionEndingSoon:Bool?)
     case verify(code:String)
+    case forgetPassword(phone:String)
 }
 
 extension AuthApiServices:TargetType,BaseApiHeadersProtocol {
@@ -44,6 +45,8 @@ extension AuthApiServices:TargetType,BaseApiHeadersProtocol {
             return  EndPoints.Auth.notificationSetting.rawValue
         case .verify(code: let code):
             return EndPoints.Auth.verify.rawValue
+        case .forgetPassword(phone: let phone):
+            return EndPoints.Auth.forgetPassword.rawValue
         }
     }
     
@@ -91,6 +94,8 @@ extension AuthApiServices:TargetType,BaseApiHeadersProtocol {
             return .requestParameters(parameters: parameters, encoding: JSONEncoding.default)
         case .verify(code: let code):
             return .requestParameters(parameters: ["type":"2","code":code], encoding: JSONEncoding.default)
+        case .forgetPassword(phone: let phone):
+            return .requestParameters(parameters: ["phone":phone], encoding: JSONEncoding.default)
         }
     }
     

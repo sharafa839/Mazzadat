@@ -257,6 +257,7 @@
 		FF9C2B2129DCA58800FA3C77 /* BasicResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9C2B2029DCA58800FA3C77 /* BasicResponse.swift */; };
 		FF9C2B2329DCA5FF00FA3C77 /* BaseApiHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9C2B2229DCA5FF00FA3C77 /* BaseApiHeaders.swift */; };
 		FF9C2B2729DCADFB00FA3C77 /* MoyaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9C2B2629DCADFB00FA3C77 /* MoyaService.swift */; };
+		FF9D088D2A159EA800FA9AB8 /* ForgetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9D088C2A159EA800FA9AB8 /* ForgetPasswordViewModel.swift */; };
 		FFA047642A0C24F800B8D390 /* LocalizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA047632A0C24F800B8D390 /* LocalizationManager.swift */; };
 		FFA0476F2A0C2B8C00B8D390 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA0476D2A0C2B8C00B8D390 /* SearchViewController.swift */; };
 		FFA047702A0C2B8C00B8D390 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFA0476E2A0C2B8C00B8D390 /* SearchViewController.xib */; };
@@ -703,6 +704,7 @@
 		FF9C2B2229DCA5FF00FA3C77 /* BaseApiHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseApiHeaders.swift; sourceTree = "<group>"; };
 		FF9C2B2429DCAA6D00FA3C77 /* User+UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+UserDefaults.swift"; sourceTree = "<group>"; };
 		FF9C2B2629DCADFB00FA3C77 /* MoyaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaService.swift; sourceTree = "<group>"; };
+		FF9D088C2A159EA800FA9AB8 /* ForgetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewModel.swift; sourceTree = "<group>"; };
 		FFA047632A0C24F800B8D390 /* LocalizationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizationManager.swift; sourceTree = "<group>"; };
 		FFA0476D2A0C2B8C00B8D390 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		FFA0476E2A0C2B8C00B8D390 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
@@ -2726,6 +2728,7 @@
 			children = (
 				FFD1BFCA29C4E7FF0008C814 /* ForgetPasswordViewController.swift */,
 				FFD1BFCB29C4E7FF0008C814 /* ForgetPasswordViewController.xib */,
+				FF9D088C2A159EA800FA9AB8 /* ForgetPasswordViewModel.swift */,
 			);
 			path = ForgetPassword;
 			sourceTree = "<group>";
@@ -3288,6 +3291,7 @@
 				FF4C7F2229D453CC0095396A /* imageSliderShowCong.swift in Sources */,
 				FFACF05829E9C1B700B8C41F /* KindOfAuctionCollectionViewCell.swift in Sources */,
 				FFC5B0F629F70E030039AB0E /* AuctionsDetailsViewController.swift in Sources */,
+				FF9D088D2A159EA800FA9AB8 /* ForgetPasswordViewModel.swift in Sources */,
 				FF4C7F1B29D453CC0095396A /* RightToLeftTransition.swift in Sources */,
 				FF4C7F1D29D453CC0095396A /* CollectionCell + extension.swift in Sources */,
 				FF4C7F2429D453CC0095396A /* TimeHelper.swift in Sources */,

@@ -111,7 +111,7 @@ class LoginViewController: UIViewController {
        
         
         forgetPasswordButton.rx.tap.subscribe { [weak self] _ in
-            let forgetPasswordViewController = ForgetPasswordViewController()
+            let forgetPasswordViewController = ForgetPasswordViewController(viewModel: ForgetPasswordViewModel())
             self?.navigationController?.pushViewController(forgetPasswordViewController, animated: true)
         }.disposed(by: viewModel.disposeBag)
         

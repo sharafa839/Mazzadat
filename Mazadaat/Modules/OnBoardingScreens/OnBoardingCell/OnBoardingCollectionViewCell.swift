@@ -16,6 +16,7 @@ class OnBoardingCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        imageView.floating(raduis: 15)
     }
 
     //MARK: - Methods

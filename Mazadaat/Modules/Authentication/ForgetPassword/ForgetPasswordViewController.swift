@@ -16,11 +16,23 @@ class ForgetPasswordViewController: UIViewController {
     @IBOutlet weak var forgetPasswordDescriptionLabel: UILabel!
     @IBOutlet weak var forgetPasswordLabel: UILabel!
     
+    var viewModel:ForgetPasswordViewModel
+    init(viewModel:ForgetPasswordViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName:nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupLocalize()
         setupUI()
+        setupViewModelObservers()
     }
 
     private func setupLocalize() {
@@ -28,6 +40,28 @@ class ForgetPasswordViewController: UIViewController {
         forgetPasswordDescriptionLabel.text = Localizations.enterYourMobileNumber.localize
         phoneNumberTextField.placeholder = Localizations.enterYourMobileNumber.localize
 
+    }
+    
+    private func setupViewModelObservers() {
+        viewModel.onError.subscribe { [weak self] value in
+            HelperK.showError(title: value.element ?? "", subtitle: "")
+        }.disposed(by: viewModel.disposeBag)
+        viewModel.onLoading.subscribe { [weak self]_ in
+            
+        }.disposed(by: viewModel.disposeBag)
+        
+        viewModel.onSuccess.subscribe { [weak self] value in
+        
+            self?.goToOTPViewController(phonNumber: value.element ?? "")
+            
+        }.disposed(by: viewModel.disposeBag)
+        
+    }
+    
+    private func goToOTPViewController(phonNumber:String) {
+        let otpViewModel = OTPViewModel(phoneNumber:phonNumber , typeOfAuth: .forgetPassword)
+        let otpViewController = OTPViewController(viewModel: otpViewModel)
+        self.navigationController?.pushViewController(otpViewController, animated: true)
     }
     
     private func setupUI() {
@@ -42,9 +76,8 @@ class ForgetPasswordViewController: UIViewController {
             HelperK.showError(title: Localizations.anError.localize, subtitle: "")
             return
         }
-        let otpViewModel = OTPViewModel(phoneNumber: text, typeOfAuth: .forgetPassword)
-        let otpViewController = OTPViewController(viewModel: otpViewModel)
-        self.navigationController?.pushViewController(otpViewController, animated: true)
+        viewModel.forgetPassword(phoneNumber: text)
+       
     }
  
 }

@@ -20,7 +20,7 @@ class CategoryCollectionViewCell: UICollectionViewCell {
 
     private func setupUI() {
         
-        coontinerView.setRoundCorners(15)
+        coontinerView.floating(raduis: 15)
     }
 
     func configureCell(_ by:AdvertisementCategory) {
