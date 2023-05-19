@@ -160,7 +160,9 @@ extension ControlCenterViewController:UITableViewDelegate,UITableViewDataSource 
                 let feedbackViewController = FeedbackViewController(viewModel: feedbackViewModel)
                 navigationController?.pushViewController(feedbackViewController, animated: true)
             case 2:
-                return
+               let faqViewModel = FAQViewModel()
+                let faqViewController = FAQViewController(viewModel: faqViewModel)
+                navigationController?.pushViewController(faqViewController, animated: true)
             default:
                 return
             }

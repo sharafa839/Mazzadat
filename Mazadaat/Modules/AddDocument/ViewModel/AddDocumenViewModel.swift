@@ -57,6 +57,21 @@ class AddDocumentViewModel:HomeNetworkingProtocol {
             }
         }
     }
+    
+    
+    func removeDocuments(front:Bool?,back:Bool?) {
+        onLoading.accept(true)
+        removeDocuments(type: documents?.documentTypeID ?? "", front: front, back: back) { [weak self] result in
+            self?.onLoading.accept(false)
+            switch result {
+            case .success(let response):
+                self?.onSuccess.onNext(())
+            case .failure(let error):
+                self?.onError.onNext(error.localizedDescription)
+            }
+        }
+        
+    }
 }
 
 

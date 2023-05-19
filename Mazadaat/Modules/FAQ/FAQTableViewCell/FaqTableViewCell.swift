@@ -33,8 +33,10 @@ class FaqTableViewCell: UITableViewCell {
         containerView.drawBorder(raduis: 5, borderColor: .Natural_200)
     }
     
-    func configure(with:FAQModel) {
-        
+    func configure(with:FAQElement) {
+        questionLabel.text = with.question
+        answerLabel.text = with.answer?.html2String
+        with.isCollapseRow ?? false ?  expand() :  collapse()
     }
     
     func expand() {

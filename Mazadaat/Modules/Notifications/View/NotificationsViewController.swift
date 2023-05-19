@@ -43,6 +43,11 @@ class NotificationsViewController: UIViewController {
     
     private func setupUI() {
         setNavigationItem(title: "Notification")
+        segmentControl.setTitle(Localizations.biddings.localize, forSegmentAt: 0)
+        segmentControl.setTitle(Localizations.myauctions.localize, forSegmentAt: 1)
+        segmentControl.setTitleColor(.textColor,state: .selected)
+        segmentControl.setTitleColor(.white,state: .normal)
+        segmentControl.setTitleFont(.Archivo(14,weight: .Bold))
         
     }
     
@@ -94,3 +99,4 @@ extension NotificationsViewController:UITableViewDelegate,UITableViewDataSource 
     }
     
 }
+

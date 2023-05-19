@@ -236,8 +236,10 @@ extension AddDocumentViewController:UITableViewDelegate,UITableViewDataSource {
             
             cell.onTapDelete = {[weak self] in
                 self?.section = indexPath.section
-          //  self?.imageTapped()
-        }
+                
+                self?.viewModel.removeDocuments(front: self?.section == 0 ? true:nil, back: self?.section == 1 ? true:nil)
+            }
+               
             
             return cell
         }

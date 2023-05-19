@@ -258,6 +258,10 @@
 		FF9C2B2329DCA5FF00FA3C77 /* BaseApiHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9C2B2229DCA5FF00FA3C77 /* BaseApiHeaders.swift */; };
 		FF9C2B2729DCADFB00FA3C77 /* MoyaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9C2B2629DCADFB00FA3C77 /* MoyaService.swift */; };
 		FF9D088D2A159EA800FA9AB8 /* ForgetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9D088C2A159EA800FA9AB8 /* ForgetPasswordViewModel.swift */; };
+		FF9D86162A17BEE2003591BA /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9D86142A17BEE2003591BA /* FAQViewController.swift */; };
+		FF9D86172A17BEE2003591BA /* FAQViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF9D86152A17BEE2003591BA /* FAQViewController.xib */; };
+		FF9D861B2A17C5A7003591BA /* FAQHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9D86192A17C5A7003591BA /* FAQHeader.swift */; };
+		FF9D861C2A17C5A7003591BA /* FAQHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF9D861A2A17C5A7003591BA /* FAQHeader.xib */; };
 		FFA047642A0C24F800B8D390 /* LocalizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA047632A0C24F800B8D390 /* LocalizationManager.swift */; };
 		FFA0476F2A0C2B8C00B8D390 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA0476D2A0C2B8C00B8D390 /* SearchViewController.swift */; };
 		FFA047702A0C2B8C00B8D390 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFA0476E2A0C2B8C00B8D390 /* SearchViewController.xib */; };
@@ -705,6 +709,10 @@
 		FF9C2B2429DCAA6D00FA3C77 /* User+UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+UserDefaults.swift"; sourceTree = "<group>"; };
 		FF9C2B2629DCADFB00FA3C77 /* MoyaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaService.swift; sourceTree = "<group>"; };
 		FF9D088C2A159EA800FA9AB8 /* ForgetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewModel.swift; sourceTree = "<group>"; };
+		FF9D86142A17BEE2003591BA /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
+		FF9D86152A17BEE2003591BA /* FAQViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FAQViewController.xib; sourceTree = "<group>"; };
+		FF9D86192A17C5A7003591BA /* FAQHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQHeader.swift; sourceTree = "<group>"; };
+		FF9D861A2A17C5A7003591BA /* FAQHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FAQHeader.xib; sourceTree = "<group>"; };
 		FFA047632A0C24F800B8D390 /* LocalizationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizationManager.swift; sourceTree = "<group>"; };
 		FFA0476D2A0C2B8C00B8D390 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		FFA0476E2A0C2B8C00B8D390 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
@@ -2093,6 +2101,8 @@
 		FF98D0C62A06D50B00B0AEA3 /* FAQ */ = {
 			isa = PBXGroup;
 			children = (
+				FF9D86182A17C502003591BA /* HeaderView */,
+				FF9D86132A17BECC003591BA /* View */,
 				FF98D0CD2A06DD2300B0AEA3 /* ViewModel */,
 				FF98D0CB2A06D52000B0AEA3 /* FAQTableViewCell */,
 			);
@@ -2142,6 +2152,24 @@
 				FF9C2B2229DCA5FF00FA3C77 /* BaseApiHeaders.swift */,
 			);
 			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		FF9D86132A17BECC003591BA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FF9D86142A17BEE2003591BA /* FAQViewController.swift */,
+				FF9D86152A17BEE2003591BA /* FAQViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FF9D86182A17C502003591BA /* HeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				FF9D86192A17C5A7003591BA /* FAQHeader.swift */,
+				FF9D861A2A17C5A7003591BA /* FAQHeader.xib */,
+			);
+			path = HeaderView;
 			sourceTree = "<group>";
 		};
 		FFA0476C2A0C2B7A00B8D390 /* Search */ = {
@@ -2999,6 +3027,7 @@
 				FF8E83D429EED14F009AE77C /* AuctionCategoryTableViewCell.xib in Resources */,
 				FFAC5EC72A0FF1A300AAE96D /* ChatViewController.xib in Resources */,
 				FF8B951B29FA6ADE00441899 /* AskGoldenBellTableViewCell.xib in Resources */,
+				FF9D86172A17BEE2003591BA /* FAQViewController.xib in Resources */,
 				FF85828329FAEB6B002D98ED /* AskGoldenBellViewController.xib in Resources */,
 				FFBC7F8029F0ECCC00579E20 /* PriceRangeView.xib in Resources */,
 				FA49CE1A2546A06D004CDD6E /* Roboto-Thin.ttf in Resources */,
@@ -3050,6 +3079,7 @@
 				FFA047702A0C2B8C00B8D390 /* SearchViewController.xib in Resources */,
 				FABD93C32532DD4100BFB943 /* ArbFONTS-Jozoor-Font.ttf in Resources */,
 				FFAC5EC12A0FF14D00AAE96D /* MCell.xib in Resources */,
+				FF9D861C2A17C5A7003591BA /* FAQHeader.xib in Resources */,
 				FFBC3C1B2A03307D00547566 /* FillDocumentCollectionViewCell.xib in Resources */,
 				FF4C7EEB29D379B70095396A /* Archivo-ExtraLightItalic.ttf in Resources */,
 				FF4C7EDD29D379B70095396A /* Archivo-BlackItalic.ttf in Resources */,
@@ -3255,6 +3285,7 @@
 				FF8B257729EB310C00302346 /* AuctionOwnerView.swift in Sources */,
 				FF7C464F29FCFC4000615314 /* SettingViewController.swift in Sources */,
 				FF5894772A06986F00620ABB /* TicketViewModel.swift in Sources */,
+				FF9D861B2A17C5A7003591BA /* FAQHeader.swift in Sources */,
 				FFBC7F7229F0E72C00579E20 /* AuctionsFilterViewController.swift in Sources */,
 				FF4C7F2329D453CC0095396A /* DesignView.swift in Sources */,
 				FFA76A3629E11630000BD881 /* SplashViewModel.swift in Sources */,
@@ -3351,6 +3382,7 @@
 				FF8B256F29EB29FC00302346 /* AuctionDetailesView.swift in Sources */,
 				FF818BA329F86C5500CA9A99 /* ProfileViewController.swift in Sources */,
 				FF5AF73529DFBE5D0020E716 /* AuthApi.swift in Sources */,
+				FF9D86162A17BEE2003591BA /* FAQViewController.swift in Sources */,
 				FF4C7EF929D37C340095396A /* OnBoardingViewController.swift in Sources */,
 				FFBC7F7E29F0ECBF00579E20 /* PriceRangeView.swift in Sources */,
 				FA3B7C0625C7FC6100303819 /* LoaderManager.swift in Sources */,

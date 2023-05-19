@@ -30,6 +30,10 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qkn-05-ATy">
                         <rect key="frame" x="8" y="8" width="318" height="176"/>
                     </imageView>
+                    <view alpha="0.34999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hJb-CR-rVo">
+                        <rect key="frame" x="8" y="8" width="318" height="86"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="g23-lQ-Zl4">
                         <rect key="frame" x="8" y="8" width="318" height="228"/>
                         <subviews>
@@ -235,11 +239,15 @@
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="g23-lQ-Zl4" secondAttribute="bottom" constant="8" id="7DI-Fc-kVr"/>
                     <constraint firstItem="qkn-05-ATy" firstAttribute="bottom" secondItem="XNp-2i-EFB" secondAttribute="bottom" id="BK9-rV-ckK"/>
+                    <constraint firstItem="hJb-CR-rVo" firstAttribute="top" secondItem="qkn-05-ATy" secondAttribute="top" id="D70-7h-xEx"/>
+                    <constraint firstItem="hJb-CR-rVo" firstAttribute="leading" secondItem="qkn-05-ATy" secondAttribute="leading" id="SoR-2d-fet"/>
                     <constraint firstItem="g23-lQ-Zl4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="UCr-Kl-B8I"/>
                     <constraint firstItem="qkn-05-ATy" firstAttribute="trailing" secondItem="g23-lQ-Zl4" secondAttribute="trailing" id="b09-iv-0Fy"/>
                     <constraint firstItem="qkn-05-ATy" firstAttribute="top" secondItem="g23-lQ-Zl4" secondAttribute="top" id="cJh-mX-kOG"/>
+                    <constraint firstItem="hJb-CR-rVo" firstAttribute="bottom" secondItem="qkn-05-ATy" secondAttribute="bottom" constant="-90" id="fj3-Nu-3O5"/>
                     <constraint firstItem="g23-lQ-Zl4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="nFj-3D-NjC"/>
                     <constraint firstAttribute="trailing" secondItem="g23-lQ-Zl4" secondAttribute="trailing" constant="8" id="qv8-oO-KC8"/>
+                    <constraint firstItem="hJb-CR-rVo" firstAttribute="trailing" secondItem="qkn-05-ATy" secondAttribute="trailing" id="v4d-5y-4Wx"/>
                     <constraint firstItem="qkn-05-ATy" firstAttribute="leading" secondItem="g23-lQ-Zl4" secondAttribute="leading" id="yQo-H2-iAy"/>
                 </constraints>
             </tableViewCellContentView>

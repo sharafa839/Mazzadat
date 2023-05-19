@@ -18,7 +18,7 @@ struct FAQModel: Codable {
     var id: Int?
     var name: String?
     var faqs: [FAQElement]?
-    var isCollapseSection:Bool = false
+    var isCollapseSection:Bool? = false
     enum CodingKeys: String, CodingKey {
         case id, name
         case faqs = "Faqs"
@@ -29,5 +29,9 @@ struct FAQModel: Codable {
 struct FAQElement: Codable {
     var id: Int?
     var question, answer: String?
-    var isCollapseRow:Bool = false
+    var isCollapseRow:Bool? = false
+    enum CodingKeys: String, CodingKey {
+        case id, question
+        case answer 
+    }
 }

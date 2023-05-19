@@ -67,6 +67,8 @@ class DocumentViewModel:HomeNetworkingProtocol {
             case .failure(let error):
                 self?.onError.onNext(error.localizedDescription)
             }
-        }    }
+        }
+        
+    }
 }
 
