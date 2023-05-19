@@ -55,4 +55,9 @@ extension UIColor {
     static var Natural_200:UIColor {
         return UIColor(named: "Natural_200")!
     }
+    
+    static var Natural_100:UIColor {
+        return UIColor(named: "Natural_100")!
+    }
+    
 }

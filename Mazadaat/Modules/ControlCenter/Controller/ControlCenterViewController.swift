@@ -112,7 +112,7 @@ extension ControlCenterViewController:UITableViewDelegate,UITableViewDataSource 
     
      func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 0 {
-            return 150
+            return 200
         }else {
             return 0
         }

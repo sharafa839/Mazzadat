@@ -48,11 +48,22 @@ class SuccessResetPassowrdViewController: UIViewController {
         descriptionLabel.text = viewModel.description
         subTitleLabel.text = viewModel.subTitle
         doneButton.setTitle("done".localize, for: .normal)
+        rejectButton.setTitle(Localizations.dismissing.localize, for: .normal)
+        
     }
     
     private func setupUI() {
-        rejectButton.isHidden = !viewModel.success
-         navigationController?.isNavigationBarHidden =  viewModel.success
+        rejectButton.setTitleColor(.Bronze_900, for: .normal)
+        rejectButton.backgroundColor = .Bronze_100
+        containerView.setRoundCorners(20)
+        if viewModel.success  {
+            rejectButton.isHidden = viewModel.success
+            navigationController?.isNavigationBarHidden =  viewModel.success
+        }else{
+            rejectButton.isHidden = viewModel.success
+            navigationController?.isNavigationBarHidden =  viewModel.success
+        }
+        
     }
     
     private func setupObservables() {
@@ -61,10 +72,23 @@ class SuccessResetPassowrdViewController: UIViewController {
                 self?.delegate?.didBidding()
                 self?.dismiss(animated: true, completion: nil)
             }else {
-                self?.setRoot(LoginViewController(viewModel: LoginViewModel()), withNavigation: true, animated: true)
+                if self?.viewModel.success ?? false {
+                    AppUtilities.changeRoot(root: MainTabBarController())
+                }else{
+                    self?.dismiss(animated: true)
+                }
             }
             
         }.disposed(by: viewModel.disposeBag)
+        
+        rejectButton.rx.tap.subscribe { [weak self] _  in
+           
+                self?.dismiss(animated: true)
+
+            
+        }.disposed(by: viewModel.disposeBag)
+        
+        
 
     }
     

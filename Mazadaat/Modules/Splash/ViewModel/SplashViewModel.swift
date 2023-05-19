@@ -79,6 +79,7 @@ class CoreData {
     var personalSubscription:[Subscription]?
     func destory() {
         settings = nil
+        personalSubscription = nil
         subscriptions = nil
         bankAccounts = nil
         categories = nil

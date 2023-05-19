@@ -49,7 +49,7 @@ class LoginWithNafathViewController: UIViewController {
 
     private func setupUI() {
         containerView.setRoundCorners(10)
-        cancelButton.backgroundColor = .borderColor
+        cancelButton.backgroundColor = .Natural_100
         
     }
     

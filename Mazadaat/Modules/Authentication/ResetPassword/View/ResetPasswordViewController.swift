@@ -42,6 +42,7 @@ class ResetPasswordViewController: UIViewController {
         setupLocalize()
         setupViewModelObserver()
         setupViewModel()
+        setupProperty()
         setupObservables()
     }
     
@@ -102,6 +103,10 @@ class ResetPasswordViewController: UIViewController {
         
         viewModel.onError.subscribe { [weak self] value in
             HelperK.showError(title: value.element ?? "" , subtitle: "")
+            let resetPasswordSuccessViewModel = SuccessResetPasswordViewModel(success: false, title: Localizations.failed.localize, subtitle:Localizations.anError.localize, descrption: nil, type: .forgetPassword)
+            let resetPasswordViewController = SuccessResetPassowrdViewController(viewModel: resetPasswordSuccessViewModel)
+            self?.present(resetPasswordViewController, animated: true, completion: nil)
+            
         }.disposed(by: viewModel.disposeBag)
     }
 }

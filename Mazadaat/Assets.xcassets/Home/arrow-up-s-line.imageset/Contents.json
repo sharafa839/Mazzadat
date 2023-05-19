@@ -2,7 +2,8 @@
   "images" : [
     {
       "filename" : "arrow-up-s-line.svg",
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "language-direction" : "left-to-right"
     }
   ],
   "info" : {

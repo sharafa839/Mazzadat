@@ -138,7 +138,7 @@ var viewModel:AddDocumentViewModel
             self.openGallery()
         }))
         
-        alert.addAction(UIAlertAction.init(title: "Cancel".localize, style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction.init(title: Localizations.cancel.localize, style: .cancel, handler: nil))
         
         self.present(alert, animated: true, completion: nil)
         

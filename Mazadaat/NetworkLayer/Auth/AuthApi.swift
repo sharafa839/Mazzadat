@@ -13,7 +13,7 @@ enum AuthApiServices {
     case register(name:String,phone:String,password:String,email:String)
     case logout
     case changePassword(currentPassword:String,newPassword:String)
-    case resetPassword(phone:String,password:String,confirmPassword:String)
+    case resetPassword(phone:String,password:String,confirmPassword:String,code:String)
     case update(name:String,phone:String,email:String)
     case me
     case updateProfileImage(images:MultiPartItem)
@@ -67,8 +67,8 @@ extension AuthApiServices:TargetType,BaseApiHeadersProtocol {
             return .requestPlain
         case .changePassword(let currentPassword, let newPassword):
             return .requestParameters(parameters: ["old_password":currentPassword,"password":newPassword], encoding: JSONEncoding.default)
-        case .resetPassword(let phone,let password,let ConfirmPassword):
-            return .requestParameters(parameters: ["mobile_number":phone,"password":password,"password_confirmation":ConfirmPassword], encoding: JSONEncoding.default)
+        case .resetPassword(let phone,let password,let ConfirmPassword,let code):
+            return .requestParameters(parameters: ["email":phone,"password":password,"password_confirmation":ConfirmPassword,"code":code], encoding: JSONEncoding.default)
         case .update(name: let name, phone: let phone, email: let email):
             return .requestParameters(parameters: ["name":name,"email":email,"mobile":phone], encoding: JSONEncoding.default)
         case .me:
@@ -95,7 +95,7 @@ extension AuthApiServices:TargetType,BaseApiHeadersProtocol {
         case .verify(code: let code):
             return .requestParameters(parameters: ["type":"2","code":code], encoding: JSONEncoding.default)
         case .forgetPassword(phone: let phone):
-            return .requestParameters(parameters: ["phone":phone], encoding: JSONEncoding.default)
+            return .requestParameters(parameters: ["email":phone], encoding: JSONEncoding.default)
         }
     }
     

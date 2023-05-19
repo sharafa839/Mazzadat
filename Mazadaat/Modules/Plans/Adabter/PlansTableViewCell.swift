@@ -56,14 +56,15 @@ class PlansTableViewCell: UITableViewCell {
             upgradeButton.isEnabled = false
             upgradeButton.backgroundColor = .borderColor
         }else {
+            
         if    with.id == CoreData.shared.personalSubscription?.first?.id {
             upgradeButton.setTitle(Localizations.yourCuurrentPlan.localize, for: .normal)
             upgradeButton.backgroundColor = .borderColor
             upgradeButton.isEnabled = false
             }else{
                 upgradeButton.setTitle(Localizations.upgrade.localize, for: .normal)
-                upgradeButton.isEnabled = false
-                upgradeButton.backgroundColor = .borderColor
+                upgradeButton.isEnabled = true
+                upgradeButton.backgroundColor = .Bronze_500
             }
         }
         

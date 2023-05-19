@@ -44,8 +44,9 @@ class MoyaHelper<T: TargetType> {
                     if response.status == .fail {
                         let error = NetworkError(code: 0, message: response.message?.first ?? "L10n.App.somethingWentWrong")
                         if let message = response.message?.first  {
-                            if message == "You have to be logged in first ."{
+                            if message == "You have to be logged in first ." || message == "يجب تسجيل الدخول أولا ." {
                                 HelperK.deletUserDefaults()
+                                CoreData.shared.destory()
                                 AppUtilities.changeRoot(root: UINavigationController(rootViewController: LoginViewController(viewModel: LoginViewModel())))
                                 let error = NetworkError(code: 9, message: response.message?.first ?? "L10n.App.somethingWentWrong")
                                 completion(.failure(error))

@@ -85,7 +85,7 @@ class OTPViewController: UIViewController {
         viewModel.navigateTo.subscribe { [weak self] value in
             guard let destination = value.element else {return}
             if destination == .forgetPassword {
-                self?.navigationController?.pushViewController(ResetPasswordViewController(viewModel: ResetPasswordViewModel(phoneNumber: self?.viewModel.phoneNumber ?? "")), animated: true)
+                
             }else {
                 appDelegate.coordinator.setRoot(MainTabBarController())
 
@@ -106,10 +106,26 @@ class OTPViewController: UIViewController {
             self?.viewModel.timerStart()
         }.disposed(by: viewModel.disposeBag)
         verifyButton.rx.tap.subscribe { [weak self] _ in
-            self?.viewModel.verification(code: self?.input ?? "")
+            if self?.viewModel.typeOfAuth == .forgetPassword {
+                self?.goTOResetPassword()
+            }else {
+                self?.viewModel.verification(code: self?.input ?? "")
+
+            }
         }.disposed(by: viewModel.disposeBag)
     }
     
+    private func goTOResetPassword() {
+        guard let inputOTP = input else {
+            HelperK.showError(title: Localizations.anError.localize, subtitle: "")
+            return
+        }
+        
+        let resetPasswordViewModel = ResetPasswordViewModel(phoneNumber: viewModel.phoneNumber, code:inputOTP)
+        let resetPasswordViewController = ResetPasswordViewController(viewModel: resetPasswordViewModel)
+        
+        navigationController?.pushViewController(resetPasswordViewController, animated: true)
+    }
     
     private func setupUI() {
         setNavigationItem(title: Localizations.verifyYourOtp.localize)

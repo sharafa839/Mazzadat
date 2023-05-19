@@ -23,6 +23,7 @@ class FillDocumentCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
+        setupLocalize()
     }
 
     private func setupUI() {
@@ -33,6 +34,10 @@ class FillDocumentCollectionViewCell: UICollectionViewCell {
         
     }
     
+    private func setupLocalize() {
+        changeButton.setTitle(Localizations.change.localize, for: .normal)
+        deleteButton.setTitle(Localizations.change.localize, for: .normal)
+    }
     
     func configure(_ document:UploadDocuments) {
         documentNameLabel.text = document.documentType?.name

@@ -24,6 +24,7 @@ class FillAddDocumentTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
+        setupLocalize()
     }
 
     private func setupUI() {
@@ -32,6 +33,11 @@ class FillAddDocumentTableViewCell: UITableViewCell {
         deleteButton.setRoundCorners(5)
         documentImageView.setRoundCorners(5)
         
+    }
+    
+    private func setupLocalize() {
+        changeButton.setTitle(Localizations.change.localize, for: .normal)
+        deleteButton.setTitle(Localizations.change.localize, for: .normal)
     }
     
     

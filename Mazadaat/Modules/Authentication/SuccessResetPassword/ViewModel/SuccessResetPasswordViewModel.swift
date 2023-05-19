@@ -16,11 +16,11 @@ class SuccessResetPasswordViewModel {
     var onLoading = BehaviorRelay<Bool>(value: false)
     
     var success:Bool
-    var title:String
-    var subTitle:String
-    var description:String
+    var title:String?
+    var subTitle:String?
+    var description:String?
     var opensource:openSource
-    init(success:Bool,title:String,subtitle:String,descrption:String,type:openSource) {
+    init(success:Bool,title:String?,subtitle:String?,descrption:String?,type:openSource) {
         self.success = success
         self.title = title
         self.subTitle = subtitle
