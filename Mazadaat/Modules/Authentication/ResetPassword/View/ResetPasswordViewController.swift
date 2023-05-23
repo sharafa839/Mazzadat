@@ -52,7 +52,8 @@ class ResetPasswordViewController: UIViewController {
         confirmPassewordView.drawBorder(raduis: 10, borderColor: .borderColor)
         passewordView.drawBorder(raduis: 10, borderColor: .borderColor)
        setNavigationItem(title:Localizations.resetPassword.localize)
-        
+        [passwordTextField,confirmPasswordTextField].map({$0?.textAlignment = LocalizationManager.shared.getLanguage() == .Arabic ? .right : .left})
+
     }
     
     private func setupProperty() {

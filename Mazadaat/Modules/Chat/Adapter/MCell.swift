@@ -29,7 +29,9 @@ class MCell: UITableViewCell {
         messageLabel.text = text
         messageView.backgroundColor = senderType.messageContainerColor
         contentStackView.alignment = senderType.alignment
-        messageDateLabel.text = message.date
+        guard let date = message.date.toDateNew() else {return}
+        date.getHumanReadableDayString()
+//messageDateLabel.text = date.toString(format: "hh:mm")
 //
 //         let view = stackView.subviews[senderType == .user ? 1 : 0]
 //            stackView.addArrangedSubview(view)

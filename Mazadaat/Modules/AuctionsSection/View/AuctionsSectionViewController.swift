@@ -42,7 +42,7 @@ class AuctionsSectionViewController: UIViewController {
         segmentController.setTitleColor(.white, state: .selected)
         segmentController.setTitleColor(.textColor, state: .normal)
         segmentController.layer.borderWidth = 2
-        segmentController.setTitleFont(.Archivo(16, weight: .Bold))
+        segmentController.setTitleFont(.Archivo(15, weight: .Bold))
         segmentController.backgroundColor = .white
     }
     
