@@ -51,7 +51,7 @@ class HeaderView: UIView {
     }
     
     private func setupAskGoldenBell() {
-        titleLabel.font = .Archivo(28, weight: .Bold)
+        titleLabel.font = .Cairo(28, weight: .Bold)
         titleLabel.text = Localizations.askGoldenBell.localize
         self.backgroundColor = .Bronze_500
 

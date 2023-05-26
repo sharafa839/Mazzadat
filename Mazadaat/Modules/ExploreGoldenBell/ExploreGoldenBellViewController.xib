@@ -10,8 +10,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Archivo-Bold.ttf">
-            <string>Archivo-Bold</string>
+        <array key="Cairo-Bold.ttf">
+            <string>Cairo-Bold</string>
         </array>
     </customFonts>
     <objects>
@@ -47,7 +47,7 @@
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UdO-6A-486">
                                     <rect key="frame" x="0.0" y="0.0" width="293" height="20"/>
-                                    <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="18"/>
+                                    <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="18"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="Button">
                                         <color key="titleColor" name="TextColor"/>
@@ -74,7 +74,7 @@
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hyw-Vm-Txb">
                                     <rect key="frame" x="0.0" y="0.0" width="293" height="20"/>
-                                    <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="18"/>
+                                    <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="18"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="Button">
                                         <color key="titleColor" name="TextColor"/>
@@ -115,7 +115,7 @@
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOv-qu-aSb">
                                     <rect key="frame" x="0.0" y="0.0" width="293" height="20"/>
-                                    <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="18"/>
+                                    <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="18"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="Button">
                                         <color key="titleColor" name="TextColor"/>
@@ -142,7 +142,7 @@
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OxM-gm-cLJ">
                                     <rect key="frame" x="0.0" y="0.0" width="293" height="20"/>
-                                    <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="18"/>
+                                    <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="18"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="Button">
                                         <color key="titleColor" name="TextColor"/>
@@ -173,13 +173,13 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W6k-Ir-WRl">
-                    <rect key="frame" x="24" y="359" width="345" height="107.33333333333331"/>
+                    <rect key="frame" x="24" y="359" width="345" height="126.33333333333331"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="i83-Fi-KIr">
-                            <rect key="frame" x="0.0" y="0.0" width="345" height="107.33333333333333"/>
+                            <rect key="frame" x="0.0" y="0.0" width="345" height="118.33333333333333"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="xXL-SF-pyg">
-                                    <rect key="frame" x="0.0" y="0.0" width="86.333333333333329" height="107.33333333333333"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="86.333333333333329" height="118.33333333333333"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbs-86-Gcx">
                                             <rect key="frame" x="3" y="0.0" width="80" height="80"/>
@@ -194,15 +194,15 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upI-vG-eN0">
-                                            <rect key="frame" x="24.666666666666664" y="92" width="37" height="15.333333333333329"/>
-                                            <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="14"/>
+                                            <rect key="frame" x="26.666666666666668" y="92" width="32.666666666666657" height="26.333333333333329"/>
+                                            <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="14"/>
                                             <color key="textColor" name="TextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="WrV-Gg-JBC">
-                                    <rect key="frame" x="86.333333333333343" y="0.0" width="86.333333333333343" height="107.33333333333333"/>
+                                    <rect key="frame" x="86.333333333333343" y="0.0" width="86.333333333333343" height="118.33333333333333"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Set-EB-fHC">
                                             <rect key="frame" x="3" y="0.0" width="80" height="80"/>
@@ -217,15 +217,15 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQc-hg-t8M">
-                                            <rect key="frame" x="24.666666666666671" y="92" width="37" height="15.333333333333329"/>
-                                            <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="14"/>
+                                            <rect key="frame" x="26.666666666666668" y="92" width="32.666666666666657" height="26.333333333333329"/>
+                                            <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="14"/>
                                             <color key="textColor" name="TextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="d5S-gt-VZz">
-                                    <rect key="frame" x="172.66666666666666" y="0.0" width="85.999999999999972" height="107.33333333333333"/>
+                                    <rect key="frame" x="172.66666666666666" y="0.0" width="85.999999999999972" height="118.33333333333333"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ed2-CR-Daf">
                                             <rect key="frame" x="3" y="0.0" width="80" height="80"/>
@@ -240,15 +240,15 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVi-oV-Jbg">
-                                            <rect key="frame" x="24.333333333333343" y="92" width="37" height="15.333333333333329"/>
-                                            <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="14"/>
+                                            <rect key="frame" x="26.666666666666682" y="92" width="32.666666666666657" height="26.333333333333329"/>
+                                            <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="14"/>
                                             <color key="textColor" name="TextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="eOk-4G-Gxw">
-                                    <rect key="frame" x="258.66666666666669" y="0.0" width="86.333333333333314" height="107.33333333333333"/>
+                                    <rect key="frame" x="258.66666666666669" y="0.0" width="86.333333333333314" height="118.33333333333333"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Irf-Nb-0Lh">
                                             <rect key="frame" x="3.3333333333333144" y="0.0" width="80" height="80"/>
@@ -263,8 +263,8 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3iU-bD-XNK">
-                                            <rect key="frame" x="24.666666666666629" y="92" width="37" height="15.333333333333329"/>
-                                            <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="14"/>
+                                            <rect key="frame" x="26.999999999999996" y="92" width="32.666666666666657" height="26.333333333333329"/>
+                                            <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="14"/>
                                             <color key="textColor" name="TextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -277,7 +277,7 @@
                     <constraints>
                         <constraint firstItem="i83-Fi-KIr" firstAttribute="leading" secondItem="W6k-Ir-WRl" secondAttribute="leading" id="250-Ys-SRk"/>
                         <constraint firstAttribute="trailing" secondItem="i83-Fi-KIr" secondAttribute="trailing" id="52U-2c-ra6"/>
-                        <constraint firstAttribute="bottom" secondItem="i83-Fi-KIr" secondAttribute="bottom" id="RKe-Ih-TE0"/>
+                        <constraint firstAttribute="bottom" secondItem="i83-Fi-KIr" secondAttribute="bottom" constant="8" id="RKe-Ih-TE0"/>
                         <constraint firstItem="i83-Fi-KIr" firstAttribute="top" secondItem="W6k-Ir-WRl" secondAttribute="top" id="hFb-Af-kga"/>
                     </constraints>
                 </view>

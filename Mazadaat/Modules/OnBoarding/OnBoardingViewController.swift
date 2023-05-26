@@ -38,11 +38,11 @@ class OnBoardingViewController: UIViewController {
 
 extension UIFont{
     static func ArchivoRegular(withSize size: CGFloat) -> UIFont {
-        return UIFont(name: "Archivo-Regular", size: size)!
+        return UIFont(name: "Cairo-Regular", size: size)!
     }
     
-    static func Archivo(_ size: CGFloat, weight: FontWeight = .regular) -> UIFont {
-        UIFont(name: "Archivo-\(weight.value)", size: size) ?? .systemFont(ofSize: size)
+    static func Cairo(_ size: CGFloat, weight: FontWeight = .regular) -> UIFont {
+        UIFont(name: "Cairo-\(weight.value)", size: size) ?? .systemFont(ofSize: size)
     }
 }
 

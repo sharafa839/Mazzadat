@@ -178,9 +178,9 @@ extension AskGoldenBellViewController:UICollectionViewDelegate,UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
       let language =   LocalizationManager.shared.getLanguage()
         
-        guard let widthInEnglish = viewModel.onSuccessGetAllCats.value[indexPath.row].name?.widthOfString(usingFont:.Archivo(18,weight: .Bold)) else {return CGSize(width: 100 , height: 48)}
+        guard let widthInEnglish = viewModel.onSuccessGetAllCats.value[indexPath.row].name?.widthOfString(usingFont:.Cairo(18,weight: .Bold)) else {return CGSize(width: 100 , height: 48)}
         
-        guard let widthInArabic = viewModel.onSuccessGetAllCats.value[indexPath.row].nameAr?.widthOfString(usingFont:.Archivo(18,weight: .Bold)) else {return CGSize(width: 100 , height: 48)}
+        guard let widthInArabic = viewModel.onSuccessGetAllCats.value[indexPath.row].nameAr?.widthOfString(usingFont:.Cairo(18,weight: .Bold)) else {return CGSize(width: 100 , height: 48)}
         
         return  language == .Arabic ?  CGSize(width: widthInArabic + 65, height: 48): CGSize(width: widthInEnglish + 65, height: 48)
     }

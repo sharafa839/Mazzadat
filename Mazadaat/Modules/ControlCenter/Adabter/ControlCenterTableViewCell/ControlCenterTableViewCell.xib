@@ -10,8 +10,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Archivo-Bold.ttf">
-            <string>Archivo-Bold</string>
+        <array key="Cairo-Bold.ttf">
+            <string>Cairo-Bold</string>
         </array>
     </customFonts>
     <objects>
@@ -36,7 +36,7 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a36-K5-13c">
                                 <rect key="frame" x="16" y="18" width="208" height="20"/>
-                                <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="18"/>
                                 <color key="textColor" name="TextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>

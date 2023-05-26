@@ -10,11 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Archivo-Bold.ttf">
-            <string>Archivo-Bold</string>
+        <array key="Cairo-Bold.ttf">
+            <string>Cairo-Bold</string>
         </array>
-        <array key="Archivo-Regular.ttf">
-            <string>Archivo-Regular</string>
+        <array key="Cairo-Regular.ttf">
+            <string>Cairo-Regular</string>
         </array>
     </customFonts>
     <objects>
@@ -60,7 +60,7 @@
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yi6-GX-rvw">
                             <rect key="frame" x="16" y="8" width="142" height="41"/>
-                            <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="16"/>
+                            <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="16"/>
                             <color key="textColor" name="TextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -80,7 +80,7 @@
                                         <constraint firstAttribute="height" constant="50" id="Qzz-1p-P9z"/>
                                         <constraint firstAttribute="width" constant="50" id="RWj-gH-R5f"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" name="Archivo-Regular" family="Archivo" pointSize="28"/>
+                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="28"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="-">
                                         <color key="titleColor" name="TextColor"/>
@@ -94,12 +94,12 @@
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8ds-bJ-eON">
                                                     <rect key="frame" x="0.0" y="0.0" width="105" height="46"/>
-                                                    <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Cg-2R-8Xg">
                                                     <rect key="frame" x="111" y="0.0" width="27" height="46"/>
-                                                    <fontDescription key="fontDescription" name="Archivo-Regular" family="Archivo" pointSize="11"/>
+                                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -121,7 +121,7 @@
                                         <constraint firstAttribute="width" constant="50" id="9hx-is-rIb"/>
                                         <constraint firstAttribute="height" constant="50" id="aOJ-zG-xl4"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" name="Archivo-Regular" family="Archivo" pointSize="28"/>
+                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="28"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="+">
                                         <color key="titleColor" name="TextColor"/>

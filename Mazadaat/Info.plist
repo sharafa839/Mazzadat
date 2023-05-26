@@ -33,8 +33,13 @@
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
-		<string>googlechromes</string>
+		<string>googlegmail</string>
+		<string>tel</string>
+		<string>ms-outlook</string>
+		<string>readdle-spark</string>
+		<string>ymail</string>
 		<string>comgooglemaps</string>
+		<string>comgooglemaps-x-callback</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
@@ -60,6 +65,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Archivo</string>
+		<string>Cairo</string>
 	</array>
 	<key>UIBackgroundModes</key>
 	<array>
@@ -84,15 +90,5 @@
 	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-        <string>googlegmail</string>
-        <string>tel</string>
-        <string>ms-outlook</string>
-        <string>readdle-spark</string>
-        <string>ymail</string>
-        <string>comgooglemaps</string>
-        <string>comgooglemaps-x-callback</string>
-    </array>
 </dict>
 </plist>

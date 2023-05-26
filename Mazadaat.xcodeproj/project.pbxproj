@@ -158,6 +158,14 @@
 		FF5AF76329E0690B0020E716 /* ActivityIndicatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5AF76229E0690B0020E716 /* ActivityIndicatorManager.swift */; };
 		FF5BE5B52A0B9D8600811AB7 /* ExploreGoldenBellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5BE5B32A0B9D8600811AB7 /* ExploreGoldenBellViewController.swift */; };
 		FF5BE5B62A0B9D8600811AB7 /* ExploreGoldenBellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF5BE5B42A0B9D8600811AB7 /* ExploreGoldenBellViewController.xib */; };
+		FF6131542A216889002D5383 /* Cairo-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF61314C2A216889002D5383 /* Cairo-ExtraBold.ttf */; };
+		FF6131552A216889002D5383 /* Cairo-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF61314D2A216889002D5383 /* Cairo-ExtraLight.ttf */; };
+		FF6131562A216889002D5383 /* Cairo-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF61314E2A216889002D5383 /* Cairo-SemiBold.ttf */; };
+		FF6131572A216889002D5383 /* Cairo-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF61314F2A216889002D5383 /* Cairo-Medium.ttf */; };
+		FF6131582A216889002D5383 /* Cairo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF6131502A216889002D5383 /* Cairo-Regular.ttf */; };
+		FF6131592A216889002D5383 /* Cairo-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF6131512A216889002D5383 /* Cairo-Light.ttf */; };
+		FF61315A2A216889002D5383 /* Cairo-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF6131522A216889002D5383 /* Cairo-Black.ttf */; };
+		FF61315B2A216889002D5383 /* Cairo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF6131532A216889002D5383 /* Cairo-Bold.ttf */; };
 		FF67F2C529D4AF4E00CA2E0B /* PagingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF67F2C329D4AF4E00CA2E0B /* PagingCollectionViewCell.xib */; };
 		FF67F2C629D4AF4E00CA2E0B /* PagingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF67F2C429D4AF4E00CA2E0B /* PagingCollectionViewCell.swift */; };
 		FF67F2CA29D4AFD600CA2E0B /* OnBoardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF67F2C829D4AFD600CA2E0B /* OnBoardingCollectionViewCell.swift */; };
@@ -608,6 +616,14 @@
 		FF5AF76229E0690B0020E716 /* ActivityIndicatorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorManager.swift; sourceTree = "<group>"; };
 		FF5BE5B32A0B9D8600811AB7 /* ExploreGoldenBellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreGoldenBellViewController.swift; sourceTree = "<group>"; };
 		FF5BE5B42A0B9D8600811AB7 /* ExploreGoldenBellViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExploreGoldenBellViewController.xib; sourceTree = "<group>"; };
+		FF61314C2A216889002D5383 /* Cairo-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-ExtraBold.ttf"; sourceTree = "<group>"; };
+		FF61314D2A216889002D5383 /* Cairo-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-ExtraLight.ttf"; sourceTree = "<group>"; };
+		FF61314E2A216889002D5383 /* Cairo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-SemiBold.ttf"; sourceTree = "<group>"; };
+		FF61314F2A216889002D5383 /* Cairo-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Medium.ttf"; sourceTree = "<group>"; };
+		FF6131502A216889002D5383 /* Cairo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Regular.ttf"; sourceTree = "<group>"; };
+		FF6131512A216889002D5383 /* Cairo-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Light.ttf"; sourceTree = "<group>"; };
+		FF6131522A216889002D5383 /* Cairo-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Black.ttf"; sourceTree = "<group>"; };
+		FF6131532A216889002D5383 /* Cairo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Bold.ttf"; sourceTree = "<group>"; };
 		FF67F2C329D4AF4E00CA2E0B /* PagingCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PagingCollectionViewCell.xib; sourceTree = "<group>"; };
 		FF67F2C429D4AF4E00CA2E0B /* PagingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingCollectionViewCell.swift; sourceTree = "<group>"; };
 		FF67F2C829D4AFD600CA2E0B /* OnBoardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -1097,6 +1113,7 @@
 		FABD93AF2532DCF500BFB943 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				FF61314B2A216889002D5383 /* Cairo */,
 				FF4C7ECA29D379B70095396A /* Archivo */,
 				FA5F1F75253B7252007FEF72 /* SF PRO */,
 				FABD93BD2532DD1600BFB943 /* Jozoor */,
@@ -1394,6 +1411,21 @@
 				FF5BE5B42A0B9D8600811AB7 /* ExploreGoldenBellViewController.xib */,
 			);
 			path = ExploreGoldenBell;
+			sourceTree = "<group>";
+		};
+		FF61314B2A216889002D5383 /* Cairo */ = {
+			isa = PBXGroup;
+			children = (
+				FF61314C2A216889002D5383 /* Cairo-ExtraBold.ttf */,
+				FF61314D2A216889002D5383 /* Cairo-ExtraLight.ttf */,
+				FF61314E2A216889002D5383 /* Cairo-SemiBold.ttf */,
+				FF61314F2A216889002D5383 /* Cairo-Medium.ttf */,
+				FF6131502A216889002D5383 /* Cairo-Regular.ttf */,
+				FF6131512A216889002D5383 /* Cairo-Light.ttf */,
+				FF6131522A216889002D5383 /* Cairo-Black.ttf */,
+				FF6131532A216889002D5383 /* Cairo-Bold.ttf */,
+			);
+			path = Cairo;
 			sourceTree = "<group>";
 		};
 		FF67F2C129D4AEDA00CA2E0B /* Views */ = {
@@ -2974,11 +3006,13 @@
 				FF8B950D29FA698A00441899 /* BiddingAuctionsTableViewCell.xib in Resources */,
 				FF7EEA2A29FDCE4400BE1CBE /* ContactUsViewController.xib in Resources */,
 				FA49CE132546A058004CDD6E /* Roboto-BoldItalic.ttf in Resources */,
+				FF61315B2A216889002D5383 /* Cairo-Bold.ttf in Resources */,
 				FA4E023E25743D4500D14B03 /* fave.gif in Resources */,
 				FFE2C52829DBBD3000F8C16F /* HomeViewController.xib in Resources */,
 				FA762B77259E0AD30035E0EB /* Header.xib in Resources */,
 				FF94438E2A003C320094AC1F /* TicketViewController.xib in Resources */,
 				FF7185D929FB7CFD00867213 /* PersonalInformationHeader.xib in Resources */,
+				FF6131562A216889002D5383 /* Cairo-SemiBold.ttf in Resources */,
 				FF4C7EE629D379B70095396A /* Archivo-ThinItalic.ttf in Resources */,
 				FFD1BFBD29C4D21C0008C814 /* RegisterViewController.xib in Resources */,
 				FF154EA52A11789D00ABDC80 /* CategoryCollectionViewCell.xib in Resources */,
@@ -2994,6 +3028,7 @@
 				FADE023125DD359D00FB1675 /* animation_500_kl9crrb3.gif in Resources */,
 				FF4C7EE429D379B70095396A /* Archivo-LightItalic.ttf in Resources */,
 				FFAA4D682A03BEC90027B478 /* AddDocumentViewController.xib in Resources */,
+				FF6131542A216889002D5383 /* Cairo-ExtraBold.ttf in Resources */,
 				FA49CE122546A056004CDD6E /* Roboto-Bold.ttf in Resources */,
 				FA49CE162546A065004CDD6E /* Roboto-LightItalic.ttf in Resources */,
 				FFD1BFB029C4CBA60008C814 /* MazzadTableViewCell.xib in Resources */,
@@ -3023,10 +3058,12 @@
 				FF818B9729F86B3000CA9A99 /* HeaderProfileView.xib in Resources */,
 				FFE2C51929DBB16800F8C16F /* PackageSubscribePlan.xib in Resources */,
 				FF4C7EEE29D379B70095396A /* Archivo-Thin.ttf in Resources */,
+				FF6131572A216889002D5383 /* Cairo-Medium.ttf in Resources */,
 				FA3B7C6A25C7FE7000303819 /* animation_500_kkmcz3rp.gif in Resources */,
 				FA49CE182546A069004CDD6E /* Roboto-MediumItalic.ttf in Resources */,
 				FF8E83D429EED14F009AE77C /* AuctionCategoryTableViewCell.xib in Resources */,
 				FFAC5EC72A0FF1A300AAE96D /* ChatViewController.xib in Resources */,
+				FF6131552A216889002D5383 /* Cairo-ExtraLight.ttf in Resources */,
 				FF8B951B29FA6ADE00441899 /* AskGoldenBellTableViewCell.xib in Resources */,
 				FF9D86172A17BEE2003591BA /* FAQViewController.xib in Resources */,
 				FF85828329FAEB6B002D98ED /* AskGoldenBellViewController.xib in Resources */,
@@ -3047,6 +3084,7 @@
 				FF67F2C529D4AF4E00CA2E0B /* PagingCollectionViewCell.xib in Resources */,
 				FABD93C12532DD3B00BFB943 /* ArbFONTS-Jozoor Font.otf in Resources */,
 				FAE9A7FE2665037E00D40FD2 /* subAnsweCell.xib in Resources */,
+				FF6131592A216889002D5383 /* Cairo-Light.ttf in Resources */,
 				FFBC7F7329F0E72C00579E20 /* AuctionsFilterViewController.xib in Resources */,
 				FA9DD4492664AA7F00DFE590 /* QuestionSubSectionCell.xib in Resources */,
 				FF708E1329F72E20001C8003 /* PlaceBidViewController.xib in Resources */,
@@ -3107,7 +3145,9 @@
 				FF2975612A12988300591B38 /* Splash-Ui-01.gif in Resources */,
 				FF8B952029FACDA100441899 /* AuctionsSectionViewController.xib in Resources */,
 				FF8B257529EB310000302346 /* AuctionOwnerView.xib in Resources */,
+				FF6131582A216889002D5383 /* Cairo-Regular.ttf in Resources */,
 				FADE022B25DD2FFE00FB1675 /* animation_500_kl9bwexy.gif in Resources */,
+				FF61315A2A216889002D5383 /* Cairo-Black.ttf in Resources */,
 				FF5BE5B62A0B9D8600811AB7 /* ExploreGoldenBellViewController.xib in Resources */,
 				FFD6D96629E8B6C50044ECD9 /* AuctionHolderTableViewCell.xib in Resources */,
 				FFC5B0F729F70E030039AB0E /* AuctionsDetailsViewController.xib in Resources */,

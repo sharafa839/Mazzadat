@@ -47,7 +47,7 @@ class NotificationsViewController: UIViewController {
         segmentControl.setTitle(Localizations.myauctions.localize, forSegmentAt: 1)
         segmentControl.setTitleColor(.textColor,state: .selected)
         segmentControl.setTitleColor(.white,state: .normal)
-        segmentControl.setTitleFont(.Archivo(14,weight: .Bold))
+        segmentControl.setTitleFont(.Cairo(14,weight: .Bold))
         
     }
     

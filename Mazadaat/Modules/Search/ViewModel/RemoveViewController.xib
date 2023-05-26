@@ -10,11 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Archivo-Bold.ttf">
-            <string>Archivo-Bold</string>
+        <array key="Cairo-Bold.ttf">
+            <string>Cairo-Bold</string>
         </array>
-        <array key="Archivo-Regular.ttf">
-            <string>Archivo-Regular</string>
+        <array key="Cairo-Regular.ttf">
+            <string>Cairo-Regular</string>
         </array>
     </customFonts>
     <objects>
@@ -46,13 +46,13 @@
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBK-OH-p3J">
                             <rect key="frame" x="20" y="100" width="353" height="19.666666666666671"/>
-                            <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="18"/>
+                            <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="18"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEd-fK-iGE">
                             <rect key="frame" x="20" y="131.66666666666663" width="353" height="15.333333333333343"/>
-                            <fontDescription key="fontDescription" name="Archivo-Regular" family="Archivo" pointSize="14"/>
+                            <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
                             <color key="textColor" name="Neutral-v600"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -64,7 +64,7 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="56" id="hk1-fo-s5k"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="22"/>
+                                    <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="22"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="Button">
                                         <color key="titleColor" systemColor="systemRedColor"/>
@@ -76,7 +76,7 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="56" id="Z6b-8S-8UA"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="22"/>
+                                    <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="22"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="Button"/>
                                 </button>

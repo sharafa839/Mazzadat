@@ -10,14 +10,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Archivo-Bold.ttf">
-            <string>Archivo-Bold</string>
+        <array key="Cairo-Bold.ttf">
+            <string>Cairo-Bold</string>
         </array>
-        <array key="Archivo-Regular.ttf">
-            <string>Archivo-Regular</string>
+        <array key="Cairo-Regular.ttf">
+            <string>Cairo-Regular</string>
         </array>
-        <array key="Archivo-SemiBold.ttf">
-            <string>Archivo-SemiBold</string>
+        <array key="Cairo-SemiBold.ttf">
+            <string>Cairo-SemiBold</string>
         </array>
     </customFonts>
     <objects>
@@ -51,19 +51,19 @@
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qd9-7y-v7R">
                             <rect key="frame" x="0.0" y="0.0" width="274" height="15.5"/>
-                            <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="14"/>
+                            <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="14"/>
                             <color key="textColor" name="Red-500"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bd0-kj-vgB">
                             <rect key="frame" x="0.0" y="34.5" width="274" height="15.5"/>
-                            <fontDescription key="fontDescription" name="Archivo-Regular" family="Archivo" pointSize="14"/>
+                            <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
                             <color key="textColor" name="Neutral-v600"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xe4-7F-yBx">
                             <rect key="frame" x="0.0" y="69" width="274" height="17.5"/>
-                            <fontDescription key="fontDescription" name="Archivo-Regular" family="Archivo" pointSize="16"/>
+                            <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="16"/>
                             <color key="textColor" name="Bronze-500"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -73,7 +73,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="fr4-YP-fzi"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="Archivo-SemiBold" family="Archivo" pointSize="18"/>
+                            <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo" pointSize="18"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" title="Button">
                                 <color key="titleColor" name="Bronze-500"/>
@@ -86,14 +86,14 @@
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verify your OTP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mM4-N4-knz">
                             <rect key="frame" x="0.0" y="0.0" width="366" height="46"/>
-                            <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="22"/>
+                            <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="22"/>
                             <color key="textColor" name="TextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZA0-aP-NPx">
                             <rect key="frame" x="0.0" y="54" width="366" height="46"/>
                             <string key="text">Password should be at least 8 characters long and include a mix of upper and lowercase letters, numbers, and symbols, and not used before.</string>
-                            <fontDescription key="fontDescription" name="Archivo-Regular" family="Archivo" pointSize="14"/>
+                            <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
                             <color key="textColor" name="TextColor"/>
                             <nil key="highlightedColor"/>
                         </label>

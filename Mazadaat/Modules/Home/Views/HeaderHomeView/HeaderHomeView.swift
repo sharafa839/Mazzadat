@@ -98,7 +98,7 @@ class HeaderHomeView: UIView {
         welcomeLabel.textColor = .white
         backgroundColor = .Bronze_500
         imageContainerView.drawBorder(raduis: imageContainerView.frame.height / 2, borderColor: .white)
-        nameLabel.font = .Archivo(18, weight: .Bold)
+        nameLabel.font = .Cairo(18, weight: .Bold)
     }
     
     private func setupAskGoldenBell() {

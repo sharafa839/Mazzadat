@@ -10,11 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Archivo-Bold.ttf">
-            <string>Archivo-Bold</string>
+        <array key="Cairo-Bold.ttf">
+            <string>Cairo-Bold</string>
         </array>
-        <array key="Archivo-Regular.ttf">
-            <string>Archivo-Regular</string>
+        <array key="Cairo-Regular.ttf">
+            <string>Cairo-Regular</string>
         </array>
     </customFonts>
     <objects>
@@ -47,13 +47,13 @@
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price Range" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Chz-Yl-JkC">
                             <rect key="frame" x="0.0" y="0.0" width="410" height="15.5"/>
-                            <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="14"/>
+                            <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="14"/>
                             <color key="textColor" name="TextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Range of auctions price from minimum price to maximum price you interest to start bidding." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2g7-br-IJA">
                             <rect key="frame" x="0.0" y="25.5" width="410" height="26.5"/>
-                            <fontDescription key="fontDescription" name="Archivo-Regular" family="Archivo" pointSize="12"/>
+                            <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="12"/>
                             <color key="textColor" name="BorderView"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -67,7 +67,7 @@
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auction Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zvh-hL-chL">
                                     <rect key="frame" x="0.0" y="0.0" width="189" height="13.5"/>
-                                    <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="12"/>
+                                    <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="12"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -96,7 +96,7 @@
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auction Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8q-9X-wyv">
                                     <rect key="frame" x="0.0" y="0.0" width="189" height="13.5"/>
-                                    <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="12"/>
+                                    <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="12"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>

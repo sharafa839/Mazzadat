@@ -10,8 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Archivo-Bold.ttf">
-            <string>Archivo-Bold</string>
+        <array key="Cairo-Bold.ttf">
+            <string>Cairo-Bold</string>
+        </array>
+        <array key="Cairo-Regular.ttf">
+            <string>Cairo-Regular</string>
         </array>
     </customFonts>
     <objects>
@@ -34,7 +37,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="361" height="128"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m78-Zz-OlT">
-                                    <rect key="frame" x="8" y="47.333333333333343" width="344" height="55"/>
+                                    <rect key="frame" x="8" y="56.666666666666657" width="344" height="55"/>
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="toD-5g-pJ3">
                                             <rect key="frame" x="0.0" y="0.0" width="344" height="55"/>
@@ -52,8 +55,8 @@
                                     </constraints>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8TH-lk-6zf">
-                                    <rect key="frame" x="16" y="20" width="31.666666666666671" height="13.333333333333336"/>
-                                    <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="12"/>
+                                    <rect key="frame" x="16" y="20" width="28" height="22.666666666666671"/>
+                                    <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="12"/>
                                     <color key="textColor" name="TextColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -75,8 +78,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="361" height="30"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCn-Ey-PDs">
-                                            <rect key="frame" x="16" y="8.3333333333333428" width="31.666666666666671" height="13.333333333333336"/>
-                                            <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="12"/>
+                                            <rect key="frame" x="16" y="3.6666666666666572" width="28" height="22.666666666666668"/>
+                                            <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="12"/>
                                             <color key="textColor" name="TextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -93,20 +96,21 @@
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                     <color key="textColor" systemColor="labelColor"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
                             </subviews>
                         </stackView>
                     </subviews>
                 </stackView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qSk-qN-lQm" customClass="CustomButton" customModule="Golden_Bell" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qSk-qN-lQm" customClass="CustomButton" customModule="Golden_Bell" customModuleProvider="target">
                     <rect key="frame" x="16" y="628" width="361" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="RMl-hz-RHS"/>
                     </constraints>
+                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="18"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="SoX-78-FMj"/>

@@ -129,7 +129,7 @@ class LoginWithOtherSideButton:UIButton {
         clipsToBounds = true
         layer.cornerRadius = 15
         backgroundColor = .Bronze_50
-        titleLabel?.font     = UIFont.Archivo(18)
+        titleLabel?.font     = UIFont.Cairo(18)
         titleLabel?.textColor = .Bronze_500
         layer.cornerRadius   = 25
     }
@@ -155,7 +155,7 @@ class CustomButton: UIButton {
         setTitleColor(.white, for: .normal)
         
         backgroundColor      = .Bronze_500
-        titleLabel?.font     = UIFont.Archivo(18)
+        titleLabel?.font     = UIFont.Cairo(18)
         layer.cornerRadius   = 25
     }
     

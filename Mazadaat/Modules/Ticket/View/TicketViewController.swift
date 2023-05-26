@@ -59,7 +59,7 @@ class TicketViewController: UIViewController {
         segmentController.setTitleColor(.white, state: .selected)
         segmentController.setTitleColor(.textColor, state: .normal)
         segmentController.layer.borderWidth = 2
-        segmentController.setTitleFont(.Archivo(18, weight: .Bold))
+        segmentController.setTitleFont(.Cairo(18, weight: .Bold))
         segmentController.backgroundColor = .white
     }
     

@@ -37,7 +37,7 @@ class FillAddDocumentTableViewCell: UITableViewCell {
     
     private func setupLocalize() {
         changeButton.setTitle(Localizations.change.localize, for: .normal)
-        deleteButton.setTitle(Localizations.change.localize, for: .normal)
+        deleteButton.setTitle(Localizations.delete.localize, for: .normal)
     }
     
     
