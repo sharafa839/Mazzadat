@@ -9,7 +9,7 @@
 import UIKit
 
 class ChatViewController: UIViewController {
-
+    
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
@@ -34,18 +34,26 @@ class ChatViewController: UIViewController {
         setupUI()
     }
     
-
-
+    private func scrollToTheBottom() {
+        let indexPath = IndexPath(row: viewModel.messages.value.count - 1 , section: 0)
+        tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+    }
+    
     private func setupObservables() {
         sendButton.rx.tap.subscribe { [weak self] _ in
             guard let self = self else {return}
-
+            
             guard let text = self.textField.text ,
                   !text.isEmpty else {return}
             let date = Date()
             let message = Message(senderType: "user", date: date.toString(format: "yyyy-mm-dd"), message: text, name: HelperK.getname())
             
-            self.viewModel.sendMessageToBackend(message: message)
+            if viewModel.chatId == "" {
+                self.viewModel.sendMessageToBackend(message: message)
+            }else{
+                self.viewModel.sendTicketResponse(message: message)
+            }
+            
             self.textField.text = ""
         }.disposed(by: viewModel.disposeBag)
     }
@@ -72,10 +80,17 @@ class ChatViewController: UIViewController {
         
         viewModel.messages.subscribe { [weak self] value in
             guard let chat = value.element ,!chat.isEmpty else {return}
-          
-                self?.tableView.reloadData()
-           
-           
+            
+            self?.tableView.reloadData()
+            
+            
+        }.disposed(by: viewModel.disposeBag)
+        
+        viewModel.onSuccess.subscribe { [weak self] value in
+            
+            self?.tableView.reloadData()
+            self?.scrollToTheBottom()
+            
         }.disposed(by: viewModel.disposeBag)
     }
 }
@@ -84,21 +99,21 @@ extension ChatViewController : UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.messages.value.count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MCell.identifier, for: indexPath) as! MCell
         
         if viewModel.messages.value.count > 0 {
-             let message = viewModel.messages.value[indexPath.row]
-           cell.configure(message:message)
-           return cell
+            let message = viewModel.messages.value[indexPath.row]
+            cell.configure(message:message)
+            return cell
         }else {
             return UITableViewCell()
         }
         
     }
     
-   
+    
     
 }
 

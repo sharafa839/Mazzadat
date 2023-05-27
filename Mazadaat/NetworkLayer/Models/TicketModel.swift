@@ -18,6 +18,8 @@ struct TicketModel: Codable {
         case ticketResponses = "TicketResponses"
         case attachment
     }
+    
+    
 }
 // MARK: - TicketResponse
 struct TicketResponse: Codable {
@@ -25,6 +27,9 @@ struct TicketResponse: Codable {
     var response: String?
     var senderType: Int?
 
+    var toMesssageModel:Message {
+      Message(self)
+    }
     enum CodingKeys: String, CodingKey {
         case id, response
         case senderType = "sender_type"

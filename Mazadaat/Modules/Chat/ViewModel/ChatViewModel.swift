@@ -17,6 +17,7 @@ class ChatViewModel:HomeNetworkingProtocol,TicketNetworkingProtocol {
     var onError = PublishSubject<String>()
     var onLoading = BehaviorRelay<Bool>(value: false)
     var messages = BehaviorRelay<[Message]>(value: [])
+    var onSuccess =  PublishSubject<Void>()
     var message : Message?
     var chatId: String?
     var auctionId:String?
@@ -43,7 +44,21 @@ class ChatViewModel:HomeNetworkingProtocol,TicketNetworkingProtocol {
             self?.onLoading.accept(false)
             switch result {
             case .success(let response):
-                print(response)
+                guard let ticketResponse = response.response?.data?.ticketResponses else {return}
+                let ticketMessages = ticketResponse.map({$0.toMesssageModel})
+                self?.messages.accept(ticketMessages)
+            case .failure(let error):
+                self?.onError.onNext(error.localizedDescription)
+            }
+        }
+    }
+    
+     func sendTicketResponse(message:Message) {
+        response(id: ticketId, response: message.message) { [weak self] result in
+            self?.onLoading.accept(false)
+            switch result {
+            case .success:
+                self?.onSuccess.onNext(())
             case .failure(let error):
                 self?.onError.onNext(error.localizedDescription)
             }
@@ -99,5 +114,18 @@ struct Message {
     var date:String
     var message:String
     var name:String
+    init(senderType:String,date:String,message:String,name:String) {
+        self.date = date
+        self.message = message
+        self.name = name
+        self.senderType = senderType
+    }
+    
+    init(_ model:TicketResponse) {
+        self.senderType = "\(model.senderType ?? 0)"
+        self.date = ""
+        self.message = model.response ?? ""
+        self.name = ""
+    }
     
 }

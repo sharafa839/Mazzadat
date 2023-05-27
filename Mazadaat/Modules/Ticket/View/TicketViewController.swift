@@ -52,6 +52,7 @@ class TicketViewController: UIViewController {
     }
 
     private func setupUI() {
+        setNavigationItem(title: Localizations.myTickets.localize)
         segmentController.drawBorder(raduis: 20, borderColor: .Bronze_500)
         segmentController.setTitle("all".localize, forSegmentAt: 0)
         segmentController.setTitle("running".localize, forSegmentAt: 1)
@@ -85,18 +86,35 @@ class TicketViewController: UIViewController {
         tableView.register(TicketTableViewCell.nib, forCellReuseIdentifier: TicketTableViewCell.identifier)
 
     }
+    
     @IBAction func segmentAction(_ sender: UISegmentedControl) {
+        index = sender.selectedSegmentIndex
+        tableView.reloadData()
     }
 }
 
 extension TicketViewController:UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.onSuccessGetData.value.count
+        if index == 0 {
+            return    viewModel.onSuccessGetData.value.count
+        }else if index == 1 {
+            return   viewModel.onSuccessRunning.value.count
+        }else {
+            return  viewModel.onSuccessClose.value.count
+        }
+      
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:TicketTableViewCell = tableView.dequeue()
-        cell.configure(viewModel.onSuccessGetData.value[indexPath.row])
+        if index == 0 {
+            cell.configure(viewModel.onSuccessGetData.value[indexPath.row])
+        }else if index == 1 {
+            cell.configure(viewModel.onSuccessRunning.value[indexPath.row])
+        }else {
+            cell.configure(viewModel.onSuccessClose.value[indexPath.row])
+        }
+      
         
         return cell
     }
