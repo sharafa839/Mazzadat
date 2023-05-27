@@ -30,29 +30,30 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MBT-bE-ncz">
                         <rect key="frame" x="8" y="8" width="364" height="228"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XKK-ev-tJk">
-                                <rect key="frame" x="137" y="16" width="90" height="140"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHM-UK-K9R">
+                                <rect key="frame" x="142" y="16" width="80" height="80"/>
+                                <color key="backgroundColor" name="Bronze-100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="FqJ-6j-qfQ"/>
+                                    <constraint firstAttribute="width" constant="80" id="WZI-Cz-jPN"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="image-fill"/>
+                                <connections>
+                                    <action selector="uploadPhoto:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="hfh-Me-ATz"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IVv-Mr-GKT">
+                                <rect key="frame" x="163.5" y="106" width="37.5" height="66"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHM-UK-K9R">
-                                        <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="90" id="FqJ-6j-qfQ"/>
-                                            <constraint firstAttribute="width" constant="90" id="WZI-Cz-jPN"/>
-                                        </constraints>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="image-fill"/>
-                                        <connections>
-                                            <action selector="uploadPhoto:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="hfh-Me-ATz"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beM-3f-VaV">
-                                        <rect key="frame" x="0.0" y="100" width="90" height="17.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beM-3f-VaV">
+                                        <rect key="frame" x="0.0" y="0.0" width="37.5" height="31.5"/>
                                         <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CvX-Wh-jvz">
-                                        <rect key="frame" x="0.0" y="127.5" width="90" height="12.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CvX-Wh-jvz">
+                                        <rect key="frame" x="0.0" y="41.5" width="37.5" height="24.5"/>
                                         <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="13"/>
                                         <color key="textColor" name="BorderView"/>
                                         <nil key="highlightedColor"/>
@@ -60,7 +61,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3te-pn-eGw">
-                                <rect key="frame" x="100" y="172" width="164" height="40"/>
+                                <rect key="frame" x="100" y="180" width="164" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="r49-Uh-Wa4"/>
                                 </constraints>
@@ -76,12 +77,14 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="3te-pn-eGw" firstAttribute="top" secondItem="IVv-Mr-GKT" secondAttribute="bottom" constant="8" id="93J-Pk-WVO"/>
+                            <constraint firstItem="IVv-Mr-GKT" firstAttribute="centerX" secondItem="MBT-bE-ncz" secondAttribute="centerX" id="E1j-tx-Fqb"/>
                             <constraint firstAttribute="trailing" secondItem="3te-pn-eGw" secondAttribute="trailing" constant="100" id="FTH-KO-Hl7"/>
-                            <constraint firstAttribute="bottom" secondItem="3te-pn-eGw" secondAttribute="bottom" constant="16" id="MAV-7e-0YM"/>
+                            <constraint firstAttribute="bottom" secondItem="3te-pn-eGw" secondAttribute="bottom" constant="8" id="MAV-7e-0YM"/>
                             <constraint firstItem="3te-pn-eGw" firstAttribute="leading" secondItem="MBT-bE-ncz" secondAttribute="leading" constant="100" id="OHp-5K-i10"/>
-                            <constraint firstItem="XKK-ev-tJk" firstAttribute="top" secondItem="MBT-bE-ncz" secondAttribute="top" constant="16" id="ZVd-9V-poB"/>
-                            <constraint firstItem="XKK-ev-tJk" firstAttribute="centerX" secondItem="MBT-bE-ncz" secondAttribute="centerX" id="mhS-4i-oz7"/>
-                            <constraint firstItem="3te-pn-eGw" firstAttribute="top" secondItem="XKK-ev-tJk" secondAttribute="bottom" constant="16" id="rTU-GM-Itu"/>
+                            <constraint firstItem="IVv-Mr-GKT" firstAttribute="top" secondItem="rHM-UK-K9R" secondAttribute="bottom" constant="10" id="TdR-nh-0JQ"/>
+                            <constraint firstItem="rHM-UK-K9R" firstAttribute="centerX" secondItem="MBT-bE-ncz" secondAttribute="centerX" id="lnA-Se-fkz"/>
+                            <constraint firstItem="rHM-UK-K9R" firstAttribute="top" secondItem="MBT-bE-ncz" secondAttribute="top" constant="16" id="yYA-bp-CJP"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -108,6 +111,9 @@
         <image name="image-fill" width="24" height="24"/>
         <namedColor name="BorderView">
             <color red="0.71372549019607845" green="0.71372549019607845" blue="0.76470588235294112" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Bronze-100">
+            <color red="0.96470588235294119" green="0.8666666666666667" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Bronze-500">
             <color red="0.88627450980392153" green="0.56470588235294117" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

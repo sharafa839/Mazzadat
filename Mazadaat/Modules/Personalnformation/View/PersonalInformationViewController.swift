@@ -76,10 +76,9 @@ class PersonalInformationViewController: UIViewController, didChangeFullName, di
     
     @objc
     private func updateImage() {
-        let imageName = "img-\(CACurrentMediaTime()).png"
-
-        let image = MultiPartItem(data: image?.jpegData(compressionQuality: 0.5) ?? Data(), fileName: imageName, mimeType: "image/png", keyName: "avatar")
-        viewModel.updateImage(image: image)
+       
+        guard let image = image?.jpegData(compressionQuality: 0.9)?.base64EncodedString() else {return}
+        viewModel.updateImage(image: image )
     }
     
     private func setupTableView() {

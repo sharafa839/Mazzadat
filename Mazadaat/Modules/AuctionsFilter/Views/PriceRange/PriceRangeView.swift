@@ -43,6 +43,8 @@ class PriceRangeView: UIView,UITextFieldDelegate {
     private func setupLocalize() {
         titlePriceToTextFieldLabel.text = "to".localize
         titlePriceFromTextFieldLabel.text = "from".localize
+        titleLabel.text = "price".localize
+        subtitleLabel.text = "price".localize
     }
     
     private func setupUI() {

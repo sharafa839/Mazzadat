@@ -16,7 +16,7 @@ protocol AuthNetworkingProtocol {
     func resetPassword(phone:String,password:String,confirmPassword:String,code:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
     func update(name:String,phone:String,email:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
     
-    func updateProfileImage(image:MultiPartItem,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
+    func updateProfileImage(image:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
     func me(completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
     func setupNotification(autionAlert:Bool?,bidUpdates:Bool?,promotion:Bool?,auctionEndingSoon:Bool?,completion:@escaping(Result<BaseResponse<String>,Error>)->Void)
 }
@@ -50,7 +50,7 @@ extension AuthNetworkingProtocol {
         auth.request(target: .update(name: name, phone: phone, email: email), completion: completion)
     }
 
-    func updateProfileImage(image:MultiPartItem,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void) {
+    func updateProfileImage(image:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void) {
         auth.request(target: .updateProfileImage(images: image), completion: completion)
     }
 

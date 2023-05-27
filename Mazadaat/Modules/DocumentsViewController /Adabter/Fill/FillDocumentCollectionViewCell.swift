@@ -36,13 +36,13 @@ class FillDocumentCollectionViewCell: UICollectionViewCell {
     
     private func setupLocalize() {
         changeButton.setTitle(Localizations.change.localize, for: .normal)
-        deleteButton.setTitle(Localizations.change.localize, for: .normal)
+        deleteButton.setTitle(Localizations.delete.localize, for: .normal)
     }
     
     func configure(_ document:UploadDocuments) {
-        documentNameLabel.text = document.documentType?.name
-        guard let front = document.frontFace else {
-            guard let image = document.backFace else {return}
+        documentNameLabel.text = document.name
+        guard let front = document.documents?.frontFace else {
+            guard let image = document.documents?.backFace else {return}
             guard let url = URL(string: image) else {return}
             let placeholderImage = UIImage(named: "AppIcon")!
             let processor = DefaultImageProcessor.default

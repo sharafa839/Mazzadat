@@ -30,8 +30,8 @@ class AddDocumentViewController: UIViewController {
     var frontImage:UIImage?
     var backImage:UIImage?
     var section:Int = 0
-    var frontMultiPartItem:MultiPartItem?
-    var backMultiPartItem:MultiPartItem?
+    var frontMultiPartItem:String?
+    var backMultiPartItem:String?
     var button:UIBarButtonItem?
     var delegate:didImageUpdates?
 var viewModel:AddDocumentViewModel
@@ -55,17 +55,17 @@ var viewModel:AddDocumentViewModel
     
     private func setupMultiPart() {
         if (viewModel.pictures.value[0][0] != "") {
-            let imageName = "img-\(CACurrentMediaTime()).png"
+           
             let image = UIImageView(image: frontImage)
             image.downlodImage(str: viewModel.pictures.value[0][0])
-            frontMultiPartItem = MultiPartItem(data: image.image?.jpegData(compressionQuality: 0.5) ?? Data(), fileName: imageName, mimeType: "image/png", keyName: "front_face")
+            frontMultiPartItem = image.image?.jpegData(compressionQuality: 0.9)?.base64EncodedString()
         }
         
         if  (viewModel.pictures.value[1][0] != "") {
             let imageName = "img-\(CACurrentMediaTime()).png"
             let image = UIImageView(image: backImage)
             image.downlodImage(str: viewModel.pictures.value[1][0])
-            backMultiPartItem = MultiPartItem(data: image.image?.jpegData(compressionQuality: 0.5) ?? Data(), fileName: imageName, mimeType: "image/png", keyName: "back_face")
+            backMultiPartItem = image.image?.jpegData(compressionQuality: 0.9)?.base64EncodedString()
         }
         
     }
@@ -83,7 +83,7 @@ var viewModel:AddDocumentViewModel
         }.disposed(by: viewModel.disposeBag)
         
         viewModel.onSuccess.subscribe {[weak self] model in
-            HelperK.showSuccess(title: "picUploaded", subtitle: "")
+            HelperK.showSuccess(title: "Process Done Successfully".localize, subtitle: "")
             self?.delegate?.imagesUpdates()
             self?.tableView.reloadData()
             self?.navigationController?.popViewController(animated: true)
@@ -103,12 +103,12 @@ var viewModel:AddDocumentViewModel
         if section == 0 {
             let imageName = "img-\(CACurrentMediaTime()).png"
 
-            frontMultiPartItem = MultiPartItem(data: image.jpegData(compressionQuality: 0.5) ?? Data(), fileName: imageName, mimeType: "image/png", keyName: "front_face")
+            frontMultiPartItem =  image.jpegData(compressionQuality: 0.9)?.base64EncodedString()
            
         }else {
             let imageName = "img-\(CACurrentMediaTime()).png"
 
-            backMultiPartItem = MultiPartItem(data: image.jpegData(compressionQuality: 0.5) ?? Data(), fileName: imageName, mimeType: "image/png", keyName: "back_face")
+            backMultiPartItem = image.jpegData(compressionQuality: 0.9)?.base64EncodedString()
         }
       
       
@@ -116,11 +116,11 @@ var viewModel:AddDocumentViewModel
     
     @objc private func saveImages() {
         guard let front = frontMultiPartItem else {
-            HelperK.showError(title: "fillAllData", subtitle: "")
+            HelperK.showError(title: "fillAllData".localize, subtitle: "")
             return
         }
         guard let back =  backMultiPartItem else {
-            HelperK.showError(title: "fillAllData", subtitle: "")
+            HelperK.showError(title: "fillAllData".localize, subtitle: "")
             return
         }
         

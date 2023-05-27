@@ -69,6 +69,7 @@ class LoginViewController: UIViewController {
         phoneNumberView.drawBorder(raduis: 10, borderColor: .borderColor)
         passewordView.drawBorder(raduis: 10, borderColor: .borderColor)
         languageView.drawBorder(raduis: 10, borderColor: .borderColor)
+        kindOfAuhenticationSectionSegment.setTitleFont(.Cairo(18))
         let titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.Bronze_900]
             kindOfAuhenticationSectionSegment.setTitleTextAttributes(titleTextAttributes, for: .normal)
             kindOfAuhenticationSectionSegment.setTitleTextAttributes(titleTextAttributes, for: .selected)
@@ -86,6 +87,7 @@ class LoginViewController: UIViewController {
         welcomeTitleLabel.text = Localizations.goodToSeeYou.localize
         kindOfAuhenticationSectionSegment.setTitle(Localizations.signIn.localize, forSegmentAt: 0)
         kindOfAuhenticationSectionSegment.setTitle(Localizations.register.localize, forSegmentAt: 1)
+        
         loginButton.setTitle(Localizations.signIn.localize, for: .normal)
         loginWithNafathButton.setTitle(Localizations.loginToNafath.localize, for: .normal)
         ContinueAsGuestButton.setTitle(Localizations.continueAsGuest.localize, for: .normal)

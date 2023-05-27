@@ -85,7 +85,7 @@ class HomeViewController: UIViewController {
         categoryCollectionView.collectionViewLayout = layout
         let auctionLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         auctionLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        auctionLayout.itemSize = CGSize(width: categoryCollectionView.frame.width / 3, height: 150)
+        auctionLayout.itemSize = CGSize(width: categoryCollectionView.frame.width / 3, height: 155)
         auctionLayout.scrollDirection = .horizontal
         auctionLayout.minimumInteritemSpacing = 0
         auctionLayout.minimumLineSpacing = 0

@@ -62,7 +62,7 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </stackView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="0F9-Zi-scR">
-                    <rect key="frame" x="28" y="556" width="366" height="305"/>
+                    <rect key="frame" x="28" y="560" width="366" height="301"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="glD-a7-Svo">
                         <size key="itemSize" width="128" height="128"/>
@@ -100,11 +100,11 @@
                 <constraint firstItem="pK2-bf-Jqe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="i3s-Uf-cI7"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yJa-dl-RrN" secondAttribute="trailing" id="kEx-Dx-wTF"/>
                 <constraint firstItem="y7i-Dk-D5L" firstAttribute="leading" secondItem="qVe-Bi-W3W" secondAttribute="leading" id="ldl-1I-4uH"/>
-                <constraint firstItem="0F9-Zi-scR" firstAttribute="top" secondItem="pK2-bf-Jqe" secondAttribute="bottom" constant="8" id="mMi-6z-Isj"/>
+                <constraint firstItem="0F9-Zi-scR" firstAttribute="top" secondItem="pK2-bf-Jqe" secondAttribute="bottom" constant="12" id="mMi-6z-Isj"/>
                 <constraint firstItem="y7i-Dk-D5L" firstAttribute="top" secondItem="qVe-Bi-W3W" secondAttribute="bottom" constant="10" id="tBu-ES-oJo"/>
                 <constraint firstItem="yJa-dl-RrN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="xrC-4b-pHr"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="84"/>
+            <point key="canvasLocation" x="137.68115942028987" y="83.705357142857139"/>
         </view>
     </objects>
     <resources>

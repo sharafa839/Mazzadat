@@ -25,7 +25,7 @@ class EditPeronalInformationViewModel:AuthNetworkingProtocol,TicketNetworkingPro
         didImageChange.accept(image.image ?? UIImage(named: "appIcon"))
     }
     
-    func updateImage(image:MultiPartItem) {
+    func updateImage(image:String) {
         onLoading.accept(true)
         updateProfileImage(image: image) { [weak self] result  in
             self?.onLoading.accept(false)

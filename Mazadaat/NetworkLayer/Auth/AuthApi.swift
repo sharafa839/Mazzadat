@@ -16,7 +16,7 @@ enum AuthApiServices {
     case resetPassword(phone:String,password:String,confirmPassword:String,code:String)
     case update(name:String,phone:String,email:String)
     case me
-    case updateProfileImage(images:MultiPartItem)
+    case updateProfileImage(images:String)
     case  setupNotification(auctionAlert:Bool?,bidUpdates:Bool?,promotion:Bool?,auctionEndingSoon:Bool?)
     case verify(code:String)
     case forgetPassword(phone:String)
@@ -74,9 +74,8 @@ extension AuthApiServices:TargetType,BaseApiHeadersProtocol {
         case .me:
             return .requestPlain
         case .updateProfileImage(let images):
-            let imageName = "img-\(CACurrentMediaTime()).png"
-            let multipart = [MultipartFormData(provider: .data(images.data), name: images.keyName, fileName: images.fileName, mimeType: images.mimeType)]
-            return .uploadMultipart(multipart)
+           
+            return .requestParameters(parameters: ["avatar":images], encoding: JSONEncoding.default)
         case .setupNotification( let auctionAlert, let bidUpdates, let promotion, let auctionEndingSoon):
             var parameters : [String:Any] = [:]
             if let auctionAlert = auctionAlert {

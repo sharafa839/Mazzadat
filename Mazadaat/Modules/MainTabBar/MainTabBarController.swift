@@ -51,7 +51,7 @@ class MainTabBarController: UITabBarController {
     }
     
     private func setupNavigationAppearance(_ navigationControllers: [UINavigationController]) {
-        let font = UIFont.Cairo(12, weight: .Bold)
+        let font = UIFont.Cairo(12)
         
         let titles: [String] = [Localizations.home.localize,
                                 Localizations.askGoldenBell.localize,

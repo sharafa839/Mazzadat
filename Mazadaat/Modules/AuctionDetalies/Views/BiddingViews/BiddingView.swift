@@ -11,6 +11,7 @@ import UIKit
 class BiddingView: UIView {
 
    //MARK: - IBOutlets
+    @IBOutlet weak var sarLabel: UILabel!
     @IBOutlet weak var biddingButtonView: UIView!
     @IBOutlet weak var biddingButton: UIButton!
     @IBOutlet weak var endingInLabel: UILabel!
@@ -70,6 +71,7 @@ class BiddingView: UIView {
             nextBidLabel.text = "nextBidding".localize
             biddingButton.setTitle("bidNow".localize, for: .normal)
         }
+        sarLabel.text =  Localizations.SAR.localize
     }
     
     required init?(coder: NSCoder) {

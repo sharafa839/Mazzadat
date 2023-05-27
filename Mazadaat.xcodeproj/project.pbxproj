@@ -166,6 +166,8 @@
 		FF6131592A216889002D5383 /* Cairo-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF6131512A216889002D5383 /* Cairo-Light.ttf */; };
 		FF61315A2A216889002D5383 /* Cairo-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF6131522A216889002D5383 /* Cairo-Black.ttf */; };
 		FF61315B2A216889002D5383 /* Cairo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF6131532A216889002D5383 /* Cairo-Bold.ttf */; };
+		FF61315F2A21F5E7002D5383 /* AuctionSpecificationFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF61315D2A21F5E7002D5383 /* AuctionSpecificationFooter.swift */; };
+		FF6131602A21F5E7002D5383 /* AuctionSpecificationFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF61315E2A21F5E7002D5383 /* AuctionSpecificationFooter.xib */; };
 		FF67F2C529D4AF4E00CA2E0B /* PagingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF67F2C329D4AF4E00CA2E0B /* PagingCollectionViewCell.xib */; };
 		FF67F2C629D4AF4E00CA2E0B /* PagingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF67F2C429D4AF4E00CA2E0B /* PagingCollectionViewCell.swift */; };
 		FF67F2CA29D4AFD600CA2E0B /* OnBoardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF67F2C829D4AFD600CA2E0B /* OnBoardingCollectionViewCell.swift */; };
@@ -624,6 +626,8 @@
 		FF6131512A216889002D5383 /* Cairo-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Light.ttf"; sourceTree = "<group>"; };
 		FF6131522A216889002D5383 /* Cairo-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Black.ttf"; sourceTree = "<group>"; };
 		FF6131532A216889002D5383 /* Cairo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Bold.ttf"; sourceTree = "<group>"; };
+		FF61315D2A21F5E7002D5383 /* AuctionSpecificationFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionSpecificationFooter.swift; sourceTree = "<group>"; };
+		FF61315E2A21F5E7002D5383 /* AuctionSpecificationFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuctionSpecificationFooter.xib; sourceTree = "<group>"; };
 		FF67F2C329D4AF4E00CA2E0B /* PagingCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PagingCollectionViewCell.xib; sourceTree = "<group>"; };
 		FF67F2C429D4AF4E00CA2E0B /* PagingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingCollectionViewCell.swift; sourceTree = "<group>"; };
 		FF67F2C829D4AFD600CA2E0B /* OnBoardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -1428,6 +1432,15 @@
 			path = Cairo;
 			sourceTree = "<group>";
 		};
+		FF61315C2A21F5BD002D5383 /* AuctionSpecifiicatioonFooter */ = {
+			isa = PBXGroup;
+			children = (
+				FF61315D2A21F5E7002D5383 /* AuctionSpecificationFooter.swift */,
+				FF61315E2A21F5E7002D5383 /* AuctionSpecificationFooter.xib */,
+			);
+			path = AuctionSpecifiicatioonFooter;
+			sourceTree = "<group>";
+		};
 		FF67F2C129D4AEDA00CA2E0B /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -1804,6 +1817,7 @@
 		FF8B256D29EB284600302346 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FF61315C2A21F5BD002D5383 /* AuctionSpecifiicatioonFooter */,
 				FF7C054629EB8E0800F08787 /* BiddingViews */,
 				FF8B257329EB30E800302346 /* AuctionOwnerView */,
 				FF8B257229EB30DD00302346 /* AuctionDetailesView */,
@@ -3023,6 +3037,7 @@
 				FFACF05929E9C1B700B8C41F /* KindOfAuctionCollectionViewCell.xib in Resources */,
 				FF92D94229FB6BE3006BAF9B /* ControlCentetrFooter.xib in Resources */,
 				FA49CE142546A05B004CDD6E /* Roboto-Italic.ttf in Resources */,
+				FF6131602A21F5E7002D5383 /* AuctionSpecificationFooter.xib in Resources */,
 				FFBA018B29DB6B590021F2D8 /* HeaderHomeView.xib in Resources */,
 				FAA348EE266E0D0300243DAF /* 371903340_LOCATION_MARKER_400.gif in Resources */,
 				FADE023125DD359D00FB1675 /* animation_500_kl9crrb3.gif in Resources */,
@@ -3401,6 +3416,7 @@
 				FF29755F2A126CA000591B38 /* SendMessagesModel.swift in Sources */,
 				FF5AF75429E044BE0020E716 /* HomeApi.swift in Sources */,
 				FF76276029E24E52002D531F /* AuctionHolderCellCollectionViewCell.swift in Sources */,
+				FF61315F2A21F5E7002D5383 /* AuctionSpecificationFooter.swift in Sources */,
 				FFBC3C1A2A03307D00547566 /* FillDocumentCollectionViewCell.swift in Sources */,
 				FFD6D95C29E8B3480044ECD9 /* AuctionHolderViewController.swift in Sources */,
 				FF5AF76129E0653D0020E716 /* HelperK.swift in Sources */,

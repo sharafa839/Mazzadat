@@ -55,12 +55,12 @@ class ExploreGoldenBellViewController: UIViewController {
             let secondActivityItem : NSURL = NSURL(string: "http://your-url.com/")!
             
             // If you want to use an image
-            let image : UIImage = UIImage(named: "appIcon")!
+            let image : UIImage = UIImage(named: "AppIcon")!
             let activityViewController : UIActivityViewController = UIActivityViewController(
                 activityItems: [firstActivityItem, secondActivityItem, image], applicationActivities: nil)
             
             // This lines is for the popover you need to show in iPad
-            activityViewController.popoverPresentationController?.sourceView = (sender as! UIButton)
+        activityViewController.popoverPresentationController?.sourceView = (sender )
             
             // This line remove the arrow of the popover to show in iPad
             activityViewController.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.down

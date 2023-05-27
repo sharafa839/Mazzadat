@@ -31,8 +31,8 @@ class EmptyDocumentsCollectionViewCell: UICollectionViewCell {
     }
     
     func configure(_ document:UploadDocuments) {
-        documentLabel.text = document.documentType?.name
-        guard let front = document.documentType?.image else {
+        documentLabel.text = document.name
+        guard let front = document.image else {
                 
                 return
                 

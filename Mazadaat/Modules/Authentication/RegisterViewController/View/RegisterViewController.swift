@@ -81,6 +81,9 @@ class RegisterViewController: UIViewController {
         phoneNumberView.drawBorder(raduis: 10, borderColor: .borderColor)
         passewordView.drawBorder(raduis: 10, borderColor: .borderColor)
         languageView.drawBorder(raduis: 10, borderColor: .borderColor)
+        kindOfAuhenticationSectionSegment.setTitleFont(.Cairo(18))
+        
+
         let titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.Bronze_900]
             kindOfAuhenticationSectionSegment.setTitleTextAttributes(titleTextAttributes, for: .normal)
             kindOfAuhenticationSectionSegment.setTitleTextAttributes(titleTextAttributes, for: .selected)

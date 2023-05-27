@@ -12,7 +12,7 @@ protocol HomeNetworkingProtocol {
     func faqs(completion:@escaping(Result<BaseResponse<[FAQModel]>,Error>)->Void)
     func subscribe(image:MultiPartItem?,subscription_id:String?,paymentMethod:String?,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
     func documents(completion:@escaping(Result<BaseResponse<[UploadDocuments]>,Error>)->Void)
-    func uploadDocuments(frontImage : MultiPartItem ,backImage: MultiPartItem,id:Int,completion:@escaping(Result<BaseResponse<UploadDocuments>,Error>)->Void)
+    func uploadDocuments(frontImage : String ,backImage: String,id:Int,completion:@escaping(Result<BaseResponse<[UploadDocuments]>,Error>)->Void)
     func auctionHolders(completion:@escaping(Result<BaseResponse<[AuctionHolder]>,Error>)->Void)
     func holderPlaces(holderID:String,running:Bool?,upcoming:Bool?,expired:Bool?,completion:@escaping(Result<BaseResponse<[AuctionHolderPlaces]>,Error>)->Void)
     func showHolderPlaces(placeID:String,completion:@escaping(Result<BaseResponse<HolderPlaces>,Error>)->Void)
@@ -44,7 +44,7 @@ extension HomeNetworkingProtocol {
     func documents(completion:@escaping(Result<BaseResponse<[UploadDocuments]>,Error>)->Void){
         home.request(target: .documents, completion: completion)
     }
-    func uploadDocuments(frontImage : MultiPartItem ,backImage: MultiPartItem,id:Int,completion:@escaping(Result<BaseResponse<UploadDocuments>,Error>)->Void){
+    func uploadDocuments(frontImage : String ,backImage: String,id:Int,completion:@escaping(Result<BaseResponse<[UploadDocuments]>,Error>)->Void){
         home.request(target: .uploadDocuments(frontImage: frontImage, backImage: backImage, id: id), completion: completion)
     }
     func auctionHolders(completion:@escaping(Result<BaseResponse<[AuctionHolder]>,Error>)->Void){

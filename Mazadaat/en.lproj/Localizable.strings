@@ -15,6 +15,8 @@
 "subscription" = "subscription";
 "chooseImage" = "choose image";
 "suubscripe successfully" = "subscribe successfully";
+"subscribe" = "subscribe";
+"Process Done Successfully" = "Process Done Successfully";
 "Camera" = "Camera";
 "Gallery" = "Gallery";
 "cash" = "Cash";
@@ -214,3 +216,4 @@
 "placeBid" = "place bid";
 "setYourBidForThisAuction" = "Set Your Bid For This Auction";
 "done" = "done";
+"fillAllData" = "Please fill all fields";

@@ -76,7 +76,7 @@ extension DoucmentsViewController:UICollectionViewDelegate,UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let document = viewModel.onSuccessGetDocument.value[indexPath.row]
-        if document.frontFace != nil {
+        if document.documents?.frontFace != nil {
             let cell:FillDocumentCollectionViewCell = collectionView.dequeue(at: indexPath)
             cell.onTapChange = {[weak self] in
                 self?.goToAddDocument(document: document)
@@ -84,7 +84,7 @@ extension DoucmentsViewController:UICollectionViewDelegate,UICollectionViewDataS
             }
             cell.onTapDelete = {[weak self] in
                 
-                self?.viewModel.removeDocuments(typeId: document.documentTypeID ?? "")
+                self?.viewModel.removeDocuments(typeId: "\(document.id ?? 0)")
 
         }
             cell.configure(document)
@@ -120,7 +120,7 @@ extension DoucmentsViewController:UICollectionViewDelegate,UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let document = viewModel.onSuccessGetDocument.value[indexPath.row]
-        if document.frontFace != nil {
+        if document.documents?.frontFace != nil {
             
             return CGSize(width:collectionView.frame.size.width*0.9, height: 250)
         }else {

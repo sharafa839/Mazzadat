@@ -62,7 +62,7 @@ class RequestAuctionViewController: UIViewController {
             
         }.disposed(by: viewModel.disposeBag)
         
-        viewModel.onSuccess.subscribe { [weak self] in
+        viewModel.onSuccess.subscribe { [weak self] _ in
             self?.delegate?.sendRequest()
             self?.navigationController?.popViewController(animated: true)
         }.disposed(by: viewModel.disposeBag)

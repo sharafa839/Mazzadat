@@ -30,13 +30,9 @@ class ChatViewModel:HomeNetworkingProtocol {
         self.name = name
     }
     
-    private func getOldChat()  {
-        guard let chatId = chatId else {return}
-        // getMessagesFromBackEnd
-    }
-    
+   
     func getMessages() {
-        ref =  Database.database(url: "https://golden-auctions.firebaseio.com/").reference().child("chats").child("\("1")")
+        ref =  Database.database(url: "https://golden-auctions.firebaseio.com/").reference().child("chats").child("\(CoreData.shared.loginModel?.id ?? 0)")
         handle = ref?.observe(.childAdded) {[weak self] snapShot in
             guard let self = self else {return}
 

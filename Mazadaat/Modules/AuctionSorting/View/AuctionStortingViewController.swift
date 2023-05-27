@@ -48,6 +48,10 @@ class AuctionStortingViewController: UIViewController {
     
     private func setupLocalize() {
         titleLabel.text = "sorting"
+        closeButton.rx.tap.subscribe { [weak self] _  in
+            self?.dismiss(animated: true)
+        }.disposed(by: viewModel.disposeBag)
+
     }
     
     private func setupTableView() {

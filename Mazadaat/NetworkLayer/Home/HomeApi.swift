@@ -14,7 +14,7 @@ enum HomeApiServices {
     case faqs
     case subscribe(image:MultiPartItem?,subscription_id:String?,paymentMethod:String?)
     case documents
-    case uploadDocuments(frontImage : MultiPartItem ,backImage: MultiPartItem,id:Int)
+    case uploadDocuments(frontImage : String ,backImage: String,id:Int)
     case auctionHolders
     case holderPlaces(holderID:String,running:Bool?,upcoming:Bool?,expired:Bool?)
     case showHolderPlaces(placeID:String)
@@ -116,19 +116,8 @@ extension HomeApiServices:TargetType,BaseApiHeadersProtocol {
         case .documents:
             return .requestPlain
         case .uploadDocuments(let frontImage, let backImage, let id):
-            var multipart: [MultipartFormData] = []
-            let paramters = [ "document_type_id" : "\(id)"]
-            let multipartParameters = paramters.map { (key, value) in
-                MultipartFormData(provider: .data(value.data(using: .utf8)!), name: key)
-            }
-           
-            let multiPartItemFrontFormData = MultipartFormData(provider: .data(frontImage.data), name: frontImage.keyName, fileName: frontImage.fileName, mimeType: frontImage.mimeType)
-            let multiPartItemBackFormData = MultipartFormData(provider: .data(backImage.data), name: backImage.keyName, fileName: backImage.fileName, mimeType: backImage.mimeType)
-
-            multipart.append(multiPartItemFrontFormData)
-            multipart.append(multiPartItemBackFormData)
-            multipart.append(contentsOf: multipartParameters)
-            return .uploadMultipart(multipart)
+            let paramters = [ "document_type_id" : "\(id)","front_face":frontImage,"back_face":backImage]
+            return.requestParameters(parameters: paramters, encoding: JSONEncoding.default)
         case .auctionHolders:
             return .requestPlain
         case .holderPlaces(let holderID, let running, let upcoming,let  expired):

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -33,23 +33,23 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d5m-zI-fVN">
-                    <rect key="frame" x="16" y="173" width="410" height="2"/>
+                    <rect key="frame" x="16" y="167" width="410" height="2"/>
                     <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="2" id="pzN-8f-XDv"/>
                     </constraints>
                 </view>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="O2p-M2-QwQ">
-                    <rect key="frame" x="16" y="16" width="90.5" height="39"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="O2p-M2-QwQ">
+                    <rect key="frame" x="16" y="8" width="79.5" height="60.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auction Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCo-Fi-PQG">
-                            <rect key="frame" x="0.0" y="0.0" width="90.5" height="15.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="79.5" height="25.5"/>
                             <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="14"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auction Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Prf-Zf-lvB">
-                            <rect key="frame" x="0.0" y="25.5" width="90.5" height="13.5"/>
+                            <rect key="frame" x="0.0" y="35.5" width="79.5" height="25"/>
                             <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="12"/>
                             <color key="textColor" name="BorderView"/>
                             <nil key="highlightedColor"/>
@@ -57,16 +57,16 @@
                     </subviews>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PH4-z4-ebm">
-                    <rect key="frame" x="24" y="79" width="394" height="71.5"/>
+                    <rect key="frame" x="24" y="70.5" width="394" height="80.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auction Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xl-g7-iyR">
-                            <rect key="frame" x="0.0" y="0.0" width="394" height="13.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="394" height="22.5"/>
                             <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="12"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gpw-lu-H3n">
-                            <rect key="frame" x="0.0" y="21.5" width="394" height="50"/>
+                            <rect key="frame" x="0.0" y="30.5" width="394" height="50"/>
                             <subviews>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Efo-UA-YuR">
                                     <rect key="frame" x="8" y="8" width="378" height="34"/>
@@ -89,13 +89,14 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="d5m-zI-fVN" secondAttribute="bottom" constant="2" id="6Fo-TP-JWb"/>
                 <constraint firstItem="PH4-z4-ebm" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="9mN-g7-5wg"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="PH4-z4-ebm" secondAttribute="trailing" constant="24" id="CMd-CL-Xr8"/>
-                <constraint firstItem="PH4-z4-ebm" firstAttribute="top" secondItem="O2p-M2-QwQ" secondAttribute="bottom" constant="24" id="Dpa-Oj-IAt"/>
+                <constraint firstItem="PH4-z4-ebm" firstAttribute="top" secondItem="O2p-M2-QwQ" secondAttribute="bottom" constant="2" id="Dpa-Oj-IAt"/>
+                <constraint firstAttribute="bottom" secondItem="d5m-zI-fVN" secondAttribute="bottom" constant="8" id="Gte-cD-Xsl"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="d5m-zI-fVN" secondAttribute="trailing" constant="16" id="Tcz-oH-5qP"/>
+                <constraint firstItem="d5m-zI-fVN" firstAttribute="top" secondItem="PH4-z4-ebm" secondAttribute="bottom" constant="16" id="UGX-jO-u4f"/>
                 <constraint firstItem="d5m-zI-fVN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Voy-pv-txA"/>
-                <constraint firstItem="O2p-M2-QwQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="Zae-sm-QRd"/>
+                <constraint firstItem="O2p-M2-QwQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="Zae-sm-QRd"/>
                 <constraint firstItem="O2p-M2-QwQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="pmP-Iw-369"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -107,7 +108,7 @@
             <color red="0.71372549019607845" green="0.71372549019607845" blue="0.76470588235294112" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="quaternaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.17999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.17647058823529413" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

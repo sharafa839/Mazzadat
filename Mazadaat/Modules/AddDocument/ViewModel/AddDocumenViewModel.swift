@@ -25,13 +25,13 @@ class AddDocumentViewModel:HomeNetworkingProtocol {
     
     func dataSource() {
         var photos = pictures.value
-        photos.append(contentsOf: [[documents?.frontFace ?? ""] ,[documents?.backFace ?? ""]])
+        photos.append(contentsOf: [[documents?.documents?.frontFace ?? ""] ,[documents?.documents?.backFace ?? ""]])
         pictures.accept(photos)
     }
     let imageName = "img-\(CACurrentMediaTime()).png"
 
-    func uploadDocument(frontImage:MultiPartItem,bakeImage:MultiPartItem) {
-        uploadDocuments(frontImage: frontImage, backImage: bakeImage, id: documents?.documentType?.id ?? 0) { [weak self] result in
+    func uploadDocument(frontImage:String,bakeImage:String) {
+        uploadDocuments(frontImage: frontImage, backImage: bakeImage, id: documents?.id ?? 0) { [weak self] result in
             switch result {
             case .failure(let error):
                 self?.onError.onNext(error.localizedDescription)
@@ -40,28 +40,12 @@ class AddDocumentViewModel:HomeNetworkingProtocol {
             }
         }
         
-
         
     }
     
-    func getViews() {
-        if documents == nil {
-            detectViews.onNext(.none)
-        }else {
-            if !(documents?.frontFace?.isEmpty ?? false) && !(documents?.backFace?.isEmpty ?? false) {
-                detectViews.onNext(.fillAll)
-            }else if (documents?.frontFace?.isEmpty ?? false) && !(documents?.backFace?.isEmpty ?? false) {
-                detectViews.onNext(.fillDownOne)
-            }else if !(documents?.frontFace?.isEmpty ?? false) && (documents?.backFace?.isEmpty ?? false){
-                detectViews.onNext(.fillUpOne)
-            }
-        }
-    }
-    
-    
     func removeDocuments(front:Bool?,back:Bool?) {
         onLoading.accept(true)
-        removeDocuments(type: documents?.documentTypeID ?? "", front: front, back: back) { [weak self] result in
+        removeDocuments(type: "\(documents?.id ?? 0)", front: front, back: back) { [weak self] result in
             self?.onLoading.accept(false)
             switch result {
             case .success(let response):

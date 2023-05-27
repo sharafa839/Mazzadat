@@ -38,6 +38,8 @@ class DateView: UIView {
     private func setupLocalize() {
         toLabel.text = "to".localize
         fromLabel.text = "from".localize
+        titleLabel.text = "date".localize
+        
     }
     
     required init?(coder: NSCoder) {

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Cairo-Regular.ttf">
+            <string>Cairo-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="63" id="KGk-i7-Jjw" customClass="AuctionSpecificationFooter" customModule="Golden_Bell" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="63"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="63"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t2r-NO-6tq">
+                        <rect key="frame" x="80" y="8" width="160" height="47"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jnl-yR-xZl" customClass="CustomButton" customModule="Golden_Bell" customModuleProvider="target">
+                                <rect key="frame" x="8" y="0.0" width="108" height="47"/>
+                                <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" name="Bronze-600"/>
+                                </state>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9uI-Mj-ZeY">
+                                <rect key="frame" x="124" y="13.666666666666668" width="20" height="20.000000000000004"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="jmZ-Rb-vic"/>
+                                    <constraint firstAttribute="width" constant="20" id="wOI-sp-XWp"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" name="Bronze-100"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="9uI-Mj-ZeY" secondAttribute="trailing" constant="16" id="A5s-ju-Hs1"/>
+                            <constraint firstItem="jnl-yR-xZl" firstAttribute="leading" secondItem="t2r-NO-6tq" secondAttribute="leading" constant="8" id="SMb-nH-hky"/>
+                            <constraint firstItem="9uI-Mj-ZeY" firstAttribute="centerY" secondItem="t2r-NO-6tq" secondAttribute="centerY" id="h5g-T7-MsK"/>
+                            <constraint firstAttribute="bottom" secondItem="jnl-yR-xZl" secondAttribute="bottom" id="kMN-ex-d6e"/>
+                            <constraint firstItem="jnl-yR-xZl" firstAttribute="top" secondItem="t2r-NO-6tq" secondAttribute="top" id="vIb-h6-Rbq"/>
+                            <constraint firstItem="9uI-Mj-ZeY" firstAttribute="leading" secondItem="jnl-yR-xZl" secondAttribute="trailing" constant="8" id="yst-wW-7ZR"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="t2r-NO-6tq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="80" id="8Qv-uH-oHv"/>
+                    <constraint firstAttribute="trailing" secondItem="t2r-NO-6tq" secondAttribute="trailing" constant="80" id="9Zg-go-X5G"/>
+                    <constraint firstItem="t2r-NO-6tq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Aso-3l-LnP"/>
+                    <constraint firstAttribute="bottom" secondItem="t2r-NO-6tq" secondAttribute="bottom" constant="8" id="O5j-ns-aNK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="containerView" destination="t2r-NO-6tq" id="AUU-c9-uJ1"/>
+                <outlet property="showMoreButton" destination="jnl-yR-xZl" id="b66-Zo-Jvr"/>
+            </connections>
+            <point key="canvasLocation" x="138.93129770992365" y="26.408450704225352"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Bronze-100">
+            <color red="0.96470588235294119" green="0.8666666666666667" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Bronze-600">
+            <color red="0.80784313725490198" green="0.51372549019607838" blue="0.16078431372549021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

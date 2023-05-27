@@ -10,18 +10,40 @@ import Foundation
 // MARK: - Datum
 struct DocumentModel: Codable {
     var id: Int?
-    var documentTypeID: String?
-    var documentType: DocumentType?
-    var expiryDate: String?
-    var frontFace, backFace: String?
+       var name: String?
+       var image: String?
+       var documents: Documents?
 
-    enum CodingKeys: String, CodingKey {
-        case id
-        case documentTypeID = "document_type_id"
-        case documentType = "DocumentType"
-        case expiryDate = "expiry_date"
-        case frontFace = "front_face"
-        case backFace = "back_face"
-    }
+       enum CodingKeys: String, CodingKey {
+           case id, name, image
+           case documents = "Documents"
+       }
 }
+// MARK: - DataClass
+struct UploadDocuments:Codable {
+    var id: Int?
+       var name: String?
+       var image: String?
+       var documents: Documents?
+
+       enum CodingKeys: String, CodingKey {
+           case id, name, image
+           case documents = "Documents"
+       }
+}
+
+// MARK: - DocumentType
+struct Documents:Codable {
+     var id: Int?
+     var backFace: String?
+     var frontFace, expiryDate: String?
+
+     enum CodingKeys: String, CodingKey {
+         case id
+         case backFace = "back_face"
+         case frontFace = "front_face"
+         case expiryDate = "expiry_date"
+     }
+}
+
 

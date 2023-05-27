@@ -33,6 +33,7 @@ class ChatViewController: UIViewController {
         setNavigationItem(title: viewModel.name ?? Localizations.chat.localize)
         setupUI()
     }
+    
 
 
     private func setupObservables() {
