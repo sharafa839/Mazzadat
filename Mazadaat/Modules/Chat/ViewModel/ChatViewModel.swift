@@ -12,7 +12,7 @@ import RxRelay
 import RxSwift
 import FirebaseDatabase
 
-class ChatViewModel:HomeNetworkingProtocol {
+class ChatViewModel:HomeNetworkingProtocol,TicketNetworkingProtocol {
     let disposeBag = DisposeBag()
     var onError = PublishSubject<String>()
     var onLoading = BehaviorRelay<Bool>(value: false)
@@ -24,10 +24,30 @@ class ChatViewModel:HomeNetworkingProtocol {
     var handle: DatabaseHandle?
     var ifChatAvailable = PublishSubject<Bool>()
     var name:String
+    var ticketId:String
     init(chatId:String?,auctionId:String? = nil,name:String) {
         self.chatId = chatId
         self.auctionId = auctionId
         self.name = name
+        self.ticketId = ""
+    }
+    
+  convenience init(ticketId:String) {
+      self.init(chatId: "", name: "")
+        self.ticketId = ticketId
+        getTicketResponse()
+    }
+    
+    func getTicketResponse() {
+        show(id: ticketId) { [weak self] result in
+            self?.onLoading.accept(false)
+            switch result {
+            case .success(let response):
+                print(response)
+            case .failure(let error):
+                self?.onError.onNext(error.localizedDescription)
+            }
+        }
     }
     
    

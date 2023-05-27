@@ -101,6 +101,12 @@ extension TicketViewController:UITableViewDelegate,UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let chatViewModel = ChatViewModel(ticketId: "\(viewModel.onSuccessGetData.value[indexPath.row].id ?? 0)")
+        let chatViewController = ChatViewController(viewModel: chatViewModel)
+        navigationController?.pushViewController(chatViewController, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         130
     }

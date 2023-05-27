@@ -10,9 +10,9 @@ import Foundation
 import Moya
 enum TicketApi {
     case all
-    case response
-    case store
-    case show
+    case response(ticketId:String,response:String)
+    case store(title:String,message:String,attachment:String)
+    case show(ticketId:String)
     case changeName(name:String)
 }
 
@@ -58,6 +58,12 @@ extension TicketApi :TargetType, BaseApiHeadersProtocol {
         
         case .changeName(let name):
             return .requestParameters(parameters: ["name":name], encoding: JSONEncoding.default)
+        case .response(let ticketId, let response):
+            return .requestParameters(parameters: ["ticket_id":ticketId,"response":response], encoding: JSONEncoding.default)
+        case .store(let title,let message,let attachment):
+            return .requestParameters(parameters: ["title":title,"message":message,"attachment":attachment], encoding: JSONEncoding.default)
+        case .show(let ticketId):
+            return .requestParameters(parameters: ["ticket_id":ticketId], encoding: URLEncoding.default)
         default : return .requestPlain
         }
         

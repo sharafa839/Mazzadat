@@ -36,10 +36,10 @@
                                         <rect key="frame" x="0.0" y="0.0" width="48.5" height="167"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Akv-ri-V7w">
-                                                <rect key="frame" x="0.0" y="0.0" width="48.5" height="150"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="48.5" height="167"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" text="labe;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4f-gy-AoA">
-                                                        <rect key="frame" x="10" y="10" width="28.5" height="130"/>
+                                                        <rect key="frame" x="10" y="10" width="28.5" height="147"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -71,6 +71,11 @@
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <variation key="default">
+                                            <mask key="subviews">
+                                                <exclude reference="QPF-O6-Ynq"/>
+                                            </mask>
+                                        </variation>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -65,6 +65,7 @@ class ChatViewController: UIViewController {
         viewModel.onError.subscribe { [weak self] value in
             HelperK.showError(title: value.element ?? "", subtitle: "")
         }.disposed(by: viewModel.disposeBag)
+        
         viewModel.onLoading.subscribe { [weak self]  _ in
             
         }.disposed(by: viewModel.disposeBag)
