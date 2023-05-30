@@ -69,8 +69,8 @@ class TicketViewController: UIViewController {
             HelperK.showError(title: value.element ?? "", subtitle: "")
         }.disposed(by: viewModel.disposeBag)
         
-        viewModel.onLoading.subscribe { [weak self] _   in
-            
+        viewModel.onLoading.subscribe { [weak self] isLoading   in
+            guard let loading = isLoading.element else {return}
         }.disposed(by: viewModel.disposeBag)
         
         viewModel.onSuccessGetData.subscribe { [weak self]  _ in
