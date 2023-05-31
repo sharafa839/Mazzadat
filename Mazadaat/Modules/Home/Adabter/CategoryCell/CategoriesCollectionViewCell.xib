@@ -64,7 +64,7 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xb0-AA-IPi">
-                        <rect key="frame" x="16" y="144" width="109" height="12"/>
+                        <rect key="frame" x="16" y="144" width="109" height="21"/>
                         <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="11"/>
                         <color key="textColor" name="TextColor"/>
                         <nil key="highlightedColor"/>

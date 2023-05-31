@@ -30,7 +30,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aHv-pY-4eh">
                         <rect key="frame" x="8" y="8" width="319" height="71"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppIcons" translatesAutoresizingMaskIntoConstraints="NO" id="qXy-KL-v8c">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppIcons" translatesAutoresizingMaskIntoConstraints="NO" id="qXy-KL-v8c">
                                 <rect key="frame" x="8" y="15.5" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="OUu-dS-Ph7"/>
@@ -86,6 +86,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="containerView" destination="aHv-pY-4eh" id="sKp-x0-lTh"/>
+                <outlet property="iconImageView" destination="qXy-KL-v8c" id="mk9-Sc-KAK"/>
                 <outlet property="subTitleLabel" destination="ixP-Aq-O0k" id="bxV-CP-8Z4"/>
                 <outlet property="titleLabel" destination="rJc-PV-Lwe" id="oPe-7R-Imc"/>
             </connections>

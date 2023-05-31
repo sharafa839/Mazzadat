@@ -10,6 +10,7 @@ import UIKit
 
 class ProfileTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subTitleLabel: UILabel!
@@ -26,6 +27,6 @@ class ProfileTableViewCell: UITableViewCell {
     func configure(_ with:ProfileModel) {
         titleLabel.text = with.title
         subTitleLabel.text = with.subTitle
-        
+        iconImageView.image = UIImage(named: with.image)
     }
 }
