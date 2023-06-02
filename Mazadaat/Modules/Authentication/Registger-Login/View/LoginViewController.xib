@@ -51,10 +51,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C4c-Tx-BzR">
-                    <rect key="frame" x="312" y="56" width="70" height="40"/>
+                    <rect key="frame" x="313" y="56" width="69" height="40"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqf-8w-jSV">
-                            <rect key="frame" x="8" y="8" width="54" height="24"/>
+                            <rect key="frame" x="8" y="8" width="53" height="24"/>
                             <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="18"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" title="Button">
@@ -75,16 +75,16 @@
                     </constraints>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VKn-RJ-lLe">
-                    <rect key="frame" x="32" y="116" width="350" height="100"/>
+                    <rect key="frame" x="32" y="104" width="350" height="113"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It’s good to see you!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5D-38-K8S">
-                            <rect key="frame" x="0.0" y="0.0" width="350" height="46"/>
+                            <rect key="frame" x="0.0" y="0.0" width="350" height="52.5"/>
                             <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="28"/>
                             <color key="textColor" name="TextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to our auctions app! Sign up to start bidding on unique and exciting items, or log in if you already have an account." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7b-sd-ixc">
-                            <rect key="frame" x="0.0" y="54" width="350" height="46"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to our auctions app! Sign up to start " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7b-sd-ixc">
+                            <rect key="frame" x="0.0" y="60.5" width="350" height="52.5"/>
                             <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
                             <color key="textColor" name="TextColor"/>
                             <nil key="highlightedColor"/>
@@ -92,7 +92,7 @@
                     </subviews>
                 </stackView>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dZi-yb-cCK" customClass="CustomSegmentedControl" customModule="Golden_Bell" customModuleProvider="target">
-                    <rect key="frame" x="24" y="246" width="366" height="51"/>
+                    <rect key="frame" x="24" y="247" width="366" height="51"/>
                     <color key="backgroundColor" name="Bronze-200"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="Lz4-cT-lU0"/>
@@ -108,7 +108,7 @@
                     </connections>
                 </segmentedControl>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Uf-9I-Tq1">
-                    <rect key="frame" x="24" y="328" width="366" height="60"/>
+                    <rect key="frame" x="24" y="321" width="366" height="60"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="dsdsds" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nWC-cM-mXP">
                             <rect key="frame" x="49" y="8" width="309" height="44"/>
@@ -136,29 +136,32 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6a-7o-zny">
-                    <rect key="frame" x="346" y="472" width="44" height="28"/>
+                    <rect key="frame" x="348" y="481" width="42" height="39"/>
                     <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo" pointSize="14"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title="Button">
                         <color key="titleColor" systemColor="linkColor"/>
                     </state>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqd-CF-Pqx" customClass="CustomButton" customModule="Golden_Bell" customModuleProvider="target">
-                    <rect key="frame" x="24" y="515" width="365" height="50"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqd-CF-Pqx" customClass="CustomButton" customModule="Golden_Bell" customModuleProvider="target">
+                    <rect key="frame" x="24" y="552" width="365" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="CmW-PK-YT7"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="18"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Button">
+                        <color key="titleColor" name="Bronze-200"/>
+                    </state>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIo-R6-Hmk">
-                    <rect key="frame" x="187" y="648.5" width="46" height="15.5"/>
+                    <rect key="frame" x="187" y="680" width="46" height="26.5"/>
                     <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="C6C-1H-gOl">
-                    <rect key="frame" x="24" y="655" width="366" height="2"/>
+                    <rect key="frame" x="24" y="692" width="366" height="2"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MKH-Jk-OGK">
                             <rect key="frame" x="0.0" y="0.0" width="116.5" height="2"/>
@@ -188,7 +191,7 @@
                     </subviews>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QSF-WQ-zaS">
-                    <rect key="frame" x="24" y="681" width="366" height="56"/>
+                    <rect key="frame" x="24" y="718" width="366" height="56"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qqQ-XR-2ur">
                             <rect key="frame" x="0.0" y="0.0" width="366" height="56"/>
@@ -265,7 +268,7 @@
                     </variation>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="THA-1m-Szf">
-                    <rect key="frame" x="24" y="396" width="366" height="60"/>
+                    <rect key="frame" x="24" y="393" width="366" height="60"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ko8-0h-1V9">
                             <rect key="frame" x="49" y="8" width="282" height="44"/>
@@ -309,7 +312,7 @@
             <constraints>
                 <constraint firstItem="OIo-R6-Hmk" firstAttribute="centerX" secondItem="C6C-1H-gOl" secondAttribute="centerX" constant="3" id="0Jn-Ly-JFZ"/>
                 <constraint firstAttribute="trailing" secondItem="C4c-Tx-BzR" secondAttribute="trailing" constant="32" id="1OW-jf-zwm"/>
-                <constraint firstItem="THA-1m-Szf" firstAttribute="top" secondItem="4Uf-9I-Tq1" secondAttribute="bottom" constant="8" id="3ty-yv-2hT"/>
+                <constraint firstItem="THA-1m-Szf" firstAttribute="top" secondItem="4Uf-9I-Tq1" secondAttribute="bottom" constant="12" id="3ty-yv-2hT"/>
                 <constraint firstItem="QSF-WQ-zaS" firstAttribute="top" secondItem="C6C-1H-gOl" secondAttribute="bottom" constant="24" id="8xX-RD-ALX"/>
                 <constraint firstItem="C6C-1H-gOl" firstAttribute="leading" secondItem="b8c-PU-DUf" secondAttribute="leading" constant="24" id="Avh-LV-2cV"/>
                 <constraint firstItem="dZi-yb-cCK" firstAttribute="leading" secondItem="Dse-3C-nRl" secondAttribute="leading" constant="24" id="HR0-ta-azE"/>
@@ -318,8 +321,8 @@
                 <constraint firstItem="Dse-3C-nRl" firstAttribute="trailing" secondItem="THA-1m-Szf" secondAttribute="trailing" constant="24" id="MBT-n7-KdA"/>
                 <constraint firstItem="Dse-3C-nRl" firstAttribute="trailing" secondItem="dZi-yb-cCK" secondAttribute="trailing" constant="24" id="NpA-5T-1Gm"/>
                 <constraint firstItem="Dse-3C-nRl" firstAttribute="trailing" secondItem="QSF-WQ-zaS" secondAttribute="trailing" constant="24" id="PlG-o1-rXo"/>
-                <constraint firstItem="w6a-7o-zny" firstAttribute="top" secondItem="THA-1m-Szf" secondAttribute="bottom" constant="16" id="QRg-z6-RxI"/>
-                <constraint firstItem="VKn-RJ-lLe" firstAttribute="top" secondItem="C4c-Tx-BzR" secondAttribute="bottom" constant="20" id="SES-dO-nLo"/>
+                <constraint firstItem="w6a-7o-zny" firstAttribute="top" secondItem="THA-1m-Szf" secondAttribute="bottom" constant="28" id="QRg-z6-RxI"/>
+                <constraint firstItem="VKn-RJ-lLe" firstAttribute="top" secondItem="C4c-Tx-BzR" secondAttribute="bottom" constant="8" id="SES-dO-nLo"/>
                 <constraint firstItem="OIo-R6-Hmk" firstAttribute="trailing" secondItem="C6C-1H-gOl" secondAttribute="trailing" constant="-157" id="SUF-r5-Xip"/>
                 <constraint firstItem="dZi-yb-cCK" firstAttribute="top" secondItem="VKn-RJ-lLe" secondAttribute="bottom" constant="30" id="VJP-23-nVZ"/>
                 <constraint firstItem="4Uf-9I-Tq1" firstAttribute="leading" secondItem="Dse-3C-nRl" secondAttribute="leading" constant="24" id="Zzw-cA-Oj2"/>
@@ -332,8 +335,8 @@
                 <constraint firstItem="OIo-R6-Hmk" firstAttribute="centerY" secondItem="C6C-1H-gOl" secondAttribute="centerY" id="ouQ-JL-xtW"/>
                 <constraint firstItem="Dse-3C-nRl" firstAttribute="trailing" secondItem="cqd-CF-Pqx" secondAttribute="trailing" constant="25" id="p41-eu-S75"/>
                 <constraint firstItem="C4c-Tx-BzR" firstAttribute="top" secondItem="Dse-3C-nRl" secondAttribute="top" constant="8" id="sRi-By-MxO"/>
-                <constraint firstItem="4Uf-9I-Tq1" firstAttribute="top" secondItem="dZi-yb-cCK" secondAttribute="bottom" constant="32" id="tox-WF-y4B"/>
-                <constraint firstItem="cqd-CF-Pqx" firstAttribute="top" secondItem="w6a-7o-zny" secondAttribute="bottom" constant="15" id="u5W-yU-SEf"/>
+                <constraint firstItem="4Uf-9I-Tq1" firstAttribute="top" secondItem="dZi-yb-cCK" secondAttribute="bottom" constant="24" id="tox-WF-y4B"/>
+                <constraint firstItem="cqd-CF-Pqx" firstAttribute="top" secondItem="w6a-7o-zny" secondAttribute="bottom" constant="32" id="u5W-yU-SEf"/>
                 <constraint firstItem="QSF-WQ-zaS" firstAttribute="leading" secondItem="Dse-3C-nRl" secondAttribute="leading" constant="24" id="voi-Sy-zfW"/>
                 <constraint firstItem="THA-1m-Szf" firstAttribute="leading" secondItem="b8c-PU-DUf" secondAttribute="leading" constant="24" id="yBL-zv-kkd"/>
             </constraints>

@@ -104,6 +104,7 @@ class RegisterViewController: UIViewController {
         loginButton.setTitle(Localizations.signIn.localize, for: .normal)
         loginWithNafathButton.setTitle(Localizations.loginToNafath.localize, for: .normal)
         ContinueAsGuestButton.setTitle(Localizations.continueAsGuest.localize, for: .normal)
+        ContinueAsGuestButton.titleLabel?.font = .Cairo(18, weight: .Bold)
         phoneNumberTextField.placeholder = Localizations.enterYourMobileNumber.localize
         passwordTextField.placeholder = Localizations.enterPassword.localize
         orLabel.text = Localizations.or.localize

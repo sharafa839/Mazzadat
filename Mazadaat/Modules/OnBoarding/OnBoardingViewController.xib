@@ -33,10 +33,10 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3x9-mG-kGa">
-                    <rect key="frame" x="143" y="88" width="128" height="128"/>
+                    <rect key="frame" x="169" y="88" width="76" height="76"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppIcons" translatesAutoresizingMaskIntoConstraints="NO" id="oVg-z3-O6d">
-                            <rect key="frame" x="29" y="29" width="70" height="70"/>
+                            <rect key="frame" x="17" y="17" width="42" height="42"/>
                         </imageView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -45,19 +45,21 @@
                         <constraint firstItem="oVg-z3-O6d" firstAttribute="width" secondItem="3x9-mG-kGa" secondAttribute="width" multiplier="0.546875" id="B4S-PN-tJu"/>
                         <constraint firstItem="oVg-z3-O6d" firstAttribute="height" secondItem="3x9-mG-kGa" secondAttribute="height" multiplier="0.546875" id="Uv3-X4-xes"/>
                         <constraint firstItem="oVg-z3-O6d" firstAttribute="centerY" secondItem="3x9-mG-kGa" secondAttribute="centerY" id="eIm-XV-uwC"/>
+                        <constraint firstAttribute="width" constant="76" id="lGu-Ko-GJv"/>
+                        <constraint firstAttribute="height" constant="76" id="ukP-IN-b0q"/>
                     </constraints>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="G3n-bJ-aei">
-                    <rect key="frame" x="48" y="596" width="318" height="114"/>
+                    <rect key="frame" x="48" y="525" width="318" height="185"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Golden Bell Auctions" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E97-gK-39Q">
-                            <rect key="frame" x="0.0" y="0.0" width="318" height="74"/>
+                            <rect key="frame" x="0.0" y="0.0" width="318" height="127.5"/>
                             <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="34"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start bidding and winning today!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Rw-px-7z4">
-                            <rect key="frame" x="0.0" y="90" width="318" height="24"/>
+                            <rect key="frame" x="0.0" y="143.5" width="318" height="41.5"/>
                             <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="22"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -86,7 +88,6 @@
                 <constraint firstItem="86V-0r-jix" firstAttribute="trailing" secondItem="G3n-bJ-aei" secondAttribute="trailing" id="0TF-Dg-Jfl"/>
                 <constraint firstItem="ihA-Y7-N5E" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="BQn-wP-SBp"/>
                 <constraint firstItem="3x9-mG-kGa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Ckn-i7-DRs"/>
-                <constraint firstItem="3x9-mG-kGa" firstAttribute="height" secondItem="ihA-Y7-N5E" secondAttribute="height" multiplier="0.142857" id="Dl8-BM-Qqo"/>
                 <constraint firstItem="86V-0r-jix" firstAttribute="leading" secondItem="G3n-bJ-aei" secondAttribute="leading" id="E7Z-mk-Zlz"/>
                 <constraint firstAttribute="trailing" secondItem="ihA-Y7-N5E" secondAttribute="trailing" id="J4R-eP-dRY"/>
                 <constraint firstItem="ihA-Y7-N5E" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Pnq-3i-qeO"/>
@@ -95,7 +96,6 @@
                 <constraint firstItem="86V-0r-jix" firstAttribute="top" secondItem="G3n-bJ-aei" secondAttribute="bottom" constant="44" id="ZcL-Ft-EQZ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="86V-0r-jix" secondAttribute="bottom" constant="58" id="c0i-Hn-66c"/>
                 <constraint firstItem="3x9-mG-kGa" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="kLv-5Y-u1v"/>
-                <constraint firstItem="3x9-mG-kGa" firstAttribute="width" secondItem="ihA-Y7-N5E" secondAttribute="width" multiplier="0.57971" constant="-112" id="ooU-Rt-evv"/>
                 <constraint firstItem="G3n-bJ-aei" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="48" id="qYc-1c-NCl"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="101.78571428571428"/>

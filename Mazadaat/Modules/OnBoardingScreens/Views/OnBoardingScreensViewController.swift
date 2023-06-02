@@ -135,7 +135,7 @@ class OnBoardingScreensViewController: UIViewController {
         anotherView.isHidden = currentPage == 2 ? true : false
         
         if currentPage == 2 {
-            nextButton.setTitle("GetStarted", for: .normal)
+            nextButton.setTitle("next".localize, for: .normal)
             nextButton.setImage(nil, for: .normal)
         }else {
             nextButton.setTitle(nil, for: .normal)

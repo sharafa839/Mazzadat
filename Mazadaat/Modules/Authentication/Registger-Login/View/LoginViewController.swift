@@ -96,7 +96,8 @@ class LoginViewController: UIViewController {
         orLabel.text = Localizations.or.localize
         kindOfAuhenticationSectionSegment.selectedSegmentIndex = 0
         forgetPasswordButton.setTitle(Localizations.forgetPassword.localize, for: .normal)
-     
+        ContinueAsGuestButton.titleLabel?.font = .Cairo(18, weight: .Bold)
+
     }
     
     private func setupObservables() {

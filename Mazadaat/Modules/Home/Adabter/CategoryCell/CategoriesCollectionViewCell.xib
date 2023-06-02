@@ -18,20 +18,19 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CategoriesCollectionViewCell" customModule="Golden_Bell" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="141" height="183"/>
+            <rect key="frame" x="0.0" y="0.0" width="141" height="202"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="141" height="183"/>
+                <rect key="frame" x="0.0" y="0.0" width="141" height="202"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FuA-Fj-VK3">
-                        <rect key="frame" x="8" y="0.0" width="125" height="131"/>
+                        <rect key="frame" x="8" y="0.0" width="125" height="130"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oFF-xy-fWe">
-                                <rect key="frame" x="8" y="8" width="109" height="93"/>
+                                <rect key="frame" x="8" y="8" width="109" height="92"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="109" id="Klf-a2-y1g"/>
-                                    <constraint firstAttribute="height" constant="93" id="ctr-sD-rbh"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -41,10 +40,11 @@
                             <constraint firstAttribute="trailing" secondItem="oFF-xy-fWe" secondAttribute="trailing" constant="8" id="Bbe-qd-8mO"/>
                             <constraint firstAttribute="bottom" secondItem="oFF-xy-fWe" secondAttribute="bottom" constant="30" id="Qvr-0A-vFV"/>
                             <constraint firstItem="oFF-xy-fWe" firstAttribute="leading" secondItem="FuA-Fj-VK3" secondAttribute="leading" constant="8" id="TVd-11-52W"/>
+                            <constraint firstAttribute="height" constant="130" id="bks-z3-kdM"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t7u-C9-WLd">
-                        <rect key="frame" x="55.5" y="116" width="30" height="25"/>
+                        <rect key="frame" x="55.5" y="115" width="30" height="25"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHh-4R-L1f">
                                 <rect key="frame" x="2" y="2" width="26" height="21"/>
@@ -63,8 +63,8 @@
                             <constraint firstAttribute="trailing" secondItem="eHh-4R-L1f" secondAttribute="trailing" constant="2" id="cdP-r7-cWN"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xb0-AA-IPi">
-                        <rect key="frame" x="16" y="144" width="109" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelvvvvvLabelLabelLabelLabelLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xb0-AA-IPi">
+                        <rect key="frame" x="16" y="143" width="109" height="57"/>
                         <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="11"/>
                         <color key="textColor" name="TextColor"/>
                         <nil key="highlightedColor"/>
@@ -74,6 +74,7 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstItem="t7u-C9-WLd" firstAttribute="centerX" secondItem="FuA-Fj-VK3" secondAttribute="centerX" id="BEO-Nk-WU8"/>
+                <constraint firstAttribute="bottom" secondItem="FuA-Fj-VK3" secondAttribute="bottom" constant="72" id="I2C-UL-6Zb"/>
                 <constraint firstItem="t7u-C9-WLd" firstAttribute="bottom" secondItem="FuA-Fj-VK3" secondAttribute="bottom" constant="10" id="IHf-ld-Dyn"/>
                 <constraint firstItem="Xb0-AA-IPi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="PoE-xP-zXi"/>
                 <constraint firstAttribute="trailing" secondItem="Xb0-AA-IPi" secondAttribute="trailing" constant="16" id="SD1-SQ-b1M"/>
@@ -82,8 +83,9 @@
                 <constraint firstItem="FuA-Fj-VK3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="kOR-mF-8i1"/>
                 <constraint firstAttribute="trailing" secondItem="FuA-Fj-VK3" secondAttribute="trailing" constant="8" id="lCq-Lz-fob"/>
                 <constraint firstItem="FuA-Fj-VK3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="pAF-O1-193"/>
+                <constraint firstAttribute="bottom" secondItem="Xb0-AA-IPi" secondAttribute="bottom" constant="2" id="zGM-Bc-YbN"/>
             </constraints>
-            <size key="customSize" width="141" height="183"/>
+            <size key="customSize" width="141" height="202"/>
             <connections>
                 <outlet property="containerView" destination="FuA-Fj-VK3" id="wDS-v7-TBv"/>
                 <outlet property="itemImageView" destination="oFF-xy-fWe" id="S8k-u8-Mrs"/>
@@ -91,7 +93,7 @@
                 <outlet property="itemValueLabel" destination="eHh-4R-L1f" id="li0-gK-hrT"/>
                 <outlet property="labelContinerView" destination="t7u-C9-WLd" id="Kbp-hh-Fvu"/>
             </connections>
-            <point key="canvasLocation" x="26.811594202898554" y="33.147321428571431"/>
+            <point key="canvasLocation" x="26.811594202898554" y="39.508928571428569"/>
         </collectionViewCell>
     </objects>
     <resources>

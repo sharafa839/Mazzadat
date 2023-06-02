@@ -28,15 +28,15 @@
                         <rect key="frame" x="8" y="8" width="307" height="53"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Hw4-bv-Zce">
-                                <rect key="frame" x="105" y="11.5" width="97.5" height="30"/>
+                                <rect key="frame" x="107.5" y="11.5" width="92" height="30"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SUh-bH-tAa">
-                                        <rect key="frame" x="0.0" y="0.5" width="30" height="29"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="79M-j8-gCS"/>
                                             <constraint firstAttribute="height" constant="30" id="e5Q-u8-1GZ"/>
                                         </constraints>
-                                        <imageReference key="image" image="plus.circle" catalog="system" renderingMode="hierarchical">
+                                        <imageReference key="image" image="add-circle-fill" renderingMode="hierarchical">
                                             <hierarchicalColors>
                                                 <color name="Neutral-v100"/>
                                                 <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -45,7 +45,7 @@
                                         </imageReference>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWT-XR-0PW">
-                                        <rect key="frame" x="50" y="0.0" width="47.5" height="30"/>
+                                        <rect key="frame" x="50" y="0.0" width="42" height="30"/>
                                         <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -88,7 +88,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="plus.circle" catalog="system" width="128" height="123"/>
+        <image name="add-circle-fill" width="24" height="24"/>
         <namedColor name="Bronze-100">
             <color red="0.96470588235294119" green="0.8666666666666667" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

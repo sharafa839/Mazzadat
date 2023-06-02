@@ -23,14 +23,25 @@
                 <rect key="frame" x="0.0" y="0.0" width="148" height="136"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app icons-12" translatesAutoresizingMaskIntoConstraints="NO" id="TfN-p1-kw0">
-                        <rect key="frame" x="4" y="9" width="140" height="93.5"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NxE-YL-C6h">
+                        <rect key="frame" x="8" y="8" width="132" height="95.5"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app icons-12" translatesAutoresizingMaskIntoConstraints="NO" id="TfN-p1-kw0">
+                                <rect key="frame" x="8" y="1" width="116" height="93.5"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="93.5" id="nW6-mj-l6V"/>
+                            <constraint firstAttribute="height" constant="95.5" id="2Vl-Ll-vJw"/>
+                            <constraint firstAttribute="width" constant="132" id="C9q-3q-bM2"/>
+                            <constraint firstAttribute="bottom" secondItem="TfN-p1-kw0" secondAttribute="bottom" constant="1" id="TJy-Md-MZX"/>
+                            <constraint firstItem="TfN-p1-kw0" firstAttribute="top" secondItem="NxE-YL-C6h" secondAttribute="top" constant="1" id="XSd-Ha-wys"/>
+                            <constraint firstItem="TfN-p1-kw0" firstAttribute="leading" secondItem="NxE-YL-C6h" secondAttribute="leading" constant="8" id="qKB-GD-s6c"/>
+                            <constraint firstAttribute="trailing" secondItem="TfN-p1-kw0" secondAttribute="trailing" constant="8" id="zaF-pJ-68q"/>
                         </constraints>
-                    </imageView>
+                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5c-IY-Y14">
-                        <rect key="frame" x="4" y="111.5" width="140" height="13.5"/>
+                        <rect key="frame" x="4" y="111.5" width="140" height="22.5"/>
                         <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="12"/>
                         <color key="textColor" name="TextColor"/>
                         <nil key="highlightedColor"/>
@@ -39,19 +50,20 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="g5c-IY-Y14" firstAttribute="top" secondItem="TfN-p1-kw0" secondAttribute="bottom" constant="9" id="7Ho-zA-1Vb"/>
                 <constraint firstAttribute="trailing" secondItem="g5c-IY-Y14" secondAttribute="trailing" constant="4" id="9xV-al-Yzg"/>
-                <constraint firstAttribute="trailing" secondItem="TfN-p1-kw0" secondAttribute="trailing" constant="4" id="B7H-PU-Hkp"/>
-                <constraint firstItem="TfN-p1-kw0" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="PhQ-FG-WM6"/>
+                <constraint firstItem="g5c-IY-Y14" firstAttribute="top" secondItem="NxE-YL-C6h" secondAttribute="bottom" constant="8" id="Kh0-Ug-6Yn"/>
+                <constraint firstItem="NxE-YL-C6h" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="LQg-HA-C3C"/>
                 <constraint firstItem="g5c-IY-Y14" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="UeD-wk-EuL"/>
-                <constraint firstItem="TfN-p1-kw0" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="9" id="UsR-EH-Bsb"/>
+                <constraint firstItem="NxE-YL-C6h" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="chp-SU-Zg0"/>
+                <constraint firstAttribute="trailing" secondItem="NxE-YL-C6h" secondAttribute="trailing" constant="8" id="gl2-uL-9zN"/>
             </constraints>
             <size key="customSize" width="187" height="149"/>
             <connections>
                 <outlet property="auctionHolderImageView" destination="TfN-p1-kw0" id="wu2-kY-C3B"/>
                 <outlet property="auctionHolderTitle" destination="g5c-IY-Y14" id="ZrW-rj-iFG"/>
+                <outlet property="containerView" destination="NxE-YL-C6h" id="81A-jD-LfP"/>
             </connections>
-            <point key="canvasLocation" x="180.43478260869566" y="155.02232142857142"/>
+            <point key="canvasLocation" x="179.71014492753625" y="154.6875"/>
         </collectionViewCell>
     </objects>
     <resources>

@@ -12,7 +12,6 @@ import Kingfisher
 class CategoriesCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var innerView: UIView!
     @IBOutlet weak var labelContinerView: UIView!
     @IBOutlet weak var itemValueLabel: UILabel!
     @IBOutlet weak var itemImageView: UIImageView!
@@ -25,9 +24,8 @@ class CategoriesCollectionViewCell: UICollectionViewCell {
 
     private func setupUI() {
         containerView.setRoundCorners(10)
-        labelContinerView.setRoundCorners(10)
         itemValueLabel.setRoundCorners(10)
-        
+        labelContinerView.drawBorder(raduis: 10, borderColor: .white)
     }
     func configure(_ category:Category) {
         itemTitleLabel.text = category.name
