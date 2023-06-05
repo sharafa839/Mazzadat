@@ -61,7 +61,7 @@ extension TicketApi :TargetType, BaseApiHeadersProtocol {
         case .response(let ticketId, let response):
             return .requestParameters(parameters: ["ticket_id":ticketId,"response":response], encoding: JSONEncoding.default)
         case .store(let title,let message,let attachment):
-            return .requestParameters(parameters: ["title":title,"message":message,"attachment":attachment], encoding: JSONEncoding.default)
+            return .requestParameters(parameters: ["title":title,"message":message], encoding: JSONEncoding.default)
         case .show(let ticketId):
             return .requestParameters(parameters: ["ticket_id":ticketId], encoding: URLEncoding.default)
         default : return .requestPlain

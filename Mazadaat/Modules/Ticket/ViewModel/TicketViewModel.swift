@@ -14,6 +14,7 @@ class TicketViewModel:TicketNetworkingProtocol {
     let disposeBag = DisposeBag()
     var onError = PublishSubject<String>()
     var onLoading = BehaviorRelay<Bool>(value: false)
+    var onSuccess = PublishSubject<Void>()
     var onSuccessGetData = BehaviorRelay<[TicketModel]>(value: [])
     var onSuccessRunning = BehaviorRelay<[TicketModel]>(value: [])
     var onSuccessClose = BehaviorRelay<[TicketModel]>(value: [])
@@ -36,5 +37,20 @@ class TicketViewModel:TicketNetworkingProtocol {
             }
         }
     }
+    
+    func sendTicket(title:String,description:String) {
+        onLoading.accept(true)
+        Store(title: title, message: description, attachment: "") { [weak self] result in
+            self?.onLoading.accept(false)
+            switch result {
+            case .success(let response):
+                guard let res = response.response else {return}
+                self?.onSuccess.onNext(())
+            case .failure(let error):
+                self?.onError.onNext(error.localizedDescription)
+            }
+        }
+    }
+
 }
 

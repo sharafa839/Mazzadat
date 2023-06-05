@@ -11,6 +11,7 @@ import UIKit
 class TicketViewController: UIViewController {
 
     //MARK: - IBOutlets
+    @IBOutlet weak var addTicketButton: CustomButton!
     @IBOutlet weak var segmentController: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
     
@@ -44,7 +45,7 @@ class TicketViewController: UIViewController {
 
     
     private func setupLocalize() {
-        
+        addTicketButton.setTitle("addTicket".localize, for: .normal)
     }
 
     private func setupViewModel() {
@@ -85,6 +86,10 @@ class TicketViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(TicketTableViewCell.nib, forCellReuseIdentifier: TicketTableViewCell.identifier)
 
+    }
+    
+    @IBAction func addTicket(_ sender: CustomButton) {
+        navigationController?.pushViewController(AddTicketViewController(viewModel: TicketViewModel()), animated: true)
     }
     
     @IBAction func segmentAction(_ sender: UISegmentedControl) {

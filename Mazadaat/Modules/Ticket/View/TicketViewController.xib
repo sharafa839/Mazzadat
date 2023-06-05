@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TicketViewController" customModule="Golden_Bell" customModuleProvider="target">
             <connections>
+                <outlet property="addTicketButton" destination="GIw-l6-jen" id="RGg-t4-IQE"/>
                 <outlet property="segmentController" destination="VSM-ju-Uc8" id="bVD-gU-Nbr"/>
                 <outlet property="tableView" destination="HEz-qt-O5T" id="98p-MX-Ij0"/>
                 <outlet property="view" destination="Z7d-f6-L8w" id="wEA-Ga-lEY"/>
@@ -54,17 +55,43 @@
                     <rect key="frame" x="0.0" y="202" width="414" height="694"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VlT-QQ-RaD">
+                    <rect key="frame" x="0.0" y="768" width="414" height="128"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIw-l6-jen" customClass="CustomButton" customModule="Golden_Bell" customModuleProvider="target">
+                            <rect key="frame" x="32" y="36.5" width="350" height="55"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="abz-ab-Ajg"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            <connections>
+                                <action selector="addTicket:" destination="-1" eventType="touchUpInside" id="xM5-6q-vKb"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="GIw-l6-jen" firstAttribute="leading" secondItem="VlT-QQ-RaD" secondAttribute="leading" constant="32" id="YfJ-yg-Tnt"/>
+                        <constraint firstAttribute="height" constant="128" id="bBx-gb-TdM"/>
+                        <constraint firstAttribute="trailing" secondItem="GIw-l6-jen" secondAttribute="trailing" constant="32" id="wvB-bU-G6o"/>
+                        <constraint firstItem="GIw-l6-jen" firstAttribute="centerY" secondItem="VlT-QQ-RaD" secondAttribute="centerY" id="x7Q-DF-Zoa"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="qaz-jK-zAn"/>
             <color key="backgroundColor" systemColor="systemGray6Color"/>
             <constraints>
                 <constraint firstItem="HEz-qt-O5T" firstAttribute="top" secondItem="yGO-IK-EU2" secondAttribute="bottom" constant="22" id="1HW-CG-640"/>
+                <constraint firstItem="VlT-QQ-RaD" firstAttribute="leading" secondItem="qaz-jK-zAn" secondAttribute="leading" id="AtQ-Iu-96e"/>
                 <constraint firstItem="yGO-IK-EU2" firstAttribute="leading" secondItem="Z7d-f6-L8w" secondAttribute="leading" id="G4R-Vg-jIP"/>
                 <constraint firstItem="HEz-qt-O5T" firstAttribute="leading" secondItem="qaz-jK-zAn" secondAttribute="leading" id="JUs-oe-fwa"/>
                 <constraint firstItem="yGO-IK-EU2" firstAttribute="top" secondItem="Z7d-f6-L8w" secondAttribute="top" id="NjP-dN-q8Q"/>
+                <constraint firstAttribute="bottom" secondItem="VlT-QQ-RaD" secondAttribute="bottom" id="STA-gG-foa"/>
                 <constraint firstItem="qaz-jK-zAn" firstAttribute="trailing" secondItem="HEz-qt-O5T" secondAttribute="trailing" id="dD1-nN-lQa"/>
                 <constraint firstAttribute="trailing" secondItem="yGO-IK-EU2" secondAttribute="trailing" id="kME-6s-pHl"/>
                 <constraint firstAttribute="bottom" secondItem="HEz-qt-O5T" secondAttribute="bottom" id="pUW-o5-uXb"/>
+                <constraint firstItem="qaz-jK-zAn" firstAttribute="trailing" secondItem="VlT-QQ-RaD" secondAttribute="trailing" id="wE8-bb-mba"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="61.607142857142854"/>
         </view>

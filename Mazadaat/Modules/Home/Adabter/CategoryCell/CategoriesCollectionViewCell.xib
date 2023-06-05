@@ -28,7 +28,7 @@
                         <rect key="frame" x="8" y="0.0" width="125" height="130"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oFF-xy-fWe">
-                                <rect key="frame" x="8" y="8" width="109" height="92"/>
+                                <rect key="frame" x="8" y="8" width="109" height="98"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="109" id="Klf-a2-y1g"/>
                                 </constraints>
@@ -38,7 +38,7 @@
                         <constraints>
                             <constraint firstItem="oFF-xy-fWe" firstAttribute="top" secondItem="FuA-Fj-VK3" secondAttribute="top" constant="8" id="2hK-Ib-aLJ"/>
                             <constraint firstAttribute="trailing" secondItem="oFF-xy-fWe" secondAttribute="trailing" constant="8" id="Bbe-qd-8mO"/>
-                            <constraint firstAttribute="bottom" secondItem="oFF-xy-fWe" secondAttribute="bottom" constant="30" id="Qvr-0A-vFV"/>
+                            <constraint firstAttribute="bottom" secondItem="oFF-xy-fWe" secondAttribute="bottom" constant="24" id="Qvr-0A-vFV"/>
                             <constraint firstItem="oFF-xy-fWe" firstAttribute="leading" secondItem="FuA-Fj-VK3" secondAttribute="leading" constant="8" id="TVd-11-52W"/>
                             <constraint firstAttribute="height" constant="130" id="bks-z3-kdM"/>
                         </constraints>
@@ -78,7 +78,6 @@
                 <constraint firstItem="t7u-C9-WLd" firstAttribute="bottom" secondItem="FuA-Fj-VK3" secondAttribute="bottom" constant="10" id="IHf-ld-Dyn"/>
                 <constraint firstItem="Xb0-AA-IPi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="PoE-xP-zXi"/>
                 <constraint firstAttribute="trailing" secondItem="Xb0-AA-IPi" secondAttribute="trailing" constant="16" id="SD1-SQ-b1M"/>
-                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="t7u-C9-WLd" secondAttribute="bottom" constant="28" id="YCv-t1-Oeq"/>
                 <constraint firstItem="Xb0-AA-IPi" firstAttribute="top" secondItem="t7u-C9-WLd" secondAttribute="bottom" constant="3" id="aQG-9U-ChT"/>
                 <constraint firstItem="FuA-Fj-VK3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="kOR-mF-8i1"/>
                 <constraint firstAttribute="trailing" secondItem="FuA-Fj-VK3" secondAttribute="trailing" constant="8" id="lCq-Lz-fob"/>

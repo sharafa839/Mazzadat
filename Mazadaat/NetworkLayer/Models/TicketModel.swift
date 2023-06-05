@@ -35,3 +35,17 @@ struct TicketResponse: Codable {
         case senderType = "sender_type"
     }
 }
+
+struct AddTicketResponse: Codable {
+    var status: String?
+    var id: Int?
+    var title, message: String?
+    var ticketResponses: [String]?
+    var attachment: String?
+
+    enum CodingKeys: String, CodingKey {
+        case status, id, title, message
+        case ticketResponses = "TicketResponses"
+        case attachment
+    }
+}

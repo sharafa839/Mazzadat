@@ -28,6 +28,10 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app icons-12" translatesAutoresizingMaskIntoConstraints="NO" id="TfN-p1-kw0">
                                 <rect key="frame" x="8" y="1" width="116" height="93.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="116" id="B9r-l0-YRZ"/>
+                                    <constraint firstAttribute="height" constant="93.5" id="QYX-W5-UI0"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

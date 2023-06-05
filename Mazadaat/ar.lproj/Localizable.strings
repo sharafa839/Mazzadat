@@ -216,3 +216,8 @@
 "fillAllData" = "املئ جميع الحقول";
 "closed" = "منتهي";
 "next" = "التالي";
+"submit" = "ارسال";
+"ticketDescription" = "الوصف";
+"title" = "العنوان";
+"addTicket" = "ارسل شكوى";
+"submitIssueSucces" = "تم ارسال شكواك بنجاح";

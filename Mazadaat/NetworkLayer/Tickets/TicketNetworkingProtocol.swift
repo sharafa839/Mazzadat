@@ -11,7 +11,7 @@ protocol TicketNetworkingProtocol {
     func changeName(name:String,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
     func getAll(completion:@escaping(Result<BaseResponse<[TicketModel]>,Error>)->Void)
     func response(id:String,response:String,completion:@escaping(Result<BaseResponse<[TicketModel]>,Error>)->Void)
-    func Store(title:String,message:String,attachment:String,completion:@escaping(Result<BaseResponse<[TicketModel]>,Error>)->Void)
+    func Store(title:String,message:String,attachment:String,completion:@escaping(Result<BaseResponse<AddTicketResponse>,Error>)->Void)
     func show(id:String,completion:@escaping(Result<BaseResponse<TicketModel>,Error>)->Void)
 }
 
@@ -33,7 +33,7 @@ extension TicketNetworkingProtocol {
         repo.request(target: .response(ticketId: id, response: response), completion: completion)
     }
     
-    func Store(title:String,message:String,attachment:String,completion:@escaping(Result<BaseResponse<[TicketModel]>,Error>)->Void) {
+    func Store(title:String,message:String,attachment:String,completion:@escaping(Result<BaseResponse<AddTicketResponse>,Error>)->Void) {
         repo.request(target: .store(title: title, message: message, attachment: attachment), completion: completion)
     }
     func show(id:String,completion:@escaping(Result<BaseResponse<TicketModel>,Error>)->Void) {

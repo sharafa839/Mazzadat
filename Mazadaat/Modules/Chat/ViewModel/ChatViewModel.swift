@@ -31,6 +31,7 @@ class ChatViewModel:HomeNetworkingProtocol,TicketNetworkingProtocol {
         self.auctionId = auctionId
         self.name = name
         self.ticketId = ""
+       
     }
     
   convenience init(ticketId:String) {

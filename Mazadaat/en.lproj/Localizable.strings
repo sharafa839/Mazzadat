@@ -219,3 +219,8 @@
 "fillAllData" = "Please fill all fields";
 "closed" = "closed";
 "next" = "Next";
+"submit" = "Submit";
+"ticketDescription" = "Ticket description";
+"title" = "Ticket title";
+"addTicket" = "Add ticket";
+"submitIssueSucces" = "تم ارسال شكواك بنجاح";

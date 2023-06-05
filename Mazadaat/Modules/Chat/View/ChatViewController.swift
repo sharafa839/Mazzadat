@@ -29,7 +29,11 @@ class ChatViewController: UIViewController {
         setupTableView()
         setupObservables()
         setupViewModelObservers()
-        viewModel.getMessages()
+        if viewModel.ticketId != "" {
+            viewModel.getTicketResponse()
+        }else {
+            viewModel.getMessages()
+        }
         setNavigationItem(title: viewModel.name ?? Localizations.chat.localize)
         setupUI()
     }
@@ -82,7 +86,7 @@ class ChatViewController: UIViewController {
             guard let chat = value.element ,!chat.isEmpty else {return}
             
             self?.tableView.reloadData()
-            
+            self?.scrollToTheBottom()
             
         }.disposed(by: viewModel.disposeBag)
         

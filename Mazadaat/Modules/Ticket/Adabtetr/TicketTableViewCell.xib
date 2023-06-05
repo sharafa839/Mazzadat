@@ -49,34 +49,42 @@
                                     <constraint firstItem="ob4-Bk-5dq" firstAttribute="leading" secondItem="3tf-aB-B51" secondAttribute="leading" constant="8" id="f0O-de-sK5"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDp-YC-lwY">
-                                <rect key="frame" x="96" y="16" width="42.5" height="17.5"/>
-                                <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q62-jN-nsa">
-                                <rect key="frame" x="96" y="42.5" width="42.5" height="15.5"/>
-                                <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vcf-lh-w5o">
-                                <rect key="frame" x="96" y="67" width="42.5" height="17.5"/>
-                                <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RKE-vj-7Sw">
-                                <rect key="frame" x="316" y="40" width="15" height="15"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="248" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="746" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="m1D-KJ-IXq">
+                                <rect key="frame" x="96" y="0.5" width="177" height="104.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="248" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rDp-YC-lwY">
+                                        <rect key="frame" x="0.0" y="0.0" width="177" height="30"/>
+                                        <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Q62-jN-nsa">
+                                        <rect key="frame" x="0.0" y="39" width="177" height="26.5"/>
+                                        <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Vcf-lh-w5o">
+                                        <rect key="frame" x="0.0" y="74.5" width="177" height="30"/>
+                                        <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RKE-vj-7Sw">
+                                <rect key="frame" x="316" y="32" width="15" height="15"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="15" id="KM1-Af-F5W"/>
                                     <constraint firstAttribute="height" constant="15" id="tBe-b1-pd3"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Dr-fS-HGs">
-                                <rect key="frame" x="292" y="16" width="39" height="17.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="748" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Dr-fS-HGs">
+                                <rect key="frame" x="281" y="8" width="50" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="bgm-DB-4g1"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="16"/>
                                 <color key="textColor" name="BorderView"/>
                                 <nil key="highlightedColor"/>
@@ -84,20 +92,14 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="rDp-YC-lwY" firstAttribute="leading" secondItem="3tf-aB-B51" secondAttribute="trailing" constant="16" id="1nT-Bq-HlD"/>
-                            <constraint firstItem="Q62-jN-nsa" firstAttribute="top" secondItem="rDp-YC-lwY" secondAttribute="bottom" constant="9" id="6zB-yM-YSR"/>
+                            <constraint firstItem="m1D-KJ-IXq" firstAttribute="centerY" secondItem="M0F-zp-PtO" secondAttribute="centerY" id="6bs-IC-WQr"/>
+                            <constraint firstItem="7Dr-fS-HGs" firstAttribute="top" secondItem="M0F-zp-PtO" secondAttribute="top" constant="8" id="7Wf-DY-KAn"/>
+                            <constraint firstItem="7Dr-fS-HGs" firstAttribute="leading" secondItem="m1D-KJ-IXq" secondAttribute="trailing" constant="8" id="BCj-vp-Kbp"/>
                             <constraint firstItem="3tf-aB-B51" firstAttribute="leading" secondItem="M0F-zp-PtO" secondAttribute="leading" constant="16" id="BLM-qy-cig"/>
-                            <constraint firstItem="Vcf-lh-w5o" firstAttribute="trailing" secondItem="Q62-jN-nsa" secondAttribute="trailing" id="BZd-PU-fZo"/>
-                            <constraint firstItem="Q62-jN-nsa" firstAttribute="trailing" secondItem="rDp-YC-lwY" secondAttribute="trailing" id="GIh-mF-h4j"/>
-                            <constraint firstItem="7Dr-fS-HGs" firstAttribute="top" secondItem="rDp-YC-lwY" secondAttribute="top" id="GNx-Gp-LKR"/>
-                            <constraint firstItem="Vcf-lh-w5o" firstAttribute="leading" secondItem="Q62-jN-nsa" secondAttribute="leading" id="XEU-D5-hZY"/>
                             <constraint firstAttribute="trailing" secondItem="RKE-vj-7Sw" secondAttribute="trailing" constant="16" id="Xal-82-TKS"/>
-                            <constraint firstItem="Q62-jN-nsa" firstAttribute="leading" secondItem="rDp-YC-lwY" secondAttribute="leading" id="b4w-u6-CXF"/>
                             <constraint firstItem="3tf-aB-B51" firstAttribute="top" secondItem="M0F-zp-PtO" secondAttribute="top" constant="16" id="dXa-Pd-Pvx"/>
                             <constraint firstAttribute="trailing" secondItem="7Dr-fS-HGs" secondAttribute="trailing" constant="16" id="edA-sD-YIU"/>
-                            <constraint firstItem="rDp-YC-lwY" firstAttribute="top" secondItem="M0F-zp-PtO" secondAttribute="top" constant="16" id="lmy-KD-8bV"/>
-                            <constraint firstItem="RKE-vj-7Sw" firstAttribute="top" secondItem="rDp-YC-lwY" secondAttribute="top" constant="24" id="rNN-vj-dbJ"/>
-                            <constraint firstItem="Vcf-lh-w5o" firstAttribute="top" secondItem="Q62-jN-nsa" secondAttribute="bottom" constant="9" id="vhp-tb-95h"/>
+                            <constraint firstItem="m1D-KJ-IXq" firstAttribute="leading" secondItem="3tf-aB-B51" secondAttribute="trailing" constant="16" id="oyt-oZ-34b"/>
                         </constraints>
                     </view>
                 </subviews>
