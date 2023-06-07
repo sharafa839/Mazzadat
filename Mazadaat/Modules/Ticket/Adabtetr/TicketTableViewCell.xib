@@ -52,19 +52,19 @@
                             <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="248" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="746" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="m1D-KJ-IXq">
                                 <rect key="frame" x="96" y="0.5" width="177" height="104.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="248" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rDp-YC-lwY">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="248" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDp-YC-lwY">
                                         <rect key="frame" x="0.0" y="0.0" width="177" height="30"/>
                                         <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Q62-jN-nsa">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q62-jN-nsa">
                                         <rect key="frame" x="0.0" y="39" width="177" height="26.5"/>
                                         <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Vcf-lh-w5o">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vcf-lh-w5o">
                                         <rect key="frame" x="0.0" y="74.5" width="177" height="30"/>
                                         <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="16"/>
                                         <nil key="textColor"/>
@@ -72,7 +72,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RKE-vj-7Sw">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RKE-vj-7Sw">
                                 <rect key="frame" x="316" y="32" width="15" height="15"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
@@ -99,6 +99,7 @@
                             <constraint firstAttribute="trailing" secondItem="RKE-vj-7Sw" secondAttribute="trailing" constant="16" id="Xal-82-TKS"/>
                             <constraint firstItem="3tf-aB-B51" firstAttribute="top" secondItem="M0F-zp-PtO" secondAttribute="top" constant="16" id="dXa-Pd-Pvx"/>
                             <constraint firstAttribute="trailing" secondItem="7Dr-fS-HGs" secondAttribute="trailing" constant="16" id="edA-sD-YIU"/>
+                            <constraint firstItem="RKE-vj-7Sw" firstAttribute="top" secondItem="M0F-zp-PtO" secondAttribute="top" constant="32" id="gUk-ZO-y7d"/>
                             <constraint firstItem="m1D-KJ-IXq" firstAttribute="leading" secondItem="3tf-aB-B51" secondAttribute="trailing" constant="16" id="oyt-oZ-34b"/>
                         </constraints>
                     </view>

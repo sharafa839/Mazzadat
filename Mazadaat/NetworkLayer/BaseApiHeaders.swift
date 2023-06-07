@@ -13,7 +13,7 @@ protocol BaseApiHeadersProtocol {
 
 extension BaseApiHeadersProtocol {
     var baseURL:URL {
-    return URL(string: "http://goldnbell.co/")!
+    return URL(string: "https://goldenbell.sa/")!
     }
     
     var headers:[String:String]? {
