@@ -38,20 +38,20 @@
                                         <rect key="frame" x="0.0" y="0.0" width="175" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wD1-6n-NhO">
-                                                <rect key="frame" x="0.0" y="0.0" width="139.5" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="141" height="50"/>
                                                 <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="12"/>
                                                 <color key="textColor" name="TextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="by7-cH-Nsg">
-                                                <rect key="frame" x="141.5" y="0.0" width="2" height="50"/>
+                                                <rect key="frame" x="143" y="0.0" width="2" height="50"/>
                                                 <color key="backgroundColor" name="Neutral-v100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="2" id="vl5-2Z-uzU"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KuZ-Ag-rDj">
-                                                <rect key="frame" x="145.5" y="0.0" width="29.5" height="50"/>
+                                                <rect key="frame" x="147" y="0.0" width="28" height="50"/>
                                                 <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="12"/>
                                                 <color key="textColor" name="TextColor"/>
                                                 <nil key="highlightedColor"/>
@@ -74,13 +74,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOB-fS-oN4">
-                                <rect key="frame" x="16" y="129" width="54" height="26"/>
+                                <rect key="frame" x="16" y="121.5" width="51.5" height="41.5"/>
                                 <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="MbO-nI-48W">
-                                <rect key="frame" x="86" y="136" width="60" height="12"/>
+                                <rect key="frame" x="83.5" y="136" width="60" height="12"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="auction-line-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ub2-Oj-iMT">
                                         <rect key="frame" x="0.0" y="0.0" width="12" height="12"/>
@@ -142,7 +142,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6g-By-1MA">
                                                 <rect key="frame" x="8" y="8" width="34" height="34"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" image="Golden Bell Icon"/>
+                                                <state key="normal" image="Golden Bell Icons"/>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" name="Bronze-500"/>
@@ -158,7 +158,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXs-bQ-R1E">
-                                <rect key="frame" x="264.5" y="126" width="34.5" height="16.5"/>
+                                <rect key="frame" x="266" y="121" width="33" height="26.5"/>
                                 <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -211,7 +211,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="Golden Bell Icon" width="24" height="24"/>
+        <image name="Golden Bell Icons" width="24" height="24"/>
         <image name="auction-line-1" width="16" height="16"/>
         <image name="heart" width="26" height="26"/>
         <namedColor name="Bronze-500">

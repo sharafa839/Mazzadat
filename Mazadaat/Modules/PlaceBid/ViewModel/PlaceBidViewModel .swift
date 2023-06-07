@@ -21,11 +21,13 @@ class PlaceBidViewModel:AuctionNetworkingProtocol {
     var price:Int
     var placeId:String
     var priceChange = BehaviorRelay<Int>(value:0)
-    init(placeId:String,id:String,price:Int,isOfficial:Bool) {
+    var minimumBidding:Int
+    init(placeId:String,id:String,price:Int,isOfficial:Bool,minimumBidding:Int) {
         self.id = id
         self.placeId = placeId
         self.price = price
         self.isOfficial = isOfficial
+        self.minimumBidding = minimumBidding
         priceChange.accept(Int(price))
     }
     
@@ -50,12 +52,12 @@ class PlaceBidViewModel:AuctionNetworkingProtocol {
     }
     
     func adder() {
-        priceChange.accept(priceChange.value + 1)
+        priceChange.accept(priceChange.value + minimumBidding)
     }
     
     func subtract() {
-        guard priceChange.value - 1 > price else {return}
-        priceChange.accept(priceChange.value - 1)
+        guard priceChange.value - minimumBidding > price else {return}
+        priceChange.accept(priceChange.value - minimumBidding)
     }
 }
 

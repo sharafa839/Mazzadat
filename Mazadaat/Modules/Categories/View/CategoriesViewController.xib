@@ -30,10 +30,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vmq-We-D5Q">
-                    <rect key="frame" x="0.0" y="48" width="414" height="110"/>
+                    <rect key="frame" x="0.0" y="92" width="414" height="92"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PfW-tO-xng">
-                            <rect key="frame" x="24" y="-5.5" width="366" height="83.5"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="PfW-tO-xng">
+                            <rect key="frame" x="24" y="-21.5" width="366" height="114"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M6J-el-g3i" customClass="PackageSubscribePlan" customModule="Golden_Bell" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="366" height="60"/>
@@ -43,28 +43,28 @@
                                     </constraints>
                                 </view>
                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="245" translatesAutoresizingMaskIntoConstraints="NO" id="zkB-n9-FqS">
-                                    <rect key="frame" x="0.0" y="70" width="366" height="13.5"/>
+                                    <rect key="frame" x="0.0" y="64" width="366" height="50"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBx-Dv-VO1">
-                                            <rect key="frame" x="0.0" y="0.0" width="37" height="13.5"/>
+                                            <rect key="frame" x="0.0" y="12" width="33" height="26.5"/>
                                             <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lWP-U1-vM8">
-                                            <rect key="frame" x="282" y="0.0" width="84" height="13.5"/>
+                                            <rect key="frame" x="278" y="0.0" width="88" height="50"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KOR-ya-P6c">
-                                                    <rect key="frame" x="0.0" y="0.0" width="2" height="13.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="2" height="50"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="2" id="5od-iU-uGi"/>
                                                     </constraints>
                                                 </view>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YzS-JS-Xx5">
-                                                    <rect key="frame" x="2" y="0.0" width="82" height="13.5"/>
+                                                    <rect key="frame" x="2" y="0.0" width="86" height="50"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                    <state key="normal" image="list-settings-line"/>
+                                                    <state key="normal" image="list-settings-line-1"/>
                                                 </button>
                                             </subviews>
                                         </stackView>
@@ -75,15 +75,14 @@
                     </subviews>
                     <color key="backgroundColor" name="Bronze-200"/>
                     <constraints>
-                        <constraint firstItem="PfW-tO-xng" firstAttribute="top" secondItem="Vmq-We-D5Q" secondAttribute="top" constant="-5.5" id="F82-IO-AVy"/>
+                        <constraint firstItem="PfW-tO-xng" firstAttribute="top" secondItem="Vmq-We-D5Q" secondAttribute="top" constant="-21.5" id="F82-IO-AVy"/>
                         <constraint firstItem="PfW-tO-xng" firstAttribute="leading" secondItem="Vmq-We-D5Q" secondAttribute="leading" constant="24" id="HAM-CR-U3E"/>
-                        <constraint firstAttribute="height" constant="110" id="IIp-FD-abf"/>
+                        <constraint firstAttribute="height" constant="92" id="IIp-FD-abf"/>
                         <constraint firstAttribute="trailing" secondItem="PfW-tO-xng" secondAttribute="trailing" constant="24" id="Jvs-Ka-cMB"/>
-                        <constraint firstAttribute="bottom" secondItem="PfW-tO-xng" secondAttribute="bottom" constant="32" id="nTg-Fh-wUm"/>
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="41q-Ql-avn">
-                    <rect key="frame" x="0.0" y="174" width="414" height="722"/>
+                    <rect key="frame" x="0.0" y="200" width="414" height="696"/>
                     <color key="backgroundColor" name="Neutral-v100"/>
                 </tableView>
             </subviews>
@@ -91,7 +90,7 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="41q-Ql-avn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="4zV-wK-mgj"/>
-                <constraint firstItem="Vmq-We-D5Q" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="APh-eR-7Lb"/>
+                <constraint firstItem="Vmq-We-D5Q" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="44" id="APh-eR-7Lb"/>
                 <constraint firstItem="41q-Ql-avn" firstAttribute="top" secondItem="Vmq-We-D5Q" secondAttribute="bottom" constant="16" id="Hi8-R5-Wph"/>
                 <constraint firstAttribute="bottom" secondItem="41q-Ql-avn" secondAttribute="bottom" id="ViO-kE-KW3"/>
                 <constraint firstItem="Vmq-We-D5Q" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ezO-it-5Nr"/>
@@ -102,7 +101,7 @@
         </view>
     </objects>
     <resources>
-        <image name="list-settings-line" width="24" height="24"/>
+        <image name="list-settings-line-1" width="24" height="24"/>
         <namedColor name="Bronze-200">
             <color red="0.94901960784313721" green="0.80000000000000004" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

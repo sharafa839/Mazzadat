@@ -147,6 +147,9 @@
                                     <state key="normal" title="Button">
                                         <color key="titleColor" name="TextColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="shareCommunity:" destination="-1" eventType="touchUpInside" id="dE8-yL-xdB"/>
+                                    </connections>
                                 </button>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow-left-s-line" translatesAutoresizingMaskIntoConstraints="NO" id="N1C-hs-4Gf">
                                     <rect key="frame" x="293" y="0.0" width="20" height="20"/>

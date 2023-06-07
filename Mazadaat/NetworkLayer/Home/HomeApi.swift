@@ -158,9 +158,11 @@ extension HomeApiServices:TargetType,BaseApiHeadersProtocol {
             }
             multipart.append(contentsOf: multipartParameters)
           
-                let multiPartItem = MultiPartItem(data: image.data , fileName: imageName, mimeType: "image/png", keyName: "img")
+            let multiPartItem = MultiPartItem(data: image.data , fileName: image.fileName, mimeType: "image/png", keyName:image.keyName )
                 let multiPartImage  = MultipartFormData(provider: .data(multiPartItem.data), name: multiPartItem.keyName, fileName: multiPartItem.fileName, mimeType: multiPartItem.fileName)
                 multipart.append(multiPartImage)
+            
+            print(multipart)
             
             return .uploadMultipart(multipart)
             

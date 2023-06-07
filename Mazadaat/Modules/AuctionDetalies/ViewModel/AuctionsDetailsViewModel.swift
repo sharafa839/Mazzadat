@@ -22,6 +22,7 @@ class AuctionsDetailsViewModel:AuctionNetworkingProtocol {
     var onSuccessFavorite = PublishSubject<FavoriteModel>()
     var verifyWithNafath = PublishSubject<Void>()
     var placeId:String
+    var minimumBidding:String?
     init(id:String,type:String,isOfficialAuction:Bool,placeId:String?) {
         self.id = id
         self.type = type
@@ -39,6 +40,7 @@ class AuctionsDetailsViewModel:AuctionNetworkingProtocol {
                 self?.auctionDetails.onNext(auction)
                 self?.auctionDetailArray.accept(auction.auctionDetails ?? [])
                 self?.price = auction.price ?? ""
+                self?.minimumBidding = auction.minimumBid
             case .failure(let error):
                 self?.onError.onNext(error.localizedDescription)
             }
@@ -56,7 +58,7 @@ class AuctionsDetailsViewModel:AuctionNetworkingProtocol {
                 self?.auctionDetails.onNext(auction)
                 self?.auctionDetailArray.accept(auction.auctionDetails ?? [])
                 self?.price = auction.price ?? ""
-                
+                self?.minimumBidding = auction.minimumBid
             case .failure(let error):
                 self?.onError.onNext(error.localizedDescription)
             }

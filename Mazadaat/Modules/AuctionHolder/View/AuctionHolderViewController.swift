@@ -125,7 +125,7 @@ extension AuctionHolderViewController:UITableViewDelegate,UITableViewDataSource,
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        260
+        300
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -174,7 +174,7 @@ extension AuctionHolderViewController:UICollectionViewDelegate,UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 120, height: 50)
+        return CGSize(width: 128, height: 50)
     }
     
     private func getAuctionHolder(state:AuctionState) {

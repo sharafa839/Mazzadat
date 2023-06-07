@@ -178,7 +178,7 @@ extension PlanViewController:UIImagePickerControllerDelegate,UINavigationControl
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[.originalImage] as? UIImage {
             image = pickedImage
-            
+            updateImage()
             self.dismiss(animated: true, completion: nil)
             
             

@@ -31,13 +31,16 @@
                         <rect key="frame" x="16" y="8" width="410" height="261"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0tC-mj-D8N">
-                                <rect key="frame" x="0.0" y="0.0" width="410" height="261"/>
+                                <rect key="frame" x="0.0" y="0.0" width="410" height="220"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="xqa-bK-qBd"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBo-MR-BMj">
-                                <rect key="frame" x="312" y="16" width="90" height="40"/>
+                                <rect key="frame" x="312" y="16" width="90" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="dcZ-FE-1he"/>
-                                    <constraint firstAttribute="height" constant="40" id="tkz-wt-foD"/>
+                                    <constraint firstAttribute="height" constant="32" id="tkz-wt-foD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="16"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -46,13 +49,13 @@
                                 </state>
                             </button>
                             <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Hd6-AZ-4Fd">
-                                <rect key="frame" x="16" y="172" width="378" height="116"/>
+                                <rect key="frame" x="16" y="185" width="378" height="105"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="dbQ-pC-4PP">
-                                        <rect key="frame" x="20" y="16" width="304" height="22"/>
+                                        <rect key="frame" x="20" y="8" width="304" height="46"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2m4-KH-Lsc">
-                                                <rect key="frame" x="0.0" y="0.0" width="304" height="22"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="304" height="46"/>
                                                 <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="20"/>
                                                 <color key="textColor" name="TextColor"/>
                                                 <nil key="highlightedColor"/>
@@ -72,7 +75,7 @@
                                         </variation>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fB7-ht-C0r">
-                                        <rect key="frame" x="340" y="12" width="30" height="30"/>
+                                        <rect key="frame" x="340" y="16" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="hGE-Bs-ATn"/>
                                             <constraint firstAttribute="width" constant="30" id="uzT-H7-lLf"/>
@@ -80,20 +83,20 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button" image="arrow-left-s-line"/>
                                     </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="S1q-23-utD">
-                                        <rect key="frame" x="8" y="58" width="362" height="50"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="S1q-23-utD">
+                                        <rect key="frame" x="16" y="62" width="346" height="35"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Jc7-fH-lUW">
-                                                <rect key="frame" x="0.0" y="0.0" width="37" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="33" height="35"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N3g-on-ejk">
-                                                        <rect key="frame" x="0.0" y="0.0" width="37" height="21"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="33" height="13.5"/>
                                                         <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="12"/>
                                                         <color key="textColor" name="Neutral-v600"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgb-mv-XDT">
-                                                        <rect key="frame" x="0.0" y="29" width="37" height="21"/>
+                                                        <rect key="frame" x="0.0" y="21.5" width="33" height="13.5"/>
                                                         <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="14"/>
                                                         <color key="textColor" name="TextColor"/>
                                                         <nil key="highlightedColor"/>
@@ -101,23 +104,23 @@
                                                 </subviews>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hsD-Ko-LGK">
-                                                <rect key="frame" x="99" y="0.0" width="2" height="50"/>
+                                                <rect key="frame" x="94" y="0.0" width="2" height="35"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="2" id="Q8B-py-u8p"/>
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jKV-8M-Aeo">
-                                                <rect key="frame" x="162.5" y="0.0" width="37" height="50"/>
+                                                <rect key="frame" x="156.5" y="0.0" width="33" height="35"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WL5-mQ-qax">
-                                                        <rect key="frame" x="0.0" y="0.0" width="37" height="21"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="33" height="13.5"/>
                                                         <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="12"/>
                                                         <color key="textColor" name="Neutral-v600"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="geP-Q1-Fzy">
-                                                        <rect key="frame" x="0.0" y="29" width="37" height="21"/>
+                                                        <rect key="frame" x="0.0" y="21.5" width="33" height="13.5"/>
                                                         <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="14"/>
                                                         <color key="textColor" name="TextColor"/>
                                                         <nil key="highlightedColor"/>
@@ -125,23 +128,23 @@
                                                 </subviews>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fxu-Ba-GHP">
-                                                <rect key="frame" x="261.5" y="0.0" width="2" height="50"/>
+                                                <rect key="frame" x="250.5" y="0.0" width="2" height="35"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="2" id="kYa-hy-Snt"/>
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="K1q-lj-oxU">
-                                                <rect key="frame" x="325" y="0.0" width="37" height="50"/>
+                                                <rect key="frame" x="313" y="0.0" width="33" height="35"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xzB-H6-K1h">
-                                                        <rect key="frame" x="0.0" y="0.0" width="37" height="21"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="33" height="13.5"/>
                                                         <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="12"/>
                                                         <color key="textColor" name="Neutral-v600"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Qd-Ge-TI9">
-                                                        <rect key="frame" x="0.0" y="29" width="37" height="21"/>
+                                                        <rect key="frame" x="0.0" y="21.5" width="33" height="13.5"/>
                                                         <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="14"/>
                                                         <color key="textColor" name="TextColor"/>
                                                         <nil key="highlightedColor"/>
@@ -153,29 +156,31 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="dbQ-pC-4PP" firstAttribute="top" secondItem="Hd6-AZ-4Fd" secondAttribute="top" constant="16" id="1au-lV-6FA"/>
+                                    <constraint firstItem="dbQ-pC-4PP" firstAttribute="top" secondItem="Hd6-AZ-4Fd" secondAttribute="top" constant="8" id="1au-lV-6FA"/>
+                                    <constraint firstAttribute="height" constant="105" id="7tE-pO-udp"/>
                                     <constraint firstItem="dbQ-pC-4PP" firstAttribute="leading" secondItem="Hd6-AZ-4Fd" secondAttribute="leading" constant="20" id="H5r-yf-qfA"/>
-                                    <constraint firstItem="S1q-23-utD" firstAttribute="leading" secondItem="Hd6-AZ-4Fd" secondAttribute="leading" constant="8" id="H8i-DZ-jv9"/>
+                                    <constraint firstItem="S1q-23-utD" firstAttribute="leading" secondItem="Hd6-AZ-4Fd" secondAttribute="leading" constant="16" id="H8i-DZ-jv9"/>
                                     <constraint firstAttribute="bottom" secondItem="S1q-23-utD" secondAttribute="bottom" constant="8" id="HXw-7b-AF5"/>
                                     <constraint firstItem="fB7-ht-C0r" firstAttribute="leading" secondItem="dbQ-pC-4PP" secondAttribute="trailing" constant="16" id="Jj4-8G-Usk"/>
                                     <constraint firstItem="fB7-ht-C0r" firstAttribute="centerY" secondItem="dbQ-pC-4PP" secondAttribute="centerY" id="LvS-Lt-ad2"/>
-                                    <constraint firstAttribute="trailing" secondItem="S1q-23-utD" secondAttribute="trailing" constant="8" id="MX0-E4-s7e"/>
+                                    <constraint firstAttribute="trailing" secondItem="S1q-23-utD" secondAttribute="trailing" constant="16" id="MX0-E4-s7e"/>
                                     <constraint firstItem="S1q-23-utD" firstAttribute="top" secondItem="fB7-ht-C0r" secondAttribute="bottom" constant="16" id="axz-TD-3MC"/>
                                     <constraint firstAttribute="trailing" secondItem="fB7-ht-C0r" secondAttribute="trailing" constant="8" id="cYG-Vz-dm2"/>
+                                    <constraint firstItem="S1q-23-utD" firstAttribute="top" secondItem="dbQ-pC-4PP" secondAttribute="bottom" constant="8" id="yEc-yz-2lT"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbo-Zz-p0c">
-                                <rect key="frame" x="8" y="16" width="90" height="40"/>
+                                <rect key="frame" x="8" y="16" width="90" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="eFD-FM-YTh"/>
-                                    <constraint firstAttribute="height" constant="40" id="int-LV-cK1"/>
+                                    <constraint firstAttribute="height" constant="32" id="int-LV-cK1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="16"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Hd6-AZ-4Fd" secondAttribute="trailing" constant="16" id="2tH-lI-3z7"/>
                             <constraint firstItem="0tC-mj-D8N" firstAttribute="top" secondItem="NEf-Zx-5XM" secondAttribute="top" id="3ZN-xb-ziY"/>
@@ -183,10 +188,9 @@
                             <constraint firstAttribute="trailing" secondItem="0tC-mj-D8N" secondAttribute="trailing" id="Byl-Ac-VCX"/>
                             <constraint firstItem="Hd6-AZ-4Fd" firstAttribute="leading" secondItem="NEf-Zx-5XM" secondAttribute="leading" constant="16" id="IWa-4o-v0w"/>
                             <constraint firstItem="SBo-MR-BMj" firstAttribute="top" secondItem="NEf-Zx-5XM" secondAttribute="top" constant="16" id="NSD-t8-lhc"/>
-                            <constraint firstAttribute="bottom" secondItem="Hd6-AZ-4Fd" secondAttribute="bottom" constant="-27" id="Rng-l2-jl0"/>
+                            <constraint firstItem="Hd6-AZ-4Fd" firstAttribute="bottom" secondItem="NEf-Zx-5XM" secondAttribute="bottom" constant="29" id="Rng-l2-jl0"/>
                             <constraint firstAttribute="trailing" secondItem="SBo-MR-BMj" secondAttribute="trailing" constant="8" id="Z9w-hq-rYb"/>
                             <constraint firstItem="zbo-Zz-p0c" firstAttribute="leading" secondItem="NEf-Zx-5XM" secondAttribute="leading" constant="8" id="q0A-EF-9jF"/>
-                            <constraint firstAttribute="bottom" secondItem="0tC-mj-D8N" secondAttribute="bottom" id="xpM-sy-y9g"/>
                             <constraint firstItem="zbo-Zz-p0c" firstAttribute="top" secondItem="NEf-Zx-5XM" secondAttribute="top" constant="16" id="zes-Fh-9f4"/>
                         </constraints>
                     </view>

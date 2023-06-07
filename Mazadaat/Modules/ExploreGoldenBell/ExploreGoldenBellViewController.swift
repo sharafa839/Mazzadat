@@ -48,7 +48,7 @@ class ExploreGoldenBellViewController: UIViewController {
         youtubeLabel.text = "whatsapp".localize
     }
     
-    @IBAction func shareApp(_ sender: UIButton) {
+    private func shareApps(sender:UIButton) {
         let firstActivityItem = "shareMazzadat"
 
             // Setting url
@@ -86,6 +86,17 @@ class ExploreGoldenBellViewController: UIViewController {
             
             activityViewController.isModalInPresentation = true
             self.present(activityViewController, animated: true, completion: nil)
+    }
+    
+    @IBAction func shareCommunity(_ sender: UIButton) {
+        shareApps(sender: sender)
+    }
+    
+    
+    
+    
+    @IBAction func shareApp(_ sender: UIButton) {
+      shareApps(sender: sender)
     }
     
     private func setupUI() {

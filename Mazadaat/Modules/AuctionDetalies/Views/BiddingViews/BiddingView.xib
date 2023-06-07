@@ -94,7 +94,7 @@
                                         <constraint firstAttribute="width" constant="20" id="oej-qF-Msf"/>
                                     </constraints>
                                 </imageView>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Golden Bell Icon" translatesAutoresizingMaskIntoConstraints="NO" id="IHJ-TM-jfi">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Golden Bell Icons" translatesAutoresizingMaskIntoConstraints="NO" id="IHJ-TM-jfi">
                                     <rect key="frame" x="16" y="14" width="20" height="20"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="20" id="3yA-mS-50K"/>
@@ -180,7 +180,7 @@
         </view>
     </objects>
     <resources>
-        <image name="Golden Bell Icon" width="24" height="24"/>
+        <image name="Golden Bell Icons" width="24" height="24"/>
         <image name="Group 98275" width="32" height="32"/>
         <image name="arrow-left-s-line-1" width="24" height="24"/>
         <image name="timer-flash-fill" width="20" height="20"/>
