@@ -51,13 +51,8 @@ class PlansTableViewCell: UITableViewCell {
         priceLabel.text = with.price
         limittedBidValue.text = with.gainedBalance
        
-        if with.id == 6 {
-            upgradeButton.setTitle(Localizations.yourCuurrentPlan.localize, for: .normal)
-            upgradeButton.isEnabled = false
-            upgradeButton.backgroundColor = .borderColor
-        }else {
-            
-        if    with.id == CoreData.shared.personalSubscription?.first?.id {
+        
+        if  with.id == CoreData.shared.personalSubscription?.first?.id {
             upgradeButton.setTitle(Localizations.yourCuurrentPlan.localize, for: .normal)
             upgradeButton.backgroundColor = .borderColor
             upgradeButton.isEnabled = false
@@ -66,7 +61,6 @@ class PlansTableViewCell: UITableViewCell {
                 upgradeButton.isEnabled = true
                 upgradeButton.backgroundColor = .Bronze_500
             }
-        }
         
     }
     

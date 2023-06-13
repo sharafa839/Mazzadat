@@ -14,10 +14,57 @@
             filePath = "Mazadaat/Modules/Auctions/View/AuctionsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
             landmarkName = "setupObservables()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2C9CB76F-9431-47EE-BAFE-170C77DE7BA1 - d4820c84846c0ace"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (RxSwift.Event&lt;()&gt;) -&gt; () in Golden_Bell.AuctionsViewController.setupObservables() -&gt; ()"
+                  moduleName = "Golden Bell"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shgardi/golden-bell-repo-ios/Mazadaat/Modules/Auctions/View/AuctionsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "127"
+                  endingLineNumber = "127"
+                  offsetFromSymbolStart = "1256">
+               </Location>
+               <Location
+                  uuid = "2C9CB76F-9431-47EE-BAFE-170C77DE7BA1 - d4820c84846c0ace"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (RxSwift.Event&lt;()&gt;) -&gt; () in Golden_Bell.AuctionsViewController.setupObservables() -&gt; ()"
+                  moduleName = "Golden Bell"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shgardi/golden-bell-repo-ios/Mazadaat/Modules/Auctions/View/AuctionsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "127"
+                  endingLineNumber = "127"
+                  offsetFromSymbolStart = "1309">
+               </Location>
+               <Location
+                  uuid = "2C9CB76F-9431-47EE-BAFE-170C77DE7BA1 - d4820c84846c0ace"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (RxSwift.Event&lt;()&gt;) -&gt; () in Golden_Bell.AuctionsViewController.setupObservables() -&gt; ()"
+                  moduleName = "Golden Bell"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shgardi/golden-bell-repo-ios/Mazadaat/Modules/Auctions/View/AuctionsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "127"
+                  endingLineNumber = "127"
+                  offsetFromSymbolStart = "232">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -34,117 +81,6 @@
             endingLineNumber = "17"
             landmarkName = "unknown"
             landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "488444D8-D7DB-4F67-9A30-373A2057103D"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Mazadaat/NetworkLayer/Home/HomeApi.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
-            landmarkName = "task"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "488444D8-D7DB-4F67-9A30-373A2057103D - 54892f3d6f95f838"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Golden_Bell.HomeApiServices.task.getter : Moya.Task"
-                  moduleName = "Golden Bell"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shgardi/golden-bell-repo-ios/Mazadaat/NetworkLayer/Home/HomeApi.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "152"
-                  endingLineNumber = "152"
-                  offsetFromSymbolStart = "9913">
-               </Location>
-               <Location
-                  uuid = "488444D8-D7DB-4F67-9A30-373A2057103D - 54892f3d6f95f838"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Golden_Bell.HomeApiServices.task.getter : Moya.Task"
-                  moduleName = "Golden Bell"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shgardi/golden-bell-repo-ios/Mazadaat/NetworkLayer/Home/HomeApi.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "152"
-                  endingLineNumber = "152"
-                  offsetFromSymbolStart = "10124">
-               </Location>
-               <Location
-                  uuid = "488444D8-D7DB-4F67-9A30-373A2057103D - 54892f3d6f95f838"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Golden_Bell.HomeApiServices.task.getter : Moya.Task"
-                  moduleName = "Golden Bell"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shgardi/golden-bell-repo-ios/Mazadaat/NetworkLayer/Home/HomeApi.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "152"
-                  endingLineNumber = "152"
-                  offsetFromSymbolStart = "10129">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "92E3EE71-E898-47BE-997F-12B895515076"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Mazadaat/NetworkLayer/Home/HomeApi.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "165"
-            endingLineNumber = "165"
-            landmarkName = "task"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "92E3EE71-E898-47BE-997F-12B895515076 - 54892f3d6f95fa97"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Golden_Bell.HomeApiServices.task.getter : Moya.Task"
-                  moduleName = "Golden Bell"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shgardi/golden-bell-repo-ios/Mazadaat/NetworkLayer/Home/HomeApi.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "165"
-                  endingLineNumber = "165"
-                  offsetFromSymbolStart = "9600">
-               </Location>
-               <Location
-                  uuid = "92E3EE71-E898-47BE-997F-12B895515076 - 54892f3d6f95fa97"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Golden_Bell.HomeApiServices.task.getter : Moya.Task"
-                  moduleName = "Golden Bell"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shgardi/golden-bell-repo-ios/Mazadaat/NetworkLayer/Home/HomeApi.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "165"
-                  endingLineNumber = "165"
-                  offsetFromSymbolStart = "9605">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

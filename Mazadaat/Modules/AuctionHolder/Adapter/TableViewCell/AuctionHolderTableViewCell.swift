@@ -58,13 +58,13 @@ class AuctionHolderTableViewCell: UITableViewCell {
         case .online:
             kindOfAuctionButton.backgroundColor = .white
             kindOfAuctionButton.setTitleColor(.Bronze_500, for: .normal)
-        case .offline:
+        case .attendance:
             kindOfAuctionButton.backgroundColor = .textColor
             kindOfAuctionButton.setTitleColor(.white, for: .normal)
         case .hybrid:
             kindOfAuctionButton.backgroundColor = .Bronze_500
             kindOfAuctionButton.setTitleColor(.white, for: .normal)
-
+       
         case .none:
             kindOfAuctionButton.backgroundColor = .white
         }
@@ -115,17 +115,19 @@ class AuctionHolderTableViewCell: UITableViewCell {
 }
 
 enum AuctionType:String {
+  
     case online = "online"
-    case offline = "offline"
+    case attendance = "attendance"
     case hybrid =  "hybrid"
     var localize:String {
         switch self {
         case .online:
             return "online".localize
-        case .offline:
-            return "offline".localize
+        case .attendance:
+            return "attendance".localize
         case .hybrid:
             return "hybrid".localize
+       
         }
     }
 }

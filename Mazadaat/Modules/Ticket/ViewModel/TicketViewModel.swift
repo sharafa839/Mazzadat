@@ -18,16 +18,20 @@ class TicketViewModel:TicketNetworkingProtocol {
     var onSuccessGetData = BehaviorRelay<[TicketModel]>(value: [])
     var onSuccessRunning = BehaviorRelay<[TicketModel]>(value: [])
     var onSuccessClose = BehaviorRelay<[TicketModel]>(value: [])
-
-    func getTickets() {
+    var currentPage:Int = 1
+    var to :Int?
+    func getTickets(currentPage:Int) {
         onLoading.accept(true)
-        getAll { [weak self] result in
+        getAll(page: currentPage) { [weak self] result in
             self?.onLoading.accept(false)
             switch result {
             case .success(let response):
-                let allData = response.response?.data ?? []
+                guard let response = response.response else {return}
+                self?.to = response.paging?.lastPage
+                guard var allData = response.data else {return}
                 let running = allData.filter({$0.status == 1})
                 let close = allData.filter({$0.status == 2})
+                
                 self?.onSuccessClose.accept(close)
                 self?.onSuccessRunning.accept(running)
                 self?.onSuccessGetData.accept(allData)

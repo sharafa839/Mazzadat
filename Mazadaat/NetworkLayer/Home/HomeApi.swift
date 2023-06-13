@@ -16,8 +16,8 @@ enum HomeApiServices {
     case documents
     case uploadDocuments(frontImage : String ,backImage: String,id:Int)
     case auctionHolders
-    case holderPlaces(holderID:String,running:Bool?,upcoming:Bool?,expired:Bool?)
-    case showHolderPlaces(placeID:String)
+    case holderPlaces(pageIndex:Int,holderID:String,running:Bool?,upcoming:Bool?,expired:Bool?)
+    case showHolderPlaces(pageIndex:Int,placeID:String)
     case payEntryFee(image:MultiPartItem?,placeID:String?,payment_method_id:String?)
     case getSlider
     case removeDocument(front:Bool?,back:Bool?,documentTypeId:String)
@@ -120,7 +120,7 @@ extension HomeApiServices:TargetType,BaseApiHeadersProtocol {
             return.requestParameters(parameters: paramters, encoding: JSONEncoding.default)
         case .auctionHolders:
             return .requestPlain
-        case .holderPlaces(let holderID, let running, let upcoming,let  expired):
+        case .holderPlaces(let index,let holderID, let running, let upcoming,let  expired):
             var parameter:[String:Any] = [:]
             if let running = running {
                 parameter["running"] = running
@@ -132,10 +132,11 @@ extension HomeApiServices:TargetType,BaseApiHeadersProtocol {
                 parameter["expired"] = expired
             }
             parameter["holder_id"] = holderID
-            
+            parameter["page"] = index
+            parameter["per_page"] = "2"
             return .requestParameters(parameters: parameter, encoding: URLEncoding.default)
-        case .showHolderPlaces(let placeId):
-            return .requestParameters(parameters: ["place_id":placeId], encoding: URLEncoding.default)
+        case .showHolderPlaces(let page,let placeId):
+            return .requestParameters(parameters: ["page":page,"per_page":"10","place_id":placeId], encoding: URLEncoding.default)
         case .payEntryFee(let image,let placeID, let payment_method_id):
             var multipart: [MultipartFormData] = []
             let imageName = "img-\(CACurrentMediaTime()).png"

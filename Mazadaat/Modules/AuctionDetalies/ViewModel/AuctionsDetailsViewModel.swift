@@ -23,6 +23,7 @@ class AuctionsDetailsViewModel:AuctionNetworkingProtocol {
     var verifyWithNafath = PublishSubject<Void>()
     var placeId:String
     var minimumBidding:String?
+    var auctionType:AuctionType?
     init(id:String,type:String,isOfficialAuction:Bool,placeId:String?) {
         self.id = id
         self.type = type
@@ -59,6 +60,7 @@ class AuctionsDetailsViewModel:AuctionNetworkingProtocol {
                 self?.auctionDetailArray.accept(auction.auctionDetails ?? [])
                 self?.price = auction.price ?? ""
                 self?.minimumBidding = auction.minimumBid
+                self?.auctionType = AuctionType(rawValue: auction.type ?? "")
             case .failure(let error):
                 self?.onError.onNext(error.localizedDescription)
             }

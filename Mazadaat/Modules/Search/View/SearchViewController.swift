@@ -63,7 +63,7 @@ class SearchViewController: UIViewController {
 extension SearchViewController:UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         guard let text = searchBar.text , text.count > 2 else {return}
-        viewModel.getCategoryDetails(search: text)
+        viewModel.getCategoryDetails(page: viewModel.currentPage, search: text)
     }
 }
 
@@ -93,6 +93,15 @@ extension SearchViewController:UITableViewDelegate,UITableViewDataSource {
         let auctionDetailsViewModel = AuctionsDetailsViewModel(id: "\(auctionId)", type:"", isOfficialAuction: false, placeId: nil)
         let auctionDetailsViewController = AuctionsDetailsViewController(viewModel: auctionDetailsViewModel)
         self.navigationController?.pushViewController(auctionDetailsViewController, animated: true)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        guard (scrollView.contentSize.height - scrollView.contentOffset.y) < scrollView.frame.size.height  else { return }
+        if !viewModel.onLoading.value,viewModel.to ?? 0 > viewModel.currentPage {
+            viewModel.currentPage += 1
+            viewModel.getCategoryDetails(page: viewModel.currentPage)
+        
+        }
     }
 
     

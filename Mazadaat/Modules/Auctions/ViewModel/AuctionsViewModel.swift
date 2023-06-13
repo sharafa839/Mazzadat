@@ -19,6 +19,8 @@ class AuctionsViewModel:HomeNetworkingProtocol,AuctionNetworkingProtocol {
     var onAuctionsEmpty = PublishSubject<Void>()
     var places = BehaviorRelay<Place?>(value:nil)
     var onSuccessFavorite = PublishSubject<FavoriteModel>()
+    var currentPage:Int = 1
+    var to :Int?
     var placeId:String
     var type:String?
     var isOfficial:Bool?
@@ -26,22 +28,26 @@ class AuctionsViewModel:HomeNetworkingProtocol,AuctionNetworkingProtocol {
         self.placeId = placeId
     }
     
-    func getPlaces() {
+    func getPlaces(page:Int) {
         onLoading.accept(true)
-        showHolderPlaces(placeID: placeId) { [weak self] result in
+        showHolderPlaces(currentPage:page,placeID: placeId) { [weak self] result in
             self?.onLoading.accept(false)
             switch result {
             case .failure(let error):
                 self?.onError.onNext(error.localizedDescription)
             case .success(let response):
-                guard let data = response.response?.data else {return}
+                guard let response = response.response else {return}
+                guard let data = response.data else {return}
+                self?.to = response.paging?.lastPage ?? 0
                 self?.onSuccessGetAuctions.onNext(data)
                 self?.type = data.place?.type ?? "online"
                 self?.isOfficial = data.place?.entryFee != nil || data.place?.entryFee != 0
                 if data.auctions?.isEmpty ?? false {
                     self?.onAuctionsEmpty.onNext(())
                 }else {
-                    self?.auctions.accept(data.auctions ?? [])
+                    guard var auctions = data.auctions else {return}
+                    auctions += self?.auctions.value ?? []
+                    self?.auctions.accept(auctions )
                 }
                 
                 guard let place = data.place else {return}

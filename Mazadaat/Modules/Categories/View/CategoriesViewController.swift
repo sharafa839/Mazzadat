@@ -14,11 +14,11 @@ class CategoriesViewController: UIViewController, FilterAuctionProtocol, Sorting
     }
     
     func didFinishReset() {
-        viewModel.getCategoryDetails(search: nil, code: nil, status: nil, priceFrom: nil, priceTo: nil, endAt: nil, endFrom: nil)
+        viewModel.getCategoryDetails(page: viewModel.currentPage, search: nil, code: nil, status: nil, priceFrom: nil, priceTo: nil, endAt: nil, endFrom: nil)
     }
     
     func didFinishFiltration(code: String?, priceFrom: String?, priceTo: String?, endAt: String?, endFrom: String?) {
-        viewModel.getCategoryDetails(search: nil, code: code, status: nil, priceFrom: priceFrom, priceTo: priceTo, endAt: endAt, endFrom: endFrom)
+        viewModel.getCategoryDetails(page: viewModel.currentPage, search: nil, code: code, status: nil, priceFrom: priceFrom, priceTo: priceTo, endAt: endAt, endFrom: endFrom)
         
         
     }
@@ -67,7 +67,7 @@ class CategoriesViewController: UIViewController, FilterAuctionProtocol, Sorting
     }
     
     private func getAuctionsDetails() {
-        viewModel.getCategoryDetails(search: nil, code: nil, status: nil, priceFrom: nil, priceTo: nil, endAt: nil, endFrom: nil)
+        viewModel.getCategoryDetails(page: viewModel.currentPage, search: nil, code: nil, status: nil, priceFrom: nil, priceTo: nil, endAt: nil, endFrom: nil)
     }
     
     private func setupViewModelObserver() {
@@ -154,5 +154,15 @@ extension CategoriesViewController:UITableViewDelegate,UITableViewDataSource {
         let auctionDetailsViewController = AuctionsDetailsViewController(viewModel: auctionDetailsViewModel)
         self.navigationController?.pushViewController(auctionDetailsViewController, animated: true)
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        guard (scrollView.contentSize.height - scrollView.contentOffset.y) < scrollView.frame.size.height  else { return }
+        if !viewModel.onLoading.value,viewModel.to ?? 0 > viewModel.currentPage {
+            viewModel.currentPage += 1
+            viewModel.getCategoryDetails(page: viewModel.currentPage)
+        
+        }
+    }
+
     
 }

@@ -21,6 +21,7 @@
             <connections>
                 <outlet property="biddingButton" destination="Vwa-Rb-90f" id="Vdo-S8-07A"/>
                 <outlet property="biddingButtonView" destination="6yO-IP-Lo3" id="clK-2X-P0K"/>
+                <outlet property="biddingStackView" destination="X7u-iD-S6w" id="URl-LV-73I"/>
                 <outlet property="biddingValueLabel" destination="rtJ-cu-9Tl" id="4L8-Gc-aXY"/>
                 <outlet property="endingInLabel" destination="WSR-MO-CDy" id="Umk-BK-YmU"/>
                 <outlet property="endingInValueLabel" destination="n13-t2-8Pg" id="wFa-Td-HDH"/>
@@ -72,7 +73,7 @@
                         <constraint firstAttribute="trailing" secondItem="HOg-Hm-XqS" secondAttribute="trailing" constant="16" id="xy9-Zq-pXS"/>
                     </constraints>
                 </view>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="X7u-iD-S6w">
+                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="X7u-iD-S6w">
                     <rect key="frame" x="262" y="101.5" width="129" height="82"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6yO-IP-Lo3">

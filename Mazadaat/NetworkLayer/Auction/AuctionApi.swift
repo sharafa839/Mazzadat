@@ -15,7 +15,7 @@ enum AuctionApi {
     case toggleFavorite(auction_id:String)
     case favorites
     case addBid(auction_id:String,price:String,isOfficial:Bool)
-    case auctionsFilter(search:String? = nil , byCategoryId:String? = nil,code:String? = nil,status:String? = nil,priceFrom:String? = nil,priceTo:String? = nil,endAt:String? = nil,endFrom:String? = nil)
+    case auctionsFilter(currentPage:Int,search:String? = nil , byCategoryId:String? = nil,code:String? = nil,status:String? = nil,priceFrom:String? = nil,priceTo:String? = nil,endAt:String? = nil,endFrom:String? = nil)
     case advertisement(advertisement_category_id :String?)
 }
 
@@ -84,7 +84,7 @@ extension AuctionApi:TargetType,BaseApiHeadersProtocol {
         case .addBid(let auction_id, let price,let isOfficial):
             return .requestParameters(parameters: ["auction_id":auction_id,"price":price,"official":isOfficial], encoding: JSONEncoding.default)
 
-        case .auctionsFilter(search: let search, byCategoryId: let byCategoryId, code: let code, status: let status, priceFrom: let priceFrom, priceTo: let priceTo, endAt: let endAt, endFrom: let endFrom):
+        case .auctionsFilter(currentPage:let currentPage,search: let search, byCategoryId: let byCategoryId, code: let code, status: let status, priceFrom: let priceFrom, priceTo: let priceTo, endAt: let endAt, endFrom: let endFrom):
             var parameter:[String:Any] = [:]
             if let search = search {
                 parameter["q"] = search
@@ -111,6 +111,8 @@ extension AuctionApi:TargetType,BaseApiHeadersProtocol {
             if let endFrom = endFrom {
                 parameter["end_at_from"] = endFrom
             }
+            parameter["page"] = currentPage
+            parameter["per_page"] = "10"
             return .requestParameters(parameters: parameter, encoding: URLEncoding.default)
         case .advertisement(let advertisement_category_id):
             var parameter:[String:Any] = [:]

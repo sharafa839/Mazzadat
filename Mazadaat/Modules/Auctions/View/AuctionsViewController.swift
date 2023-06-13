@@ -75,7 +75,7 @@ class AuctionsViewController: UIViewController {
     }
     
     private func setupViewModel() {
-        viewModel.getPlaces()
+        viewModel.getPlaces(page: 1)
     }
     
     private func setupViewModelObservables() {
@@ -112,6 +112,7 @@ class AuctionsViewController: UIViewController {
         }.disposed(by: viewModel.disposeBag)
         
         viewModel.onAuctionsEmpty.subscribe { [weak self] value in
+            HelperK.showError(title: "NoAuctionsHere".localize, subtitle: "")
                 self?.navigationController?.popViewController(animated: true)           
         }.disposed(by: viewModel.disposeBag)
 
@@ -191,6 +192,15 @@ extension AuctionsViewController:UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         220
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        guard (scrollView.contentSize.height - scrollView.contentOffset.y) < scrollView.frame.size.height  else { return }
+        if !viewModel.onLoading.value,viewModel.to ?? 0 > viewModel.currentPage {
+            viewModel.currentPage += 1
+         viewModel.getPlaces(page: viewModel.currentPage)
+        
+        }
     }
     
 }

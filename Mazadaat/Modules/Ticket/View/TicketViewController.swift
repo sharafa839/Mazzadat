@@ -49,7 +49,7 @@ class TicketViewController: UIViewController {
     }
 
     private func setupViewModel() {
-        viewModel.getTickets()
+        viewModel.getTickets(currentPage: viewModel.currentPage)
     }
 
     private func setupUI() {

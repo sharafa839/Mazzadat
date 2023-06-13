@@ -12,6 +12,7 @@ class BiddingView: UIView {
 
    //MARK: - IBOutlets
     @IBOutlet weak var sarLabel: UILabel!
+    @IBOutlet weak var biddingStackView: UIStackView!
     @IBOutlet weak var biddingButtonView: UIView!
     @IBOutlet weak var biddingButton: UIButton!
     @IBOutlet weak var endingInLabel: UILabel!
@@ -47,6 +48,12 @@ class BiddingView: UIView {
     }
     
     func configure(_ with:AuctionDetailsModel,didBid:Bool) {
+        if AuctionType(rawValue: with.type ?? "") == .attendance {
+            biddingStackView.isHidden = true
+        }else {
+            biddingStackView.isHidden = false
+        }
+        
         if didBid {
             nextBidLabel.text = "yourTheHeighstNow".localize
             biddingValueLabel.isHidden = true

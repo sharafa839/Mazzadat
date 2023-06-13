@@ -14,8 +14,8 @@ protocol HomeNetworkingProtocol {
     func documents(completion:@escaping(Result<BaseResponse<[UploadDocuments]>,Error>)->Void)
     func uploadDocuments(frontImage : String ,backImage: String,id:Int,completion:@escaping(Result<BaseResponse<[UploadDocuments]>,Error>)->Void)
     func auctionHolders(completion:@escaping(Result<BaseResponse<[AuctionHolder]>,Error>)->Void)
-    func holderPlaces(holderID:String,running:Bool?,upcoming:Bool?,expired:Bool?,completion:@escaping(Result<BaseResponse<[AuctionHolderPlaces]>,Error>)->Void)
-    func showHolderPlaces(placeID:String,completion:@escaping(Result<BaseResponse<HolderPlaces>,Error>)->Void)
+   func  holderPlaces(pageIndex:Int,holderID:String,running:Bool?,upcoming:Bool?,expired:Bool?,completion:@escaping(Result<BaseResponse<[AuctionHolderPlaces]>,Error>)->Void)
+    func showHolderPlaces(currentPage:Int,placeID:String,completion:@escaping(Result<BaseResponse<HolderPlaces>,Error>)->Void)
     func payEntryFee(placeID:String,payment_method_id:String?,image:MultiPartItem?,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void)
     func getSlider(completion:@escaping(Result<BaseResponse<[SlidersModel]>,Error>)->Void)
     func removeDocuments(type:String,front:Bool?,back:Bool?,completion:@escaping(Result<BaseResponse<[LoginPayload]>,Error>)->Void)
@@ -50,11 +50,11 @@ extension HomeNetworkingProtocol {
     func auctionHolders(completion:@escaping(Result<BaseResponse<[AuctionHolder]>,Error>)->Void){
         home.request(target: .auctionHolders, completion: completion)
     }
-    func holderPlaces(holderID:String,running:Bool?,upcoming:Bool?,expired:Bool?,completion:@escaping(Result<BaseResponse<[AuctionHolderPlaces]>,Error>)->Void){
-        home.request(target: .holderPlaces(holderID: holderID, running: running, upcoming: upcoming, expired: expired), completion: completion)
+    func holderPlaces(pageIndex:Int,holderID:String,running:Bool?,upcoming:Bool?,expired:Bool?,completion:@escaping(Result<BaseResponse<[AuctionHolderPlaces]>,Error>)->Void){
+        home.request(target: .holderPlaces(pageIndex: pageIndex, holderID: holderID, running: running, upcoming: upcoming, expired: expired), completion: completion)
     }
-    func showHolderPlaces(placeID:String,completion:@escaping(Result<BaseResponse<HolderPlaces>,Error>)->Void){
-        home.request(target: .showHolderPlaces(placeID: placeID), completion: completion)
+    func showHolderPlaces(currentPage:Int,placeID:String,completion:@escaping(Result<BaseResponse<HolderPlaces>,Error>)->Void){
+        home.request(target: .showHolderPlaces(pageIndex: currentPage, placeID: placeID), completion: completion)
     }
     func payEntryFee(placeID:String,payment_method_id:String?,image:MultiPartItem?,completion:@escaping(Result<BaseResponse<LoginPayload>,Error>)->Void) {
         home.request(target: .payEntryFee(image: image, placeID: placeID, payment_method_id: payment_method_id), completion: completion)

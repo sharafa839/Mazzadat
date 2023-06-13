@@ -77,7 +77,7 @@ struct Media: Codable {
 }
 
 // MARK: - Paging
-struct Paging: Codable {
+struct paging: Codable {
     var total, perPage, currentPage, lastPage: Int?
     var from, to: Int?
 

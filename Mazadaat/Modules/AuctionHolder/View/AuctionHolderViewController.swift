@@ -46,7 +46,7 @@ class AuctionHolderViewController: UIViewController {
     //MARK: - Methods
 
     private func setupViewModel() {
-        viewModel.getHolderPlaces(running: nil, upcoming: nil, expired: nil)
+        viewModel.getHolderPlaces(pageIndex: viewModel.currentPage, running: nil, upcoming: nil, expired: nil)
     }
     
     private func setupCollectionView() {
@@ -147,6 +147,14 @@ extension AuctionHolderViewController:UITableViewDelegate,UITableViewDataSource,
         }
         
         lastContentOffset = scrollView.contentOffset.y
+        
+        guard (scrollView.contentSize.height - scrollView.contentOffset.y) < scrollView.frame.size.height  else { return }
+        if !viewModel.onLoading.value,viewModel.to ?? 0 > viewModel.currentPage {
+            viewModel.currentPage += 1
+            getAuctionState(state: viewModel.auctionState ?? .all)
+        
+        }
+       
     }
     
 }
@@ -178,15 +186,22 @@ extension AuctionHolderViewController:UICollectionViewDelegate,UICollectionViewD
     }
     
     private func getAuctionHolder(state:AuctionState) {
+        viewModel.auctionState = state
+        viewModel.onSuccessGetPlaces.accept([])
+        viewModel.currentPage = 1
+        getAuctionState(state: state)
+    }
+    
+    private func getAuctionState(state:AuctionState) {
         switch state {
         case .all:
-            viewModel.getHolderPlaces(running: nil ,upcoming: nil, expired: nil)
+            viewModel.getHolderPlaces(pageIndex: viewModel.currentPage, running: nil ,upcoming: nil, expired: nil)
         case .running:
-            viewModel.getHolderPlaces(running: true, upcoming: nil, expired: nil)
+            viewModel.getHolderPlaces(pageIndex: viewModel.currentPage, running: true, upcoming: nil, expired: nil)
         case .upcoming:
-            viewModel.getHolderPlaces(running: nil, upcoming : true , expired: nil)
+            viewModel.getHolderPlaces(pageIndex: viewModel.currentPage, running: nil, upcoming : true , expired: nil)
         case .expired:
-            viewModel.getHolderPlaces(running: nil, upcoming : nil , expired: true)
+            viewModel.getHolderPlaces(pageIndex: viewModel.currentPage, running: nil, upcoming : nil , expired: true)
 
         }
     }

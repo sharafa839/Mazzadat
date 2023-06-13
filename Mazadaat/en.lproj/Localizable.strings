@@ -224,3 +224,4 @@
 "title" = "Ticket title";
 "addTicket" = "Add ticket";
 "submitIssueSucces" = "تم ارسال شكواك بنجاح";
+"NoAuctionsHere" = "there's no auctions in this place";

@@ -9,7 +9,7 @@
 import Foundation
 import Moya
 enum TicketApi {
-    case all
+    case all(pageIndex:Int)
     case response(ticketId:String,response:String)
     case store(title:String,message:String,attachment:String)
     case show(ticketId:String)
@@ -55,7 +55,8 @@ extension TicketApi :TargetType, BaseApiHeadersProtocol {
     
     var task: Task {
         switch self {
-        
+        case .all(let pageIndex):
+            return .requestParameters(parameters: ["page":pageIndex,"per_page":"10"], encoding: URLEncoding.default)
         case .changeName(let name):
             return .requestParameters(parameters: ["name":name], encoding: JSONEncoding.default)
         case .response(let ticketId, let response):

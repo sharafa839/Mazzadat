@@ -17,15 +17,23 @@ class SearchViewModel:AuctionNetworkingProtocol {
     var onSuccessGetAuctions = BehaviorRelay<[CategoryAuctions]>(value:[])
     var onSuccessFavorite = PublishSubject<FavoriteModel>()
     var defaultDetails: [CategoryAuctions] = []
-
-    func getCategoryDetails(search:String? = nil , code:String? = nil,status:String? = nil,priceFrom:String? = nil,priceTo:String? = nil,endAt:String? = nil,endFrom:String? = nil) {
+    var currentPage:Int = 1
+    var to :Int?
+    func getCategoryDetails(page:Int,search:String? = nil , code:String? = nil,status:String? = nil,priceFrom:String? = nil,priceTo:String? = nil,endAt:String? = nil,endFrom:String? = nil) {
         onLoading.accept(true)
-        filterAuctions(search: search, byCategoryId: nil, code: code, status: status, priceFrom: priceFrom, priceTo: priceTo, endAt: endAt, endFrom: endFrom) { [weak self] result in
-            self?.onLoading.accept(true)
+        filterAuctions(currentPage:page, search: search, byCategoryId: nil, code: code, status: status, priceFrom: priceFrom, priceTo: priceTo, endAt: endAt, endFrom: endFrom) { [weak self] result in
+            self?.onLoading.accept(false)
             switch result {
             case .success(let response):
-                self?.onSuccessGetAuctions.accept(response.response?.data ?? [])
-                self?.defaultDetails = response.response?.data ?? []
+                guard let response = response.response else {return}
+                guard var data = response.data else {return}
+                data += self?.onSuccessGetAuctions.value ?? []
+                self?.to = response.paging?.lastPage
+                
+                self?.onSuccessGetAuctions.accept(data)
+                
+                self?.defaultDetails = response.data ?? []
+                
             case .failure(let error):
                 self?.onError.onNext(error.localizedDescription)
             }
