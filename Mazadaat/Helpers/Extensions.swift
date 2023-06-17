@@ -1828,7 +1828,7 @@ extension String {
 
         let formatter = DateFormatter()
         formatter.dateFormat = format
-        formatter.timeZone = TimeZone(identifier: "Asia/Riyadh")
+        formatter.timeZone = TimeZone(identifier: Locale.current.identifier)
 
         let date = formatter.date(from: self)
 

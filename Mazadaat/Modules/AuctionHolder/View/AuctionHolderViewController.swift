@@ -120,7 +120,8 @@ extension AuctionHolderViewController:UITableViewDelegate,UITableViewDataSource,
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:AuctionHolderTableViewCell = tableView.dequeue()
-        cell.configure(viewModel.onSuccessGetPlaces.value[indexPath.row])
+        let uiModel = viewModel.onSuccessGetPlaces.value[indexPath.row]
+        cell.configure(uiModel)
         return cell
     }
     

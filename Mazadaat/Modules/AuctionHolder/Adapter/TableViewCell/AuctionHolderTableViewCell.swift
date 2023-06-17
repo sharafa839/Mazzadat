@@ -25,9 +25,15 @@ class AuctionHolderTableViewCell: UITableViewCell {
     @IBOutlet weak var containerDetailesView: UIView!
     @IBOutlet weak var startingInValueLabel: UILabel!
     
+    var timer:TimerManagerr?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    override func prepareForReuse() {
+        super.prepareForReuse()
+       
+        timer?.stopTimer()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -39,7 +45,7 @@ class AuctionHolderTableViewCell: UITableViewCell {
     
     private func setupLocalize() {
         entryFeeLabel.text = "entryFee".localize
-        startinLabel.text = "startingIn".localize
+        
         auctionDaysLabel.text = "auctionDays".localize
     }
     
@@ -52,45 +58,17 @@ class AuctionHolderTableViewCell: UITableViewCell {
         
     }
     
-    func configure(_ with:AuctionHolderPlaces) {
-        let type = AuctionType(rawValue: with.type ?? "")
-        switch type {
-        case .online:
-            kindOfAuctionButton.backgroundColor = .white
-            kindOfAuctionButton.setTitleColor(.Bronze_500, for: .normal)
-        case .attendance:
-            kindOfAuctionButton.backgroundColor = .textColor
-            kindOfAuctionButton.setTitleColor(.white, for: .normal)
-        case .hybrid:
-            kindOfAuctionButton.backgroundColor = .Bronze_500
-            kindOfAuctionButton.setTitleColor(.white, for: .normal)
-       
-        case .none:
-            kindOfAuctionButton.backgroundColor = .white
-        }
+    func configure(_ with:AuctionHolderPlacesUIModel) {
+        kindOfAuctionButton.backgroundColor = with.backgroundColor
+        kindOfAuctionButton.setTitleColor(with.titleColor, for: .normal)
+    
         cityLabel.text = with.name
         kindOfAuctionButton.setTitle(with.type?.localize, for: .normal)
-        let currentDate = Date()
-        let calendar = Calendar.current
-
-        let diffDateComponents = calendar.dateComponents([.day, .hour, .minute, .second], from: currentDate, to: with.auctionTime?.toDateNew() ?? Date())
-        
-        let seconds = "\(diffDateComponents.second ?? 0)"
-
-        if seconds.contains("-"){
-            startingInValueLabel.text = "expired".localize
-            auctionDaysValueLabel.text = "expired".localize
-
-        }else {
-            startingInValueLabel.text = "\(diffDateComponents.day ?? 0)" + " " + "d".localize + " " + " " +  "\(diffDateComponents.hour ?? 0)" + " " + "h".localize + " " + "\(diffDateComponents.minute ?? 0)" + " " + "m".localize
-
-            auctionDaysValueLabel.text = "\(diffDateComponents.day ?? 0)" + "days".localize
-
-        }
         countOfAuctionButton.backgroundColor = .white
-        countOfAuctionButton.setTitle("\(with.auctionsCount ?? 0)" + " " + "auctionsCount".localize, for: .normal)
-        entryFeeValueLabel.text = "\(with.entryFee ?? 0)"
-        guard let image = with.cover else {return}
+        countOfAuctionButton.setTitle(with.auctionsCount, for: .normal)
+        entryFeeValueLabel.text = "\(with.entryFee)"
+        setupDate(with)
+         let image = with.cover 
         guard let url = URL(string: image) else {return}
         let placeholderImage = UIImage(named: "AppIcon")!
         let processor = DefaultImageProcessor.default
@@ -112,10 +90,43 @@ class AuctionHolderTableViewCell: UITableViewCell {
         )
     }
     
+    private func setupDate(_ with:AuctionHolderPlacesUIModel) {
+      
+
+        let seconds = "\(with._startingDate?.second ?? 0)"
+
+        if seconds.contains("-"){
+            startinLabel.text = "endingIn".localize
+            let secondsBetweenStartAndEndAuctionTime = "\(with._endingDate?.second ?? 0)"
+            if secondsBetweenStartAndEndAuctionTime.contains("-") {
+                startingInValueLabel.text = "expired".localize
+                auctionDaysValueLabel.text = "expired".localize
+            }else {
+                auctionDaysValueLabel.text = "\(with._endingDate?.day ?? 0)" + "days".localize
+                timerStart(endDate:with.endAuctionTime )
+            }
+          
+
+        }else {
+            startinLabel.text = "startingIn".localize
+            auctionDaysValueLabel.text = "\(with._endingDate?.day ?? 0)" + "days".localize
+
+            timerStart(endDate: with.auctionTime )
+
+        }
+    }
+    
+    func timerStart(endDate:String) {
+        timer = TimerManagerr(interval: 1, endDate: endDate, stopTimer: false) { (day, hour, minute, second, true) in
+            self.startingInValueLabel.text = day + " " + "d".localize + " " + hour + "h".localize + " " + minute + " " + "m".localize + " " + second + " " + "s".localize
+        }
+        timer?.start()
+    }
+    
 }
 
 enum AuctionType:String {
-  
+    
     case online = "online"
     case attendance = "attendance"
     case hybrid =  "hybrid"
@@ -127,7 +138,30 @@ enum AuctionType:String {
             return "attendance".localize
         case .hybrid:
             return "hybrid".localize
-       
+            
+        }
+    }
+    
+    var titleColor:UIColor {
+        switch self {
+        case .online:
+            return .Bronze_500
+        case .attendance:
+            return .white
+        case .hybrid:
+            return .white
+        }
+    }
+    
+    var backgroundColor: UIColor {
+        switch self{
+        case .online:
+            return .white
+        case .attendance:
+            return .textColor
+            
+        case .hybrid:
+            return .Bronze_500
         }
     }
 }

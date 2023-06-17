@@ -13,7 +13,7 @@ class AuctionHolderViewModel:HomeRepo {
     let disposeBag = DisposeBag()
     var onError = PublishSubject<String>()
     var onLoading = BehaviorRelay<Bool>(value: false)
-    var onSuccessGetPlaces = BehaviorRelay<[AuctionHolderPlaces]>(value:[])
+    var onSuccessGetPlaces = BehaviorRelay<[AuctionHolderPlacesUIModel]>(value:[])
     var holderId:String
     var auctionState:AuctionState? = nil
     var currentPage:Int = 1
@@ -39,7 +39,7 @@ class AuctionHolderViewModel:HomeRepo {
                 guard let data = response.data else {return}
                 self?.to = response.paging?.lastPage
                 guard var places = self?.onSuccessGetPlaces.value else {return}
-                places += data
+                places += data.map({$0.toUiModel ?? AuctionHolderPlacesUIModel(backgroundColor: .white, titleColor: .Bronze_100)})
                 self?.onSuccessGetPlaces.accept(places)
             }
         }

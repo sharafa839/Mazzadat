@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 
 // MARK: - Datum
@@ -15,14 +16,18 @@ struct AuctionHolderPlaces: Codable {
     var cover: String?
     var entryFee: Int?
     var auctionTime: String?
+    var endAuctionTime:String?
     var auctionsCount: Int?
     var type: String?
-
+    var toUiModel:AuctionHolderPlacesUIModel {
+        AuctionHolderPlacesUIModel(self)
+    }
     enum CodingKeys: String, CodingKey {
         case id, name, cover
         case entryFee = "entry_fee"
         case auctionTime = "auction_time"
         case auctionsCount = "auctions_count"
+        case endAuctionTime = "end_auction_time"
         case type
     }
 }
@@ -79,3 +84,50 @@ struct Place: Codable {
     }
 }
 
+
+struct AuctionHolderPlacesUIModel {
+    var backgroundColor,titleColor: UIColor
+    
+    var id: Int?
+    var name: String
+    var cover: String
+    var entryFee: String
+    var auctionTime: String
+    var endAuctionTime:String
+    var auctionsCount: String
+    var type: String?
+    var _startingDate:DateComponents? {
+        return Calendar.current.dateComponents([.day, .hour, .minute, .second], from: Date(), to: auctionTime.toDateNew() ?? Date())
+        
+    }
+    
+    var _endingDate:DateComponents? {
+        Calendar.current.dateComponents([.day,.hour,.minute,.second], from: auctionTime.toDateNew() ?? Date(),to: endAuctionTime.toDateNew() ?? Date())
+    }
+    
+    init(backgroundColor: UIColor, titleColor: UIColor, id: Int? = nil, name: String? = nil, cover: String? = nil, entryFee: String? = nil, auctionTime: String? = nil, endAuctionTime: String? = nil, auctionsCount: String? = nil, type: String? = nil) {
+        self.backgroundColor = backgroundColor
+        self.titleColor = titleColor
+        self.id = id
+        self.name = name ?? ""
+        self.cover = cover  ?? ""
+        self.entryFee = entryFee  ?? ""
+        self.auctionTime = auctionTime  ?? ""
+        self.endAuctionTime = endAuctionTime  ?? ""
+        self.auctionsCount = auctionsCount  ?? ""
+        self.type = type  ?? ""
+    }
+    
+    init(_ model:AuctionHolderPlaces) {
+        self.auctionTime = model.auctionTime ?? ""
+        self.auctionsCount = "\(model.auctionsCount ?? 0)" + " " + "auctionsCount".localize
+        self.backgroundColor = AuctionType(rawValue: model.type ?? "")?.backgroundColor ?? .white
+        self.titleColor =  AuctionType(rawValue: model.type ?? "")?.titleColor ?? .white
+        self.cover = model.cover ?? ""
+        self.endAuctionTime = model.endAuctionTime  ?? ""
+        self.entryFee = "\( model.entryFee  ?? 0)"
+        self.type = model.type ?? ""
+        self.id  = model.id ?? 0
+        self.name = model.name ?? ""
+    }
+}

@@ -65,7 +65,7 @@ class TimerManagerr {
         let endDatee = self.endDate?.toDateNew()
         
 
-        let timeInterval = calendar.dateComponents([.day, .hour, .minute, .second], from: Date(), to: endDatee! )
+        let timeInterval = calendar.dateComponents([.day, .hour, .minute, .second], from: Date(), to: endDatee ?? Date() )
         
             let days = "\(timeInterval.day ?? 0)"
             let hours = " \(timeInterval.hour  ?? 0)"

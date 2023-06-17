@@ -133,7 +133,7 @@ extension HomeApiServices:TargetType,BaseApiHeadersProtocol {
             }
             parameter["holder_id"] = holderID
             parameter["page"] = index
-            parameter["per_page"] = "2"
+            parameter["per_page"] = "10"
             return .requestParameters(parameters: parameter, encoding: URLEncoding.default)
         case .showHolderPlaces(let page,let placeId):
             return .requestParameters(parameters: ["page":page,"per_page":"10","place_id":placeId], encoding: URLEncoding.default)

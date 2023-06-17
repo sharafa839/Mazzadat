@@ -152,7 +152,8 @@ class AuctionsViewController: UIViewController {
                     HelperK.showError(title: "haveNoDocument".localize, subtitle: "")
                 }
 
-                return}
+                return
+            }
             guard let url = URL(string: bourchoure) else {return}
             let _ = try! url.download(to: .downloadsDirectory) { url, error in
                         print(url?.path)

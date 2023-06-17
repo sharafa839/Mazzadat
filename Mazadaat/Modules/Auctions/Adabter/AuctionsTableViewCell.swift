@@ -53,10 +53,10 @@ class AuctionsTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     private func setupDate(_ end:String,_ start:String) {
-         let startedAt = Date()
+        guard  let startedAt = start.toDateNew() else {return}
         guard let endAt = end.toDateNew() else {return}
         let calendar = Calendar.current
-
+        print("date\(Date())")
         let diffDateComponents = calendar.dateComponents([.day, .hour, .minute, .second], from: startedAt, to: endAt)
         
         let seconds = "\(diffDateComponents.second ?? 0)"
@@ -82,8 +82,8 @@ class AuctionsTableViewCell: UITableViewCell {
         titleLabel.text = with.name
         auctionsCountLabel.text = "\(with.bidsCount ?? 0)"
         guard let date = with.endAt?.getDate() else {return}
-        
-        endInLabel.text = "\(date.day + " " + "d".localize) \(date.hour + " " + "h".localize) \(date.minute + " " + "m".localize)"
+        setupDate(with.endAt ?? "", with.startAt ?? "")
+      //  endInLabel.text = "\(date.day + " " + "d".localize) \(date.hour + " " + "h".localize) \(date.minute + " " + "m".localize)"
         guard let image = with.media?.first?.file else {return}
         guard let url = URL(string: image) else {return}
         let placeholderImage = UIImage(named: "AppIcons")!
