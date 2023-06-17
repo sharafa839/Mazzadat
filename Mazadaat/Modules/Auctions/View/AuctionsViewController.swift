@@ -124,10 +124,20 @@ class AuctionsViewController: UIViewController {
         }.disposed(by: viewModel.disposeBag)
         
         burchoureButton.rx.tap.subscribe { [weak self] _ in
-            guard let bourchoure = self?.viewModel.places.value?.brochure else {return}
+            guard let bourchoure = self?.viewModel.places.value?.brochure else {
+                DispatchQueue.main.async {
+                    HelperK.showError(title: "haveNoDocument".localize, subtitle: "")
+                }
+              
+                return
+            }
             guard let url = URL(string: bourchoure) else {return}
-                    let _ = try! url.download(to: .documentDirectory) { url, error in
+                    let _ = try! url.download(to: .downloadsDirectory) { url, error in
                         print(url?.path)
+                        DispatchQueue.main.async {
+                            HelperK.showSuccess(title: "downloadedDone".localize, subtitle: "")
+                        }
+                   
                     }
         }.disposed(by: viewModel.disposeBag)
         
@@ -137,10 +147,19 @@ class AuctionsViewController: UIViewController {
         }.disposed(by: viewModel.disposeBag)
         
         rulesButton.rx.tap.subscribe { [weak self] _ in
-            guard let bourchoure = self?.viewModel.places.value?.terms else {return}
+            guard let bourchoure = self?.viewModel.places.value?.terms else {
+                DispatchQueue.main.async {
+                    HelperK.showError(title: "haveNoDocument".localize, subtitle: "")
+                }
+
+                return}
             guard let url = URL(string: bourchoure) else {return}
-                    let _ = try! url.download(to: .documentDirectory) { url, error in
+            let _ = try! url.download(to: .downloadsDirectory) { url, error in
                         print(url?.path)
+                        DispatchQueue.main.async {
+                            HelperK.showSuccess(title: "downloadedDone".localize, subtitle: "")
+                        }
+                   
                     }
         }.disposed(by: viewModel.disposeBag)
     }

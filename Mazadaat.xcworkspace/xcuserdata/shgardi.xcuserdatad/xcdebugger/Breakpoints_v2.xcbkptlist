@@ -7,69 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2C9CB76F-9431-47EE-BAFE-170C77DE7BA1"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Mazadaat/Modules/Auctions/View/AuctionsViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
-            landmarkName = "setupObservables()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "2C9CB76F-9431-47EE-BAFE-170C77DE7BA1 - d4820c84846c0ace"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (RxSwift.Event&lt;()&gt;) -&gt; () in Golden_Bell.AuctionsViewController.setupObservables() -&gt; ()"
-                  moduleName = "Golden Bell"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shgardi/golden-bell-repo-ios/Mazadaat/Modules/Auctions/View/AuctionsViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "127"
-                  endingLineNumber = "127"
-                  offsetFromSymbolStart = "1256">
-               </Location>
-               <Location
-                  uuid = "2C9CB76F-9431-47EE-BAFE-170C77DE7BA1 - d4820c84846c0ace"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (RxSwift.Event&lt;()&gt;) -&gt; () in Golden_Bell.AuctionsViewController.setupObservables() -&gt; ()"
-                  moduleName = "Golden Bell"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shgardi/golden-bell-repo-ios/Mazadaat/Modules/Auctions/View/AuctionsViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "127"
-                  endingLineNumber = "127"
-                  offsetFromSymbolStart = "1309">
-               </Location>
-               <Location
-                  uuid = "2C9CB76F-9431-47EE-BAFE-170C77DE7BA1 - d4820c84846c0ace"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (RxSwift.Event&lt;()&gt;) -&gt; () in Golden_Bell.AuctionsViewController.setupObservables() -&gt; ()"
-                  moduleName = "Golden Bell"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shgardi/golden-bell-repo-ios/Mazadaat/Modules/Auctions/View/AuctionsViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "127"
-                  endingLineNumber = "127"
-                  offsetFromSymbolStart = "232">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "ECC642E7-E710-4037-8838-9BEC7D433534"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"

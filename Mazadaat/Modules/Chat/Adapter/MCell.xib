@@ -54,11 +54,6 @@
                                                     <constraint firstItem="c4f-gy-AoA" firstAttribute="leading" secondItem="Akv-ri-V7w" secondAttribute="leading" constant="10" id="N9l-pM-0lc"/>
                                                     <constraint firstAttribute="bottom" secondItem="c4f-gy-AoA" secondAttribute="bottom" constant="10" id="WLH-4S-5jn"/>
                                                 </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <integer key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPF-O6-Ynq">
                                                 <rect key="frame" x="0.0" y="155" width="12.5" height="12"/>

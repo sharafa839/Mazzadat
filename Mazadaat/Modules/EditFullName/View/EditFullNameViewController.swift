@@ -207,7 +207,7 @@ class EditFullNameViewController: UIViewController, didChangePhoneNumber {
 
         viewModel.onGetData.subscribe { [weak self] value in
             guard let data = value.element else {return}
-            self?.fullNameDelegate?.changeFullName(name: data.name ?? "")
+         
             self?.emailDelegate?.changeEmail(Email: data.email ?? "")
             self?.phoneNumberDelegate?.changePhoneNumber(number: data.mobile ?? "")
             self?.dismiss(animated: true)
@@ -220,8 +220,9 @@ class EditFullNameViewController: UIViewController, didChangePhoneNumber {
         switch type {
         case .name:
             guard let name = fullNameTextField.text , !name.isEmpty else {return}
-            
-            viewModel.updatePersonalInformation(name: name)
+            fullNameDelegate?.changeFullName(name: name)
+            dismiss(animated: true)
+            //viewModel.updatePersonalInformation(name: name)
             
         case .email:
             guard let email = emailTextField.text , !email.isEmpty else {return}

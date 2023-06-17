@@ -225,3 +225,6 @@
 "addTicket" = "Add ticket";
 "submitIssueSucces" = "تم ارسال شكواك بنجاح";
 "NoAuctionsHere" = "there's no auctions in this place";
+"changeUpdatedSuccessfully" = "Change Updated Successfully";
+"haveNoDocument" = "have no document";
+"downloadedDone" = "downloaded done";

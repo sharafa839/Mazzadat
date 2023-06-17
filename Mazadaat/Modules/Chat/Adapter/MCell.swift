@@ -26,8 +26,10 @@ class MCell: UITableViewCell {
     func configure(message: Message){
         let text = message.message
         let senderType = UserType(rawValue: message.senderType) ?? .user
+        messageView.roundCorners(senderType.cornerRadius, radius: 20)
         messageLabel.text = text
         messageView.backgroundColor = senderType.messageContainerColor
+        messageLabel.textColor = senderType.messageTextColor
         contentStackView.alignment = senderType.alignment
         guard let date = message.date.toDateNew() else {return}
         date.getHumanReadableDayString()
@@ -63,6 +65,14 @@ enum UserType: String {
     case user = "user"
     case admin = "admin"
     
+    var cornerRadius:CACornerMask {
+        switch self {
+        case .user:
+            return [.layerMinXMinYCorner,.layerMinXMaxYCorner,.layerMaxXMinYCorner]
+        case .admin:
+            return [.layerMinXMinYCorner,.layerMaxXMaxYCorner,.layerMaxXMinYCorner]
+        }
+    }
     
     var messageTextColor: UIColor {
         switch self {

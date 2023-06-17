@@ -10,7 +10,7 @@ import UIKit
 
 class PersonalInformationViewController: UIViewController, didChangeFullName, didChangeEmail, didChangePassword   , didChangePhoneNumber{
     func changePassword(password: String) {
-        tableView.reloadData()
+        viewModel.onSuccess.onNext(())
     }
    
     func changeEmail(Email: String) {
@@ -19,7 +19,7 @@ class PersonalInformationViewController: UIViewController, didChangeFullName, di
         data[index].value = HelperK.getemail()
         viewModel.personalInformationDataSource.accept(data)
         
-        tableView.reloadData()
+        viewModel.onSuccess.onNext(())
 
     }
    
@@ -29,7 +29,7 @@ class PersonalInformationViewController: UIViewController, didChangeFullName, di
         data[index].value = HelperK.getphone()
         viewModel.personalInformationDataSource.accept(data)
         
-        tableView.reloadData()
+        viewModel.onSuccess.onNext(())
 
     }
     
@@ -39,7 +39,7 @@ class PersonalInformationViewController: UIViewController, didChangeFullName, di
         data[index].value = HelperK.getname()
         viewModel.requestChangeName(name: name)
         
-        tableView.reloadData()
+        viewModel.onSuccess.onNext(())
     }
 
     
@@ -96,6 +96,7 @@ class PersonalInformationViewController: UIViewController, didChangeFullName, di
             
         }.disposed(by: viewModel.disposeBag)
         viewModel.onSuccess.subscribe { [weak self] _ in
+            HelperK.showSuccess(title: "changeUpdatedSuccessfully".localize, subtitle: "")
             self?.tableView.reloadData()
         }.disposed(by: viewModel.disposeBag)
 
