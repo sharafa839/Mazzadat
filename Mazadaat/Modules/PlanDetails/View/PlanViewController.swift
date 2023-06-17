@@ -45,6 +45,7 @@ class PlanViewController: UIViewController {
             planTitleLabel.text = viewModel.subscription.name
             descriptionLabel.text = viewModel.subscription.description
         }
+        payButton.setTitle("subscribe".localize, for: .normal)
         
     }
     

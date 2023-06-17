@@ -58,8 +58,11 @@ class ChatViewModel:HomeNetworkingProtocol,TicketNetworkingProtocol {
         response(id: ticketId, response: message.message) { [weak self] result in
             self?.onLoading.accept(false)
             switch result {
-            case .success:
-                self?.onSuccess.onNext(())
+            case .success(let response):
+                guard let ticketChat = response.response?.data?.ticketResponses else {return}
+                let ticketMessages = ticketChat.map({$0.toMesssageModel})
+                self?.messages.accept(ticketMessages)
+               // self?.onSuccess.onNext(())
             case .failure(let error):
                 self?.onError.onNext(error.localizedDescription)
             }

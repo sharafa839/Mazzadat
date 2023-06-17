@@ -52,10 +52,11 @@ class ChatViewController: UIViewController {
             let date = Date()
             let message = Message(senderType: "user", date: date.toString(format: "yyyy-mm-dd"), message: text, name: HelperK.getname())
             
-            if viewModel.chatId == "" {
-                self.viewModel.sendMessageToBackend(message: message)
-            }else{
+            if viewModel.ticketId != "" {
                 self.viewModel.sendTicketResponse(message: message)
+              
+            }else{
+                self.viewModel.sendMessageToBackend(message: message)
             }
             
             self.textField.text = ""
@@ -126,3 +127,9 @@ extension ChatViewController: UITextFieldDelegate {
         sendButton.isEnabled = true
     }
 }
+
+//extension String {
+//    static var isEmptyOrWhiteSpace {
+//        return sel
+//    }
+//}
