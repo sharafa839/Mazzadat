@@ -47,11 +47,7 @@ class AuctionsTableViewCell: UITableViewCell {
         endingInLabel.text = "endingIn".localize
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+   
     private func setupDate(_ end:String,_ start:String) {
         guard  let startedAt = start.toDateNew() else {return}
         guard let endAt = end.toDateNew() else {return}
@@ -83,8 +79,12 @@ class AuctionsTableViewCell: UITableViewCell {
         auctionsCountLabel.text = "\(with.bidsCount ?? 0)"
         guard let date = with.endAt?.getDate() else {return}
         setupDate(with.endAt ?? "", with.startAt ?? "")
-      //  endInLabel.text = "\(date.day + " " + "d".localize) \(date.hour + " " + "h".localize) \(date.minute + " " + "m".localize)"
-        guard let image = with.media?.first?.file else {return}
+        getImage(with.media?.first?.file ?? "")
+    }
+    
+    
+    private func getImage(_ image:String) {
+     
         guard let url = URL(string: image) else {return}
         let placeholderImage = UIImage(named: "AppIcons")!
         let processor = DefaultImageProcessor.default
@@ -106,7 +106,6 @@ class AuctionsTableViewCell: UITableViewCell {
         )
     }
     
-    
     func configureToGoldenList(with:FavoriteModel) {
         biddingStatusView.isHidden = true
         
@@ -120,26 +119,8 @@ class AuctionsTableViewCell: UITableViewCell {
         guard let date = with.endAt?.getDate() else {return}
         
         endInLabel.text = "\(date.day + " " + "d".localize) \(date.hour + " " + "h".localize) \(date.minute + " " + "m".localize)"
-        guard let image = with.media?.first?.file else {return}
-        guard let url = URL(string: image) else {return}
-        let placeholderImage = UIImage(named: "AppIcons")!
-        let processor = DefaultImageProcessor.default
-        auctionImageView.kf.setImage(
-            with: url,
-            placeholder: placeholderImage,
-            options: [
-                .processor(processor),
-                .loadDiskFileSynchronously,
-                .cacheOriginalImage,
-                .transition(.fade(0.25)),
-            ],
-            progressBlock: { receivedSize, totalSize in
-                // Progress updated
-            },
-            completionHandler: { result in
-                // Done
-            }
-        )
+ 
+        getImage(with.media?.first?.file ?? "")
     }
     
     func setTitleColorForBidding() {
@@ -180,26 +161,7 @@ class AuctionsTableViewCell: UITableViewCell {
         guard let date = with.endAt?.getDate() else {return}
         
         endInLabel.text =  " " + "\(date.day + " " + "d".localize) \(date.hour + " " + "h".localize) \(date.minute + " " + "m".localize)"
-        guard let image = with.media?.first?.file else {return}
-        guard let url = URL(string: image) else {return}
-        let placeholderImage = UIImage(named: "AppIcons")!
-        let processor = DefaultImageProcessor.default
-        auctionImageView.kf.setImage(
-            with: url,
-            placeholder: placeholderImage,
-            options: [
-                .processor(processor),
-                .loadDiskFileSynchronously,
-                .cacheOriginalImage,
-                .transition(.fade(0.25)),
-            ],
-            progressBlock: { receivedSize, totalSize in
-                // Progress updated
-            },
-            completionHandler: { result in
-                // Done
-            }
-        )
+        getImage(with.media?.first?.file ?? "")
     }
     
     @IBAction func favoriteButtonAction(_ sender: UIButton) {

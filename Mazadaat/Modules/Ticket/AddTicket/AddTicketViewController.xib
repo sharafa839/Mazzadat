@@ -76,7 +76,7 @@
                             </constraints>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="fQg-7F-TgY">
-                            <rect key="frame" x="0.0" y="152" width="343" height="323"/>
+                            <rect key="frame" x="0.0" y="152" width="343" height="179"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CZp-Iq-d5A">
                                     <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
@@ -96,7 +96,7 @@
                                     </constraints>
                                 </view>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UbU-vI-Fz2">
-                                    <rect key="frame" x="0.0" y="46" width="343" height="277"/>
+                                    <rect key="frame" x="0.0" y="46" width="343" height="133"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <color key="textColor" systemColor="labelColor"/>
                                     <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
@@ -104,6 +104,32 @@
                                 </textView>
                             </subviews>
                         </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CUd-bE-nyW">
+                            <rect key="frame" x="0.0" y="355" width="343" height="120"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vda-Vj-F1O">
+                                    <rect key="frame" x="107" y="8" width="130" height="62"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="130" id="qJg-wM-dtj"/>
+                                        <constraint firstAttribute="height" constant="62" id="r7l-Qt-EgS"/>
+                                    </constraints>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ftc-tU-Z0Z">
+                                    <rect key="frame" x="106.5" y="77.5" width="130" height="34.5"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="Ftc-tU-Z0Z" secondAttribute="bottom" constant="8" id="Aqb-LZ-STQ"/>
+                                <constraint firstItem="Ftc-tU-Z0Z" firstAttribute="leading" secondItem="Vda-Vj-F1O" secondAttribute="leading" id="M7f-b3-HR2"/>
+                                <constraint firstItem="Vda-Vj-F1O" firstAttribute="centerX" secondItem="CUd-bE-nyW" secondAttribute="centerX" id="YLY-SK-YoL"/>
+                                <constraint firstAttribute="height" constant="120" id="hG2-aa-fZO"/>
+                                <constraint firstItem="Ftc-tU-Z0Z" firstAttribute="top" secondItem="Vda-Vj-F1O" secondAttribute="bottom" constant="8" id="vok-Ye-CcQ"/>
+                                <constraint firstItem="Ftc-tU-Z0Z" firstAttribute="trailing" secondItem="Vda-Vj-F1O" secondAttribute="trailing" id="w4K-gq-QGM"/>
+                            </constraints>
+                        </view>
                     </subviews>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HvZ-i9-MMb">
@@ -138,7 +164,7 @@
                 <constraint firstItem="HvZ-i9-MMb" firstAttribute="leading" secondItem="SoX-78-FMj" secondAttribute="leading" id="qw0-wm-Fo0"/>
                 <constraint firstItem="HvZ-i9-MMb" firstAttribute="top" secondItem="yOt-7n-q8v" secondAttribute="bottom" constant="16" id="tvs-lO-zNk"/>
             </constraints>
-            <point key="canvasLocation" x="-59.420289855072468" y="-31.473214285714285"/>
+            <point key="canvasLocation" x="-60" y="-31.934032983508249"/>
         </view>
     </objects>
     <resources>
