@@ -41,7 +41,6 @@
 		FA5935B925DE586F00C6026D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA5935B825DE586F00C6026D /* GoogleService-Info.plist */; };
 		FA5F1F77253B7284007FEF72 /* FontsFree-Net-SFProText-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA5F1F76253B7277007FEF72 /* FontsFree-Net-SFProText-Semibold.ttf */; };
 		FAA348EE266E0D0300243DAF /* 371903340_LOCATION_MARKER_400.gif in Resources */ = {isa = PBXBuildFile; fileRef = FAA348ED266E0D0000243DAF /* 371903340_LOCATION_MARKER_400.gif */; };
-		FABD93942532DBF600BFB943 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD93932532DBF600BFB943 /* ViewController.swift */; };
 		FABD939C2532DBF900BFB943 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABD939A2532DBF900BFB943 /* LaunchScreen.storyboard */; };
 		FABD93AA2532DC6400BFB943 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD93A92532DC6400BFB943 /* Extensions.swift */; };
 		FABD93C12532DD3B00BFB943 /* ArbFONTS-Jozoor Font.otf in Resources */ = {isa = PBXBuildFile; fileRef = FABD93C02532DD2A00BFB943 /* ArbFONTS-Jozoor Font.otf */; };
@@ -414,7 +413,6 @@
 		FA5F1F76253B7277007FEF72 /* FontsFree-Net-SFProText-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FontsFree-Net-SFProText-Semibold.ttf"; sourceTree = "<group>"; };
 		FAA348ED266E0D0000243DAF /* 371903340_LOCATION_MARKER_400.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 371903340_LOCATION_MARKER_400.gif; sourceTree = "<group>"; };
 		FABD938C2532DBF600BFB943 /* Golden Bell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Golden Bell.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FABD93932532DBF600BFB943 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FABD939D2532DBF900BFB943 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FABD93A72532DC5600BFB943 /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		FABD93A92532DC6400BFB943 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -871,7 +869,6 @@
 				FF2975602A12988300591B38 /* Splash-Ui-01.gif */,
 				048A24DC2BDA00BF009C53CF /* Resources */,
 				FFAA4D692A03E2830027B478 /* Splash Ui O-w.gif */,
-				FABD93932532DBF600BFB943 /* ViewController.swift */,
 				FABD939A2532DBF900BFB943 /* LaunchScreen.storyboard */,
 				FABD939D2532DBF900BFB943 /* Info.plist */,
 				FA5935B825DE586F00C6026D /* GoogleService-Info.plist */,
@@ -3049,7 +3046,6 @@
 				FF78D58F29F7409300D9FBC9 /* PlaceBidViewModel .swift in Sources */,
 				FF9C2B2129DCA58800FA3C77 /* BasicResponse.swift in Sources */,
 				FF7185E429FB90D800867213 /* PersonalInformationViewController.swift in Sources */,
-				FABD93942532DBF600BFB943 /* ViewController.swift in Sources */,
 				FA57ED9D2556242700D0C554 /* BundleExtension.swift in Sources */,
 				FF5AF75029DFC0230020E716 /* UpdateProfileModel.swift in Sources */,
 				FF97158F2A0AD4B20094B9F2 /* LocalizationFile.swift in Sources */,
